@@ -12,6 +12,7 @@ const CONFIG = {
   launchDate: "2026-05-07",
   futureHorizonDays: 730,
   requiredCuratedClues: 5,
+  targetClueDifficulties: [8, 7, 5, 4, 2],
   seed: "CharterSchoodle-v1",
   excludedStatuses: [],
   weakCategories: ["official-record", "research-note"],
@@ -135,6 +136,19 @@ function clueCategoryWeight(category) {
   return CLUE_CATEGORY_WEIGHTS[category] || 4;
 }
 
+function clueSlotScore(entry, targetDifficulty, chosenCategories) {
+  const difficulty = Number(entry.clue.difficulty || 0);
+  const categoryRepeatPenalty = (chosenCategories.get(entry.clue.category) || 0) * 1.4;
+  const difficultyGapPenalty = Math.abs(difficulty - targetDifficulty) * 2.6;
+  return (
+    clueCategoryWeight(entry.clue.category) * 3 +
+    difficulty * 2.2 -
+    difficultyGapPenalty -
+    categoryRepeatPenalty +
+    entry.randomness
+  );
+}
+
 function selectCuratedClues(school, date) {
   const strong = getStrongClues(school);
   const usable = getUsableClues(school);
@@ -159,15 +173,19 @@ function selectCuratedClues(school, date) {
   const chosen = [];
   const chosenCategories = new Map();
   const remaining = [...decorated];
+  const targetSlots = CONFIG.targetClueDifficulties.slice(0, CONFIG.requiredCuratedClues);
 
-  while (chosen.length < CONFIG.requiredCuratedClues && remaining.length > 0) {
+  for (const targetDifficulty of targetSlots) {
+    if (remaining.length === 0) {
+      break;
+    }
+
     remaining.sort((left, right) => {
-      const leftCount = chosenCategories.get(left.clue.category) || 0;
-      const rightCount = chosenCategories.get(right.clue.category) || 0;
-      const leftScore = left.baseScore - leftCount * 28;
-      const rightScore = right.baseScore - rightCount * 28;
+      const leftScore = clueSlotScore(left, targetDifficulty, chosenCategories);
+      const rightScore = clueSlotScore(right, targetDifficulty, chosenCategories);
       return (
         rightScore - leftScore ||
+        right.baseScore - left.baseScore ||
         right.randomness - left.randomness ||
         left.clue.text.localeCompare(right.clue.text)
       );
@@ -178,9 +196,11 @@ function selectCuratedClues(school, date) {
     chosenCategories.set(next.clue.category, (chosenCategories.get(next.clue.category) || 0) + 1);
   }
 
-  return chosen
-    .sort((left, right) => right.difficulty - left.difficulty || left.text.localeCompare(right.text))
-    .map((clue) => ({
+  if (chosen.length < CONFIG.requiredCuratedClues) {
+    return [];
+  }
+
+  return chosen.map((clue) => ({
       text: clue.text,
       difficulty: clue.difficulty,
     }));

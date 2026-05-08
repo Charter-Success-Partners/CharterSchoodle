@@ -293,7 +293,7 @@ How it works:
 1. The generator builds a deterministic daily puzzle calendar starting on `2026-05-07`.
 2. It rotates through schools with enough validated clue coverage and enough strong non-generic clues.
 3. The schedule is quality-weighted, so stronger clue pools are favored earlier in the archive and similar school names are spaced out when possible.
-4. Each puzzle uses five curated clues plus a final first-letter hint, with clue selection biased toward category diversity.
+4. Each puzzle uses five curated clues plus a final first-letter hint, with clue selection biased toward category diversity and a harder-to-easier reveal ladder across the five clue slots.
 5. The scheduled GitHub Action runs every day and extends the published calendar forward.
 6. The app loads the puzzle matching the visitor's current date from `data/puzzles.json`.
 
