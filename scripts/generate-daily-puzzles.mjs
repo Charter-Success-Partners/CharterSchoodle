@@ -13,6 +13,8 @@ const CONFIG = {
   futureHorizonDays: 730,
   requiredCuratedClues: 5,
   seed: "CharterSchoodle-v1",
+  excludedStatuses: ["validated-batch-034"],
+  weakCategories: ["official-record", "research-note"],
 };
 
 function isoDate(date) {
@@ -93,6 +95,15 @@ function selectCuratedClues(school, date) {
   }));
 }
 
+function countStrongClues(school) {
+  return school.clues.filter(
+    (clue) =>
+      clue.text &&
+      !clueMentionsGameplayFeedback(clue.text) &&
+      !CONFIG.weakCategories.includes(clue.category),
+  ).length;
+}
+
 function buildLetterClue(officialName) {
   const initial = officialName.trim().charAt(0).toUpperCase();
   return {
@@ -114,11 +125,15 @@ async function main() {
   const playable = clueBank.schools
     .filter((school) => schoolIds.has(school.schoolId))
     .filter((school) => String(school.status || "").startsWith("validated-batch-"))
+    .filter((school) => !CONFIG.excludedStatuses.includes(String(school.status || "")))
     .filter((school) => {
       const usableClueCount = school.clues.filter(
         (clue) => clue.text && !clueMentionsGameplayFeedback(clue.text),
       ).length;
-      return usableClueCount >= CONFIG.requiredCuratedClues;
+      return (
+        usableClueCount >= CONFIG.requiredCuratedClues &&
+        countStrongClues(school) >= CONFIG.requiredCuratedClues
+      );
     });
 
   if (playable.length === 0) {
@@ -163,6 +178,7 @@ async function main() {
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic school rotation.",
     "Each puzzle uses five curated clues plus a final first-letter hint.",
+    "Automatic daily selection excludes lower-quality completion-batch schools until they receive richer clue upgrades.",
   ];
 
   const source = {

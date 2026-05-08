@@ -248,6 +248,7 @@ This repo currently includes:
 - merged statewide clue artifact
 - baseline statewide clues plus curated manual batch overrides
 - currently includes 212 manually validated schools from `batch-001` through `batch-034`
+- includes a final completion batch for sparse-site schools so statewide coverage is complete
 
 ## Build Notes
 
@@ -290,10 +291,16 @@ Files involved:
 How it works:
 
 1. The generator builds a deterministic daily puzzle calendar starting on `2026-05-07`.
-2. It rotates through schools with enough validated clue coverage.
+2. It rotates through schools with enough validated clue coverage and enough strong non-generic clues.
 3. Each puzzle uses five curated clues plus a final first-letter hint.
 4. The scheduled GitHub Action runs every day and extends the published calendar forward.
 5. The app loads the puzzle matching the visitor's current date from `data/puzzles.json`.
+
+Daily quality rule:
+
+- the full statewide clue bank now covers all 212 schools
+- the automatic daily rotation currently uses only the higher-quality validated pool
+- lower-quality completion-batch schools are intentionally excluded from daily selection until they receive richer clue upgrades
 
 To regenerate the daily puzzle calendar locally, run:
 
@@ -312,4 +319,4 @@ python3 scripts/merge_clue_banks.py
 
 ## Research Workflow
 
-The full statewide dataset still needs to be researched and added in batches. See [docs/research-plan.md](/home/caleb/projects/charterschooldle/docs/research-plan.md).
+The statewide clue corpus is now complete. See [docs/research-plan.md](/home/caleb/projects/charterschooldle/docs/research-plan.md) for the research rules and batch structure used to build it.

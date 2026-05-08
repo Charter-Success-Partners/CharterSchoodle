@@ -131,6 +131,7 @@ async function main() {
   const validatedIds = new Set(
     clueBank.schools
       .filter((school) => String(school.status || "").startsWith("validated-batch-"))
+      .filter((school) => school.status !== "validated-batch-034")
       .map((school) => school.schoolId),
   );
 
@@ -161,7 +162,7 @@ async function main() {
         schoolId: school.id,
         officialName: school.officialName,
         status: "validated-batch-034",
-        qualityTier: "manual",
+        qualityTier: "completion-generated",
         sourceLinks,
         clues: toClueObjects(clues),
       };
