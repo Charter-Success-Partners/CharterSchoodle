@@ -24,7 +24,7 @@
           "sourceRefs": ["home", "about"]
         },
         {
-          "text": "Its mission says the school exists to build a world-class K-12 school in Durham that empowers students to thrive in college, career, and life.",
+          "text": "Its mission says the school exists to build a world-class public school in Durham that empowers students to thrive in college, career, and life.",
           "difficulty": 5,
           "category": "mission",
           "sourceRefs": ["home", "about"]
@@ -36,7 +36,7 @@
           "sourceRefs": ["about"]
         },
         {
-          "text": "Official materials identify it as North Carolina's first charter school.",
+          "text": "Official materials identify it as the state's first charter school.",
           "difficulty": 6,
           "category": "history",
           "sourceRefs": ["home"]

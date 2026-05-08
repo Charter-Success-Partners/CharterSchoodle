@@ -66,7 +66,7 @@
       },
       "clues": [
         {
-          "text": "Official pages say the campus is a community of the nations that celebrates the diversity of East Charlotte and the world.",
+          "text": "Official pages say the campus is a community of the nations that celebrates the diversity of its surrounding community and the world.",
           "difficulty": 4,
           "category": "identity",
           "sourceRefs": ["campus"]
@@ -90,7 +90,7 @@
           "sourceRefs": ["campus"]
         },
         {
-          "text": "Movement's North Carolina board page lists Garrett McNeill as chair.",
+          "text": "Movement's statewide board page lists Garrett McNeill as chair.",
           "difficulty": 7,
           "category": "governance",
           "sourceRefs": ["board"]
@@ -132,13 +132,13 @@
           "sourceRefs": ["campus"]
         },
         {
-          "text": "Official pages say the principal's leadership has contributed to measurable academic growth, including two North Carolina Academic Growth Awards.",
+          "text": "Official pages say the principal's leadership has contributed to measurable academic growth, including two state academic growth awards.",
           "difficulty": 6,
           "category": "recognition",
           "sourceRefs": ["campus"]
         },
         {
-          "text": "Movement's North Carolina board page lists Garrett McNeill as chair.",
+          "text": "Movement's statewide board page lists Garrett McNeill as chair.",
           "difficulty": 7,
           "category": "governance",
           "sourceRefs": ["board"]

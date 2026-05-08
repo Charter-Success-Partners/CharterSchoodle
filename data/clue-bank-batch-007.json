@@ -24,7 +24,7 @@
           "sourceRefs": ["missionValues"]
         },
         {
-          "text": "Official history says it was the first Project Based Learning public school in North Carolina and the first diverse-by-design public charter school in the Southern United States.",
+          "text": "Official history says it was the state's first Project Based Learning public school and the first diverse-by-design public charter school in the Southern United States.",
           "difficulty": 5,
           "category": "history",
           "sourceRefs": ["about", "whoWeAre"]
@@ -42,7 +42,7 @@
           "sourceRefs": ["missionValues"]
         },
         {
-          "text": "The executive director's message says the school was one of the first 100 charter schools in North Carolina.",
+          "text": "The executive director's message says the school was one of the state's first 100 charter schools.",
           "difficulty": 7,
           "category": "history",
           "sourceRefs": ["executiveDirector"]

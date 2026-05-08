@@ -300,7 +300,7 @@ Daily quality rule:
 
 - the full statewide clue bank now covers all 212 schools
 - the automatic daily rotation now uses the broader validated pool after the `batch-034` completion schools were upgraded with stronger clue sets
-- the current published calendar includes 198 playable schools that meet the generator's strong-clue threshold
+- the current published calendar includes all 212 schools in the validated clue corpus because they now meet the generator's strong-clue threshold
 
 To regenerate the daily puzzle calendar locally, run:
 

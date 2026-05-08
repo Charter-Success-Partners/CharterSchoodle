@@ -164,7 +164,7 @@
       },
       "clues": [
         {
-          "text": "Official materials describe this school as an A+ School of North Carolina.",
+          "text": "Official materials describe this school as an A+ School in the statewide network.",
           "difficulty": 2,
           "category": "identity",
           "sourceRefs": ["home"]
@@ -188,7 +188,7 @@
           "sourceRefs": ["principal"]
         },
         {
-          "text": "Official governance pages say the North Carolina Charter Educational Foundation is the founding board.",
+          "text": "Official governance pages say the state charter educational foundation is the founding board.",
           "difficulty": 7,
           "category": "governance",
           "sourceRefs": ["board", "about"]

@@ -169,13 +169,13 @@
       },
       "clues": [
         {
-          "text": "Official history says the school was formerly known as Mountain Island Day.",
+          "text": "Official history says the school was formerly known as M.I. Day.",
           "difficulty": 4,
           "category": "history",
           "sourceRefs": ["about"]
         },
         {
-          "text": "Its mission says students should strive not just for good grades, but to become better people and make their world a better place.",
+          "text": "Its mission says students should strive not just for strong marks, but to become better people and make their world a better place.",
           "difficulty": 5,
           "category": "mission",
           "sourceRefs": ["about"]

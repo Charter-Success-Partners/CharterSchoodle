@@ -36,7 +36,7 @@
           "sourceRefs": ["mission"]
         },
         {
-          "text": "Official materials say the school is part of the A+ Schools Program at the North Carolina Arts Council.",
+          "text": "Official materials say the school is part of the A+ Schools Program at the state arts council.",
           "difficulty": 6,
           "category": "specialty",
           "sourceRefs": ["aplus"]
@@ -48,7 +48,7 @@
           "sourceRefs": ["board"]
         },
         {
-          "text": "Sarena Fuller is listed as Executive Director, and the school notes she was the 2024 North Carolina Wells Fargo Charter School Principal of the Year.",
+          "text": "Sarena Fuller is listed as Executive Director, and the school notes she was the 2024 Wells Fargo Charter School Principal of the Year.",
           "difficulty": 8,
           "category": "school-leader",
           "sourceRefs": ["adminTeam"]

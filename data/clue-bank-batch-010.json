@@ -128,13 +128,13 @@
           "sourceRefs": ["about"]
         },
         {
-          "text": "The school says citizenship and experiential learning through community engagement are present at every grade level.",
+          "text": "The school says citizenship and experiential learning through community engagement are woven throughout the student experience.",
           "difficulty": 6,
           "category": "school-model",
           "sourceRefs": ["about"]
         },
         {
-          "text": "Governance pages say the school is governed by the North Carolina Charter Educational Foundation and managed with professional support from Charter Schools USA.",
+          "text": "Governance pages say the school is governed by the state charter educational foundation and managed with professional support from Charter Schools USA.",
           "difficulty": 7,
           "category": "governance",
           "sourceRefs": ["governance", "about"]
@@ -239,13 +239,13 @@
           "sourceRefs": ["hallOfFame", "home"]
         },
         {
-          "text": "A leadership announcement says Darkarai Bryant was named Managing Executive Director after serving as the school's high school principal.",
+          "text": "A leadership announcement says Darkarai Bryant was named Managing Executive Director after serving as the academy's upper-school principal.",
           "difficulty": 7,
           "category": "school-leader",
           "sourceRefs": ["bryantArticle"]
         },
         {
-          "text": "Official staff pages list Darkarai Bryant as Managing Executive Director, Jamel Jones as Middle School Principal, and Jeremy Martin as High School Principal.",
+          "text": "Official staff pages list Darkarai Bryant as Managing Executive Director alongside division leaders Jamel Jones and Jeremy Martin.",
           "difficulty": 8,
           "category": "leadership",
           "sourceRefs": ["staff"]

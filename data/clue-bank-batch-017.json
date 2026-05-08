@@ -86,7 +86,7 @@
           "sourceRefs": ["home"]
         },
         {
-          "text": "A January 2026 announcement says the school was awarded a 10-year charter renewal by the North Carolina Charter Schools Review Board.",
+          "text": "A January 2026 announcement says the school was awarded a 10-year charter renewal by the state charter review board.",
           "difficulty": 6,
           "category": "recognition",
           "sourceRefs": ["home", "renewal"]
@@ -98,7 +98,7 @@
           "sourceRefs": ["board"]
         },
         {
-          "text": "Official materials highlight an engaging STEM program for grades 4-8 and a growing athletic program.",
+          "text": "Official materials highlight an engaging STEM program and a growing athletic program.",
           "difficulty": 7,
           "category": "program",
           "sourceRefs": ["profile", "athletics"]
@@ -131,13 +131,13 @@
           "sourceRefs": ["whyEra", "elementary"]
         },
         {
-          "text": "Official materials say the school has roots in North Carolina's original wave of charter schools and traces its tradition of excellence back to 1997.",
+          "text": "Official materials say the school has roots in the state's original wave of charter schools and traces its tradition of excellence back to 1997.",
           "difficulty": 5,
           "category": "history",
           "sourceRefs": ["elementary", "board"]
         },
         {
-          "text": "The school says its K-12 program is powered by STREAM: Science, Technology, Research, Engineering, Arts, and Math.",
+          "text": "The school says its full academy program is powered by STREAM: Science, Technology, Research, Engineering, Arts, and Math.",
           "difficulty": 5,
           "category": "program",
           "sourceRefs": ["whyEra"]

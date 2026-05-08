@@ -35,13 +35,13 @@
           "sourceRefs": ["school"]
         },
         {
-          "text": "KIPP North Carolina says its mission is to create joyful, academically excellent schools that prepare students with the skills and confidence to pursue the paths they choose.",
+          "text": "KIPP's statewide network says its mission is to create joyful, academically excellent schools that prepare students with the skills and confidence to pursue the paths they choose.",
           "difficulty": 6,
           "category": "network",
           "sourceRefs": ["mission", "networkAbout"]
         },
         {
-          "text": "KIPP North Carolina board pages list Rich Richards as board chair.",
+          "text": "KIPP's statewide board pages list Rich Richards as board chair.",
           "difficulty": 7,
           "category": "governance",
           "sourceRefs": ["board"]
@@ -134,19 +134,19 @@
           "sourceRefs": ["middle"]
         },
         {
-          "text": "Its high school page says students are prepared to use their knowledge, skills, and character to strengthen their communities and fight against injustices.",
+          "text": "Its upper-school page says students are prepared to use their knowledge, skills, and character to strengthen their communities and fight against injustices.",
           "difficulty": 6,
           "category": "graduate-profile",
           "sourceRefs": ["high"]
         },
         {
-          "text": "KIPP North Carolina board pages list Rich Richards as board chair.",
+          "text": "KIPP's statewide board pages list Rich Richards as board chair.",
           "difficulty": 7,
           "category": "governance",
           "sourceRefs": ["board"]
         },
         {
-          "text": "Official school pages list Shawna Mayo as principal of the middle school and Natassha Jenkins as principal of the high school.",
+          "text": "Official school pages list Shawna Mayo and Natassha Jenkins as the campus principals.",
           "difficulty": 8,
           "category": "leadership",
           "sourceRefs": ["middle", "high"]

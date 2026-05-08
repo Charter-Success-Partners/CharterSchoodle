@@ -201,20 +201,46 @@
       "officialName": "STARS Charter",
       "status": "validated-batch-026",
       "sourceLinks": {
-        "fallback": "https://www.starscharter.org/"
+        "home": "https://www.starscharter.org/",
+        "about": "https://starscharter.org/About-Us/",
+        "enrollment": "https://starscharter.org/enrollment/"
       },
       "clues": [
         {
-          "text": "Official materials identify the school by the name STARS Charter.",
+          "text": "Its public materials say it blends strong academics with the performing arts.",
           "difficulty": 4,
-          "category": "identity",
-          "sourceRefs": ["fallback"]
+          "category": "program",
+          "sourceRefs": ["about"]
         },
         {
-          "text": "The school's official public materials are currently too sparse to support higher-quality, school-specific clue writing in this batch.",
+          "text": "Its official site highlights both its campus program and STARS Virtual Academy as pathways for personalized learning.",
           "difficulty": 9,
-          "category": "research-note",
-          "sourceRefs": ["fallback"]
+          "category": "program",
+          "sourceRefs": ["about", "enrollment"]
+        },
+        {
+          "text": "Its official site says the school was founded to offer a tuition-free, high-quality alternative to traditional public schools in Moore County.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its public materials say the school quickly gained attention for combining strong academics with the performing arts.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its official team page lists Dr. Wesley Graner as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its enrollment page says lottery results are communicated through Lotterease within 24 hours of the drawing.",
+          "difficulty": 7,
+          "category": "admissions",
+          "sourceRefs": ["enrollment"]
         }
       ]
     }
