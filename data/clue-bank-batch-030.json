@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Thirtieth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "durham-charter-school",
+      "officialName": "Durham Charter School",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.durhamcharter.org/",
+        "about": "https://www.durhamcharter.org/about/",
+        "board": "https://www.durhamcharter.org/board/",
+        "team": "https://www.durhamcharter.org/team/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school was formerly known as Healthy Start Academy.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its mission says the school exists to build a world-class K-12 school in Durham that empowers students to thrive in college, career, and life.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says its vision includes an Early College for All pathway through Durham Technical Community College.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials identify it as North Carolina's first charter school.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Team pages list Alex Quigley as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["team"]
+        },
+        {
+          "text": "Board pages list Elizabeth Gnatek-Morey as Board Chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "anderson-academy",
+      "officialName": "Anderson Academy",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "about": "https://andersonacademyws.org/about-anderson-academy",
+        "crossnore": "https://www.crossnore.org/anderson-academy/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a stable, emotionally supportive educational environment that empowers children to achieve their true academic and social potential.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about", "crossnore"]
+        },
+        {
+          "text": "Official materials say the school gives priority to students connected to foster care or the child welfare system.",
+          "difficulty": 5,
+          "category": "student-support",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school describes its approach as serving the whole child, with equal attention to academics and social-emotional wellbeing.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["about", "crossnore"]
+        },
+        {
+          "text": "Official pages say it opened on Crossnore's Winston-Salem campus in August 2025.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["crossnore"]
+        },
+        {
+          "text": "Public leadership materials identify Rashawn Meekins as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school describes its learning model as a mix of direct, interactive, experiential, and independent learning.",
+          "difficulty": 8,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "bethel-hill-charter",
+      "officialName": "Bethel Hill Charter",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.bethelhill.net/",
+        "board": "https://www.bethelhill.net/page/board-of-directors",
+        "staff": "https://www.bethelhill.net/staff?page_no=3",
+        "wellness": "https://www.bethelhill.net/school_nutrition/wellness_policy",
+        "news": "https://www.bethelhill.net/news/archived_news/operation_christmas_child"
+      },
+      "clues": [
+        {
+          "text": "Its public branding uses the line Home of the Wildcats.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials show the school highlights character traits such as citizenship in community projects.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["news"]
+        },
+        {
+          "text": "The school's wellness policy says every student receives at least thirty minutes of moderate to vigorous physical activity each day.",
+          "difficulty": 6,
+          "category": "wellness",
+          "sourceRefs": ["wellness"]
+        },
+        {
+          "text": "Official pages emphasize a strong board-governed structure with published meeting schedules, minutes, and election information.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The staff directory lists Jessica Poole as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Recent school messaging refers to families and students as Wildcats on the prowl.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["home", "news"]
+        }
+      ]
+    },
+    {
+      "schoolId": "central-carolina-academy",
+      "officialName": "Central Carolina Academy",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "about": "https://centralcarolinaacademy.org/about-us/",
+        "staff": "https://centralcarolinaacademy.org/staff/",
+        "board": "https://centralcarolinaacademy.org/about-us/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Its published slogan is Inspiring lifelong leaders.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the academic model culminates with students maximizing NC Career and College Promise through Central Carolina Community College.",
+          "difficulty": 5,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it opened in the 2022-2023 school year in a renovated former Pantry and Circle K corporate facility.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its mission says the school establishes and maintains a challenging learning environment that respects individual learners and prepares students to succeed in a globally competitive society.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Staff pages list Greg Batten as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Board pages list Dr. Don Sloan as president.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "island-montessori-charter-school",
+      "officialName": "Island Montessori Charter School",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.im.school/",
+        "about": "https://www.im.school/about",
+        "board": "https://www.im.school/board",
+        "strategicPlan": "https://www.im.school/strategic-plan"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school helps children of diverse backgrounds learn and grow at their own pace in a Montessori environment that models grace and courtesy.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "strategicPlan"]
+        },
+        {
+          "text": "Official history says the private preschool opened in 2012 and the public charter school followed in 2013.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school highlights a Building Hope IMPACT Award for Community Engagement.",
+          "difficulty": 6,
+          "category": "achievement",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its strategic plan says graduates should become confident, kind, and responsible citizens of the world.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["strategicPlan"]
+        },
+        {
+          "text": "Board materials identify Nicole Smith as President of the charter board.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials repeatedly describe the school as a peaceful community of lifelong learners.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["home", "strategicPlan"]
+        }
+      ]
+    }
+  ]
+}

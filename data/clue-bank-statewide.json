@@ -32,7 +32,9 @@
     "Merged manual clue batch: clue-bank-batch-026.json",
     "Merged manual clue batch: clue-bank-batch-027.json",
     "Merged manual clue batch: clue-bank-batch-028.json",
-    "Merged manual clue batch: clue-bank-batch-029.json"
+    "Merged manual clue batch: clue-bank-batch-029.json",
+    "Merged manual clue batch: clue-bank-batch-030.json",
+    "Merged manual clue batch: clue-bank-batch-031.json"
   ],
   "schools": [
     {
@@ -654,27 +656,63 @@
     {
       "schoolId": "anderson-academy",
       "officialName": "Anderson Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "about": "https://andersonacademyws.org/about-anderson-academy",
+        "crossnore": "https://www.crossnore.org/anderson-academy/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Forsyth County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Its mission says the school offers a stable, emotionally supportive educational environment that empowers children to achieve their true academic and social potential.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about",
+            "crossnore"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1001 Reynolda Road Winston-Salem NC 27104.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official materials say the school gives priority to students connected to foster care or the child welfare system.",
+          "difficulty": 5,
+          "category": "student-support",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
+          ]
+        },
+        {
+          "text": "The school describes its approach as serving the whole child, with equal attention to academics and social-emotional wellbeing.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": [
+            "about",
+            "crossnore"
+          ]
+        },
+        {
+          "text": "Official pages say it opened on Crossnore's Winston-Salem campus in August 2025.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": [
+            "crossnore"
+          ]
+        },
+        {
+          "text": "Public leadership materials identify Rashawn Meekins as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "The school describes its learning model as a mix of direct, interactive, experiential, and independent learning.",
+          "difficulty": 8,
+          "category": "academics",
+          "sourceRefs": [
+            "about"
           ]
         }
       ]
@@ -1202,44 +1240,65 @@
     {
       "schoolId": "bethel-hill-charter",
       "officialName": "Bethel Hill Charter",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.bethelhill.net/",
+        "board": "https://www.bethelhill.net/page/board-of-directors",
+        "staff": "https://www.bethelhill.net/staff?page_no=3",
+        "wellness": "https://www.bethelhill.net/school_nutrition/wellness_policy",
+        "news": "https://www.bethelhill.net/news/archived_news/operation_christmas_child"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Roxboro.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its public branding uses the line Home of the Wildcats.",
+          "difficulty": 4,
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Person County.",
+          "text": "Official materials show the school highlights character traits such as citizenship in community projects.",
           "difficulty": 5,
-          "category": "county",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap"
+            "news"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 401 Bethel Hill School Road.",
+          "text": "The school's wellness policy says every student receives at least thirty minutes of moderate to vigorous physical activity each day.",
+          "difficulty": 6,
+          "category": "wellness",
+          "sourceRefs": [
+            "wellness"
+          ]
+        },
+        {
+          "text": "Official pages emphasize a strong board-governed structure with published meeting schedules, minutes, and election information.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": [
+            "board"
+          ]
+        },
+        {
+          "text": "The staff directory lists Jessica Poole as principal.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "staff"
           ]
         },
         {
-          "text": "Its official website uses the domain bethelhill.net.",
+          "text": "Recent school messaging refers to families and students as Wildcats on the prowl.",
           "difficulty": 8,
-          "category": "website",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home",
+            "news"
           ]
         }
       ]
@@ -1513,44 +1572,64 @@
     {
       "schoolId": "cis-academy",
       "officialName": "CIS Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.cisrobeson.org/cis-academy/",
+        "staff": "https://www.cisrobeson.org/staff-draft-version/",
+        "policies": "https://www.cisrobeson.org/policies/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Pembroke.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its official parent organization uses the mission line, \"to surround students with a community of support, empowering them to stay in school.\"",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "staff"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Robeson County.",
+          "text": "Official materials prominently celebrate student success in the NC Unity Conference writing contest.",
           "difficulty": 5,
-          "category": "county",
+          "category": "achievement",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 818 West 3rd Street.",
+          "text": "The school's public materials spotlight science-class activities like student volcano work.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its policy page publishes a broad set of school governance documents, including attendance, discipline, grievance, and wellness policies.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": [
+            "policies"
+          ]
+        },
+        {
+          "text": "Staff pages identify Jonathan Blue as principal.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "staff"
           ]
         },
         {
-          "text": "Its official website uses the domain cisrobeson.org.",
+          "text": "Official staff materials list Dr. Mazie Gibson as the school's counselor and student support specialist coordinator.",
           "difficulty": 8,
-          "category": "website",
+          "category": "student-support",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "staff"
           ]
         }
       ]
@@ -2061,44 +2140,62 @@
     {
       "schoolId": "central-carolina-academy",
       "officialName": "Central Carolina Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "about": "https://centralcarolinaacademy.org/about-us/",
+        "staff": "https://centralcarolinaacademy.org/staff/",
+        "board": "https://centralcarolinaacademy.org/about-us/board-of-directors/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Sanford.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its published slogan is Inspiring lifelong leaders.",
+          "difficulty": 4,
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Lee County.",
+          "text": "Official materials say the academic model culminates with students maximizing NC Career and College Promise through Central Carolina Community College.",
           "difficulty": 5,
-          "category": "county",
+          "category": "academics",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1801 Douglas Drive.",
+          "text": "The school says it opened in the 2022-2023 school year in a renovated former Pantry and Circle K corporate facility.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its mission says the school establishes and maintains a challenging learning environment that respects individual learners and prepares students to succeed in a globally competitive society.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Staff pages list Greg Batten as principal.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "staff"
           ]
         },
         {
-          "text": "Its official website uses the domain centralcarolinaacademy.org.",
+          "text": "Board pages list Dr. Don Sloan as president.",
           "difficulty": 8,
-          "category": "website",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "board"
           ]
         }
       ]
@@ -3509,44 +3606,65 @@
     {
       "schoolId": "durham-charter-school",
       "officialName": "Durham Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.durhamcharter.org/",
+        "about": "https://www.durhamcharter.org/about/",
+        "board": "https://www.durhamcharter.org/board/",
+        "team": "https://www.durhamcharter.org/team/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Durham.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Official materials say the school was formerly known as Healthy Start Academy.",
+          "difficulty": 4,
+          "category": "history",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Durham County.",
+          "text": "Its mission says the school exists to build a world-class K-12 school in Durham that empowers students to thrive in college, career, and life.",
           "difficulty": 5,
-          "category": "county",
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 807 West Chapel Hill Street.",
+          "text": "The school says its vision includes an Early College for All pathway through Durham Technical Community College.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Official materials identify it as North Carolina's first charter school.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Team pages list Alex Quigley as Executive Director.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "team"
           ]
         },
         {
-          "text": "Its official website uses the domain durhamcharter.org.",
+          "text": "Board pages list Elizabeth Gnatek-Morey as Board Chair.",
           "difficulty": 8,
-          "category": "website",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "board"
           ]
         }
       ]
@@ -5206,44 +5324,65 @@
     {
       "schoolId": "island-montessori-charter-school",
       "officialName": "Island Montessori Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-030",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.im.school/",
+        "about": "https://www.im.school/about",
+        "board": "https://www.im.school/board",
+        "strategicPlan": "https://www.im.school/strategic-plan"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Wilmington.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school helps children of diverse backgrounds learn and grow at their own pace in a Montessori environment that models grace and courtesy.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "strategicPlan"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in New Hanover County.",
+          "text": "Official history says the private preschool opened in 2012 and the public charter school followed in 2013.",
           "difficulty": 5,
-          "category": "county",
+          "category": "history",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 6339 Carolina Beach Rd.",
+          "text": "The school highlights a Building Hope IMPACT Award for Community Engagement.",
+          "difficulty": 6,
+          "category": "achievement",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its strategic plan says graduates should become confident, kind, and responsible citizens of the world.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": [
+            "strategicPlan"
+          ]
+        },
+        {
+          "text": "Board materials identify Nicole Smith as President of the charter board.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap"
+            "board"
           ]
         },
         {
-          "text": "Its official website uses the domain islandmontessorischool.com.",
+          "text": "Official materials repeatedly describe the school as a peaceful community of lifelong learners.",
           "difficulty": 8,
-          "category": "website",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home",
+            "strategicPlan"
           ]
         }
       ]
@@ -7387,44 +7526,63 @@
     {
       "schoolId": "north-east-carolina-prep",
       "officialName": "North East Carolina Prep",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://necprepschool.com/",
+        "about": "https://necprepschool.com/m/pages/index.jsp?type=d&uREC_ID=485810",
+        "staff": "https://www.necprepschool.com/apps/staff/",
+        "board": "https://www.necprepschool.com/apps/pages/index.jsp?type=d&uREC_ID=485812"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Tarboro.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school teaches and inspires through a challenging curriculum that integrates technology, experiential learning, and critical thinking skills.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Edgecombe County.",
+          "text": "Official materials describe it as Edgecombe County's only charter school.",
           "difficulty": 5,
-          "category": "county",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 274 Husky Trail.",
+          "text": "The school says it is one of only two North Carolina schools offering a PreK-12 agricultural program.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Official materials highlight the Rotary Club of Tarboro Animal Facility and the Edgecombe County Farm Bureau Agricultural Complex.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "program",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
           ]
         },
         {
-          "text": "Its official website uses the domain necprepschool.com.",
-          "difficulty": 8,
-          "category": "website",
+          "text": "Staff pages list Dr. Mark Cockrell as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "staff"
+          ]
+        },
+        {
+          "text": "Board materials identify Anne Mann as chairman.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": [
+            "board"
           ]
         }
       ]
@@ -7524,44 +7682,67 @@
     {
       "schoolId": "oak-hill-charter-school",
       "officialName": "Oak Hill Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://oakhillcharternc.org/",
+        "about": "https://oakhillcharternc.org/about-us/",
+        "principalProfile": "https://oakhillcharternc.org/principal-profile/",
+        "principalSearch": "https://oakhillcharternc.org/principal-search/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Lenoir.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school provides a rigorous back-to-basics education with high personal expectations.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Caldwell County.",
+          "text": "Official materials say the academic program uses Core Knowledge, Saxon Math, Shurley Grammar, and Core Essentials Character Education.",
           "difficulty": 5,
-          "category": "county",
+          "category": "academics",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 4603 Oak Hill School Rd..",
+          "text": "The school describes itself as a grassroots charter formed by concerned local community members.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": [
+            "home",
+            "about"
+          ]
+        },
+        {
+          "text": "Its public-facing welcome message refers to the campus as The Hive.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Principal profile materials identify Mr. Alexander Tiren as principal.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "principalProfile"
           ]
         },
         {
-          "text": "Its official website uses the domain oakhillcharternc.org.",
+          "text": "Official pages say the school was created to be a community staple and a meaningful educational choice for families in Caldwell County and surrounding areas.",
           "difficulty": 8,
-          "category": "website",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home",
+            "about"
           ]
         }
       ]
@@ -10210,44 +10391,68 @@
     {
       "schoolId": "the-academy-of-moore-county",
       "officialName": "The Academy of Moore County",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.academyofmoorecounty.org/",
+        "about": "https://www.academyofmoorecounty.org/apps/pages/index.jsp?type=d&uREC_ID=571165",
+        "welcome": "https://www.academyofmoorecounty.org/apps/pages/index.jsp?type=d&uREC_ID=571166",
+        "staff": "https://academyofmoorecounty.org/apps/staff/",
+        "safety": "https://www.academyofmoorecounty.org/apps/pages/index.jsp?pREC_ID=1102244&termREC_ID=&type=d&uREC_ID=571347"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Aberdeen.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its public-facing slogan is Developing tomorrow's leaders today.",
+          "difficulty": 4,
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Moore County.",
+          "text": "Official materials describe the school as a public school of choice with high expectations for all.",
           "difficulty": 5,
-          "category": "county",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 12588 HWY 15-501 South.",
+          "text": "The school's overview says it creates value in the community by producing children who are independent thinkers and effective communicators.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Safety materials mention a dedicated TAMC Safety/Security Committee working with sheriff, police, and fire partners.",
+          "difficulty": 6,
+          "category": "student-support",
+          "sourceRefs": [
+            "safety"
+          ]
+        },
+        {
+          "text": "Official pages identify Dr. Dale Buie as Director of Education.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "welcome",
+            "staff"
           ]
         },
         {
-          "text": "Its official website uses the domain academyofmoorecounty.org.",
+          "text": "The homepage highlights strong external rankings from both Niche and U.S. News.",
           "difficulty": 8,
-          "category": "website",
+          "category": "achievement",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home"
           ]
         }
       ]
@@ -11623,44 +11828,68 @@
     {
       "schoolId": "vance-charter-school",
       "officialName": "Vance Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.vancecharter.org/",
+        "whoWeAre": "https://www.vancecharter.org/page/who-we-are",
+        "administration": "https://www.vancecharter.org/page/administration",
+        "curriculum": "https://www.vancecharter.org/page/curriculum"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Henderson.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school teaches and inspires each child to become an independent thinker and a contributing citizen with a life-long desire to learn.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "whoWeAre"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Vance County.",
+          "text": "Official materials say the curriculum is enriched with service learning and the Core Knowledge Sequence.",
           "difficulty": 5,
-          "category": "county",
+          "category": "academics",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "curriculum"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 2090 ROSS MILL ROAD.",
+          "text": "The school says success is not measured by state tests alone because it educates the whole child academically, morally, and socially.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": [
+            "home",
+            "whoWeAre",
+            "curriculum"
+          ]
+        },
+        {
+          "text": "Official materials emphasize character education and mastery of life skills as core parts of the program.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": [
+            "whoWeAre",
+            "curriculum"
+          ]
+        },
+        {
+          "text": "Administration pages list Brian Mathis as Executive Director.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "administration"
           ]
         },
         {
-          "text": "Its official website uses the domain vancecharter.org.",
+          "text": "The school's news and family resources are grouped under the label Knightly News.",
           "difficulty": 8,
-          "category": "website",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home"
           ]
         }
       ]

@@ -42,11 +42,16 @@ This repo currently includes:
 
 `data/puzzle-source.json`
 
-- `date`
-- `answerSchoolId`
-- `clues[]`
-- `clues[].difficulty`
-- `clues[].text`
+- `generatedAt`
+- `notes`
+- `generatorConfig`
+- `stats`
+- `puzzles[]`
+- `puzzles[].date`
+- `puzzles[].answerSchoolId`
+- `puzzles[].clues[]`
+- `puzzles[].clues[].difficulty`
+- `puzzles[].clues[].text`
 
 `data/clue-bank-batch-001.json`
 
@@ -200,6 +205,16 @@ This repo currently includes:
 - same structure as `clue-bank-batch-001.json`
 - adds another official-source manual batch spanning rural, prep, leadership, and mission-driven charter models
 
+`data/clue-bank-batch-030.json`
+
+- same structure as `clue-bank-batch-001.json`
+- adds another official-source manual batch spanning legacy, Montessori, community, and college-prep charter models
+
+`data/clue-bank-batch-031.json`
+
+- same structure as `clue-bank-batch-001.json`
+- adds another official-source manual batch spanning college-prep, whole-child, rural, and mission-driven charter models
+
 `data/nc-charter-master-list.json`
 
 - `generatedAt`
@@ -217,7 +232,7 @@ This repo currently includes:
 
 - merged statewide clue artifact
 - baseline statewide clues plus curated manual batch overrides
-- currently includes 150 manually validated schools from `batch-001` through `batch-029`
+- currently includes 160 manually validated schools from `batch-001` through `batch-031`
 
 ## Build Notes
 
@@ -246,11 +261,32 @@ The site URL will be:
 
 If you later want a custom domain, add a `CNAME` file at the repo root and configure the DNS in GitHub Pages settings.
 
-If you want to validate and regenerate `data/puzzles.json` from `data/puzzle-source.json`, run:
+## Daily Puzzle Automation
+
+Daily puzzles are now generated automatically from the statewide clue bank.
+
+Files involved:
+
+- `.github/workflows/refresh-puzzles.yml`
+- `scripts/generate-daily-puzzles.mjs`
+- `data/puzzle-source.json`
+- `data/puzzles.json`
+
+How it works:
+
+1. The generator builds a deterministic daily puzzle calendar starting on `2026-05-07`.
+2. It rotates through schools with enough validated clue coverage.
+3. Each puzzle uses five curated clues plus a final first-letter hint.
+4. The scheduled GitHub Action runs every day and extends the published calendar forward.
+5. The app loads the puzzle matching the visitor's current date from `data/puzzles.json`.
+
+To regenerate the daily puzzle calendar locally, run:
 
 ```bash
-node scripts/build-puzzles.mjs
+node scripts/generate-daily-puzzles.mjs
 ```
+
+The current generated calendar includes 732 dated puzzles covering `2026-05-07` through `2028-05-07`.
 
 To rebuild the statewide school master list and baseline clue bank from official source files already downloaded into the repo, run:
 

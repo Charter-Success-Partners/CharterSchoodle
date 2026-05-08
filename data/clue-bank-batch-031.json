@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Thirty-first validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "north-east-carolina-prep",
+      "officialName": "North East Carolina Prep",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://necprepschool.com/",
+        "about": "https://necprepschool.com/m/pages/index.jsp?type=d&uREC_ID=485810",
+        "staff": "https://www.necprepschool.com/apps/staff/",
+        "board": "https://www.necprepschool.com/apps/pages/index.jsp?type=d&uREC_ID=485812"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school teaches and inspires through a challenging curriculum that integrates technology, experiential learning, and critical thinking skills.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials describe it as Edgecombe County's only charter school.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it is one of only two North Carolina schools offering a PreK-12 agricultural program.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials highlight the Rotary Club of Tarboro Animal Facility and the Edgecombe County Farm Bureau Agricultural Complex.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Staff pages list Dr. Mark Cockrell as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Board materials identify Anne Mann as chairman.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "oak-hill-charter-school",
+      "officialName": "Oak Hill Charter School",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://oakhillcharternc.org/",
+        "about": "https://oakhillcharternc.org/about-us/",
+        "principalProfile": "https://oakhillcharternc.org/principal-profile/",
+        "principalSearch": "https://oakhillcharternc.org/principal-search/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a rigorous back-to-basics education with high personal expectations.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials say the academic program uses Core Knowledge, Saxon Math, Shurley Grammar, and Core Essentials Character Education.",
+          "difficulty": 5,
+          "category": "academics",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school describes itself as a grassroots charter formed by concerned local community members.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its public-facing welcome message refers to the campus as The Hive.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Principal profile materials identify Mr. Alexander Tiren as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["principalProfile"]
+        },
+        {
+          "text": "Official pages say the school was created to be a community staple and a meaningful educational choice for families in Caldwell County and surrounding areas.",
+          "difficulty": 8,
+          "category": "school-culture",
+          "sourceRefs": ["home", "about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "vance-charter-school",
+      "officialName": "Vance Charter School",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.vancecharter.org/",
+        "whoWeAre": "https://www.vancecharter.org/page/who-we-are",
+        "administration": "https://www.vancecharter.org/page/administration",
+        "curriculum": "https://www.vancecharter.org/page/curriculum"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school teaches and inspires each child to become an independent thinker and a contributing citizen with a life-long desire to learn.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "whoWeAre"]
+        },
+        {
+          "text": "Official materials say the curriculum is enriched with service learning and the Core Knowledge Sequence.",
+          "difficulty": 5,
+          "category": "academics",
+          "sourceRefs": ["home", "curriculum"]
+        },
+        {
+          "text": "The school says success is not measured by state tests alone because it educates the whole child academically, morally, and socially.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["home", "whoWeAre", "curriculum"]
+        },
+        {
+          "text": "Official materials emphasize character education and mastery of life skills as core parts of the program.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["whoWeAre", "curriculum"]
+        },
+        {
+          "text": "Administration pages list Brian Mathis as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["administration"]
+        },
+        {
+          "text": "The school's news and family resources are grouped under the label Knightly News.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        }
+      ]
+    },
+    {
+      "schoolId": "the-academy-of-moore-county",
+      "officialName": "The Academy of Moore County",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.academyofmoorecounty.org/",
+        "about": "https://www.academyofmoorecounty.org/apps/pages/index.jsp?type=d&uREC_ID=571165",
+        "welcome": "https://www.academyofmoorecounty.org/apps/pages/index.jsp?type=d&uREC_ID=571166",
+        "staff": "https://academyofmoorecounty.org/apps/staff/",
+        "safety": "https://www.academyofmoorecounty.org/apps/pages/index.jsp?pREC_ID=1102244&termREC_ID=&type=d&uREC_ID=571347"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is Developing tomorrow's leaders today.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials describe the school as a public school of choice with high expectations for all.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school's overview says it creates value in the community by producing children who are independent thinkers and effective communicators.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Safety materials mention a dedicated TAMC Safety/Security Committee working with sheriff, police, and fire partners.",
+          "difficulty": 6,
+          "category": "student-support",
+          "sourceRefs": ["safety"]
+        },
+        {
+          "text": "Official pages identify Dr. Dale Buie as Director of Education.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["home", "welcome", "staff"]
+        },
+        {
+          "text": "The homepage highlights strong external rankings from both Niche and U.S. News.",
+          "difficulty": 8,
+          "category": "achievement",
+          "sourceRefs": ["home"]
+        }
+      ]
+    },
+    {
+      "schoolId": "cis-academy",
+      "officialName": "CIS Academy",
+      "status": "validated-batch-031",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.cisrobeson.org/cis-academy/",
+        "staff": "https://www.cisrobeson.org/staff-draft-version/",
+        "policies": "https://www.cisrobeson.org/policies/"
+      },
+      "clues": [
+        {
+          "text": "Its official parent organization uses the mission line, \"to surround students with a community of support, empowering them to stay in school.\"",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "staff"]
+        },
+        {
+          "text": "Official materials prominently celebrate student success in the NC Unity Conference writing contest.",
+          "difficulty": 5,
+          "category": "achievement",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school's public materials spotlight science-class activities like student volcano work.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its policy page publishes a broad set of school governance documents, including attendance, discipline, grievance, and wellness policies.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["policies"]
+        },
+        {
+          "text": "Staff pages identify Jonathan Blue as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["home", "staff"]
+        },
+        {
+          "text": "Official staff materials list Dr. Mazie Gibson as the school's counselor and student support specialist coordinator.",
+          "difficulty": 8,
+          "category": "student-support",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    }
+  ]
+}
