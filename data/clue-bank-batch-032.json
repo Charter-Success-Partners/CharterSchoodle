@@ -1,0 +1,265 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Thirty-second validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "the-hawbridge-school",
+      "officialName": "The Hawbridge School",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://thehawbridgeschool.org/",
+        "about": "https://thehawbridgeschool.org/about-2/",
+        "mission": "https://thehawbridgeschool.org/mission-vision/",
+        "history": "https://thehawbridgeschool.org/about/history/",
+        "board": "https://thehawbridgeschool.org/board/",
+        "admin": "https://thehawbridgeschool.org/administrators/"
+      },
+      "clues": [
+        {
+          "text": "Official history says the school originally opened in 1998 as New Century Charter High School.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "Its vision emphasizes inclusiveness, mutual respect, personal attention, environmental stewardship, and the arts.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["mission", "board"]
+        },
+        {
+          "text": "The school describes its faculty-designed model as combining differentiated instruction, outdoor and place-based education, and an inclusive community culture.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials highlight Hawbridge Outdoors, with excursions such as hiking, biking, camping, canoeing, horseback riding, and rock climbing.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Board pages list Kemp Watson-Ormond as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Administrator pages identify Taneeka Hanna as Lower School Director and Alexis Crumel as Upper School Director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["admin"]
+        }
+      ]
+    },
+    {
+      "schoolId": "washington-montessori",
+      "officialName": "Washington Montessori",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.wmpcs.org/",
+        "about": "https://www.wmpcs.org/about_us",
+        "beliefs": "https://www.wmpcs.org/about_us/our_beliefs",
+        "campus": "https://www.wmpcs.org/about_us/our_campus",
+        "board": "https://www.wmpcs.org/about_us/board_of_trustees"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school inspires academic excellence while nurturing curiosity, creativity, and imagination in an environment rich with warmth, kindness, and respect.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials say the program rests on four pillars, including passion for excellence, universal values, a global perspective, and service to others.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["about", "beliefs"]
+        },
+        {
+          "text": "The school publishes three basic tenets: respect all living things, respect all non-living things, and use grace and courtesy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about", "beliefs"]
+        },
+        {
+          "text": "Campus materials describe over 36 acres of trails, woods, bridges, fields, and outdoor classroom spaces.",
+          "difficulty": 6,
+          "category": "campus",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Board of Trustees pages identify Joseph Knox as chairperson.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials say visitors will not see rows of desks or teachers lecturing in front of the class, but children working at tables, on mats, and in small groups.",
+          "difficulty": 8,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "rising-leaders-academy",
+      "officialName": "Rising Leaders Academy",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.rla-nc.org/",
+        "mission": "https://www.rla-nc.org/page/rla-mission-statement",
+        "about": "https://www.rla-nc.org/page/about-rla",
+        "board": "https://www.rla-nc.org/page/rla-board",
+        "enroll": "https://www.rla-nc.org/page/enroll-at-rla"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school empowers students to be lifelong learners, innovative thinkers, and good citizens able to compete globally.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission", "about"]
+        },
+        {
+          "text": "Official materials repeatedly describe the school as a safe, small school environment where every child feels seen, valued, and supported.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["home", "enroll"]
+        },
+        {
+          "text": "The school calls its community the Wolfpack.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about", "enroll"]
+        },
+        {
+          "text": "Official pages say the campus operates on a year-round calendar.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about", "enroll"]
+        },
+        {
+          "text": "The school says it focuses on developing the whole child through leadership, character, and personal responsibility.",
+          "difficulty": 7,
+          "category": "school-culture",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Board materials say its regular board meetings are held on the third Tuesday of each month at 6 p.m.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["home", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "the-capitol-encore-academy",
+      "officialName": "The Capitol Encore Academy",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://capitolencoreacademy.org/",
+        "about": "https://capitolencoreacademy.org/about-2/",
+        "board": "https://capitolencoreacademy.org/board-info-meeting-dates/",
+        "admin": "https://capitolencoreacademy.org/administrative-team/",
+        "curriculum": "https://capitolencoreacademy.org/curriculum/",
+        "contact": "https://capitolencoreacademy.org/contact/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school develops artists who inspire others through the integration of academic excellence, virtuous character, and disciplined artistry.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials identify Hayes the Chameleon as the school mascot.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its vision is organized around four action words: Inquire, Imagine, Innovate, and Inspire.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says its teaching philosophy combines artful thinking, learning by doing, and excellence in teaching.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["curriculum"]
+        },
+        {
+          "text": "Administrative pages list Gerard Falls as superintendent.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["admin"]
+        },
+        {
+          "text": "Contact materials say the school resides in the historic site of The Capitol Department Store in downtown Fayetteville.",
+          "difficulty": 8,
+          "category": "campus",
+          "sourceRefs": ["contact"]
+        }
+      ]
+    },
+    {
+      "schoolId": "united-community-school",
+      "officialName": "United Community School",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.ucsnc.org/",
+        "mission": "https://www.ucsnc.org/copy-of-mission-and-philosophy",
+        "board": "https://www.ucsnc.org/board-of-directors",
+        "contact": "https://www.ucsnc.org/contact"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school fulfills the vision of The Basic School by Dr. Ernest L. Boyer.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school places a huge emphasis on hands-on learning, best instructional practices, and arts integration.",
+          "difficulty": 5,
+          "category": "academics",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school explains The Basic School philosophy through four principles known as the 4 C's.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say learning is promoted through field trips, the arts, community partnerships, and other engaging experiences.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school brands itself around the HIVE.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Board materials say meetings alternate between on-site meetings and conference calls, with the public welcome to attend.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    }
+  ]
+}

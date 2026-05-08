@@ -34,7 +34,10 @@
     "Merged manual clue batch: clue-bank-batch-028.json",
     "Merged manual clue batch: clue-bank-batch-029.json",
     "Merged manual clue batch: clue-bank-batch-030.json",
-    "Merged manual clue batch: clue-bank-batch-031.json"
+    "Merged manual clue batch: clue-bank-batch-031.json",
+    "Merged manual clue batch: clue-bank-batch-032.json",
+    "Merged manual clue batch: clue-bank-batch-033.json",
+    "Merged manual clue batch: clue-bank-batch-034.json"
   ],
   "schools": [
     {
@@ -235,27 +238,60 @@
     {
       "schoolId": "agape-achievement-academy",
       "officialName": "Agape Achievement Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Cumberland County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Cumberland County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 3421 Murchison Rd Fayetteville NC 28311.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 3421 Murchison Rd Fayetteville NC 28311.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Agape Achievement Academy.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Agape Achievement Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Agape Achievement Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -263,44 +299,61 @@
     {
       "schoolId": "alamance-community-school",
       "officialName": "Alamance Community School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.alamancecommunityschool.net/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Haw River.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Alamance County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 195 Kronbergs Court.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain alamancecommunityschool.net.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Haw River.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Alamance County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 195 Kronbergs Court.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Community.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Alamance Community School.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -2028,44 +2081,61 @@
     {
       "schoolId": "carter-g-woodson-school",
       "officialName": "Carter G. Woodson School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://cartergwoodsonschool.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Winston-Salem.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Forsyth County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 437 Goldfloss Street.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain cartergwoodsonschool.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Winston-Salem.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Forsyth County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 437 Goldfloss Street.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Carter G. Woodson School.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Carter G. Woodson School.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -3009,44 +3079,62 @@
     {
       "schoolId": "community-charter-school",
       "officialName": "Community Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://cpcsnc.org/",
+        "about": "https://cpcsnc.org/about-us/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Stanley.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its public-facing tagline is Better Education for a Better World.",
+          "difficulty": 4,
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Gaston County.",
+          "text": "Official materials say the school focuses on American Values alongside inquiry-based learning.",
           "difficulty": 5,
-          "category": "county",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 185 Mariposa Road.",
+          "text": "The school says its academic program uses the Core Knowledge Sequence and a values-based character education program built on Core Virtues.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Official messaging says the school aims to care for both the hearts and minds of students.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "The school says its goal is to develop content knowledge, civic duty, and personal pride in future leaders.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "Its official website uses the domain cpcsnc.org.",
+          "text": "Its official site prominently tells prospective families, \"We saved a seat...for YOU!\"",
           "difficulty": 8,
-          "category": "website",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home"
           ]
         }
       ]
@@ -3119,44 +3207,61 @@
     {
       "schoolId": "community-school-of-digital-and-visual-art",
       "officialName": "Community School of Digital & Visual Art",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.communitydva.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Durham.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Durham County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 1955 West Cornwallis Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain communitydva.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Durham.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Durham County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 1955 West Cornwallis Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Community.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name includes an ampersand.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -3164,44 +3269,65 @@
     {
       "schoolId": "concord-lake-steam-academy",
       "officialName": "Concord Lake STEAM Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.concordlakeacademy.org/",
+        "about": "https://www.concordlakeacademy.org/apps/pages/index.jsp?type=d&uREC_ID=576318",
+        "middleSchool": "https://www.concordlakeacademy.org/m/pages/index.jsp?type=d&uREC_ID=507154",
+        "principal": "https://www.concordlakeacademy.org/apps/pages/index.jsp?type=d&uREC_ID=507153",
+        "aig": "https://www.concordlakeacademy.org/apps/pages/index.jsp?type=d&uREC_ID=423048"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Kannapolis.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school provides a well-rounded education through rigorous, innovative, and inquiry-based instruction.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Cabarrus County.",
+          "text": "Official materials describe the school as a member of the Charter Schools USA family of schools.",
           "difficulty": 5,
-          "category": "county",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1911 Concord Lake Road.",
+          "text": "The school's principal message says its 2025-2026 schoolwide initiative is RESET.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": [
+            "principal"
+          ]
+        },
+        {
+          "text": "Official gifted-program materials say the school is one of only two charter schools in North Carolina recognized as a Promising District.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "achievement",
           "sourceRefs": [
-            "dpiCharterMap"
+            "aig"
           ]
         },
         {
-          "text": "Its official website uses the domain concordlakeacademy.org.",
-          "difficulty": 8,
-          "category": "website",
+          "text": "The school calls itself Home of the Rockets.",
+          "difficulty": 7,
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "about",
+            "principal"
+          ]
+        },
+        {
+          "text": "Principal's message pages identify Rebecca Feliciano as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": [
+            "principal"
           ]
         }
       ]
@@ -3209,27 +3335,60 @@
     {
       "schoolId": "cornerstone-charter-academy-cfa",
       "officialName": "Cornerstone Charter Academy-CFA",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 7800 Airport Center Drive Greensboro NC 27409.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 7800 Airport Center Drive Greensboro NC 27409.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly includes the word Charter.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name includes a hyphen.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Cornerstone Charter Academy-CFA.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -3300,44 +3459,61 @@
     {
       "schoolId": "crosscreek-charter-school",
       "officialName": "Crosscreek Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.crosscreekcharterschool.com/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Louisburg.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Franklin County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 100 East River Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain crosscreekcharterschool.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Louisburg.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Franklin County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 100 East River Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly includes the word Charter.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Crosscreek Charter School.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -3804,44 +3980,61 @@
     {
       "schoolId": "emereau-bladen",
       "officialName": "Emereau: Bladen",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.emereau.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Elizabethtown.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Bladen County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 995 Airport Rd.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain emereau.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Elizabethtown.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Bladen County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 995 Airport Rd.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name includes a punctuation mark in the middle.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Emereau: Bladen.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -4658,44 +4851,61 @@
     {
       "schoolId": "girls-leadership-academy-of-wilmington",
       "officialName": "Girls Leadership Academy of Wilmington",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.glowacademy.net"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Wilmington.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in New Hanover County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 4100 Sunglow Drive.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain glowacademy.net.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wilmington.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in New Hanover County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 4100 Sunglow Drive.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly emphasizes leadership.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -5162,27 +5372,60 @@
     {
       "schoolId": "honor-prep",
       "officialName": "Honor Prep",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Mecklenburg County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 9108 Mallard Creek Rd Charlotte NC 28262.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 9108 Mallard Creek Rd Charlotte NC 28262.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Honor Prep.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Honor Prep.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Honor Prep.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Honor Prep.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -6052,44 +6295,64 @@
     {
       "schoolId": "legacy-classical-academy",
       "officialName": "Legacy Classical Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.legacyclassicalk8.com/",
+        "mission": "https://www.legacyclassicalk8.com/apps/pages/index.jsp?type=d&uREC_ID=542449",
+        "board": "https://www.legacyclassicalk8.com/apps/pages/index.jsp?type=d&uREC_ID=542692"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Reidsville.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school develops productive citizens through a challenging classical academic program, meaningful parental partnerships, character education, and student responsibility.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "mission"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Rockingham County.",
+          "text": "Official materials say the school opened in August 2023.",
           "difficulty": 5,
-          "category": "county",
+          "category": "history",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "mission"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 2621 S Scales Street.",
+          "text": "Board materials say the governing board is ultimately responsible to the Office of Charter Schools and State Board of Education for sound operations.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": [
+            "board"
+          ]
+        },
+        {
+          "text": "Official pages say regular board meetings are usually held on the fourth Tuesday of the month and are open to the public.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": [
+            "board"
+          ]
+        },
+        {
+          "text": "The board page lists Bernie Parnell as chairman.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap"
+            "board"
           ]
         },
         {
-          "text": "Its official website uses the domain legacyclassicalk8.com.",
+          "text": "The school's mission uniquely combines a classical academic program with explicit emphasis on parental partnerships and character education.",
           "difficulty": 8,
-          "category": "website",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "mission"
           ]
         }
       ]
@@ -6299,44 +6562,61 @@
     {
       "schoolId": "magellan-charter",
       "officialName": "Magellan Charter",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.magellancharterschool.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Raleigh.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Wake County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 9324 Baileywick Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain magellancharterschool.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Raleigh.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wake County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 9324 Baileywick Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly includes the word Charter.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Magellan Charter.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -6412,44 +6692,61 @@
     {
       "schoolId": "marjorie-williams-academy",
       "officialName": "Marjorie Williams Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.williamsacademy.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Newland.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Avery County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 129 Allen Circle.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain williamsacademy.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Newland.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Avery County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 129 Allen Circle.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Marjorie Williams Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -6869,44 +7166,61 @@
     {
       "schoolId": "mountain-city-public-montessori",
       "officialName": "Mountain City Public Montessori",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.mountaincitypublic.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Asheville.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Buncombe County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 27 Church Street.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain mountaincitypublic.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Asheville.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Buncombe County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 27 Church Street.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references Montessori education.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Mountain City Public Montessori.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7305,44 +7619,61 @@
     {
       "schoolId": "nc-leadership-charter-academy",
       "officialName": "NC Leadership Charter Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.thencla.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Kernersville.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Forsyth County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 4353 High Point Rd.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain thencla.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Kernersville.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Forsyth County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 4353 High Point Rd.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly emphasizes leadership.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7481,44 +7812,61 @@
     {
       "schoolId": "next-generation-academy",
       "officialName": "Next Generation Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.nextgenerationacademy.net"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Greensboro.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 3740 South Holden Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain nextgenerationacademy.net.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Greensboro.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 3740 South Holden Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Next Generation Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7654,27 +8002,60 @@
     {
       "schoolId": "northeast-academy-of-aerospace-and-advtech",
       "officialName": "Northeast Academy of Aerospace & AdvTech",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Pasquotank County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Pasquotank County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1413 W Ehringhaus St Elizabeth City NC 27909.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 1413 W Ehringhaus St Elizabeth City NC 27909.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references aerospace.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name includes an ampersand.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many North Carolina charter school names.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7750,44 +8131,61 @@
     {
       "schoolId": "old-main-stream-academy",
       "officialName": "Old Main STREAM Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://sites.google.com/view/omsacademy/home?authuser=0"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Pembroke.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Robeson County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 200 North Odum Street.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain sites.google.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Pembroke.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Robeson County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 200 North Odum Street.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the acronym STREAM.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7859,44 +8257,61 @@
     {
       "schoolId": "paul-r-brown-leadership-academy",
       "officialName": "Paul R. Brown Leadership Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.paulrbrownleadership.com/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Elizabethtown.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Bladen County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 1360 Martin L King Jr Dr.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain paulrbrownleadership.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Elizabethtown.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Bladen County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 1360 Martin L King Jr Dr.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly emphasizes leadership.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7969,27 +8384,60 @@
     {
       "schoolId": "phoenix-academy-primary-elem-upper",
       "officialName": "Phoenix Academy - Primary, Elem, Upper",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 7847 Clinard Farms Rd High Point NC 27265.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 7847 Clinard Farms Rd High Point NC 27265.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name includes a hyphen.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many North Carolina charter school names.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Phoenix Academy - Primary, Elem, Upper.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -7997,44 +8445,61 @@
     {
       "schoolId": "piedmont-classical-high-school",
       "officialName": "Piedmont Classical High School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.piedmontclassical.com/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in BROWNS SUMMIT.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 4100 YANCEYVILLE RD.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain piedmontclassical.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in BROWNS SUMMIT.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 4100 YANCEYVILLE RD.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references a classical model of education.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Piedmont Classical High School.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -8651,44 +9116,61 @@
     {
       "schoolId": "quest-academy",
       "officialName": "Quest Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.questcharter.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Raleigh.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Wake County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 10908 Strickland Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain questcharter.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Raleigh.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wake County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 10908 Strickland Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Quest Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -8696,44 +9178,61 @@
     {
       "schoolId": "rise-southeast-raleigh-charter-school",
       "officialName": "RISE Southeast Raleigh Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.risese.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Raleigh.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Wake County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 3420 Idlewood Village Dr.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain risese.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Raleigh.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wake County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 3420 Idlewood Village Dr.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly includes the word Charter.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many North Carolina charter school names.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -9135,44 +9634,70 @@
     {
       "schoolId": "rising-leaders-academy",
       "officialName": "Rising Leaders Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.rla-nc.org/",
+        "mission": "https://www.rla-nc.org/page/rla-mission-statement",
+        "about": "https://www.rla-nc.org/page/about-rla",
+        "board": "https://www.rla-nc.org/page/rla-board",
+        "enroll": "https://www.rla-nc.org/page/enroll-at-rla"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Sanford.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school empowers students to be lifelong learners, innovative thinkers, and good citizens able to compete globally.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "mission",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Lee County.",
+          "text": "Official materials repeatedly describe the school as a safe, small school environment where every child feels seen, valued, and supported.",
           "difficulty": 5,
-          "category": "county",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "enroll"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 2732 Industrial Drive.",
+          "text": "The school calls its community the Wolfpack.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "about",
+            "enroll"
+          ]
+        },
+        {
+          "text": "Official pages say the campus operates on a year-round calendar.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": [
+            "about",
+            "enroll"
+          ]
+        },
+        {
+          "text": "The school says it focuses on developing the whole child through leadership, character, and personal responsibility.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "Its official website uses the domain minacharterschoolofleecounty.org.",
+          "text": "Board materials say its regular board meetings are held on the third Tuesday of each month at 6 p.m.",
           "difficulty": 8,
-          "category": "website",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home",
+            "board"
           ]
         }
       ]
@@ -9244,27 +9769,60 @@
     {
       "schoolId": "riverside-leadership-academy",
       "officialName": "Riverside Leadership Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Craven County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Craven County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1955 Old Airport Rd New Bern NC 28562.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 1955 Old Airport Rd New Bern NC 28562.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly emphasizes leadership.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Riverside Leadership Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Riverside Leadership Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -9630,27 +10188,60 @@
     {
       "schoolId": "sledge-institute",
       "officialName": "Sledge Institute",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Vance County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Vance County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1875 Gun Club Road Henderson NC 27537.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 1875 Gun Club Road Henderson NC 27537.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Sledge Institute.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Sledge Institute.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Sledge Institute.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Sledge Institute.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -9722,44 +10313,61 @@
     {
       "schoolId": "southeastern-academy",
       "officialName": "Southeastern Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.southeasternacademy.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Lumberton.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Robeson County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 12251 NC HWY 41 North.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain southeasternacademy.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Lumberton.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Robeson County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 12251 NC HWY 41 North.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Southeastern Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -9767,44 +10375,61 @@
     {
       "schoolId": "southern-wake-academy",
       "officialName": "Southern Wake Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://swake.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Holly Springs.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Wake County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 5108 Old Powell Rd.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain swake.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Holly Springs.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wake County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 5108 Old Powell Rd.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Southern Wake Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -9876,44 +10501,61 @@
     {
       "schoolId": "steele-creek-preparatory-academy",
       "officialName": "Steele Creek Preparatory Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.steelecreekprep.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Charlotte.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 2200 Shopton Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain steelecreekprep.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Charlotte.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Mecklenburg County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 2200 Shopton Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Preparatory.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -9921,44 +10563,67 @@
     {
       "schoolId": "sterling-montessori-academy",
       "officialName": "Sterling Montessori Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.sterlingmontessori.org/",
+        "mission": "https://www.sterlingmontessori.org/index.php/page-types/welcomemissionschool-profile",
+        "board": "https://sterlingmontessori.org/about/board-of-directors/",
+        "boardLeadership": "https://sterlingmontessori.org/index.php/page-types/full-width/board-leadership",
+        "admin": "https://www.sterlingmontessori.org/index.php/page-types/contact/administration",
+        "method": "https://sterlingmontessori.org/programs/what-is-montessori/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Morrisville.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school creates a diverse educational community grounded in Montessori philosophy that fosters curiosity, creativity, and critical thinking.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "mission"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Wake County.",
+          "text": "Official materials say the school is governed by the Laura Holland Uzzell Foundation, a nonprofit established in 1993.",
           "difficulty": 5,
-          "category": "county",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap"
+            "board",
+            "boardLeadership"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 202 Treybrooke Drive.",
+          "text": "The school says students work in a prepared environment that promotes freedom within limits.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": [
+            "method"
+          ]
+        },
+        {
+          "text": "Official materials say Montessori classrooms use three-year multi-age groupings to build communities where older children share knowledge with younger ones.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
+          "text": "Administration pages list Elizabeth Uzzell as Interim Executive Director.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "admin"
           ]
         },
         {
-          "text": "Its official website uses the domain sterlingmontessori.org.",
+          "text": "Board leadership pages identify Rachel Richardson as president.",
           "difficulty": 8,
-          "category": "website",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "boardLeadership"
           ]
         }
       ]
@@ -9966,44 +10631,61 @@
     {
       "schoolId": "stewart-creek-high",
       "officialName": "Stewart Creek High",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://stewartcreekhs.com/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Charlotte.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 2701-F Freedom Dr.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain stewartcreekhs.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Charlotte.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Mecklenburg County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 2701-F Freedom Dr.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Stewart Creek High.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Stewart Creek High.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10011,44 +10693,68 @@
     {
       "schoolId": "success-institute-charter",
       "officialName": "Success Institute Charter",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.successinstitutecharterschool.com/",
+        "about": "https://www.successinstitutecharterschool.com/about",
+        "ourSchool": "https://www.successinstitutecharterschool.com/our-school",
+        "staff": "https://www.successinstitutecharterschool.com/our-staff",
+        "admin": "https://www.successinstitutecharterschool.com/administration"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Statesville.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Official materials say the school creatively teaches Common Core curriculum, foundational business principles, and key elements of entrepreneurial success.",
+          "difficulty": 4,
+          "category": "academics",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Iredell County.",
+          "text": "Its stated goal is to develop independent thinkers and positive, productive citizens through character development and self-enhancement opportunities.",
           "difficulty": 5,
-          "category": "county",
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about",
+            "staff",
+            "admin"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1424-2 Rickert St.",
+          "text": "The school highlights its MicroSociety Program as part of its whole-child approach.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Official history says the school was founded in August 2000.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": [
+            "ourSchool"
+          ]
+        },
+        {
+          "text": "Staff pages identify Shadrach Martin as principal.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap"
+            "staff"
           ]
         },
         {
-          "text": "Its official website uses the domain successinstitutecharterschool.com.",
+          "text": "Administration pages list Tenna Williams as principal while staff pages list her as executive director.",
           "difficulty": 8,
-          "category": "website",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "admin",
+            "staff"
           ]
         }
       ]
@@ -10056,44 +10762,61 @@
     {
       "schoolId": "sugar-creek-charter",
       "officialName": "Sugar Creek Charter",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.thesugarcreek.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Charlotte.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 4101 N Tryon Street.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain thesugarcreek.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Charlotte.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Mecklenburg County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 4101 N Tryon Street.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly includes the word Charter.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Sugar Creek Charter.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10233,44 +10956,61 @@
     {
       "schoolId": "summit-creek-academy",
       "officialName": "Summit Creek Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://summitcreekacademy.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Browns Summit.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 2126 Scott Rd.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain summitcreekacademy.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Browns Summit.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 2126 Scott Rd.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Summit Creek Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10346,44 +11086,61 @@
     {
       "schoolId": "telra-institute",
       "officialName": "Telra Institute",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://telra.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Charlotte.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 4150 McKee Rd.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain telra.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Charlotte.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Mecklenburg County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 4150 McKee Rd.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Telra Institute.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Telra Institute.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10526,44 +11283,66 @@
     {
       "schoolId": "the-capitol-encore-academy",
       "officialName": "The Capitol Encore Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://capitolencoreacademy.org/",
+        "about": "https://capitolencoreacademy.org/about-2/",
+        "board": "https://capitolencoreacademy.org/board-info-meeting-dates/",
+        "admin": "https://capitolencoreacademy.org/administrative-team/",
+        "curriculum": "https://capitolencoreacademy.org/curriculum/",
+        "contact": "https://capitolencoreacademy.org/contact/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Fayetteville.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school develops artists who inspire others through the integration of academic excellence, virtuous character, and disciplined artistry.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Cumberland County.",
+          "text": "Official materials identify Hayes the Chameleon as the school mascot.",
           "difficulty": 5,
-          "category": "county",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 126 Hay Street.",
+          "text": "Its vision is organized around four action words: Inquire, Imagine, Innovate, and Inspire.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "The school says its teaching philosophy combines artful thinking, learning by doing, and excellence in teaching.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": [
+            "curriculum"
+          ]
+        },
+        {
+          "text": "Administrative pages list Gerard Falls as superintendent.",
           "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": [
+            "admin"
+          ]
+        },
+        {
+          "text": "Contact materials say the school resides in the historic site of The Capitol Department Store in downtown Fayetteville.",
+          "difficulty": 8,
           "category": "campus",
           "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "Its official website uses the domain capitolencoreacademy.org.",
-          "difficulty": 8,
-          "category": "website",
-          "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "contact"
           ]
         }
       ]
@@ -10637,44 +11416,61 @@
     {
       "schoolId": "the-experiential-school-of-greensboro",
       "officialName": "The Experiential School of Greensboro",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://theexperientialschoolgso.wordpress.com/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Greensboro.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 301 S Church St.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain theexperientialschoolgso.wordpress.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Greensboro.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 301 S Church St.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many North Carolina charter school names.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is The Experiential School of Greensboro.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10818,44 +11614,66 @@
     {
       "schoolId": "the-hawbridge-school",
       "officialName": "The Hawbridge School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://thehawbridgeschool.org/",
+        "about": "https://thehawbridgeschool.org/about-2/",
+        "mission": "https://thehawbridgeschool.org/mission-vision/",
+        "history": "https://thehawbridgeschool.org/about/history/",
+        "board": "https://thehawbridgeschool.org/board/",
+        "admin": "https://thehawbridgeschool.org/administrators/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Saxapahaw.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Official history says the school originally opened in 1998 as New Century Charter High School.",
+          "difficulty": 4,
+          "category": "history",
           "sourceRefs": [
-            "dpiCharterMap"
+            "history"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Alamance County.",
+          "text": "Its vision emphasizes inclusiveness, mutual respect, personal attention, environmental stewardship, and the arts.",
           "difficulty": 5,
-          "category": "county",
+          "category": "vision",
           "sourceRefs": [
-            "dpiCharterMap"
+            "mission",
+            "board"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1735 Saxapahaw Bethlehem Churc.",
+          "text": "The school describes its faculty-designed model as combining differentiated instruction, outdoor and place-based education, and an inclusive community culture.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Official materials highlight Hawbridge Outdoors, with excursions such as hiking, biking, camping, canoeing, horseback riding, and rock climbing.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Board pages list Kemp Watson-Ormond as chair.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap"
+            "board"
           ]
         },
         {
-          "text": "Its official website uses the domain thehawbridgeschool.org.",
+          "text": "Administrator pages identify Taneeka Hanna as Lower School Director and Alexis Crumel as Upper School Director.",
           "difficulty": 8,
-          "category": "website",
+          "category": "leadership",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "admin"
           ]
         }
       ]
@@ -10863,44 +11681,61 @@
     {
       "schoolId": "the-institute-development-young-leaders",
       "officialName": "The Institute Development Young Leaders",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.theidylschool.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Durham.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Durham County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 4300 S. Miami Blvd..",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain theidylschool.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Durham.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Durham County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 4300 S. Miami Blvd..",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many North Carolina charter school names.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is The Institute Development Young Leaders.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10908,44 +11743,61 @@
     {
       "schoolId": "the-math-and-science-academy-of-apex",
       "officialName": "The Math and Science Academy of Apex",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://tmsaapex.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Apex.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Wake County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 3501 Dropseed Dr..",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain tmsaapex.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Apex.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wake County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 3501 Dropseed Dr..",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references science.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10953,44 +11805,61 @@
     {
       "schoolId": "the-mountain-community-sch",
       "officialName": "The Mountain Community Sch",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.themountaincommunityschool.com"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Hendersonville.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Henderson County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 613 Glover Street.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain themountaincommunityschool.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Hendersonville.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Henderson County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 613 Glover Street.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Community.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is The Mountain Community Sch.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -10998,44 +11867,61 @@
     {
       "schoolId": "thomas-academy",
       "officialName": "Thomas Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.thomasacademync.org"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Lake Waccamaw.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Columbus County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 206-B Rube MCCRAY Circle.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain thomasacademync.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Lake Waccamaw.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Columbus County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 206-B Rube MCCRAY Circle.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Thomas Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -11247,27 +12133,60 @@
     {
       "schoolId": "triad-international-studies",
       "officialName": "Triad International Studies",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Guilford County.",
-          "difficulty": 5,
-          "category": "county",
+          "text": "Official records place this school in Guilford County.",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 622 E Lexington Ave High Point NC 27262.",
-          "difficulty": 7,
-          "category": "campus",
+          "text": "Official records list its campus address on 622 E Lexington Ave High Point NC 27262.",
+          "difficulty": 5,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references an international focus.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Triad International Studies.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is Triad International Studies.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Triad International Studies.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -11673,44 +12592,63 @@
     {
       "schoolId": "united-community-school",
       "officialName": "United Community School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.ucsnc.org/",
+        "mission": "https://www.ucsnc.org/copy-of-mission-and-philosophy",
+        "board": "https://www.ucsnc.org/board-of-directors",
+        "contact": "https://www.ucsnc.org/contact"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Charlotte.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school fulfills the vision of The Basic School by Dr. Ernest L. Boyer.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "mission"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
+          "text": "Official materials say the school places a huge emphasis on hands-on learning, best instructional practices, and arts integration.",
           "difficulty": 5,
-          "category": "county",
+          "category": "academics",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 1406 Suther Road.",
+          "text": "The school explains The Basic School philosophy through four principles known as the 4 C's.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
+          "text": "Official materials say learning is promoted through field trips, the arts, community partnerships, and other engaging experiences.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "The school brands itself around the HIVE.",
           "difficulty": 7,
-          "category": "campus",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home"
           ]
         },
         {
-          "text": "Its official website uses the domain ucsnc.org.",
+          "text": "Board materials say meetings alternate between on-site meetings and conference calls, with the public welcome to attend.",
           "difficulty": 8,
-          "category": "website",
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "board"
           ]
         }
       ]
@@ -11718,44 +12656,61 @@
     {
       "schoolId": "unity-classical-charter-school",
       "officialName": "Unity Classical Charter School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://14613 Steele Creek Rd."
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in CHARLOTTE.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its official website uses the domain 14613 Steele Creek Rd..",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Mecklenburg County.",
+          "text": "Official records place this school in CHARLOTTE.",
           "difficulty": 5,
-          "category": "county",
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 14613 Steele Creek Rd..",
+          "text": "Official records place this school in Mecklenburg County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 14613 Steele Creek Rd..",
           "difficulty": 7,
-          "category": "campus",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official website uses the domain 14613 steele creek rd..",
+          "text": "Its official name explicitly references a classical model of education.",
           "difficulty": 8,
-          "category": "website",
+          "category": "identity",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly includes the word Charter.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -12111,44 +13066,67 @@
     {
       "schoolId": "washington-montessori",
       "officialName": "Washington Montessori",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-032",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "home": "https://www.wmpcs.org/",
+        "about": "https://www.wmpcs.org/about_us",
+        "beliefs": "https://www.wmpcs.org/about_us/our_beliefs",
+        "campus": "https://www.wmpcs.org/about_us/our_campus",
+        "board": "https://www.wmpcs.org/about_us/board_of_trustees"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Washington.",
-          "difficulty": 5,
-          "category": "city",
+          "text": "Its mission says the school inspires academic excellence while nurturing curiosity, creativity, and imagination in an environment rich with warmth, kindness, and respect.",
+          "difficulty": 4,
+          "category": "mission",
           "sourceRefs": [
-            "dpiCharterMap"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "The DPI-linked charter map places this school in Beaufort County.",
+          "text": "Official materials say the program rests on four pillars, including passion for excellence, universal values, a global perspective, and service to others.",
           "difficulty": 5,
-          "category": "county",
+          "category": "school-culture",
           "sourceRefs": [
-            "dpiCharterMap"
+            "about",
+            "beliefs"
           ]
         },
         {
-          "text": "The DPI-linked charter map lists this school's physical address on 2330 Old Bath Hwy.",
-          "difficulty": 7,
+          "text": "The school publishes three basic tenets: respect all living things, respect all non-living things, and use grace and courtesy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "about",
+            "beliefs"
+          ]
+        },
+        {
+          "text": "Campus materials describe over 36 acres of trails, woods, bridges, fields, and outdoor classroom spaces.",
+          "difficulty": 6,
           "category": "campus",
           "sourceRefs": [
-            "dpiCharterMap"
+            "campus"
           ]
         },
         {
-          "text": "Its official website uses the domain wmpcs.org.",
-          "difficulty": 8,
-          "category": "website",
+          "text": "Board of Trustees pages identify Joseph Knox as chairperson.",
+          "difficulty": 7,
+          "category": "governance",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "board"
+          ]
+        },
+        {
+          "text": "Official materials say visitors will not see rows of desks or teachers lecturing in front of the class, but children working at tables, on mats, and in small groups.",
+          "difficulty": 8,
+          "category": "academics",
+          "sourceRefs": [
+            "about"
           ]
         }
       ]
@@ -12156,44 +13134,61 @@
     {
       "schoolId": "water-s-edge-village-school",
       "officialName": "Water's Edge Village School",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.WatersEdgeVillageSchool.com"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Corolla.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Currituck County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 1126 Schoolhouse Lane.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain watersedgevillageschool.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Corolla.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Currituck County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 1126 Schoolhouse Lane.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Village.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is Water's Edge Village School.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -12201,44 +13196,61 @@
     {
       "schoolId": "wayne-preparatory-academy",
       "officialName": "Wayne Preparatory Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.wpanc.net"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Goldsboro.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Wayne County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 600 Tommy's Road.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain wpanc.net.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Goldsboro.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wayne County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 600 Tommy's Road.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Preparatory.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -12308,44 +13320,61 @@
     {
       "schoolId": "west-lake-preparatory-academy",
       "officialName": "West Lake Preparatory Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.wlakeprep.org/"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Denver.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Lincoln County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 1691 Forney Creek.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain wlakeprep.org.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Denver.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Lincoln County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 1691 Forney Creek.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Preparatory.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -12419,44 +13448,61 @@
     {
       "schoolId": "wilmington-preparatory-academy",
       "officialName": "Wilmington Preparatory Academy",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://www.wilmingtonprep.com"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Wilmington.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in New Hanover County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 134 Cinema Drive.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain wilmingtonprep.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Wilmington.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in New Hanover County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 134 Cinema Drive.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Preparatory.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly uses the word Academy.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]
@@ -12797,44 +13843,61 @@
     {
       "schoolId": "z-e-c-a-school-of-arts-and-technology",
       "officialName": "Z.E.C.A. School of Arts and Technology",
-      "status": "baseline-generated",
-      "qualityTier": "state-directory-generated",
+      "status": "validated-batch-034",
+      "qualityTier": "manual",
       "sourceLinks": {
         "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers"
+        "schoolReportCardsZip": "https://www.dpi.nc.gov/data-reports/school-report-cards/school-report-card-resources-researchers",
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "http://zecaschoolofthearts.com"
       },
       "clues": [
         {
-          "text": "The DPI-linked charter map places this school in Jacksonville.",
-          "difficulty": 5,
-          "category": "city",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map places this school in Onslow County.",
-          "difficulty": 5,
-          "category": "county",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
-          "text": "The DPI-linked charter map lists this school's physical address on 1249 Hargett Street.",
-          "difficulty": 7,
-          "category": "campus",
-          "sourceRefs": [
-            "dpiCharterMap"
-          ]
-        },
-        {
           "text": "Its official website uses the domain zecaschoolofthearts.com.",
-          "difficulty": 8,
-          "category": "website",
+          "difficulty": 4,
+          "category": "official-record",
           "sourceRefs": [
-            "dpiCharterMap",
-            "schoolReportCardsZip"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Jacksonville.",
+          "difficulty": 5,
+          "category": "official-record",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records place this school in Onslow County.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Official records list its campus address on 1249 Hargett Street.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references the arts.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name explicitly references technology.",
+          "difficulty": 9,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
           ]
         }
       ]

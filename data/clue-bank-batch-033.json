@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Thirty-third validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "sterling-montessori-academy",
+      "officialName": "Sterling Montessori Academy",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.sterlingmontessori.org/",
+        "mission": "https://www.sterlingmontessori.org/index.php/page-types/welcomemissionschool-profile",
+        "board": "https://sterlingmontessori.org/about/board-of-directors/",
+        "boardLeadership": "https://sterlingmontessori.org/index.php/page-types/full-width/board-leadership",
+        "admin": "https://www.sterlingmontessori.org/index.php/page-types/contact/administration",
+        "method": "https://sterlingmontessori.org/programs/what-is-montessori/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school creates a diverse educational community grounded in Montessori philosophy that fosters curiosity, creativity, and critical thinking.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Official materials say the school is governed by the Laura Holland Uzzell Foundation, a nonprofit established in 1993.",
+          "difficulty": 5,
+          "category": "governance",
+          "sourceRefs": ["board", "boardLeadership"]
+        },
+        {
+          "text": "The school says students work in a prepared environment that promotes freedom within limits.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["method"]
+        },
+        {
+          "text": "Official materials say Montessori classrooms use three-year multi-age groupings to build communities where older children share knowledge with younger ones.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Administration pages list Elizabeth Uzzell as Interim Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["admin"]
+        },
+        {
+          "text": "Board leadership pages identify Rachel Richardson as president.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["boardLeadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "success-institute-charter",
+      "officialName": "Success Institute Charter",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.successinstitutecharterschool.com/",
+        "about": "https://www.successinstitutecharterschool.com/about",
+        "ourSchool": "https://www.successinstitutecharterschool.com/our-school",
+        "staff": "https://www.successinstitutecharterschool.com/our-staff",
+        "admin": "https://www.successinstitutecharterschool.com/administration"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school creatively teaches Common Core curriculum, foundational business principles, and key elements of entrepreneurial success.",
+          "difficulty": 4,
+          "category": "academics",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its stated goal is to develop independent thinkers and positive, productive citizens through character development and self-enhancement opportunities.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["about", "staff", "admin"]
+        },
+        {
+          "text": "The school highlights its MicroSociety Program as part of its whole-child approach.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official history says the school was founded in August 2000.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["ourSchool"]
+        },
+        {
+          "text": "Staff pages identify Shadrach Martin as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Administration pages list Tenna Williams as principal while staff pages list her as executive director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["admin", "staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "concord-lake-steam-academy",
+      "officialName": "Concord Lake STEAM Academy",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.concordlakeacademy.org/",
+        "about": "https://www.concordlakeacademy.org/apps/pages/index.jsp?type=d&uREC_ID=576318",
+        "middleSchool": "https://www.concordlakeacademy.org/m/pages/index.jsp?type=d&uREC_ID=507154",
+        "principal": "https://www.concordlakeacademy.org/apps/pages/index.jsp?type=d&uREC_ID=507153",
+        "aig": "https://www.concordlakeacademy.org/apps/pages/index.jsp?type=d&uREC_ID=423048"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a well-rounded education through rigorous, innovative, and inquiry-based instruction.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials describe the school as a member of the Charter Schools USA family of schools.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school's principal message says its 2025-2026 schoolwide initiative is RESET.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["principal"]
+        },
+        {
+          "text": "Official gifted-program materials say the school is one of only two charter schools in North Carolina recognized as a Promising District.",
+          "difficulty": 7,
+          "category": "achievement",
+          "sourceRefs": ["aig"]
+        },
+        {
+          "text": "The school calls itself Home of the Rockets.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["about", "principal"]
+        },
+        {
+          "text": "Principal's message pages identify Rebecca Feliciano as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["principal"]
+        }
+      ]
+    },
+    {
+      "schoolId": "community-charter-school",
+      "officialName": "Community Charter School",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://cpcsnc.org/",
+        "about": "https://cpcsnc.org/about-us/"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing tagline is Better Education for a Better World.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school focuses on American Values alongside inquiry-based learning.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says its academic program uses the Core Knowledge Sequence and a values-based character education program built on Core Virtues.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official messaging says the school aims to care for both the hearts and minds of students.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says its goal is to develop content knowledge, civic duty, and personal pride in future leaders.",
+          "difficulty": 7,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its official site prominently tells prospective families, \"We saved a seat...for YOU!\"",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        }
+      ]
+    },
+    {
+      "schoolId": "legacy-classical-academy",
+      "officialName": "Legacy Classical Academy",
+      "status": "validated-batch-033",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.legacyclassicalk8.com/",
+        "mission": "https://www.legacyclassicalk8.com/apps/pages/index.jsp?type=d&uREC_ID=542449",
+        "board": "https://www.legacyclassicalk8.com/apps/pages/index.jsp?type=d&uREC_ID=542692"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school develops productive citizens through a challenging classical academic program, meaningful parental partnerships, character education, and student responsibility.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Official materials say the school opened in August 2023.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Board materials say the governing board is ultimately responsible to the Office of Charter Schools and State Board of Education for sound operations.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages say regular board meetings are usually held on the fourth Tuesday of the month and are open to the public.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The board page lists Bernie Parnell as chairman.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The school's mission uniquely combines a classical academic program with explicit emphasis on parental partnerships and character education.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["mission"]
+        }
+      ]
+    }
+  ]
+}

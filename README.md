@@ -215,6 +215,21 @@ This repo currently includes:
 - same structure as `clue-bank-batch-001.json`
 - adds another official-source manual batch spanning college-prep, whole-child, rural, and mission-driven charter models
 
+`data/clue-bank-batch-032.json`
+
+- same structure as `clue-bank-batch-001.json`
+- adds another official-source manual batch spanning Montessori, arts-integration, place-based, and community-rooted charter models
+
+`data/clue-bank-batch-033.json`
+
+- same structure as `clue-bank-batch-001.json`
+- adds another official-source manual batch spanning Montessori, classical, STEAM, and entrepreneurial charter models
+
+`data/clue-bank-batch-034.json`
+
+- same structure as `clue-bank-batch-001.json`
+- completes the remaining statewide schools using official school websites where available and state-linked official roster metadata for sparse-site schools
+
 `data/nc-charter-master-list.json`
 
 - `generatedAt`
@@ -232,7 +247,7 @@ This repo currently includes:
 
 - merged statewide clue artifact
 - baseline statewide clues plus curated manual batch overrides
-- currently includes 160 manually validated schools from `batch-001` through `batch-031`
+- currently includes 212 manually validated schools from `batch-001` through `batch-034`
 
 ## Build Notes
 
