@@ -1,8 +1,8 @@
 {
   "generatedAt": "2026-05-08",
   "notes": [
-    "Thirty-fourth validated clue batch generated from official school websites where available and state-linked official roster metadata for the remaining schools.",
-    "This completion batch favors coverage so every remaining school can enter the playable corpus, even when public school-site detail is sparse.",
+    "Thirty-fourth validated clue batch rebuilt with richer mission, model, and identity clues for previously sparse-site schools.",
+    "Official school websites are used where available, with state-linked official roster metadata and a small number of reputable secondary references used to close gaps.",
     "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
   ],
   "schools": [
@@ -12,55 +12,59 @@
       "status": "validated-batch-034",
       "qualityTier": "completion-generated",
       "sourceLinks": {
-        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.agapeachieveacademy.com/",
+        "vision": "https://www.agapeachieveacademy.com/our-vision",
+        "about": "https://www.agapeachieveacademy.com/about-us"
       },
       "clues": [
         {
-          "text": "Official records place this school in Cumberland County.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 3421 Murchison Rd Fayetteville NC 28311.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Agape Achievement Academy.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Agape Achievement Academy.",
+          "text": "Its mission centers academic excellence, character building, and a love of learning through a rigorous, content-rich curriculum.",
           "difficulty": 8,
-          "category": "identity",
+          "category": "mission",
           "sourceRefs": [
-            "home"
+            "home",
+            "vision"
           ]
         },
         {
-          "text": "Its official name is Agape Achievement Academy.",
-          "difficulty": 9,
+          "text": "Its vision stresses rigorous, culturally relevant learning paired with high academic and behavioral standards.",
+          "difficulty": 7,
+          "category": "vision",
+          "sourceRefs": [
+            "vision"
+          ]
+        },
+        {
+          "text": "Its official site highlights small-group instruction in reading and math alongside project-based and service-learning opportunities.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Agape\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Achievement\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Agape\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -76,51 +80,51 @@
       },
       "clues": [
         {
-          "text": "Its official website uses the domain alamancecommunityschool.net.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission is to help students become engaged citizens by exploring real-world problems and creating innovative solutions.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Haw River.",
-          "difficulty": 5,
-          "category": "official-record",
+          "text": "Its academic model is built around project-based learning.",
+          "difficulty": 7,
+          "category": "model",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Alamance County.",
+          "text": "Its public-facing tagline is 'Find meaning, develop empathy, create solutions.'",
           "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records list its campus address on 195 Kronbergs Court.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Community.",
-          "difficulty": 8,
+          "text": "Its official website uses the domain alamancecommunityschool.net.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name is Alamance Community School.",
-          "difficulty": 9,
+          "text": "Community is built directly into its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Alamance\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -132,43 +136,13 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://cartergwoodsonschool.org/"
+        "home": "https://www.cartergwoodsonschool.org/",
+        "studentLife": "https://www.cartergwoodsonschool.org/student-life",
+        "collegeReady": "https://www.cartergwoodsonschool.org/college-ready"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain cartergwoodsonschool.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Winston-Salem.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Forsyth County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 437 Goldfloss Street.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Carter G. Woodson School.",
+          "text": "Its school-wide motto is 'Strive to Excel, Not to Equal.'",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -176,11 +150,43 @@
           ]
         },
         {
-          "text": "Its official name is Carter G. Woodson School.",
-          "difficulty": 9,
+          "text": "Its student-life program highlights poetry, visual arts, agriculture and food science, and mock trial leadership development.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": [
+            "studentLife"
+          ]
+        },
+        {
+          "text": "Its official site notes that students have traveled to East Africa for study and cultural immersion.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "studentLife"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain cartergwoodsonschool.org.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Carter\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Woodson\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -198,49 +204,49 @@
         {
           "text": "Its official website uses the domain communitydva.org.",
           "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Durham.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Durham County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 1955 West Cornwallis Road.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Community.",
-          "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Community is built directly into its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Digital learning or media is named directly in its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Visual art is named directly in its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         },
         {
           "text": "Its official name includes an ampersand.",
-          "difficulty": 9,
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name uses the phrase 'School of.'",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -255,51 +261,51 @@
       },
       "clues": [
         {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 7800 Airport Center Drive Greensboro NC 27409.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly includes the word Charter.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
           "text": "Its official name includes a hyphen.",
-          "difficulty": 8,
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Cornerstone Charter Academy-CFA.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Cornerstone\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"CFA\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Cornerstone\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name ends with the word \"CFA\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name contains 4 words.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -311,55 +317,56 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.crosscreekcharterschool.com/"
+        "home": "https://www.crosscreekcharterschool.com/",
+        "mission": "https://www.crosscreekcharterschool.com/about-us/mission-and-philosophy"
       },
       "clues": [
         {
+          "text": "Its mission emphasizes empowering each student to reach their fullest potential as a lifelong learner.",
+          "difficulty": 8,
+          "category": "mission",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
+          "text": "Its philosophy describes the school as child-centered, family-oriented, and community-based.",
+          "difficulty": 7,
+          "category": "philosophy",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
+          "text": "Its official history says the school opened in August 2001 after local families envisioned a different kind of learning community.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
           "text": "Its official website uses the domain crosscreekcharterschool.com.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Louisburg.",
+          "text": "One distinctive word in its official name is \"Crosscreek\".",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Franklin County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 100 East River Road.",
-          "difficulty": 7,
+          "text": "Its official name begins with the word \"Crosscreek\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly includes the word Charter.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Crosscreek Charter School.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -371,55 +378,59 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "https://www.emereau.org"
+        "home": "https://www.emereau.org/",
+        "about": "https://www.emereau.org/about",
+        "academics": "https://www.emereau.org/academics"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain emereau.org.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its founding goal was 'graduation for all' children.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "home",
+            "about"
           ]
         },
         {
-          "text": "Official records place this school in Elizabethtown.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Bladen County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 995 Airport Rd.",
+          "text": "Its mission language moves through a sequence of verbs: illuminate, investigate, innovate, cultivate, celebrate.",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its model includes a daily 'Illuminator' journal and an inquiry process tied to investigation, discovery, innovation, and transformation.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "about",
+            "academics"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain emereau.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name includes a colon.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name includes a punctuation mark in the middle.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Emereau\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Emereau: Bladen.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -431,55 +442,59 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.glowacademy.net"
+        "home": "https://www.glowacademy.net/",
+        "about": "https://glowacademy.net/about-us/",
+        "campus": "https://www.glowacademy.net/our_school/our_campus"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain glowacademy.net.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wilmington.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in New Hanover County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 4100 Sunglow Drive.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly emphasizes leadership.",
+          "text": "Its vision is summed up in a short phrase: 'She Will... Graduate, Go to College, Succeed in Life.'",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
+            "home",
+            "about"
+          ]
+        },
+        {
+          "text": "Its model is described as 'whole girl education,' blending rigorous academics with intentional social-emotional learning.",
+          "difficulty": 7,
+          "category": "model",
+          "sourceRefs": [
+            "about",
             "home"
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
+          "text": "Its campus includes Founders Hall, a College Bound Office, a culinary lab, a STEM lab, and outdoor learning classrooms.",
+          "difficulty": 6,
+          "category": "campus",
+          "sourceRefs": [
+            "campus"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain glowacademy.net.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -490,55 +505,57 @@
       "status": "validated-batch-034",
       "qualityTier": "completion-generated",
       "sourceLinks": {
-        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.honorpreparatory.org/",
+        "about": "https://www.honorpreparatory.org/about"
       },
       "clues": [
         {
-          "text": "Official records place this school in Mecklenburg County.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its approach highlights bilingual education, equity and inclusion, and strong community engagement.",
+          "difficulty": 8,
+          "category": "model",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records list its campus address on 9108 Mallard Creek Rd Charlotte NC 28262.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Honor Prep.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Honor Prep.",
+          "text": "Its public materials say it is preparing 'the leaders of tomorrow.'",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its vision focuses on a nurturing environment where students can excel academically, socially, and emotionally.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its official identity emphasizes preparation for what comes next.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Honor Prep.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Honor\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Honor Prep.",
-          "difficulty": 9,
+          "text": "Its official name begins with the word \"Honor\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -550,55 +567,57 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.magellancharterschool.org"
+        "home": "http://www.magellancharterschool.org",
+        "mission": "https://www.k12jobspot.com/School/69418/Overview",
+        "facility": "https://www.bobbitt.com/project/education-day-care/magellan-charter-school"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain magellancharterschool.org.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission describes an academically focused opportunity for highly motivated students built around interactive and experiential learning.",
+          "difficulty": 7,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "mission"
           ]
         },
         {
-          "text": "Official records place this school in Raleigh.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wake County.",
+          "text": "A nautical theme has long been part of the school's identity, including in its facility design.",
           "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "facility"
           ]
         },
         {
-          "text": "Official records list its campus address on 9324 Baileywick Road.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly includes the word Charter.",
-          "difficulty": 8,
+          "text": "Its official website uses the domain magellancharterschool.org.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name is Magellan Charter.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Magellan\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Magellan\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name ends with the word \"Charter\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -610,55 +629,56 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.williamsacademy.org/"
+        "home": "http://www.williamsacademy.org/",
+        "story": "https://www.crossnore.org/passion-purpose/"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain williamsacademy.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Newland.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Avery County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 129 Allen Circle.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
+          "text": "Its motto is 'Dream It, Believe It, Achieve It' followed by the declaration that failure is not an option.",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
+            "story"
+          ]
+        },
+        {
+          "text": "Its surrounding campus is used as an 'outdoor classroom,' including excursions to gather plants and creek critters.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": [
+            "story"
+          ]
+        },
+        {
+          "text": "Its school story emphasizes an emotionally supportive and engaging learning environment that empowers students to achieve their full potential.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": [
+            "story"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain williamsacademy.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name is Marjorie Williams Academy.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Marjorie\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Williams\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -670,55 +690,57 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "https://www.mountaincitypublic.org"
+        "home": "https://mountaincitypublic.org/",
+        "about": "https://mountaincitypublic.org/our-school/about/",
+        "method": "https://mountaincitypublic.org/academics/montessori-method/"
       },
       "clues": [
         {
+          "text": "Its mission promises equitable access to a high-quality, relevant Montessori education that strengthens community.",
+          "difficulty": 8,
+          "category": "mission",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its governance model is participatory, spreading leadership across roles rather than centering a single head of school.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its Montessori model emphasizes multi-age classrooms, three-hour work periods, and hands-on materials that build executive-function skills.",
+          "difficulty": 6,
+          "category": "model",
+          "sourceRefs": [
+            "method"
+          ]
+        },
+        {
           "text": "Its official website uses the domain mountaincitypublic.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Asheville.",
+          "text": "Its instructional identity is explicitly Montessori.",
           "difficulty": 5,
-          "category": "official-record",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records place this school in Buncombe County.",
-          "difficulty": 6,
-          "category": "identity",
+          "text": "The word Public appears directly in its official identity.",
+          "difficulty": 5,
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 27 Church Street.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references Montessori education.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Mountain City Public Montessori.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -730,55 +752,57 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.thencla.org"
+        "home": "https://www.thencla.org/",
+        "honorRoll": "https://www.thencla.org/article/2692433",
+        "sports": "https://www.thencla.org/article/1200861"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain thencla.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Kernersville.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Forsyth County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 4353 High Point Rd.",
+          "text": "Its tagline says it is 'Developing Tomorrow's Leaders, Today.'",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "sports"
+          ]
+        },
+        {
+          "text": "Its recent public updates highlight repeated AP School Honor Roll recognition.",
+          "difficulty": 6,
+          "category": "achievement",
+          "sourceRefs": [
+            "honorRoll"
+          ]
+        },
+        {
+          "text": "Its mascot identity is built around Falcons.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "sports"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain thencla.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name explicitly emphasizes leadership.",
-          "difficulty": 8,
+          "text": "Its official name begins with the word \"NC\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -796,49 +820,49 @@
         {
           "text": "Its official website uses the domain nextgenerationacademy.net.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Greensboro.",
+          "text": "One distinctive word in its official name is \"Next\".",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 3740 South Holden Road.",
-          "difficulty": 7,
+          "text": "One distinctive word in its official name is \"Generation\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
+          "text": "Its official name begins with the word \"Next\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Next Generation Academy.",
-          "difficulty": 9,
+          "text": "Its official name ends with the word \"Academy\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name contains 3 words.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -853,51 +877,51 @@
       },
       "clues": [
         {
-          "text": "Official records place this school in Pasquotank County.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 1413 W Ehringhaus St Elizabeth City NC 27909.",
+          "text": "Aerospace is named directly in its official identity.",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references aerospace.",
-          "difficulty": 7,
-          "category": "identity",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
           "text": "Its official name includes an ampersand.",
-          "difficulty": 8,
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is longer than many North Carolina charter school names.",
-          "difficulty": 9,
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Northeast\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Aerospace\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Northeast\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -909,55 +933,58 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "https://sites.google.com/view/omsacademy/home?authuser=0"
+        "home": "https://sites.google.com/view/omsacademy/home?authuser=0",
+        "about": "https://sites.google.com/view/omsacademy/about-our-school",
+        "faqs": "https://sites.google.com/view/omsacademy/about-our-school/faqs"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain sites.google.com.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission is to engage students in STREAM disciplines that prepare future leaders who are innovative, persistent, and self-determined.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "about"
           ]
         },
         {
-          "text": "Official records place this school in Pembroke.",
-          "difficulty": 5,
-          "category": "official-record",
+          "text": "Its curriculum emphasizes place-based instruction and local learning opportunities tied to Robeson County.",
+          "difficulty": 7,
+          "category": "program",
           "sourceRefs": [
-            "schoolRecord"
+            "about"
           ]
         },
         {
-          "text": "Official records place this school in Robeson County.",
+          "text": "Its public-facing identity repeats a three-word mantra: innovative, persistent, self-determined.",
           "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home",
+            "faqs"
           ]
         },
         {
-          "text": "Official records list its campus address on 200 North Odum Street.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
+          "text": "Its official website uses the domain sites.google.com.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name explicitly uses the acronym STREAM.",
-          "difficulty": 9,
+          "text": "Its official identity explicitly references STREAM disciplines.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Old\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -969,55 +996,57 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.paulrbrownleadership.com/"
+        "home": "https://www.paulrbrownleadership.com/",
+        "superintendent": "https://www.paulrbrownleadership.com/superintendent"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain paulrbrownleadership.com.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission promises an academically rich program built around reading, communication, critical thinking, problem solving, work ethic, integrity, physical wellness, and leadership.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Elizabethtown.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Bladen County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 1360 Martin L King Jr Dr.",
+          "text": "Its students are consistently referred to as cadets in public-facing school materials.",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "home",
+            "superintendent"
+          ]
+        },
+        {
+          "text": "Its superintendent page describes it as the state's only public charter military school.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "superintendent"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain paulrbrownleadership.com.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name explicitly emphasizes leadership.",
-          "difficulty": 8,
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -1032,51 +1061,51 @@
       },
       "clues": [
         {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 7847 Clinard Farms Rd High Point NC 27265.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
           "text": "Its official name includes a hyphen.",
-          "difficulty": 7,
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is longer than many North Carolina charter school names.",
-          "difficulty": 8,
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Phoenix Academy - Primary, Elem, Upper.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Phoenix\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Elem\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Phoenix\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name ends with the word \"Upper\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1088,43 +1117,12 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.piedmontclassical.com/"
+        "home": "https://piedmontclassical.com/",
+        "mission": "https://piedmontclassical.com/m/pages/index.jsp?pREC_ID=854927&type=d&uREC_ID=451986"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain piedmontclassical.com.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in BROWNS SUMMIT.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 4100 YANCEYVILLE RD.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references a classical model of education.",
+          "text": "Its guiding triad is 'Citizenship, Character, Scholarship.'",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -1132,11 +1130,43 @@
           ]
         },
         {
-          "text": "Its official name is Piedmont Classical High School.",
-          "difficulty": 9,
+          "text": "Its mission says students are educated through a challenging, classically driven curriculum designed to prepare them for any endeavor.",
+          "difficulty": 7,
+          "category": "mission",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
+          "text": "Its homepage says 'Where Bobcats Roar & Soar!'",
+          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Its homepage prominently highlights AP Capstone.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain piedmontclassical.com.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its instructional identity is explicitly classical.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1148,55 +1178,55 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.questcharter.org"
+        "home": "https://www.questcharter.org/"
       },
       "clues": [
         {
+          "text": "Its mission pairs academic excellence with students' pursuit of individual talents outside the classroom.",
+          "difficulty": 8,
+          "category": "mission",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its model is designed for motivated students engaged in high-intensity training in athletics or fine arts.",
+          "difficulty": 7,
+          "category": "model",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its public examples of student success highlight pursuits such as wakeboarding, soccer, golf, and other high-level extracurricular training.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
           "text": "Its official website uses the domain questcharter.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Raleigh.",
+          "text": "One distinctive word in its official name is \"Quest\".",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wake County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 10908 Strickland Road.",
-          "difficulty": 7,
+          "text": "Its official name begins with the word \"Quest\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Quest Academy.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -1208,55 +1238,56 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.risese.org"
+        "home": "http://www.risese.org",
+        "whoWeAre": "https://risese.org/es/who-we-are/"
       },
       "clues": [
         {
+          "text": "Its public history includes a rename from PAVE Southeast Raleigh Charter School to its current identity.",
+          "difficulty": 8,
+          "category": "history",
+          "sourceRefs": [
+            "whoWeAre"
+          ]
+        },
+        {
+          "text": "Its public milestone timeline notes a five-year charter renewal from the State Board of Education.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": [
+            "whoWeAre"
+          ]
+        },
+        {
+          "text": "Its model is built to offer a strong school option for the Southeast Raleigh community.",
+          "difficulty": 6,
+          "category": "community",
+          "sourceRefs": [
+            "whoWeAre"
+          ]
+        },
+        {
           "text": "Its official website uses the domain risese.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
+          "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records place this school in Raleigh.",
+          "text": "One distinctive word in its official name is \"RISE\".",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wake County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 3420 Idlewood Village Dr.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly includes the word Charter.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is longer than many North Carolina charter school names.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -1267,55 +1298,58 @@
       "status": "validated-batch-034",
       "qualityTier": "completion-generated",
       "sourceLinks": {
-        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.riversideleadershipacademy.org/",
+        "about": "https://www.riversideleadershipacademy.org/about",
+        "academics": "https://www.riversideleadershipacademy.org/academics"
       },
       "clues": [
         {
-          "text": "Official records place this school in Craven County.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission combines project-based learning and leadership curricula to develop confident, community-focused, future-ready leaders.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "about"
           ]
         },
         {
-          "text": "Official records list its campus address on 1955 Old Airport Rd New Bern NC 28562.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly emphasizes leadership.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
+          "text": "Its public-facing slogan is 'Leading the quest for student success.'",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official academic description pairs project-based learning with Science of Reading and social-emotional learning.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "academics"
+          ]
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Riverside Leadership Academy.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Riverside\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Riverside Leadership Academy.",
-          "difficulty": 9,
+          "text": "Its official name begins with the word \"Riverside\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -1330,51 +1364,51 @@
       },
       "clues": [
         {
-          "text": "Official records place this school in Vance County.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 1875 Gun Club Road Henderson NC 27537.",
+          "text": "It presents itself as an institute rather than a traditional academy or school.",
           "difficulty": 5,
-          "category": "official-record",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Sledge Institute.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Sledge Institute.",
-          "difficulty": 7,
+          "text": "One distinctive word in its official name is \"Sledge\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Sledge Institute.",
-          "difficulty": 8,
+          "text": "Its official name begins with the word \"Sledge\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Sledge Institute.",
-          "difficulty": 9,
+          "text": "Its official name ends with the word \"Institute\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name contains 2 words.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is unusually short compared with many charter school names.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1386,55 +1420,59 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.southeasternacademy.org/"
+        "home": "https://www.southeasternacademy.org/",
+        "about": "https://www.southeasternacademy.org/about-us",
+        "contact": "https://www.southeasternacademy.org/contact-us"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain southeasternacademy.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Lumberton.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Robeson County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 12251 NC HWY 41 North.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
+          "text": "Its public-facing identity describes the school as 'a diverse family of learners' seeking to challenge the whole child through innovation.",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
+            "home",
+            "about"
+          ]
+        },
+        {
+          "text": "Its mission language emphasizes high expectations and excellence, especially in mathematics and science.",
+          "difficulty": 7,
+          "category": "mission",
+          "sourceRefs": [
+            "home",
+            "about"
+          ]
+        },
+        {
+          "text": "Its school history includes recognition as one of North Carolina's Blue Ribbon Schools in 2022.",
+          "difficulty": 6,
+          "category": "achievement",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain southeasternacademy.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name is Southeastern Academy.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Southeastern\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Southeastern\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1446,55 +1484,56 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://swake.org"
+        "home": "https://www.swake.org/",
+        "why": "https://swake.org/apps/pages/index.jsp?type=d&uREC_ID=552286"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain swake.org.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission highlights academic excellence through dynamic curriculum, nurturing relationships, and community involvement.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Holly Springs.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wake County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 5108 Old Powell Rd.",
+          "text": "Its public-facing values spell out PRIDE: perseverance, respect, integrity, determination, and empathy.",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its public materials describe an independent-learning approach built around customization and accountability.",
+          "difficulty": 6,
+          "category": "model",
+          "sourceRefs": [
+            "why"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain swake.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Southern\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Wake\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Southern Wake Academy.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -1506,43 +1545,12 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "https://www.steelecreekprep.org"
+        "home": "https://www.steelecreekprep.org/",
+        "about": "https://www.steelecreekprep.org/apps/pages/index.jsp?type=d&uREC_ID=376868"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain steelecreekprep.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Charlotte.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Mecklenburg County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 2200 Shopton Road.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Preparatory.",
+          "text": "Its four named pillars are passion, purpose, integrity, and grit.",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -1550,11 +1558,44 @@
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
+          "text": "Its public materials promise 'strong minds' and 'good hearts.'",
+          "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Its school site highlights character education, leadership skills, and newer offerings such as performing arts, dual immersion, and Cambridge curriculum.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "home",
+            "about"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain steelecreekprep.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official identity emphasizes preparation for what comes next.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Steele\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1566,43 +1607,13 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://stewartcreekhs.com/"
+        "home": "https://www.stewartcreekhs.com/",
+        "mission": "https://stewartcreekhs.com/apps/pages/index.jsp?type=d&uREC_ID=508716",
+        "program": "https://stewartcreekhs.com/apps/pages/index.jsp?type=d&uREC_ID=508712"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain stewartcreekhs.com.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Charlotte.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Mecklenburg County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 2701-F Freedom Dr.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Stewart Creek High.",
+          "text": "Its public promise is to help students finish school and accelerate their future through a non-traditional model.",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -1610,11 +1621,43 @@
           ]
         },
         {
-          "text": "Its official name is Stewart Creek High.",
-          "difficulty": 9,
+          "text": "Its mission is aimed at students who have dropped out or are at risk of dropping out and need an alternate pathway to a diploma.",
+          "difficulty": 7,
+          "category": "mission",
+          "sourceRefs": [
+            "mission"
+          ]
+        },
+        {
+          "text": "Its program model stresses flexible scheduling, self-paced coursework, and individualized success plans.",
+          "difficulty": 6,
+          "category": "model",
+          "sourceRefs": [
+            "program"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain stewartcreekhs.com.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Stewart\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Creek\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1626,55 +1669,56 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.thesugarcreek.org/"
+        "home": "https://www.thesugarcreek.org/",
+        "about": "https://thesugarcreek.org/about/"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain thesugarcreek.org.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission explicitly names eradicating generational poverty as a core goal.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "about"
           ]
         },
         {
-          "text": "Official records place this school in Charlotte.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Mecklenburg County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 4101 N Tryon Street.",
+          "text": "Its three pillars focus on academic preparation, postsecondary readiness, and life skills for success.",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its public site identifies the Wildcats as the school mascot identity.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain thesugarcreek.org.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Sugar\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name explicitly includes the word Charter.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Creek\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Sugar Creek Charter.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -1692,49 +1736,49 @@
         {
           "text": "Its official website uses the domain summitcreekacademy.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Browns Summit.",
+          "text": "One distinctive word in its official name is \"Summit\".",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 2126 Scott Rd.",
-          "difficulty": 7,
+          "text": "One distinctive word in its official name is \"Creek\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
+          "text": "Its official name begins with the word \"Summit\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Summit Creek Academy.",
-          "difficulty": 9,
+          "text": "Its official name ends with the word \"Academy\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name contains 3 words.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1746,43 +1790,13 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://telra.org"
+        "home": "https://www.telra.org/",
+        "attending": "https://www.telra.org/attending-telra",
+        "location": "https://www.telra.org/our-location"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain telra.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Charlotte.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Mecklenburg County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 4150 McKee Rd.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Telra Institute.",
+          "text": "Its public-facing promise is 'a challenging and accelerated experience for advanced learners.'",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -1790,11 +1804,44 @@
           ]
         },
         {
-          "text": "Its official name is Telra Institute.",
-          "difficulty": 9,
+          "text": "Its educational model says each child follows their own trajectory.",
+          "difficulty": 7,
+          "category": "model",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its current setup spans two campuses, with a separate site for high school students and a dual-enrollment connection to CPCC Levine.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "attending",
+            "location"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain telra.org.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "It presents itself as an institute rather than a traditional academy or school.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Telra\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1812,49 +1859,49 @@
         {
           "text": "Its official website uses the domain theexperientialschoolgso.wordpress.com.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Greensboro.",
+          "text": "Experiential learning is built directly into its official identity.",
           "difficulty": 5,
-          "category": "official-record",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 301 S Church St.",
-          "difficulty": 7,
+          "text": "Its official name uses the phrase 'School of.'",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is longer than many North Carolina charter school names.",
-          "difficulty": 8,
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is The Experiential School of Greensboro.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Experiential\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Greensboro\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1872,49 +1919,49 @@
         {
           "text": "Its official website uses the domain theidylschool.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Durham.",
+          "text": "It presents itself as an institute rather than a traditional academy or school.",
           "difficulty": 5,
-          "category": "official-record",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records place this school in Durham County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 4300 S. Miami Blvd..",
-          "difficulty": 7,
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is longer than many North Carolina charter school names.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Development\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is The Institute Development Young Leaders.",
-          "difficulty": 9,
+          "text": "One distinctive word in its official name is \"Young\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Leaders\".",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -1930,51 +1977,51 @@
       },
       "clues": [
         {
+          "text": "Its official identity names both mathematics and science directly.",
+          "difficulty": 6,
+          "category": "focus",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
           "text": "Its official website uses the domain tmsaapex.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Apex.",
+          "text": "Mathematics is named directly in its official identity.",
           "difficulty": 5,
-          "category": "official-record",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records place this school in Wake County.",
-          "difficulty": 6,
+          "text": "Science is named directly in its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 3501 Dropseed Dr..",
-          "difficulty": 7,
+          "text": "One distinctive word in its official name is \"Apex\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references science.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -1986,55 +2033,56 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.themountaincommunityschool.com"
+        "home": "https://www.themountaincommunityschool.com/",
+        "curriculum": "https://www.themountaincommunityschool.com/curriculum-and-activities/curriculum/"
       },
       "clues": [
         {
+          "text": "Its mission emphasizes academic excellence, discovery, individuality, diversity, and a lifelong love of learning.",
+          "difficulty": 8,
+          "category": "mission",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its program highlights experiential, hands-on learning and expeditionary trips to regional locations.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its curriculum describes strong basic skills, core knowledge, and integrated units of study that connect learning to daily life.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": [
+            "curriculum"
+          ]
+        },
+        {
           "text": "Its official website uses the domain themountaincommunityschool.com.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Hendersonville.",
+          "text": "Community is built directly into its official identity.",
           "difficulty": 5,
-          "category": "official-record",
+          "category": "focus",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records place this school in Henderson County.",
-          "difficulty": 6,
+          "text": "One distinctive word in its official name is \"Mountain\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 613 Glover Street.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Community.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is The Mountain Community Sch.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -2046,55 +2094,57 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.thomasacademync.org"
+        "home": "http://www.thomasacademync.org",
+        "why": "https://www.thomasacademync.org/our-school/why.html",
+        "contact": "https://www.thomasacademync.org/our-school/contact.html"
       },
       "clues": [
         {
+          "text": "Its model is intentionally designed for students who have not performed well in larger, traditional school settings.",
+          "difficulty": 8,
+          "category": "model",
+          "sourceRefs": [
+            "why"
+          ]
+        },
+        {
+          "text": "Its school approach integrates behavioral and therapeutic care with goals of graduation, postsecondary readiness, and career readiness.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": [
+            "why"
+          ]
+        },
+        {
+          "text": "Its campus sits on the grounds of Boys & Girls Homes of North Carolina.",
+          "difficulty": 6,
+          "category": "campus",
+          "sourceRefs": [
+            "contact"
+          ]
+        },
+        {
           "text": "Its official website uses the domain thomasacademync.org.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Lake Waccamaw.",
+          "text": "One distinctive word in its official name is \"Thomas\".",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Columbus County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 206-B Rube MCCRAY Circle.",
-          "difficulty": 7,
+          "text": "Its official name begins with the word \"Thomas\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name is Thomas Academy.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -2105,55 +2155,58 @@
       "status": "validated-batch-034",
       "qualityTier": "completion-generated",
       "sourceLinks": {
-        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools"
+        "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
+        "home": "https://www.tisanc.org/",
+        "mission": "https://www.tisanc.org/about-3",
+        "about": "https://www.tisanc.org/about-1"
       },
       "clues": [
         {
-          "text": "Official records place this school in Guilford County.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission is to develop global citizens with multilingual proficiency, intercultural competence, strong academics, and leadership skills.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "mission"
           ]
         },
         {
-          "text": "Official records list its campus address on 622 E Lexington Ave High Point NC 27262.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references an international focus.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name is Triad International Studies.",
+          "text": "Its public materials describe it as the first multi-language immersion public charter school in the Piedmont-Triad area.",
           "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its public program descriptions highlight immersion options in Chinese, Spanish, French, and Japanese.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "about"
+          ]
+        },
+        {
+          "text": "Its official identity includes an international emphasis.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Triad International Studies.",
-          "difficulty": 8,
+          "text": "One distinctive word in its official name is \"Triad\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         },
         {
-          "text": "Its official name is Triad International Studies.",
-          "difficulty": 9,
+          "text": "Its official name begins with the word \"Triad\".",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -2165,43 +2218,11 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "https://14613 Steele Creek Rd."
+        "home": "https://www.unityclassical.org/"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain 14613 Steele Creek Rd..",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in CHARLOTTE.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Mecklenburg County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 14613 Steele Creek Rd..",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references a classical model of education.",
+          "text": "Its tagline pairs intellect and care: 'Empowering Minds, Nurturing Hearts.'",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -2209,11 +2230,43 @@
           ]
         },
         {
-          "text": "Its official name explicitly includes the word Charter.",
-          "difficulty": 9,
+          "text": "Its public site says it is cultivating lifelong learners and virtuous leaders.",
+          "difficulty": 7,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Its public description emphasizes classical education focused on the whole child, academic excellence, and a culture of caring.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its instructional identity is explicitly classical.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Unity\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Its official name begins with the word \"Unity\".",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -2225,55 +2278,55 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.WatersEdgeVillageSchool.com"
+        "home": "https://www.watersedgevillageschool.com/"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain watersedgevillageschool.com.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission is tightly tied to serving an isolated coastal community rich in natural resources and environmentally focused organizations.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Corolla.",
-          "difficulty": 5,
-          "category": "official-record",
+          "text": "Its instructional model is described as child-centered, integrated, hands-on, and project-based.",
+          "difficulty": 7,
+          "category": "model",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Currituck County.",
+          "text": "Its public identity uses the shorthand WEVS, pronounced like a rolling body of water.",
           "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records list its campus address on 1126 Schoolhouse Lane.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Village.",
-          "difficulty": 8,
+          "text": "Its official website uses the domain watersedgevillageschool.com.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name is Water's Edge Village School.",
-          "difficulty": 9,
+          "text": "Village is part of its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Water's\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
           ]
         }
       ]
@@ -2285,55 +2338,58 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.wpanc.net"
+        "home": "http://www.wpanc.net",
+        "academics": "https://wpanc.net/academics/",
+        "improvement": "https://wpanc.net/school-improvement-plan/",
+        "readyGroups": "https://wpanc.net/ready-groups/"
       },
       "clues": [
         {
+          "text": "Its mission is to create a legacy of leadership and learning that embraces, enriches, and engages children's strengths, one child at a time.",
+          "difficulty": 8,
+          "category": "mission",
+          "sourceRefs": [
+            "improvement"
+          ]
+        },
+        {
+          "text": "Its academic beliefs begin with the idea that all children will learn if they are taught carefully at their instructional level.",
+          "difficulty": 7,
+          "category": "philosophy",
+          "sourceRefs": [
+            "academics"
+          ]
+        },
+        {
+          "text": "Its 'Ready Groups' enrichment program says it helps develop talented, engaged leaders who recognize and achieve their full potential.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "readyGroups"
+          ]
+        },
+        {
           "text": "Its official website uses the domain wpanc.net.",
           "difficulty": 4,
-          "category": "official-record",
+          "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "home"
           ]
         },
         {
-          "text": "Official records place this school in Goldsboro.",
+          "text": "Its official identity emphasizes preparation for what comes next.",
           "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wayne County.",
-          "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
           ]
         },
         {
-          "text": "Official records list its campus address on 600 Tommy's Road.",
-          "difficulty": 7,
+          "text": "One distinctive word in its official name is \"Wayne\".",
+          "difficulty": 5,
           "category": "identity",
           "sourceRefs": [
             "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Preparatory.",
-          "difficulty": 8,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
-          "category": "identity",
-          "sourceRefs": [
-            "home"
           ]
         }
       ]
@@ -2345,43 +2401,13 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "https://www.wlakeprep.org/"
+        "home": "https://www.wlakeprep.org/",
+        "about": "https://www.wlakeprep.org/apps/pages/index.jsp?type=d&uREC_ID=377134",
+        "curriculum": "https://www.wlakeprep.org/apps/pages/index.jsp?type=d&uREC_ID=377138"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain wlakeprep.org.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Denver.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Lincoln County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 1691 Forney Creek.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Preparatory.",
+          "text": "Its public model is framed as 'The Village Model.'",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -2389,11 +2415,44 @@
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
+          "text": "Its mission promises to build strong minds and good hearts while personalizing learning around passions, interests, and strengths.",
+          "difficulty": 7,
+          "category": "mission",
+          "sourceRefs": [
+            "home",
+            "about"
+          ]
+        },
+        {
+          "text": "Its curriculum page emphasizes one-to-one instructional time and tailored educational plans for individual students.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": [
+            "curriculum"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain wlakeprep.org.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Its official identity emphasizes preparation for what comes next.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"West\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -2405,43 +2464,11 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://www.wilmingtonprep.com"
+        "home": "https://www.wilmingtonprep.com/"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain wilmingtonprep.com.",
-          "difficulty": 4,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in Wilmington.",
-          "difficulty": 5,
-          "category": "official-record",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records place this school in New Hanover County.",
-          "difficulty": 6,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Official records list its campus address on 134 Cinema Drive.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly uses the word Preparatory.",
+          "text": "Its homepage motto is a three-word sequence: encourage, respect, learn.",
           "difficulty": 8,
           "category": "identity",
           "sourceRefs": [
@@ -2449,11 +2476,43 @@
           ]
         },
         {
-          "text": "Its official name explicitly uses the word Academy.",
-          "difficulty": 9,
+          "text": "Its public materials say it offers a Core Knowledge curriculum in a rich and stimulating environment.",
+          "difficulty": 7,
+          "category": "curriculum",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its site prominently features Read to Achieve results as part of its public academic profile.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": [
+            "home"
+          ]
+        },
+        {
+          "text": "Its official website uses the domain wilmingtonprep.com.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
+          ]
+        },
+        {
+          "text": "Its official identity emphasizes preparation for what comes next.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "One distinctive word in its official name is \"Wilmington\".",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]
@@ -2465,55 +2524,57 @@
       "qualityTier": "completion-generated",
       "sourceLinks": {
         "schoolRecord": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
-        "home": "http://zecaschoolofthearts.com"
+        "home": "https://www.zecaschoolofthearts.com/",
+        "about": "https://www.zecaschoolofthearts.com/about-our-school",
+        "mission": "https://www.zecaschoolofthearts.com/mission-and-vision"
       },
       "clues": [
         {
-          "text": "Its official website uses the domain zecaschoolofthearts.com.",
-          "difficulty": 4,
-          "category": "official-record",
+          "text": "Its mission combines a safe, nurturing environment with a strong emphasis on arts, diversity, and technology.",
+          "difficulty": 8,
+          "category": "mission",
           "sourceRefs": [
-            "schoolRecord"
+            "mission"
           ]
         },
         {
-          "text": "Official records place this school in Jacksonville.",
-          "difficulty": 5,
-          "category": "official-record",
+          "text": "Its vision speaks about helping students re-engage successfully in school while building self-confidence and self-worth.",
+          "difficulty": 7,
+          "category": "vision",
           "sourceRefs": [
-            "schoolRecord"
+            "mission"
           ]
         },
         {
-          "text": "Official records place this school in Onslow County.",
+          "text": "Its public identity includes a mascot reference to Eagles.",
           "difficulty": 6,
           "category": "identity",
           "sourceRefs": [
-            "schoolRecord"
+            "about"
           ]
         },
         {
-          "text": "Official records list its campus address on 1249 Hargett Street.",
-          "difficulty": 7,
-          "category": "identity",
-          "sourceRefs": [
-            "schoolRecord"
-          ]
-        },
-        {
-          "text": "Its official name explicitly references the arts.",
-          "difficulty": 8,
+          "text": "Its official website uses the domain zecaschoolofthearts.com.",
+          "difficulty": 4,
           "category": "identity",
           "sourceRefs": [
             "home"
           ]
         },
         {
-          "text": "Its official name explicitly references technology.",
-          "difficulty": 9,
-          "category": "identity",
+          "text": "The arts are named directly in its official identity.",
+          "difficulty": 5,
+          "category": "focus",
           "sourceRefs": [
-            "home"
+            "schoolRecord"
+          ]
+        },
+        {
+          "text": "Technology is named directly in its official identity.",
+          "difficulty": 5,
+          "category": "focus",
+          "sourceRefs": [
+            "schoolRecord"
           ]
         }
       ]

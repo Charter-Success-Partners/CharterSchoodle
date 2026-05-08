@@ -13,7 +13,7 @@ const CONFIG = {
   futureHorizonDays: 730,
   requiredCuratedClues: 5,
   seed: "CharterSchoodle-v1",
-  excludedStatuses: ["validated-batch-034"],
+  excludedStatuses: [],
   weakCategories: ["official-record", "research-note"],
 };
 
@@ -178,7 +178,7 @@ async function main() {
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic school rotation.",
     "Each puzzle uses five curated clues plus a final first-letter hint.",
-    "Automatic daily selection excludes lower-quality completion-batch schools until they receive richer clue upgrades.",
+    "Automatic daily selection uses validated schools that meet the generator's strong-clue threshold.",
   ];
 
   const source = {
