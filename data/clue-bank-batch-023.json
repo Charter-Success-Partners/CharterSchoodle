@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-third validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "east-voyager-academy-of-charlotte",
+      "officialName": "East Voyager Academy of Charlotte",
+      "status": "validated-batch-023",
+      "sourceLinks": {
+        "about": "https://www.eastvoyager.org/about",
+        "admin": "https://www.eastvoyager.org/items",
+        "ceoBio": "https://www.eastvoyager.org/items/renee-mathews",
+        "board": "https://www.eastvoyager.org/board",
+        "startalk": "https://www.eastvoyager.org/startalk"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school strives to create bilingual students with strong academic and intercultural competence as an international language public school.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school aims to be a national leader in academic achievement and language immersion education.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says its language immersion program begins in pre-kindergarten and focuses heavily on Mandarin Chinese instruction.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about", "startalk"]
+        },
+        {
+          "text": "Official materials say students gain exposure to the world's three most spoken languages.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official pages list Renee Mathews as chief executive officer and principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["admin", "ceoBio"]
+        },
+        {
+          "text": "Its board page says trustees meet on the fourth Tuesday of each month at 6:30 p.m.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "endeavor-charter-school",
+      "officialName": "Endeavor Charter School",
+      "status": "validated-batch-023",
+      "sourceLinks": {
+        "about": "https://www.endeavorcharterschool.com/about-ecs",
+        "team": "https://www.endeavorcharter.org/our-team",
+        "board": "https://www.endeavorcharterschool.com/about-ecs/about-board",
+        "strategicPlan": "https://www.endeavorcharterschool.com/about-ecs/5yearplan",
+        "joinUs": "https://www.endeavorcharterschool.com/join-us"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school engages students by integrating a challenging, hands-on academic program with multi-faceted fine arts courses in a familial environment.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school opened on July 28, 2008.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it is guided by Aristotle's philosophy, \"We Learn by Doing.\"",
+          "difficulty": 5,
+          "category": "philosophy",
+          "sourceRefs": ["about", "joinUs"]
+        },
+        {
+          "text": "Official materials highlight Pride Scholar Pathways for middle school students in focused areas such as theatre arts, music arts, visual arts, and healthful living.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official team pages list Michael Cox as executive director and Nancy Garcia as co-principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["team"]
+        },
+        {
+          "text": "Official board pages list Dustin Embrey as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "kestrel-heights-school",
+      "officialName": "Kestrel Heights School",
+      "status": "validated-batch-023",
+      "sourceLinks": {
+        "home": "https://kestrelheights.org/",
+        "about": "https://kestrelheights.org/about-kestrel/",
+        "why": "https://kestrelheights.org/why-kestrel/",
+        "curriculum": "https://kestrelheights.org/our-curriculum/",
+        "board": "https://kestrelheights.org/board-of-directors/",
+        "expansion": "https://kestrelheights.org/2022/03/21/kchs-announces-18-9-million-expansion-project/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school empowers scholars to sharpen academic knowledge, demonstrate creative expression, and expand leadership abilities.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials say the school emphasizes the growth of the whole child through A.C.E.: Academics, Community, and Enrichment.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["why"]
+        },
+        {
+          "text": "The school says it incorporates the Paideia philosophy of teaching.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["why"]
+        },
+        {
+          "text": "Official materials say the school partnered with Houghton Mifflin Harcourt for a comprehensive curriculum.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": ["curriculum"]
+        },
+        {
+          "text": "An expansion announcement tied the opening of a new elementary building to the school's 25th anniversary.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["expansion"]
+        },
+        {
+          "text": "Official pages list Tonya Jackson as executive director and Adrienne Davis as board president.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["about", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "cardinal-charter-acad-at-wendell-falls",
+      "officialName": "Cardinal Charter Acad at Wendell Falls",
+      "status": "validated-batch-023",
+      "sourceLinks": {
+        "home": "https://www.ccawendellfalls.org/",
+        "about": "https://www.ccawendellfalls.org/apps/pages/index.jsp?type=d&uREC_ID=422454",
+        "board": "https://www.ccawendellfalls.org/apps/pages/index.jsp?type=d&uREC_ID=459286",
+        "faq": "https://www.ccawendellfalls.org/apps/pages/index.jsp?type=d&uREC_ID=422458"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school builds a student-centered, data-driven learning environment where students develop critical thinking skills and reach their academic potential.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["faq"]
+        },
+        {
+          "text": "Official materials say the school is part of the Charter Schools USA family.",
+          "difficulty": 5,
+          "category": "network",
+          "sourceRefs": ["about", "board"]
+        },
+        {
+          "text": "The school says its model is built on collaboration, differentiation, and Future Ready skills.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials highlight an integrated character education program and personalized learning plans.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official news on the homepage says Barry White Jr. was selected as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its board pages say governance is handled by the Triangle Charter Education Association, the founding board for the school.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "bear-grass-charter-school",
+      "officialName": "Bear Grass Charter School",
+      "status": "validated-batch-023",
+      "sourceLinks": {
+        "home": "https://beargrasscharter.org/?p=1900",
+        "board": "https://beargrasscharter.org/about-us/board-of-directors/",
+        "staff": "https://beargrasscharter.org/staff-1"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school, in partnership with family and community, enhances students' quality of life by ensuring they possess competencies for academic and vocational success in a technological world.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school collaborates with East Carolina University and other post-secondary institutions.",
+          "difficulty": 5,
+          "category": "partnerships",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school's homepage says it earned silver in the Daily Reflector's 2025 Best of Charter Schools category.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials repeatedly frame the campus with the phrase, \"Every day is a great day to be at Bear Grass Charter School!\"",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages list Patricia Speller as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official board pages list Delmas B. Cumbee Jr. as chairman.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    }
+  ]
+}

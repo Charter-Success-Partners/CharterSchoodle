@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Eighth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "clover-garden",
+      "officialName": "Clover Garden",
+      "status": "validated-batch-008",
+      "sourceLinks": {
+        "about": "https://cgsnc.org/home/about/",
+        "missionVisionBeliefs": "https://cgsnc.org/home/about/mission-vision-beliefs/",
+        "history": "https://cgsnc.org/home/about/grizzly-history/",
+        "directory": "https://cgsnc.org/home/about/directory/",
+        "board": "https://cgsnc.org/home/grizzly-life/board-of-directors/",
+        "faqs": "https://cgsnc.org/home/academics/admissions/faqs/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school will foster community, generate enthusiasm, challenge students academically, and produce successful citizens.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionVisionBeliefs"]
+        },
+        {
+          "text": "Its vision calls for a community of empowered learners in an atmosphere of mutual respect, responsibility, and trust.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["missionVisionBeliefs"]
+        },
+        {
+          "text": "The school says it opened as a charter school in 2001 and began with about 275 students before adding one grade level each year.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "Official FAQ materials say the school's board includes both community members and parent-elected members so parents have a voice in the future of education there.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["faqs", "board"]
+        },
+        {
+          "text": "The school says students have taken field trips across the United States and overseas to places such as Spain, Italy, France, Ireland, and the Bahamas.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["faqs"]
+        },
+        {
+          "text": "Official directory pages list Heather Vereyken as Executive Director and Chad Huffines as Board Chairman.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["directory", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "discovery-charter",
+      "officialName": "Discovery Charter",
+      "status": "validated-batch-008",
+      "sourceLinks": {
+        "about": "https://www.discoverycharterdurham.org/about.html",
+        "board": "https://www.discoverycharterdurham.org/our-board.html",
+        "missionVision": "https://www.discoverycharter.org/vision-mission",
+        "boardNew": "https://www.discoverycharter.org/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school prepares students to be self-motivated, lifelong, independent, and collaborative learners through a challenging STEAM-focused curriculum in an innovative and supportive environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about", "board"]
+        },
+        {
+          "text": "Its published vision says the school nurtures how to think, not what to think, one child at a time.",
+          "difficulty": 4,
+          "category": "vision",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Official materials say students learn through an integrated, place-based curriculum and become stewards of their environment and community.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "The school's website says it earned a 10 Year Charter Renewal and also received grants from Charter School Growth Fund, NC GreenPower Solar plus Schools, and the EPA for electric buses.",
+          "difficulty": 7,
+          "category": "awards",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "A board page says the founder and managing director is Toni Shellady.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The newer board page lists Lisa Gonzalez as board president.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["boardNew"]
+        }
+      ]
+    },
+    {
+      "schoolId": "envision-science-academy",
+      "officialName": "Envision Science Academy",
+      "status": "validated-batch-008",
+      "sourceLinks": {
+        "home": "https://www.esaeagles.com/",
+        "mission": "https://www.esaeagles.com/our-mission",
+        "history": "https://www.esaeagles.com/about-esa/history",
+        "esaWay": "https://www.esaeagles.com/an-esa-education/esa-way",
+        "administration": "https://www.esaeagles.com/communication/administration",
+        "board": "https://www.esaeagles.com/about-esa/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides innovative instruction through experiential learning with a focus on STEAM.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Its vision says students will be prepared to pursue STEAM-related careers and become lifelong learners through project-based learning.",
+          "difficulty": 4,
+          "category": "vision",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "The school says it was founded in 2014 by A. Monica Cutno, Marla Mills-Wilson, and Portia Scott.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["history", "esaWay"]
+        },
+        {
+          "text": "Its homepage notes that it was recognized by the State Board of Education as a North Carolina Model STEM School of Distinction.",
+          "difficulty": 7,
+          "category": "awards",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages say the school is committed to inclusive and equitable learning and calls this approach \"The ESA Way.\"",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home", "esaWay"]
+        },
+        {
+          "text": "The administration page lists Dr. Charles Fuller as Executive Director and the board page lists Monique Taylor as board president.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["administration", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "oxford-preparatory",
+      "officialName": "Oxford Preparatory",
+      "status": "validated-batch-008",
+      "sourceLinks": {
+        "about": "https://www.oxfordprep.org/about-us",
+        "staff": "https://www.oxfordprep.org/administration-and-staff",
+        "board": "https://www.oxfordprep.org/governing-board"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing theme line is \"Nurturing Potential – Inspiring Excellence – Developing Leaders.\"",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "The school says it is focused on preparing students to meet the requirements and demands of college.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its staff page says instructors bring new and innovative approaches to learning and emphasizes that every student matters.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "The governing board page says the board is the policy-making body with overall responsibility for curriculum, budget, facilities, and staff employment.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official governance information says board meetings are held on the second Thursday of each month at 7:00 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Andrew Swanner as Executive Director, with MaryAnn Crews and Ashley Barnette serving as Lower School and Upper School Directors.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "piedmont-community-charter-school",
+      "officialName": "Piedmont Community Charter School",
+      "status": "validated-batch-008",
+      "sourceLinks": {
+        "home": "https://pccharter.org/",
+        "missionValues": "https://pccharter.org/about/mission-values/",
+        "leaders": "https://pccharter.org/academics/our-leaders/",
+        "board": "https://pccharter.org/about/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a superior college preparatory educational option for the community and its families.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Its core values are organized around three words: Academic, Character, and Community.",
+          "difficulty": 4,
+          "category": "values",
+          "sourceRefs": ["missionValues", "home"]
+        },
+        {
+          "text": "The school says it provides a challenging college preparatory curriculum in an environment of high expectations complemented by artistic and extracurricular activities.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["missionValues", "home"]
+        },
+        {
+          "text": "Its portrait of a graduate says students are expected to be thoughtful communicators, intellectually curious, and exposed to the arts.",
+          "difficulty": 6,
+          "category": "graduate-profile",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "The board page lists Melia Mauldin as president of the board.",
+          "difficulty": 7,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The leaders page says Jennifer Killen serves as Head of School and describes her leadership style as servant leadership.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["leaders"]
+        }
+      ]
+    }
+  ]
+}

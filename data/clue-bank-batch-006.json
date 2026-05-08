@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Sixth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "cape-fear-center-for-inquiry",
+      "officialName": "Cape Fear Center for Inquiry",
+      "status": "validated-batch-006",
+      "sourceLinks": {
+        "home": "https://cfci.net/",
+        "about": "https://cfci.net/about-us/",
+        "board": "https://cfci.net/wp-content/uploads/2025/09/Board-of-Directors-2024-25_t.pdf",
+        "contact": "https://cfci.net/contact-us/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school promotes students' abilities to think and create in personally meaningful ways through an inquiry-based, integrated curriculum in a nurturing and empowering environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its about page describes the school as cultivating curiosity since 2000.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school defines inquiry as a rigorous discovery process driven by curriculum and curiosity that requires exploration, analysis, and problem-solving.",
+          "difficulty": 5,
+          "category": "instructional-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official beliefs state that the whole child is more important than any single factor.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The board roster lists Dana Stachowiak as president and Mia Green as executive director ex officio.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its campus street address is Wonder Way.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["contact"]
+        }
+      ]
+    },
+    {
+      "schoolId": "evergreen-community-charter",
+      "officialName": "Evergreen Community Charter",
+      "status": "validated-batch-006",
+      "sourceLinks": {
+        "home": "https://www.evergreenccs.org/",
+        "board": "https://www.evergreenccs.org/board",
+        "staff": "https://www.evergreenccs.org/faculty-staff"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school pursues excellence in the holistic education of mind, body, and spirit.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it prepares students for successful lifelong learning, social responsibility, environmental stewardship, and service.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school is grounded in EL Education standards for student achievement.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its vision emphasizes an academically challenging, developmentally appropriate, experiential, holistic, child-centered education offered in partnership with parents, elders, and community.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The board page says the board meets on the third Thursday of each month.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Jen Watkins as Executive Director and Ashley Shores-Bobowski as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board", "staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "summit-charter",
+      "officialName": "Summit Charter",
+      "status": "validated-batch-006",
+      "sourceLinks": {
+        "about": "https://www.summitschool.org/about-us",
+        "home": "https://www.summitschool.org/",
+        "board": "https://www.summitschool.org/board-of-trustees",
+        "campus": "https://www.summitschool.org/our-campus",
+        "expansion": "https://www.summitschool.org/post/summit-charter-school-announces-phase-ii-of-high-school-expansion"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the Summit community engages students in learning experiences that stimulate discovery, inspire excellence, and nurture a positive influence in an ever-changing world.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "Every morning, students recite a pledge built around seven virtues: Honesty, Respect, Responsibility, Compassion, Self-Discipline, Perseverance, and Giving.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "Official pages say the curriculum uses a unique place-based approach that extends learning beyond the traditional classroom and into the outdoors and the community.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The campus page highlights features including a model Appalachian Trail, an amphitheater, and a climbing tower.",
+          "difficulty": 7,
+          "category": "campus",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "An expansion announcement says the school was established as K-8 in 1997 and was one of the first charter schools in North Carolina.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["expansion"]
+        },
+        {
+          "text": "The trustee board page says board meetings are generally held on the third Tuesday of each month at 4:30 p.m.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "tiller-school",
+      "officialName": "Tiller School",
+      "status": "validated-batch-006",
+      "sourceLinks": {
+        "home": "https://tillerschool.org/",
+        "about": "https://tillerschool.org/about/",
+        "tillerWay": "https://tillerschool.org/the-tiller-way/",
+        "responsiveClassroom": "https://tillerschool.org/responsive-classroom/",
+        "board": "https://tillerschool.org/board-of-directors/",
+        "executiveStaff": "https://tillerschool.org/executive-staff/"
+      },
+      "clues": [
+        {
+          "text": "Its vision statement is \"Creating Navigators for Life.\"",
+          "difficulty": 2,
+          "category": "vision",
+          "sourceRefs": ["tillerWay"]
+        },
+        {
+          "text": "Its mission says the school fosters creativity, confidence, and enthusiasm for learning through arts integration, family engagement, and a responsive academic and social curriculum.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about", "tillerWay"]
+        },
+        {
+          "text": "The school says its social curriculum emphasizes the Responsive Classroom C.A.R.E.S. values: Cooperation, Assertion, Responsibility, Empathy, and Self-control.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["responsiveClassroom", "home"]
+        },
+        {
+          "text": "Its origin story says the school was established by a group of parents and teachers in 1993 and later received charter status in 1998.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The board page says meetings are typically held on the third Tuesday of each month and begin at 6:00 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "DeAnne Rosen is listed as Executive Director and Jonathan Bullock as board president.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["executiveStaff", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "willow-oak-montessori",
+      "officialName": "Willow Oak Montessori",
+      "status": "validated-batch-006",
+      "sourceLinks": {
+        "missionValues": "https://www.willowoakmontessori.org/mission-values-and-vision",
+        "about": "https://www.willowoakmontessori.org/about-willow-oak",
+        "home": "https://www.willowoakmontessori.org/",
+        "board": "https://www.willowoakmontessori.org/board-of-directors",
+        "staff": "https://www.willowoakmontessori.org/about-willow-oak/faculty-and-staff"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school fosters curiosity and independence to develop learners into compassionate, responsible global citizens.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Its values include Inclusivity, Individual Growth, Interdependence, Peaceful Cooperation, and Respectful Care.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "The school says students learn in mixed-age classrooms and have individualized work plans that allow choice in pace and order of work.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official descriptions say the campus includes dedicated outdoor learning spaces for each classroom on a 17-acre site.",
+          "difficulty": 7,
+          "category": "campus",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The board page says the Charter School Board typically meets monthly at 7 p.m. on the second Thursday.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Susan Johnstone is listed as Head of School, and her bio says she was both a founding board member and a founding teacher in 2013.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["about", "staff"]
+        }
+      ]
+    }
+  ]
+}

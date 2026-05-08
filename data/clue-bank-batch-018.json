@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Eighteenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "kipp-charlotte",
+      "officialName": "KIPP Charlotte",
+      "status": "validated-batch-018",
+      "sourceLinks": {
+        "school": "https://kippnc.org/our-schools/kipp-charlotte/kipp-academy-charlotte/",
+        "networkAbout": "https://kippnc.org/about-us/",
+        "mission": "https://kippnc.org/mission-core-values/",
+        "board": "https://kippnc.org/about-us/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school was founded in 2007.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["school"]
+        },
+        {
+          "text": "Its vision says students will identify a need and actively take part in their democracy to meet that need.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["school"]
+        },
+        {
+          "text": "The school says it is committed to developing the whole child through culturally responsive teaching that cultivates confidence and positive self-identity.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["school"]
+        },
+        {
+          "text": "KIPP North Carolina says its mission is to create joyful, academically excellent schools that prepare students with the skills and confidence to pursue the paths they choose.",
+          "difficulty": 6,
+          "category": "network",
+          "sourceRefs": ["mission", "networkAbout"]
+        },
+        {
+          "text": "KIPP North Carolina board pages list Rich Richards as board chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official school pages list Dr. Stacy Shepard as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["school"]
+        }
+      ]
+    },
+    {
+      "schoolId": "kipp-durham-college-preparatory",
+      "officialName": "KIPP Durham College Preparatory",
+      "status": "validated-batch-018",
+      "sourceLinks": {
+        "school": "https://kippnc.org/our-schools/kipp-durham/kipp-durham-middle-school/",
+        "mission": "https://kippnc.org/mission-core-values/",
+        "board": "https://kippnc.org/about-us/board-of-directors/",
+        "improvementPlan": "https://kippnc.org/wp-content/uploads/2022/12/KIPP-Durham-School-Improvement-Plan.pdf"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school was founded in 2015.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["school"]
+        },
+        {
+          "text": "The school says education is the most powerful weapon to create social change and that students deserve relevant, rigorous curricula.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["school"]
+        },
+        {
+          "text": "A school improvement plan says all students receive a profound, life-changing education used to create social change.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["improvementPlan"]
+        },
+        {
+          "text": "Official pages say there are no shortcuts to academic success and emphasize more time in school learning alongside a strong culture of achievement and support.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["school"]
+        },
+        {
+          "text": "KIPP North Carolina board pages list Rich Richards as board chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official school pages list David Tell as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["school"]
+        }
+      ]
+    },
+    {
+      "schoolId": "kipp-pride-college-preparatory",
+      "officialName": "KIPP Pride College Preparatory",
+      "status": "validated-batch-018",
+      "sourceLinks": {
+        "middle": "https://kippnc.org/our-schools/kipp-pride/kipp-pride-middle/",
+        "high": "https://kippnc.org/our-schools/kipp-pride/kipp-pride-high/",
+        "mission": "https://kippnc.org/mission-core-values/",
+        "board": "https://kippnc.org/about-us/board-of-directors/",
+        "handbook": "https://kippnc.org/wp-content/uploads/2025/08/KIPP-Pride-Lower-Elementary-2025-2026-KIPP-NC-Student-and-Family-Handbook_Final.pdf"
+      },
+      "clues": [
+        {
+          "text": "Official materials trace the school's roots to 2001, when the original KIPP Gaston College Prep opened as one of the earliest KIPP schools in the country.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["middle", "handbook"]
+        },
+        {
+          "text": "The school says the strength of the individual and the strength of the community are tied together in what Dr. Martin Luther King Jr. called \"the fabric of inescapable mutuality.\"",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["middle"]
+        },
+        {
+          "text": "Official materials say the school believes in bravery, urgency, self-awareness, and passion as part of its culture.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["middle"]
+        },
+        {
+          "text": "Its high school page says students are prepared to use their knowledge, skills, and character to strengthen their communities and fight against injustices.",
+          "difficulty": 6,
+          "category": "graduate-profile",
+          "sourceRefs": ["high"]
+        },
+        {
+          "text": "KIPP North Carolina board pages list Rich Richards as board chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official school pages list Shawna Mayo as principal of the middle school and Natassha Jenkins as principal of the high school.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["middle", "high"]
+        }
+      ]
+    },
+    {
+      "schoolId": "pioneer-springs-community-school",
+      "officialName": "Pioneer Springs Community School",
+      "status": "validated-batch-018",
+      "sourceLinks": {
+        "home": "https://www.pioneersprings.org/",
+        "about": "https://www.pioneersprings.org/about/",
+        "directorMessage": "https://www.pioneersprings.org/directors-message.html",
+        "board": "https://www.pioneersprings.org/board-of-trustees.html",
+        "staff": "https://www.pioneersprings.org/administration-and-student-support.html",
+        "basicSchool": "https://www.pioneersprings.org/basic-school.html"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a hands-on learning experience guided by a cohesive curriculum integrating nature and supported by an active community of parents and teachers.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school began as a grassroots initiative in 2012 and became a public charter school in fall 2014.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it follows the Basic School model inspired by Ernest L. Boyer.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["directorMessage", "basicSchool"]
+        },
+        {
+          "text": "Official pages describe the school as the only nature-based, holistic, tuition-free public charter school in the Charlotte region.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its board page lists co-founder Abigail Jennings as chair of the Board of Trustees.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official staff pages list Dr. Rebecca Friend as executive director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "union-prep-academy-at-indian-trail",
+      "officialName": "Union Prep Academy at Indian Trail",
+      "status": "validated-batch-018",
+      "sourceLinks": {
+        "elementaryHome": "https://www.unionprepk-5.org/",
+        "highHome": "https://www.unionprep6-12.org/",
+        "about": "https://www.unionprepk-5.org/apps/pages/index.jsp?type=d&uREC_ID=364659",
+        "board": "https://www.unionprep6-12.org/apps/pages/index.jsp?type=d&uREC_ID=577364",
+        "elementaryPrincipal": "https://www.unionprepk-5.org/apps/pages/index.jsp?type=d&uREC_ID=585034",
+        "admin": "https://www.unionprep6-12.org/apps/pages/index.jsp?type=d&uREC_ID=577375"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a learning environment that is academically rigorous and enhanced with personalized learning plans.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["elementaryHome", "highHome", "about"]
+        },
+        {
+          "text": "Official materials say the school is part of the Charter Schools USA family.",
+          "difficulty": 4,
+          "category": "network",
+          "sourceRefs": ["about", "board"]
+        },
+        {
+          "text": "The school's public identity includes the rallying cry \"Go Polar Bears!\"",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["elementaryPrincipal"]
+        },
+        {
+          "text": "Official pages highlight dual enrollment, AP programming, and a dynamic academic community as part of the upper school experience.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["highHome"]
+        },
+        {
+          "text": "Board pages say Union County Charter Education Association is the founding board for the school.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official administration pages list Jesse Hogan as interim principal for the lower school and Mr. Lis as principal for the upper school.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["elementaryHome", "elementaryPrincipal", "admin"]
+        }
+      ]
+    }
+  ]
+}

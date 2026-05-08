@@ -1,0 +1,514 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Second validated clue batch compiled from official school websites and other reputable public sources when official site details were sparse.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "community-school-of-davidson",
+      "officialName": "Community School of Davidson",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://www.csdspartans.org/",
+        "mission": "https://www.csdspartans.org/",
+        "about": "https://www.csdspartans.org/248561_2",
+        "studentLife": "https://www.csdspartans.org/247234_2"
+      },
+      "clues": [
+        {
+          "text": "Its homepage tagline quotes Dr. Ernest Boyer: \"To help each child build a life as if it were a work of art.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school uses the principles of The Basic School to create an optimal environment for learning.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official philosophy pages say students are motivated through hands-on teaching, integrated curriculum, and real-life learning with meaningful community connections.",
+          "difficulty": 5,
+          "category": "instructional-model",
+          "sourceRefs": ["mission", "about"]
+        },
+        {
+          "text": "Its school community language emphasizes \"the life of the mind,\" \"the vitality of the arts,\" and \"the importance of community.\"",
+          "difficulty": 6,
+          "category": "philosophy",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Student life pages feature both Service Learning and a student publication called the Spartan Sentinel.",
+          "difficulty": 6,
+          "category": "student-life",
+          "sourceRefs": ["studentLife"]
+        },
+        {
+          "text": "Official staff navigation includes a separate RIPPLE staff directory alongside lower and upper school directories.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["home"]
+        }
+      ]
+    },
+    {
+      "schoolId": "corvian-community-school",
+      "officialName": "Corvian Community School",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://corvian.org/",
+        "strategicPlan": "https://filecabinet5.eschoolview.com/2D8F2209-3E09-4E84-836F-913175BF6088/CorvianStrategicPriorities10_09_20192.pdf"
+      },
+      "clues": [
+        {
+          "text": "Its introduction says the school develops the whole child by addressing cognitive, emotional, social, and physical needs.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official language says every child can and will succeed in ways that reflect individual aptitudes, interests, and healthful lifestyle practices.",
+          "difficulty": 5,
+          "category": "philosophy",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school highlights that it received national accreditation from Cognia.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its strategic priorities page says mission, vision, values, and the Portrait of a Graduate will be the school's compass.",
+          "difficulty": 7,
+          "category": "strategic-plan",
+          "sourceRefs": ["home", "strategicPlan"]
+        },
+        {
+          "text": "A student quote featured on the site says, \"I don't want to leave school.\"",
+          "difficulty": 7,
+          "category": "culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Families can also find a separate Camp Corvian link on the official site.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["home"]
+        }
+      ]
+    },
+    {
+      "schoolId": "east-wake-academy",
+      "officialName": "East Wake Academy",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://www.eastwakeacademy.org/",
+        "boardDirectory": "https://www.eastwakeacademy.org/page/board-directory",
+        "execAnnouncement": "https://www.eastwakeacademy.org/article/888949",
+        "staff": "https://www.eastwakeacademy.org/staff",
+        "athletics": "https://www.eastwakeacademy.org/o/ewaa/athletics"
+      },
+      "clues": [
+        {
+          "text": "Its homepage features this promise: the school is dedicated to giving all students an opportunity to reach their fullest potential.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "That homepage statement is attributed to Anthony Pirrello.",
+          "difficulty": 5,
+          "category": "school-leader",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "An official news article says Anthony Pirrello was hired as Executive Director effective November 1, 2022.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["execAnnouncement"]
+        },
+        {
+          "text": "Its governance section is labeled EWA Board of Directors and includes a dedicated board directory page.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["boardDirectory"]
+        },
+        {
+          "text": "The staff directory lists Bradley Bowman as Athletic Director.",
+          "difficulty": 7,
+          "category": "athletics",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Official athletics pages brand the sports program separately as EWA Athletics.",
+          "difficulty": 6,
+          "category": "athletics",
+          "sourceRefs": ["athletics"]
+        }
+      ]
+    },
+    {
+      "schoolId": "lake-norman-charter",
+      "officialName": "Lake Norman Charter",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://www.lncharter.org/",
+        "about": "https://www.lncharter.org/about-us",
+        "mission": "https://www.lncharter.org/"
+      },
+      "clues": [
+        {
+          "text": "Its official motto is \"Together we learn, lead and serve.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it is more than a school and is a community built on learning, leadership, and service.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its mission emphasizes developing college-ready learners and responsible leaders with a strong sense of social responsibility.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "A signature framework on the site is called The Knight Standard.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Three subpages under that framework are named Future Ready, Thrive, and Leadership in Action.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The parent hub includes a tradition page called \"Painting the Schools' Rocks.\"",
+          "difficulty": 7,
+          "category": "traditions",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Student life includes a scheduling tool called HS FlexiSched.",
+          "difficulty": 6,
+          "category": "student-life",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "maureen-joy-charter-school",
+      "officialName": "Maureen Joy Charter School",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://www.joycharter.org/",
+        "about": "https://www.joycharter.org/apps/pages/index.jsp?type=d&uREC_ID=4332003",
+        "board": "https://www.joycharter.org/apps/pages/index.jsp?pREC_ID=2707325&type=d&uREC_ID=4332003",
+        "administration": "https://www.joycharter.org/apps/pages/index.jsp?pREC_ID=2534383&type=d&uREC_ID=4332003",
+        "execAnnouncement": "https://www.joycharter.org/apps/news/article/2170069?categoryId=21315"
+      },
+      "clues": [
+        {
+          "text": "Its site-wide motto is simply \"Choose Joy.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission centers on developing the whole child through instruction, school-community partnerships, and positive self-identity.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The vision says every child should find joy in developing academic potential and thriving as a leader in the community.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official history language says it stands among the longest-standing charter schools in the state.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its board page says regular board meetings are held virtually and that public comments require sign-up 24 hours in advance.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Reginald Johnson is listed as board president.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "A 2026 school news release announced Dr. Kelvin Bullock as Executive Director.",
+          "difficulty": 7,
+          "category": "school-leader",
+          "sourceRefs": ["execAnnouncement"]
+        }
+      ]
+    },
+    {
+      "schoolId": "raleigh-charter-high-school",
+      "officialName": "Raleigh Charter High School",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "mission": "https://www.raleighcharterhs.org/mission",
+        "board": "https://www.raleighcharterhs.org/board-of-directors",
+        "contact": "https://www.raleighcharterhs.org/contact-us"
+      },
+      "clues": [
+        {
+          "text": "Its mission statement says the school challenges college-bound students in a creative and supportive atmosphere to become knowledgeable, thoughtful, contributing citizens.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The school's preamble says it aims to sustain individual self-determination and community self-government.",
+          "difficulty": 6,
+          "category": "philosophy",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official mission language says the school graduates citizens of the world through an interconnected learning environment.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its lessons are described as active, social, and creative.",
+          "difficulty": 5,
+          "category": "instructional-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its board includes alumni among its members, including Rob Fenoglio and Alex Karsten.",
+          "difficulty": 7,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The board page says Lisa Huddleston has served the school as community liaison, mathematics teacher, and academic dean before becoming principal.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "reaching-all-minds-academy",
+      "officialName": "Reaching All Minds Academy",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "http://www.reachingallminds.com",
+        "nccuVolunteer": "https://nccu.galaxydigital.com/agency/detail/?agency_id=84290",
+        "linkedIn": "https://www.linkedin.com/company/reaching-all-minds-academy"
+      },
+      "clues": [
+        {
+          "text": "A public profile for this school says its mission is to prepare students to become productive citizens who can solve complex problems and think critically.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["nccuVolunteer", "linkedIn"]
+        },
+        {
+          "text": "That same public mission language says students should exhibit positive social competencies and function in a highly technological and global society.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": ["nccuVolunteer", "linkedIn"]
+        },
+        {
+          "text": "A public school profile says the vision relies on project-based learning to prepare students for STEM-related careers.",
+          "difficulty": 6,
+          "category": "specialty",
+          "sourceRefs": ["linkedIn"]
+        },
+        {
+          "text": "One public-facing description says the school believes real-world experiences in a safe and orderly learning environment help students make a positive difference in their communities.",
+          "difficulty": 7,
+          "category": "instructional-model",
+          "sourceRefs": ["nccuVolunteer"]
+        },
+        {
+          "text": "A public profile for the school uses the slogan \"Think Big... Think RAM!\"",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["linkedIn"]
+        },
+        {
+          "text": "Natasha Wayne is listed in a public volunteer profile as Director of Community Engagement.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["nccuVolunteer"]
+        }
+      ]
+    },
+    {
+      "schoolId": "revolution-academy",
+      "officialName": "Revolution Academy",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://rarhinosk12.com/",
+        "board": "https://rarhinosk12.com/board-of-directors/",
+        "academicTechnology": "https://rarhinosk12.com/academics/academic-technology/"
+      },
+      "clues": [
+        {
+          "text": "Its official messaging says the school builds more than scholars and aims to shape citizens.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says its approach combines rigorous academics with timeless values, civic responsibility, and love of country.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its board page says community members must submit public comment topics by 5 PM the day before a regular board meeting.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Houston Core is listed as chairman on the board page.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The academic technology page says Google Classroom is the school's preferred learning management system.",
+          "difficulty": 6,
+          "category": "academic-technology",
+          "sourceRefs": ["academicTechnology"]
+        },
+        {
+          "text": "That same technology page says cell phones are prohibited during the academic day.",
+          "difficulty": 7,
+          "category": "student-life",
+          "sourceRefs": ["academicTechnology"]
+        }
+      ]
+    },
+    {
+      "schoolId": "woods-charter",
+      "officialName": "Woods Charter",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://www.woodscharter.org/",
+        "mission": "https://www.woodscharter.org/about-us/vision-mission-the-woods-way",
+        "about": "https://www.woodscharter.org/about-us"
+      },
+      "clues": [
+        {
+          "text": "Its athletic identity is the Wolves.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school envisions an extraordinary educational journey that leads to a life of leadership and service.",
+          "difficulty": 4,
+          "category": "vision",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Its mission says students should become young citizens with a solid academic foundation, a passion for learning, and exemplary character.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "The site's values include academic excellence rooted in classical liberal arts and modern science.",
+          "difficulty": 6,
+          "category": "philosophy",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Another value statement says the school values strong relationships marked by mutual respect and trust.",
+          "difficulty": 6,
+          "category": "culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school also highlights a solar array among its official about pages.",
+          "difficulty": 7,
+          "category": "campus",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "youngsville-academy",
+      "officialName": "Youngsville Academy",
+      "status": "validated-batch-002",
+      "sourceLinks": {
+        "home": "https://www.youngsvilleacademy.org/",
+        "mottoMission": "https://www.youngsvilleacademy.org/apps/pages/index.jsp?pREC_ID=970861&type=d&uREC_ID=450304",
+        "principalMessage": "https://www.youngsvilleacademy.org/apps/pages/index.jsp?pREC_ID=970858&type=d&uREC_ID=450304",
+        "board": "https://www.youngsvilleacademy.org/apps/pages/index.jsp?pREC_ID=970870&type=d&uREC_ID=450318",
+        "values": "https://www.youngsvilleacademy.org/apps/pages/index.jsp?pREC_ID=2671565&type=d&uREC_ID=450304",
+        "application": "https://www.youngsvilleacademy.org/apps/pages/application"
+      },
+      "clues": [
+        {
+          "text": "Its official motto is the Latin phrase \"Esse Quam Videri.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home", "mottoMission"]
+        },
+        {
+          "text": "The school says it provides a joyful learning environment while cultivating good character and strong reading, writing, and arithmetic skills.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mottoMission"]
+        },
+        {
+          "text": "Official materials repeatedly describe the school as rigorous, classical, and college-preparatory.",
+          "difficulty": 3,
+          "category": "specialty",
+          "sourceRefs": ["home", "application"]
+        },
+        {
+          "text": "Its values page says students begin the day with a Phoenix Pledge and are expected to live \"On FIRE\" behavior.",
+          "difficulty": 6,
+          "category": "culture",
+          "sourceRefs": ["values"]
+        },
+        {
+          "text": "The FIRE acronym stands for Fortitude, Integrity, Respect, and Excellence.",
+          "difficulty": 7,
+          "category": "culture",
+          "sourceRefs": ["values"]
+        },
+        {
+          "text": "Larry Henson is identified on official pages as Executive Director and founder.",
+          "difficulty": 7,
+          "category": "school-leader",
+          "sourceRefs": ["principalMessage", "board"]
+        },
+        {
+          "text": "John Allen is listed as chairman of the board of directors.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    }
+  ]
+}

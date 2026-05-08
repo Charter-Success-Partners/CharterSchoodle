@@ -1,0 +1,262 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twentieth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "charlotte-lab-school",
+      "officialName": "Charlotte Lab School",
+      "status": "validated-batch-020",
+      "sourceLinks": {
+        "home": "https://www.charlottelabschool.org/",
+        "board": "https://www.charlottelabschool.org/apps/pages/index.jsp?type=d&uREC_ID=2048436",
+        "executiveDirector": "https://www.charlottelabschool.org/apps/pages/index.jsp?type=u&uREC_ID=1713285",
+        "labWay": "https://www.charlottelabschool.org/apps/pages/index.jsp?pREC_ID=2117411&type=d&uREC_ID=2048386",
+        "newHome": "https://www.charlottelabschool.org/apps/news/article/1714650",
+        "canopy": "https://www.charlottelabschool.org/apps/news/article/1950888"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school uses the community as a classroom to provide personalized, engaging, and authentic learning experiences.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school opened in 2015.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["labWay", "executiveDirector"]
+        },
+        {
+          "text": "The school says challenge-based courses called Quests help students collaborate on age-appropriate real-world problems.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["labWay"]
+        },
+        {
+          "text": "Official announcements say the school combined three campuses into one permanent facility on Suttle Avenue for the 2023-24 year.",
+          "difficulty": 6,
+          "category": "campus-history",
+          "sourceRefs": ["newHome"]
+        },
+        {
+          "text": "A national Canopy project selected the school for 2024-25 to showcase student-centered learning and innovation.",
+          "difficulty": 7,
+          "category": "recognition",
+          "sourceRefs": ["canopy"]
+        },
+        {
+          "text": "Official pages list Krista Lewis-Johnson as board chair and Dr. Mary Moss as founder and executive director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board", "executiveDirector"]
+        }
+      ]
+    },
+    {
+      "schoolId": "charlotte-secondary",
+      "officialName": "Charlotte Secondary",
+      "status": "validated-batch-020",
+      "sourceLinks": {
+        "home": "https://www.charlottesecondary.org/",
+        "about": "https://www.charlottesecondary.org/about-us",
+        "staff": "https://www.charlottesecondary.org/general-4",
+        "board": "https://www.charlottesecondary.org/board-meetings",
+        "mtss": "https://www.charlottesecondary.org/mtss"
+      },
+      "clues": [
+        {
+          "text": "Its mission says students should think with discernment and ingenuity, communicate with empathy and tolerance, and act with integrity and purpose.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school has been serving students and families for 18 years.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it offers no school on Fridays as part of its model.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its MTSS page says the school believes in meeting students where they are and taking them where they need to be.",
+          "difficulty": 6,
+          "category": "student-support",
+          "sourceRefs": ["mtss"]
+        },
+        {
+          "text": "Official school pages describe it as primarily a college and career preparatory school that helps students discover their own particular genius.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official pages list JoHannah Miller as head of school and Monique Stubbs as interim chair of the board.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "gray-stone-day",
+      "officialName": "Gray Stone Day",
+      "status": "validated-batch-020",
+      "sourceLinks": {
+        "home": "https://www.graystoneday.org/",
+        "philosophy": "https://www.graystoneday.org/OurPhilosophy.aspx",
+        "board": "https://www.graystoneday.org/Board.aspx",
+        "betaClub": "https://graystoneday.org/News/20251216.aspx",
+        "collegeCounselor": "https://www.graystoneday.org/News/20240718.aspx"
+      },
+      "clues": [
+        {
+          "text": "Official materials say integrity, responsibility, and service to others are hallmarks of its graduates.",
+          "difficulty": 3,
+          "category": "values",
+          "sourceRefs": ["home", "philosophy"]
+        },
+        {
+          "text": "The school says it added another division in 2017 to help students prepare for the demands of its college preparatory program.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["philosophy"]
+        },
+        {
+          "text": "Official news says the school earned College Board AP School Honor Roll recognition with Platinum Distinction for the 2024-25 school year.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A 2025 school news story says a senior launched the campus's first-ever National Beta Club chapter.",
+          "difficulty": 6,
+          "category": "student-life",
+          "sourceRefs": ["betaClub"]
+        },
+        {
+          "text": "Official news says the school invested from its founding in a full-time college counselor in addition to a traditional school counselor.",
+          "difficulty": 7,
+          "category": "school-model",
+          "sourceRefs": ["collegeCounselor"]
+        },
+        {
+          "text": "Official pages list Stephen Chambers as board chairman, and school news identifies Melissa Smith as principal and Helen Nance as chief administrative officer.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board", "betaClub", "collegeCounselor"]
+        }
+      ]
+    },
+    {
+      "schoolId": "queen-s-grant-community-school",
+      "officialName": "Queen's Grant Community School",
+      "status": "validated-batch-020",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/queens-grant-community-school/en",
+        "leadership": "https://www.nhaschools.com/schools/queens-grant-community-school/en/leadership",
+        "board": "https://www.nhaschools.com/schools/queens-grant-community-school/en/board-documents",
+        "excelerate": "https://www.nhaschools.com/schools/queens-grant-community-school/en/Excel-erate",
+        "difference": "https://www.nhaschools.com/schools/queens-grant-community-school/en/discover-our-difference"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a challenging, character-based education in partnership with parents and community.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2002.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school highlights National Heritage Academies' Moral Focus program and says 93% of parents see a positive impact from it.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its advanced learning program is called EXCEL-ERATE.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["excelerate"]
+        },
+        {
+          "text": "Official materials say the school emphasizes academic excellence, student responsibility, parent partnership, and a structured setting.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home", "difference"]
+        },
+        {
+          "text": "Official leadership pages list Krista Tolchin as principal and Ted Biggers as board president.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "metrolina-reg-scholars-academy",
+      "officialName": "Metrolina Reg Scholars Academy",
+      "status": "validated-batch-020",
+      "sourceLinks": {
+        "home": "https://www.scholarsacademy.org/",
+        "purpose": "https://www.scholarsacademy.org/apps/pages/index.jsp?type=d&uREC_ID=334887",
+        "mission": "https://www.scholarsacademy.org/apps/pages/index.jsp?type=d&uREC_ID=345044",
+        "curriculum": "https://www.scholarsacademy.org/m/pages/index.jsp?pREC_ID=1111956&termREC_ID=&type=d&uREC_ID=334917",
+        "values": "https://scholarsacademy.org/m/pages/index.jsp?pREC_ID=648009&termREC_ID=&type=d&uREC_ID=345044",
+        "staff": "https://www.scholarsacademy.org/apps/staff/",
+        "board": "https://scholarsacademy.org/ourpages/auto/2025/11/7/58496324/2025-26%20Parent%20Student%20Handbook.pdf"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a differentiated, challenging, and equitable learning environment for highly gifted children from diverse backgrounds.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Official materials say the school was established in 2000.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["purpose"]
+        },
+        {
+          "text": "The school says its guiding principle is supporting the distinctive intellectual, social, and emotional needs of gifted children in a noncompetitive environment.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["values"]
+        },
+        {
+          "text": "Its curriculum materials say highly gifted children not only learn faster, but also learn in a qualitatively different way.",
+          "difficulty": 6,
+          "category": "academic-model",
+          "sourceRefs": ["curriculum"]
+        },
+        {
+          "text": "Official materials say the community values diversity, collaboration, and vibrancy alongside respect, appreciation, trust, innovation, altruism, and creativity.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["values"]
+        },
+        {
+          "text": "Official materials list Jessica Cuneo as interim executive director and Enrique Alvarez as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "board"]
+        }
+      ]
+    }
+  ]
+}

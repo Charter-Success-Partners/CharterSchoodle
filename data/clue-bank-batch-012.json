@@ -1,0 +1,256 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twelfth validated clue batch compiled from official National Heritage Academies school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "johnston-charter-academy",
+      "officialName": "Johnston Charter Academy",
+      "status": "validated-batch-012",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/johnston-charter-academy/en",
+        "difference": "https://www.nhaschools.com/schools/johnston-charter-academy/en/discover-our-difference",
+        "leadership": "https://www.nhaschools.com/schools/johnston-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/johnston-charter-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says rigorous academics, character development, and attention to individual student progress help develop critical-thinking scholars.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2018.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says its Moral Focus program teaches virtues like respect, gratitude, and courage as part of daily learning.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["difference"]
+        },
+        {
+          "text": "Its leadership page lists Jason Thompson as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Jamila Bowser as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "peak-charter-academy",
+      "officialName": "Peak Charter Academy",
+      "status": "validated-batch-012",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/peak-charter-academy/en",
+        "difference": "https://www.nhaschools.com/schools/peak-charter-academy/en/discover-our-difference",
+        "leadership": "https://www.nhaschools.com/schools/peak-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/peak-charter-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school develops students into critical thinkers, active collaborators, and eager contributors to their learning.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2017.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it is ranked in the top 2% of public elementary schools in America by Niche.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page lists Scott Iden as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Kacey Gorman as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "wake-forest-charter-academy",
+      "officialName": "Wake Forest Charter Academy",
+      "status": "validated-batch-012",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/wake-forest-charter-academy/en",
+        "difference": "https://www.nhaschools.com/schools/wake-forest-charter-academy/en/discover-our-difference",
+        "leadership": "https://www.nhaschools.com/schools/wake-forest-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/wake-forest-charter-academy/en/board-documents",
+        "atAGlance": "https://www.nhaschools.com/schools/wake-forest-charter-academy/en/at-a-glance"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating education. Building character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says students learn to become powerful, critical and independent thinkers, successful collaborators, and enthusiastic contributors to their learning processes.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2014.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "atAGlance"]
+        },
+        {
+          "text": "The school says it is ranked in the top 6% of public K-8 schools in America by Niche.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page identifies Hilda Alston Parler as founder and board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Heather Barringer as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "summerfield-charter-academy",
+      "officialName": "Summerfield Charter Academy",
+      "status": "validated-batch-012",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/summerfield-charter-academy/en",
+        "difference": "https://www.nhaschools.com/schools/summerfield-charter-academy/en/discover-our-difference",
+        "leadership": "https://www.nhaschools.com/schools/summerfield-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/summerfield-charter-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school values academic achievement, emphasizes strong character, and fosters in every student the ability to think, understand, and communicate.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2013.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it is ranked one of the top two schools in the area based on academic performance.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page lists Debra Wilson as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Rudy Swofford as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "rolesville-charter-academy",
+      "officialName": "Rolesville Charter Academy",
+      "status": "validated-batch-012",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/rolesville-charter-academy/en",
+        "difference": "https://www.nhaschools.com/schools/rolesville-charter-academy/en/discover-our-difference",
+        "leadership": "https://www.nhaschools.com/schools/rolesville-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/rolesville-charter-academy/en/board-documents",
+        "atAGlance": "https://www.nhaschools.com/schools/rolesville-charter-academy/en/at-a-glance"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says every student will develop the knowledge, tools, and skills for success through high academic and character standards.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2018.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "atAGlance"]
+        },
+        {
+          "text": "The school says students can participate in sports, clubs, art, and music as part of its activities and enrichment offerings.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["atAGlance"]
+        },
+        {
+          "text": "Its leadership page lists Lisa Kane as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Matthew Barringer as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Ninth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "a-c-e-academy",
+      "officialName": "A.C.E. Academy",
+      "status": "validated-batch-009",
+      "sourceLinks": {
+        "home": "https://www.aceacademycharter.org/",
+        "board": "https://www.aceacademycharter.org/apps/pages/index.jsp?type=d&uREC_ID=471307"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school equips students from all backgrounds to succeed in the college and career of their choice through academic excellence, strong character, and an entrepreneurial mindset.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official branding describes it as a tuition-free charter school established in 2014.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school's mission uniquely emphasizes an entrepreneurial mindset alongside academics and character.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The board page says the governing board consists of five community members who oversee policy, state compliance, budget allocations, and educational goals.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its news section features students called the \"Young Moguls\" leading a community giving effort.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official board pages list Dr. Terry Cline as Board Chair and Laila Minott as Executive Director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "bonnie-cone-classical-academy",
+      "officialName": "Bonnie Cone Classical Academy",
+      "status": "validated-batch-009",
+      "sourceLinks": {
+        "about": "https://www.bonniecone.org/classical/about-us",
+        "board": "https://www.bonniecone.org/board-of-directors",
+        "director": "https://www.bonniecone.org/classical",
+        "directorLetter": "https://www.bonniecone.org/classical/about-us/director"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school equips students with the tools of learning to think critically, reason effectively, and communicate persuasively through the rigors of a classical education.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says its distinct virtues are captured in the acronym R.A.I.S.E.: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["about", "directorLetter"]
+        },
+        {
+          "text": "Official materials explain its classical education philosophy through the three stages of learning: grammar, logic, and rhetoric.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its curriculum highlights Latin instruction alongside core subjects to deepen language structure and vocabulary.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The board page says regular board meetings are held on the third Tuesday of each month at 4:45 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Pamela Franklin as Director and Rev. Martin McCarthy as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["director", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "davidson-charter-academy",
+      "officialName": "Davidson Charter Academy",
+      "status": "validated-batch-009",
+      "sourceLinks": {
+        "home": "https://www.davidsoncharter.org/",
+        "story": "https://www.davidsoncharter.org/our-story",
+        "staff": "https://www.davidsoncharter.org/academics/staff",
+        "board": "https://www.davidsoncharter.org/our-story/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school, in partnership with parents and community members, fosters student learning and achievement and inspires students to become independent thinkers, effective communicators, and contributing citizens of a global society.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "story"]
+        },
+        {
+          "text": "Its \"DCA Difference\" highlights community, excellence, achievement, empathy, independence, and communication.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["story", "home"]
+        },
+        {
+          "text": "The homepage says the school opened in 2017.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school continues to add programs and academic clubs that reflect the diversity of students' skills and interests.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "The board page lists Amanda Whitaker as Chairperson.",
+          "difficulty": 7,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The staff directory lists Joseph Wood as C.E.O. and Dr. Tina Alexander as Principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "lake-lure-classical-academy",
+      "officialName": "Lake Lure Classical Academy",
+      "status": "validated-batch-009",
+      "sourceLinks": {
+        "home": "https://www.llcharter.org/",
+        "about": "https://www.llcharter.org/apps/pages/index.jsp?type=d&uREC_ID=4359052",
+        "board": "https://www.llcharter.org/apps/pages/index.jsp?type=d&uREC_ID=4357573"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a classical, knowledge-based education that fosters critical thinking, civic responsibilities, and virtue for all.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school uses an engaging Core Knowledge curriculum aligned to the North Carolina Standard Course of Study.",
+          "difficulty": 5,
+          "category": "curriculum",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school highlights Outdoor Exploration, Classical Education, and Lifelong Learning as key themes on its homepage.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its about page says students can earn certificates in fields such as computer science, welding, and machining through a partnership with Isothermal Community College.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The board page says the board usually meets on the third Thursday of the month at 3:30 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board materials list Randy Nelson as Chair of the Board of Directors.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "lincoln-charter-school",
+      "officialName": "Lincoln Charter School",
+      "status": "validated-batch-009",
+      "sourceLinks": {
+        "mission": "https://lincolncharter.org/mission",
+        "overview": "https://lincolncharter.org/aboutus",
+        "home": "https://www.lincolncharter.org/home/denver-campus/enrollment/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school facilitates the development of college-ready individuals through rigorous academics and expectations of honesty, respect, empathy, responsibility, service, and preparedness.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["mission", "home"]
+        },
+        {
+          "text": "Its vision describes the school as the premier college prep community for highly engaged educators and learners.",
+          "difficulty": 4,
+          "category": "vision",
+          "sourceRefs": ["mission", "home"]
+        },
+        {
+          "text": "Official history says the school obtained its charter in 1998.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["mission", "overview"]
+        },
+        {
+          "text": "The school says students document service hours every year through its Learn. Serve. Engage. program.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["overview", "mission"]
+        },
+        {
+          "text": "Its priorities include dual college enrollment and required volunteer hours for parents.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The overview page includes a message from Chief Administrator Jonathan Bryant.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["overview"]
+        }
+      ]
+    }
+  ]
+}

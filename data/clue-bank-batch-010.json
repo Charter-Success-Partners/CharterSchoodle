@@ -1,0 +1,256 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Tenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "american-renaissance-school",
+      "officialName": "American Renaissance School",
+      "status": "validated-batch-010",
+      "sourceLinks": {
+        "home": "https://arsnc.org/",
+        "board": "https://arsnc.org/board-of-directors/",
+        "arts": "https://arsnc.org/arts/",
+        "stem": "https://arsnc.org/stem/",
+        "support": "https://arsnc.org/support-ars/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school ensures a standard of academic excellence by providing a nurturing environment that allows each child to reach their fullest potential as students and citizens.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school has been operating since 1998 and is located in the heart of downtown Statesville.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school highlights both the arts and STEM as signature parts of its program.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["home", "arts", "stem"]
+        },
+        {
+          "text": "Its arts page says the school has an 88-seat black box theater used for student performances and community events.",
+          "difficulty": 7,
+          "category": "campus",
+          "sourceRefs": ["arts"]
+        },
+        {
+          "text": "A capital campaign page says the American Renaissance Arts and Science Center is located in the restored Statesville Record and Landmark building.",
+          "difficulty": 7,
+          "category": "campus",
+          "sourceRefs": ["support"]
+        },
+        {
+          "text": "Official board pages list Paul Renegar as Board Chair.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board", "support"]
+        }
+      ]
+    },
+    {
+      "schoolId": "greensboro-academy",
+      "officialName": "Greensboro Academy",
+      "status": "validated-batch-010",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/greensboro-academy/en",
+        "leadership": "https://www.nhaschools.com/schools/greensboro-academy/en/leadership",
+        "boardDocs": "https://www.nhaschools.com/schools/greensboro-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing motto is \"Elevating Education, Building Character.\"",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it shapes instruction around each child's strengths and abilities and integrates Moral Focus lessons into every school day.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its board documents state that the school, in cooperation with parents and community, strives to challenge students to reach their highest potential in academic excellence and moral character.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["boardDocs"]
+        },
+        {
+          "text": "The leadership page says the school board is made up of local civic and community leaders who volunteer their time and energy.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["leadership", "boardDocs"]
+        },
+        {
+          "text": "Its homepage cites a Stanford University study saying National Heritage Academies partner-school students gained the equivalent of 3.5 months of additional learning each year.",
+          "difficulty": 7,
+          "category": "research",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages list Tracey Duhaime as principal and Brian Clarida as board president.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "langtree-charter-academy",
+      "officialName": "Langtree Charter Academy",
+      "status": "validated-batch-010",
+      "sourceLinks": {
+        "home": "https://www.langtreecharter.org/",
+        "about": "https://www.langtreecharter.org/apps/pages/index.jsp?type=d&uREC_ID=365733",
+        "governance": "https://www.langtreecharter.org/m/pages/index.jsp?type=d&uREC_ID=365741",
+        "staff": "https://www.langtreecharter.org/apps/staff/",
+        "principal": "https://www.langtreecharter.org/apps/pages/index.jsp?pREC_ID=1001597&termREC_ID=&type=d&uREC_ID=500203"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school builds a rigorous and productive learning environment where students can reach their academic potential and teachers set clear educational goals.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials say the school values the relationship between teacher and student and the role the family plays in academic and social development.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says citizenship and experiential learning through community engagement are present at every grade level.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Governance pages say the school is governed by the North Carolina Charter Educational Foundation and managed with professional support from Charter Schools USA.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["governance", "about"]
+        },
+        {
+          "text": "Its homepage says the class of 2026 earned over 10 million dollars in scholarships.",
+          "difficulty": 7,
+          "category": "achievement",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official staff pages list Jennifer Wilson as Lower Campus Principal and Nicole Sanfilippo as Upper Campus Principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "principal"]
+        }
+      ]
+    },
+    {
+      "schoolId": "neuse-charter-school",
+      "officialName": "Neuse Charter School",
+      "status": "validated-batch-010",
+      "sourceLinks": {
+        "home": "https://www.neusecharterschool.org/",
+        "about": "https://www.neusecharterschool.org/about-neuse-charter.html",
+        "board": "https://www.neusecharterschool.org/board-of-directors.html",
+        "upperStaff": "https://www.neusecharterschool.org/upper-academy-staff.html"
+      },
+      "clues": [
+        {
+          "text": "Its homepage calls the school the Home of the Cougars.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say it was founded in 2006 by a group of Johnston County parents who wanted a school of choice and that it was the first charter school in the county.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says it is the only locally operated, non-profit public K-12 charter school in Johnston County.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its board page organizes board priorities around educational excellence, growth planning, financial sustainability, leadership development, and operational excellence.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board materials say the board is made up of community leaders who meet monthly and provide oversight, support, and expertise.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Michelle Denning as Board President and Tyler Grady as Upper Academy Director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board", "upperStaff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "roxboro-community-school",
+      "officialName": "Roxboro Community School",
+      "status": "validated-batch-010",
+      "sourceLinks": {
+        "home": "https://www.roxborocs.org/",
+        "staff": "https://www.roxborocs.org/o/roxboro-community-school/staff?filter_ids=51136",
+        "charterRenewal": "https://www.roxborocs.org/article/2648119",
+        "bryantArticle": "https://www.roxborocs.org/article/1038824",
+        "hallOfFame": "https://www.roxborocs.org/article/1930697"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing tagline is \"We Place Children First.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A charter renewal announcement says the school opened in 2006.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["charterRenewal"]
+        },
+        {
+          "text": "Official news says the school received a 10-year charter renewal in 2026, the longest term available for charter schools.",
+          "difficulty": 6,
+          "category": "achievement",
+          "sourceRefs": ["charterRenewal"]
+        },
+        {
+          "text": "The school has an RCS Sports Hall of Fame and publicizes induction ceremonies for former student athletes.",
+          "difficulty": 7,
+          "category": "tradition",
+          "sourceRefs": ["hallOfFame", "home"]
+        },
+        {
+          "text": "A leadership announcement says Darkarai Bryant was named Managing Executive Director after serving as the school's high school principal.",
+          "difficulty": 7,
+          "category": "school-leader",
+          "sourceRefs": ["bryantArticle"]
+        },
+        {
+          "text": "Official staff pages list Darkarai Bryant as Managing Executive Director, Jamel Jones as Middle School Principal, and Jeremy Martin as High School Principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    }
+  ]
+}

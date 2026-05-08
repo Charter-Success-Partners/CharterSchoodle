@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Thirteenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "winterville-charter-academy",
+      "officialName": "Winterville Charter Academy",
+      "status": "validated-batch-013",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/winterville-charter-academy/en",
+        "atAGlance": "https://www.nhaschools.com/schools/winterville-charter-academy/en/at-a-glance",
+        "leadership": "https://www.nhaschools.com/schools/winterville-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/winterville-charter-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school puts each student on a path to college readiness through rigorous curriculum, formative assessment, and strong character.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2015.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "atAGlance"]
+        },
+        {
+          "text": "The school says it has outperformed the local district for the past 6 years.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page lists Kimber Cox as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Stacey Ryan as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "matthews-charter-academy",
+      "officialName": "Matthews Charter Academy",
+      "status": "validated-batch-013",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/matthews-charter-academy/en",
+        "atAGlance": "https://www.nhaschools.com/schools/matthews-charter-academy/en/at-a-glance",
+        "leadership": "https://www.nhaschools.com/schools/matthews-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/matthews-charter-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school offers a challenging academic program and a culture that values strong character, educational excellence, and accountability.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2016.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "atAGlance"]
+        },
+        {
+          "text": "The school says it has outperformed the local district for the past 7 years.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages describe a broad activity program that includes sports, music, art, and clubs.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["atAGlance"]
+        },
+        {
+          "text": "Official pages list Brittany Houston as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "cardinal-charter-academy",
+      "officialName": "Cardinal Charter Academy",
+      "status": "validated-batch-013",
+      "sourceLinks": {
+        "home": "https://www.cardinalcharter.org/",
+        "about": "https://www.cardinalcharter.org/apps/pages/index.jsp?type=d&uREC_ID=363786",
+        "mission": "https://www.cardinalcharter.org/m/pages/index.jsp?pREC_ID=909737&termREC_ID=&type=d&uREC_ID=363786",
+        "board": "https://www.cardinalcharter.org/m/pages/index.jsp?pREC_ID=SPOT-9660&termREC_ID=&type=d&uREC_ID=393680"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school is part of the Charter Schools USA family.",
+          "difficulty": 3,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its mission says the school builds a student-centered learning environment that is project-based and technology-driven.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The school says it is relentlessly committed to student greatness in school and life and to building strong minds and good hearts.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its homepage says the school is celebrating 10 years.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its board page lists Kim Norcross as president of the board.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its homepage identifies John Wall, Jr. in the principal's message.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home"]
+        }
+      ]
+    },
+    {
+      "schoolId": "iredell-charter-academy-of-arts-and-science",
+      "officialName": "Iredell Charter Academy of Arts &Science",
+      "status": "validated-batch-013",
+      "sourceLinks": {
+        "home": "https://www.iredellcharter.org/",
+        "about": "https://www.iredellcharter.org/apps/pages/index.jsp?type=d&uREC_ID=363030",
+        "principal": "https://www.iredellcharter.org/apps/pages/index.jsp?type=d&uREC_ID=381682",
+        "board": "https://www.iredellcharter.org/m/pages/index.jsp?type=d&uREC_ID=382301"
+      },
+      "clues": [
+        {
+          "text": "Official materials describe this school as an A+ School of North Carolina.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says students are challenged to reach their academic potential and become self-motivated lifelong learners through personalized learning plans, community stewardship, and family collaboration.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says it offers an enriched curriculum in the arts and sciences with a warm, nurturing atmosphere.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its principal's message says student and adult learning should be at the center of all decisions.",
+          "difficulty": 6,
+          "category": "leadership-philosophy",
+          "sourceRefs": ["principal"]
+        },
+        {
+          "text": "Official governance pages say the North Carolina Charter Educational Foundation is the founding board.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board", "about"]
+        },
+        {
+          "text": "Official pages list Dr. Andrea L. Lopresti as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["principal"]
+        }
+      ]
+    },
+    {
+      "schoolId": "achievement-charter-academy",
+      "officialName": "Achievement Charter Academy",
+      "status": "validated-batch-013",
+      "sourceLinks": {
+        "home": "https://achievementcharteracademy.org/",
+        "staff": "https://achievementcharteracademy.org/our-staff/",
+        "board": "https://achievementcharteracademy.org/aca-board-of-directors/",
+        "jobs": "https://achievementcharteracademy.org/join-our-team/"
+      },
+      "clues": [
+        {
+          "text": "Its homepage says, \"We help your child ACHIEVE full potential.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school fosters individual achievement by teaching students to be self-directed learners and community contributors in a respectful, diverse, and inclusive learning environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "staff", "jobs"]
+        },
+        {
+          "text": "Official materials say the school uses the Glasser Quality School model and Choice Theory to support relationships based on trust and respect.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home", "jobs"]
+        },
+        {
+          "text": "Its board page says regular board meetings are held on the third Monday of each month at 7 p.m.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Ray Strain as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages identify Dr. Leaja Horne as Director of Education.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board", "staff"]
+        }
+      ]
+    }
+  ]
+}

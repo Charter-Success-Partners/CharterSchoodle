@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-second validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "north-oak-academy",
+      "officialName": "North Oak Academy",
+      "status": "validated-batch-022",
+      "sourceLinks": {
+        "leadership": "https://www.nhaschools.com/schools/north-oak-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/north-oak-academy/en/board-documents",
+        "admissions": "https://www.nhaschools.com/schools/north-oak-academy/en/enrollment"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school's mission is to transform lives.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Its board documents say the school is transforming lives and enriching communities by delivering high-quality educational choice to families.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The school says it creates a warm, welcoming environment where families feel valued and supported and students are empowered to reach their full potential.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["admissions"]
+        },
+        {
+          "text": "Official materials say the school's board is made up of local civic and community leaders who volunteer their time and energy.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["leadership", "board"]
+        },
+        {
+          "text": "Official pages list Dr. Michael Fuga as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Gerald McNair as board president.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "doral-academy-of-north-carolina",
+      "officialName": "Doral Academy of North Carolina",
+      "status": "validated-batch-022",
+      "sourceLinks": {
+        "about": "https://www.doralacademync.com/about/",
+        "mission": "https://www.doralacademync.com/apps/pages/index.jsp?pREC_ID=917100&termREC_ID=&type=d&uREC_ID=428434",
+        "board": "https://www.doralacademync.com/board/",
+        "administration": "https://www.doralacademync.com/administration/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides quality instruction, high expectations, and a standards-based curriculum with a focus on STEAM.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school opened in 2021.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it is a replication of the nationally acclaimed Doral Academy of Technology K-8 School in Miami.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school earned and maintained a B rating and received the NC Academic Growth Award for three consecutive years.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official administration pages list Annaliet Echaniz as founding principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["administration"]
+        },
+        {
+          "text": "Official board pages list David Correa as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "mallard-creek-stem-academy",
+      "officialName": "Mallard Creek STEM Academy",
+      "status": "validated-batch-022",
+      "sourceLinks": {
+        "home": "https://www.mcstemacademy.org/",
+        "about": "https://www.mcstemacademy.org/about-us/",
+        "mission": "https://www.mcstemacademy.org/mission-statement/",
+        "administration": "https://www.mcstemacademy.org/administration-team/",
+        "academies": "https://www.mcstemacademy.org/student-academies/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school promotes high academic achievement by increasing student engagement through a workshop model that encourages students to take ownership of their learning.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission", "about"]
+        },
+        {
+          "text": "Official materials say the school uses an immersive and interdisciplinary STEM approach.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "The school highlights partnerships with Discovery Place Education Studio and Teachers College of Columbia's Reading and Writing Project.",
+          "difficulty": 6,
+          "category": "partnerships",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say students can choose from the Leadership Academy, Innovation Academy, and Business Academy.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["academies"]
+        },
+        {
+          "text": "Official administration pages list Deanna Smith as executive director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["administration"]
+        },
+        {
+          "text": "Official materials refer to students as Titans.",
+          "difficulty": 8,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "commonwealth-high",
+      "officialName": "Commonwealth High",
+      "status": "validated-batch-022",
+      "sourceLinks": {
+        "home": "https://www.commonwealthhs.com/",
+        "principalMessage": "https://commonwealthhs.com/apps/pages/index.jsp?type=d&uREC_ID=506455",
+        "program": "https://commonwealthhs.com/apps/pages/index.jsp?type=d&uREC_ID=506449",
+        "why": "https://commonwealthhs.com/apps/pages/index.jsp?type=d&uREC_ID=506460",
+        "staff": "https://www.commonwealthhs.com/apps/staff/",
+        "board": "https://www.commonwealthhs.com/apps/pages/index.jsp?type=d&uREC_ID=515539",
+        "schedules": "https://commonwealthhs.com/apps/bell_schedules/"
+      },
+      "clues": [
+        {
+          "text": "Its homepage tagline is \"Finish School. Accelerate Your Future.\"",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school is built around accelerated credit earning with a non-traditional approach.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["home", "why"]
+        },
+        {
+          "text": "The school says students begin by creating an Individualized Success Plan, or ISP.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["program"]
+        },
+        {
+          "text": "Official schedule pages show three separate 4-hour sessions each day.",
+          "difficulty": 6,
+          "category": "schedule-model",
+          "sourceRefs": ["schedules"]
+        },
+        {
+          "text": "Official pages list Tamara Wynn as principal and Dr. Jonathan Kay as regional director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff", "principalMessage"]
+        },
+        {
+          "text": "Official governance pages list Morgan Kelly Tyler as board president.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "central-wake-high-school",
+      "officialName": "Central Wake High School",
+      "status": "validated-batch-022",
+      "sourceLinks": {
+        "home": "https://centralwakehs.com/",
+        "mission": "https://centralwakehs.com/apps/pages/index.jsp?type=d&uREC_ID=507974",
+        "program": "https://centralwakehs.com/apps/pages/index.jsp?type=d&uREC_ID=507970",
+        "why": "https://centralwakehs.com/apps/pages/index.jsp?type=d&uREC_ID=507978",
+        "principalMessage": "https://centralwakehs.com/apps/pages/index.jsp?type=d&uREC_ID=507976",
+        "staff": "https://centralwakehs.com/apps/staff/",
+        "board": "https://centralwakehs.com/apps/pages/index.jsp?type=d&uREC_ID=507973"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school serves students who have dropped out or are likely to drop out by providing a non-traditional learning environment leading to a diploma and postsecondary success.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school is built around three pillars: Flexible, Personalized, and Supportive.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The school says every student starts with an Individualized Success Plan and a personalized Success Dashboard.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["program"]
+        },
+        {
+          "text": "Official materials say the program includes career coaches, wraparound services, and multilingual course translation support.",
+          "difficulty": 6,
+          "category": "student-support",
+          "sourceRefs": ["program", "why"]
+        },
+        {
+          "text": "Official pages identify Tom Hanley as executive principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff", "principalMessage"]
+        },
+        {
+          "text": "Official governance pages list Michael Byers as board president.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    }
+  ]
+}

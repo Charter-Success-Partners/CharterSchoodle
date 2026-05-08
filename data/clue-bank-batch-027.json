@@ -1,0 +1,258 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-seventh validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "wilson-preparatory-academy",
+      "officialName": "Wilson Preparatory Academy",
+      "status": "validated-batch-027",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.wilsonpreparatoryacademy.org/",
+        "mission": "https://www.wilsonpreparatoryacademy.org/apps/pages/index.jsp?type=d&uREC_ID=389134",
+        "staff": "https://www.wilsonpreparatoryacademy.org/pdf/Staff_Directory_2024-2025_Revised2_17_25_.pdf",
+        "board": "https://www.wilsonprep.org/apps/pages/index.jsp?type=d&uREC_ID=389167"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing motto is the three-part line: Educate. Motivate. Graduate.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school's mission says every student should receive a quality and relevant education tailored to background, learning style, and future pathway.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say its vision is to graduate productive citizens ready for lifelong learning and careers in a global society.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The homepage says scholars are empowered to discover their passions, choose their path, and define their future.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages highlight AP Capstone as a signature academic offering.",
+          "difficulty": 7,
+          "category": "academics",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Recent staff materials list Daryl Woodard as Head of School.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "wayne-stem-academy",
+      "officialName": "Wayne STEM Academy",
+      "status": "validated-batch-027",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "about": "https://www.waynestem.org/about",
+        "contact": "https://www.waynestem.org/contact-us"
+      },
+      "clues": [
+        {
+          "text": "Its main about page uses the line: A School of Choice. A Culture of Belonging.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials describe it as the first tuition-free, elementary STEM-based public charter school in Wayne County.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it avoids one-size-fits-all instruction by using Direct Instruction and mastery-based placement.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its published core charter values include responsibility, respect, resilience, diversity, courage, and industriousness.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official leadership pages list Dr. Todd Forgette as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Governance materials identify Christina Watts as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "liberty-charter-academy",
+      "officialName": "Liberty Charter Academy",
+      "status": "validated-batch-027",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.libertycharteracademy.com/",
+        "mission": "https://www.libertycharteracademy.com/apps/pages/index.jsp?type=d&uREC_ID=574644",
+        "headMessage": "https://www.libertycharteracademy.com/apps/pages/index.jsp?type=d&uREC_ID=586008",
+        "curriculum": "https://www.libertycharteracademy.com/apps/pages/index.jsp?type=d&uREC_ID=589410",
+        "board": "https://www.libertycharteracademy.com/apps/pages/index.jsp?type=d&uREC_ID=597080"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school develops responsible and active citizens through a challenging classical academic program, character education, student responsibility, and strong parental partnerships.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "A public message from its founding year says the school draws from both the Core Knowledge Sequence and the classical education tradition.",
+          "difficulty": 5,
+          "category": "academics",
+          "sourceRefs": ["headMessage", "curriculum"]
+        },
+        {
+          "text": "Official curriculum materials say students are introduced to Latin and Logic as part of the academic program.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["curriculum"]
+        },
+        {
+          "text": "The school says its four pillars are rigorous academics, parental partnerships, character education, and student responsibility.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official board materials list John O'Day as chairman.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Public leadership messages identify Dr. Jarrid Looney as the founding Head of School.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "headMessage"]
+        }
+      ]
+    },
+    {
+      "schoolId": "quality-education-academy",
+      "officialName": "Quality Education Academy",
+      "status": "validated-batch-027",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.qeschools.org/",
+        "board": "https://www.qeschools.org/our-board",
+        "ceo": "https://www.qeschools.org/meet-our-ceo",
+        "apply": "https://www.qeschools.org/apply"
+      },
+      "clues": [
+        {
+          "text": "Its motto is the line, \"We Raise the Quality of Life of Everyone We Touch.\"",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school prides itself on teaching scholars to be proud of their indigenous culture.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school aims to maximize students' educational development while aligning costs with major districts in North Carolina and its home district.",
+          "difficulty": 6,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school's vision is to create a sustainable educational organization that develops a replicable, self-sufficient, wholesome community.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official leadership pages identify Dr. Tamara M. Turner as CEO.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["ceo"]
+        },
+        {
+          "text": "Board materials list Dr. Jefferson Caruthers, Jr. as chairman.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "southwest-charlotte-stem-academy",
+      "officialName": "Southwest Charlotte STEM Academy",
+      "status": "validated-batch-027",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://scstemacademy.org/",
+        "about": "https://scstemacademy.org/about-us/",
+        "admin": "https://scstemacademy.org/administrative-staff/",
+        "theme": "https://scstemacademy.org/scsa-main-page-spring-theme/"
+      },
+      "clues": [
+        {
+          "text": "The school regularly refers to its students as Rockets.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school promotes high academic achievement by increasing student engagement through a workshop model.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the curriculum is designed around hands-on STEM experiences that build critical thinking and problem-solving.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school highlights project-based learning as one of its core selling points for families.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Administrative pages list Teddy McIlwain as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["admin"]
+        },
+        {
+          "text": "Recent school announcements say it earned full accreditation with STEM Certification from Cognia.",
+          "difficulty": 8,
+          "category": "achievement",
+          "sourceRefs": ["theme"]
+        }
+      ]
+    }
+  ]
+}

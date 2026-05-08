@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Fourteenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "monroe-charter-academy",
+      "officialName": "Monroe Charter Academy",
+      "status": "validated-batch-014",
+      "sourceLinks": {
+        "home": "https://monroecharteracademy.org/",
+        "about": "https://monroecharteracademy.org/about-us/",
+        "mission": "https://monroecharteracademy.org/home/",
+        "principal": "https://monroecharteracademy.org/our-principal/",
+        "profile": "https://monroecharteracademy.org/mission-profile/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school develops each child into an academically thriving citizen through partnership with parents and the community.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about", "mission"]
+        },
+        {
+          "text": "Official materials describe the school as offering a classical style of education with a focus on citizenship development.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["about", "profile"]
+        },
+        {
+          "text": "Its public materials say the school opened in August 2019.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["profile"]
+        },
+        {
+          "text": "The school says children may not be products of their environments as much as they are products of their expectations.",
+          "difficulty": 6,
+          "category": "philosophy",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its principal page features the quote, \"If you're too busy to help others to succeed, then you are too busy to succeed yourself.\"",
+          "difficulty": 7,
+          "category": "leadership-philosophy",
+          "sourceRefs": ["home", "principal"]
+        },
+        {
+          "text": "Official pages list Dr. Camela Ford as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "principal"]
+        }
+      ]
+    },
+    {
+      "schoolId": "uwharrie-charter-academy",
+      "officialName": "Uwharrie Charter Academy",
+      "status": "validated-batch-014",
+      "sourceLinks": {
+        "home": "https://uwharriecharter.org/",
+        "about": "https://uwharriecharter.org/about/about-uca/",
+        "mission": "https://uwharriecharter.org/about/about-uca/vision-mission/",
+        "board": "https://uwharriecharter.org/about/board-of-directors/",
+        "staff": "https://uwharriecharter.org/about/district-staff/"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing motto is \"Relationships, Rigor, & Relevance.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school exists to provide a truly relevant and rigorous pathway to career and college readiness by establishing relationships with students, families, and community partners.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school has a project-based, STEAM-focused curriculum.",
+          "difficulty": 4,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its homepage says about half of its graduates take at least one dual enrollment course before graduating.",
+          "difficulty": 5,
+          "category": "college-readiness",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school's board page lists Rebecca Mead as chairperson.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official staff pages list Sharon Castelli as superintendent.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "lakeside-charter-academy",
+      "officialName": "Lakeside Charter Academy",
+      "status": "validated-batch-014",
+      "sourceLinks": {
+        "home": "https://www.lakesidecharteracademy.com/",
+        "curriculum": "https://www.lakesidecharteracademy.com/our-curriculum",
+        "enrollment": "https://www.lakesidecharteracademy.com/enrollment",
+        "board": "https://www.lakesidecharteracademy.com/board-of-directors",
+        "staff": "https://www.lakesidecharteracademy.com/our-staff"
+      },
+      "clues": [
+        {
+          "text": "Its homepage says the school is devoted to creating a secure, supportive setting in which children excel.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school, in partnership with parents, cultivates engaged learners through scholarship, leadership, and citizenship.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official curriculum pages say the school emphasizes three pillars: scholarship, leadership, and citizenship.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["curriculum"]
+        },
+        {
+          "text": "Enrollment pages highlight Saxon Math and Core Knowledge Language Arts as part of the academic program.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": ["enrollment", "curriculum"]
+        },
+        {
+          "text": "Its board page lists Mary Sauer as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official staff pages list Lisa Upper as interim principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "tillery-charter-academy",
+      "officialName": "Tillery Charter Academy",
+      "status": "validated-batch-014",
+      "sourceLinks": {
+        "home": "https://tillerycharteracademy.org/",
+        "mission": "https://tillerycharteracademy.org/mission-profile/",
+        "principal": "https://tillerycharteracademy.org/our-principal/",
+        "board": "https://tillerycharteracademy.org/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Its public materials say the school opened in August 2019.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its mission says the school provides a rigorous classical education with high academic and personal expectations.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "The school says its work is meant to inspire students to be productive and thoughtful citizens in their communities and beyond.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Its principal page says the current principal officially began on March 2, 2026.",
+          "difficulty": 6,
+          "category": "leadership-history",
+          "sourceRefs": ["principal"]
+        },
+        {
+          "text": "Its board page lists Christine Fisher as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Dr. Amy B. Reynolds as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["principal"]
+        }
+      ]
+    },
+    {
+      "schoolId": "gate-city-charter",
+      "officialName": "Gate City Charter",
+      "status": "validated-batch-014",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/gate-city-charter-academy/en",
+        "atAGlance": "https://www.nhaschools.com/schools/gate-city-charter-academy/en/at-a-glance",
+        "leadership": "https://www.nhaschools.com/schools/gate-city-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/gate-city-charter-academy/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says high standards and quality instruction support a learning environment where achievement thrives and students are instilled with academic excellence and personal responsibility.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 2016.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "atAGlance"]
+        },
+        {
+          "text": "The school says it is among the top three schools in the area based on academic performance.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page lists Jeff Phillips as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Hilary Clancy as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "leadership"]
+        }
+      ]
+    }
+  ]
+}

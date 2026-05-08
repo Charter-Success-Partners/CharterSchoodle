@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-ninth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "arapahoe-charter-school",
+      "officialName": "Arapahoe Charter School",
+      "status": "validated-batch-029",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.arapahoecharter.org/",
+        "about": "https://www.arapahoecharter.org/aboutus",
+        "staff": "https://www.arapahoecharter.org/staff",
+        "board": "https://www.arapahoecharter.org/board-members"
+      },
+      "clues": [
+        {
+          "text": "Its published mission says students should be knowledgeable, self-sufficient, responsible, and productive members of society.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school has operated since 1997.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school describes itself as teacher- and parent-directed and built around individualized needs.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its educational philosophy says learning should be relevant and active so students become lifelong learners and responsible citizens.",
+          "difficulty": 6,
+          "category": "philosophy",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official staff pages list Heather Lupton as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Board pages list Denise Delamar as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "hobgood-charter-school",
+      "officialName": "Hobgood Charter School",
+      "status": "validated-batch-029",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.hobgoodcharterschool.org/",
+        "about": "https://www.hobgoodcharterschool.org/about",
+        "staff": "https://www.hobgoodcharterschool.org/staff",
+        "board": "https://www.hobgoodcharterschool.org/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school empowers all students to reach their highest potential through rigorous and innovative academics.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials describe the school as family-oriented and collaborative.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school highlights project-based learning and individualized instruction as part of its educational approach.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official pages say students often work in multi-age groups to build collaboration and social skills.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Staff pages identify Juliana Harris as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Board materials list Rhonda LeViness as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "guilford-preparatory-academy",
+      "officialName": "Guilford Preparatory Academy",
+      "status": "validated-batch-029",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.guilfordprep.org/",
+        "about": "https://www.guilfordprep.org/about-gpa",
+        "leadership": "https://www.guilfordprep.org/about-gpa/leadership-directory",
+        "board": "https://www.guilfordprep.org/about-gpa/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its public branding centers on the phrase Learning, Leading, Living.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school's mission says it prepares learners for successful, meaningful lives as culturally aware and civically engaged adults.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school is guided by the four Cs: communication, collaboration, critical thinking, and creativity.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its vision says all scholars will learn at high levels and use their education to become lifelong learners and positive global contributors.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Leadership pages list Dr. Cassie Price as chief administrator.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Board pages identify Ashley Carter as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "college-prep-and-leadership-academy",
+      "officialName": "College Prep and Leadership Academy",
+      "status": "validated-batch-029",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.thepointcollegeprep.org/",
+        "about": "https://www.thepointcollegeprep.org/apps/pages/aboutus",
+        "board": "https://www.thepointcollegeprep.org/apps/pages/index.jsp?uREC_ID=1457126&type=d&pREC_ID=1933065",
+        "leadership": "https://www.thepointcollegeprep.org/apps/pages/index.jsp?uREC_ID=1457126&type=d&pREC_ID=1933063"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing materials often refer to the school simply as The Point.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school's mission says it aims to instill a productive mindset while fostering a sense of belonging and a culture of excellence.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say students participate in annual college tours to campuses inside and outside North Carolina.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says families receive weekly progress reports and maintain daily communication with teachers through Class Dojo.",
+          "difficulty": 6,
+          "category": "family-engagement",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Leadership pages identify Dr. Marilyn Andrews as superintendent and exceptional children's director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Board pages list Demetria Graham as chairwoman.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "faith-academy-charter-school",
+      "officialName": "Faith Academy Charter School",
+      "status": "validated-batch-029",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.faithacademync.org/",
+        "about": "https://www.faithacademync.org/about-us",
+        "staff": "https://www.faithacademync.org/our-staff",
+        "board": "https://www.faithacademync.org/our-board"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school empowers all students to become successful learners who exhibit confidence, social responsibility, and a love of learning.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school is committed to creating community-minded leaders.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school highlights project-based learning as one of its core academic features.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official pages say scholars participate in life-skills activities such as gardening, cooking, and financial literacy alongside academics.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Staff pages identify Dr. George Wilhelm as principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Board materials list Chad Mitchell as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    }
+  ]
+}

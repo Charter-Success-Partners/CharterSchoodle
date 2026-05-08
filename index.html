@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CharterSchoodle</title>
+    <meta
+      name="description"
+      content="A daily North Carolina charter-school guessing game."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero__brand">
+          <img
+            class="hero__logo"
+            src="https://static.wixstatic.com/media/dca5c6_6f4bdcc4fe50471f97394f67d340aa4e~mv2.png/v1/crop/x_0,y_0,w_434,h_243/fill/w_214,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dca5c6_6f4bdcc4fe50471f97394f67d340aa4e~mv2.png"
+            alt="Charter Success Partners logo"
+          />
+          <div>
+            <p class="eyebrow">Charter Success Partners Presents</p>
+            <h1>CharterSchoodle</h1>
+            <p class="hero__lede">
+              Six clues. Six guesses. One North Carolina charter school.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero__meta">
+          <button class="mode-button is-active" data-mode="daily" type="button">
+            Daily Puzzle
+          </button>
+          <button class="mode-button" data-mode="archive" type="button">
+            Past Puzzles
+          </button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel--primary">
+          <div class="panel__header">
+            <div>
+              <p class="panel__eyebrow" id="puzzle-label">Daily puzzle</p>
+              <h2 id="puzzle-date-heading">Loading...</h2>
+            </div>
+            <div class="guess-counter">
+              <span id="guess-counter">0 / 6</span>
+            </div>
+          </div>
+
+          <div id="archive-controls" class="archive-controls is-hidden">
+            <label for="archive-date">Choose a prior date</label>
+            <input id="archive-date" type="date" />
+          </div>
+
+          <div class="status-banner">
+            <div>
+              <strong id="status-title">Welcome</strong>
+              <p id="status-message">
+                Start with the first clue, then choose a school from the list.
+              </p>
+            </div>
+          </div>
+
+          <section class="board-panel">
+            <div class="section-heading">
+              <h3>Board</h3>
+              <p id="clue-progress">1 clue visible</p>
+            </div>
+            <div class="board-wrap">
+              <table class="game-board">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Clue</th>
+                    <th>Guess</th>
+                    <th title="Correct">✓</th>
+                    <th title="Enrollment">Size</th>
+                    <th title="Grades">Grd</th>
+                    <th title="Direction">Dir</th>
+                  </tr>
+                </thead>
+                <tbody id="board-body"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <form id="guess-form" class="guess-form">
+            <label for="school-guess">Guess the school</label>
+            <div class="guess-form__row">
+              <input
+                id="school-guess"
+                name="school-guess"
+                type="text"
+                autocomplete="off"
+                placeholder="Start typing an official school name"
+                aria-describedby="guess-help"
+              />
+              <button class="primary-button" type="submit">Submit</button>
+            </div>
+            <p id="guess-help" class="field-help">
+              Guesses must be selected from the official school list.
+            </p>
+            <ul id="autocomplete-list" class="autocomplete-list"></ul>
+          </form>
+        </section>
+
+        <aside class="panel panel--secondary">
+          <section>
+            <div class="section-heading">
+              <h3>Icon Key</h3>
+              <p>Read the board left to right.</p>
+            </div>
+            <div class="icon-key">
+              <div class="key-group">
+                <div class="key-group__title">Result</div>
+                <div class="key-row"><span class="board-icon board-icon--good">✓</span><span>Correct school</span></div>
+                <div class="key-row"><span class="board-icon board-icon--bad">✕</span><span>Wrong school</span></div>
+                <div class="key-row"><span class="board-icon board-icon--muted">•</span><span>Round not played yet</span></div>
+              </div>
+              <div class="key-group">
+                <div class="key-group__title">Size</div>
+                <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same band</span></div>
+                <div class="key-row"><span class="board-icon board-icon--warn">↑</span><span>Answer is larger</span></div>
+                <div class="key-row"><span class="board-icon board-icon--warn">↓</span><span>Answer is smaller</span></div>
+              </div>
+              <div class="key-group">
+                <div class="key-group__title">Grades</div>
+                <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same span</span></div>
+                <div class="key-row"><span class="board-icon board-icon--warn">→</span><span>Answer serves older grades</span></div>
+                <div class="key-row"><span class="board-icon board-icon--warn">←</span><span>Answer serves younger grades</span></div>
+              </div>
+              <div class="key-group">
+                <div class="key-group__title">Direction</div>
+                <div class="key-row"><span class="board-icon board-icon--neutral">↗</span><span>Travel that direction</span></div>
+                <div class="key-row"><span class="board-icon board-icon--neutral">◎</span><span>Same location</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-heading">
+              <h3>How It Works</h3>
+              <p>One clue unlocks before each guess.</p>
+            </div>
+            <ul class="rules-list">
+              <li>Each puzzle has one NC charter school answer.</li>
+              <li>Each row shows that round’s clue and guess.</li>
+              <li>Icons compare size, grades, and direction.</li>
+              <li>Use the legend to decode the symbols.</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <div id="win-overlay" class="win-overlay is-hidden" aria-hidden="true">
+      <div class="win-overlay__backdrop"></div>
+      <div class="win-modal" role="dialog" aria-modal="true" aria-labelledby="win-title">
+        <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+        <p class="eyebrow">Puzzle Complete</p>
+        <h2 id="win-title">Congrats!</h2>
+        <p id="win-answer" class="win-answer"></p>
+        <p id="win-summary" class="win-summary"></p>
+        <button id="win-close-button" class="primary-button" type="button">Keep Browsing</button>
+      </div>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

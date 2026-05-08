@@ -1,0 +1,307 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "First validated clue batch compiled from official school websites and official school documents.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "voyager-academy",
+      "officialName": "Voyager Academy",
+      "status": "validated-batch-001",
+      "sourceLinks": {
+        "about": "https://www.voyageracademy.net/about-voyager-academy/",
+        "board": "https://www.voyageracademy.net/boe-directors/",
+        "admissions": "https://www.voyageracademy.net/tours-and-general-info/"
+      },
+      "clues": [
+        {
+          "text": "This school's vision says, \"Inspire every Viking to learn, innovate, and thrive.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its vision statement highlights project-based learning in a safe, inclusive, and supportive environment.",
+          "difficulty": 4,
+          "category": "specialty",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "This charter was established in 2007, and its first graduating class was in 2014.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Students here can earn Career and College Promise credit through Durham Technical Community College.",
+          "difficulty": 6,
+          "category": "academic-program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its arts accomplishments include NCASA state show choir titles for \"Bull City Lights and Sound.\"",
+          "difficulty": 7,
+          "category": "arts",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its athletics page highlights a 2019 men's soccer state championship.",
+          "difficulty": 6,
+          "category": "athletics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Peter Meath is listed as chair of this school's board of directors.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its admissions materials describe the school as a rigorous, experiential, and challenging public charter option.",
+          "difficulty": 5,
+          "category": "admissions",
+          "sourceRefs": ["admissions"]
+        }
+      ]
+    },
+    {
+      "schoolId": "research-triangle-high-school",
+      "officialName": "Research Triangle High School",
+      "status": "validated-batch-001",
+      "sourceLinks": {
+        "schoolProfile2025": "https://researchtrianglehighschool.org/wp-content/uploads/2025/08/2025-26-School-Profile.pdf",
+        "admissions": "https://lottery.rthighschool.org/",
+        "handbook2025": "https://researchtrianglehighschool.org/wp-content/uploads/2025/08/2025-26_RTHS_Student_and_Family_Handbook.pdf"
+      },
+      "clues": [
+        {
+          "text": "Its mission is to increase access to globally competitive STEM education by incubating innovative models of teaching and learning.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["schoolProfile2025", "admissions"]
+        },
+        {
+          "text": "Official materials say this school blends content learning, projects, and mentoring into its curriculum.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["schoolProfile2025"]
+        },
+        {
+          "text": "Its school profile says flipped classrooms mix teacher-created lessons with curated content from around the world.",
+          "difficulty": 6,
+          "category": "instructional-model",
+          "sourceRefs": ["schoolProfile2025"]
+        },
+        {
+          "text": "The school says its graduates are primed for college completion and careers in RTP.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["schoolProfile2025"]
+        },
+        {
+          "text": "Akiba Griffin is listed as the Chief School Officer in the 2025-26 school profile.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["schoolProfile2025"]
+        },
+        {
+          "text": "Its handbook says personalized learning includes student agency, flexible instruction, and performance-based assessments.",
+          "difficulty": 7,
+          "category": "instructional-model",
+          "sourceRefs": ["handbook2025"]
+        },
+        {
+          "text": "Admissions materials describe this school as focused on giving students access to competitive STEM opportunities across North Carolina.",
+          "difficulty": 4,
+          "category": "admissions",
+          "sourceRefs": ["admissions"]
+        }
+      ]
+    },
+    {
+      "schoolId": "pine-lake-preparatory",
+      "officialName": "Pine Lake Preparatory",
+      "status": "validated-batch-001",
+      "sourceLinks": {
+        "home": "https://www.pinelakeprep.org/",
+        "about": "https://www.pinelakeprep.org/about-us",
+        "executiveDirector": "https://www.pinelakeprep.org/about-us/welcome-from-executive-director",
+        "contact": "https://www.pinelakeprep.org/about-us/contact-us"
+      },
+      "clues": [
+        {
+          "text": "Its mission is to prepare students for college, career, and purposeful lives.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "executiveDirector"]
+        },
+        {
+          "text": "This school was authorized by the North Carolina State Board of Education in August 2006.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its homepage highlights focused programming in Fine Arts, STEM, and Spanish.",
+          "difficulty": 4,
+          "category": "specialty",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says signature traditions include butterfly releases and senior parades.",
+          "difficulty": 6,
+          "category": "traditions",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its athletics page says the school has won or been a finalist in the Wells Fargo Cup since 2020.",
+          "difficulty": 6,
+          "category": "athletics",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Andrew Moceri serves as the Executive Director.",
+          "difficulty": 7,
+          "category": "school-leader",
+          "sourceRefs": ["executiveDirector", "contact"]
+        },
+        {
+          "text": "The most recent graduating class highlighted by the Executive Director was awarded more than 11 million dollars in merit-based scholarships.",
+          "difficulty": 7,
+          "category": "college-readiness",
+          "sourceRefs": ["executiveDirector"]
+        },
+        {
+          "text": "The campus is located on Yellow Wood Circle in Mooresville.",
+          "difficulty": 8,
+          "category": "campus",
+          "sourceRefs": ["home", "contact"]
+        }
+      ]
+    },
+    {
+      "schoolId": "francine-delany-new-school-for-children",
+      "officialName": "Francine Delany New School for Children",
+      "status": "validated-batch-001",
+      "sourceLinks": {
+        "home": "https://fdnsc.net/",
+        "ourSchool": "https://fdnsc.net/our-school/",
+        "history": "https://fdnsc.net/our-school/history/",
+        "socialJustice": "https://fdnsc.net/academics/committment-to-social-justice/",
+        "board": "https://fdnsc.net/our-school/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Its homepage describes the school as a diverse community committed to social justice and the inherent worth of every person.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "socialJustice"]
+        },
+        {
+          "text": "This school describes itself as Asheville's first charter school.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["ourSchool"]
+        },
+        {
+          "text": "Its history page says the school was started by seven teachers and three families.",
+          "difficulty": 6,
+          "category": "founding-story",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "Before its campus was ready, the school operated for a little over a month inside New Mount Olive Baptist Church.",
+          "difficulty": 8,
+          "category": "founding-story",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "October 19 is celebrated there as the school's spiritual anniversary.",
+          "difficulty": 9,
+          "category": "traditions",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "The school was named after a local educator and principal who had worked with many of its founders.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "Ashley Wilberding is listed as board president for the 2025-2026 school year.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its academic materials emphasize experientially rich, hands-on learning and critical thinking.",
+          "difficulty": 5,
+          "category": "instructional-model",
+          "sourceRefs": ["home", "ourSchool"]
+        }
+      ]
+    },
+    {
+      "schoolId": "american-leadership-academy-coastal",
+      "officialName": "American Leadership Academy Coastal",
+      "status": "validated-batch-001",
+      "sourceLinks": {
+        "home": "https://www.alaschools.org/nc/coastal",
+        "about": "https://www.alaschools.org/nc/coastal/about",
+        "faq": "https://www.alaschools.org/nc/coastal/about/faqs",
+        "contact": "https://www.alaschools.org/nc/coastal/about/contact-us"
+      },
+      "clues": [
+        {
+          "text": "This school calls itself the Home of the Navigators.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its culture is organized around the R.A.I.S.E. values: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 3,
+          "category": "values",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Its mission begins with the phrase, \"In support of the family...\"",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about", "faq"]
+        },
+        {
+          "text": "The school says authentic learning experiences and character development sit at the center of its model.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Glenn Way is identified as the founder of American Leadership Academy.",
+          "difficulty": 6,
+          "category": "founder",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Amanda Ahlert is listed as Director 7-12 and the website says she has been part of the team since its opening in 2017.",
+          "difficulty": 7,
+          "category": "school-leader",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its website says Charter One supports the school by handling administrative and business duties.",
+          "difficulty": 7,
+          "category": "operations",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school publishes a 2025 performance grade of 62%, marked as a C.",
+          "difficulty": 6,
+          "category": "performance",
+          "sourceRefs": ["about"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Fourth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "henderson-collegiate",
+      "officialName": "Henderson Collegiate",
+      "status": "validated-batch-004",
+      "sourceLinks": {
+        "home": "https://www.hendersoncollegiate.org/",
+        "missionValues": "https://www.hendersoncollegiate.org/about/mission-and-values",
+        "board": "https://www.hendersoncollegiate.org/about/board",
+        "story": "https://www.hendersoncollegiate.org/about/our-story"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school empowers students with character traits, academic skills, social experiences, and a love of learning so they can shape their own destinies and become world-changing problem solvers.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "missionValues"]
+        },
+        {
+          "text": "Official language repeatedly describes students as climbing the mountain to and through college.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Its core values are Pride, Responsibility, Integrity, Determination, and Enthusiasm.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "The homepage says the school prioritizes 51 percent character and 49 percent academics.",
+          "difficulty": 7,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its founding story says Eric and Carice Sanchez are the school's co-founders.",
+          "difficulty": 7,
+          "category": "founders",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "Stephanie Rogers is listed as president and chairperson of the board.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "longleaf-school-of-the-arts",
+      "officialName": "Longleaf School of the Arts",
+      "status": "validated-batch-004",
+      "sourceLinks": {
+        "home": "https://www.longleafschool.org/",
+        "missionVision": "https://www.longleafschool.org/apps/pages/index.jsp?type=d&uREC_ID=564980",
+        "about": "https://www.longleafschool.org/apps/pages/index.jsp?pREC_ID=1089072&type=d&uREC_ID=564978",
+        "board": "https://www.longleafschool.org/board-of-directors",
+        "headOfSchool": "https://www.longleafschool.org/apps/pages/index.jsp?type=u&uREC_ID=1659277",
+        "schoolProfile": "https://www.longleafschool.org/ourpages/auto/2023/9/27/41658523/LSA%20School%20Profile%202022-23.pdf?rnd=1695989435426"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school develops students into confident, responsible, and successful contributors through mentorship and a challenging curriculum that integrates academics and the fine arts.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionVision", "home"]
+        },
+        {
+          "text": "Official materials describe it as the first charter high school in Raleigh to integrate academics with the fine and performing arts.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its vision emphasizes a safe, inclusive, and respectful school community of authentic learners who pursue knowledge with a creative, thorough, and rigorous approach.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "The school profile says students are required to complete four arts elective credits and a course in Cognitive Development.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["schoolProfile"]
+        },
+        {
+          "text": "Its board page lists Sharon Muha as chairperson of the board.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Johneka Williams is listed as Head of School.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["headOfSchool"]
+        }
+      ]
+    },
+    {
+      "schoolId": "the-arts-based-school",
+      "officialName": "The Arts Based School",
+      "status": "validated-batch-004",
+      "sourceLinks": {
+        "home": "https://www.artsbasedschool.com/",
+        "mission": "https://www.artsbasedschool.com/apps/pages/mission",
+        "board": "https://www.artsbasedschool.com/apps/pages/board",
+        "director": "https://www.artsbasedschool.com/apps/pages/index.jsp?pREC_ID=2078989&type=u&uREC_ID=1504931",
+        "staff": "https://www.artsbasedschool.com/apps/pages/staff-directory"
+      },
+      "clues": [
+        {
+          "text": "Its mission highlights active and creative scholarly exploration that engages students, families, community, and school personnel in the learning experience.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The school says its strong core curriculum is realized through individualized, intimate, integrated, interdisciplinary, arts-based instruction.",
+          "difficulty": 5,
+          "category": "instructional-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The homepage says academics are integrated deeply with music, dance, visual art, and theater.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its goal statement says the school is concerned with the total development of each student, including cognitive, social, emotional, and physical growth.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The board page says the board meets on the second Tuesday of each month at 5:45 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Robin Hollis is listed as Charter Director, and her profile says she has led the school since its first year of operation.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["director", "staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "the-expedition-school",
+      "officialName": "The Expedition School",
+      "status": "validated-batch-004",
+      "sourceLinks": {
+        "home": "https://www.theexpeditionschool.com/",
+        "missionVision": "https://www.theexpeditionschool.com/apps/pages/index.jsp?pREC_ID=2072075&type=d&uREC_ID=1948673",
+        "board": "https://www.theexpeditionschool.com/apps/pages/index.jsp?pREC_ID=2073268&type=d&uREC_ID=1948673",
+        "adminTeam": "https://www.theexpeditionschool.com/apps/pages/index.jsp?pREC_ID=2072155&type=d&uREC_ID=1948840"
+      },
+      "clues": [
+        {
+          "text": "Its homepage uses the phrase \"Expedition to Excellence.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school embraces the natural curiosity of children and empowers them to become innovative problem solvers and community builders.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Official materials describe its program as experiential project-based learning with a STEM-focused curriculum.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["home", "missionVision"]
+        },
+        {
+          "text": "The school says it implements Responsive Classroom practices schoolwide as part of a student-centered social and emotional learning approach.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["home", "missionVision"]
+        },
+        {
+          "text": "Its published CREW values are Community and Collaboration, Respect and Responsibility, Equity and Excellence, and Wonder and Growth.",
+          "difficulty": 7,
+          "category": "values",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Tammy Finch is listed as Director of Education and Curriculum, and her bio says she is the founding director who opened the school in 2014.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["adminTeam"]
+        }
+      ]
+    },
+    {
+      "schoolId": "the-exploris-school",
+      "officialName": "The Exploris School",
+      "status": "validated-batch-004",
+      "sourceLinks": {
+        "home": "https://exploris.org/",
+        "missionValues": "https://exploris.org/about/mission-vision-values",
+        "accolades": "https://exploris.org/about/news-and-accolades",
+        "staff": "https://exploris.org/about/staff-and-faculty-list",
+        "director": "https://exploris.org/staff-and-faculty/deborah-brown",
+        "boardChair": "https://exploris.org/board-of-directors-app/steven-darroch"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school engages students in a challenging, relevant, relationship-based education and empowers them to foster a just and sustainable world.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionValues", "home"]
+        },
+        {
+          "text": "Its vision statement is \"Empowering Learners to Improve Our World.\"",
+          "difficulty": 3,
+          "category": "vision",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Official materials say the educational program is built around four pillars: Global Education, Project-Based Learning, Co-Teaching, and Responsive Classroom.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["missionValues", "home"]
+        },
+        {
+          "text": "Its stated values include Innovation, Social Empowerment, Craftsmanship, Connection to Nature, Relationships, Curiosity, Responsibility, and Reflection.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["missionValues", "home"]
+        },
+        {
+          "text": "The school's accolades page says it was a 2014 U.S. Department of Education Green Ribbon School and a 2023 WRAL Viewer's Choice Award winner.",
+          "difficulty": 7,
+          "category": "awards",
+          "sourceRefs": ["accolades"]
+        },
+        {
+          "text": "Official staff pages list Deborah Brown as Director of Middle Grades and say Steven Darroch serves as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "director", "boardChair"]
+        }
+      ]
+    }
+  ]
+}

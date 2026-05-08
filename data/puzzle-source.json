@@ -1,0 +1,29 @@
+{
+  "notes": "Editable source file for puzzle clue authoring. A build step validates answer IDs and clue counts.",
+  "puzzles": [
+    {
+      "date": "2026-05-08",
+      "answerSchoolId": "voyager-academy",
+      "clues": [
+        { "difficulty": 3, "text": "This Durham charter school serves students from kindergarten through high school on one campus." },
+        { "difficulty": 5, "text": "Its public-facing story emphasizes project-based learning." },
+        { "difficulty": 4, "text": "The school appears prominently in Charter Success Partners background materials." },
+        { "difficulty": 6, "text": "Its official name suggests travel, exploration, or a long journey." },
+        { "difficulty": 7, "text": "The school has been described publicly as having roughly 1,200 students." },
+        { "difficulty": 2, "text": "The answer begins with the letter V." }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "answerSchoolId": "francine-delany-new-school-for-children",
+      "clues": [
+        { "difficulty": 4, "text": "This school is in Asheville and serves younger learners rather than a full K-12 span." },
+        { "difficulty": 7, "text": "Its official name includes the full name of a person." },
+        { "difficulty": 5, "text": "The answer ends with a phrase that directly references children." },
+        { "difficulty": 6, "text": "It is smaller than many statewide charter campuses." },
+        { "difficulty": 8, "text": "The school name contains four words before the phrase 'for Children.'" },
+        { "difficulty": 2, "text": "The answer begins with the letter F." }
+      ]
+    }
+  ]
+}

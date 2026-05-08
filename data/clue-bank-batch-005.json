@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Fifth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "artspace-charter-school",
+      "officialName": "ArtSpace Charter School",
+      "status": "validated-batch-005",
+      "sourceLinks": {
+        "home": "https://www.artspacecharter.org/",
+        "mission": "https://www.artspacecharter.org/apps/pages/vision-mission-pillars",
+        "aplus": "https://www.artspacecharter.org/apps/pages/aplus_schools_program",
+        "board": "https://www.artspacecharter.org/apps/pages/index.jsp?type=d&uREC_ID=2012305",
+        "adminTeam": "https://www.artspacecharter.org/apps/pages/administrative_team"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a complete education through an integrated curriculum centered around visual and performing arts, using an experiential approach.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "The school says it uses a family-centered, cooperative approach that encourages parental involvement and community service to nurture responsible citizenship.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its Four Pillars are Effort, Respect, Leadership, and Service.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school is part of the A+ Schools Program at the North Carolina Arts Council.",
+          "difficulty": 6,
+          "category": "specialty",
+          "sourceRefs": ["aplus"]
+        },
+        {
+          "text": "The PACE board page says the school is governed by Partnership for Art at the Core of Education, Inc.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Sarena Fuller is listed as Executive Director, and the school notes she was the 2024 North Carolina Wells Fargo Charter School Principal of the Year.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["adminTeam"]
+        }
+      ]
+    },
+    {
+      "schoolId": "falls-lake-academy",
+      "officialName": "Falls Lake Academy",
+      "status": "validated-batch-005",
+      "sourceLinks": {
+        "about": "https://www.fallslakeacademy.com/about-us",
+        "quickFacts": "https://www.fallslakeacademy.com/fs/pages/1285",
+        "board": "https://www.fallslakeacademy.com/board"
+      },
+      "clues": [
+        {
+          "text": "Official quick facts say the school opened its doors on August 22, 2013.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["quickFacts"]
+        },
+        {
+          "text": "Its charter focus is project-based learning.",
+          "difficulty": 4,
+          "category": "specialty",
+          "sourceRefs": ["quickFacts", "about"]
+        },
+        {
+          "text": "The school describes project-based learning as learning by doing through hands-on, real-world projects that mirror challenges beyond school.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say rigorous project-based learning at the school is organized around an open-ended driving question.",
+          "difficulty": 7,
+          "category": "instructional-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The board page says regular board meetings are held at 6:30 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Joey Johnson is listed in the school's quick facts as Executive Director, and Benjamin Averette is listed as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["quickFacts", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "raleigh-oak-charter",
+      "officialName": "Raleigh Oak Charter",
+      "status": "validated-batch-005",
+      "sourceLinks": {
+        "home": "https://www.raleighoakcharter.org/",
+        "board": "https://www.raleighoakcharter.org/board-of-directors/",
+        "staff": "https://www.raleighoakcharter.org/teachers-staff/",
+        "executiveDirectorSearch": "https://www.raleighoakcharter.org/permanent-executive-director-job-search/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school is a community-initiated, environmentally conscious school guided by the Core Principles of Public Waldorf Education.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The curriculum page says instruction is aligned with the North Carolina Standard Course of Study and intentionally designed to honor the diverse cultural backgrounds of students.",
+          "difficulty": 5,
+          "category": "curriculum",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A school leadership page describes the school as dedicated to whole-child development, equity, and lifelong learning.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["executiveDirectorSearch"]
+        },
+        {
+          "text": "Its board page says the board also holds quarterly strategy meetings in addition to monthly board meetings.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official staff listings name Brittany Wheaton as Executive Director and Principal.",
+          "difficulty": 7,
+          "category": "school-leader",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "The board page lists Rich Antoine as chair and treasurer.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "river-mill-academy",
+      "officialName": "River Mill Academy",
+      "status": "validated-batch-005",
+      "sourceLinks": {
+        "home": "https://www.rivermill-academy.org/",
+        "about": "https://www.rivermill-academy.org/about_r_m_a",
+        "board": "https://www.rivermill-academy.org/about_r_m_a/board_of_directors",
+        "admin": "https://www.rivermill-academy.org/staff/administration_and_office_staff"
+      },
+      "clues": [
+        {
+          "text": "The homepage says the school's goal is to help parents develop exemplary young citizens with superior academic preparation, analytical thinking skills, a passion for learning, and virtuous character.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its about page says charter schools exist to offer students, parents, and educators choices of teaching and learning methods and environments, with an emphasis on innovation and accountability.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says its curriculum is challenging and demanding in an age-appropriate manner and that its standards are high.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its board page says the board is elected by parents of currently enrolled students.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official governance information says board meetings are held on the third Thursday of each month at 6:30 p.m. in the Media Center.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Jeff Dishmon is listed as principal on the administration and office staff page.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["admin"]
+        }
+      ]
+    },
+    {
+      "schoolId": "socrates-academy",
+      "officialName": "Socrates Academy",
+      "status": "validated-batch-005",
+      "sourceLinks": {
+        "missionValues": "https://www.socratesacademy.us/our-school",
+        "coreValues": "https://www.socratesacademy.us/copy-of-our-school",
+        "board": "https://www.socratesacademy.us/board-of-directors",
+        "leadership": "https://www.socratesacademy.us/leadership"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school cultivates scholars for impactful global engagement, ethical citizenship, and lifelong learning.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Official school descriptions say advanced coursework in Greek language and cultural heritage forms the foundation of its intellectual and multicultural competencies.",
+          "difficulty": 5,
+          "category": "specialty",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "The school says it applies the Socratic method to promote inquiry, logic, questioning, problem-solving, and team collaboration.",
+          "difficulty": 5,
+          "category": "instructional-model",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Its published core values include Filotimo, Arete, Philoxenia, Ethos, and Personal Responsibility.",
+          "difficulty": 7,
+          "category": "values",
+          "sourceRefs": ["coreValues"]
+        },
+        {
+          "text": "The board page says monthly board meetings are held on the second Wednesday at 7:30 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The leadership page lists Stefanie Savage as Interim Head of School.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    }
+  ]
+}

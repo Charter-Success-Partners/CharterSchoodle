@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-fifth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "rocky-mount-preparatory",
+      "officialName": "Rocky Mount Preparatory",
+      "status": "validated-batch-025",
+      "sourceLinks": {
+        "home": "https://www.rmprep.org/",
+        "whoWeAre": "https://www.rmprep.org/who-we-are",
+        "about": "https://www.rmprep.org/about-us",
+        "staff": "https://www.rmprep.org/Our-Staff",
+        "board": "https://www.rmprep.org/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school will educate, equip, and empower each scholar to excel academically by providing equitable learning opportunities and collaborating with families and communities.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["whoWeAre"]
+        },
+        {
+          "text": "Official materials say the school was founded in 1997 by local business leaders.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "whoWeAre"]
+        },
+        {
+          "text": "The school uses the four-part framing, \"Educate. Equip. Empower. Excel.\"",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home", "whoWeAre"]
+        },
+        {
+          "text": "Official materials highlight a whole-child model with supports such as food security, health and wellness, wrap-around services, and daily SEL.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["whoWeAre"]
+        },
+        {
+          "text": "Official staff pages list Dr. Heather Collins as head of school and director of operations.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Official board pages list Keen Gravely as chairman.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "haliwa-saponi-tribal-school",
+      "officialName": "Haliwa-Saponi Tribal School",
+      "status": "validated-batch-025",
+      "sourceLinks": {
+        "home": "https://www.hstsedu.org/",
+        "mission": "https://www.hstsedu.org/apps/pages/index.jsp?type=d&uREC_ID=415654",
+        "principalMessage": "https://www.hstsedu.org/apps/pages/index.jsp?type=d&uREC_ID=416079",
+        "board": "https://www.hstsedu.org/apps/pages/index.jsp?type=d&uREC_ID=416599"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides high-quality education through academics, technology, and community involvement, with the integration of American Indian culture.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Official materials say the school wants students to become positive, productive citizens in an ever-changing global society.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "The school highlights programs such as Indian Education and Mighty Bucks Academy.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A principal's message says students are encouraged to share the strength of their history to inspire others.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["principalMessage"]
+        },
+        {
+          "text": "Official homepage materials identify Melissa Richardson as principal and head administrator.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["home", "principalMessage"]
+        },
+        {
+          "text": "Official board pages list Gideon Lee as chair and Dr. B. Ogletree Richardson as chief.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "pocosin-innovative-charter",
+      "officialName": "Pocosin Innovative Charter",
+      "status": "validated-batch-025",
+      "sourceLinks": {
+        "home": "https://www.pocosininnovativecharter.org/",
+        "about": "https://www.pocosininnovativecharter.org/about-us",
+        "board": "https://www.pocosininnovativecharter.org/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a high-quality education preparing today's students for tomorrow's world while focusing on regional agriculture and related industries.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official materials say the school wants students to become respectful and productive citizens.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says it is growing students academically, socially, and emotionally.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials frame the school around service to the Pocosin region and its industries.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official board pages list Stephanie Phelps as board chairman.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its board page says meetings are held on the third Tuesday of each month at 6:00 p.m.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "new-dimensions",
+      "officialName": "New Dimensions",
+      "status": "validated-batch-025",
+      "sourceLinks": {
+        "home": "https://www.ndschool.org/",
+        "board": "https://www.ndschool.org/board-of-directors",
+        "profile": "https://www.ndschool.org/school-profile"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school seeks to nurture every student, every day to develop strong character, academic excellence, and good citizenship.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school was established in 2001.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["profile"]
+        },
+        {
+          "text": "The school's vision says, \"Every child will learn. Every kid. Every day. No excuses.\"",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the campus relocated to a former manufacturing facility on land bordering the Catawba River.",
+          "difficulty": 6,
+          "category": "campus-history",
+          "sourceRefs": ["profile"]
+        },
+        {
+          "text": "Official pages list Lisa Ervin as director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board pages list Jamie Smith as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "moore-montessori-community-school",
+      "officialName": "Moore Montessori Community School",
+      "status": "validated-batch-025",
+      "sourceLinks": {
+        "home": "https://www.mooremontessori.org/",
+        "about": "https://www.mooremontessori.org/about",
+        "team": "https://www.mooremontessori.org/our-team",
+        "board": "https://www.mooremontessori.org/our-board-of-di",
+        "campusStory": "https://www.mooremontessori.org/updates/a-dream-come-true-moore-montessori-settles-into-new-campus"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school is a vibrant learning community where diverse students build strong academic foundations, executive function skills, and trust in their abilities for lives of joy and purpose.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school provides a quality education rooted in the Montessori method.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school emphasizes hands-on learning, collaborative work, and self-directed activity as core Montessori features.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "A campus story says the school first welcomed students in the fall of 2018.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["campusStory"]
+        },
+        {
+          "text": "Official team pages list Katherine Rucker as founder and head of school.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["team"]
+        },
+        {
+          "text": "Official board pages list Ronda Hawkins as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    }
+  ]
+}

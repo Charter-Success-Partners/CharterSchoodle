@@ -1,0 +1,262 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-eighth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "anderson-creek-academy",
+      "officialName": "Anderson Creek Academy",
+      "status": "validated-batch-028",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.acacharter.com/",
+        "about": "https://www.acacharter.com/about-our-school",
+        "board": "https://www.acacharter.com/board",
+        "admin": "https://www.acacharter.com/departments/administration"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school aims to create a 21st Century learning environment that recognizes multiple intelligences and diverse learning styles.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school uses a culturally responsive curriculum with diverse instructional strategies and enriching content.",
+          "difficulty": 5,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its vision says every child is a genius in at least one domain of intelligence.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Recent school news highlights a third-place finish in the Lee County Science Olympiad.",
+          "difficulty": 6,
+          "category": "achievement",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Administrative pages list Olivia Lyon as Head of School.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["admin"]
+        },
+        {
+          "text": "Board materials identify John D. Werderman as chairman of the board.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "chatham-charter",
+      "officialName": "Chatham Charter",
+      "status": "validated-batch-028",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://chathamcharter.org/",
+        "about": "https://chathamcharter.org/about-us/",
+        "board": "https://chathamcharter.org/about-us/board-of-directors/",
+        "contact": "https://chathamcharter.org/contact-us/"
+      },
+      "clues": [
+        {
+          "text": "Its homepage rotates lines such as Inspiring Passion, Igniting Success and Developing Leaders, Fostering Community.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official history says the school was founded in 1993 as Chatham Academy before receiving a charter in 1996.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it was among the first group of North Carolina schools to receive a charter in 1996.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school has been nationally accredited since 2006 and most recently went through reaccreditation in 2021 through Cognia.",
+          "difficulty": 6,
+          "category": "accreditation",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its published mission says the school establishes and maintains a challenging learning environment that respects individual learners and prepares them to succeed in a globally competitive society.",
+          "difficulty": 7,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Board materials list Erik Christenbury as president.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board", "contact"]
+        }
+      ]
+    },
+    {
+      "schoolId": "dillard-academy",
+      "officialName": "Dillard Academy",
+      "status": "validated-batch-028",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.dillardacademy.org/",
+        "visionMission": "https://www.dillardacademy.org/apps/pages/index.jsp?type=d&uREC_ID=4385132",
+        "board": "https://www.dillardacademy.org/apps/pages/index.jsp?pREC_ID=2592461&type=d&uREC_ID=4385209",
+        "executiveDirector": "https://www.dillardacademy.org/apps/pages/index.jsp?pREC_ID=2592488&type=d&uREC_ID=4385209",
+        "founder": "https://www.dillardacademy.org/apps/pages/index.jsp?pREC_ID=2592459&type=d&uREC_ID=4385209"
+      },
+      "clues": [
+        {
+          "text": "Its public materials emphasize the phrase High Expectations in Academics, Behavior and Character.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["visionMission"]
+        },
+        {
+          "text": "The school's mission says it aims to positively provide a safe and quality education with high expectations so students can excel and grow.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["visionMission"]
+        },
+        {
+          "text": "Official history says founder Hilda Hicks opened the school in 1998 and led it for 28 years.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["founder", "visionMission"]
+        },
+        {
+          "text": "The school publishes an axiom that students need great teachers and principals each year, with high expectations matched by rigorous academic instruction.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["visionMission"]
+        },
+        {
+          "text": "Official leadership pages identify Danielle Hicks Baptiste as Executive Director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["executiveDirector"]
+        },
+        {
+          "text": "Board materials list Pastor Janet Ward as chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "jackson-day-school",
+      "officialName": "Jackson Day School",
+      "status": "validated-batch-028",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "about": "https://www.jacksonday.org/about-us",
+        "profile": "https://www.jacksonday.org/school-profile",
+        "board": "https://www.jacksonday.org/board-of-directors",
+        "elementary": "https://www.jacksonday.org/elementary-school"
+      },
+      "clues": [
+        {
+          "text": "Official history says the school was formerly known as Mountain Island Day.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its mission says students should strive not just for good grades, but to become better people and make their world a better place.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says character education is integrated throughout the curriculum, extracurricular activities, and daily social interactions.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["about", "elementary"]
+        },
+        {
+          "text": "Official college-readiness materials note a partnership with Belmont Abbey through something called The Voyager Program.",
+          "difficulty": 6,
+          "category": "academics",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Current school profile materials list Kristen Lanier as both Principal of Upper School and Principal of Lower School.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["profile"]
+        },
+        {
+          "text": "Board materials list Steve Jones as chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "millennium-charter-academy",
+      "officialName": "Millennium Charter Academy",
+      "status": "validated-batch-028",
+      "qualityTier": "manual",
+      "sourceLinks": {
+        "home": "https://www.mcacademy.com/",
+        "missionVision": "https://www.mcacademy.com/about/our-mission-vision/",
+        "threePillars": "https://www.mcacademy.com/about/mcas-three-pillars/",
+        "board": "https://www.mcacademy.com/about/board-of-directors/",
+        "staff": "https://www.mcacademy.com/faculty-staff/",
+        "headmaster": "https://www.mcacademy.com/person/paul-rezzo/"
+      },
+      "clues": [
+        {
+          "text": "Its homepage uses the phrase Learning for Liberty.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says classical education is meant to form intelligent, virtuous citizens.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["home", "missionVision"]
+        },
+        {
+          "text": "Official materials identify Scholarship, Character, and Community as the school's three pillars.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["threePillars"]
+        },
+        {
+          "text": "Its vision emphasizes an honest search for universal truth, goodness, and beauty.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "The school says good citizenship includes logical argument, respect for the rule of law, and appreciation of American constitutional democracy.",
+          "difficulty": 7,
+          "category": "academics",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Official staff pages list Paul Rezzo as headmaster.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "headmaster"]
+        }
+      ]
+    }
+  ]
+}

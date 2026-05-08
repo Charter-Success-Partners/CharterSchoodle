@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-first validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "pinnacle-classical-academy",
+      "officialName": "Pinnacle Classical Academy",
+      "status": "validated-batch-021",
+      "sourceLinks": {
+        "about": "https://www.pinnacleclassicalacademy.com/about",
+        "board": "https://www.pinnacleclassicalacademy.com/about/board",
+        "values": "https://www.pinnacleclassicalacademy.com/about/core-values",
+        "administration": "https://pinnacleclassicalacademy.com/about/administration",
+        "classicalFoundations": "https://www.pinnacleclassicalacademy.com/about/classical-foundations"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a premier college preparatory education built on Core Knowledge, STEM emphases, citizenship, values, and classical education.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say one of its signature programs is the Classical Foundations Program, which brings academic and business leaders to speak with students.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["classicalFoundations"]
+        },
+        {
+          "text": "The school says honesty is the bedrock value in its core values framework.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["values"]
+        },
+        {
+          "text": "Its branding includes the school pledge line, \"I Dare to Soar.\"",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official administration pages say Dr. Shelly L. Shope serves as CEO and Angela Brooks serves as headmaster.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["administration"]
+        },
+        {
+          "text": "Official board pages list Debbie A. Clary as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "global-scholars-academy",
+      "officialName": "Global Scholars Academy",
+      "status": "validated-batch-021",
+      "sourceLinks": {
+        "home": "https://globalscholarsacademy.org/",
+        "mission": "https://globalscholarsacademy.org/about-us/our-mission/",
+        "board": "https://globalscholarsacademy.org/about-us/gsa-board2/",
+        "about": "https://globalscholarsacademy.org/about-us/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school aims to create a culturally responsive public education system that supports academic success and unlocks every child's unique gifts.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "Official materials say the school was designed to connect at-risk Durham area youth to a wide array of intellectual and social capital resources, both high touch and virtual.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "The school says its curriculum fosters curiosity and a sense of personal, financial, and academic responsibility.",
+          "difficulty": 5,
+          "category": "curriculum",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its vision describes a dynamic 21st-century franchise model of public education that builds bridges to the economic mainstream for vulnerable scholars.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official board pages list Rev. Kenneth Hammond as chairman of the board.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board pages describe Rev. Kenneth Hammond as a co-founder of the school.",
+          "difficulty": 8,
+          "category": "history",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "mountain-island-charter-school",
+      "officialName": "Mountain Island Charter School",
+      "status": "validated-batch-021",
+      "sourceLinks": {
+        "home": "https://www.micharter.org/",
+        "mission": "https://www.micharter.org/apps/pages/index.jsp?pREC_ID=522030&type=d&uREC_ID=229679",
+        "board": "https://www.micharter.org/apps/pages/index.jsp?pREC_ID=523176&type=d&uREC_ID=229679",
+        "staff": "https://www.micharter.org/apps/staff/",
+        "foundingBoard": "https://www.micharter.org/apps/pages/index.jsp?pREC_ID=559878&type=d&uREC_ID=229679"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school offers a traditional curriculum while instilling character values and leadership development within a positive, challenging learning environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "mission"]
+        },
+        {
+          "text": "The school says its vision is to SOAR by serving the community and world as outstanding leaders who achieve through respect and responsibility.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say students can pursue three academic tracks: college preparatory, career preparatory, and occupational course of study.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A founding-board page says the school's founding board dates to 2010.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["foundingBoard"]
+        },
+        {
+          "text": "Official staff pages list Glenn Byrum as executive director and Jeremy Thompson as elementary school principal.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        },
+        {
+          "text": "Official board pages list Erica Blackson, Katie Blixt, Kelly Dempsey, Dawne Dowdy, Rodward Hewlin, Mike Ladd, Eric LaForce, Kim Leppert, Stephanie Sherer, Garrett Tryon, and Kevin Wiley on the 2025-26 board of directors.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "carolina-achieve",
+      "officialName": "Carolina Achieve",
+      "status": "validated-batch-021",
+      "sourceLinks": {
+        "home": "https://carolina-achieve.org/",
+        "story": "https://carolina-achieve.org/our-story/",
+        "board": "https://carolina-achieve.org/our-school-board/",
+        "charterInfo": "https://carolina-achieve.org/what-is-a-charter-school/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school prepares students to achieve scholastic, personal, and professional goals through a learner-centered educational program.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "Official materials say the school opened in the 2025-26 school year.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "The school brands its model around entrepreneurial learning and the Habits of Success.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home", "story"]
+        },
+        {
+          "text": "Its vision highlights a rigorous academic foundation, an integrated curriculum focused on real challenges, and a commitment to underserved students.",
+          "difficulty": 6,
+          "category": "vision",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "Official board pages list John Oxaal as board chair and Trip Cogburn as founding head of school.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "The school says charter schools are public schools of choice that are tuition-free, independently run, and funded primarily by state and local tax dollars.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["charterInfo"]
+        }
+      ]
+    },
+    {
+      "schoolId": "ic-imagine",
+      "officialName": "IC Imagine",
+      "status": "validated-batch-021",
+      "sourceLinks": {
+        "home": "https://www.icimagine.org/",
+        "newsletterJan2026": "https://www.icimagine.org/article/2614872",
+        "newsletterFeb2026": "https://www.icimagine.org/article/2735414",
+        "firstDay2023": "https://www.icimagine.org/article/1195142",
+        "staff": "https://www.icimagine.org/staff?page_no=8"
+      },
+      "clues": [
+        {
+          "text": "Its homepage says, \"We imagine an Inclusive Community where everyone Thrives.\"",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A back-to-school message in August 2023 says the school was beginning its 10th year of educating students in western North Carolina.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["firstDay2023"]
+        },
+        {
+          "text": "Official newsletters say the school's work is grounded in six core values: Inclusivity, Academic Excellence, Strong Relationships, Well-being, Exploration, and Creativity.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["newsletterJan2026"]
+        },
+        {
+          "text": "Its homepage spotlight says the school hosted its first Social Emotional Learning Showcase.",
+          "difficulty": 6,
+          "category": "student-support",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages say the school is a proud member of the Diverse Charter School Coalition.",
+          "difficulty": 6,
+          "category": "affiliation",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages list Jenn Townley as head of school.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "newsletterJan2026", "newsletterFeb2026"]
+        }
+      ]
+    }
+  ]
+}

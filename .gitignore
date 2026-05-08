@@ -1,0 +1,9 @@
+.codex
+tmp_*.html
+*.zip
+*.pdf
+appendix_b*.txt
+appendix_b_names.json
+nc_charter_map.kml
+nc_charters_page.html
+nc_dpi_charters.html

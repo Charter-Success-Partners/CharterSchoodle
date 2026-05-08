@@ -1,0 +1,261 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Sixteenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "classical-charter-schools-of-whiteville",
+      "officialName": "Classical Charter Schools of Whiteville",
+      "status": "validated-batch-016",
+      "sourceLinks": {
+        "home": "https://ccswhiteville.net/",
+        "overview": "https://ccswhiteville.net/overview/",
+        "elementary": "https://ccswhiteville.net/elementary/",
+        "middle": "https://ccswhiteville.net/middle-school/",
+        "admissions": "https://ccswhiteville.net/admissions/",
+        "board": "https://ccsam.net/board-of-trustees/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school has focused on quality education since 2007.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["overview"]
+        },
+        {
+          "text": "The school says its community works as a team to provide a safe, clean, spirited, and morally strong environment.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["elementary", "middle"]
+        },
+        {
+          "text": "Admissions pages call it the school with the highest academic growth in Columbus County.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["admissions"]
+        },
+        {
+          "text": "Network governance pages list Colleen Combs as chair of the Board of Trustees.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Campus pages list Kimberly Patrick as headmaster.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["overview", "elementary", "middle"]
+        }
+      ]
+    },
+    {
+      "schoolId": "classical-charter-schools-of-wilmington",
+      "officialName": "Classical Charter Schools of Wilmington",
+      "status": "validated-batch-016",
+      "sourceLinks": {
+        "home": "https://ccswilmington.net/",
+        "overview": "https://ccswilmington.net/overview/",
+        "elementary": "https://ccswilmington.net/elementary/",
+        "board": "https://ccsam.net/board-of-trustees/",
+        "headmasterNews": "https://ccswilmington.net/2022/05/17/classical-charter-schools-of-wilmington-names-new-headmaster/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school opened in August 2013 in the former Peabody Elementary building.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["home", "overview"]
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["overview"]
+        },
+        {
+          "text": "The school says it replicates its sister schools in the Classical Charter Schools of America network.",
+          "difficulty": 5,
+          "category": "network",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its academic program says students are prepared to become lifelong learners through proven curricula and strong foundations in critical thinking and communication.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": ["elementary"]
+        },
+        {
+          "text": "Network governance pages list Colleen Combs as chair of the Board of Trustees.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "A school announcement says Marcus Dos Santos was named headmaster in 2022.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["headmasterNews"]
+        }
+      ]
+    },
+    {
+      "schoolId": "ascend-leadership-academy-lee-county",
+      "officialName": "Ascend Leadership Academy: Lee County",
+      "status": "validated-batch-016",
+      "sourceLinks": {
+        "home": "https://www.ascendleadershipacademy.org/",
+        "about": "https://www.ascendleadershipacademy.org/about-ala",
+        "missionPrograms": "https://www.ascendleadershipacademy.org/mission-and-programs",
+        "board": "https://www.ascendleadershipacademy.org/meet-the-board",
+        "campus": "https://www.ascendleadershipacademy.org/ala-s-campus"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing tagline is \"Empowering Students for the 21st Century.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school develops successful student leaders by growing self-efficacy, intellectual understanding, and social competence.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionPrograms", "home"]
+        },
+        {
+          "text": "Official materials describe a Project Based Leadership model unique to the school.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["missionPrograms"]
+        },
+        {
+          "text": "The school says every student takes Digital Media courses involving graphic and game design, audio and video production, animation, and programming.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["missionPrograms"]
+        },
+        {
+          "text": "Its board page lists Roger Linville as board chairperson.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages identify Justin T. Smith as managing director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "union-day-school",
+      "officialName": "Union Day School",
+      "status": "validated-batch-016",
+      "sourceLinks": {
+        "about": "https://www.uniondayschool.com/about",
+        "mission": "https://www.uniondayschool.com/mission-vision",
+        "leadership": "https://www.uniondayschool.com/school-leadership",
+        "board": "https://www.uniondayschool.com/board-members",
+        "boardMeetings": "https://www.uniondayschool.com/board-meetings"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school pairs rigorous content with International Baccalaureate learner profile ideals.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about", "mission"]
+        },
+        {
+          "text": "Official materials say the school began operating in the 2016-17 school year.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it is the only charter school in North Carolina and in the Charlotte area to offer International Baccalaureate to students beginning in sixth through twelfth grade.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official pages say the school has been recognized multiple times by Charlotte Magazine Best of the Best and the Union County Macaroni Kid awards.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its board page lists Jim Lovell as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["about", "board"]
+        },
+        {
+          "text": "Official leadership pages list Joely Lord as executive director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "excelsior-classical-academy",
+      "officialName": "Excelsior Classical Academy",
+      "status": "validated-batch-016",
+      "sourceLinks": {
+        "home": "https://excelsiorclassicalacademy.org/",
+        "mission": "https://excelsiorclassicalacademy.org/about/living-our-mission/",
+        "profile": "https://excelsiorclassicalacademy.org/about/school-profile/",
+        "program": "https://excelsiorclassicalacademy.org/academics/our-program/",
+        "board": "https://excelsiorclassicalacademy.org/about/board-of-directors/",
+        "staff": "https://excelsiorclassicalacademy.org/faculty-staff/"
+      },
+      "clues": [
+        {
+          "text": "Official pages say the school is known as the home of the Flying Lions.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school develops in every student a foundation of knowledge, a practice of reason, a quality of eloquence, and a habit of virtue.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school started in the 2015-2016 school year and its first graduating class was the class of 2024.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["home", "profile"]
+        },
+        {
+          "text": "School profile pages say the school earned Cognia accreditation in the summer of 2024.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["profile"]
+        },
+        {
+          "text": "Its board page lists Scott Sipe as president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official staff pages list Dr. Dana Coyle as executive director and grammar school dean.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    }
+  ]
+}

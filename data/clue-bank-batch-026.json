@@ -1,0 +1,222 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-sixth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "wake-preparatory-academy",
+      "officialName": "Wake Preparatory Academy",
+      "status": "validated-batch-026",
+      "sourceLinks": {
+        "home": "https://www.wakeprep.org/",
+        "about": "https://www.wakeprep.org/about",
+        "faq": "https://www.wakeprep.org/about/faq",
+        "leadership": "https://www.wakeprep.org/about/leadership",
+        "contact": "https://www.wakeprep.org/about/contact-us"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school provides a challenging, individualized education program with a moral focus.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about", "faq"]
+        },
+        {
+          "text": "Official materials say the school organizes its core values under the acronym R.A.I.S.E.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["about", "leadership"]
+        },
+        {
+          "text": "The school says parent involvement is the heartbeat of its campus culture.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the founder is Hilda Alston Parler, who previously served as the first board president.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Krista Wyman as director of 7-12.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["home", "contact"]
+        },
+        {
+          "text": "The school says it operates as a 501(c)(3) nonprofit overseen by an independent board of directors.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["about"]
+        }
+      ]
+    },
+    {
+      "schoolId": "thomas-jefferson-classical-academy",
+      "officialName": "Thomas Jefferson Classical Academy",
+      "status": "validated-batch-026",
+      "sourceLinks": {
+        "home": "https://www.tjca.org/",
+        "about": "https://www.tjca.org/apps/pages/about_us",
+        "middleSchool": "https://ms.tjca.org/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school builds on the Core Knowledge Sequence and educates students through the trivium of grammar, logic, and rhetoric.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about", "middleSchool"]
+        },
+        {
+          "text": "Official materials say the school has served as a college preparatory option for its community for over twenty years.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about", "middleSchool"]
+        },
+        {
+          "text": "The school explicitly identifies itself as a Challenge Foundation Academy.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official pages quote Thomas Jefferson: a society that wishes to be both ignorant and free wants what never was and never will be.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["about", "middleSchool"]
+        },
+        {
+          "text": "The school's overview says it follows the classical education model through the three natural stages of human development: grammar, logic, and rhetoric.",
+          "difficulty": 7,
+          "category": "academics",
+          "sourceRefs": ["about", "middleSchool"]
+        },
+        {
+          "text": "A recent middle school homepage note says Kristilee Newton continues as Grammar School Principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["middleSchool"]
+        }
+      ]
+    },
+    {
+      "schoolId": "wilmington-school-of-the-arts",
+      "officialName": "Wilmington School of the Arts",
+      "status": "validated-batch-026",
+      "sourceLinks": {
+        "board": "https://wilmingtonschoolofthearts.com/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Official board materials show the school uses the acronym WSA.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials say Dustin Richardson serves as board chair.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials list Mel Rausch as board treasurer.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials list Sarah Dawson as board secretary.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board pages include Kevin Lee-y Green as member at large and identify him as founder of Techmoja Dance and Theater Company.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board pages note that Kevin Lee-y Green studied contemporary dance and ballet at the University of North Carolina School of the Arts.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "alpha-academy",
+      "officialName": "Alpha Academy",
+      "status": "validated-batch-026",
+      "sourceLinks": {
+        "handbook": "https://www.alphaacademy.education/wp-content/uploads/2023/08/23-24-Student-Handbook-Revised.pdf",
+        "cclc": "https://21cclc.alphaacademy.education/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school prepares students to become outstanding leaders and motivates them to strive for their greatest potential through exceptional character and academic achievements.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["handbook"]
+        },
+        {
+          "text": "The school's vision says it aims to be one of the most successful schools in the world, measured by service to the community and student outcomes.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["handbook"]
+        },
+        {
+          "text": "Official materials include a student pledge with the lines, \"I will LEARN. I will GROW. I will PROSPER.\"",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["handbook"]
+        },
+        {
+          "text": "The school highlights a 21st Century Community Learning Center program with components such as WE EXCEL, STEM activities, and Positive Action.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["cclc"]
+        },
+        {
+          "text": "Official program materials say character and leadership are promoted through weekly activities and expanded learning opportunities.",
+          "difficulty": 7,
+          "category": "student-support",
+          "sourceRefs": ["cclc"]
+        },
+        {
+          "text": "The school's handbook says success is measured partly by helping students graduate, obtain successful careers, and become model citizens of the world.",
+          "difficulty": 8,
+          "category": "vision",
+          "sourceRefs": ["handbook"]
+        }
+      ]
+    },
+    {
+      "schoolId": "stars-charter",
+      "officialName": "STARS Charter",
+      "status": "validated-batch-026",
+      "sourceLinks": {
+        "fallback": "https://www.starscharter.org/"
+      },
+      "clues": [
+        {
+          "text": "Official materials identify the school by the name STARS Charter.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["fallback"]
+        },
+        {
+          "text": "The school's official public materials are currently too sparse to support higher-quality, school-specific clue writing in this batch.",
+          "difficulty": 9,
+          "category": "research-note",
+          "sourceRefs": ["fallback"]
+        }
+      ]
+    }
+  ]
+}

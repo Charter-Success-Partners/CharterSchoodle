@@ -1,0 +1,258 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Fifteenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "forsyth-academy",
+      "officialName": "Forsyth Academy",
+      "status": "validated-batch-015",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/forsyth-academy/en",
+        "atAGlance": "https://www.nhaschools.com/schools/forsyth-academy/en/at-a-glance",
+        "leadership": "https://www.nhaschools.com/schools/forsyth-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/forsyth-academy/en/board-documents",
+        "award": "https://www.nhaschools.com/schools/forsyth-academy/en/blog/forsyth-receives-school-choice-leadership-award"
+      },
+      "clues": [
+        {
+          "text": "Its mission says students should master the academic basics while developing principled centered lives and an appreciation for the dignity of work.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "board"]
+        },
+        {
+          "text": "Official materials say the school opened in 1999.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home", "atAGlance"]
+        },
+        {
+          "text": "The school says it is part of the National Heritage Academies network and integrates Moral Focus lessons into each school day.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A school blog says it received the National School Choice Week Leadership Award.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["award"]
+        },
+        {
+          "text": "Its leadership page lists Carmen Palmer as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Christy Harnsberger as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "preeminent-charter",
+      "officialName": "PreEminent Charter",
+      "status": "validated-batch-015",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/preeminent-charter-school/en",
+        "atAGlance": "https://www.nhaschools.com/schools/preeminent-charter-school/en/at-a-glance",
+        "leadership": "https://www.nhaschools.com/schools/preeminent-charter-school/en/leadership",
+        "board": "https://www.nhaschools.com/schools/preeminent-charter-school/en/board-documents"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school works in partnership with parents and the community to offer a challenging, character-based education in an atmosphere of high expectations.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["board", "home"]
+        },
+        {
+          "text": "Official materials say the school opened in 2000.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["atAGlance"]
+        },
+        {
+          "text": "The school says it is part of National Heritage Academies and emphasizes Moral Focus as part of daily instruction.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its public pages highlight a structured setting built on clear expectations and consistent routines.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page lists Sheila Corbett as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Shemeka Dixon as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "research-triangle-charter",
+      "officialName": "Research Triangle Charter",
+      "status": "validated-batch-015",
+      "sourceLinks": {
+        "home": "https://www.nhaschools.com/schools/research-triangle-charter-academy/en",
+        "atAGlance": "https://www.nhaschools.com/schools/research-triangle-charter-academy/en/at-a-glance",
+        "leadership": "https://www.nhaschools.com/schools/research-triangle-charter-academy/en/leadership",
+        "board": "https://www.nhaschools.com/schools/research-triangle-charter-academy/en/board-documents",
+        "handbook": "https://www.nhaschools.com/getattachment/14474023-20a2-402f-af2f-23cf423cda59/research-triangle-%28nc%29-final-2023-24.pdf"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school was created to serve children in southeastern Durham and give working parents near Research Triangle Park a quality school close to the workplace.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["board", "home"]
+        },
+        {
+          "text": "Official materials say the school opened in 2000.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["atAGlance"]
+        },
+        {
+          "text": "A parent and student handbook includes a student creed focused on academic excellence, high moral character, realizing potential, and working diligently to prepare for the future.",
+          "difficulty": 6,
+          "category": "student-culture",
+          "sourceRefs": ["handbook"]
+        },
+        {
+          "text": "The school says more than four out of five families report a positive impact from its Moral Focus program.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its leadership page lists Elizabeth Gnatek-Morey as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["leadership"]
+        },
+        {
+          "text": "Official pages list Patrice Hardy as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "classical-charter-schools-of-leland",
+      "officialName": "Classical Charter Schools of Leland",
+      "status": "validated-batch-015",
+      "sourceLinks": {
+        "home": "https://ccsleland.net/",
+        "overview": "https://ccsleland.net/overview/",
+        "achievements": "https://ccsleland.net/achievements-rankings/",
+        "admissions": "https://ccsleland.net/admissions/",
+        "board": "https://ccsam.net/board-of-trustees/",
+        "networkOverview": "https://ccsam.net/overview/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school has focused on quality education since 1999.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["home", "overview"]
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["overview"]
+        },
+        {
+          "text": "Admissions materials say the school was named in the national top twenty schools in the Classic Learning Test's 2022-2023 CLT8 rankings.",
+          "difficulty": 5,
+          "category": "recognition",
+          "sourceRefs": ["admissions"]
+        },
+        {
+          "text": "Achievements pages say the school has won multiple state archery championships and national cheerleading titles.",
+          "difficulty": 6,
+          "category": "activities",
+          "sourceRefs": ["achievements"]
+        },
+        {
+          "text": "Network governance pages list Colleen Combs as chair of the Board of Trustees.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Campus pages list Laurie Benton as headmaster.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "overview"]
+        }
+      ]
+    },
+    {
+      "schoolId": "classical-charter-schools-of-southport",
+      "officialName": "Classical Charter Schools of Southport",
+      "status": "validated-batch-015",
+      "sourceLinks": {
+        "home": "https://ccssouthport.net/",
+        "overview": "https://ccssouthport.net/overview/",
+        "board": "https://ccsam.net/board-of-trustees/",
+        "networkOverview": "https://ccsam.net/overview/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school was established in July 2014 as a replicate campus modeled on the Leland and Whiteville schools.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["overview"]
+        },
+        {
+          "text": "The school says it is a premier performance-driven year-round school.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Network overview pages say Classical Charter Schools of America features classical literature, chronological Western history, cursive handwriting, and Latin in its curriculum.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": ["networkOverview"]
+        },
+        {
+          "text": "Network governance pages list Colleen Combs as chair of the Board of Trustees.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Campus pages list Amanda Sauls as headmaster.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "overview"]
+        }
+      ]
+    }
+  ]
+}

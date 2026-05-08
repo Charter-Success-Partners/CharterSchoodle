@@ -1,0 +1,250 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Third validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "bradford-preparatory-school",
+      "officialName": "Bradford Preparatory School",
+      "status": "validated-batch-003",
+      "sourceLinks": {
+        "missionVision": "https://www.bradfordprep.org/apps/pages/index.jsp?pREC_ID=1215213&type=d&uREC_ID=844731",
+        "staff": "https://www.bradfordprep.org/apps/staff/",
+        "adminTeam": "https://www.bradfordprep.org/apps/pages/index.jsp?type=d&uREC_ID=981645"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school is committed to academic excellence, nurturing personal relationships, and inspiring a growing passion for creativity and learning.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "The school's core values include academic excellence, relationships, focusing on the whole child, community service, accountability, and health and wellness.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Its vision says the school uses innovative methods to provide quality education in a smaller, more responsive learning environment.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Official materials say its ENRICH program includes topics like public speaking, emotional intelligence, personal finance, teamwork, leadership, and healthy living.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "The school says it applies brain-based research methods and hands-on learning in a brain-compatible environment.",
+          "difficulty": 7,
+          "category": "instructional-model",
+          "sourceRefs": ["missionVision"]
+        },
+        {
+          "text": "Stephen Gay is listed on the administrative team as Executive Director.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["staff", "adminTeam"]
+        }
+      ]
+    },
+    {
+      "schoolId": "franklin-academy",
+      "officialName": "Franklin Academy",
+      "status": "validated-batch-003",
+      "sourceLinks": {
+        "mission": "https://franklinacademy.org/about-us/mission/",
+        "board": "https://franklinacademy.org/about-us/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Its mission emphasizes academic achievement, creativity, technological sophistication, a love of learning, accountability, self-esteem, and the development of good citizens.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The school says exceptional instruction by highly skilled, qualified, and devoted teachers should produce the highest possible student outcomes.",
+          "difficulty": 5,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official history language says the school was founded in 1998 as one of North Carolina's 100 charter schools.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Its website describes the school as providing a civil environment for academic excellence.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "The board page says the school is not affiliated with any other charter school or management organization.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Robert L. Luddy is listed as chairman of the board.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "pine-springs-preparatory-academy",
+      "officialName": "Pine Springs Preparatory Academy",
+      "status": "validated-batch-003",
+      "sourceLinks": {
+        "home": "https://pinespringsprep.org/",
+        "discover": "https://pinespringsprep.org/administrative-team/",
+        "board": "https://pinespringsprep.org/board-of-directors-2/",
+        "academics": "https://pinespringsprep.org/academics/",
+        "technology": "https://pinespringsprep.org/instructional-technologies/"
+      },
+      "clues": [
+        {
+          "text": "Its official branding includes the phrase \"Blazing Trails in Education.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it transforms lives through authentic, collaborative learning experiences.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "discover"]
+        },
+        {
+          "text": "Its Pioneer Core Values include curiosity, resilience, and leadership.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["academics"]
+        },
+        {
+          "text": "Academic pages highlight both the Core Knowledge Sequence and Singapore Math.",
+          "difficulty": 6,
+          "category": "specialty",
+          "sourceRefs": ["home", "academics"]
+        },
+        {
+          "text": "The technology program includes a student technology help desk and stylus-enabled Chromebooks.",
+          "difficulty": 7,
+          "category": "academic-technology",
+          "sourceRefs": ["technology"]
+        },
+        {
+          "text": "Erin Fisher is listed as board chair.",
+          "difficulty": 8,
+          "category": "board-member",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "shining-rock-classical-academy",
+      "officialName": "Shining Rock Classical Academy",
+      "status": "validated-batch-003",
+      "sourceLinks": {
+        "home": "https://www.shiningrock.org/",
+        "story": "https://www.shiningrock.org/about/story",
+        "board": "https://www.shiningrock.org/about/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its homepage tagline says, \"Build confidence for lifelong learning.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Another official phrase on the site is \"Engage. Experience. Achieve.\"",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it cultivates critical thinking and a lifelong love of learning through rigorous academics, experiential education, and core values.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Those published core values are Integrity, Respect, Compassion, Responsibility, Wisdom, and Leadership.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its founding story says the school opened in fall 2015 and initially partnered with Team CFA to use the Core Knowledge Sequence.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "Its board meets on the fourth Wednesday of the month at 6:30 pm unless otherwise posted.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "union-academy",
+      "officialName": "Union Academy",
+      "status": "validated-batch-003",
+      "sourceLinks": {
+        "home": "https://www.unionacademy.org/",
+        "weAreUA": "https://www.unionacademy.org/about-ua/we-are-ua",
+        "about": "https://www.unionacademy.org/about-ua"
+      },
+      "clues": [
+        {
+          "text": "Its official slogan is \"Challenge. Character. Community.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school is dedicated to educating the whole child through challenging instruction, strong character development, and collaborative family and community involvement.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["weAreUA"]
+        },
+        {
+          "text": "The vision describes a pathway by which children mature into confident young adults ready to contribute to local and global communities.",
+          "difficulty": 5,
+          "category": "vision",
+          "sourceRefs": ["weAreUA"]
+        },
+        {
+          "text": "Official history language says it is a National School of Character and the first and longest operating charter school in Union County.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its stated values revolve around high academic expectations, high character expectations, school community, and service to others.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["weAreUA"]
+        },
+        {
+          "text": "Amy Yermack is listed as Interim Head of School, and the school notes she has spent 14 years there in multiple leadership roles.",
+          "difficulty": 8,
+          "category": "school-leader",
+          "sourceRefs": ["home", "about"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Twenty-fourth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "asheville-peak-academy",
+      "officialName": "Asheville PEAK Academy",
+      "status": "validated-batch-024",
+      "sourceLinks": {
+        "home": "https://www.avlpeakacademy.org/",
+        "about": "https://www.avlpeakacademy.org/about",
+        "leadership": "https://www.avlpeakacademy.org/leadership",
+        "board": "https://www.avlpeakacademy.org/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its materials say the school strives to close the achievement gap through personalized instruction and character education.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "Official branding says it is \"Striving for academic excellence, cultivating leaders who will rise to the P.E.A.K.\"",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school emphasizes student growth and community connection as part of its public charter model.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["home", "leadership"]
+        },
+        {
+          "text": "Official pages list Kidada Wynn as executive director.",
+          "difficulty": 7,
+          "category": "leadership",
+          "sourceRefs": ["about", "leadership"]
+        },
+        {
+          "text": "Official board pages list David Robinson as board chair.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Its board page says the board meets on the second Tuesday of each month.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "aspire-trade-high",
+      "officialName": "Aspire Trade High",
+      "status": "validated-batch-024",
+      "sourceLinks": {
+        "home": "https://aspiretradehs.org/",
+        "faq": "https://aspiretradehs.org/frequently-asked-questions-faq/",
+        "board": "https://aspiretradehs.org/board-meeting-dates-2/",
+        "staff": "https://aspiretradehs.org/staff-directory/"
+      },
+      "clues": [
+        {
+          "text": "Official materials describe it as the Charlotte region's first public trade high school.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says students choose from 11 trade opportunities while working toward a Future-Ready Core diploma.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials emphasize hands-on learning, strong academics, and real-world career pathways.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it was established by the Aspire Carolinas Foundation.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official board pages list Melinda Bales as board chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official staff pages list Lafrieeda Busby as executive administrator.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "bethany-community-school",
+      "officialName": "Bethany Community School",
+      "status": "validated-batch-024",
+      "sourceLinks": {
+        "home": "https://www.bcswolves.org/",
+        "mission": "https://www.bcswolves.org/about/mission",
+        "history": "https://www.bcswolves.org/about/history",
+        "administration": "https://www.bcswolves.org/about/administration",
+        "welcome": "https://www.bcswolves.org/about/welcome"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school aims to be the premier school of choice where academic rigor and character excellence cultivate college-ready learners and strengthen community.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official history pages say the charter was approved by the State Board of Education on February 3, 2000.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "The school traces its origins to a community fight to preserve a smaller K-8 structure instead of consolidation.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "Its recent messaging says students are shaped into curious thinkers, connected individuals, and courageous leaders.",
+          "difficulty": 6,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school expanded into a new 77,000-square-foot facility in 2017 and graduated its first senior class in 2021.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["history"]
+        },
+        {
+          "text": "Official administration pages list Scott Lewis as executive director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["administration", "welcome"]
+        }
+      ]
+    },
+    {
+      "schoolId": "casa-esperanza-montessori-charter-school",
+      "officialName": "Casa Esperanza Montessori Charter School",
+      "status": "validated-batch-024",
+      "sourceLinks": {
+        "home": "https://www.cemcs.org/",
+        "about": "https://www.cemcs.org/about-casa/",
+        "board": "https://www.cemcs.org/get-involved/board-committee-information/",
+        "financials": "https://www.cemcs.org/who-we-are/financials/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school fosters independence, inclusivity, critical thinking, and a sense of global responsibility using Montessori philosophy and Spanish language acquisition.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about", "financials"]
+        },
+        {
+          "text": "Official materials say the school was founded in 2003.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "The school offers both Spanish Immersion and Spanish Enrichment as two different language-learning pathways.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "Official materials say immersion graduates often test out of Spanish 1 and frequently Spanish 2 in high school.",
+          "difficulty": 6,
+          "category": "program-outcome",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school describes itself as Wake County's only dual-language Montessori school.",
+          "difficulty": 7,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its board materials say the board meets monthly, typically on the third Thursday at 5:00 p.m.",
+          "difficulty": 8,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "sallie-b-howard-school",
+      "officialName": "Sallie B Howard School",
+      "status": "validated-batch-024",
+      "sourceLinks": {
+        "about": "https://salliebhowardschool.com/about/",
+        "mission": "https://salliebhowardschool.com/about/mission/",
+        "history": "https://salliebhowardschool.com/about/yep-sbhs-history-and-background/",
+        "leadership": "https://salliebhowardschool.com/meet-our-staff/leadership-team/",
+        "facilities": "https://salliebhowardschool.com/about/facilities/",
+        "pride": "https://salliebhowardschool.com/about/pride-power/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school cultivates high student achievement in academics, character, and the arts.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["mission"]
+        },
+        {
+          "text": "Official materials say the school was founded in 1997 in Wilson.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school highlights a performing arts-based curriculum and a study abroad program that has taken students to nearly all seven continents.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school earned a 2021 National Blue Ribbon School Award.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its PRIDE Power character program teaches perseverance, respect, integrity, discipline, and excellence.",
+          "difficulty": 7,
+          "category": "school-culture",
+          "sourceRefs": ["pride"]
+        },
+        {
+          "text": "Official leadership pages list Dr. JoAnne Woodard as founder and executive director and Glenn Reaves as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    }
+  ]
+}

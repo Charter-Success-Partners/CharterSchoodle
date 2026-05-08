@@ -1,0 +1,254 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Nineteenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "movement-charter-school",
+      "officialName": "Movement Charter School",
+      "status": "validated-batch-019",
+      "sourceLinks": {
+        "home": "https://www.movementschools.org/",
+        "story": "https://www.movementschools.org/our-story/",
+        "leadership": "https://www.movementschools.org/leadership/",
+        "board": "https://www.movementschools.org/school-board-minutes/",
+        "wellness": "https://www.movementschools.org/local-wellness-policy/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school exists to love and value scholars and communities by leading a movement of excellence in education.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "story"]
+        },
+        {
+          "text": "Official history pages say the first Movement campus opened on Freedom Drive in 2017.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "The school says it equips scholars with self-efficacy, access to world-class instruction, and financial education to close generational gaps.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home", "story"]
+        },
+        {
+          "text": "Its wellness policy says the school is committed to environments that protect children's health and well-being.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["wellness"]
+        },
+        {
+          "text": "Movement's North Carolina board page lists Garrett McNeill as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official leadership pages list Kerri-Ann T. Thomas as CEO.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "movement-school-eastland",
+      "officialName": "Movement School Eastland",
+      "status": "validated-batch-019",
+      "sourceLinks": {
+        "campus": "https://www.movementschools.org/campus/eastland/",
+        "leadership": "https://www.movementschools.org/leadership/",
+        "board": "https://www.movementschools.org/school-board-minutes/"
+      },
+      "clues": [
+        {
+          "text": "Official pages say the campus is a community of the nations that celebrates the diversity of East Charlotte and the world.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "The school highlights three distinctives: small-school setting, lead with virtue, and school of the nations.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Its principal message says the school grows the whole scholar socially, emotionally, and academically.",
+          "difficulty": 6,
+          "category": "leadership-philosophy",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Official pages say the school emphasizes community circle and strong family partnerships.",
+          "difficulty": 6,
+          "category": "school-culture",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Movement's North Carolina board page lists Garrett McNeill as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official leadership pages list Chelsea Hobbing as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["campus", "leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "movement-school-northwest",
+      "officialName": "Movement School Northwest",
+      "status": "validated-batch-019",
+      "sourceLinks": {
+        "campus": "https://www.movementschools.org/campus/northwest-elementary/",
+        "leadership": "https://www.movementschools.org/leadership/",
+        "board": "https://www.movementschools.org/school-board-minutes/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school opened in August 2023.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "The school highlights small-school setting and leading with virtue as central distinctives.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Its principal message says learning comes first, always.",
+          "difficulty": 5,
+          "category": "identity",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Official pages say the principal's leadership has contributed to measurable academic growth, including two North Carolina Academic Growth Awards.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Movement's North Carolina board page lists Garrett McNeill as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official leadership pages list Kenneth Gorham as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["campus", "leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "movement-school-southwest",
+      "officialName": "Movement School Southwest",
+      "status": "validated-batch-019",
+      "sourceLinks": {
+        "campus": "https://www.movementschools.org/campus/southwest/",
+        "campusInfo": "https://www.movementschools.org/campuses/southwest/",
+        "leadership": "https://www.movementschools.org/leadership/",
+        "board": "https://www.movementschools.org/school-board-minutes/"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school opened in August 2022.",
+          "difficulty": 3,
+          "category": "history",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "The school describes itself as a brand new facility in Southwest Charlotte.",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["campus"]
+        },
+        {
+          "text": "Its campus information highlights family engagement as a shared responsibility between school, parents, and community.",
+          "difficulty": 5,
+          "category": "school-culture",
+          "sourceRefs": ["campusInfo"]
+        },
+        {
+          "text": "Official pages say the school uses parent engagement to strengthen academic, behavioral, and emotional success.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["campusInfo"]
+        },
+        {
+          "text": "Movement's North Carolina board page lists Garrett McNeill as chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official leadership pages list Dr. Shenaille Beckley Danso as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["campusInfo", "leadership"]
+        }
+      ]
+    },
+    {
+      "schoolId": "tmsa-charlotte",
+      "officialName": "TMSA Charlotte",
+      "status": "validated-batch-019",
+      "sourceLinks": {
+        "about": "https://www.tmsacharlotte.org/about/about_us/",
+        "advantage": "https://concordsec.tmsaschools.org/discover-tmsa/tmsa-advantage",
+        "staff": "https://concordsec.tmsaschools.org/contact-us/staff-directory",
+        "board": "https://www.tmsapcs.org/t_m_s_a_board/board___governance",
+        "principalElementary": "https://charlotte.tmsaschools.org/discover-us/principals-message"
+      },
+      "clues": [
+        {
+          "text": "Official materials say the school became TMSA Charlotte in June 2022 after Queen City STEM School joined the TMSA family.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its public-facing motto is \"Science, Wisdom, Peace.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["about", "advantage"]
+        },
+        {
+          "text": "The school says it focuses on STEAM and character education in a safe, nurturing, and culturally responsive learning environment.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about", "advantage"]
+        },
+        {
+          "text": "Official pages say the TMSA model emphasizes whole-child focus alongside rigorous academics.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["advantage"]
+        },
+        {
+          "text": "TMSA governance pages list Victor Ofori-Boadu as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Mr. Aydin as principal of the secondary campus and Amani Saeed as principal of the elementary campus.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "principalElementary"]
+        }
+      ]
+    }
+  ]
+}

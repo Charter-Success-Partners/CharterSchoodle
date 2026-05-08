@@ -1,0 +1,256 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Seventh validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "central-park-school-for-children",
+      "officialName": "Central Park School For Children",
+      "status": "validated-batch-007",
+      "sourceLinks": {
+        "missionValues": "https://cpsfc.org/educational-program/mission-values/",
+        "about": "https://cpsfc.org/educational-program/about/",
+        "whoWeAre": "https://cpsfc.org/who-we-are/",
+        "board": "https://cpsfc.org/who-we-are/board-of-trustees/",
+        "executiveDirector": "https://cpsfc.org/who-we-are/letter-from-our-executive-director/"
+      },
+      "clues": [
+        {
+          "text": "Its mission is expressed in three words: All Children Thrive.",
+          "difficulty": 2,
+          "category": "mission",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Official history says it was the first Project Based Learning public school in North Carolina and the first diverse-by-design public charter school in the Southern United States.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["about", "whoWeAre"]
+        },
+        {
+          "text": "The school says it nurtures children's natural eagerness through child-centered Project Based Learning, arts integration, and outdoor learning.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["about", "whoWeAre"]
+        },
+        {
+          "text": "Its published values for children include kindness, empathy, generosity, honesty, and learning through play, art, music, dance, drama, and creative writing.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "The executive director's message says the school was one of the first 100 charter schools in North Carolina.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["executiveDirector"]
+        },
+        {
+          "text": "Official pages list Arlie Harris as Executive Director and Chanel Carrell as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["executiveDirector", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "fernleaf",
+      "officialName": "FernLeaf",
+      "status": "validated-batch-007",
+      "sourceLinks": {
+        "home": "https://www.fernleafccs.org/",
+        "fundamentals": "https://www.fernleafccs.org/fernleaf-fundamentals",
+        "team": "https://www.fernleafccs.org/team",
+        "directorNote": "https://www.fernleafccs.org/post/a-note-to-new-families-from-fernleaf-executive-director"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school fosters a rich learning environment that embodies the essence of community, understanding, and the human spirit.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["fundamentals"]
+        },
+        {
+          "text": "Official materials say students learn by doing through meaningful projects, hands-on experiences, and strong academic instruction.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school organizes its approach around four \"FernLeaf Fundamentals\": Rich Learning Environments, Community and Culture, Social and Emotional Growth and Development, and High Quality Academic Instruction.",
+          "difficulty": 5,
+          "category": "framework",
+          "sourceRefs": ["fundamentals"]
+        },
+        {
+          "text": "Its fundamentals page says every student participates in at least eight fieldwork experiences each year, with overnight experiences built into the program.",
+          "difficulty": 6,
+          "category": "program",
+          "sourceRefs": ["fundamentals"]
+        },
+        {
+          "text": "The executive director wrote that he is the founder of the school.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["directorNote"]
+        },
+        {
+          "text": "The team page lists Michael Luplow as Executive Director, with Jenn Love and Molly Luplow serving as Lower School and Upper School Directors.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["team"]
+        }
+      ]
+    },
+    {
+      "schoolId": "mountain-discovery",
+      "officialName": "Mountain Discovery",
+      "status": "validated-batch-007",
+      "sourceLinks": {
+        "home": "https://mountaindiscovery.org/",
+        "ourSchool": "https://mountaindiscovery.org/our-school/",
+        "staff": "https://mountaindiscovery.org/staff/",
+        "board": "https://mountaindiscovery.org/our-school/mdcs-board/"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school inspires students to enjoy and lead their own learning.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "ourSchool"]
+        },
+        {
+          "text": "Official history says the school opened its doors in 2002.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says its students are engaged in an experientially rich, hands-on course of study designed to maximize each child's potential as a responsible citizen of local and global communities.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["ourSchool"]
+        },
+        {
+          "text": "Its sports program is described as being based on the Outward Bound principle of Collaboration and Competition.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["ourSchool"]
+        },
+        {
+          "text": "The school has an afterschool program called JAM that encourages the growth of young musicians.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["ourSchool"]
+        },
+        {
+          "text": "Official staff pages say the school is led by three Co-Directors: Crim Bassett, Billie Clemens, and Tracy Wharton.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff"]
+        }
+      ]
+    },
+    {
+      "schoolId": "the-franklin-school-of-innovation",
+      "officialName": "The Franklin School of Innovation",
+      "status": "validated-batch-007",
+      "sourceLinks": {
+        "home": "https://www.franklinschoolofinnovation.org/",
+        "story": "https://www.franklinschoolofinnovation.org/our-story/",
+        "contact": "https://www.franklinschoolofinnovation.org/our-story/contact-us/",
+        "board": "https://www.franklinschoolofinnovation.org/our-story/board-of-directors/"
+      },
+      "clues": [
+        {
+          "text": "Its homepage quotes Benjamin Franklin: \"Tell me and I forget. Teach me and I remember. Involve me and I learn.\"",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says innovation is not a passive process and that students are challenged with big questions and problems so they learn to lead.",
+          "difficulty": 4,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its story says the school grew out of two questions about why school has not changed enough and what skills students need in a rapidly changing world.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "Official history says the school joined a national network of EL Education schools and opened in 2014.",
+          "difficulty": 6,
+          "category": "history",
+          "sourceRefs": ["story"]
+        },
+        {
+          "text": "Its website says community engagement is at the core of the school, citing projects such as cleaning up Hominy Creek, planting trees, and partnering with Habitat for Humanity.",
+          "difficulty": 6,
+          "category": "community-engagement",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official pages list Michelle Vruwink as Executive Director and Al Glicksberg as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["contact", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "two-rivers-community-school",
+      "officialName": "Two Rivers Community School",
+      "status": "validated-batch-007",
+      "sourceLinks": {
+        "home": "https://trcsboone.org/",
+        "missionHistory": "https://trcsboone.org/about-us/mission-and-history",
+        "curriculum": "https://trcsboone.org/two-rivers-way",
+        "board": "https://trcsboone.org/board-of-directors",
+        "staff": "https://trcsboone.org/staff-bios/giljkn5gd51mdo0k4qu89kni84x89a"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school supports each student's continuing discovery and development of self and community through a learning environment that is relevant, active, and project oriented.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionHistory"]
+        },
+        {
+          "text": "The school's published core principles include Inquisitiveness, Environmental Responsibility, Active Learning, Empathy, Mindfulness, Innovation, Resilience, and Connection to Community.",
+          "difficulty": 6,
+          "category": "values",
+          "sourceRefs": ["missionHistory"]
+        },
+        {
+          "text": "Its homepage says the school is founded on the Experiential Learning framework and uses the community as a vital resource.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The curriculum page says every 8th grader completes a Passage Portfolio capstone with a public presentation.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["curriculum"]
+        },
+        {
+          "text": "Official history says the school began serving families in the 2005-2006 school year and later earned NC Green School of Quality recognition.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["missionHistory"]
+        },
+        {
+          "text": "The board page lists Jennifer Kirby as board chair and Natalie Oransky as director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["board", "staff"]
+        }
+      ]
+    }
+  ]
+}

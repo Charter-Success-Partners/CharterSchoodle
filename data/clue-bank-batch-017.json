@@ -1,0 +1,258 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Seventeenth validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "brevard-academy",
+      "officialName": "Brevard Academy",
+      "status": "validated-batch-017",
+      "sourceLinks": {
+        "home": "https://www.brevardacademy.org/",
+        "about": "https://www.brevardacademy.org/about",
+        "profile": "https://www.brevardacademy.org/schoolprofile",
+        "board": "https://www.brevardacademy.org/board-information",
+        "director": "https://www.brevardacademy.org/meet-the-director"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school prepares students to achieve academic excellence through the Core Knowledge Sequence.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about", "profile"]
+        },
+        {
+          "text": "Official materials describe the school as a Challenge Foundation Academy.",
+          "difficulty": 3,
+          "category": "identity",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says students live by an Honor Code built around consideration, integrity, positive spirit, and value of the individual.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["about", "profile"]
+        },
+        {
+          "text": "Official pages highlight an excellent music and art program along with outdoor education.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["about", "profile"]
+        },
+        {
+          "text": "Its board page says regular board meetings are usually held on the third Wednesday of each month.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Ted Duncan as school director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["director"]
+        }
+      ]
+    },
+    {
+      "schoolId": "carolina-charter-academy",
+      "officialName": "Carolina Charter Academy",
+      "status": "validated-batch-017",
+      "sourceLinks": {
+        "home": "https://carolinacharter.org/",
+        "profile": "https://carolinacharter.org/school-profile",
+        "board": "https://carolinacharter.org/board-of-directors",
+        "renewal": "https://carolinacharter.org/blog/carolina-charter-academy-awarded-10-year-charter-renewal-by-north-carolina-charter-schools-review-board",
+        "athletics": "https://carolinacharter.org/athletics-about"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school prepares students for a lifetime of learning by developing their natural passion for discovery and problem-solving.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["home", "profile"]
+        },
+        {
+          "text": "Official materials say the school opened in fall 2019.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["profile"]
+        },
+        {
+          "text": "The school says it teaches values of honesty, consideration, and responsibility while cultivating informed and engaged citizens.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "A January 2026 announcement says the school was awarded a 10-year charter renewal by the North Carolina Charter Schools Review Board.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["home", "renewal"]
+        },
+        {
+          "text": "Its board page lists Ryan Hunt as board chair.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official materials highlight an engaging STEM program for grades 4-8 and a growing athletic program.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["profile", "athletics"]
+        }
+      ]
+    },
+    {
+      "schoolId": "eno-river-academy",
+      "officialName": "Eno River Academy",
+      "status": "validated-batch-017",
+      "sourceLinks": {
+        "home": "https://www.enoriveracademy.org/",
+        "whyEra": "https://www.enoriveracademy.org/page/why-era",
+        "elementary": "https://www.enoriveracademy.org/page/elementary",
+        "board": "https://www.enoriveracademy.org/page/board-of-directors",
+        "staff": "https://www.enoriveracademy.org/staff",
+        "news": "https://www.enoriveracademy.org/live-feed?page_no=4"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing tagline is \"Inspiring excellence. Nurturing innovation.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school fosters academic and artistic excellence while enriching cultural literacy.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["whyEra", "elementary"]
+        },
+        {
+          "text": "Official materials say the school has roots in North Carolina's original wave of charter schools and traces its tradition of excellence back to 1997.",
+          "difficulty": 5,
+          "category": "history",
+          "sourceRefs": ["elementary", "board"]
+        },
+        {
+          "text": "The school says its K-12 program is powered by STREAM: Science, Technology, Research, Engineering, Arts, and Math.",
+          "difficulty": 5,
+          "category": "program",
+          "sourceRefs": ["whyEra"]
+        },
+        {
+          "text": "Its board page says regular board meetings are typically held on the fourth Tuesday at 5:30 p.m.",
+          "difficulty": 6,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages identify Lindsey Sealy as executive director.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["staff", "news"]
+        }
+      ]
+    },
+    {
+      "schoolId": "triad-math-and-science-academy",
+      "officialName": "Triad Math and Science Academy",
+      "status": "validated-batch-017",
+      "sourceLinks": {
+        "home": "https://www.tmsatriad.org/",
+        "about": "https://www.triad-es.org/about",
+        "principal": "https://triadsec.tmsaschools.org/discover-us/principals-message",
+        "board": "https://www.tmsapcs.org/t_m_s_a_board/board___governance"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing motto is \"Science, Wisdom, Peace.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school prepares students to become competent, responsible, and successful individuals in a globalized and technology-based society.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school was established in 2008 by public charter school advocates.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it focuses on STEAM and emphasizes a safe, nurturing, and culturally responsive learning environment.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "TMSA governance pages list Victor Ofori-Boadu as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official principal pages list Fatih Kandil as principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["principal"]
+        }
+      ]
+    },
+    {
+      "schoolId": "triangle-math-and-science-academy",
+      "officialName": "Triangle Math and Science Academy",
+      "status": "validated-batch-017",
+      "sourceLinks": {
+        "home": "https://www.tmsatriangle.org/",
+        "caryPrincipal": "https://cary.tmsaschools.org/discover-us/principals-message",
+        "apexPrincipal": "https://apex.tmsaschools.org/discover-us/principals-message",
+        "board": "https://www.tmsapcs.org/t_m_s_a_board/board___governance"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing motto is \"Science, Wisdom, Peace.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Official materials say the school was established in 2012 in response to demand created by the first TMSA campus.",
+          "difficulty": 4,
+          "category": "history",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "The school says it is a Cognia-accredited Leader in Me school dedicated to STEAM excellence.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its public materials say it has consistently earned the highest level school performance designation since North Carolina began issuing those grades in 2013-2014.",
+          "difficulty": 6,
+          "category": "recognition",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "TMSA governance pages list Victor Ofori-Boadu as board president.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official campus pages list Benjamin Cobanli as Cary principal and Serdar Yuksekkaya as Apex principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["caryPrincipal", "apexPrincipal"]
+        }
+      ]
+    }
+  ]
+}

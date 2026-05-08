@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-05-08",
+  "notes": [
+    "Eleventh validated clue batch compiled from official school websites.",
+    "Clues intentionally avoid revealing enrollment size, grade span, or directional/proximity information because those are gameplay feedback channels."
+  ],
+  "schools": [
+    {
+      "schoolId": "ala-monroe",
+      "officialName": "ALA Monroe",
+      "status": "validated-batch-011",
+      "sourceLinks": {
+        "home": "https://www.alaschools.org/nc/monroe-k-8",
+        "about": "https://www.alaschools.org/nc/monroe-k-8/about",
+        "board": "https://www.alaschools.org/nc/monroe-k-8/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing identity calls the school the Home of the Mavericks.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school supports families by providing the best educational experience possible in a moral and wholesome environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school is guided by R.A.I.S.E. values: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 4,
+          "category": "values",
+          "sourceRefs": ["home", "about"]
+        },
+        {
+          "text": "The school says leadership and character development are woven into daily life through leadership lessons, collaborative projects, and service opportunities.",
+          "difficulty": 6,
+          "category": "school-model",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its board page says regular board meetings are held virtually on the third Thursday of the month at 1:00 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Dr. Bridget Jones as Director and Kyle Shrauger as Board Chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "american-leadership-academy-charlotte",
+      "officialName": "American Leadership Academy Charlotte",
+      "status": "validated-batch-011",
+      "sourceLinks": {
+        "home": "https://www.alaschools.org/nc/charlotte-k-8",
+        "about": "https://www.alaschools.org/nc/charlotte-k-8/about",
+        "board": "https://www.alaschools.org/nc/charlotte-k-8/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing identity calls the school the Home of the Warriors.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school supports families by offering the best educational experience possible in a moral and wholesome environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "The school says it is guided by R.A.I.S.E. values and aims to develop capable, compassionate leaders who make a positive impact in their communities.",
+          "difficulty": 4,
+          "category": "values",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "Official pages describe the school as formerly operated as Aristotle Preparatory Academy.",
+          "difficulty": 7,
+          "category": "history",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its board page says board meetings are held virtually on the third Thursday of the month at 1:00 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Carmi Green as Director and Kyle Shrauger as Board Chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "american-leadership-academy-johnston",
+      "officialName": "American Leadership Academy - Johnston",
+      "status": "validated-batch-011",
+      "sourceLinks": {
+        "aboutK5": "https://www.alaschools.org/nc/johnston-k-5/about",
+        "about612": "https://www.alaschools.org/nc/johnston-6-12/about",
+        "board": "https://www.alaschools.org/nc/johnston-6-12/board-of-directors",
+        "values": "https://www.alaschools.org/nc/johnston-k-5/about/leadership"
+      },
+      "clues": [
+        {
+          "text": "Its mission says the school supports families by offering the best educational experience possible in a moral and wholesome environment.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["aboutK5", "about612"]
+        },
+        {
+          "text": "Official materials say the school is guided by R.A.I.S.E. values: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 4,
+          "category": "values",
+          "sourceRefs": ["aboutK5", "about612", "values"]
+        },
+        {
+          "text": "The school says students are inspired to Learn. Lead. Change the World!",
+          "difficulty": 4,
+          "category": "identity",
+          "sourceRefs": ["aboutK5", "about612"]
+        },
+        {
+          "text": "The school's public materials highlight Glenn Way as founder and feature his statement about helping students become the best spouses, parents, citizens, and leaders.",
+          "difficulty": 7,
+          "category": "founder",
+          "sourceRefs": ["aboutK5", "about612"]
+        },
+        {
+          "text": "Its board page says regular board meetings are held virtually on the fourth Monday of the month at 7:00 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Talia Wright as Director and Matt Waring as Chairman of the Board.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["aboutK5", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "bonnie-cone-leadership-academy",
+      "officialName": "Bonnie Cone Leadership Academy",
+      "status": "validated-batch-011",
+      "sourceLinks": {
+        "home": "https://www.bonniecone.org/leadership",
+        "about": "https://www.bonniecone.org/leadership/about",
+        "board": "https://www.bonniecone.org/leadership/board-of-directors",
+        "careers": "https://www.bonniecone.org/leadership/about/careers"
+      },
+      "clues": [
+        {
+          "text": "Its public-facing identity calls the school the Home of the Eagles.",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["home"]
+        },
+        {
+          "text": "Its mission says the school cultivates both intellectual and personal character, preparing students to excel in college and future careers while emerging as positive leaders in their communities.",
+          "difficulty": 4,
+          "category": "mission",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official materials say the school extends a classical education model and emphasizes leadership development and real-world readiness.",
+          "difficulty": 5,
+          "category": "school-model",
+          "sourceRefs": ["about", "home"]
+        },
+        {
+          "text": "The school says it teaches through Core Knowledge, classical practices, and the R.A.I.S.E. virtues.",
+          "difficulty": 6,
+          "category": "curriculum",
+          "sourceRefs": ["about", "careers"]
+        },
+        {
+          "text": "Its board page says regular board meetings are held on the third Tuesday of each month at 4:45 p.m.",
+          "difficulty": 7,
+          "category": "governance",
+          "sourceRefs": ["board"]
+        },
+        {
+          "text": "Official pages list Christy Williamsen and Ramon Richardson as school leaders, with Rev. Martin McCarthy serving as board chair.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["home", "board"]
+        }
+      ]
+    },
+    {
+      "schoolId": "carolina-international-school",
+      "officialName": "Carolina International School",
+      "status": "validated-batch-011",
+      "sourceLinks": {
+        "about": "https://www.ciscomets.com/about",
+        "missionValues": "https://www.ciscomets.com/about/mission-and-core-values",
+        "administration": "https://www.ciscomets.com/about/faculty-and-staff/administration",
+        "board": "https://www.ciscomets.com/about/board-of-directors"
+      },
+      "clues": [
+        {
+          "text": "Its signature statement is \"The World is Our Family.\"",
+          "difficulty": 2,
+          "category": "identity",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Its mission says the school nurtures students' natural curiosity and joy of learning through a challenging, interdisciplinary, international curriculum.",
+          "difficulty": 3,
+          "category": "mission",
+          "sourceRefs": ["missionValues", "administration"]
+        },
+        {
+          "text": "Official materials say the school aims to develop critical and compassionate thinkers, confident and open-minded communicators, and resourceful and responsible citizens and leaders.",
+          "difficulty": 5,
+          "category": "graduate-profile",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "Its four core values are Respect, Responsibility, Solutions, and Service.",
+          "difficulty": 5,
+          "category": "values",
+          "sourceRefs": ["missionValues"]
+        },
+        {
+          "text": "The school says its curriculum includes international and environmental studies and that athletics compete in both NCHSAA and the Carolina Beltway Conference.",
+          "difficulty": 7,
+          "category": "program",
+          "sourceRefs": ["about"]
+        },
+        {
+          "text": "Official pages list Dr. Paul Bryant as Head of School and Mrs. La-Kisha Donaldson as Principal.",
+          "difficulty": 8,
+          "category": "leadership",
+          "sourceRefs": ["administration"]
+        }
+      ]
+    }
+  ]
+}
