@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08",
+  "generatedAt": "2026-05-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 732,
+    "puzzleCount": 733,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-07"
+    "endDate": "2028-05-08"
   },
   "puzzles": [
     {
@@ -21991,6 +21991,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-08",
+      "answerSchoolId": "east-wake-academy",
+      "clues": [
+        {
+          "text": "An official news article says Anthony Pirrello was hired as Executive Director effective November 1, 2022.",
+          "difficulty": 7
+        },
+        {
+          "text": "The staff directory lists Bradley Bowman as Athletic Director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its homepage features this promise: the school is dedicated to giving all students an opportunity to reach their fullest potential.",
+          "difficulty": 3
+        },
+        {
+          "text": "That homepage statement is attributed to Anthony Pirrello.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official athletics pages brand the sports program separately as EWA Athletics.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
