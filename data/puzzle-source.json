@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09",
+  "generatedAt": "2026-05-10",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 733,
+    "puzzleCount": 734,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-08"
+    "endDate": "2028-05-09"
   },
   "puzzles": [
     {
@@ -22021,6 +22021,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-09",
+      "answerSchoolId": "faith-academy-charter-school",
+      "clues": [
+        {
+          "text": "Official pages say scholars participate in life-skills activities such as gardening, cooking, and financial literacy alongside academics.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school highlights project-based learning as one of its core academic features.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school empowers all students to become successful learners who exhibit confidence, social responsibility, and a love of learning.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school is committed to creating community-minded leaders.",
+          "difficulty": 5
+        },
+        {
+          "text": "Staff pages identify Dr. George Wilhelm as principal.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter F."
         }
       ]
     }
