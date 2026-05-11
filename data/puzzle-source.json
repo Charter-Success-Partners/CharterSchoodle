@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10",
+  "generatedAt": "2026-05-11",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 734,
+    "puzzleCount": 735,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-09"
+    "endDate": "2028-05-10"
   },
   "puzzles": [
     {
@@ -22051,6 +22051,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter F."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-10",
+      "answerSchoolId": "american-leadership-academy-charlotte",
+      "clues": [
+        {
+          "text": "Official pages describe the school as formerly operated as Aristotle Preparatory Academy.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official pages list Carmi Green as Director and Kyle Shrauger as Board Chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its mission says the school supports families by offering the best educational experience possible in a moral and wholesome environment.",
+          "difficulty": 3
+        },
+        {
+          "text": "The school says it is guided by R.A.I.S.E. values and aims to develop capable, compassionate leaders who make a positive impact in their communities.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public-facing identity calls the school the Home of the Warriors.",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
