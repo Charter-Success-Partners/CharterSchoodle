@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11",
+  "generatedAt": "2026-05-12",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 735,
+    "puzzleCount": 736,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-10"
+    "endDate": "2028-05-11"
   },
   "puzzles": [
     {
@@ -22081,6 +22081,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-11",
+      "answerSchoolId": "winterville-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages list Stacey Ryan as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its leadership page lists Kimber Cox as board president.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says it has outperformed the local district for the past 6 years.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school puts each student on a path to college readiness through rigorous curriculum, formative assessment, and strong character.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2015.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
