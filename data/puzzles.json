@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-12",
+  "generatedAt": "2026-05-13",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22085,6 +22085,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-12",
+      "answerSchoolId": "the-franklin-school-of-innovation",
+      "clues": [
+        {
+          "text": "Official pages list Michelle Vruwink as Executive Director and Al Glicksberg as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official history says the school joined a national network of EL Education schools and opened in 2014.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says innovation is not a passive process and that students are challenged with big questions and problems so they learn to lead.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its story says the school grew out of two questions about why school has not changed enough and what skills students need in a rapidly changing world.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its homepage quotes Benjamin Franklin: \"Tell me and I forget. Teach me and I remember. Involve me and I learn.\"",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
