@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13",
+  "generatedAt": "2026-05-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 737,
+    "puzzleCount": 738,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-12"
+    "endDate": "2028-05-13"
   },
   "puzzles": [
     {
@@ -22141,6 +22141,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-13",
+      "answerSchoolId": "matthews-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages describe a broad activity program that includes sports, music, art, and clubs.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official pages list Brittany Houston as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it has outperformed the local district for the past 7 years.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school offers a challenging academic program and a culture that values strong character, educational excellence, and accountability.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2016.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
