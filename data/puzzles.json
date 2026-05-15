@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14",
+  "generatedAt": "2026-05-15",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22145,6 +22145,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-14",
+      "answerSchoolId": "union-academy",
+      "clues": [
+        {
+          "text": "Amy Yermack is listed as Interim Head of School, and the school notes she has spent 14 years there in multiple leadership roles.",
+          "difficulty": 8
+        },
+        {
+          "text": "The vision describes a pathway by which children mature into confident young adults ready to contribute to local and global communities.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school is dedicated to educating the whole child through challenging instruction, strong character development, and collaborative family and community involvement.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official history language says it is a National School of Character and the first and longest operating charter school in Union County.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its stated values revolve around high academic expectations, high character expectations, school community, and service to others.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter U."
         }
       ]
     }
