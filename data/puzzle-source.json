@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15",
+  "generatedAt": "2026-05-16",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 739,
+    "puzzleCount": 740,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-14"
+    "endDate": "2028-05-15"
   },
   "puzzles": [
     {
@@ -22201,6 +22201,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter U."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-15",
+      "answerSchoolId": "raleigh-charter-high-school",
+      "clues": [
+        {
+          "text": "The board page says Lisa Huddleston has served the school as community liaison, mathematics teacher, and academic dean before becoming principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its lessons are described as active, social, and creative.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission statement says the school challenges college-bound students in a creative and supportive atmosphere to become knowledgeable, thoughtful, contributing citizens.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official mission language says the school graduates citizens of the world through an interconnected learning environment.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school's preamble says it aims to sustain individual self-determination and community self-government.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
