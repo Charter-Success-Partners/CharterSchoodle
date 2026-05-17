@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-16",
+  "generatedAt": "2026-05-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 740,
+    "puzzleCount": 741,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-15"
+    "endDate": "2028-05-16"
   },
   "puzzles": [
     {
@@ -22231,6 +22231,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-16",
+      "answerSchoolId": "asheville-peak-academy",
+      "clues": [
+        {
+          "text": "Official board pages list David Robinson as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school emphasizes student growth and community connection as part of its public charter model.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its materials say the school strives to close the achievement gap through personalized instruction and character education.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official branding says it is \"Striving for academic excellence, cultivating leaders who will rise to the P.E.A.K.\"",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages list Kidada Wynn as executive director.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
