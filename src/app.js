@@ -39,15 +39,7 @@ const state = {
   winOverlaySeen: false,
 };
 
-const gradeBandOrder = [
-  "Elementary",
-  "Middle",
-  "High",
-  "Elementary+Middle",
-  "Middle+High",
-  "Elementary+High",
-  "Elementary+Middle+High",
-];
+const EARTH_RADIUS_MILES = 3958.8;
 
 async function loadData() {
   const [metadataResponse, schoolsResponse] = await Promise.all([
@@ -173,11 +165,16 @@ function renderHeader() {
 
 function renderBoard() {
   const rows = [];
+  const answerSchool = state.schoolMap.get(state.activePuzzle.answerSchoolId);
 
   for (let index = 0; index < GAME_CONFIG.maxGuesses; index += 1) {
     const clue = state.activePuzzle.clues[index];
     const guessRecord = state.progress.guesses[index];
     const guessedSchool = guessRecord ? state.schoolMap.get(guessRecord.schoolId) : null;
+    const feedback =
+      guessRecord && guessedSchool && answerSchool
+        ? buildFeedback(guessedSchool, answerSchool, guessRecord.correct)
+        : guessRecord?.feedback;
     const clueVisible = index < state.progress.revealedClues;
 
     rows.push(`
@@ -192,9 +189,9 @@ function renderBoard() {
         </td>
         <td class="board-guess">${guessedSchool ? guessedSchool.officialName : "—"}</td>
         <td>${guessRecord ? renderResultIcon(guessRecord.correct) : renderEmptyIcon()}</td>
-        <td>${guessRecord ? renderFeedbackIcon("enrollment", guessRecord.feedback.enrollment) : renderEmptyIcon()}</td>
-        <td>${guessRecord ? renderFeedbackIcon("gradeBand", guessRecord.feedback.gradeBand) : renderEmptyIcon()}</td>
-        <td>${guessRecord ? renderFeedbackIcon("direction", guessRecord.feedback.direction) : renderEmptyIcon()}</td>
+        <td>${feedback ? renderFeedbackIcon("enrollment", feedback.enrollment) : renderEmptyIcon()}</td>
+        <td>${feedback ? renderFeedbackIcon("gradeBand", feedback.gradeBand) : renderEmptyIcon()}</td>
+        <td>${feedback ? renderFeedbackIcon("direction", feedback.direction) : renderEmptyIcon()}</td>
       </tr>
     `);
   }
@@ -315,31 +312,117 @@ function handleGuessSubmission(event) {
 
 function buildFeedback(guessSchool, answerSchool, correct) {
   return {
-    enrollment: compareEnrollmentBand(guessSchool.enrollmentBand, answerSchool.enrollmentBand, correct),
-    gradeBand: compareGradeBand(guessSchool.gradeBand, answerSchool.gradeBand, correct),
+    enrollment: compareEnrollment(guessSchool, answerSchool, correct),
+    gradeBand: compareGradeSpan(guessSchool, answerSchool, correct),
     direction: compareDirection(guessSchool.coordinates, answerSchool.coordinates, correct),
   };
 }
 
-function compareEnrollmentBand(guessBand, answerBand, correct) {
-  if (correct || guessBand === answerBand) {
+function parseEnrollmentCount(school) {
+  const count = Number.parseFloat(school.adm2024);
+  return Number.isFinite(count) ? count : null;
+}
+
+function compareEnrollment(guessSchool, answerSchool, correct) {
+  if (correct) {
+    return { status: "match" };
+  }
+
+  if (
+    guessSchool.enrollmentBand &&
+    answerSchool.enrollmentBand &&
+    guessSchool.enrollmentBand === answerSchool.enrollmentBand
+  ) {
     return { status: "match" };
   }
 
   const bandOrder = ["0-400", "401-800", "801+"];
+  const guessIndex = bandOrder.indexOf(guessSchool.enrollmentBand);
+  const answerIndex = bandOrder.indexOf(answerSchool.enrollmentBand);
+  if (guessIndex !== -1 && answerIndex !== -1) {
+    return {
+      status: guessIndex < answerIndex ? "too-small" : "too-large",
+    };
+  }
+
+  const guessCount = parseEnrollmentCount(guessSchool);
+  const answerCount = parseEnrollmentCount(answerSchool);
+  if (guessCount === null || answerCount === null) {
+    return { status: "unknown" };
+  }
+
   return {
-    status: bandOrder.indexOf(guessBand) < bandOrder.indexOf(answerBand) ? "too-small" : "too-large",
+    status: guessCount < answerCount ? "too-small" : "too-large",
   };
 }
 
-function compareGradeBand(guessBand, answerBand, correct) {
-  if (correct || guessBand === answerBand) {
+function parseGradeSpan(raw) {
+  if (!raw) {
+    return [];
+  }
+
+  const parsed = [];
+  raw.split(":").forEach((token) => {
+    const normalized = token.trim().toUpperCase();
+    if (!normalized || normalized === "XG") {
+      return;
+    }
+    if (["PK", "0K", "KG", "K"].includes(normalized)) {
+      parsed.push(0);
+      return;
+    }
+    if (/^\d+$/.test(normalized)) {
+      parsed.push(Number.parseInt(normalized, 10));
+    }
+  });
+
+  if (parsed.length >= 2) {
+    const min = Math.min(...parsed);
+    const max = Math.max(...parsed);
+    return Array.from({ length: max - min + 1 }, (_, index) => min + index);
+  }
+
+  return [...new Set(parsed)].sort((left, right) => left - right);
+}
+
+function gradeRange(school) {
+  const grades = parseGradeSpan(school.gradeSpanRaw);
+  if (!grades.length) {
+    return null;
+  }
+
+  return {
+    min: grades[0],
+    max: grades[grades.length - 1],
+    midpoint: (grades[0] + grades[grades.length - 1]) / 2,
+  };
+}
+
+function compareGradeSpan(guessSchool, answerSchool, correct) {
+  const guessRange = gradeRange(guessSchool);
+  const answerRange = gradeRange(answerSchool);
+
+  if (correct || guessSchool.gradeSpanRaw === answerSchool.gradeSpanRaw) {
     return { status: "match" };
   }
 
-  const guessIndex = gradeBandOrder.indexOf(guessBand);
-  const answerIndex = gradeBandOrder.indexOf(answerBand);
-  return { status: guessIndex < answerIndex ? "older" : "younger" };
+  if (!guessRange || !answerRange) {
+    return { status: "unknown" };
+  }
+
+  if (guessRange.min === answerRange.min && guessRange.max === answerRange.max) {
+    return { status: "match" };
+  }
+
+  if (answerRange.min < guessRange.min && answerRange.max > guessRange.max) {
+    return { status: "wider" };
+  }
+
+  if (answerRange.min > guessRange.min && answerRange.max < guessRange.max) {
+    return { status: "narrower" };
+  }
+
+  return { status: answerRange.midpoint > guessRange.midpoint ? "older" : "younger" };
 }
 
 function compareDirection(fromCoordinates, toCoordinates, correct) {
@@ -347,11 +430,23 @@ function compareDirection(fromCoordinates, toCoordinates, correct) {
     return { status: "match", arrow: "◎", label: "Match" };
   }
 
-  const latDelta = toCoordinates.lat - fromCoordinates.lat;
-  const lngDelta = toCoordinates.lng - fromCoordinates.lng;
-  const vertical = latDelta > 0.15 ? "N" : latDelta < -0.15 ? "S" : "";
-  const horizontal = lngDelta > 0.15 ? "E" : lngDelta < -0.15 ? "W" : "";
-  const label = `${vertical}${horizontal}` || "Nearby";
+  if (
+    !fromCoordinates ||
+    !toCoordinates ||
+    !Number.isFinite(fromCoordinates.lat) ||
+    !Number.isFinite(fromCoordinates.lng) ||
+    !Number.isFinite(toCoordinates.lat) ||
+    !Number.isFinite(toCoordinates.lng)
+  ) {
+    return { status: "unknown", arrow: "?", label: "Direction unavailable" };
+  }
+
+  const distanceMiles = distanceBetweenCoordinates(fromCoordinates, toCoordinates);
+  if (distanceMiles < 0.1) {
+    return { status: "close", arrow: "◎", label: "Same location", distanceMiles };
+  }
+
+  const label = compassDirection(fromCoordinates, toCoordinates);
   const arrowMap = {
     N: "↑",
     S: "↓",
@@ -361,14 +456,44 @@ function compareDirection(fromCoordinates, toCoordinates, correct) {
     NW: "↖",
     SE: "↘",
     SW: "↙",
-    Nearby: "◎",
   };
 
   return {
-    status: label === "Nearby" ? "close" : "different",
+    status: "different",
     arrow: arrowMap[label],
     label,
+    distanceMiles,
   };
+}
+
+function toRadians(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+function distanceBetweenCoordinates(fromCoordinates, toCoordinates) {
+  const lat1 = toRadians(fromCoordinates.lat);
+  const lat2 = toRadians(toCoordinates.lat);
+  const latDelta = toRadians(toCoordinates.lat - fromCoordinates.lat);
+  const lngDelta = toRadians(toCoordinates.lng - fromCoordinates.lng);
+
+  const a =
+    Math.sin(latDelta / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(lngDelta / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return EARTH_RADIUS_MILES * c;
+}
+
+function compassDirection(fromCoordinates, toCoordinates) {
+  const lat1 = toRadians(fromCoordinates.lat);
+  const lat2 = toRadians(toCoordinates.lat);
+  const lngDelta = toRadians(toCoordinates.lng - fromCoordinates.lng);
+  const y = Math.sin(lngDelta) * Math.cos(lat2);
+  const x =
+    Math.cos(lat1) * Math.sin(lat2) -
+    Math.sin(lat1) * Math.cos(lat2) * Math.cos(lngDelta);
+  const bearing = ((Math.atan2(y, x) * 180) / Math.PI + 360) % 360;
+  const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+  return directions[Math.round(bearing / 45) % directions.length];
 }
 
 function renderResultIcon(correct) {
@@ -382,6 +507,9 @@ function renderFeedbackIcon(type, feedback) {
     if (feedback.status === "match") {
       return '<span class="board-icon board-icon--neutral" title="Enrollment match">＝</span>';
     }
+    if (feedback.status === "unknown") {
+      return '<span class="board-icon board-icon--muted" title="Enrollment unavailable">?</span>';
+    }
 
     return feedback.status === "too-small"
       ? '<span class="board-icon board-icon--warn" title="Answer is larger">↑</span>'
@@ -392,13 +520,24 @@ function renderFeedbackIcon(type, feedback) {
     if (feedback.status === "match") {
       return '<span class="board-icon board-icon--neutral" title="Grade span match">＝</span>';
     }
+    if (feedback.status === "unknown") {
+      return '<span class="board-icon board-icon--muted" title="Grade span unavailable">?</span>';
+    }
+    if (feedback.status === "wider") {
+      return '<span class="board-icon board-icon--warn" title="Answer spans younger and older grades">↔</span>';
+    }
+    if (feedback.status === "narrower") {
+      return '<span class="board-icon board-icon--warn" title="Answer has a narrower grade span">↔</span>';
+    }
 
     return feedback.status === "older"
       ? '<span class="board-icon board-icon--warn" title="Answer serves older grades">→</span>'
       : '<span class="board-icon board-icon--warn" title="Answer serves younger grades">←</span>';
   }
 
-  return `<span class="board-icon board-icon--neutral" title="${feedback.label}">${feedback.arrow}</span>`;
+  const distance =
+    typeof feedback.distanceMiles === "number" ? `, ${Math.round(feedback.distanceMiles)} mi away` : "";
+  return `<span class="board-icon board-icon--neutral" title="${feedback.label}${distance}">${feedback.arrow}</span>`;
 }
 
 function renderEmptyIcon() {

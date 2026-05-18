@@ -1,0 +1,1738 @@
+{
+  "generatedAt": "2026-05-18",
+  "notes": [
+    "Coordinates are generated from official NC DPI school addresses for gameplay direction hints.",
+    "US Census Geocoder Public_AR_Current is used first; ArcGIS World Geocoding Service is used only for Census no-match addresses."
+  ],
+  "stats": {
+    "schoolCount": 212,
+    "geocodedCount": 212,
+    "censusCount": 187,
+    "arcgisCount": 25,
+    "missingCount": 0,
+    "missingSchoolIds": []
+  },
+  "schools": {
+    "a-c-e-academy": {
+      "lat": 35.308361807983,
+      "lng": -80.673635738098,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7807 Caldwell Road, Harrisburg, NC, 28075",
+      "matchedAddress": "7807 CALDWELL RD, HARRISBURG, NC, 28075"
+    },
+    "achievement-charter-academy": {
+      "lat": 35.526229686121,
+      "lng": -78.812520830623,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "25 Buttonwood Ct., Fuquay-Varina, NC, 27526",
+      "matchedAddress": "25 BUTTONWOOD CT, FUQUAY VARINA, NC, 27526"
+    },
+    "agape-achievement-academy": {
+      "lat": 35.097352976763,
+      "lng": -78.915955715518,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3421 Murchison Rd, Fayetteville, NC, 28311",
+      "matchedAddress": "3421 MURCHISON RD, FAYETTEVILLE, NC, 28311"
+    },
+    "ala-monroe": {
+      "lat": 34.984129238655,
+      "lng": -80.58605532099,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2505 Weddington Rd, Monroe, NC, 28110",
+      "matchedAddress": "2505 WEDDINGTON RD, MONROE, NC, 28110"
+    },
+    "alamance-community-school": {
+      "lat": 36.074379173142,
+      "lng": -79.350210521068,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "195 Kronbergs Court, Haw River, NC, 27258",
+      "matchedAddress": "195 Kronbergs Ct, Haw River, North Carolina, 27258"
+    },
+    "alpha-academy": {
+      "lat": 35.032112607982,
+      "lng": -79.066971604489,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "8030 Raeford Road, Fayetteville, NC, 28304",
+      "matchedAddress": "8030 RAEFORD RD, FAYETTEVILLE, NC, 28304"
+    },
+    "american-leadership-academy-charlotte": {
+      "lat": 35.235304635722,
+      "lng": -80.702546016932,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "8000 Robinson Church Road, Charlotte, NC, 28215",
+      "matchedAddress": "8000 ROBINSON CHURCH RD, CHARLOTTE, NC, 28215"
+    },
+    "american-leadership-academy-coastal": {
+      "lat": 34.312973323097,
+      "lng": -77.767773487325,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1135 Pandion Dr, Wilmington, NC, 28411",
+      "matchedAddress": "1135 PANDION DR, WILMINGTON, NC, 28411"
+    },
+    "american-leadership-academy-johnston": {
+      "lat": 35.561935180461,
+      "lng": -78.391141093718,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3770 US-70 BUS, Clayton, NC, 27520",
+      "matchedAddress": "3770 US HWY 70 BUS, CLAYTON, NC, 27520"
+    },
+    "american-renaissance-school": {
+      "lat": 35.784962874815,
+      "lng": -80.887069225352,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "132 East Broad Street, Statesville, NC, 28677",
+      "matchedAddress": "132 E BROAD ST, STATESVILLE, NC, 28677"
+    },
+    "anderson-academy": {
+      "lat": 36.108178558497,
+      "lng": -80.267185177619,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1001 Reynolda Road, Winston-Salem, NC, 27104",
+      "matchedAddress": "1001 REYNOLDA RD, WINSTON SALEM, NC, 27104"
+    },
+    "anderson-creek-academy": {
+      "lat": 35.274535472749,
+      "lng": -78.976497791188,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4940 Ray Road, Spring Lake, NC, 28390",
+      "matchedAddress": "4940 RAY RD, SPRING LAKE, NC, 28390"
+    },
+    "arapahoe-charter-school": {
+      "lat": 35.015406257758,
+      "lng": -76.823024162684,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9005 NC Hwy 306 S, Arapahoe, NC, 28510",
+      "matchedAddress": "9005 STATE HWY 306 S, ARAPAHOE, NC, 28510"
+    },
+    "artspace-charter-school": {
+      "lat": 35.594676484165,
+      "lng": -82.42865397708,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 98.82,
+      "inputAddress": "2030 US Hwy 70, Swannanoa, NC, 28778",
+      "matchedAddress": "2030 US 70 Hwy, Swannanoa, North Carolina, 28778"
+    },
+    "ascend-leadership-academy-lee-county": {
+      "lat": 35.434157922626,
+      "lng": -79.126530097577,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "283 Harvey Faulk Road, Sanford, NC, 27332",
+      "matchedAddress": "283 HARVEY FAULK RD, SANFORD, NC, 27332"
+    },
+    "asheville-peak-academy": {
+      "lat": 35.579771991499,
+      "lng": -82.587839863639,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "27 Balm Grove Avenue, Asheville, NC, 28806",
+      "matchedAddress": "27 BALM GROVE AVE, ASHEVILLE, NC, 28806"
+    },
+    "aspire-trade-high": {
+      "lat": 35.375562790838,
+      "lng": -80.906551884689,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7125 Hambright Rd, Huntersville, NC, 28078",
+      "matchedAddress": "7125 HAMBRIGHT RD, HUNTERSVILLE, NC, 28078"
+    },
+    "bear-grass-charter-school": {
+      "lat": 35.768137268883,
+      "lng": -77.12662449145,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "6344 E Bear Grass Rd, Williamston, NC, 27982",
+      "matchedAddress": "6344 E BEAR GRASS RD, WILLIAMSTON, NC, 27892"
+    },
+    "bethany-community-school": {
+      "lat": 36.261660303834,
+      "lng": -79.867162473636,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1288 Hudson Rd, Summerfield, NC, 27358",
+      "matchedAddress": "1288 HUDSON RD, SUMMERFIELD, NC, 27358"
+    },
+    "bethel-hill-charter": {
+      "lat": 36.504076830222,
+      "lng": -78.916734091577,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "401 Bethel Hill School Road, Roxboro, NC, 27574",
+      "matchedAddress": "401 BETHEL HILL SCHOOL RD, ROXBORO, NC, 27574"
+    },
+    "bonnie-cone-classical-academy": {
+      "lat": 35.374853426123,
+      "lng": -80.808603785459,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "10700 Asbury Chapel Road, Huntersville, NC, 28078",
+      "matchedAddress": "10700 ASBURY CHAPEL RD, HUNTERSVILLE, NC, 28078"
+    },
+    "bonnie-cone-leadership-academy": {
+      "lat": 35.435096728983,
+      "lng": -80.764226921573,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "16115 Poplar Tent Road, Huntersville, NC, 28078",
+      "matchedAddress": "16115 POPLAR TENT RD, HUNTERSVILLE, NC, 28078"
+    },
+    "bradford-preparatory-school": {
+      "lat": 35.34476613956,
+      "lng": -80.721868194378,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2502 Salome Church Rd, Charlotte, NC, 28262",
+      "matchedAddress": "2502 SALOME CHURCH RD, CHARLOTTE, NC, 28262"
+    },
+    "brevard-academy": {
+      "lat": 35.270205043308,
+      "lng": -82.684081458003,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1110 Hendersonville Highway, Pisgah Forest, NC, 28768",
+      "matchedAddress": "1110 HENDERSONVILLE HWY, PISGAH FOREST, NC, 28768"
+    },
+    "cape-fear-center-for-inquiry": {
+      "lat": 34.19297823412,
+      "lng": -77.930701942151,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "2525 Wonder Way, Wilmington, NC, 28401",
+      "matchedAddress": "2525 Wonder Way, Wilmington, North Carolina, 28401"
+    },
+    "cardinal-charter-acad-at-wendell-falls": {
+      "lat": 35.776921824334,
+      "lng": -78.431682753094,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "6041 Taylor Rd., Wendell, NC, 27591",
+      "matchedAddress": "6041 TAYLOR RD, WENDELL, NC, 27591"
+    },
+    "cardinal-charter-academy": {
+      "lat": 35.80153962601,
+      "lng": -78.782418134019,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1020 St. Charles Place, Cary, NC, 27513",
+      "matchedAddress": "1020 ST CHARLES PL, CARY, NC, 27513"
+    },
+    "carolina-achieve": {
+      "lat": 36.073918000829,
+      "lng": -79.241340076198,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "6920 West Ten Rd, Mebane, NC, 27302",
+      "matchedAddress": "6920 W Ten Rd, Mebane, North Carolina, 27302"
+    },
+    "carolina-charter-academy": {
+      "lat": 35.535495679263,
+      "lng": -78.746189928086,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "8529 NC Highway 55, Angier, NC, 27501",
+      "matchedAddress": "8529 STATE HWY 55, ANGIER, NC, 27501"
+    },
+    "carolina-international-school": {
+      "lat": 35.413974468605,
+      "lng": -80.740419307177,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9545 Poplar Tent Road, Concord, NC, 28027",
+      "matchedAddress": "9545 POPLAR TENT RD, CONCORD, NC, 28027"
+    },
+    "carter-g-woodson-school": {
+      "lat": 36.067322244224,
+      "lng": -80.231225931999,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "437 Goldfloss Street, Winston-Salem, NC, 27127",
+      "matchedAddress": "437 GOLDFLOSS ST, WINSTON SALEM, NC, 27127"
+    },
+    "casa-esperanza-montessori-charter-school": {
+      "lat": 35.932128585024,
+      "lng": -78.54266434913,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "10510 Star Road, Wake Forest, NC, 27587",
+      "matchedAddress": "10510 STAR RD, WAKE FOREST, NC, 27587"
+    },
+    "central-carolina-academy": {
+      "lat": 35.495943371209,
+      "lng": -79.199034844887,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1801 Douglas Drive, Sanford, NC, 27330",
+      "matchedAddress": "1801 DOUGLAS DR, SANFORD, NC, 27330"
+    },
+    "central-park-school-for-children": {
+      "lat": 36.004213741002,
+      "lng": -78.901320617177,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "724 Foster Street, Durham, NC, 27701",
+      "matchedAddress": "724 FOSTER ST, DURHAM, NC, 27701"
+    },
+    "central-wake-high-school": {
+      "lat": 35.76171187617,
+      "lng": -78.613913254174,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1425 Rock Quarry Road, Raleigh, NC, 27610",
+      "matchedAddress": "1425 ROCK QUARRY RD, RALEIGH, NC, 27610"
+    },
+    "charlotte-lab-school": {
+      "lat": 35.226759064871,
+      "lng": -80.871243596977,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2045 Suttle Avenue, Charlotte, NC, 28208",
+      "matchedAddress": "2045 SUTTLE AVE, CHARLOTTE, NC, 28208"
+    },
+    "charlotte-secondary": {
+      "lat": 35.153307555029,
+      "lng": -80.749708713168,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "8601 McAlpine Park Dr, Charlotte, NC, 28211",
+      "matchedAddress": "8601 MCALPINE PARK DR, CHARLOTTE, NC, 28211"
+    },
+    "chatham-charter": {
+      "lat": 35.742333641156,
+      "lng": -79.479415463041,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "2200 Hamp Stone Rd, Siler City, NC, 27344",
+      "matchedAddress": "2200 Hamp Stone Rd, Siler City, North Carolina, 27344"
+    },
+    "cis-academy": {
+      "lat": 34.685182167866,
+      "lng": -79.203621936196,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "818 West 3rd Street, Pembroke, NC, 28372",
+      "matchedAddress": "818 W 3RD ST, PEMBROKE, NC, 28372"
+    },
+    "classical-charter-schools-of-leland": {
+      "lat": 34.282716258232,
+      "lng": -78.13635154668,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "7055 Bacon's Way, Leland, NC, 28451",
+      "matchedAddress": "7055 BACONS WAY NE, LELAND, NC, 28451"
+    },
+    "classical-charter-schools-of-southport": {
+      "lat": 33.971223769809,
+      "lng": -78.198069700123,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2260 Achievement Ave SE, Bolivia, NC, 28422",
+      "matchedAddress": "2260 ACHIEVEMENT AVE SE, BOLIVIA, NC, 28422"
+    },
+    "classical-charter-schools-of-whiteville": {
+      "lat": 34.404087642561,
+      "lng": -78.772677187164,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "35 Bacon's Way, Whiteville, NC, 28472",
+      "matchedAddress": "35 BACONS WAY, WHITEVILLE, NC, 28472"
+    },
+    "classical-charter-schools-of-wilmington": {
+      "lat": 34.2416397119,
+      "lng": -77.94274371945,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "507 N 6th Street, Wilmington, NC, 28401",
+      "matchedAddress": "507 N 6TH ST, WILMINGTON, NC, 28401"
+    },
+    "clover-garden": {
+      "lat": 36.18797449807,
+      "lng": -79.470265901171,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "2454 Altamahaw Union Ridge Roa, Burlington, NC, 27217",
+      "matchedAddress": "2454 ALTAMAHAW UNION RIDGE RD, BURLINGTON, NC, 27217"
+    },
+    "college-prep-and-leadership-academy": {
+      "lat": 35.966619779269,
+      "lng": -79.922688992536,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4201 Furniture Avenue, Jamestown, NC, 27282",
+      "matchedAddress": "4201 FURNITURE AVE, JAMESTOWN, NC, 27282"
+    },
+    "commonwealth-high": {
+      "lat": 35.210678884342,
+      "lng": -80.758828082258,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "5112 Central Ave, Charlotte, NC, 28205",
+      "matchedAddress": "5112 CENTRAL AVE, CHARLOTTE, NC, 28205"
+    },
+    "community-charter-school": {
+      "lat": 35.372907116087,
+      "lng": -81.093722166967,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "185 Mariposa Road, Stanley, NC, 28164",
+      "matchedAddress": "185 MARIPOSA RD, STANLEY, NC, 28164"
+    },
+    "community-school-of-davidson": {
+      "lat": 35.507303361052,
+      "lng": -80.85303022662,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "404 Armour Street, Davidson, NC, 28036",
+      "matchedAddress": "404 ARMOUR ST, DAVIDSON, NC, 28036"
+    },
+    "community-school-of-digital-and-visual-art": {
+      "lat": 35.98200030101,
+      "lng": -78.954567861111,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1955 West Cornwallis Road, Durham, NC, 27705",
+      "matchedAddress": "1955 W CORNWALLIS RD, DURHAM, NC, 27705"
+    },
+    "concord-lake-steam-academy": {
+      "lat": 35.459248850958,
+      "lng": -80.600185775968,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1911 Concord Lake Road, Kannapolis, NC, 28083",
+      "matchedAddress": "1911 CONCORD LAKE RD, KANNAPOLIS, NC, 28083"
+    },
+    "cornerstone-charter-academy-cfa": {
+      "lat": 36.107984870355,
+      "lng": -79.958506574985,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7800 Airport Center Drive, Greensboro, NC, 27409",
+      "matchedAddress": "7800 AIRPORT CENTER DR, GREENSBORO, NC, 27409"
+    },
+    "corvian-community-school": {
+      "lat": 35.365312258358,
+      "lng": -80.77344960202,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4041 Johnston Oehler Road, Charlotte, NC, 28269",
+      "matchedAddress": "4041 JOHNSTON OEHLER RD, CHARLOTTE, NC, 28269"
+    },
+    "crosscreek-charter-school": {
+      "lat": 36.094801061001,
+      "lng": -78.283205116364,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "100 East River Road, Louisburg, NC, 27549",
+      "matchedAddress": "100 E RIVER RD, LOUISBURG, NC, 27549"
+    },
+    "davidson-charter-academy": {
+      "lat": 35.845124261881,
+      "lng": -80.268525078805,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "500 Biesecker Rd, Lexington, NC, 27295",
+      "matchedAddress": "500 BIESECKER RD, LEXINGTON, NC, 27295"
+    },
+    "dillard-academy": {
+      "lat": 35.379363805105,
+      "lng": -78.005556304283,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "504 West Elm Street, Goldsboro, NC, 27530",
+      "matchedAddress": "504 W ELM ST, GOLDSBORO, NC, 27530"
+    },
+    "discovery-charter": {
+      "lat": 36.124772514454,
+      "lng": -78.891432382223,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "501 Orange Factory Road, Bahama, NC, 27503",
+      "matchedAddress": "501 ORANGE FACTORY RD, BAHAMA, NC, 27503"
+    },
+    "doral-academy-of-north-carolina": {
+      "lat": 35.823871109323,
+      "lng": -78.527830624257,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7001 Destiny Drive, Raleigh, NC, 27604",
+      "matchedAddress": "7001 DESTINY DR, RALEIGH, NC, 27604"
+    },
+    "durham-charter-school": {
+      "lat": 35.996838606569,
+      "lng": -78.913313474347,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "807 West Chapel Hill Street, Durham, NC, 27701",
+      "matchedAddress": "807 W CHAPEL HILL ST, DURHAM, NC, 27701"
+    },
+    "east-voyager-academy-of-charlotte": {
+      "lat": 35.246535815713,
+      "lng": -80.951387714579,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7429 Tuckaseegee Rd., Charlotte, NC, 28214",
+      "matchedAddress": "7429 TUCKASEEGEE RD, CHARLOTTE, NC, 28214"
+    },
+    "east-wake-academy": {
+      "lat": 35.831716035414,
+      "lng": -78.306662988992,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "821 Charter School Way, Zebulon, NC, 27597",
+      "matchedAddress": "821 Charter School Way, Zebulon, North Carolina, 27597"
+    },
+    "emereau-bladen": {
+      "lat": 34.598324275067,
+      "lng": -78.573554611001,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "995 Airport Rd, Elizabethtown, NC, 28337",
+      "matchedAddress": "995 AIRPORT RD, ELIZABETHTOWN, NC, 28337"
+    },
+    "endeavor-charter-school": {
+      "lat": 35.919355097069,
+      "lng": -78.537943375756,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4879 One World Way, Wake Forest, NC, 27587",
+      "matchedAddress": "4879 ONE WORLD WAY, WAKE FOREST, NC, 27587"
+    },
+    "eno-river-academy": {
+      "lat": 36.105753488459,
+      "lng": -79.099555186581,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "1212 NC Highway 57 North, Hillsborough, NC, 27278",
+      "matchedAddress": "1212 STATE HWY 57, HILLSBOROUGH, NC, 27278"
+    },
+    "envision-science-academy": {
+      "lat": 35.983776792876,
+      "lng": -78.484675166423,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "590 Traditions Grande Blvd, Wake Forest, NC, 27587",
+      "matchedAddress": "590 Traditions Grande Blvd, Wake Forest, North Carolina, 27587"
+    },
+    "evergreen-community-charter": {
+      "lat": 35.602308057317,
+      "lng": -82.499928245266,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "50 Bell Road, Asheville, NC, 28805",
+      "matchedAddress": "50 BELL RD, ASHEVILLE, NC, 28805"
+    },
+    "excelsior-classical-academy": {
+      "lat": 36.046082188324,
+      "lng": -78.902623586989,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4100 N Roxboro Street, Durham, NC, 27704",
+      "matchedAddress": "4100 N ROXBORO ST, DURHAM, NC, 27704"
+    },
+    "faith-academy-charter-school": {
+      "lat": 35.592432648685,
+      "lng": -80.462147342256,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 99.5,
+      "inputAddress": "420 North Main Street, Faith, NC, 28041",
+      "matchedAddress": "420 N Main St, Salisbury, North Carolina, 28146"
+    },
+    "falls-lake-academy": {
+      "lat": 36.110408061743,
+      "lng": -78.735106362162,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1701 East Lyon Station Road, Creedmoor, NC, 27522",
+      "matchedAddress": "1701 E LYON STATION RD, CREEDMOOR, NC, 27522"
+    },
+    "fernleaf": {
+      "lat": 35.425490529165,
+      "lng": -82.500862492045,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "58 Howard Gap Rd, Fletcher, NC, 28732",
+      "matchedAddress": "58 HOWARD GAP RD, FLETCHER, NC, 28732"
+    },
+    "forsyth-academy": {
+      "lat": 36.171505948871,
+      "lng": -80.300305167464,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "5426 Shattalon Drive, Winston-Salem, NC, 27106",
+      "matchedAddress": "5426 SHATTALON DR, WINSTON SALEM, NC, 27106"
+    },
+    "francine-delany-new-school-for-children": {
+      "lat": 35.573640052664,
+      "lng": -82.593534073923,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "119 Brevard Road, Asheville, NC, 28806",
+      "matchedAddress": "119 BREVARD RD, ASHEVILLE, NC, 28806"
+    },
+    "franklin-academy": {
+      "lat": 35.956983369593,
+      "lng": -78.488118282111,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1127 Chalk Rd, Wake Forest, NC, 27587",
+      "matchedAddress": "1127 CHALK RD, WAKE FOREST, NC, 27587"
+    },
+    "gate-city-charter": {
+      "lat": 36.089413414039,
+      "lng": -79.709746897064,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "123 Flemingfield Road, Greensboro, NC, 27405",
+      "matchedAddress": "123 FLEMINGFIELD RD, GREENSBORO, NC, 27405"
+    },
+    "girls-leadership-academy-of-wilmington": {
+      "lat": 34.250746916228,
+      "lng": -77.893826421169,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4100 Sunglow Drive, Wilmington, NC, 28405",
+      "matchedAddress": "4100 SUNGLOW DR, WILMINGTON, NC, 28405"
+    },
+    "global-scholars-academy": {
+      "lat": 36.000374178943,
+      "lng": -78.893651144503,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "311 Dowd St, Durham, NC, 27701",
+      "matchedAddress": "311 DOWD ST, DURHAM, NC, 27701"
+    },
+    "gray-stone-day": {
+      "lat": 35.483612034229,
+      "lng": -80.276499167213,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "49464 Merner Terrace, Misenheimer, NC, 28109",
+      "matchedAddress": "49464 Merner Ter, Misenheimer, North Carolina, 28109"
+    },
+    "greensboro-academy": {
+      "lat": 36.149770583636,
+      "lng": -79.870416083876,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4049 Battleground Ave, Greensboro, NC, 27410",
+      "matchedAddress": "4049 BATTLEGROUND AVE, GREENSBORO, NC, 27410"
+    },
+    "guilford-preparatory-academy": {
+      "lat": 36.112709414066,
+      "lng": -79.746106292589,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2240 East Cone Blvd, Greensboro, NC, 27405",
+      "matchedAddress": "2240 E CONE BLVD, GREENSBORO, NC, 27405"
+    },
+    "haliwa-saponi-tribal-school": {
+      "lat": 36.253062779212,
+      "lng": -77.980455132393,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "130 Haliwa-Saponi Trail, Hollister, NC, 27844",
+      "matchedAddress": "130 HALIWA SAPONI TRL, HOLLISTER, NC, 27844"
+    },
+    "henderson-collegiate": {
+      "lat": 36.307753132832,
+      "lng": -78.397428707187,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1071 Old Epsom Rd, Henderson, NC, 27536",
+      "matchedAddress": "1071 OLD EPSOM RD, HENDERSON, NC, 27536"
+    },
+    "hobgood-charter-school": {
+      "lat": 36.027480981167,
+      "lng": -77.39574464806,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "201 S Beech St, Hobgood, NC, 27843",
+      "matchedAddress": "201 S BEECH ST, HOBGOOD, NC, 27843"
+    },
+    "honor-prep": {
+      "lat": 35.326668990831,
+      "lng": -80.773128348705,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9108 Mallard Creek Rd, Charlotte, NC, 28262",
+      "matchedAddress": "9108 MALLARD CREEK RD, CHARLOTTE, NC, 28262"
+    },
+    "ic-imagine": {
+      "lat": 35.545897956726,
+      "lng": -82.613903508807,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "110 Champion Way, Asheville, NC, 28806",
+      "matchedAddress": "110 Champion Way, Asheville, North Carolina, 28806"
+    },
+    "iredell-charter-academy-of-arts-and-science": {
+      "lat": 35.664144722501,
+      "lng": -80.848618387014,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "251 Home Improvement Street, Troutman, NC, 28166",
+      "matchedAddress": "251 HOME IMPROVEMENT ST, TROUTMAN, NC, 28166"
+    },
+    "island-montessori-charter-school": {
+      "lat": 34.108267094904,
+      "lng": -77.899823314499,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "6339 Carolina Beach Rd, Wilmington, NC, 28412",
+      "matchedAddress": "6339 CAROLINA BEACH RD, WILMINGTON, NC, 28412"
+    },
+    "jackson-day-school": {
+      "lat": 35.262362112513,
+      "lng": -80.940091722313,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1209 Little Rock Rd, Charlotte, NC, 28214",
+      "matchedAddress": "1209 LITTLE ROCK RD, CHARLOTTE, NC, 28214"
+    },
+    "johnston-charter-academy": {
+      "lat": 35.66015000253,
+      "lng": -78.494230033129,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "40 Scholar Drive, Clayton, NC, 27520",
+      "matchedAddress": "40 Scholar Dr, Clayton, North Carolina, 27520"
+    },
+    "kestrel-heights-school": {
+      "lat": 35.897909297653,
+      "lng": -78.889046849051,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4700 South Alston Ave., Durham, NC, 27713",
+      "matchedAddress": "4700 S ALSTON AVE, DURHAM, NC, 27713"
+    },
+    "kipp-charlotte": {
+      "lat": 35.249826680212,
+      "lng": -80.766471752279,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "931 Wilann Dr, Charlotte, NC, 28215",
+      "matchedAddress": "931 WILANN DR, CHARLOTTE, NC, 28215"
+    },
+    "kipp-durham-college-preparatory": {
+      "lat": 35.994523298706,
+      "lng": -78.881622056423,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1107 Holloway Street, Durham, NC, 27701",
+      "matchedAddress": "1107 HOLLOWAY ST, DURHAM, NC, 27701"
+    },
+    "kipp-pride-college-preparatory": {
+      "lat": 36.503556395876,
+      "lng": -77.640251518715,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "320 Pleasant Hill Road, Gaston, NC, 27832",
+      "matchedAddress": "320 PLEASANT HILL RD, GASTON, NC, 27832"
+    },
+    "lake-lure-classical-academy": {
+      "lat": 35.405114791644,
+      "lng": -82.194544183154,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1058 Island Creek Rd., Lake Lure, NC, 28746",
+      "matchedAddress": "1058 ISLAND CREEK RD, LAKE LURE, NC, 28746"
+    },
+    "lake-norman-charter": {
+      "lat": 35.38969223083,
+      "lng": -80.834927326114,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "12435 Old Statesville Road, Huntersville, NC, 28078",
+      "matchedAddress": "12435 S OLD STATESVILLE RD, HUNTERSVILLE, NC, 28078"
+    },
+    "lakeside-charter-academy": {
+      "lat": 35.451893110504,
+      "lng": -80.843585962822,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "17609 Old Statesville Rd, Cornelius, NC, 28031",
+      "matchedAddress": "17609 Old Statesville Rd, Cornelius, North Carolina, 28031"
+    },
+    "langtree-charter-academy": {
+      "lat": 35.542212425933,
+      "lng": -80.862985630294,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "154 Foundation Ct, Mooresville, NC, 28117",
+      "matchedAddress": "154 FOUNDATION CT, MOORESVILLE, NC, 28117"
+    },
+    "legacy-classical-academy": {
+      "lat": 36.317964876364,
+      "lng": -79.673472728529,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2621 S Scales Street, Reidsville, NC, 27320",
+      "matchedAddress": "2621 S SCALES ST, REIDSVILLE, NC, 27320"
+    },
+    "liberty-charter-academy": {
+      "lat": 36.216292222774,
+      "lng": -79.869287844022,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3607 Birdsong Ct, Summerfield, NC, 27358",
+      "matchedAddress": "3607 BIRDSONG CT, SUMMERFIELD, NC, 27358"
+    },
+    "lincoln-charter-school": {
+      "lat": 35.486958421756,
+      "lng": -80.998192526678,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7834 Galway Lane, Denver, NC, 28037",
+      "matchedAddress": "7834 GALWAY LN, DENVER, NC, 28037"
+    },
+    "longleaf-school-of-the-arts": {
+      "lat": 35.735643314667,
+      "lng": -78.647606232268,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "322 Chapanoke Road, Raleigh, NC, 27603",
+      "matchedAddress": "322 CHAPANOKE RD, RALEIGH, NC, 27603"
+    },
+    "magellan-charter": {
+      "lat": 35.909648578379,
+      "lng": -78.662207554596,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9324 Baileywick Road, Raleigh, NC, 27615",
+      "matchedAddress": "9324 BAILEYWICK RD, RALEIGH, NC, 27615"
+    },
+    "mallard-creek-stem-academy": {
+      "lat": 35.364730723439,
+      "lng": -80.802890026954,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9142 Browne Rd, Charlotte, NC, 28269",
+      "matchedAddress": "9142 BROWNE RD, CHARLOTTE, NC, 28269"
+    },
+    "marjorie-williams-academy": {
+      "lat": 36.024689618546,
+      "lng": -81.928252567127,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "129 Allen Circle, Newland, NC, 28657",
+      "matchedAddress": "129 ALLEN CIR, NEWLAND, NC, 28657"
+    },
+    "matthews-charter-academy": {
+      "lat": 35.110339188297,
+      "lng": -80.681645577754,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2332 Mount Harmony Church Rd., Matthews, NC, 28104",
+      "matchedAddress": "2332 MOUNT HARMONY CHURCH RD, MATTHEWS, NC, 28104"
+    },
+    "maureen-joy-charter-school": {
+      "lat": 35.985684574025,
+      "lng": -78.877874625712,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "107 South Driver Street, Durham, NC, 27703",
+      "matchedAddress": "107 S DRIVER ST, DURHAM, NC, 27703"
+    },
+    "metrolina-reg-scholars-academy": {
+      "lat": 35.169084493817,
+      "lng": -80.886470796134,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "5225 Seventy-Seven Center Dr, Charlotte, NC, 28217",
+      "matchedAddress": "5225 SEVENTY-SEVEN CENTER DR, CHARLOTTE, NC, 28217"
+    },
+    "millennium-charter-academy": {
+      "lat": 36.517291541799,
+      "lng": -80.597292466861,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "500 Old Springs Rd, Mount Airy, NC, 27030",
+      "matchedAddress": "500 OLD SPRINGS RD, MOUNT AIRY, NC, 27030"
+    },
+    "monroe-charter-academy": {
+      "lat": 34.986580523611,
+      "lng": -80.754600049953,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "7513 Broomes Old Mill Road, Waxhaw, NC, 28173",
+      "matchedAddress": "7513 BROOMES OLD MILL RD, WAXHAW, NC, 28173"
+    },
+    "moore-montessori-community-school": {
+      "lat": 35.170277028002,
+      "lng": -79.391855406416,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "255 S. May Street, Southern Pines, NC, 28387",
+      "matchedAddress": "255 S MAY ST, SOUTHERN PINES, NC, 28387"
+    },
+    "mountain-city-public-montessori": {
+      "lat": 35.592926528856,
+      "lng": -82.553145786035,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "27 Church Street, Asheville, NC, 28801",
+      "matchedAddress": "27 CHURCH ST, ASHEVILLE, NC, 28801"
+    },
+    "mountain-discovery": {
+      "lat": 35.412864607764,
+      "lng": -83.454219587421,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "890 Jenkins Branch Rd N, Bryson City, NC, 28713",
+      "matchedAddress": "890 JENKINS BRANCH RD N, BRYSON CITY, NC, 28713"
+    },
+    "mountain-island-charter-school": {
+      "lat": 35.358427929306,
+      "lng": -80.991802104185,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "13440 Lucia Riverbend Highway, Mt. Holly, NC, 28120",
+      "matchedAddress": "13440 LUCIA RIVERBEND HWY, MT HOLLY, NC, 28120"
+    },
+    "movement-charter-school": {
+      "lat": 35.237952165459,
+      "lng": -80.883366300499,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "2701-B Freedom Dr, Charlotte, NC, 28208",
+      "matchedAddress": "2701 FREEDOM DR, CHARLOTTE, NC, 28208"
+    },
+    "movement-school-eastland": {
+      "lat": 35.209573888288,
+      "lng": -80.756449221229,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "5249 Central Avenue, Charlotte, NC, 28212",
+      "matchedAddress": "5249 CENTRAL AVE, CHARLOTTE, NC, 28212"
+    },
+    "movement-school-northwest": {
+      "lat": 35.301124776686,
+      "lng": -80.932889716412,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "8015 Bellhaven Boulevard, Charlotte, NC, 28216",
+      "matchedAddress": "8015 BELLHAVEN BLVD, CHARLOTTE, NC, 28216"
+    },
+    "movement-school-southwest": {
+      "lat": 35.155376731728,
+      "lng": -80.895916118472,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "150 Osprey Point Dr., Charlotte, NC, 28217",
+      "matchedAddress": "150 OSPREY POINT DR, CHARLOTTE, NC, 28217"
+    },
+    "nc-leadership-charter-academy": {
+      "lat": 36.045646269443,
+      "lng": -80.111273363919,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4353 High Point Rd, Kernersville, NC, 27284",
+      "matchedAddress": "4353 HIGH POINT RD, KERNERSVILLE, NC, 27284"
+    },
+    "neuse-charter-school": {
+      "lat": 35.532270742362,
+      "lng": -78.321794419699,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "909 M. Durwood Stephenson Parkway, Smithfield, NC, 27577",
+      "matchedAddress": "909 M Durwood Stephenson Pkwy, Smithfield, North Carolina, 27577"
+    },
+    "new-dimensions": {
+      "lat": 35.771243994374,
+      "lng": -81.690514007986,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "550 Lenoir Road, Morganton, NC, 28655",
+      "matchedAddress": "550 LENOIR RD, MORGANTON, NC, 28655"
+    },
+    "next-generation-academy": {
+      "lat": 36.007122841613,
+      "lng": -79.83512847677,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3740 South Holden Road, Greensboro, NC, 27406",
+      "matchedAddress": "3740 S HOLDEN RD, GREENSBORO, NC, 27406"
+    },
+    "north-east-carolina-prep": {
+      "lat": 35.89174001752,
+      "lng": -77.580639970294,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "274 Husky Trail, Tarboro, NC, 27886",
+      "matchedAddress": "274 Husky Trl, Tarboro, North Carolina, 27886"
+    },
+    "north-oak-academy": {
+      "lat": 36.025069087225,
+      "lng": -78.845604590819,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2201 E Geer St, Durham, NC, 27704",
+      "matchedAddress": "2201 E GEER ST, DURHAM, NC, 27704"
+    },
+    "northeast-academy-of-aerospace-and-advtech": {
+      "lat": 36.294394829871,
+      "lng": -76.241071348514,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1413 W Ehringhaus St, Elizabeth City, NC, 27909",
+      "matchedAddress": "1413 W EHRINGHAUS ST, ELIZABETH CITY, NC, 27909"
+    },
+    "oak-hill-charter-school": {
+      "lat": 35.903006995156,
+      "lng": -81.415635552653,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4603 Oak Hill School Rd., Lenoir, NC, 28645",
+      "matchedAddress": "4603 OAKHILL SCHOOL RD, LENOIR, NC, 28645"
+    },
+    "old-main-stream-academy": {
+      "lat": 34.685467878931,
+      "lng": -79.199316032492,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "200 North Odum Street, Pembroke, NC, 28372",
+      "matchedAddress": "200 N ODUM ST, PEMBROKE, NC, 28372"
+    },
+    "oxford-preparatory": {
+      "lat": 36.337012638605,
+      "lng": -78.557093966342,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "6041B Landis Rd, Oxford, NC, 27565",
+      "matchedAddress": "6041B LANDIS RD, OXFORD, NC, 27565"
+    },
+    "paul-r-brown-leadership-academy": {
+      "lat": 34.620736909962,
+      "lng": -78.617705103931,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1360 Martin L King Jr Dr, Elizabethtown, NC, 28337",
+      "matchedAddress": "1360 MARTIN LUTHER KING DR, ELIZABETHTOWN, NC, 28337"
+    },
+    "peak-charter-academy": {
+      "lat": 35.747851342954,
+      "lng": -78.865083853221,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1601 Orchard Villas Ave, Apex, NC, 27502",
+      "matchedAddress": "1601 ORCHARD VILLAS AVE, APEX, NC, 27502"
+    },
+    "phoenix-academy-primary-elem-upper": {
+      "lat": 36.055681745548,
+      "lng": -79.974337927985,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "7847 Clinard Farms Rd, High Point, NC, 27265",
+      "matchedAddress": "7847 Clinard Farms Rd, High Point, North Carolina, 27265"
+    },
+    "piedmont-classical-high-school": {
+      "lat": 36.141206181154,
+      "lng": -79.776142079027,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4100 YANCEYVILLE RD, BROWNS SUMMIT, NC, 27214",
+      "matchedAddress": "4100 YANCEYVILLE RD, BROWNS SUMMIT, NC, 27214"
+    },
+    "piedmont-community-charter-school": {
+      "lat": 35.228449904513,
+      "lng": -81.154587039032,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2596 Robinwood Road, Gastonia, NC, 28054",
+      "matchedAddress": "2596 ROBINWOOD RD, GASTONIA, NC, 28054"
+    },
+    "pine-lake-preparatory": {
+      "lat": 35.53525458984,
+      "lng": -80.846818324046,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "104 Yellow Wood Circle, Mooresville, NC, 28115",
+      "matchedAddress": "104 YELLOW WOOD CR, MOORESVILLE, NC, 28115"
+    },
+    "pine-springs-preparatory-academy": {
+      "lat": 35.678150603761,
+      "lng": -78.836819769501,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "220 Rosewood Centre Dr, Holly Springs, NC, 27540",
+      "matchedAddress": "220 ROSEWOOD CENTRE DR, HOLLY SPRINGS, NC, 27540"
+    },
+    "pinnacle-classical-academy": {
+      "lat": 35.252294432949,
+      "lng": -81.49249190146,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2401 Joes Lake Rd, Shelby, NC, 28152",
+      "matchedAddress": "2401 JOES LAKE RD, SHELBY, NC, 28152"
+    },
+    "pioneer-springs-community-school": {
+      "lat": 35.346862917813,
+      "lng": -80.823262793438,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9232 Bob Beatty Rd., Charlotte, NC, 28269",
+      "matchedAddress": "9232 BOB BEATTY RD, CHARLOTTE, NC, 28269"
+    },
+    "pocosin-innovative-charter": {
+      "lat": 35.869453359731,
+      "lng": -76.386060119491,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "500 1st St, Creswell, NC, 27928",
+      "matchedAddress": "500 1ST ST, CRESWELL, NC, 27928"
+    },
+    "preeminent-charter": {
+      "lat": 35.745427982016,
+      "lng": -78.583409955076,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3815 Rock Quarry Road, Raleigh, NC, 27610",
+      "matchedAddress": "3815 ROCK QUARRY RD, RALEIGH, NC, 27610"
+    },
+    "quality-education-academy": {
+      "lat": 36.150940601695,
+      "lng": -80.211057903644,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "5012-D Lansing Drive, Winston-Salem, NC, 27105",
+      "matchedAddress": "5012 LANSING DR, WINSTON SALEM, NC, 27105"
+    },
+    "queen-s-grant-community-school": {
+      "lat": 35.167499743239,
+      "lng": -80.665386889811,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "6400 Matthews Mint Hill Road, Mint Hill, NC, 28227",
+      "matchedAddress": "6400 MATTHEWS-MINT HILL RD, MINT HILL, NC, 28227"
+    },
+    "quest-academy": {
+      "lat": 35.901758224543,
+      "lng": -78.676754055133,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "10908 Strickland Road, Raleigh, NC, 27615",
+      "matchedAddress": "10908 STRICKLAND RD, RALEIGH, NC, 27615"
+    },
+    "raleigh-charter-high-school": {
+      "lat": 35.79536809345,
+      "lng": -78.646546506584,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1307 Glenwood Avenue, Raleigh, NC, 27605",
+      "matchedAddress": "1307 GLENWOOD AVE, RALEIGH, NC, 27605"
+    },
+    "raleigh-oak-charter": {
+      "lat": 35.872767076768,
+      "lng": -78.590497699841,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 87.43,
+      "inputAddress": "2600 Sumer Drive, Raleigh, NC, 27615",
+      "matchedAddress": "2600 Sumner Blvd, Raleigh, North Carolina, 27616"
+    },
+    "reaching-all-minds-academy": {
+      "lat": 35.988833757671,
+      "lng": -78.852020944261,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2703 Holloway St., Durham, NC, 27703",
+      "matchedAddress": "2703 HOLLOWAY ST, DURHAM, NC, 27703"
+    },
+    "research-triangle-charter": {
+      "lat": 35.938171499701,
+      "lng": -78.850773709621,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2418 Ellis Road, Durham, NC, 27703",
+      "matchedAddress": "2418 ELLIS RD, DURHAM, NC, 27703"
+    },
+    "research-triangle-high-school": {
+      "lat": 35.897483503392,
+      "lng": -78.875696246286,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "StreetAddress",
+      "score": 99.51,
+      "inputAddress": "3106 East NC Highway 54, Durham, NC, 27709",
+      "matchedAddress": "3106 E NC Highway 54, Durham, North Carolina, 27713"
+    },
+    "revolution-academy": {
+      "lat": 36.207243558307,
+      "lng": -79.915230104696,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3800 Oak Ridge Rd., Summerfield, NC, 27358",
+      "matchedAddress": "3800 OAK RIDGE RD, SUMMERFIELD, NC, 27358"
+    },
+    "rise-southeast-raleigh-charter-school": {
+      "lat": 35.73548246107,
+      "lng": -78.617712508185,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3420 Idlewood Village Dr, Raleigh, NC, 27610",
+      "matchedAddress": "3420 IDLEWOOD VILLAGE DR, RALEIGH, NC, 27610"
+    },
+    "rising-leaders-academy": {
+      "lat": 35.452629036255,
+      "lng": -79.149631847459,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2732 Industrial Drive, Sanford, NC, 27332",
+      "matchedAddress": "2732 INDUSTRIAL DR, SANFORD, NC, 27332"
+    },
+    "river-mill-academy": {
+      "lat": 36.044246241326,
+      "lng": -79.393859500661,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "235 Cheeks Lane, Graham, NC, 27253",
+      "matchedAddress": "235 CHEEKS LN, GRAHAM, NC, 27253"
+    },
+    "riverside-leadership-academy": {
+      "lat": 35.060738401716,
+      "lng": -77.031120790635,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1955 Old Airport Rd, New Bern, NC, 28562",
+      "matchedAddress": "1955 OLD AIRPORT RD, NEW BERN, NC, 28562"
+    },
+    "rocky-mount-preparatory": {
+      "lat": 36.015065192991,
+      "lng": -77.778425021464,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3334 Bishop Road, Rocky Mount, NC, 27804",
+      "matchedAddress": "3334 BISHOP RD, ROCKY MOUNT, NC, 27804"
+    },
+    "rolesville-charter-academy": {
+      "lat": 35.909519516387,
+      "lng": -78.479124757663,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "908 Eagle Scholars Drive, Rolesville, NC, 27571",
+      "matchedAddress": "908 EAGLE SCHOLARS DR, ROLESVILLE, NC, 27571"
+    },
+    "roxboro-community-school": {
+      "lat": 36.391628237409,
+      "lng": -78.978943318468,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "115 Lake Drive, Roxboro, NC, 27573",
+      "matchedAddress": "115 LAKE DR, ROXBORO, NC, 27573"
+    },
+    "sallie-b-howard-school": {
+      "lat": 35.731168706924,
+      "lng": -77.894718707843,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1004 Herring Avenue E, Wilson, NC, 27893",
+      "matchedAddress": "1004 HERRING AVE E, WILSON, NC, 27893"
+    },
+    "shining-rock-classical-academy": {
+      "lat": 35.521168113026,
+      "lng": -82.987859487469,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2150 Russ Avenue, Waynesville, NC, 28786",
+      "matchedAddress": "2150 RUSS AVE, WAYNESVILLE, NC, 28786"
+    },
+    "sledge-institute": {
+      "lat": 36.356434992681,
+      "lng": -78.479800000079,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "1875 Gun Club Road, Henderson, NC, 27537",
+      "matchedAddress": "1875 Gun Club Rd, Henderson, North Carolina, 27537"
+    },
+    "socrates-academy": {
+      "lat": 35.073059746806,
+      "lng": -80.729488984147,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "3909 Weddington Rd, Matthews, NC, 28105",
+      "matchedAddress": "3909 WEDDINGTON RD, MATTHEWS, NC, 28105"
+    },
+    "southeastern-academy": {
+      "lat": 34.650960536342,
+      "lng": -78.87361695233,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "12251 NC HWY 41 North, Lumberton, NC, 28358",
+      "matchedAddress": "12251 STATE HWY 41, LUMBERTON, NC, 28358"
+    },
+    "southern-wake-academy": {
+      "lat": 35.610913213427,
+      "lng": -78.818667630671,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "5108 Old Powell Rd, Holly Springs, NC, 27540",
+      "matchedAddress": "5108 OLD POWELL RD, HOLLY SPRINGS, NC, 27540"
+    },
+    "southwest-charlotte-stem-academy": {
+      "lat": 35.171917251159,
+      "lng": -80.966986210867,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "5203 Shopton Rd, Charlotte, NC, 28278",
+      "matchedAddress": "5203 SHOPTON RD, CHARLOTTE, NC, 28278"
+    },
+    "stars-charter": {
+      "lat": 35.21287429965,
+      "lng": -79.331636607274,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "140 Southern Dunes Dr, Vass, NC, 28394",
+      "matchedAddress": "140 SOUTHERN DUNES DR, VASS, NC, 28394"
+    },
+    "steele-creek-preparatory-academy": {
+      "lat": 35.163712038459,
+      "lng": -80.93445280972,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2200 Shopton Road, Charlotte, NC, 28217",
+      "matchedAddress": "2200 SHOPTON RD, CHARLOTTE, NC, 28217"
+    },
+    "sterling-montessori-academy": {
+      "lat": 35.832691876761,
+      "lng": -78.83699778455,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "202 Treybrooke Drive, Morrisville, NC, 27560",
+      "matchedAddress": "202 TREYBROOKE DR, MORRISVILLE, NC, 27560"
+    },
+    "stewart-creek-high": {
+      "lat": 35.237952165459,
+      "lng": -80.883366300499,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "2701-F Freedom Dr, Charlotte, NC, 28208",
+      "matchedAddress": "2701 FREEDOM DR, CHARLOTTE, NC, 28208"
+    },
+    "success-institute-charter": {
+      "lat": 35.767104522262,
+      "lng": -80.879667848938,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "1424-2 Rickert St, Statesville, NC, 28677",
+      "matchedAddress": "1424 RICKERT ST, STATESVILLE, NC, 28677"
+    },
+    "sugar-creek-charter": {
+      "lat": 35.257072995628,
+      "lng": -80.797242986283,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4101 N Tryon Street, Charlotte, NC, 28206",
+      "matchedAddress": "4101 N TRYON ST, CHARLOTTE, NC, 28206"
+    },
+    "summerfield-charter-academy": {
+      "lat": 36.21834936118,
+      "lng": -79.909242278714,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "5303 Hwy 220 N, Summerfield, NC, 27358",
+      "matchedAddress": "5303 US HWY 220, SUMMERFIELD, NC, 27358"
+    },
+    "summit-charter": {
+      "lat": 35.097957380461,
+      "lng": -83.105499664553,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "370 Mitten Lane, Cashiers, NC, 28717",
+      "matchedAddress": "370 MITTEN LN, CASHIERS, NC, 28717"
+    },
+    "summit-creek-academy": {
+      "lat": 36.155738975032,
+      "lng": -79.744419948511,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2126 Scott Rd, Browns Summit, NC, 27214",
+      "matchedAddress": "2126 SCOTT RD, BROWNS SUMMIT, NC, 27214"
+    },
+    "telra-institute": {
+      "lat": 35.068879785741,
+      "lng": -80.755979046701,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4150 McKee Rd, Charlotte, NC, 28270",
+      "matchedAddress": "4150 MCKEE RD, CHARLOTTE, NC, 28270"
+    },
+    "the-academy-of-moore-county": {
+      "lat": 35.09661994543,
+      "lng": -79.427820666544,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "12588 HWY 15-501 South, Aberdeen, NC, 28315",
+      "matchedAddress": "12588 US HWY 15/501, ABERDEEN, NC, 28315"
+    },
+    "the-arts-based-school": {
+      "lat": 36.104380614894,
+      "lng": -80.244829478725,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "1380 Martin Luther King Jr Dr, Winston-Salem, NC, 27101",
+      "matchedAddress": "1380 N MARTIN LUTHER KING JR DR, WINSTON SALEM, NC, 27101"
+    },
+    "the-capitol-encore-academy": {
+      "lat": 35.052801573571,
+      "lng": -78.87881035093,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "126 Hay Street, Fayetteville, NC, 28301",
+      "matchedAddress": "126 HAY ST, FAYETTEVILLE, NC, 28301"
+    },
+    "the-expedition-school": {
+      "lat": 36.070903857155,
+      "lng": -79.111737203025,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "437 Dimmocks Mill Rd Ste 33, Hillsborough, NC, 27278",
+      "matchedAddress": "437 DIMMOCKS MILL RD, HILLSBOROUGH, NC, 27278"
+    },
+    "the-experiential-school-of-greensboro": {
+      "lat": 36.070762743777,
+      "lng": -79.786864869426,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "301 S Church St, Greensboro, NC, 27401",
+      "matchedAddress": "301 S CHURCH ST, GREENSBORO, NC, 27401"
+    },
+    "the-exploris-school": {
+      "lat": 35.780564167873,
+      "lng": -78.645064626314,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "401 Hillsborough St., Raleigh, NC, 27603",
+      "matchedAddress": "401 HILLSBOROUGH ST, RALEIGH, NC, 27603"
+    },
+    "the-franklin-school-of-innovation": {
+      "lat": 35.54162935915,
+      "lng": -82.630107809592,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "61 Innovation Dr, Asheville, NC, 28806",
+      "matchedAddress": "61 INNOVATION DR, ASHEVILLE, NC, 28806"
+    },
+    "the-hawbridge-school": {
+      "lat": 35.946898593384,
+      "lng": -79.318861309467,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "1735 Saxapahaw Bethlehem Churc, Saxapahaw, NC, 27340",
+      "matchedAddress": "1735 SAXAPAHAW BETHLEHEM CHURCH RD, SAXAPAHAW, NC, 27340"
+    },
+    "the-institute-development-young-leaders": {
+      "lat": 35.900194768853,
+      "lng": -78.850561860153,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4300 S. Miami Blvd., Durham, NC, 27703",
+      "matchedAddress": "4300 S MIAMI BLVD, DURHAM, NC, 27703"
+    },
+    "the-math-and-science-academy-of-apex": {
+      "lat": 35.739039427479,
+      "lng": -78.944112341359,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "3501 Dropseed Dr., Apex, NC, 27502",
+      "matchedAddress": "3501 Dropseed Dr, Apex, North Carolina, 27502"
+    },
+    "the-mountain-community-sch": {
+      "lat": 35.312801901819,
+      "lng": -82.443125176038,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "613 Glover Street, Hendersonville, NC, 28792",
+      "matchedAddress": "613 GLOVER ST, HENDERSONVILLE, NC, 28792"
+    },
+    "thomas-academy": {
+      "lat": 34.321565328196,
+      "lng": -78.525784510218,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "206-B Rube MCCRAY Circle, Lake Waccamaw, NC, 28450",
+      "matchedAddress": "206 RUBE MCCRAY CIR, LAKE WACCAMAW, NC, 28450"
+    },
+    "thomas-jefferson-classical-academy": {
+      "lat": 35.274120655504,
+      "lng": -81.797275721001,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "2527 US 221A Hwy, Mooresboro, NC, 28114",
+      "matchedAddress": "2527 US 221a Hwy, Mooresboro, North Carolina, 28114"
+    },
+    "tiller-school": {
+      "lat": 34.734917057945,
+      "lng": -76.635455595318,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1950 Live Oak Street, Beaufort, NC, 28516",
+      "matchedAddress": "1950 LIVE OAK ST, BEAUFORT, NC, 28516"
+    },
+    "tillery-charter-academy": {
+      "lat": 35.348979558493,
+      "lng": -79.776786444605,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "170 Academy Street, Biscoe, NC, 27209",
+      "matchedAddress": "170 Academy St, Biscoe, North Carolina, 27209"
+    },
+    "tmsa-charlotte": {
+      "lat": 35.326668990831,
+      "lng": -80.773128348705,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "9108 Mallard Creek Rd., Charlotte, NC, 28262",
+      "matchedAddress": "9108 MALLARD CREEK RD, CHARLOTTE, NC, 28262"
+    },
+    "triad-international-studies": {
+      "lat": 35.976164791198,
+      "lng": -80.008861360895,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "622 E Lexington Ave, High Point, NC, 27262",
+      "matchedAddress": "622 E LEXINGTON AVE, HIGH POINT, NC, 27262"
+    },
+    "triad-math-and-science-academy": {
+      "lat": 36.030690304949,
+      "lng": -79.808994997204,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "700 Creek Ridge Rd, Greensboro, NC, 27406",
+      "matchedAddress": "700 Creek Ridge Rd, Greensboro, North Carolina, 27406"
+    },
+    "triangle-math-and-science-academy": {
+      "lat": 35.733777817779,
+      "lng": -78.804316728105,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "312 Gregson Dr., Cary, NC, 27511",
+      "matchedAddress": "312 GREGSON DR, CARY, NC, 27511"
+    },
+    "two-rivers-community-school": {
+      "lat": 36.227203641343,
+      "lng": -81.614620373068,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1018 Archie Carroll Road, Boone, NC, 28607",
+      "matchedAddress": "1018 ARCHIE CARROLL RD, BOONE, NC, 28607"
+    },
+    "union-academy": {
+      "lat": 34.990595027718,
+      "lng": -80.578804693248,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "675 North ML King Jr Blvd, Monroe, NC, 28110",
+      "matchedAddress": "675 M L KING BLVD, MONROE, NC, 28110"
+    },
+    "union-day-school": {
+      "lat": 35.056528783964,
+      "lng": -80.736429044082,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "StreetAddress",
+      "score": 99.49,
+      "inputAddress": "3000 TILLEY MORRIS ROAD, WEDDINGTON, NC, 28104",
+      "matchedAddress": "3000 Tilley Morris Rd, Matthews, North Carolina, 28105"
+    },
+    "union-prep-academy-at-indian-trail": {
+      "lat": 35.08273817028,
+      "lng": -80.648597870349,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2324 Younts Rd, Indian Trail, NC, 28079",
+      "matchedAddress": "2324 YOUNTS RD, INDIAN TRAIL, NC, 28079"
+    },
+    "united-community-school": {
+      "lat": 35.300563916385,
+      "lng": -80.727857704596,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1406 Suther Road, Charlotte, NC, 28213",
+      "matchedAddress": "1406 SUTHER RD, CHARLOTTE, NC, 28213"
+    },
+    "unity-classical-charter-school": {
+      "lat": 35.095674531644,
+      "lng": -80.992088460574,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "14613 Steele Creek Rd., CHARLOTTE, NC, 28273",
+      "matchedAddress": "14613 STEELE CREEK RD, CHARLOTTE, NC, 28273"
+    },
+    "uwharrie-charter-academy": {
+      "lat": 35.630890706382,
+      "lng": -79.829127238984,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 100,
+      "inputAddress": "207 Eagle Ln., Asheboro, NC, 27205",
+      "matchedAddress": "207 Eagle Ln, Asheboro, North Carolina, 27205"
+    },
+    "vance-charter-school": {
+      "lat": 36.339800073702,
+      "lng": -78.437304029824,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2090 ROSS MILL ROAD, Henderson, NC, 27537",
+      "matchedAddress": "2090 ROSS MILL RD, HENDERSON, NC, 27537"
+    },
+    "voyager-academy": {
+      "lat": 36.046480173035,
+      "lng": -78.895890449891,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "101 Hock Parc Drive, Durham, NC, 27704",
+      "matchedAddress": "101 HOCK PARC LN, DURHAM, NC, 27704"
+    },
+    "wake-forest-charter-academy": {
+      "lat": 35.96574349509,
+      "lng": -78.493590668169,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1851 Friendship Chapel Rd, Wake Forest, NC, 27587",
+      "matchedAddress": "1851 FRIENDSHIP CHAPEL RD, WAKE FOREST, NC, 27587"
+    },
+    "wake-preparatory-academy": {
+      "lat": 36.020680300901,
+      "lng": -78.516173101271,
+      "source": "ArcGIS World Geocoding Service",
+      "matchType": "PointAddress",
+      "score": 97.13,
+      "inputAddress": "14111 Capital Blvd, Wake Forest, NC, 27587",
+      "matchedAddress": "14111 Capital Blvd, Youngsville, North Carolina, 27596"
+    },
+    "washington-montessori": {
+      "lat": 35.54119804162,
+      "lng": -76.979780817687,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2330 Old Bath Hwy, Washington, NC, 27889",
+      "matchedAddress": "2330 OLD BATH HWY, WASHINGTON, NC, 27889"
+    },
+    "water-s-edge-village-school": {
+      "lat": 36.378557609462,
+      "lng": -75.830085564682,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1126 Schoolhouse Lane, Corolla, NC, 27927",
+      "matchedAddress": "1126 SCHOOLHOUSE LN, COROLLA, NC, 27927"
+    },
+    "wayne-preparatory-academy": {
+      "lat": 35.424346532763,
+      "lng": -77.962315874646,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "600 Tommy's Road, Goldsboro, NC, 27530",
+      "matchedAddress": "600 TOMMYS RD, GOLDSBORO, NC, 27530"
+    },
+    "wayne-stem-academy": {
+      "lat": 35.376126384423,
+      "lng": -77.937884278901,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2950 Summit Road, Goldsboro, NC, 27534",
+      "matchedAddress": "2950 SUMMIT RD, GOLDSBORO, NC, 27534"
+    },
+    "west-lake-preparatory-academy": {
+      "lat": 35.48955524295,
+      "lng": -81.013476416936,
+      "source": "US Census Geocoder",
+      "matchType": "Non_Exact",
+      "inputAddress": "1691 Forney Creek, Denver, NC, 28037",
+      "matchedAddress": "1691 FORNEY CREEK PKWY, DENVER, NC, 28037"
+    },
+    "willow-oak-montessori": {
+      "lat": 35.816003154951,
+      "lng": -79.117585271845,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1476 Andrews Store Road, Pittsboro, NC, 27312",
+      "matchedAddress": "1476 ANDREWS STORE RD, PITTSBORO, NC, 27312"
+    },
+    "wilmington-preparatory-academy": {
+      "lat": 34.23908715416,
+      "lng": -77.891988445042,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "134 Cinema Drive, Wilmington, NC, 28403",
+      "matchedAddress": "134 CINEMA DR, WILMINGTON, NC, 28403"
+    },
+    "wilmington-school-of-the-arts": {
+      "lat": 34.217149091787,
+      "lng": -77.899973904838,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1306 Floral Pkwy, Wilmington, NC, 28403",
+      "matchedAddress": "1306 FLORAL PKWY, WILMINGTON, NC, 28403"
+    },
+    "wilson-preparatory-academy": {
+      "lat": 35.767984343236,
+      "lng": -77.918405212754,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2755 Tilghman Rd N, Wilson, NC, 27896",
+      "matchedAddress": "2755 TILGHMAN RD N, WILSON, NC, 27896"
+    },
+    "winterville-charter-academy": {
+      "lat": 35.552988091453,
+      "lng": -77.369065756601,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "4160 Bayswater Road, Winterville, NC, 28590",
+      "matchedAddress": "4160 BAYSWATER RD, WINTERVILLE, NC, 28590"
+    },
+    "woods-charter": {
+      "lat": 35.816639319387,
+      "lng": -79.109086580154,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "160 Woodland Grove Ln, Chapel Hill, NC, 27516",
+      "matchedAddress": "160 WOODLAND GROVE LN, CHAPEL HILL, NC, 27516"
+    },
+    "youngsville-academy": {
+      "lat": 36.038525289587,
+      "lng": -78.456204483436,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "2045 Hicks Rd, Youngsville, NC, 27596",
+      "matchedAddress": "2045 HICKS RD, YOUNGSVILLE, NC, 27596"
+    },
+    "z-e-c-a-school-of-arts-and-technology": {
+      "lat": 34.751601410964,
+      "lng": -77.411945543563,
+      "source": "US Census Geocoder",
+      "matchType": "Exact",
+      "inputAddress": "1249 Hargett Street, Jacksonville, NC, 28540",
+      "matchedAddress": "1249 HARGETT ST, JACKSONVILLE, NC, 28540"
+    }
+  }
+}

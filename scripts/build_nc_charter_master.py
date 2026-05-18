@@ -16,6 +16,7 @@ SRC_ZIP_PATH = ROOT / "src_dataset.zip"
 MASTER_OUTPUT_PATH = ROOT / "data" / "nc-charter-master-list.json"
 SCHOOLS_OUTPUT_PATH = ROOT / "data" / "schools.json"
 CLUE_OUTPUT_PATH = ROOT / "data" / "clue-bank-statewide-baseline.json"
+GEOCODE_CACHE_PATH = ROOT / "data" / "geocoded-school-addresses.json"
 
 KML_NS = {"kml": "http://www.opengis.net/kml/2.2"}
 XLSX_NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
@@ -91,6 +92,23 @@ def street_only(address: str) -> str:
     if not address:
         return ""
     return address.split(",")[0].strip()
+
+
+def first_nonempty(data: dict[str, str], *keys: str) -> str:
+    for key in keys:
+        value = (data.get(key) or "").strip()
+        if value and value != "-":
+            return value
+    return ""
+
+
+def parse_float(raw: str | int | float | None) -> float | None:
+    if raw in {None, ""}:
+        return None
+    try:
+        return float(raw)
+    except (TypeError, ValueError):
+        return None
 
 
 def parse_grade_span(raw: str) -> list[int]:
@@ -251,6 +269,17 @@ def load_adm_map() -> dict[str, str]:
     return adm_map
 
 
+def load_geocode_cache() -> dict[str, dict]:
+    if not GEOCODE_CACHE_PATH.exists():
+        return {}
+
+    payload = json.loads(GEOCODE_CACHE_PATH.read_text())
+    schools = payload.get("schools", {})
+    if isinstance(schools, dict):
+        return schools
+    return {}
+
+
 def load_current_kml_records() -> list[dict[str, str]]:
     root = ET.parse(KML_PATH).getroot()
     current_folder = None
@@ -283,22 +312,35 @@ def load_current_kml_records() -> list[dict[str, str]]:
                 "address": address,
                 "lat": lat,
                 "lng": lng,
-                "schoolCode": data.get("School Code", ""),
-                "mailingAddress": data.get("School Mailing Address ----------", ""),
-                "mailingCity": data.get("School Mailing City", ""),
+                "schoolCode": first_nonempty(data, "School Code", "LEA", "IPS Number"),
+                "mailingAddress": first_nonempty(
+                    data,
+                    "School Mailing Address ----------",
+                    "Mailing Address Line1 ---------------",
+                ),
+                "mailingCity": first_nonempty(data, "School Mailing City", "Mailing City"),
                 "county": data.get("County Description", ""),
-                "effectiveDate": data.get("School Effective Date", ""),
+                "effectiveDate": first_nonempty(data, "School Effective Date", "Opening Effective Date"),
                 "phone": data.get("School Office Phone", ""),
                 "fax": data.get("School Office Fax", ""),
                 "url": data.get("URL School Address", ""),
                 "charterDirector": data.get("Charter Director --------------", ""),
                 "boardChair": data.get("Board Chair ---------------", ""),
-                "gradeLevelCurrent": data.get("Grade Level Current", "")
-                or data.get("Grade Level Current:", "")
-                or data.get("Grade Level Current: ", ""),
-                "physicalStreet": data.get("School Physical Address ------------", ""),
-                "physicalCity": data.get("School Physica Address City", ""),
-                "physicalZip": data.get("School Physical Address Zip", ""),
+                "gradeLevelCurrent": first_nonempty(
+                    data,
+                    "Grade Level Current",
+                    "Grade Level Current:",
+                    "Grade Level Current: ",
+                    "Grade Level Approved",
+                ),
+                "physicalStreet": first_nonempty(
+                    data,
+                    "School Physical Address ------------",
+                    "Address Line1 -------------------",
+                    "Address Line1",
+                ),
+                "physicalCity": first_nonempty(data, "School Physica Address City", "City"),
+                "physicalZip": first_nonempty(data, "School Physical Address Zip", "Zip Code 5"),
             }
         )
     return records
@@ -308,6 +350,7 @@ def build_master_records() -> tuple[list[dict], dict]:
     kml_records = load_current_kml_records()
     location_records = load_location_records()
     adm_map = load_adm_map()
+    geocode_cache = load_geocode_cache()
 
     location_by_name = {normalize_name(record["name"]): record for record in location_records}
     location_by_host = {
@@ -341,6 +384,13 @@ def build_master_records() -> tuple[list[dict], dict]:
         if location is None:
             unmatched.append(record["officialName"])
 
+        school_id = ID_OVERRIDES.get(record["officialName"], slugify(record["officialName"]))
+        geocode = geocode_cache.get(school_id, {})
+        record_lat = parse_float(record["lat"])
+        record_lng = parse_float(record["lng"])
+        geocode_lat = parse_float(geocode.get("lat"))
+        geocode_lng = parse_float(geocode.get("lng"))
+
         agency_code = location.get("agency_code") if location else (
             f"{record['schoolCode']}000" if record["schoolCode"] else None
         )
@@ -349,7 +399,7 @@ def build_master_records() -> tuple[list[dict], dict]:
 
         master_records.append(
             {
-                "id": ID_OVERRIDES.get(record["officialName"], slugify(record["officialName"])),
+                "id": school_id,
                 "officialName": record["officialName"],
                 "schoolCode": record["schoolCode"],
                 "agencyCode": agency_code,
@@ -367,8 +417,8 @@ def build_master_records() -> tuple[list[dict], dict]:
                 "adm2024": adm_value,
                 "enrollmentBand": compute_enrollment_band(adm_value),
                 "coordinates": {
-                    "lat": float(record["lat"]) if record["lat"] else None,
-                    "lng": float(record["lng"]) if record["lng"] else None,
+                    "lat": record_lat if record_lat is not None else geocode_lat,
+                    "lng": record_lng if record_lng is not None else geocode_lng,
                 },
                 "sourceLinks": {
                     "dpiCharterMap": "https://www.dpi.nc.gov/students-families/alternative-choices/charter-schools",
@@ -378,6 +428,9 @@ def build_master_records() -> tuple[list[dict], dict]:
                     "kmlYear": "2025-2026",
                     "locationYear": location.get("year") if location else None,
                     "admYear": "2024" if adm_value else None,
+                    "geocodeSource": geocode.get("source")
+                    if geocode_lat is not None and geocode_lng is not None
+                    else None,
                 },
             }
         )
@@ -392,6 +445,11 @@ def build_master_records() -> tuple[list[dict], dict]:
             1 for item in master_records if item["enrollmentBand"] not in {None, ""}
         ),
         "gradeBandCount": sum(1 for item in master_records if item["gradeBand"] not in {None, ""}),
+        "coordinateCount": sum(
+            1
+            for item in master_records
+            if item["coordinates"]["lat"] is not None and item["coordinates"]["lng"] is not None
+        ),
         "unmatchedSchools": unmatched,
     }
     return master_records, stats

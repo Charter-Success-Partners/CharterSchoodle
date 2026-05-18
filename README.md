@@ -237,6 +237,12 @@ This repo currently includes:
 - `stats`
 - `schools[]`
 
+`data/geocoded-school-addresses.json`
+
+- cached coordinates generated from official NC DPI school addresses
+- used by `scripts/build_nc_charter_master.py` to populate `coordinates.lat` and `coordinates.lng`
+- uses US Census Geocoder first and ArcGIS only for Census no-match addresses
+
 `data/clue-bank-statewide-baseline.json`
 
 - generated clue coverage for all schools in the current statewide roster
@@ -314,6 +320,8 @@ The current generated calendar includes 732 dated puzzles covering `2026-05-07` 
 To rebuild the statewide school master list and baseline clue bank from official source files already downloaded into the repo, run:
 
 ```bash
+python3 scripts/build_nc_charter_master.py
+python3 scripts/geocode_school_addresses.py
 python3 scripts/build_nc_charter_master.py
 python3 scripts/merge_clue_banks.py
 ```
