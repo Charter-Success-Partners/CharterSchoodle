@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17",
+  "generatedAt": "2026-05-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 741,
+    "puzzleCount": 742,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-16"
+    "endDate": "2028-05-17"
   },
   "puzzles": [
     {
@@ -22261,6 +22261,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-17",
+      "answerSchoolId": "lake-norman-charter",
+      "clues": [
+        {
+          "text": "Three subpages under that framework are named Future Ready, Thrive, and Leadership in Action.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission emphasizes developing college-ready learners and responsible leaders with a strong sense of social responsibility.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school says it is more than a school and is a community built on learning, leadership, and service.",
+          "difficulty": 4
+        },
+        {
+          "text": "A signature framework on the site is called The Knight Standard.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official motto is \"Together we learn, lead and serve.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
