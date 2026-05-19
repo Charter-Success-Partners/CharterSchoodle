@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18",
+  "generatedAt": "2026-05-19",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 742,
+    "puzzleCount": 743,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-17"
+    "endDate": "2028-05-18"
   },
   "puzzles": [
     {
@@ -22287,6 +22287,36 @@
         {
           "text": "Its official motto is \"Together we learn, lead and serve.\"",
           "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-18",
+      "answerSchoolId": "longleaf-school-of-the-arts",
+      "clues": [
+        {
+          "text": "The school profile says students are required to complete four arts elective credits and a course in Cognitive Development.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision emphasizes a safe, inclusive, and respectful school community of authentic learners who pursue knowledge with a creative, thorough, and rigorous approach.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school develops students into confident, responsible, and successful contributors through mentorship and a challenging curriculum that integrates academics and the fine arts.",
+          "difficulty": 3
+        },
+        {
+          "text": "Johneka Williams is listed as Head of School.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its board page lists Sharon Muha as chairperson of the board.",
+          "difficulty": 8
         },
         {
           "difficulty": 1,
