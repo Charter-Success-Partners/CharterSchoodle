@@ -14,6 +14,8 @@ create table if not exists public.charterschoodle_results (
 
 alter table public.charterschoodle_results enable row level security;
 
+grant select, insert, update on public.charterschoodle_results to anon;
+
 drop policy if exists "Anyone can read CharterSchoodle scores"
   on public.charterschoodle_results;
 create policy "Anyone can read CharterSchoodle scores"

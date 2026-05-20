@@ -832,14 +832,19 @@ async function upsertRemoteLeaderboardRecords(records) {
 }
 
 async function supabaseRequest(path, options = {}) {
+  const headers = {
+    apikey: state.supabase.anonKey,
+    "Content-Type": "application/json",
+    ...(options.headers || {}),
+  };
+
+  if (state.supabase.anonKey.startsWith("ey")) {
+    headers.Authorization = `Bearer ${state.supabase.anonKey}`;
+  }
+
   const response = await fetch(`${state.supabase.url}/rest/v1/${path}`, {
     ...options,
-    headers: {
-      apikey: state.supabase.anonKey,
-      Authorization: `Bearer ${state.supabase.anonKey}`,
-      "Content-Type": "application/json",
-      ...(options.headers || {}),
-    },
+    headers,
   });
 
   if (!response.ok) {
