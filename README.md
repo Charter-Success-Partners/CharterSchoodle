@@ -18,15 +18,15 @@ This repo currently includes:
 - A statewide baseline clue bank generated from official NC sources
 - Hand-authored validated clue batches for selected schools
 
-## Leaderboard Setup
+## Leaderboard
 
-The app works without a backend and saves scores in `localStorage`. To enable the shared company leaderboard:
+The leaderboard is live through Supabase and is documented in `docs/leaderboard.md`.
 
-1. Create a Supabase project.
-2. Run `docs/supabase-leaderboard.sql` in the Supabase SQL editor.
-3. Add the project URL and anon key to `src/supabase-config.js`.
-
-The anon key is public in a static GitHub Pages app. The included row-level security policies are intended for a casual internal leaderboard, not tamper-proof competitive scoring.
+- Players are prompted for name and school if no profile is saved locally.
+- The browser remembers the profile in `localStorage`.
+- Re-entering the same normalized name and school on a new device maps to the same leaderboard identity.
+- Daily attempts, solved/lost status, guesses, points, win streaks, and attempt streaks are synced to Supabase.
+- The publishable Supabase key in `src/supabase-config.js` is public by design for this static app.
 
 ## Data Model
 
