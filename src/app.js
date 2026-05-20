@@ -36,6 +36,11 @@ const elements = {
   playerForm: document.getElementById("player-form"),
   playerName: document.getElementById("player-name"),
   playerSchool: document.getElementById("player-school"),
+  profileOverlay: document.getElementById("profile-overlay"),
+  profileModalForm: document.getElementById("profile-modal-form"),
+  profileName: document.getElementById("profile-name"),
+  profileSchool: document.getElementById("profile-school"),
+  profileModalStatus: document.getElementById("profile-modal-status"),
   winOverlay: document.getElementById("win-overlay"),
   winAnswer: document.getElementById("win-answer"),
   winSummary: document.getElementById("win-summary"),
@@ -165,17 +170,14 @@ function loadPlayerProfile() {
 
   try {
     const parsed = JSON.parse(raw);
-    return {
-      id: parsed.id || fallback.id,
-      name: normalizeProfileValue(parsed.name || ""),
-      school: normalizeProfileValue(parsed.school || parsed.team || ""),
-    };
+    return buildPlayerProfile(parsed.name || "", parsed.school || parsed.team || "", parsed.id || fallback.id);
   } catch {
     return fallback;
   }
 }
 
 function savePlayerProfile() {
+  state.player = buildPlayerProfile(state.player?.name || "", state.player?.school || "", state.player?.id);
   localStorage.setItem(GAME_CONFIG.playerStorageKey, JSON.stringify(state.player));
 }
 
@@ -189,6 +191,62 @@ function createPlayerId() {
 
 function normalizeProfileValue(value) {
   return String(value).trim().replace(/\s+/g, " ").slice(0, 80);
+}
+
+function normalizeIdentityValue(value) {
+  return normalizeProfileValue(value)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function buildPlayerProfile(name, school, fallbackId = createPlayerId()) {
+  const profile = {
+    id: fallbackId,
+    name: normalizeProfileValue(name),
+    school: normalizeProfileValue(school),
+  };
+
+  if (profile.name && profile.school) {
+    profile.id = profileIdForNameSchool(profile.name, profile.school);
+  }
+
+  return profile;
+}
+
+function profileKeyForNameSchool(name, school) {
+  const normalizedName = normalizeIdentityValue(name);
+  const normalizedSchool = normalizeIdentityValue(school);
+  return normalizedName && normalizedSchool ? `${normalizedName}|${normalizedSchool}` : "";
+}
+
+function profileKeyForRecord(record) {
+  return profileKeyForNameSchool(record.playerName, record.schoolName);
+}
+
+function currentProfileKey() {
+  return profileKeyForNameSchool(state.player?.name, state.player?.school);
+}
+
+function profileIdForNameSchool(name, school) {
+  return `profile-${hashProfileKey(profileKeyForNameSchool(name, school))}`;
+}
+
+function hashProfileKey(value) {
+  let first = 0xdeadbeef;
+  let second = 0x41c6ce57;
+
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    first = Math.imul(first ^ code, 2654435761);
+    second = Math.imul(second ^ code, 1597334677);
+  }
+
+  first = Math.imul(first ^ (first >>> 16), 2246822507) ^ Math.imul(second ^ (second >>> 13), 3266489909);
+  second = Math.imul(second ^ (second >>> 16), 2246822507) ^ Math.imul(first ^ (first >>> 13), 3266489909);
+  return `${(second >>> 0).toString(36)}${(first >>> 0).toString(36)}`;
 }
 
 function hasCompletePlayerProfile() {
@@ -481,7 +539,7 @@ function recordDailyAttempt() {
   syncLocalScoresToRemote();
 }
 
-function buildScoreSummary(records = Object.values(state.scorebook?.results || {})) {
+function buildScoreSummary(records = getCurrentPlayerRecords()) {
   const results = dedupeResultsByDate(records).sort((left, right) => left.date.localeCompare(right.date));
   const solved = results.filter((result) => result.status === "solved");
   const points = results.reduce((sum, result) => sum + Number(result.points || 0), 0);
@@ -502,6 +560,20 @@ function buildScoreSummary(records = Object.values(state.scorebook?.results || {
     bestWinStreak: winStreaks.best,
     average,
   };
+}
+
+function getCurrentPlayerRecords() {
+  const localRecords = buildLocalLeaderboardRecords();
+  const profileKey = currentProfileKey();
+
+  if (!profileKey || !state.leaderboard.records.length) {
+    return localRecords;
+  }
+
+  const remoteProfileRecords = state.leaderboard.records.filter(
+    (record) => profileKeyForRecord(record) === profileKey,
+  );
+  return [...remoteProfileRecords, ...localRecords];
 }
 
 function dropTrailingAttemptedResults(results) {
@@ -574,12 +646,50 @@ function renderScoreSummary() {
   elements.playerSchool.value = state.player.school;
 }
 
+function openProfilePrompt() {
+  elements.profileName.value = state.player.name;
+  elements.profileSchool.value = state.player.school;
+  elements.profileModalStatus.textContent = "";
+  elements.profileOverlay.classList.remove("is-hidden");
+  elements.profileOverlay.setAttribute("aria-hidden", "false");
+  window.setTimeout(() => elements.profileName.focus(), 0);
+}
+
+function closeProfilePrompt() {
+  elements.profileOverlay.classList.add("is-hidden");
+  elements.profileOverlay.setAttribute("aria-hidden", "true");
+}
+
+function showProfilePromptIfNeeded() {
+  if (!hasCompletePlayerProfile()) {
+    openProfilePrompt();
+  }
+}
+
+function savePlayerFromFields(name, school) {
+  const nextProfile = buildPlayerProfile(name, school, state.player?.id);
+
+  if (!nextProfile.name || !nextProfile.school) {
+    return false;
+  }
+
+  state.player = nextProfile;
+  savePlayerProfile();
+  renderScoreSummary();
+  if (state.mode === "leaderboard") {
+    renderLeaderboardView();
+  }
+  syncLocalScoresToRemote();
+  return true;
+}
+
 function renderLeaderboardView() {
   const summary = buildScoreSummary();
   const rows = buildLeaderboardRows();
   const playerName = state.player.name.trim() || "You";
   const averageLabel = summary.average === null ? "—" : summary.average.toFixed(1);
   const scoreVerb = playerName === "You" ? "have" : "has";
+  const profileKey = currentProfileKey();
 
   elements.boardPanel.classList.add("is-hidden");
   elements.guessForm.classList.add("is-hidden");
@@ -602,7 +712,7 @@ function renderLeaderboardView() {
     ? rows
         .map(
           (row, index) => `
-            <tr class="${row.clientPlayerId === state.player.id ? "leaderboard-row--you" : ""}">
+            <tr class="${profileKey && row.profileKey === profileKey ? "leaderboard-row--you" : ""}">
               <td>${index + 1}</td>
               <td>${escapeHtml(row.playerName)}</td>
               <td>${escapeHtml(row.schoolName)}</td>
@@ -625,9 +735,11 @@ function buildLeaderboardRows() {
   const players = new Map();
 
   records.forEach((record) => {
-    const key = record.clientPlayerId || `${record.playerName}:${record.schoolName}`;
+    const recordProfileKey = profileKeyForRecord(record);
+    const key = recordProfileKey || record.clientPlayerId || `${record.playerName}:${record.schoolName}`;
     if (!players.has(key)) {
       players.set(key, {
+        profileKey: recordProfileKey,
         clientPlayerId: record.clientPlayerId,
         playerName: record.playerName || "Unknown Player",
         schoolName: record.schoolName || "School not set",
@@ -651,6 +763,7 @@ function buildLeaderboardRows() {
   });
 
   const rows = [...players.values()].map((player) => ({
+    profileKey: player.profileKey,
     clientPlayerId: player.clientPlayerId,
     playerName: player.playerName,
     schoolName: player.schoolName,
@@ -690,10 +803,7 @@ function getLeaderboardRecords() {
     return localRecords;
   }
 
-  const remoteRecords = state.leaderboard.records.filter(
-    (record) => record.clientPlayerId !== state.player.id,
-  );
-  return [...remoteRecords, ...localRecords];
+  return [...state.leaderboard.records, ...localRecords];
 }
 
 function buildLocalLeaderboardRecords() {
@@ -1226,19 +1336,16 @@ async function init() {
   elements.guessForm.addEventListener("submit", handleGuessSubmission);
   elements.playerForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    state.player = {
-      ...state.player,
-      name: elements.playerName.value.trim(),
-      school: elements.playerSchool.value.trim(),
-    };
-    state.player.name = normalizeProfileValue(state.player.name);
-    state.player.school = normalizeProfileValue(state.player.school);
-    savePlayerProfile();
-    renderScoreSummary();
-    if (state.mode === "leaderboard") {
-      renderLeaderboardView();
+    savePlayerFromFields(elements.playerName.value, elements.playerSchool.value);
+  });
+  elements.profileModalForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (savePlayerFromFields(elements.profileName.value, elements.profileSchool.value)) {
+      closeProfilePrompt();
+      return;
     }
-    syncLocalScoresToRemote();
+
+    elements.profileModalStatus.textContent = "Name and school are required.";
   });
   elements.guessInput.addEventListener("input", updateSuggestions);
   elements.guessInput.addEventListener("keydown", handleGuessInputKeydown);
@@ -1252,6 +1359,7 @@ async function init() {
     state.winOverlaySeen = true;
     renderWinOverlay();
   });
+  showProfilePromptIfNeeded();
 }
 
 init().catch((error) => {

@@ -12,7 +12,8 @@ This repo currently includes:
 - Official-name autocomplete
 - Clue accumulation across six guesses
 - Guess feedback for enrollment band, grade-band direction, and map direction
-- Local scoring plus a Supabase-ready company leaderboard for points, win streaks, and attempt streaks
+- Local scoring plus a Supabase-backed company leaderboard for points, win streaks, and attempt streaks
+- Profile-based leaderboard identity from player name and school, so scores can follow a person across devices
 - A statewide current-school master list built from official NC sources
 - A statewide baseline clue bank generated from official NC sources
 - Hand-authored validated clue batches for selected schools

@@ -578,6 +578,7 @@ h3 {
   font-size: 0.82rem;
 }
 
+.profile-overlay,
 .win-overlay {
   position: fixed;
   inset: 0;
@@ -587,6 +588,11 @@ h3 {
   padding: 24px;
 }
 
+.profile-overlay {
+  z-index: 30;
+}
+
+.profile-overlay__backdrop,
 .win-overlay__backdrop {
   position: absolute;
   inset: 0;
@@ -594,6 +600,7 @@ h3 {
   backdrop-filter: blur(6px);
 }
 
+.profile-modal,
 .win-modal {
   position: relative;
   z-index: 1;
@@ -605,6 +612,25 @@ h3 {
   box-shadow: 0 24px 50px rgba(37, 52, 55, 0.24);
   text-align: center;
   overflow: hidden;
+}
+
+.profile-modal {
+  text-align: left;
+}
+
+.profile-modal .player-form {
+  margin-top: 16px;
+}
+
+.profile-modal .primary-button {
+  width: 100%;
+}
+
+.profile-modal__status {
+  min-height: 1.1em;
+  margin: 0;
+  font-size: 0.82rem;
+  color: #a6230e;
 }
 
 .win-answer {

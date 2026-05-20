@@ -234,6 +234,22 @@
       </main>
     </div>
 
+    <div id="profile-overlay" class="profile-overlay is-hidden" aria-hidden="true">
+      <div class="profile-overlay__backdrop"></div>
+      <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+        <p class="eyebrow">Leaderboard Profile</p>
+        <h2 id="profile-title">Your Score</h2>
+        <form id="profile-modal-form" class="player-form">
+          <label for="profile-name">Name</label>
+          <input id="profile-name" type="text" maxlength="60" autocomplete="name" required />
+          <label for="profile-school">School</label>
+          <input id="profile-school" type="text" maxlength="80" autocomplete="organization" required />
+          <p id="profile-modal-status" class="profile-modal__status"></p>
+          <button class="primary-button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
     <div id="win-overlay" class="win-overlay is-hidden" aria-hidden="true">
       <div class="win-overlay__backdrop"></div>
       <div class="win-modal" role="dialog" aria-modal="true" aria-labelledby="win-title">
