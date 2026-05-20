@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19",
+  "generatedAt": "2026-05-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 743,
+    "puzzleCount": 744,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-18"
+    "endDate": "2028-05-19"
   },
   "puzzles": [
     {
@@ -22321,6 +22321,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-19",
+      "answerSchoolId": "anderson-academy",
+      "clues": [
+        {
+          "text": "The school describes its learning model as a mix of direct, interactive, experiential, and independent learning.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official pages say it opened on Crossnore's Winston-Salem campus in August 2025.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school offers a stable, emotionally supportive educational environment that empowers children to achieve their true academic and social potential.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school describes its approach as serving the whole child, with equal attention to academics and social-emotional wellbeing.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school gives priority to students connected to foster care or the child welfare system.",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
