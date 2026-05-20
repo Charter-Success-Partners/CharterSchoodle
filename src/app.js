@@ -394,7 +394,6 @@ function gradeRange(school) {
   return {
     min: grades[0],
     max: grades[grades.length - 1],
-    midpoint: (grades[0] + grades[grades.length - 1]) / 2,
   };
 }
 
@@ -414,15 +413,15 @@ function compareGradeSpan(guessSchool, answerSchool, correct) {
     return { status: "match" };
   }
 
-  if (answerRange.min < guessRange.min && answerRange.max > guessRange.max) {
+  if (answerRange.min <= guessRange.min && answerRange.max >= guessRange.max) {
     return { status: "wider" };
   }
 
-  if (answerRange.min > guessRange.min && answerRange.max < guessRange.max) {
+  if (answerRange.min >= guessRange.min && answerRange.max <= guessRange.max) {
     return { status: "narrower" };
   }
 
-  return { status: answerRange.midpoint > guessRange.midpoint ? "older" : "younger" };
+  return { status: answerRange.max > guessRange.max ? "older" : "younger" };
 }
 
 function compareDirection(fromCoordinates, toCoordinates, correct) {
