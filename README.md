@@ -12,9 +12,20 @@ This repo currently includes:
 - Official-name autocomplete
 - Clue accumulation across six guesses
 - Guess feedback for enrollment band, grade-band direction, and map direction
+- Local scoring plus a Supabase-ready company leaderboard for points, win streaks, and attempt streaks
 - A statewide current-school master list built from official NC sources
 - A statewide baseline clue bank generated from official NC sources
 - Hand-authored validated clue batches for selected schools
+
+## Leaderboard Setup
+
+The app works without a backend and saves scores in `localStorage`. To enable the shared company leaderboard:
+
+1. Create a Supabase project.
+2. Run `docs/supabase-leaderboard.sql` in the Supabase SQL editor.
+3. Add the project URL and anon key to `src/supabase-config.js`.
+
+The anon key is public in a static GitHub Pages app. The included row-level security policies are intended for a casual internal leaderboard, not tamper-proof competitive scoring.
 
 ## Data Model
 

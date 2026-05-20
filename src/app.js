@@ -1,6 +1,10 @@
 const GAME_CONFIG = {
   maxGuesses: 6,
   storageKeyPrefix: "charterschoodle-progress",
+  scoreStorageKey: "charterschoodle-scorebook:v1",
+  playerStorageKey: "charterschoodle-player:v1",
+  defaultSupabaseTable: "charterschoodle_results",
+  leaderboardFetchLimit: 5000,
 };
 
 const elements = {
@@ -12,12 +16,26 @@ const elements = {
   statusTitle: document.getElementById("status-title"),
   statusMessage: document.getElementById("status-message"),
   clueProgress: document.getElementById("clue-progress"),
+  boardPanel: document.getElementById("board-panel"),
   boardBody: document.getElementById("board-body"),
+  leaderboardPanel: document.getElementById("leaderboard-panel"),
+  leaderboardSummary: document.getElementById("leaderboard-summary"),
+  leaderboardBody: document.getElementById("leaderboard-body"),
+  leaderboardSyncStatus: document.getElementById("leaderboard-sync-status"),
+  leaderboardSortButtons: [...document.querySelectorAll("[data-leaderboard-sort]")],
+  scoreTotal: document.getElementById("score-total"),
+  scoreWinStreak: document.getElementById("score-win-streak"),
+  scoreAttemptStreak: document.getElementById("score-attempt-streak"),
+  scoreAverage: document.getElementById("score-average"),
+  scoreStatus: document.getElementById("score-status"),
   guessCounter: document.getElementById("guess-counter"),
   guessForm: document.getElementById("guess-form"),
   primaryPanel: document.querySelector(".panel--primary"),
   guessInput: document.getElementById("school-guess"),
   autocompleteList: document.getElementById("autocomplete-list"),
+  playerForm: document.getElementById("player-form"),
+  playerName: document.getElementById("player-name"),
+  playerSchool: document.getElementById("player-school"),
   winOverlay: document.getElementById("win-overlay"),
   winAnswer: document.getElementById("win-answer"),
   winSummary: document.getElementById("win-summary"),
@@ -37,6 +55,16 @@ const state = {
   selectedSuggestionIndex: -1,
   lastRoundOutcome: null,
   winOverlaySeen: false,
+  player: null,
+  scorebook: null,
+  supabase: null,
+  leaderboard: {
+    sort: "points",
+    records: [],
+    status: "local",
+    message: "",
+    syncInFlight: false,
+  },
 };
 
 const EARTH_RADIUS_MILES = 3958.8;
@@ -50,6 +78,10 @@ async function loadData() {
   state.metadata = await metadataResponse.json();
   state.schools = await schoolsResponse.json();
   state.schoolMap = new Map(state.schools.map((school) => [school.id, school]));
+  state.player = loadPlayerProfile();
+  state.scorebook = loadScorebook();
+  state.supabase = loadSupabaseConfig();
+  savePlayerProfile();
 }
 
 function getTodayIso() {
@@ -74,6 +106,14 @@ function setMode(mode) {
   });
 
   elements.archiveControls.classList.toggle("is-hidden", mode !== "archive");
+  if (mode === "leaderboard") {
+    state.filteredSuggestions = [];
+    state.selectedSuggestionIndex = -1;
+    render();
+    refreshLeaderboard({ silent: true });
+    return;
+  }
+
   const date = mode === "daily" ? getTodayIso() : elements.archiveDate.value;
   loadPuzzleForDate(date);
 }
@@ -116,6 +156,87 @@ function saveProgress() {
   localStorage.setItem(getProgressKey(state.activePuzzleDate), JSON.stringify(state.progress));
 }
 
+function loadPlayerProfile() {
+  const fallback = { id: createPlayerId(), name: "", school: "" };
+  const raw = localStorage.getItem(GAME_CONFIG.playerStorageKey);
+  if (!raw) {
+    return fallback;
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    return {
+      id: parsed.id || fallback.id,
+      name: normalizeProfileValue(parsed.name || ""),
+      school: normalizeProfileValue(parsed.school || parsed.team || ""),
+    };
+  } catch {
+    return fallback;
+  }
+}
+
+function savePlayerProfile() {
+  localStorage.setItem(GAME_CONFIG.playerStorageKey, JSON.stringify(state.player));
+}
+
+function createPlayerId() {
+  if (window.crypto?.randomUUID) {
+    return window.crypto.randomUUID();
+  }
+
+  return `player-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function normalizeProfileValue(value) {
+  return String(value).trim().replace(/\s+/g, " ").slice(0, 80);
+}
+
+function hasCompletePlayerProfile() {
+  return Boolean(state.player?.name?.trim() && state.player?.school?.trim());
+}
+
+function loadSupabaseConfig() {
+  const config = window.CHARTERSCHOOLDLE_SUPABASE || {};
+  const rawUrl = typeof config.url === "string" ? config.url.trim() : "";
+  const rawAnonKey = typeof config.anonKey === "string" ? config.anonKey.trim() : "";
+  const table =
+    typeof config.table === "string" && /^[A-Za-z0-9_]+$/.test(config.table)
+      ? config.table
+      : GAME_CONFIG.defaultSupabaseTable;
+
+  if (
+    !rawUrl ||
+    !rawAnonKey ||
+    rawUrl.includes("YOUR_") ||
+    rawAnonKey.includes("YOUR_")
+  ) {
+    return null;
+  }
+
+  return {
+    url: rawUrl.replace(/\/+$/, ""),
+    anonKey: rawAnonKey,
+    table,
+  };
+}
+
+function loadScorebook() {
+  const raw = localStorage.getItem(GAME_CONFIG.scoreStorageKey);
+  if (!raw) {
+    return { results: {} };
+  }
+
+  try {
+    return { results: {}, ...JSON.parse(raw) };
+  } catch {
+    return { results: {} };
+  }
+}
+
+function saveScorebook() {
+  localStorage.setItem(GAME_CONFIG.scoreStorageKey, JSON.stringify(state.scorebook));
+}
+
 function loadPuzzleForDate(date) {
   const puzzle = getPuzzleByDate(date);
   if (!puzzle) {
@@ -131,6 +252,7 @@ function loadPuzzleForDate(date) {
   state.selectedSuggestionIndex = -1;
   state.lastRoundOutcome = null;
   state.winOverlaySeen = !!state.progress.solved;
+  recordDailyAttempt();
   render();
 }
 
@@ -140,16 +262,36 @@ function revealNextClueIfNeeded() {
 }
 
 function render() {
+  if (state.mode === "leaderboard") {
+    renderLeaderboardView();
+    renderSuggestionList();
+    syncInputLock();
+    return;
+  }
+
   revealNextClueIfNeeded();
+  elements.boardPanel.classList.remove("is-hidden");
+  elements.guessForm.classList.remove("is-hidden");
+  elements.leaderboardPanel.classList.add("is-hidden");
   renderHeader();
   renderBoard();
   renderStatus();
+  renderScoreSummary();
   renderWinOverlay();
   renderSuggestionList();
   syncInputLock();
 }
 
 function renderHeader() {
+  if (state.mode === "leaderboard") {
+    const summary = buildScoreSummary();
+    elements.puzzleLabel.textContent = "Company score";
+    elements.puzzleHeading.textContent = "Leaderboard";
+    elements.guessCounter.textContent = `${summary.points} pts`;
+    elements.clueProgress.textContent = `${summary.winStreak} win · ${summary.attemptStreak} attempt`;
+    return;
+  }
+
   const headingDate = new Date(`${state.activePuzzleDate}T12:00:00`);
   const dateLabel = headingDate.toLocaleDateString(undefined, {
     month: "long",
@@ -255,6 +397,12 @@ function shakePanel() {
 }
 
 function syncInputLock() {
+  if (state.mode === "leaderboard") {
+    elements.guessInput.disabled = true;
+    elements.guessForm.querySelector("button[type='submit']").disabled = true;
+    return;
+  }
+
   const gameOver = state.progress.solved || state.progress.lost;
   elements.guessInput.disabled = gameOver;
   elements.guessForm.querySelector("button[type='submit']").disabled = gameOver;
@@ -306,8 +454,436 @@ function handleGuessSubmission(event) {
   elements.guessInput.value = "";
   state.filteredSuggestions = [];
   state.selectedSuggestionIndex = -1;
+  recordDailyAttempt();
   saveProgress();
   render();
+}
+
+function recordDailyAttempt() {
+  if (state.mode !== "daily" || state.progress.guesses.length === 0) {
+    return;
+  }
+
+  const status = state.progress.solved ? "solved" : state.progress.lost ? "lost" : "attempted";
+  const guessCount = state.progress.guesses.length;
+  const existing = state.scorebook.results[state.activePuzzleDate];
+  const hasSameResult = existing?.status === status && existing?.guesses === guessCount;
+
+  state.scorebook.results[state.activePuzzleDate] = {
+    date: state.activePuzzleDate,
+    answerSchoolId: state.activePuzzle.answerSchoolId,
+    status,
+    guesses: guessCount,
+    points: status === "solved" ? GAME_CONFIG.maxGuesses + 1 - guessCount : 0,
+    completedAt: hasSameResult && existing?.completedAt ? existing.completedAt : new Date().toISOString(),
+  };
+  saveScorebook();
+  syncLocalScoresToRemote();
+}
+
+function buildScoreSummary(records = Object.values(state.scorebook?.results || {})) {
+  const results = dedupeResultsByDate(records).sort((left, right) => left.date.localeCompare(right.date));
+  const solved = results.filter((result) => result.status === "solved");
+  const points = results.reduce((sum, result) => sum + Number(result.points || 0), 0);
+  const average =
+    solved.length > 0
+      ? solved.reduce((sum, result) => sum + result.guesses, 0) / solved.length
+      : null;
+  const attemptStreaks = calculateStreaks(results, () => true);
+  const winStreaks = calculateStreaks(dropTrailingAttemptedResults(results), (result) => result.status === "solved");
+
+  return {
+    points,
+    played: results.length,
+    solved: solved.length,
+    attemptStreak: attemptStreaks.current,
+    winStreak: winStreaks.current,
+    bestAttemptStreak: attemptStreaks.best,
+    bestWinStreak: winStreaks.best,
+    average,
+  };
+}
+
+function dropTrailingAttemptedResults(results) {
+  const trimmed = [...results];
+  while (trimmed[trimmed.length - 1]?.status === "attempted") {
+    trimmed.pop();
+  }
+  return trimmed;
+}
+
+function dedupeResultsByDate(records) {
+  const byDate = new Map();
+  records.forEach((record) => {
+    if (!record?.date) {
+      return;
+    }
+
+    const existing = byDate.get(record.date);
+    if (!existing || String(record.completedAt || "").localeCompare(String(existing.completedAt || "")) >= 0) {
+      byDate.set(record.date, record);
+    }
+  });
+  return [...byDate.values()];
+}
+
+function calculateStreaks(results, qualifies) {
+  let best = 0;
+  let currentRun = 0;
+  let previousDate = null;
+
+  results.forEach((result) => {
+    if (!qualifies(result)) {
+      currentRun = 0;
+      previousDate = result.date;
+      return;
+    }
+
+    currentRun = previousDate && areConsecutivePuzzleDates(previousDate, result.date) ? currentRun + 1 : 1;
+    best = Math.max(best, currentRun);
+    previousDate = result.date;
+  });
+
+  return { current: currentRun, best };
+}
+
+function areConsecutivePuzzleDates(previousDate, currentDate) {
+  const puzzleDates = state.metadata?.puzzles?.map((puzzle) => puzzle.date).sort() || [];
+  const previousIndex = puzzleDates.indexOf(previousDate);
+  const currentIndex = puzzleDates.indexOf(currentDate);
+
+  if (previousIndex !== -1 && currentIndex !== -1) {
+    return currentIndex === previousIndex + 1;
+  }
+
+  return dayNumber(currentDate) - dayNumber(previousDate) === 1;
+}
+
+function dayNumber(date) {
+  return Math.floor(new Date(`${date}T00:00:00Z`).getTime() / 86400000);
+}
+
+function renderScoreSummary() {
+  const summary = buildScoreSummary();
+  const profilePrompt = hasCompletePlayerProfile() ? "" : " · add name and school";
+  elements.scoreStatus.textContent =
+    summary.played === 0
+      ? `Daily results only${profilePrompt}`
+      : `${summary.points} pts · ${summary.solved}/${summary.played} solved${profilePrompt}`;
+  elements.playerName.value = state.player.name;
+  elements.playerSchool.value = state.player.school;
+}
+
+function renderLeaderboardView() {
+  const summary = buildScoreSummary();
+  const rows = buildLeaderboardRows();
+  const playerName = state.player.name.trim() || "You";
+  const averageLabel = summary.average === null ? "—" : summary.average.toFixed(1);
+  const scoreVerb = playerName === "You" ? "have" : "has";
+
+  elements.boardPanel.classList.add("is-hidden");
+  elements.guessForm.classList.add("is-hidden");
+  elements.leaderboardPanel.classList.remove("is-hidden");
+  elements.winOverlay.classList.add("is-hidden");
+  elements.winOverlay.setAttribute("aria-hidden", "true");
+  elements.statusTitle.textContent = "Leaderboard";
+  elements.statusMessage.textContent = `${playerName} ${scoreVerb} ${summary.points} points across ${summary.played} daily puzzle${summary.played === 1 ? "" : "s"}.`;
+  elements.scoreTotal.textContent = String(summary.points);
+  elements.scoreWinStreak.textContent = String(summary.winStreak);
+  elements.scoreAttemptStreak.textContent = String(summary.attemptStreak);
+  elements.scoreAverage.textContent = averageLabel;
+  elements.leaderboardSortButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.leaderboardSort === state.leaderboard.sort);
+  });
+  elements.leaderboardSummary.textContent =
+    rows.length === 0 ? "No scored daily puzzles yet" : `${rows.length} player${rows.length === 1 ? "" : "s"}`;
+  elements.leaderboardSyncStatus.textContent = getLeaderboardStatusMessage();
+  elements.leaderboardBody.innerHTML = rows.length
+    ? rows
+        .map(
+          (row, index) => `
+            <tr class="${row.clientPlayerId === state.player.id ? "leaderboard-row--you" : ""}">
+              <td>${index + 1}</td>
+              <td>${escapeHtml(row.playerName)}</td>
+              <td>${escapeHtml(row.schoolName)}</td>
+              <td>${row.points}</td>
+              <td>${row.solved}/${row.played}</td>
+              <td>${row.winStreak}</td>
+              <td>${row.attemptStreak}</td>
+              <td>${row.average === null ? "—" : row.average.toFixed(1)}</td>
+            </tr>
+          `,
+        )
+        .join("")
+    : '<tr><td class="leaderboard-empty" colspan="8">No daily scores recorded yet.</td></tr>';
+  renderHeader();
+  renderScoreSummary();
+}
+
+function buildLeaderboardRows() {
+  const records = getLeaderboardRecords();
+  const players = new Map();
+
+  records.forEach((record) => {
+    const key = record.clientPlayerId || `${record.playerName}:${record.schoolName}`;
+    if (!players.has(key)) {
+      players.set(key, {
+        clientPlayerId: record.clientPlayerId,
+        playerName: record.playerName || "Unknown Player",
+        schoolName: record.schoolName || "School not set",
+        records: [],
+        latestRecord: null,
+      });
+    }
+
+    const player = players.get(key);
+    player.records.push(record);
+    if (
+      !player.latestRecord ||
+      String(record.completedAt || record.date).localeCompare(
+        String(player.latestRecord.completedAt || player.latestRecord.date),
+      ) >= 0
+    ) {
+      player.latestRecord = record;
+      player.playerName = record.playerName || player.playerName;
+      player.schoolName = record.schoolName || player.schoolName;
+    }
+  });
+
+  const rows = [...players.values()].map((player) => ({
+    clientPlayerId: player.clientPlayerId,
+    playerName: player.playerName,
+    schoolName: player.schoolName,
+    ...buildScoreSummary(player.records),
+  }));
+  const sortGetters = {
+    points: (row) => row.points,
+    winStreak: (row) => row.winStreak,
+    attemptStreak: (row) => row.attemptStreak,
+    bestWinStreak: (row) => row.bestWinStreak,
+  };
+  const primaryGetter = sortGetters[state.leaderboard.sort] || sortGetters.points;
+
+  return rows.sort((left, right) => {
+    const primary = primaryGetter(right) - primaryGetter(left);
+    if (primary) {
+      return primary;
+    }
+
+    return (
+      right.points - left.points ||
+      right.solved - left.solved ||
+      averageSortValue(left.average) - averageSortValue(right.average) ||
+      left.playerName.localeCompare(right.playerName)
+    );
+  });
+}
+
+function averageSortValue(value) {
+  return value === null ? Number.POSITIVE_INFINITY : value;
+}
+
+function getLeaderboardRecords() {
+  const localRecords = buildLocalLeaderboardRecords();
+
+  if (!state.supabase || state.leaderboard.status === "error" || !state.leaderboard.records.length) {
+    return localRecords;
+  }
+
+  const remoteRecords = state.leaderboard.records.filter(
+    (record) => record.clientPlayerId !== state.player.id,
+  );
+  return [...remoteRecords, ...localRecords];
+}
+
+function buildLocalLeaderboardRecords() {
+  const playerName = state.player.name.trim() || "You";
+  const schoolName = state.player.school.trim() || "School not set";
+
+  return Object.values(state.scorebook?.results || {}).map((result) => ({
+    clientPlayerId: state.player.id,
+    playerName,
+    schoolName,
+    date: result.date,
+    answerSchoolId: result.answerSchoolId,
+    status: result.status || "attempted",
+    guesses: Number(result.guesses),
+    points: Number(result.points || 0),
+    completedAt: result.completedAt,
+  }));
+}
+
+function getLeaderboardStatusMessage() {
+  if (!state.supabase) {
+    return "Company leaderboard is not connected yet. Scores are saved on this device.";
+  }
+
+  if (!hasCompletePlayerProfile()) {
+    return "Add your name and school to publish your daily scores.";
+  }
+
+  if (state.leaderboard.status === "syncing") {
+    return "Syncing your daily scores...";
+  }
+
+  if (state.leaderboard.status === "loading") {
+    return "Loading company leaderboard...";
+  }
+
+  if (state.leaderboard.status === "error") {
+    return state.leaderboard.message || "Could not load the company leaderboard. Showing saved scores.";
+  }
+
+  return "Company leaderboard is connected.";
+}
+
+async function refreshLeaderboard({ silent = false } = {}) {
+  if (!state.supabase) {
+    state.leaderboard.status = "local";
+    state.leaderboard.records = [];
+    return;
+  }
+
+  state.leaderboard.status = silent ? state.leaderboard.status : "loading";
+  if (state.mode === "leaderboard") {
+    renderLeaderboardView();
+  }
+
+  try {
+    state.leaderboard.records = await fetchRemoteLeaderboardRecords();
+    state.leaderboard.status = "ready";
+    state.leaderboard.message = "";
+  } catch (error) {
+    state.leaderboard.status = "error";
+    state.leaderboard.message = "Could not load the company leaderboard. Showing saved scores.";
+    console.warn(error);
+  }
+
+  if (state.mode === "leaderboard") {
+    renderLeaderboardView();
+  } else {
+    renderScoreSummary();
+  }
+}
+
+async function syncLocalScoresToRemote() {
+  if (!state.supabase || state.leaderboard.syncInFlight || !hasCompletePlayerProfile()) {
+    return;
+  }
+
+  const records = buildLocalLeaderboardRecords();
+  if (!records.length) {
+    await refreshLeaderboard({ silent: true });
+    return;
+  }
+
+  state.leaderboard.syncInFlight = true;
+  state.leaderboard.status = "syncing";
+  if (state.mode === "leaderboard") {
+    renderLeaderboardView();
+  }
+
+  try {
+    await upsertRemoteLeaderboardRecords(records);
+    await refreshLeaderboard({ silent: true });
+  } catch (error) {
+    state.leaderboard.status = "error";
+    state.leaderboard.message = "Could not sync your daily scores. They are still saved on this device.";
+    console.warn(error);
+    if (state.mode === "leaderboard") {
+      renderLeaderboardView();
+    }
+  } finally {
+    state.leaderboard.syncInFlight = false;
+  }
+}
+
+async function fetchRemoteLeaderboardRecords() {
+  const params = new URLSearchParams({
+    select:
+      "client_player_id,player_name,school_name,puzzle_date,answer_school_id,status,guesses,points,completed_at",
+    order: "puzzle_date.asc",
+    limit: String(GAME_CONFIG.leaderboardFetchLimit),
+  });
+  const rows = await supabaseRequest(`${state.supabase.table}?${params.toString()}`);
+  return Array.isArray(rows) ? rows.map(normalizeRemoteRecord).filter(Boolean) : [];
+}
+
+async function upsertRemoteLeaderboardRecords(records) {
+  const payload = records.map((record) => ({
+    client_player_id: record.clientPlayerId,
+    player_name: record.playerName,
+    school_name: record.schoolName,
+    puzzle_date: record.date,
+    answer_school_id: record.answerSchoolId,
+    status: record.status,
+    guesses: record.guesses,
+    points: record.points,
+    completed_at: record.completedAt,
+  }));
+
+  await supabaseRequest(`${state.supabase.table}?on_conflict=client_player_id,puzzle_date`, {
+    method: "POST",
+    headers: {
+      Prefer: "resolution=merge-duplicates,return=minimal",
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
+async function supabaseRequest(path, options = {}) {
+  const response = await fetch(`${state.supabase.url}/rest/v1/${path}`, {
+    ...options,
+    headers: {
+      apikey: state.supabase.anonKey,
+      Authorization: `Bearer ${state.supabase.anonKey}`,
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
+  });
+
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error(`Supabase request failed (${response.status}): ${message}`);
+  }
+
+  if (response.status === 204) {
+    return null;
+  }
+
+  const text = await response.text();
+  return text ? JSON.parse(text) : null;
+}
+
+function normalizeRemoteRecord(row) {
+  if (!row?.client_player_id || !row?.puzzle_date) {
+    return null;
+  }
+
+  return {
+    clientPlayerId: row.client_player_id,
+    playerName: normalizeProfileValue(row.player_name || "Unknown Player"),
+    schoolName: normalizeProfileValue(row.school_name || "School not set"),
+    date: row.puzzle_date,
+    answerSchoolId: row.answer_school_id,
+    status: ["attempted", "solved", "lost"].includes(row.status) ? row.status : "attempted",
+    guesses: Number(row.guesses || 0),
+    points: Number(row.points || 0),
+    completedAt: row.completed_at || row.puzzle_date,
+  };
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return entities[char];
+  });
 }
 
 function buildFeedback(guessSchool, answerSchool, correct) {
@@ -623,9 +1199,17 @@ async function init() {
   await loadData();
   initializeArchiveBounds();
   setMode("daily");
+  refreshLeaderboard({ silent: true });
+  syncLocalScoresToRemote();
 
   elements.modeButtons.forEach((button) => {
     button.addEventListener("click", () => setMode(button.dataset.mode));
+  });
+  elements.leaderboardSortButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.leaderboard.sort = button.dataset.leaderboardSort;
+      renderLeaderboardView();
+    });
   });
 
   elements.archiveDate.addEventListener("change", () => {
@@ -635,6 +1219,22 @@ async function init() {
   });
 
   elements.guessForm.addEventListener("submit", handleGuessSubmission);
+  elements.playerForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    state.player = {
+      ...state.player,
+      name: elements.playerName.value.trim(),
+      school: elements.playerSchool.value.trim(),
+    };
+    state.player.name = normalizeProfileValue(state.player.name);
+    state.player.school = normalizeProfileValue(state.player.school);
+    savePlayerProfile();
+    renderScoreSummary();
+    if (state.mode === "leaderboard") {
+      renderLeaderboardView();
+    }
+    syncLocalScoresToRemote();
+  });
   elements.guessInput.addEventListener("input", updateSuggestions);
   elements.guessInput.addEventListener("keydown", handleGuessInputKeydown);
   elements.autocompleteList.addEventListener("mousedown", (event) => {

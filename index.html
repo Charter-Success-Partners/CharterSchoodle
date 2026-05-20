@@ -41,6 +41,9 @@
           <button class="mode-button" data-mode="archive" type="button">
             Past Puzzles
           </button>
+          <button class="mode-button" data-mode="leaderboard" type="button">
+            Leaderboard
+          </button>
         </div>
       </header>
 
@@ -70,7 +73,61 @@
             </div>
           </div>
 
-          <section class="board-panel">
+          <section id="leaderboard-panel" class="leaderboard-panel is-hidden">
+            <div class="section-heading">
+              <h3>Leaderboard</h3>
+              <p id="leaderboard-summary">Daily puzzle scoring</p>
+            </div>
+            <div class="score-grid">
+              <div class="score-metric">
+                <span class="score-metric__label">Points</span>
+                <strong id="score-total">0</strong>
+              </div>
+              <div class="score-metric">
+                <span class="score-metric__label">Win Streak</span>
+                <strong id="score-win-streak">0</strong>
+              </div>
+              <div class="score-metric">
+                <span class="score-metric__label">Attempt Streak</span>
+                <strong id="score-attempt-streak">0</strong>
+              </div>
+              <div class="score-metric">
+                <span class="score-metric__label">Avg Guess</span>
+                <strong id="score-average">—</strong>
+              </div>
+            </div>
+            <div class="leaderboard-controls" aria-label="Leaderboard sort">
+              <button class="leaderboard-sort is-active" data-leaderboard-sort="points" type="button">
+                Points
+              </button>
+              <button class="leaderboard-sort" data-leaderboard-sort="winStreak" type="button">
+                Win Streak
+              </button>
+              <button class="leaderboard-sort" data-leaderboard-sort="attemptStreak" type="button">
+                Attempt Streak
+              </button>
+            </div>
+            <div class="leaderboard-wrap">
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>School</th>
+                    <th>Pts</th>
+                    <th>Solved</th>
+                    <th>Win</th>
+                    <th>Attempt</th>
+                    <th>Avg</th>
+                  </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+              </table>
+            </div>
+            <p id="leaderboard-sync-status" class="leaderboard-sync-status"></p>
+          </section>
+
+          <section id="board-panel" class="board-panel">
             <div class="section-heading">
               <h3>Board</h3>
               <p id="clue-progress">1 clue visible</p>
@@ -114,6 +171,20 @@
         </section>
 
         <aside class="panel panel--secondary">
+          <section>
+            <div class="section-heading">
+              <h3>Your Score</h3>
+              <p id="score-status">Daily results only</p>
+            </div>
+            <form id="player-form" class="player-form">
+              <label for="player-name">Name</label>
+              <input id="player-name" type="text" maxlength="60" autocomplete="name" required />
+              <label for="player-school">School</label>
+              <input id="player-school" type="text" maxlength="80" autocomplete="organization" required />
+              <button class="secondary-button" type="submit">Save</button>
+            </form>
+          </section>
+
           <section>
             <div class="section-heading">
               <h3>Icon Key</h3>
@@ -175,6 +246,7 @@
       </div>
     </div>
 
+    <script src="./src/supabase-config.js"></script>
     <script type="module" src="./src/app.js"></script>
   </body>
 </html>
