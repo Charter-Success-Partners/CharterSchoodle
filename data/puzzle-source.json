@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20",
+  "generatedAt": "2026-05-21",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 744,
+    "puzzleCount": 745,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-19"
+    "endDate": "2028-05-20"
   },
   "puzzles": [
     {
@@ -22351,6 +22351,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-20",
+      "answerSchoolId": "preeminent-charter",
+      "clues": [
+        {
+          "text": "Its public pages highlight a structured setting built on clear expectations and consistent routines.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it is part of National Heritage Academies and emphasizes Moral Focus as part of daily instruction.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school works in partnership with parents and the community to offer a challenging, character-based education in an atmosphere of high expectations.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2000.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official pages list Shemeka Dixon as principal.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
