@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21",
+  "generatedAt": "2026-05-22",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22355,6 +22355,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-21",
+      "answerSchoolId": "liberty-charter-academy",
+      "clues": [
+        {
+          "text": "Public leadership messages identify Dr. Jarrid Looney as the founding Head of School.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official curriculum materials say students are introduced to Latin and Logic as part of the academic program.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school develops responsible and active citizens through a challenging classical academic program, character education, student responsibility, and strong parental partnerships.",
+          "difficulty": 4
+        },
+        {
+          "text": "A public message from its founding year says the school draws from both the Core Knowledge Sequence and the classical education tradition.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school says its four pillars are rigorous academics, parental partnerships, character education, and student responsibility.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
