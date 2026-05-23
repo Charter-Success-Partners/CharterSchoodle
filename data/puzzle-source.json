@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22",
+  "generatedAt": "2026-05-23",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 746,
+    "puzzleCount": 747,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-21"
+    "endDate": "2028-05-22"
   },
   "puzzles": [
     {
@@ -22411,6 +22411,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-22",
+      "answerSchoolId": "kestrel-heights-school",
+      "clues": [
+        {
+          "text": "Official materials say the school partnered with Houghton Mifflin Harcourt for a comprehensive curriculum.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it incorporates the Paideia philosophy of teaching.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school emphasizes the growth of the whole child through A.C.E.: Academics, Community, and Enrichment.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school empowers scholars to sharpen academic knowledge, demonstrate creative expression, and expand leadership abilities.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official pages list Tonya Jackson as executive director and Adrienne Davis as board president.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter K."
         }
       ]
     }
