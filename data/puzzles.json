@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23",
+  "generatedAt": "2026-05-24",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22415,6 +22415,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter K."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-23",
+      "answerSchoolId": "langtree-charter-academy",
+      "clues": [
+        {
+          "text": "The school says citizenship and experiential learning through community engagement are woven throughout the student experience.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school values the relationship between teacher and student and the role the family plays in academic and social development.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school builds a rigorous and productive learning environment where students can reach their academic potential and teachers set clear educational goals.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its homepage says the class of 2026 earned over 10 million dollars in scholarships.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official staff pages list Jennifer Wilson as Lower Campus Principal and Nicole Sanfilippo as Upper Campus Principal.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
