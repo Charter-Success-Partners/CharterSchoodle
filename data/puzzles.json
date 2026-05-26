@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25",
+  "generatedAt": "2026-05-26",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22475,6 +22475,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter U."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-25",
+      "answerSchoolId": "durham-charter-school",
+      "clues": [
+        {
+          "text": "Its mission says the school exists to build a world-class public school in Durham that empowers students to thrive in college, career, and life.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school says its vision includes an Early College for All pathway through Durham Technical Community College.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials identify it as the state's first charter school.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school was formerly known as Healthy Start Academy.",
+          "difficulty": 4
+        },
+        {
+          "text": "Team pages list Alex Quigley as Executive Director.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter D."
         }
       ]
     }
