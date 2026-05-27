@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26",
+  "generatedAt": "2026-05-27",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 750,
+    "puzzleCount": 751,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-25"
+    "endDate": "2028-05-26"
   },
   "puzzles": [
     {
@@ -22531,6 +22531,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter D."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-26",
+      "answerSchoolId": "envision-science-academy",
+      "clues": [
+        {
+          "text": "The administration page lists Dr. Charles Fuller as Executive Director and the board page lists Monique Taylor as board president.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it was founded in 2014 by A. Monica Cutno, Marla Mills-Wilson, and Portia Scott.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its vision says students will be prepared to pursue STEAM-related careers and become lifelong learners through project-based learning.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school provides innovative instruction through experiential learning with a focus on STEAM.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official pages say the school is committed to inclusive and equitable learning and calls this approach \"The ESA Way.\"",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
