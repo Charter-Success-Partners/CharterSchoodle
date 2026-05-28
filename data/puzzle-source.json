@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27",
+  "generatedAt": "2026-05-28",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 751,
+    "puzzleCount": 752,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-26"
+    "endDate": "2028-05-27"
   },
   "puzzles": [
     {
@@ -22561,6 +22561,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-27",
+      "answerSchoolId": "mountain-discovery",
+      "clues": [
+        {
+          "text": "Its sports program is described as being based on the Outward Bound principle of Collaboration and Competition.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school has an afterschool program called JAM that encourages the growth of young musicians.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says its students are engaged in an experientially rich, hands-on course of study designed to maximize each child's potential as a responsible citizen of local and global communities.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school inspires students to enjoy and lead their own learning.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official history says the school opened its doors in 2002.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
