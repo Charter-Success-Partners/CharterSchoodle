@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30",
+  "generatedAt": "2026-05-31",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 754,
+    "puzzleCount": 755,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-29"
+    "endDate": "2028-05-30"
   },
   "puzzles": [
     {
@@ -22651,6 +22651,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-30",
+      "answerSchoolId": "a-c-e-academy",
+      "clues": [
+        {
+          "text": "Its news section features students called the \"Young Moguls\" leading a community giving effort.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official board pages list Dr. Terry Cline as Board Chair and Laila Minott as Executive Director.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its mission says the school equips students from all backgrounds to succeed in the college and career of their choice through academic excellence, strong character, and an entrepreneurial mindset.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official branding describes it as a tuition-free charter school established in 2014.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school's mission uniquely emphasizes an entrepreneurial mindset alongside academics and character.",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
