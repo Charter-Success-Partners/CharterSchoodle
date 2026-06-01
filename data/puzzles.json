@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31",
+  "generatedAt": "2026-06-01",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22655,6 +22655,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-05-31",
+      "answerSchoolId": "vance-charter-school",
+      "clues": [
+        {
+          "text": "The school's news and family resources are grouped under the label Knightly News.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says success is not measured by state tests alone because it educates the whole child academically, morally, and socially.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school teaches and inspires each child to become an independent thinker and a contributing citizen with a life-long desire to learn.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the curriculum is enriched with service learning and the Core Knowledge Sequence.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials emphasize character education and mastery of life skills as core parts of the program.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter V."
         }
       ]
     }
