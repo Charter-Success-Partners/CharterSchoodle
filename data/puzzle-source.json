@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01",
+  "generatedAt": "2026-06-02",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 756,
+    "puzzleCount": 757,
     "startDate": "2026-05-07",
-    "endDate": "2028-05-31"
+    "endDate": "2028-06-01"
   },
   "puzzles": [
     {
@@ -22711,6 +22711,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter V."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-01",
+      "answerSchoolId": "north-east-carolina-prep",
+      "clues": [
+        {
+          "text": "Official materials highlight the Rotary Club of Tarboro Animal Facility and the Edgecombe County Farm Bureau Agricultural Complex.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school teaches and inspires through a challenging curriculum that integrates technology, experiential learning, and critical thinking skills.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials describe it as Edgecombe County's only charter school.",
+          "difficulty": 5
+        },
+        {
+          "text": "Staff pages list Dr. Mark Cockrell as Executive Director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Board materials identify Anne Mann as chairman.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter N."
         }
       ]
     }
