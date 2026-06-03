@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02",
+  "generatedAt": "2026-06-03",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22715,6 +22715,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter N."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-02",
+      "answerSchoolId": "classical-charter-schools-of-wilmington",
+      "clues": [
+        {
+          "text": "Its academic program says students are prepared to become lifelong learners through proven curricula and strong foundations in critical thinking and communication.",
+          "difficulty": 6
+        },
+        {
+          "text": "A school announcement says Marcus Dos Santos was named headmaster in 2022.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school says it replicates its sister schools in the Classical Charter Schools of America network.",
+          "difficulty": 5
+        },
+        {
+          "text": "Network governance pages list Colleen Combs as chair of the Board of Trustees.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
