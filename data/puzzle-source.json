@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03",
+  "generatedAt": "2026-06-04",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 758,
+    "puzzleCount": 759,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-02"
+    "endDate": "2028-06-03"
   },
   "puzzles": [
     {
@@ -22771,6 +22771,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-03",
+      "answerSchoolId": "oxford-preparatory",
+      "clues": [
+        {
+          "text": "Official pages list Andrew Swanner as Executive Director, with MaryAnn Crews and Ashley Barnette serving as Lower School and Upper School Directors.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its staff page says instructors bring new and innovative approaches to learning and emphasizes that every student matters.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school says it is focused on preparing students to meet the requirements and demands of college.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public-facing theme line is \"Nurturing Potential – Inspiring Excellence – Developing Leaders.\"",
+          "difficulty": 3
+        },
+        {
+          "text": "The governing board page says the board is the policy-making body with overall responsibility for curriculum, budget, facilities, and staff employment.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter O."
         }
       ]
     }
