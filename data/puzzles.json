@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04",
+  "generatedAt": "2026-06-05",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22775,6 +22775,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter O."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-04",
+      "answerSchoolId": "pocosin-innovative-charter",
+      "clues": [
+        {
+          "text": "Its board page says meetings are held on the third Tuesday of each month at 6:00 p.m.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it is growing students academically, socially, and emotionally.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school provides a high-quality education preparing today's students for tomorrow's world while focusing on regional agriculture and related industries.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school wants students to become respectful and productive citizens.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials frame the school around service to the Pocosin region and its industries.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
