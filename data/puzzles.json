@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06",
+  "generatedAt": "2026-06-07",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22835,6 +22835,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter H."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-06",
+      "answerSchoolId": "the-hawbridge-school",
+      "clues": [
+        {
+          "text": "Official materials highlight Hawbridge Outdoors, with excursions such as hiking, biking, camping, canoeing, horseback riding, and rock climbing.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school describes its faculty-designed model as combining differentiated instruction, outdoor and place-based education, and an inclusive community culture.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its vision emphasizes inclusiveness, mutual respect, personal attention, environmental stewardship, and the arts.",
+          "difficulty": 5
+        },
+        {
+          "text": "Administrator pages identify Taneeka Hanna as Lower School Director and Alexis Crumel as Upper School Director.",
+          "difficulty": 8
+        },
+        {
+          "text": "Board pages list Kemp Watson-Ormond as chair.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
