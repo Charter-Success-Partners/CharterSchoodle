@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07",
+  "generatedAt": "2026-06-08",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22865,6 +22865,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-07",
+      "answerSchoolId": "achievement-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages identify Dr. Leaja Horne as Director of Education.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say the school uses the Glasser Quality School model and Choice Theory to support relationships based on trust and respect.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school fosters individual achievement by teaching students to be self-directed learners and community contributors in a respectful, diverse, and inclusive learning environment.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its board page says regular board meetings are held on the third Monday of each month at 7 p.m.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its homepage says, \"We help your child ACHIEVE full potential.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
