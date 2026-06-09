@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08",
+  "generatedAt": "2026-06-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 763,
+    "puzzleCount": 764,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-07"
+    "endDate": "2028-06-08"
   },
   "puzzles": [
     {
@@ -22921,6 +22921,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-08",
+      "answerSchoolId": "clover-garden",
+      "clues": [
+        {
+          "text": "The school says students have taken field trips across the United States and overseas to places such as Spain, Italy, France, Ireland, and the Bahamas.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision calls for a community of empowered learners in an atmosphere of mutual respect, responsibility, and trust.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school will foster community, generate enthusiasm, challenge students academically, and produce successful citizens.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official directory pages list Heather Vereyken as Executive Director and Chad Huffines as Board Chairman.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official FAQ materials say the school's board includes both community members and parent-elected members so parents have a voice in the future of education there.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
