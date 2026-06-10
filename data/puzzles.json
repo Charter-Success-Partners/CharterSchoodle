@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09",
+  "generatedAt": "2026-06-10",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -22925,6 +22925,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-09",
+      "answerSchoolId": "ic-imagine",
+      "clues": [
+        {
+          "text": "Official pages list Jenn Townley as head of school.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official newsletters say the school's work is grounded in six core values: Inclusivity, Academic Excellence, Strong Relationships, Well-being, Exploration, and Creativity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages say the school is a proud member of the Diverse Charter School Coalition.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its homepage spotlight says the school hosted its first Social Emotional Learning Showcase.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its homepage says, \"We imagine an Inclusive Community where everyone Thrives.\"",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter I."
         }
       ]
     }
