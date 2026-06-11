@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10",
+  "generatedAt": "2026-06-11",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 765,
+    "puzzleCount": 766,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-09"
+    "endDate": "2028-06-10"
   },
   "puzzles": [
     {
@@ -22981,6 +22981,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter I."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-10",
+      "answerSchoolId": "hobgood-charter-school",
+      "clues": [
+        {
+          "text": "The school highlights project-based learning and individualized instruction as part of its educational approach.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official pages say students often work in multi-age groups to build collaboration and social skills.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school empowers all students to reach their highest potential through rigorous and innovative academics.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials describe the school as family-oriented and collaborative.",
+          "difficulty": 5
+        },
+        {
+          "text": "Staff pages identify Juliana Harris as principal.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter H."
         }
       ]
     }
