@@ -5,6 +5,7 @@ const GAME_CONFIG = {
   playerStorageKey: "charterschoodle-player:v1",
   defaultSupabaseTable: "charterschoodle_results",
   leaderboardFetchLimit: 5000,
+  leaderboardPageSize: 5,
 };
 
 const elements = {
@@ -21,6 +22,10 @@ const elements = {
   leaderboardPanel: document.getElementById("leaderboard-panel"),
   leaderboardSummary: document.getElementById("leaderboard-summary"),
   leaderboardBody: document.getElementById("leaderboard-body"),
+  leaderboardPagination: document.getElementById("leaderboard-pagination"),
+  leaderboardPrev: document.getElementById("leaderboard-prev"),
+  leaderboardNext: document.getElementById("leaderboard-next"),
+  leaderboardPageStatus: document.getElementById("leaderboard-page-status"),
   leaderboardSyncStatus: document.getElementById("leaderboard-sync-status"),
   leaderboardSortButtons: [...document.querySelectorAll("[data-leaderboard-sort]")],
   scoreTotal: document.getElementById("score-total"),
@@ -69,6 +74,7 @@ const state = {
     status: "local",
     message: "",
     syncInFlight: false,
+    page: 1,
   },
 };
 
@@ -112,6 +118,7 @@ function setMode(mode) {
 
   elements.archiveControls.classList.toggle("is-hidden", mode !== "archive");
   if (mode === "leaderboard") {
+    state.leaderboard.page = 1;
     state.filteredSuggestions = [];
     state.selectedSuggestionIndex = -1;
     render();
@@ -703,6 +710,12 @@ function savePlayerFromFields(name, school) {
 function renderLeaderboardView() {
   const summary = buildScoreSummary();
   const rows = buildLeaderboardRows();
+  const pageSize = GAME_CONFIG.leaderboardPageSize;
+  const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+  state.leaderboard.page = Math.min(Math.max(1, state.leaderboard.page), totalPages);
+  const pageStart = (state.leaderboard.page - 1) * pageSize;
+  const pageEnd = pageStart + pageSize;
+  const visibleRows = rows.slice(pageStart, pageEnd);
   const playerName = state.player.name.trim() || "You";
   const averageLabel = summary.average === null ? "—" : summary.average.toFixed(1);
   const scoreVerb = playerName === "You" ? "have" : "has";
@@ -723,14 +736,20 @@ function renderLeaderboardView() {
     button.classList.toggle("is-active", button.dataset.leaderboardSort === state.leaderboard.sort);
   });
   elements.leaderboardSummary.textContent =
-    rows.length === 0 ? "No scored daily puzzles yet" : `${rows.length} player${rows.length === 1 ? "" : "s"}`;
+    rows.length === 0
+      ? "No scored daily puzzles yet"
+      : `Showing ${pageStart + 1}-${Math.min(pageEnd, rows.length)} of ${rows.length} player${rows.length === 1 ? "" : "s"}`;
+  elements.leaderboardPagination.classList.toggle("is-hidden", rows.length <= pageSize);
+  elements.leaderboardPrev.disabled = state.leaderboard.page <= 1;
+  elements.leaderboardNext.disabled = state.leaderboard.page >= totalPages;
+  elements.leaderboardPageStatus.textContent = `Page ${state.leaderboard.page} of ${totalPages}`;
   elements.leaderboardSyncStatus.textContent = getLeaderboardStatusMessage();
-  elements.leaderboardBody.innerHTML = rows.length
-    ? rows
+  elements.leaderboardBody.innerHTML = visibleRows.length
+    ? visibleRows
         .map(
           (row, index) => `
             <tr class="${profileKey && row.profileKey === profileKey ? "leaderboard-row--you" : ""}">
-              <td>${index + 1}</td>
+              <td>${pageStart + index + 1}</td>
               <td>${escapeHtml(row.playerName)}</td>
               <td>${escapeHtml(row.schoolName)}</td>
               <td>${row.points}</td>
@@ -1345,8 +1364,17 @@ async function init() {
   elements.leaderboardSortButtons.forEach((button) => {
     button.addEventListener("click", () => {
       state.leaderboard.sort = button.dataset.leaderboardSort;
+      state.leaderboard.page = 1;
       renderLeaderboardView();
     });
+  });
+  elements.leaderboardPrev.addEventListener("click", () => {
+    state.leaderboard.page = Math.max(1, state.leaderboard.page - 1);
+    renderLeaderboardView();
+  });
+  elements.leaderboardNext.addEventListener("click", () => {
+    state.leaderboard.page += 1;
+    renderLeaderboardView();
   });
 
   elements.archiveDate.addEventListener("change", () => {
