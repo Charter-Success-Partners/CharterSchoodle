@@ -81,10 +81,18 @@ const state = {
   },
   map: {
     selectedSchoolId: null,
+    zoom: 1,
+    panX: 0,
+    panY: 0,
+    drag: null,
+    suppressClick: false,
   },
 };
 
 const EARTH_RADIUS_MILES = 3958.8;
+const MAP_ZOOM_MIN = 1;
+const MAP_ZOOM_MAX = 4;
+const MAP_ZOOM_STEP = 0.35;
 const NC_MAP_BOUNDS = {
   minLat: 33.845545,
   maxLat: 36.589492,
@@ -840,18 +848,32 @@ function renderSchoolMap() {
   }
 
   elements.mapContainer.innerHTML = `
+    <div class="map-zoom-controls" aria-label="Map zoom controls">
+      <button class="map-zoom-button" type="button" data-map-zoom="out" aria-label="Zoom out" title="Zoom out">−</button>
+      <span class="map-zoom-status" data-map-zoom-status>${Math.round(state.map.zoom * 100)}%</span>
+      <button class="map-zoom-button" type="button" data-map-zoom="in" aria-label="Zoom in" title="Zoom in">+</button>
+      <button class="map-zoom-button" type="button" data-map-zoom="reset" aria-label="Reset map view" title="Reset map view">↺</button>
+    </div>
     <div class="nc-map-frame" aria-label="North Carolina charter school locations">
-      <svg class="nc-map-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <polygon class="nc-map-outline__state" points="${renderNorthCarolinaOutlinePoints()}" />
-      </svg>
-      <div class="nc-map-pins">
-        ${mappableSchools.map(renderMapPin).join("")}
+      <div class="nc-map-canvas">
+        <svg class="nc-map-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <polygon class="nc-map-outline__state" points="${renderNorthCarolinaOutlinePoints()}" />
+        </svg>
+        <div class="nc-map-pins">
+          ${mappableSchools.map(renderMapPin).join("")}
+        </div>
       </div>
     </div>
   `;
 
   elements.mapContainer.onclick = handleMapClick;
   elements.mapContainer.onkeydown = handleMapKeydown;
+  elements.mapContainer.onwheel = handleMapWheel;
+  elements.mapContainer.onpointerdown = handleMapPointerDown;
+  elements.mapContainer.onpointermove = handleMapPointerMove;
+  elements.mapContainer.onpointerup = handleMapPointerEnd;
+  elements.mapContainer.onpointercancel = handleMapPointerEnd;
+  syncMapTransform();
 }
 
 function renderNorthCarolinaOutlinePoints() {
@@ -917,7 +939,18 @@ function getMapPinPlacementClasses(position) {
 }
 
 function handleMapClick(event) {
-  const pin = event.target.closest("[data-map-school-id]");
+  if (state.map.suppressClick) {
+    state.map.suppressClick = false;
+    return;
+  }
+
+  const zoomButton = getClosestEventTarget(event, "[data-map-zoom]");
+  if (zoomButton) {
+    handleMapZoomAction(zoomButton.dataset.mapZoom);
+    return;
+  }
+
+  const pin = getClosestEventTarget(event, "[data-map-school-id]");
   if (!pin) {
     clearSelectedMapPin();
     return;
@@ -933,6 +966,184 @@ function handleMapKeydown(event) {
     state.map.selectedSchoolId = null;
     syncSelectedMapPin();
   }
+}
+
+function handleMapWheel(event) {
+  if (!getClosestEventTarget(event, ".nc-map-frame")) {
+    return;
+  }
+
+  event.preventDefault();
+  zoomMapBy(event.deltaY < 0 ? MAP_ZOOM_STEP : -MAP_ZOOM_STEP);
+}
+
+function handleMapPointerDown(event) {
+  if (
+    event.button !== 0 ||
+    state.map.zoom <= MAP_ZOOM_MIN ||
+    !getClosestEventTarget(event, ".nc-map-frame") ||
+    getClosestEventTarget(event, "[data-map-school-id], [data-map-zoom]")
+  ) {
+    return;
+  }
+
+  const frame = getMapFrameElement();
+  if (!frame) {
+    return;
+  }
+
+  state.map.drag = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    originX: state.map.panX,
+    originY: state.map.panY,
+    moved: false,
+  };
+
+  frame.setPointerCapture(event.pointerId);
+  frame.classList.add("is-dragging");
+  event.preventDefault();
+}
+
+function handleMapPointerMove(event) {
+  const drag = state.map.drag;
+  if (!drag || event.pointerId !== drag.pointerId) {
+    return;
+  }
+
+  const deltaX = event.clientX - drag.startX;
+  const deltaY = event.clientY - drag.startY;
+  if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
+    drag.moved = true;
+  }
+
+  state.map.panX = drag.originX + deltaX;
+  state.map.panY = drag.originY + deltaY;
+  clampMapPan();
+  syncMapTransform();
+}
+
+function handleMapPointerEnd(event) {
+  const drag = state.map.drag;
+  if (!drag || event.pointerId !== drag.pointerId) {
+    return;
+  }
+
+  const frame = getMapFrameElement();
+  if (frame) {
+    frame.classList.remove("is-dragging");
+    if (frame.hasPointerCapture(event.pointerId)) {
+      frame.releasePointerCapture(event.pointerId);
+    }
+  }
+
+  if (drag.moved) {
+    state.map.suppressClick = true;
+    window.setTimeout(() => {
+      state.map.suppressClick = false;
+    }, 120);
+  }
+
+  state.map.drag = null;
+}
+
+function handleMapZoomAction(action) {
+  if (action === "in") {
+    zoomMapBy(MAP_ZOOM_STEP);
+    return;
+  }
+
+  if (action === "out") {
+    zoomMapBy(-MAP_ZOOM_STEP);
+    return;
+  }
+
+  resetMapView();
+}
+
+function zoomMapBy(delta) {
+  setMapZoom(state.map.zoom + delta);
+}
+
+function setMapZoom(nextZoom) {
+  state.map.zoom = clampNumber(nextZoom, MAP_ZOOM_MIN, MAP_ZOOM_MAX);
+  if (state.map.zoom === MAP_ZOOM_MIN) {
+    state.map.panX = 0;
+    state.map.panY = 0;
+  }
+
+  clampMapPan();
+  syncMapTransform();
+}
+
+function resetMapView() {
+  state.map.zoom = MAP_ZOOM_MIN;
+  state.map.panX = 0;
+  state.map.panY = 0;
+  syncMapTransform();
+}
+
+function syncMapTransform() {
+  const canvas = elements.mapContainer.querySelector(".nc-map-canvas");
+  const frame = getMapFrameElement();
+  if (!canvas || !frame) {
+    return;
+  }
+
+  const zoom = state.map.zoom;
+  const isZoomed = zoom > MAP_ZOOM_MIN;
+  canvas.style.transform = `translate(${state.map.panX}px, ${state.map.panY}px) scale(${zoom})`;
+  canvas.style.setProperty("--map-pin-scale", String(1 / zoom));
+  frame.classList.toggle("is-zoomed", isZoomed);
+
+  const status = elements.mapContainer.querySelector("[data-map-zoom-status]");
+  if (status) {
+    status.textContent = `${Math.round(zoom * 100)}%`;
+  }
+
+  elements.mapContainer.querySelectorAll("[data-map-zoom]").forEach((button) => {
+    const action = button.dataset.mapZoom;
+    button.disabled =
+      (action === "out" && zoom === MAP_ZOOM_MIN) ||
+      (action === "in" && zoom === MAP_ZOOM_MAX) ||
+      (action === "reset" && !isZoomed);
+  });
+}
+
+function clampMapPan() {
+  if (state.map.zoom <= MAP_ZOOM_MIN) {
+    state.map.panX = 0;
+    state.map.panY = 0;
+    return;
+  }
+
+  const frame = getMapFrameElement();
+  if (!frame) {
+    return;
+  }
+
+  const rect = frame.getBoundingClientRect();
+  const maxPanX = ((state.map.zoom - 1) * rect.width) / 2;
+  const maxPanY = ((state.map.zoom - 1) * rect.height) / 2;
+  state.map.panX = clampNumber(state.map.panX, -maxPanX, maxPanX);
+  state.map.panY = clampNumber(state.map.panY, -maxPanY, maxPanY);
+}
+
+function getMapFrameElement() {
+  return elements.mapContainer.querySelector(".nc-map-frame");
+}
+
+function getClosestEventTarget(event, selector) {
+  if (event.target instanceof Element) {
+    return event.target.closest(selector);
+  }
+
+  return event.target?.parentElement?.closest(selector) || null;
+}
+
+function clampNumber(value, min, max) {
+  return Math.min(max, Math.max(min, value));
 }
 
 function clearSelectedMapPin() {
@@ -1617,6 +1828,12 @@ async function init() {
   elements.leaderboardNext.addEventListener("click", () => {
     state.leaderboard.page += 1;
     renderLeaderboardView();
+  });
+  window.addEventListener("resize", () => {
+    if (state.mode === "map") {
+      clampMapPan();
+      syncMapTransform();
+    }
   });
 
   elements.archiveDate.addEventListener("change", () => {
