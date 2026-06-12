@@ -44,18 +44,77 @@
           <button class="mode-button" data-mode="leaderboard" type="button">
             Leaderboard
           </button>
+          <div class="help-popover">
+            <button
+              class="help-button"
+              type="button"
+              aria-label="How to play"
+              aria-describedby="how-to-play"
+            >
+              ?
+            </button>
+            <div id="how-to-play" class="help-popover__panel" role="tooltip">
+              <div class="help-section-title">How it works</div>
+              <ul class="rules-list">
+                <li>Each puzzle has one NC charter school answer.</li>
+                <li>Each row shows that round's clue and guess.</li>
+                <li>Already-guessed schools are removed from the list.</li>
+                <li>Icons compare size, grades, and direction.</li>
+              </ul>
+              <div class="help-section-title">Icon key</div>
+              <div class="icon-key">
+                <div class="key-group">
+                  <div class="key-group__title">Result</div>
+                  <div class="key-row"><span class="board-icon board-icon--good">✓</span><span>Correct school</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--bad">✕</span><span>Wrong school</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--muted">•</span><span>Round not played yet</span></div>
+                </div>
+                <div class="key-group">
+                  <div class="key-group__title">Size</div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same band</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn">↑</span><span>Answer is larger</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn">↓</span><span>Answer is smaller</span></div>
+                </div>
+                <div class="key-group">
+                  <div class="key-group__title">Grades</div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same span</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn">→</span><span>Answer serves older grades</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn">←</span><span>Answer serves younger grades</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn">↔</span><span>Answer has a different span</span></div>
+                </div>
+                <div class="key-group">
+                  <div class="key-group__title">Direction</div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral">↗</span><span>Travel that direction</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral">◎</span><span>Same location</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
       <main class="layout">
         <section class="panel panel--primary">
           <div class="panel__header">
-            <div>
+            <div class="puzzle-title">
               <p class="panel__eyebrow" id="puzzle-label">Daily puzzle</p>
               <h2 id="puzzle-date-heading">Loading...</h2>
             </div>
-            <div class="guess-counter">
-              <span id="guess-counter">0 / 6</span>
+            <div class="header-score">
+              <div class="header-score__summary">
+                <h3>Your Score</h3>
+                <p id="score-status">Daily results only</p>
+              </div>
+              <form id="player-form" class="player-form player-form--compact">
+                <label for="player-name">Name</label>
+                <input id="player-name" type="text" maxlength="60" autocomplete="name" required />
+                <label for="player-school">School</label>
+                <input id="player-school" type="text" maxlength="80" autocomplete="organization" required />
+                <button class="secondary-button" type="submit">Save</button>
+              </form>
+              <div class="guess-counter">
+                <span id="guess-counter">0 / 6</span>
+              </div>
             </div>
           </div>
 
@@ -164,73 +223,11 @@
               <button class="primary-button" type="submit">Submit</button>
             </div>
             <p id="guess-help" class="field-help">
-              Guesses must be selected from the official school list.
+              Guesses must be selected from the remaining official school list.
             </p>
             <ul id="autocomplete-list" class="autocomplete-list"></ul>
           </form>
         </section>
-
-        <aside class="panel panel--secondary">
-          <section>
-            <div class="section-heading">
-              <h3>Your Score</h3>
-              <p id="score-status">Daily results only</p>
-            </div>
-            <form id="player-form" class="player-form">
-              <label for="player-name">Name</label>
-              <input id="player-name" type="text" maxlength="60" autocomplete="name" required />
-              <label for="player-school">School</label>
-              <input id="player-school" type="text" maxlength="80" autocomplete="organization" required />
-              <button class="secondary-button" type="submit">Save</button>
-            </form>
-          </section>
-
-          <section>
-            <div class="section-heading">
-              <h3>Icon Key</h3>
-              <p>Read the board left to right.</p>
-            </div>
-            <div class="icon-key">
-              <div class="key-group">
-                <div class="key-group__title">Result</div>
-                <div class="key-row"><span class="board-icon board-icon--good">✓</span><span>Correct school</span></div>
-                <div class="key-row"><span class="board-icon board-icon--bad">✕</span><span>Wrong school</span></div>
-                <div class="key-row"><span class="board-icon board-icon--muted">•</span><span>Round not played yet</span></div>
-              </div>
-              <div class="key-group">
-                <div class="key-group__title">Size</div>
-                <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same band</span></div>
-                <div class="key-row"><span class="board-icon board-icon--warn">↑</span><span>Answer is larger</span></div>
-                <div class="key-row"><span class="board-icon board-icon--warn">↓</span><span>Answer is smaller</span></div>
-              </div>
-              <div class="key-group">
-                <div class="key-group__title">Grades</div>
-                <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same span</span></div>
-                <div class="key-row"><span class="board-icon board-icon--warn">→</span><span>Answer serves older grades</span></div>
-                <div class="key-row"><span class="board-icon board-icon--warn">←</span><span>Answer serves younger grades</span></div>
-                <div class="key-row"><span class="board-icon board-icon--warn">↔</span><span>Answer has a different span</span></div>
-              </div>
-              <div class="key-group">
-                <div class="key-group__title">Direction</div>
-                <div class="key-row"><span class="board-icon board-icon--neutral">↗</span><span>Travel that direction</span></div>
-                <div class="key-row"><span class="board-icon board-icon--neutral">◎</span><span>Same location</span></div>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="section-heading">
-              <h3>How It Works</h3>
-              <p>One clue unlocks before each guess.</p>
-            </div>
-            <ul class="rules-list">
-              <li>Each puzzle has one NC charter school answer.</li>
-              <li>Each row shows that round’s clue and guess.</li>
-              <li>Icons compare size, grades, and direction.</li>
-              <li>Use the legend to decode the symbols.</li>
-            </ul>
-          </section>
-        </aside>
       </main>
     </div>
 

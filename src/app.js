@@ -466,6 +466,14 @@ function syncInputLock() {
   elements.guessForm.querySelector("button[type='submit']").disabled = gameOver;
 }
 
+function getGuessedSchoolIds() {
+  return new Set((state.progress?.guesses || []).map((guess) => guess.schoolId));
+}
+
+function hasAlreadyGuessedSchool(schoolId) {
+  return getGuessedSchoolIds().has(schoolId);
+}
+
 function handleGuessSubmission(event) {
   event.preventDefault();
 
@@ -478,6 +486,15 @@ function handleGuessSubmission(event) {
   if (!school) {
     elements.statusTitle.textContent = "Pick an official school";
     elements.statusMessage.textContent = "Choose one of the autocomplete options before submitting.";
+    return;
+  }
+
+  if (hasAlreadyGuessedSchool(school.id)) {
+    elements.statusTitle.textContent = "Already guessed";
+    elements.statusMessage.textContent = "That school is already on the board. Pick another remaining school.";
+    state.filteredSuggestions = [];
+    state.selectedSuggestionIndex = -1;
+    renderSuggestionList();
     return;
   }
 
@@ -1243,10 +1260,15 @@ function updateSuggestions() {
     return;
   }
 
+  const guessedSchoolIds = getGuessedSchoolIds();
   state.filteredSuggestions = state.schools
-    .filter((school) => school.officialName.toLowerCase().includes(query))
+    .filter(
+      (school) =>
+        school.officialName.toLowerCase().includes(query) &&
+        !guessedSchoolIds.has(school.id),
+    )
     .slice(0, 10);
-  state.selectedSuggestionIndex = 0;
+  state.selectedSuggestionIndex = state.filteredSuggestions.length ? 0 : -1;
   renderSuggestionList();
 }
 
@@ -1265,7 +1287,7 @@ function renderSuggestionList() {
           class="autocomplete-item ${index === state.selectedSuggestionIndex ? "is-active" : ""}"
           data-school-id="${school.id}"
         >
-          ${school.officialName}
+          ${escapeHtml(school.officialName)}
         </li>
       `,
     )
