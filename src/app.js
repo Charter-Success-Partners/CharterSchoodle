@@ -86,45 +86,74 @@ const state = {
 
 const EARTH_RADIUS_MILES = 3958.8;
 const NC_MAP_BOUNDS = {
-  minLat: 33.75,
-  maxLat: 36.7,
-  minLng: -84.45,
-  maxLng: -75.25,
+  minLat: 33.845545,
+  maxLat: 36.589492,
+  minLng: -84.319594,
+  maxLng: -75.715321,
 };
+const NC_MAP_PADDING = { x: 2.5, y: 5 };
 const NC_MAP_OUTLINE = [
-  { lat: 34.99, lng: -84.32 },
-  { lat: 35.18, lng: -84.05 },
-  { lat: 35.38, lng: -83.8 },
-  { lat: 35.54, lng: -83.48 },
-  { lat: 35.74, lng: -83.18 },
-  { lat: 35.94, lng: -82.86 },
-  { lat: 36.12, lng: -82.52 },
-  { lat: 36.34, lng: -82.2 },
-  { lat: 36.58, lng: -81.72 },
-  { lat: 36.58, lng: -79.52 },
-  { lat: 36.56, lng: -77.9 },
-  { lat: 36.55, lng: -76.45 },
-  { lat: 36.35, lng: -75.84 },
-  { lat: 36.07, lng: -75.72 },
-  { lat: 35.74, lng: -75.48 },
-  { lat: 35.29, lng: -75.54 },
-  { lat: 35.0, lng: -75.78 },
-  { lat: 34.86, lng: -76.26 },
-  { lat: 34.73, lng: -76.72 },
-  { lat: 34.5, lng: -77.14 },
-  { lat: 34.26, lng: -77.62 },
-  { lat: 33.96, lng: -78.05 },
-  { lat: 33.85, lng: -78.58 },
-  { lat: 34.05, lng: -79.08 },
-  { lat: 34.34, lng: -79.48 },
-  { lat: 34.81, lng: -80.78 },
-  { lat: 34.96, lng: -81.04 },
-  { lat: 35.14, lng: -81.38 },
-  { lat: 35.19, lng: -81.76 },
-  { lat: 35.08, lng: -82.12 },
-  { lat: 35.05, lng: -82.62 },
-  { lat: 35.0, lng: -83.18 },
-  { lat: 34.99, lng: -84.32 },
+  { lat: 36.562108, lng: -80.978661 },
+  { lat: 36.545677, lng: -80.294043 },
+  { lat: 36.5402, lng: -79.510841 },
+  { lat: 36.551154, lng: -75.868676 },
+  { lat: 36.151337, lng: -75.75366 },
+  { lat: 36.189676, lng: -76.032984 },
+  { lat: 36.140383, lng: -76.071322 },
+  { lat: 36.080137, lng: -76.410893 },
+  { lat: 36.025367, lng: -76.460185 },
+  { lat: 36.008937, lng: -76.68474 },
+  { lat: 35.937736, lng: -76.673786 },
+  { lat: 35.987029, lng: -76.399939 },
+  { lat: 35.943213, lng: -76.3616 },
+  { lat: 35.992506, lng: -76.060368 },
+  { lat: 35.899398, lng: -75.961783 },
+  { lat: 35.937736, lng: -75.781044 },
+  { lat: 35.696751, lng: -75.715321 },
+  { lat: 35.581735, lng: -75.775568 },
+  { lat: 35.570781, lng: -75.89606 },
+  { lat: 35.324319, lng: -76.147999 },
+  { lat: 35.313365, lng: -76.482093 },
+  { lat: 35.14358, lng: -76.536862 },
+  { lat: 34.973795, lng: -76.394462 },
+  { lat: 34.940933, lng: -76.279446 },
+  { lat: 34.661609, lng: -76.493047 },
+  { lat: 34.694471, lng: -76.673786 },
+  { lat: 34.667086, lng: -76.991448 },
+  { lat: 34.60684, lng: -77.210526 },
+  { lat: 34.415147, lng: -77.555573 },
+  { lat: 34.163208, lng: -77.82942 },
+  { lat: 33.845545, lng: -77.971821 },
+  { lat: 33.916745, lng: -78.179944 },
+  { lat: 33.851022, lng: -78.541422 },
+  { lat: 34.80401, lng: -79.675149 },
+  { lat: 34.820441, lng: -80.797922 },
+  { lat: 34.935456, lng: -80.781491 },
+  { lat: 35.105241, lng: -80.934845 },
+  { lat: 35.044995, lng: -81.038907 },
+  { lat: 35.149057, lng: -81.044384 },
+  { lat: 35.198349, lng: -82.276696 },
+  { lat: 35.160011, lng: -82.550543 },
+  { lat: 35.066903, lng: -82.764143 },
+  { lat: 35.00118, lng: -83.109191 },
+  { lat: 34.984749, lng: -83.618546 },
+  { lat: 34.990226, lng: -84.319594 },
+  { lat: 35.225734, lng: -84.29221 },
+  { lat: 35.247642, lng: -84.09504 },
+  { lat: 35.41195, lng: -84.018363 },
+  { lat: 35.559827, lng: -83.7719 },
+  { lat: 35.565304, lng: -83.498053 },
+  { lat: 35.718659, lng: -83.251591 },
+  { lat: 35.773428, lng: -82.994175 },
+  { lat: 35.997983, lng: -82.775097 },
+  { lat: 36.063706, lng: -82.638174 },
+  { lat: 35.965121, lng: -82.610789 },
+  { lat: 36.156814, lng: -82.216449 },
+  { lat: 36.118475, lng: -82.03571 },
+  { lat: 36.304691, lng: -81.909741 },
+  { lat: 36.353984, lng: -81.723525 },
+  { lat: 36.589492, lng: -81.679709 },
+  { lat: 36.562108, lng: -80.978661 },
 ];
 
 async function loadData() {
@@ -814,7 +843,6 @@ function renderSchoolMap() {
     <div class="nc-map-frame" aria-label="North Carolina charter school locations">
       <svg class="nc-map-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
         <polygon class="nc-map-outline__state" points="${renderNorthCarolinaOutlinePoints()}" />
-        <polyline class="nc-map-outline__coast" points="${renderNorthCarolinaCoastPoints()}" />
       </svg>
       <div class="nc-map-pins">
         ${mappableSchools.map(renderMapPin).join("")}
@@ -831,15 +859,6 @@ function renderNorthCarolinaOutlinePoints() {
     const projected = projectCoordinateToMap(point);
     return `${projected.x.toFixed(2)},${projected.y.toFixed(2)}`;
   }).join(" ");
-}
-
-function renderNorthCarolinaCoastPoints() {
-  return NC_MAP_OUTLINE.slice(13, 24)
-    .map((point) => {
-      const projected = projectCoordinateToMap(point);
-      return `${projected.x.toFixed(2)},${projected.y.toFixed(2)}`;
-    })
-    .join(" ");
 }
 
 function renderMapPin(school) {
@@ -873,10 +892,12 @@ function projectCoordinateToMap(coordinates) {
   const latitudeRange = NC_MAP_BOUNDS.maxLat - NC_MAP_BOUNDS.minLat;
   const rawX = ((coordinates.lng - NC_MAP_BOUNDS.minLng) / longitudeRange) * 100;
   const rawY = ((NC_MAP_BOUNDS.maxLat - coordinates.lat) / latitudeRange) * 100;
+  const paddedX = NC_MAP_PADDING.x + (rawX / 100) * (100 - NC_MAP_PADDING.x * 2);
+  const paddedY = NC_MAP_PADDING.y + (rawY / 100) * (100 - NC_MAP_PADDING.y * 2);
 
   return {
-    x: Math.min(98, Math.max(2, rawX)),
-    y: Math.min(96, Math.max(4, rawY)),
+    x: Math.min(100 - NC_MAP_PADDING.x, Math.max(NC_MAP_PADDING.x, paddedX)),
+    y: Math.min(100 - NC_MAP_PADDING.y, Math.max(NC_MAP_PADDING.y, paddedY)),
   };
 }
 

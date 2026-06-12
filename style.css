@@ -377,14 +377,6 @@ h3 {
   stroke-width: 0.8;
 }
 
-.nc-map-outline__coast {
-  fill: none;
-  stroke: rgba(20, 91, 125, 0.42);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.6;
-}
-
 .nc-map-pins {
   z-index: 2;
 }
