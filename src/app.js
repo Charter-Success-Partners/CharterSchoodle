@@ -80,12 +80,52 @@ const state = {
     page: 1,
   },
   map: {
-    instance: null,
-    markerLayer: null,
+    selectedSchoolId: null,
   },
 };
 
 const EARTH_RADIUS_MILES = 3958.8;
+const NC_MAP_BOUNDS = {
+  minLat: 33.75,
+  maxLat: 36.7,
+  minLng: -84.45,
+  maxLng: -75.25,
+};
+const NC_MAP_OUTLINE = [
+  { lat: 34.99, lng: -84.32 },
+  { lat: 35.18, lng: -84.05 },
+  { lat: 35.38, lng: -83.8 },
+  { lat: 35.54, lng: -83.48 },
+  { lat: 35.74, lng: -83.18 },
+  { lat: 35.94, lng: -82.86 },
+  { lat: 36.12, lng: -82.52 },
+  { lat: 36.34, lng: -82.2 },
+  { lat: 36.58, lng: -81.72 },
+  { lat: 36.58, lng: -79.52 },
+  { lat: 36.56, lng: -77.9 },
+  { lat: 36.55, lng: -76.45 },
+  { lat: 36.35, lng: -75.84 },
+  { lat: 36.07, lng: -75.72 },
+  { lat: 35.74, lng: -75.48 },
+  { lat: 35.29, lng: -75.54 },
+  { lat: 35.0, lng: -75.78 },
+  { lat: 34.86, lng: -76.26 },
+  { lat: 34.73, lng: -76.72 },
+  { lat: 34.5, lng: -77.14 },
+  { lat: 34.26, lng: -77.62 },
+  { lat: 33.96, lng: -78.05 },
+  { lat: 33.85, lng: -78.58 },
+  { lat: 34.05, lng: -79.08 },
+  { lat: 34.34, lng: -79.48 },
+  { lat: 34.81, lng: -80.78 },
+  { lat: 34.96, lng: -81.04 },
+  { lat: 35.14, lng: -81.38 },
+  { lat: 35.19, lng: -81.76 },
+  { lat: 35.08, lng: -82.12 },
+  { lat: 35.05, lng: -82.62 },
+  { lat: 35.0, lng: -83.18 },
+  { lat: 34.99, lng: -84.32 },
+];
 
 async function loadData() {
   const [metadataResponse, schoolsResponse] = await Promise.all([
@@ -746,7 +786,7 @@ function renderMapView() {
   elements.winOverlay.classList.add("is-hidden");
   elements.winOverlay.setAttribute("aria-hidden", "true");
   elements.statusTitle.textContent = "School map";
-  elements.statusMessage.textContent = "Use the pins with the direction feedback to narrow down the answer.";
+  elements.statusMessage.textContent = "Use the North Carolina pin map with the direction feedback to narrow down the answer.";
   renderHeader();
   renderScoreSummary();
   renderSchoolMap();
@@ -762,63 +802,129 @@ function getMappableSchools() {
 
 function renderSchoolMap() {
   const mappableSchools = getMappableSchools();
-  elements.mapSummary.textContent = `${mappableSchools.length} schools with mapped coordinates`;
+  elements.mapSummary.textContent = `${mappableSchools.length} mapped schools in North Carolina`;
 
-  if (!window.L) {
+  if (!mappableSchools.length) {
     elements.mapContainer.innerHTML =
-      '<div class="map-fallback">Map library could not load. Check your connection and reload.</div>';
+      '<div class="map-fallback">No mapped schools are available yet.</div>';
     return;
   }
 
-  if (!state.map.instance) {
-    state.map.instance = window.L.map(elements.mapContainer, {
-      scrollWheelZoom: true,
-      zoomControl: true,
-    }).setView([35.55, -79.35], 7);
+  elements.mapContainer.innerHTML = `
+    <div class="nc-map-frame" aria-label="North Carolina charter school locations">
+      <svg class="nc-map-outline" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <polygon class="nc-map-outline__state" points="${renderNorthCarolinaOutlinePoints()}" />
+        <polyline class="nc-map-outline__coast" points="${renderNorthCarolinaCoastPoints()}" />
+      </svg>
+      <div class="nc-map-pins">
+        ${mappableSchools.map(renderMapPin).join("")}
+      </div>
+    </div>
+  `;
 
-    window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 18,
-    }).addTo(state.map.instance);
+  elements.mapContainer.onclick = handleMapClick;
+  elements.mapContainer.onkeydown = handleMapKeydown;
+}
 
-    state.map.markerLayer = window.L.layerGroup().addTo(state.map.instance);
-    const markerIcon = window.L.divIcon({
-      className: "school-marker",
-      html: "<span></span>",
-      iconSize: [16, 16],
-      iconAnchor: [8, 8],
-      popupAnchor: [0, -8],
-    });
+function renderNorthCarolinaOutlinePoints() {
+  return NC_MAP_OUTLINE.map((point) => {
+    const projected = projectCoordinateToMap(point);
+    return `${projected.x.toFixed(2)},${projected.y.toFixed(2)}`;
+  }).join(" ");
+}
 
-    mappableSchools.forEach((school) => {
-      const cityState = [school.city, school.county ? `${school.county} County` : ""]
-        .filter(Boolean)
-        .join(" · ");
-      const marker = window.L.marker([school.coordinates.lat, school.coordinates.lng], {
-        icon: markerIcon,
-        title: school.officialName,
-      });
+function renderNorthCarolinaCoastPoints() {
+  return NC_MAP_OUTLINE.slice(13, 24)
+    .map((point) => {
+      const projected = projectCoordinateToMap(point);
+      return `${projected.x.toFixed(2)},${projected.y.toFixed(2)}`;
+    })
+    .join(" ");
+}
 
-      marker
-        .bindTooltip(escapeHtml(school.officialName), {
-          direction: "top",
-          offset: [0, -8],
-        })
-        .bindPopup(`
-          <strong>${escapeHtml(school.officialName)}</strong>
-          ${cityState ? `<br>${escapeHtml(cityState)}` : ""}
-        `);
-      marker.addTo(state.map.markerLayer);
-    });
+function renderMapPin(school) {
+  const position = projectCoordinateToMap(school.coordinates);
+  const cityState = [school.city, school.county ? `${school.county} County` : ""]
+    .filter(Boolean)
+    .join(" · ");
+  const placementClasses = getMapPinPlacementClasses(position);
+  const isSelected = state.map.selectedSchoolId === school.id;
+
+  return `
+    <button
+      class="nc-map-pin ${placementClasses} ${isSelected ? "is-selected" : ""}"
+      type="button"
+      style="left: ${position.x.toFixed(3)}%; top: ${position.y.toFixed(3)}%;"
+      data-map-school-id="${escapeHtml(school.id)}"
+      aria-label="${escapeHtml(school.officialName)}"
+      aria-pressed="${isSelected ? "true" : "false"}"
+    >
+      <span class="nc-map-pin__dot" aria-hidden="true"></span>
+      <span class="nc-map-tooltip" role="tooltip">
+        <strong>${escapeHtml(school.officialName)}</strong>
+        ${cityState ? `<span>${escapeHtml(cityState)}</span>` : ""}
+      </span>
+    </button>
+  `;
+}
+
+function projectCoordinateToMap(coordinates) {
+  const longitudeRange = NC_MAP_BOUNDS.maxLng - NC_MAP_BOUNDS.minLng;
+  const latitudeRange = NC_MAP_BOUNDS.maxLat - NC_MAP_BOUNDS.minLat;
+  const rawX = ((coordinates.lng - NC_MAP_BOUNDS.minLng) / longitudeRange) * 100;
+  const rawY = ((NC_MAP_BOUNDS.maxLat - coordinates.lat) / latitudeRange) * 100;
+
+  return {
+    x: Math.min(98, Math.max(2, rawX)),
+    y: Math.min(96, Math.max(4, rawY)),
+  };
+}
+
+function getMapPinPlacementClasses(position) {
+  const classes = [];
+  if (position.x > 74) {
+    classes.push("nc-map-pin--west");
+  } else if (position.x < 26) {
+    classes.push("nc-map-pin--east");
   }
 
-  window.setTimeout(() => {
-    state.map.instance.invalidateSize();
-    const bounds = state.map.markerLayer.getBounds();
-    if (bounds.isValid()) {
-      state.map.instance.fitBounds(bounds.pad(0.08));
-    }
-  }, 0);
+  if (position.y < 24) {
+    classes.push("nc-map-pin--south");
+  }
+
+  return classes.join(" ");
+}
+
+function handleMapClick(event) {
+  const pin = event.target.closest("[data-map-school-id]");
+  if (!pin) {
+    clearSelectedMapPin();
+    return;
+  }
+
+  const nextSchoolId = pin.dataset.mapSchoolId;
+  state.map.selectedSchoolId = state.map.selectedSchoolId === nextSchoolId ? null : nextSchoolId;
+  syncSelectedMapPin();
+}
+
+function handleMapKeydown(event) {
+  if (event.key === "Escape") {
+    state.map.selectedSchoolId = null;
+    syncSelectedMapPin();
+  }
+}
+
+function clearSelectedMapPin() {
+  state.map.selectedSchoolId = null;
+  syncSelectedMapPin();
+}
+
+function syncSelectedMapPin() {
+  elements.mapContainer.querySelectorAll("[data-map-school-id]").forEach((pin) => {
+    const isSelected = pin.dataset.mapSchoolId === state.map.selectedSchoolId;
+    pin.classList.toggle("is-selected", isSelected);
+    pin.setAttribute("aria-pressed", isSelected ? "true" : "false");
+  });
 }
 
 function renderLeaderboardView() {
