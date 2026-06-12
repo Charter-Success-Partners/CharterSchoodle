@@ -812,7 +812,7 @@ function renderSchoolMap() {
 
   elements.mapContainer.innerHTML = `
     <div class="nc-map-frame" aria-label="North Carolina charter school locations">
-      <svg class="nc-map-outline" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+      <svg class="nc-map-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
         <polygon class="nc-map-outline__state" points="${renderNorthCarolinaOutlinePoints()}" />
         <polyline class="nc-map-outline__coast" points="${renderNorthCarolinaCoastPoints()}" />
       </svg>
