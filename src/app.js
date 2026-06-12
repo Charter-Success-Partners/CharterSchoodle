@@ -19,6 +19,9 @@ const elements = {
   clueProgress: document.getElementById("clue-progress"),
   boardPanel: document.getElementById("board-panel"),
   boardBody: document.getElementById("board-body"),
+  mapPanel: document.getElementById("map-panel"),
+  mapSummary: document.getElementById("map-summary"),
+  mapContainer: document.getElementById("school-map"),
   leaderboardPanel: document.getElementById("leaderboard-panel"),
   leaderboardSummary: document.getElementById("leaderboard-summary"),
   leaderboardBody: document.getElementById("leaderboard-body"),
@@ -76,6 +79,10 @@ const state = {
     syncInFlight: false,
     page: 1,
   },
+  map: {
+    instance: null,
+    markerLayer: null,
+  },
 };
 
 const EARTH_RADIUS_MILES = 3958.8;
@@ -123,6 +130,13 @@ function setMode(mode) {
     state.selectedSuggestionIndex = -1;
     render();
     refreshLeaderboard({ silent: true });
+    return;
+  }
+
+  if (mode === "map") {
+    state.filteredSuggestions = [];
+    state.selectedSuggestionIndex = -1;
+    render();
     return;
   }
 
@@ -334,10 +348,18 @@ function render() {
     return;
   }
 
+  if (state.mode === "map") {
+    renderMapView();
+    renderSuggestionList();
+    syncInputLock();
+    return;
+  }
+
   revealNextClueIfNeeded();
   elements.boardPanel.classList.remove("is-hidden");
   elements.guessForm.classList.remove("is-hidden");
   elements.leaderboardPanel.classList.add("is-hidden");
+  elements.mapPanel.classList.add("is-hidden");
   renderHeader();
   renderBoard();
   renderStatus();
@@ -354,6 +376,15 @@ function renderHeader() {
     elements.puzzleHeading.textContent = "Leaderboard";
     elements.guessCounter.textContent = `${summary.points} pts`;
     elements.clueProgress.textContent = `${summary.winStreak} win · ${summary.attemptStreak} attempt`;
+    return;
+  }
+
+  if (state.mode === "map") {
+    const schoolCount = getMappableSchools().length;
+    elements.puzzleLabel.textContent = "Reference map";
+    elements.puzzleHeading.textContent = "NC Charter Schools";
+    elements.guessCounter.textContent = `${schoolCount} pins`;
+    elements.clueProgress.textContent = `${schoolCount} mapped schools`;
     return;
   }
 
@@ -462,7 +493,7 @@ function shakePanel() {
 }
 
 function syncInputLock() {
-  if (state.mode === "leaderboard") {
+  if (state.mode === "leaderboard" || state.mode === "map") {
     elements.guessInput.disabled = true;
     elements.guessForm.querySelector("button[type='submit']").disabled = true;
     return;
@@ -707,6 +738,89 @@ function savePlayerFromFields(name, school) {
   return true;
 }
 
+function renderMapView() {
+  elements.boardPanel.classList.add("is-hidden");
+  elements.guessForm.classList.add("is-hidden");
+  elements.leaderboardPanel.classList.add("is-hidden");
+  elements.mapPanel.classList.remove("is-hidden");
+  elements.winOverlay.classList.add("is-hidden");
+  elements.winOverlay.setAttribute("aria-hidden", "true");
+  elements.statusTitle.textContent = "School map";
+  elements.statusMessage.textContent = "Use the pins with the direction feedback to narrow down the answer.";
+  renderHeader();
+  renderScoreSummary();
+  renderSchoolMap();
+}
+
+function getMappableSchools() {
+  return state.schools.filter(
+    (school) =>
+      Number.isFinite(school.coordinates?.lat) &&
+      Number.isFinite(school.coordinates?.lng),
+  );
+}
+
+function renderSchoolMap() {
+  const mappableSchools = getMappableSchools();
+  elements.mapSummary.textContent = `${mappableSchools.length} schools with mapped coordinates`;
+
+  if (!window.L) {
+    elements.mapContainer.innerHTML =
+      '<div class="map-fallback">Map library could not load. Check your connection and reload.</div>';
+    return;
+  }
+
+  if (!state.map.instance) {
+    state.map.instance = window.L.map(elements.mapContainer, {
+      scrollWheelZoom: true,
+      zoomControl: true,
+    }).setView([35.55, -79.35], 7);
+
+    window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18,
+    }).addTo(state.map.instance);
+
+    state.map.markerLayer = window.L.layerGroup().addTo(state.map.instance);
+    const markerIcon = window.L.divIcon({
+      className: "school-marker",
+      html: "<span></span>",
+      iconSize: [16, 16],
+      iconAnchor: [8, 8],
+      popupAnchor: [0, -8],
+    });
+
+    mappableSchools.forEach((school) => {
+      const cityState = [school.city, school.county ? `${school.county} County` : ""]
+        .filter(Boolean)
+        .join(" · ");
+      const marker = window.L.marker([school.coordinates.lat, school.coordinates.lng], {
+        icon: markerIcon,
+        title: school.officialName,
+      });
+
+      marker
+        .bindTooltip(escapeHtml(school.officialName), {
+          direction: "top",
+          offset: [0, -8],
+        })
+        .bindPopup(`
+          <strong>${escapeHtml(school.officialName)}</strong>
+          ${cityState ? `<br>${escapeHtml(cityState)}` : ""}
+        `);
+      marker.addTo(state.map.markerLayer);
+    });
+  }
+
+  window.setTimeout(() => {
+    state.map.instance.invalidateSize();
+    const bounds = state.map.markerLayer.getBounds();
+    if (bounds.isValid()) {
+      state.map.instance.fitBounds(bounds.pad(0.08));
+    }
+  }, 0);
+}
+
 function renderLeaderboardView() {
   const summary = buildScoreSummary();
   const rows = buildLeaderboardRows();
@@ -724,6 +838,7 @@ function renderLeaderboardView() {
   elements.boardPanel.classList.add("is-hidden");
   elements.guessForm.classList.add("is-hidden");
   elements.leaderboardPanel.classList.remove("is-hidden");
+  elements.mapPanel.classList.add("is-hidden");
   elements.winOverlay.classList.add("is-hidden");
   elements.winOverlay.setAttribute("aria-hidden", "true");
   elements.statusTitle.textContent = "Leaderboard";

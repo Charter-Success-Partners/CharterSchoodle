@@ -112,6 +112,7 @@ h3 {
 .hero__lede,
 .section-heading p,
 .status-banner p,
+.map-fallback,
 .field-help {
   font-size: 0.82rem;
   line-height: 1.25;
@@ -326,8 +327,59 @@ h3 {
 
 .board-panel,
 .guess-form,
-.leaderboard-panel {
+.leaderboard-panel,
+.map-panel {
   margin-top: 8px;
+}
+
+.school-map {
+  height: clamp(360px, calc(100vh - 250px), 560px);
+  min-height: 360px;
+  margin-top: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(112, 143, 150, 0.18);
+  border-radius: 14px;
+  background: rgba(112, 143, 150, 0.08);
+}
+
+.map-fallback {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 18px;
+  text-align: center;
+  color: rgba(88, 85, 81, 0.78);
+}
+
+.school-marker {
+  display: grid;
+  place-items: center;
+}
+
+.school-marker span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--csp-white);
+  border-radius: 999px;
+  background: var(--csp-green-deep);
+  box-shadow: 0 2px 8px rgba(37, 52, 55, 0.35);
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+  color: var(--csp-stone);
+  font-family: var(--font-body);
+}
+
+.leaflet-tooltip {
+  border: 0;
+  border-radius: 999px;
+  color: var(--csp-stone);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .panel--primary.is-shaking {
