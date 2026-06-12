@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11",
+  "generatedAt": "2026-06-12",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 766,
+    "puzzleCount": 767,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-10"
+    "endDate": "2028-06-11"
   },
   "puzzles": [
     {
@@ -23011,6 +23011,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter H."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-11",
+      "answerSchoolId": "north-oak-academy",
+      "clues": [
+        {
+          "text": "Official pages list Gerald McNair as board president.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official pages list Dr. Michael Fuga as principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says it creates a warm, welcoming environment where families feel valued and supported and students are empowered to reach their full potential.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school's mission is to transform lives.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its board documents say the school is transforming lives and enriching communities by delivering high-quality educational choice to families.",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter N."
         }
       ]
     }
