@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12",
+  "generatedAt": "2026-06-13",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23015,6 +23015,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter N."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-12",
+      "answerSchoolId": "evergreen-community-charter",
+      "clues": [
+        {
+          "text": "Its vision emphasizes an academically challenging, developmentally appropriate, experiential, holistic, child-centered education offered in partnership with parents, elders, and community.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it prepares students for successful lifelong learning, social responsibility, environmental stewardship, and service.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school is grounded in EL Education standards for student achievement.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school pursues excellence in the holistic education of mind, body, and spirit.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official pages list Jen Watkins as Executive Director and Ashley Shores-Bobowski as board chair.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
