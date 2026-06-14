@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-06-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 768,
+    "puzzleCount": 769,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-12"
+    "endDate": "2028-06-13"
   },
   "puzzles": [
     {
@@ -23071,6 +23071,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-13",
+      "answerSchoolId": "wayne-preparatory-academy",
+      "clues": [
+        {
+          "text": "Its mission is to create a legacy of leadership and learning that embraces, enriches, and engages children's strengths, one child at a time.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its 'Ready Groups' enrichment program says it helps develop talented, engaged leaders who recognize and achieve their full potential.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its official identity emphasizes preparation for what comes next.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain wpanc.net.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Wayne\".",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
