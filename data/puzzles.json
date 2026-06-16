@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-06-16",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23105,6 +23105,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter U."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-15",
+      "answerSchoolId": "river-mill-academy",
+      "clues": [
+        {
+          "text": "The school says its curriculum is challenging and demanding in an age-appropriate manner and that its standards are high.",
+          "difficulty": 6
+        },
+        {
+          "text": "The homepage says the school's goal is to help parents develop exemplary young citizens with superior academic preparation, analytical thinking skills, a passion for learning, and virtuous character.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its about page says charter schools exist to offer students, parents, and educators choices of teaching and learning methods and environments, with an emphasis on innovation and accountability.",
+          "difficulty": 6
+        },
+        {
+          "text": "Jeff Dishmon is listed as principal on the administration and office staff page.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official governance information says board meetings are held on the third Thursday of each month at 6:30 p.m. in the Media Center.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
