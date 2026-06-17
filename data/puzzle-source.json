@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16",
+  "generatedAt": "2026-06-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 771,
+    "puzzleCount": 772,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-15"
+    "endDate": "2028-06-16"
   },
   "puzzles": [
     {
@@ -23161,6 +23161,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-16",
+      "answerSchoolId": "chatham-charter",
+      "clues": [
+        {
+          "text": "Its published mission says the school establishes and maintains a challenging learning environment that respects individual learners and prepares them to succeed in a globally competitive society.",
+          "difficulty": 7
+        },
+        {
+          "text": "Board materials list Erik Christenbury as president.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official history says the school was founded in 1993 as Chatham Academy before receiving a charter in 1996.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its homepage rotates lines such as Inspiring Passion, Igniting Success and Developing Leaders, Fostering Community.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school has been nationally accredited since 2006 and most recently went through reaccreditation in 2021 through Cognia.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
