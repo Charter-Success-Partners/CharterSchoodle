@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17",
+  "generatedAt": "2026-06-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 772,
+    "puzzleCount": 773,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-16"
+    "endDate": "2028-06-17"
   },
   "puzzles": [
     {
@@ -23187,6 +23187,36 @@
         {
           "text": "Official materials say the school has been nationally accredited since 2006 and most recently went through reaccreditation in 2021 through Cognia.",
           "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-17",
+      "answerSchoolId": "college-prep-and-leadership-academy",
+      "clues": [
+        {
+          "text": "The school's mission says it aims to instill a productive mindset while fostering a sense of belonging and a culture of excellence.",
+          "difficulty": 5
+        },
+        {
+          "text": "Leadership pages identify Dr. Marilyn Andrews as superintendent and exceptional children's director.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says families receive weekly progress reports and maintain daily communication with teachers through Class Dojo.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its public-facing materials often refer to the school simply as The Point.",
+          "difficulty": 4
+        },
+        {
+          "text": "Board pages list Demetria Graham as chairwoman.",
+          "difficulty": 8
         },
         {
           "difficulty": 1,
