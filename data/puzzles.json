@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-06-19",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23195,6 +23195,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-18",
+      "answerSchoolId": "aspire-trade-high",
+      "clues": [
+        {
+          "text": "Official staff pages list Lafrieeda Busby as executive administrator.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials emphasize hands-on learning, strong academics, and real-world career pathways.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school says students choose from 11 trade opportunities while working toward a Future-Ready Core diploma.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school says it was established by the Aspire Carolinas Foundation.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official board pages list Melinda Bales as board chair.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
