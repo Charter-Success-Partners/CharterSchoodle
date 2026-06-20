@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19",
+  "generatedAt": "2026-06-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 774,
+    "puzzleCount": 775,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-18"
+    "endDate": "2028-06-19"
   },
   "puzzles": [
     {
@@ -23251,6 +23251,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-19",
+      "answerSchoolId": "east-voyager-academy-of-charlotte",
+      "clues": [
+        {
+          "text": "Official materials say the school aims to be a national leader in academic achievement and language immersion education.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school strives to create bilingual students with strong academic and intercultural competence as an international language public school.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say students gain exposure to the world's three most spoken languages.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official pages list Renee Mathews as chief executive officer and principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its board page says trustees meet on the fourth Tuesday of each month at 6:30 p.m.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
