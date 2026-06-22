@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21",
+  "generatedAt": "2026-06-22",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 776,
+    "puzzleCount": 777,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-20"
+    "endDate": "2028-06-21"
   },
   "puzzles": [
     {
@@ -23307,6 +23307,36 @@
         {
           "text": "The board page lists Rich Antoine as chair and treasurer.",
           "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-21",
+      "answerSchoolId": "reaching-all-minds-academy",
+      "clues": [
+        {
+          "text": "One public-facing description says the school believes real-world experiences in a safe and orderly learning environment help students make a positive difference in their communities.",
+          "difficulty": 7
+        },
+        {
+          "text": "That same public mission language says students should exhibit positive social competencies and function in a highly technological and global society.",
+          "difficulty": 6
+        },
+        {
+          "text": "A public school profile says the vision relies on project-based learning to prepare students for STEM-related careers.",
+          "difficulty": 6
+        },
+        {
+          "text": "A public profile for this school says its mission is to prepare students to become productive citizens who can solve complex problems and think critically.",
+          "difficulty": 4
+        },
+        {
+          "text": "A public profile for the school uses the slogan \"Think Big... Think RAM!\"",
+          "difficulty": 7
         },
         {
           "difficulty": 1,
