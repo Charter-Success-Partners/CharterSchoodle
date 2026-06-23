@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22",
+  "generatedAt": "2026-06-23",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23315,6 +23315,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-22",
+      "answerSchoolId": "casa-esperanza-montessori-charter-school",
+      "clues": [
+        {
+          "text": "The school describes itself as Wake County's only dual-language Montessori school.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school offers both Spanish Immersion and Spanish Enrichment as two different language-learning pathways.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school fosters independence, inclusivity, critical thinking, and a sense of global responsibility using Montessori philosophy and Spanish language acquisition.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school was founded in 2003.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its board materials say the board meets monthly, typically on the third Thursday at 5:00 p.m.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
