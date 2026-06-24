@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23",
+  "generatedAt": "2026-06-24",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23345,6 +23345,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-23",
+      "answerSchoolId": "shining-rock-classical-academy",
+      "clues": [
+        {
+          "text": "Its founding story says the school opened in fall 2015 and initially partnered with Team CFA to use the Core Knowledge Sequence.",
+          "difficulty": 7
+        },
+        {
+          "text": "Those published core values are Integrity, Respect, Compassion, Responsibility, Wisdom, and Leadership.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it cultivates critical thinking and a lifelong love of learning through rigorous academics, experiential education, and core values.",
+          "difficulty": 4
+        },
+        {
+          "text": "Another official phrase on the site is \"Engage. Experience. Achieve.\"",
+          "difficulty": 3
+        },
+        {
+          "text": "Its homepage tagline says, \"Build confidence for lifelong learning.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
