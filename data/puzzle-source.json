@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24",
+  "generatedAt": "2026-06-25",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 779,
+    "puzzleCount": 780,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-23"
+    "endDate": "2028-06-24"
   },
   "puzzles": [
     {
@@ -23397,6 +23397,36 @@
         {
           "text": "Its homepage tagline says, \"Build confidence for lifelong learning.\"",
           "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-24",
+      "answerSchoolId": "summit-charter",
+      "clues": [
+        {
+          "text": "Official pages say the curriculum uses a unique place-based approach that extends learning beyond the traditional classroom and into the outdoors and the community.",
+          "difficulty": 5
+        },
+        {
+          "text": "The campus page highlights features including a model Appalachian Trail, an amphitheater, and a climbing tower.",
+          "difficulty": 7
+        },
+        {
+          "text": "Every morning, students recite a pledge built around seven virtues: Honesty, Respect, Responsibility, Compassion, Self-Discipline, Perseverance, and Giving.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the Summit community engages students in learning experiences that stimulate discovery, inspire excellence, and nurture a positive influence in an ever-changing world.",
+          "difficulty": 3
+        },
+        {
+          "text": "The trustee board page says board meetings are generally held on the third Tuesday of each month at 4:30 p.m.",
+          "difficulty": 8
         },
         {
           "difficulty": 1,
