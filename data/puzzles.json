@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-06-26",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23405,6 +23405,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-25",
+      "answerSchoolId": "doral-academy-of-north-carolina",
+      "clues": [
+        {
+          "text": "Official board pages list David Correa as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say the school earned and maintained a B rating and received the NC Academic Growth Award for three consecutive years.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school provides quality instruction, high expectations, and a standards-based curriculum with a focus on STEAM.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2021.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official administration pages list Annaliet Echaniz as founding principal.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter D."
         }
       ]
     }
