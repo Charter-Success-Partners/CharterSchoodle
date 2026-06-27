@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26",
+  "generatedAt": "2026-06-27",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23435,6 +23435,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter D."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-26",
+      "answerSchoolId": "mountain-island-charter-school",
+      "clues": [
+        {
+          "text": "Official materials say students can pursue three academic tracks: college preparatory, career preparatory, and occupational course of study.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its vision is to SOAR by serving the community and world as outstanding leaders who achieve through respect and responsibility.",
+          "difficulty": 5
+        },
+        {
+          "text": "A founding-board page says the school's founding board dates to 2010.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school offers a traditional curriculum while instilling character values and leadership development within a positive, challenging learning environment.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official board pages list Erica Blackson, Katie Blixt, Kelly Dempsey, Dawne Dowdy, Rodward Hewlin, Mike Ladd, Eric LaForce, Kim Leppert, Stephanie Sherer, Garrett Tryon, and Kevin Wiley on the 2025-26 board of directors.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
