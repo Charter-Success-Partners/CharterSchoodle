@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27",
+  "generatedAt": "2026-06-28",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23465,6 +23465,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-27",
+      "answerSchoolId": "alpha-academy",
+      "clues": [
+        {
+          "text": "The school's handbook says success is measured partly by helping students graduate, obtain successful careers, and become model citizens of the world.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school highlights a 21st Century Community Learning Center program with components such as WE EXCEL, STEM activities, and Positive Action.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school prepares students to become outstanding leaders and motivates them to strive for their greatest potential through exceptional character and academic achievements.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school's vision says it aims to be one of the most successful schools in the world, measured by service to the community and student outcomes.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials include a student pledge with the lines, \"I will LEARN. I will GROW. I will PROSPER.\"",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
