@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28",
+  "generatedAt": "2026-06-29",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 783,
+    "puzzleCount": 784,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-27"
+    "endDate": "2028-06-28"
   },
   "puzzles": [
     {
@@ -23521,6 +23521,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-28",
+      "answerSchoolId": "z-e-c-a-school-of-arts-and-technology",
+      "clues": [
+        {
+          "text": "Its mission combines a safe, nurturing environment with a strong emphasis on arts, diversity, and technology.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its vision speaks about helping students re-engage successfully in school while building self-confidence and self-worth.",
+          "difficulty": 7
+        },
+        {
+          "text": "The arts are named directly in its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Technology is named directly in its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain zecaschoolofthearts.com.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter Z."
         }
       ]
     }
