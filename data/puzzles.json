@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29",
+  "generatedAt": "2026-06-30",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23525,6 +23525,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter Z."
+        }
+      ]
+    },
+    {
+      "date": "2028-06-29",
+      "answerSchoolId": "uwharrie-charter-academy",
+      "clues": [
+        {
+          "text": "Official staff pages list Sharon Castelli as superintendent.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say the school has a project-based, STEAM-focused curriculum.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school exists to provide a truly relevant and rigorous pathway to career and college readiness by establishing relationships with students, families, and community partners.",
+          "difficulty": 3
+        },
+        {
+          "text": "The school's board page lists Rebecca Mead as chairperson.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its public-facing motto is \"Relationships, Rigor, & Relevance.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter U."
         }
       ]
     }
