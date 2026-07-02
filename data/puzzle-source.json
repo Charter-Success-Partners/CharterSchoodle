@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01",
+  "generatedAt": "2026-07-02",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 786,
+    "puzzleCount": 787,
     "startDate": "2026-05-07",
-    "endDate": "2028-06-30"
+    "endDate": "2028-07-01"
   },
   "puzzles": [
     {
@@ -23611,6 +23611,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-01",
+      "answerSchoolId": "triangle-math-and-science-academy",
+      "clues": [
+        {
+          "text": "Official campus pages list Benjamin Cobanli as Cary principal and Serdar Yuksekkaya as Apex principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it is a Cognia-accredited Leader in Me school dedicated to STEAM excellence.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school was established in 2012 in response to demand created by the first TMSA campus.",
+          "difficulty": 4
+        },
+        {
+          "text": "TMSA governance pages list Victor Ofori-Boadu as board president.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its public-facing motto is \"Science, Wisdom, Peace.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
