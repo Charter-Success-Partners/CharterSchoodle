@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02",
+  "generatedAt": "2026-07-03",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23615,6 +23615,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-02",
+      "answerSchoolId": "girls-leadership-academy-of-wilmington",
+      "clues": [
+        {
+          "text": "Its model is described as 'whole girl education,' blending rigorous academics with intentional social-emotional learning.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision is summed up in a short phrase: 'She Will... Graduate, Go to College, Succeed in Life.'",
+          "difficulty": 8
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official website uses the domain glowacademy.net.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter G."
         }
       ]
     }
