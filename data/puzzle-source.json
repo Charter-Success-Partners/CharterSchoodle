@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03",
+  "generatedAt": "2026-07-04",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 788,
+    "puzzleCount": 789,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-02"
+    "endDate": "2028-07-03"
   },
   "puzzles": [
     {
@@ -23671,6 +23671,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter G."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-03",
+      "answerSchoolId": "bethany-community-school",
+      "clues": [
+        {
+          "text": "Official materials say the school expanded into a new 77,000-square-foot facility in 2017 and graduated its first senior class in 2021.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school aims to be the premier school of choice where academic rigor and character excellence cultivate college-ready learners and strengthen community.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official history pages say the charter was approved by the State Board of Education on February 3, 2000.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its recent messaging says students are shaped into curious thinkers, connected individuals, and courageous leaders.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official administration pages list Scott Lewis as executive director.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter B."
         }
       ]
     }
