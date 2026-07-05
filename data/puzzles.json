@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04",
+  "generatedAt": "2026-07-05",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23675,6 +23675,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-04",
+      "answerSchoolId": "old-main-stream-academy",
+      "clues": [
+        {
+          "text": "Its mission is to engage students in STREAM disciplines that prepare future leaders who are innovative, persistent, and self-determined.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its curriculum emphasizes place-based instruction and local learning opportunities tied to Robeson County.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its official identity explicitly references STREAM disciplines.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain sites.google.com.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Old\".",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter O."
         }
       ]
     }
