@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05",
+  "generatedAt": "2026-07-06",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23705,6 +23705,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter O."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-05",
+      "answerSchoolId": "movement-charter-school",
+      "clues": [
+        {
+          "text": "Official leadership pages list Kerri-Ann T. Thomas as CEO.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it equips scholars with self-efficacy, access to world-class instruction, and financial education to close generational gaps.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its wellness policy says the school is committed to environments that protect children's health and well-being.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school exists to love and value scholars and communities by leading a movement of excellence in education.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official history pages say the first Movement campus opened on Freedom Drive in 2017.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
