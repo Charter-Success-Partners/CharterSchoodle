@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06",
+  "generatedAt": "2026-07-07",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23735,6 +23735,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-06",
+      "answerSchoolId": "quality-education-academy",
+      "clues": [
+        {
+          "text": "The school's vision is to create a sustainable educational organization that develops a replicable, self-sufficient, wholesome community.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official leadership pages identify Dr. Tamara M. Turner as CEO.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say the school prides itself on teaching scholars to be proud of their indigenous culture.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its motto is the line, \"We Raise the Quality of Life of Everyone We Touch.\"",
+          "difficulty": 4
+        },
+        {
+          "text": "Board materials list Dr. Jefferson Caruthers, Jr. as chairman.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter Q."
         }
       ]
     }
