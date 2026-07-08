@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07",
+  "generatedAt": "2026-07-08",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 792,
+    "puzzleCount": 793,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-06"
+    "endDate": "2028-07-07"
   },
   "puzzles": [
     {
@@ -23791,6 +23791,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter Q."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-07",
+      "answerSchoolId": "the-mountain-community-sch",
+      "clues": [
+        {
+          "text": "Its mission emphasizes academic excellence, discovery, individuality, diversity, and a lifelong love of learning.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its program highlights experiential, hands-on learning and expeditionary trips to regional locations.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its curriculum describes strong basic skills, core knowledge, and integrated units of study that connect learning to daily life.",
+          "difficulty": 6
+        },
+        {
+          "text": "Community is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain themountaincommunityschool.com.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
