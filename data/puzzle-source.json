@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08",
+  "generatedAt": "2026-07-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 793,
+    "puzzleCount": 794,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-07"
+    "endDate": "2028-07-08"
   },
   "puzzles": [
     {
@@ -23821,6 +23821,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-08",
+      "answerSchoolId": "lakeside-charter-academy",
+      "clues": [
+        {
+          "text": "Official staff pages list Lisa Upper as interim principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official curriculum pages say the school emphasizes three pillars: scholarship, leadership, and citizenship.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school, in partnership with parents, cultivates engaged learners through scholarship, leadership, and citizenship.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its homepage says the school is devoted to creating a secure, supportive setting in which children excel.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its board page lists Mary Sauer as board president.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
