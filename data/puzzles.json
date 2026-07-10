@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09",
+  "generatedAt": "2026-07-10",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23825,6 +23825,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-09",
+      "answerSchoolId": "piedmont-classical-high-school",
+      "clues": [
+        {
+          "text": "Its mission says students are educated through a challenging, classically driven curriculum designed to prepare them for any endeavor.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its homepage prominently highlights AP Capstone.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its instructional identity is explicitly classical.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain piedmontclassical.com.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its homepage says 'Where Bobcats Roar & Soar!'",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
