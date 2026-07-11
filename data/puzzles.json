@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10",
+  "generatedAt": "2026-07-11",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23855,6 +23855,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-10",
+      "answerSchoolId": "agape-achievement-academy",
+      "clues": [
+        {
+          "text": "Its mission centers academic excellence, character building, and a love of learning through a rigorous, content-rich curriculum.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its vision stresses rigorous, culturally relevant learning paired with high academic and behavioral standards.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its official site highlights small-group instruction in reading and math alongside project-based and service-learning opportunities.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its official name begins with the word \"Agape\".",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Achievement\".",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
