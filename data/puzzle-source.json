@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11",
+  "generatedAt": "2026-07-12",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 796,
+    "puzzleCount": 797,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-10"
+    "endDate": "2028-07-11"
   },
   "puzzles": [
     {
@@ -23911,6 +23911,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-11",
+      "answerSchoolId": "tmsa-charlotte",
+      "clues": [
+        {
+          "text": "Official pages say the TMSA model emphasizes whole-child focus alongside rigorous academics.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it focuses on STEAM and character education in a safe, nurturing, and culturally responsive learning environment.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school became TMSA Charlotte in June 2022 after Queen City STEM School joined the TMSA family.",
+          "difficulty": 4
+        },
+        {
+          "text": "TMSA governance pages list Victor Ofori-Boadu as board president.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its public-facing motto is \"Science, Wisdom, Peace.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
