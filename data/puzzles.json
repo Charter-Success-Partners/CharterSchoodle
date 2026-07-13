@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12",
+  "generatedAt": "2026-07-13",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -23915,6 +23915,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-12",
+      "answerSchoolId": "riverside-leadership-academy",
+      "clues": [
+        {
+          "text": "Its mission combines project-based learning and leadership curricula to develop confident, community-focused, future-ready leaders.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its official academic description pairs project-based learning with Science of Reading and social-emotional learning.",
+          "difficulty": 6
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name begins with the word \"Riverside\".",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Riverside\".",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
