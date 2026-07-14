@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13",
+  "generatedAt": "2026-07-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 798,
+    "puzzleCount": 799,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-12"
+    "endDate": "2028-07-13"
   },
   "puzzles": [
     {
@@ -23971,6 +23971,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-13",
+      "answerSchoolId": "movement-school-southwest",
+      "clues": [
+        {
+          "text": "Official leadership pages list Dr. Shenaille Beckley Danso as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official pages say the school uses parent engagement to strengthen academic, behavioral, and emotional success.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its campus information highlights family engagement as a shared responsibility between school, parents, and community.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school describes itself as a brand new facility in Southwest Charlotte.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school opened in August 2022.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
