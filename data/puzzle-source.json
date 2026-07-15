@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14",
+  "generatedAt": "2026-07-15",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 799,
+    "puzzleCount": 800,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-13"
+    "endDate": "2028-07-14"
   },
   "puzzles": [
     {
@@ -24001,6 +24001,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-14",
+      "answerSchoolId": "wake-forest-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages list Heather Barringer as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its leadership page identifies Hilda Alston Parler as founder and board president.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says students learn to become powerful, critical and independent thinkers, successful collaborators, and enthusiastic contributors to their learning processes.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2014.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public-facing slogan is \"Elevating education. Building character.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
