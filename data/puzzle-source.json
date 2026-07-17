@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16",
+  "generatedAt": "2026-07-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 801,
+    "puzzleCount": 802,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-15"
+    "endDate": "2028-07-16"
   },
   "puzzles": [
     {
@@ -24061,6 +24061,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter K."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-16",
+      "answerSchoolId": "the-exploris-school",
+      "clues": [
+        {
+          "text": "Official materials say the educational program is built around four pillars: Global Education, Project-Based Learning, Co-Teaching, and Responsive Classroom.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its stated values include Innovation, Social Empowerment, Craftsmanship, Connection to Nature, Relationships, Curiosity, Responsibility, and Reflection.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school engages students in a challenging, relevant, relationship-based education and empowers them to foster a just and sustainable world.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its vision statement is \"Empowering Learners to Improve Our World.\"",
+          "difficulty": 3
+        },
+        {
+          "text": "The school's accolades page says it was a 2014 U.S. Department of Education Green Ribbon School and a 2023 WRAL Viewer's Choice Award winner.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
