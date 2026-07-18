@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17",
+  "generatedAt": "2026-07-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 802,
+    "puzzleCount": 803,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-16"
+    "endDate": "2028-07-17"
   },
   "puzzles": [
     {
@@ -24091,6 +24091,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-17",
+      "answerSchoolId": "lake-lure-classical-academy",
+      "clues": [
+        {
+          "text": "Its about page says students can earn certificates in fields such as computer science, welding, and machining through a partnership with Isothermal Community College.",
+          "difficulty": 7
+        },
+        {
+          "text": "The board page says the board usually meets on the third Thursday of the month at 3:30 p.m.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school offers a classical, knowledge-based education that fosters critical thinking, civic responsibilities, and virtue for all.",
+          "difficulty": 3
+        },
+        {
+          "text": "The school highlights Outdoor Exploration, Classical Education, and Lifelong Learning as key themes on its homepage.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official board materials list Randy Nelson as Chair of the Board of Directors.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
