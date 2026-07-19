@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18",
+  "generatedAt": "2026-07-19",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 803,
+    "puzzleCount": 804,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-17"
+    "endDate": "2028-07-18"
   },
   "puzzles": [
     {
@@ -24121,6 +24121,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-18",
+      "answerSchoolId": "bear-grass-charter-school",
+      "clues": [
+        {
+          "text": "Official board pages list Delmas B. Cumbee Jr. as chairman.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school's homepage says it earned silver in the Daily Reflector's 2025 Best of Charter Schools category.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school, in partnership with family and community, enhances students' quality of life by ensuring they possess competencies for academic and vocational success in a technological world.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials repeatedly frame the campus with the phrase, \"Every day is a great day to be at Bear Grass Charter School!\"",
+          "difficulty": 6
+        },
+        {
+          "text": "Official pages list Patricia Speller as principal.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter B."
         }
       ]
     }
