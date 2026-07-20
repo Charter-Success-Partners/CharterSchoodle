@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19",
+  "generatedAt": "2026-07-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24125,6 +24125,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-19",
+      "answerSchoolId": "peak-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages list Kacey Gorman as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its leadership page lists Scott Iden as board president.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school develops students into critical thinkers, active collaborators, and eager contributors to their learning.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2017.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
