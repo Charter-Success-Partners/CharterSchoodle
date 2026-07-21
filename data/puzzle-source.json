@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20",
+  "generatedAt": "2026-07-21",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 805,
+    "puzzleCount": 806,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-19"
+    "endDate": "2028-07-20"
   },
   "puzzles": [
     {
@@ -24181,6 +24181,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-20",
+      "answerSchoolId": "lincoln-charter-school",
+      "clues": [
+        {
+          "text": "The school says students document service hours every year through its Learn. Serve. Engage. program.",
+          "difficulty": 6
+        },
+        {
+          "text": "The overview page includes a message from Chief Administrator Jonathan Bryant.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its vision describes the school as the premier college prep community for highly engaged educators and learners.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school facilitates the development of college-ready individuals through rigorous academics and expectations of honesty, respect, empathy, responsibility, service, and preparedness.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official history says the school obtained its charter in 1998.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
