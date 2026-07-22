@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21",
+  "generatedAt": "2026-07-22",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24185,6 +24185,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-21",
+      "answerSchoolId": "emereau-bladen",
+      "clues": [
+        {
+          "text": "Its founding goal was 'graduation for all' children.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its model includes a daily 'Illuminator' journal and an inquiry process tied to investigation, discovery, innovation, and transformation.",
+          "difficulty": 6
+        },
+        {
+          "text": "One distinctive word in its official name is \"Emereau\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain emereau.org.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name includes a colon.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
