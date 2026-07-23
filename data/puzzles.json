@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22",
+  "generatedAt": "2026-07-23",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24215,6 +24215,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-22",
+      "answerSchoolId": "alamance-community-school",
+      "clues": [
+        {
+          "text": "Its mission is to help students become engaged citizens by exploring real-world problems and creating innovative solutions.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its academic model is built around project-based learning.",
+          "difficulty": 7
+        },
+        {
+          "text": "Community is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain alamancecommunityschool.net.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Alamance\".",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
