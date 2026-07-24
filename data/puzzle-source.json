@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23",
+  "generatedAt": "2026-07-24",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 808,
+    "puzzleCount": 809,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-22"
+    "endDate": "2028-07-23"
   },
   "puzzles": [
     {
@@ -24271,6 +24271,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-23",
+      "answerSchoolId": "wayne-stem-academy",
+      "clues": [
+        {
+          "text": "The school says it avoids one-size-fits-all instruction by using Direct Instruction and mastery-based placement.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its published core charter values include responsibility, respect, resilience, diversity, courage, and industriousness.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official leadership pages list Dr. Todd Forgette as Executive Director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its main about page uses the line: A School of Choice. A Culture of Belonging.",
+          "difficulty": 4
+        },
+        {
+          "text": "Governance materials identify Christina Watts as board chair.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
