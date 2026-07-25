@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24",
+  "generatedAt": "2026-07-25",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24275,6 +24275,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-24",
+      "answerSchoolId": "crosscreek-charter-school",
+      "clues": [
+        {
+          "text": "Its mission emphasizes empowering each student to reach their fullest potential as a lifelong learner.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its official history says the school opened in August 2001 after local families envisioned a different kind of learning community.",
+          "difficulty": 6
+        },
+        {
+          "text": "One distinctive word in its official name is \"Crosscreek\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name begins with the word \"Crosscreek\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official website uses the domain crosscreekcharterschool.com.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
