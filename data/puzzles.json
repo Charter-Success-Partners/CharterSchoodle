@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25",
+  "generatedAt": "2026-07-26",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24305,6 +24305,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-25",
+      "answerSchoolId": "legacy-classical-academy",
+      "clues": [
+        {
+          "text": "The school's mission uniquely combines a classical academic program with explicit emphasis on parental partnerships and character education.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its mission says the school develops productive citizens through a challenging classical academic program, meaningful parental partnerships, character education, and student responsibility.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school opened in August 2023.",
+          "difficulty": 5
+        },
+        {
+          "text": "Board materials say the governing board is ultimately responsible to the Office of Charter Schools and State Board of Education for sound operations.",
+          "difficulty": 6
+        },
+        {
+          "text": "The board page lists Bernie Parnell as chairman.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter L."
         }
       ]
     }
