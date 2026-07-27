@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26",
+  "generatedAt": "2026-07-27",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 811,
+    "puzzleCount": 812,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-25"
+    "endDate": "2028-07-26"
   },
   "puzzles": [
     {
@@ -24361,6 +24361,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter L."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-26",
+      "answerSchoolId": "stewart-creek-high",
+      "clues": [
+        {
+          "text": "Its mission is aimed at students who have dropped out or are at risk of dropping out and need an alternate pathway to a diploma.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its program model stresses flexible scheduling, self-paced coursework, and individualized success plans.",
+          "difficulty": 6
+        },
+        {
+          "text": "One distinctive word in its official name is \"Stewart\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain stewartcreekhs.com.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Creek\".",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
