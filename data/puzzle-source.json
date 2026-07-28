@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27",
+  "generatedAt": "2026-07-28",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 812,
+    "puzzleCount": 813,
     "startDate": "2026-05-07",
-    "endDate": "2028-07-26"
+    "endDate": "2028-07-27"
   },
   "puzzles": [
     {
@@ -24391,6 +24391,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-27",
+      "answerSchoolId": "water-s-edge-village-school",
+      "clues": [
+        {
+          "text": "Its mission is tightly tied to serving an isolated coastal community rich in natural resources and environmentally focused organizations.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its instructional model is described as child-centered, integrated, hands-on, and project-based.",
+          "difficulty": 7
+        },
+        {
+          "text": "Village is part of its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain watersedgevillageschool.com.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Water's\".",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
