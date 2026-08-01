@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31",
+  "generatedAt": "2026-08-01",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24481,6 +24481,36 @@
         {
           "text": "Its public-facing tagline is Better Education for a Better World.",
           "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-07-31",
+      "answerSchoolId": "concord-lake-steam-academy",
+      "clues": [
+        {
+          "text": "Principal's message pages identify Rebecca Feliciano as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school calls itself Home of the Rockets.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school provides a well-rounded education through rigorous, innovative, and inquiry-based instruction.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school's principal message says its 2025-2026 schoolwide initiative is RESET.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials describe the school as a member of the Charter Schools USA family of schools.",
+          "difficulty": 5
         },
         {
           "difficulty": 1,
