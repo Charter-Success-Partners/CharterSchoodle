@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01",
+  "generatedAt": "2026-08-02",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24515,6 +24515,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-01",
+      "answerSchoolId": "neuse-charter-school",
+      "clues": [
+        {
+          "text": "Official pages list Michelle Denning as Board President and Tyler Grady as Upper Academy Director.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say it was founded in 2006 by a group of Johnston County parents who wanted a school of choice and that it was the first charter school in the county.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official board materials say the board is made up of community leaders who meet monthly and provide oversight, support, and expertise.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its board page organizes board priorities around educational excellence, growth planning, financial sustainability, leadership development, and operational excellence.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its homepage calls the school the Home of the Cougars.",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter N."
         }
       ]
     }
