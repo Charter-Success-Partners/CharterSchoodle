@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02",
+  "generatedAt": "2026-08-03",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 818,
+    "puzzleCount": 819,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-01"
+    "endDate": "2028-08-02"
   },
   "puzzles": [
     {
@@ -24571,6 +24571,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter N."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-02",
+      "answerSchoolId": "honor-prep",
+      "clues": [
+        {
+          "text": "Its approach highlights bilingual education, equity and inclusion, and strong community engagement.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its vision focuses on a nurturing environment where students can excel academically, socially, and emotionally.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its official identity emphasizes preparation for what comes next.",
+          "difficulty": 5
+        },
+        {
+          "text": "One distinctive word in its official name is \"Honor\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name begins with the word \"Honor\".",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter H."
         }
       ]
     }
