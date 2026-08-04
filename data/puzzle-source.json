@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-04",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 819,
+    "puzzleCount": 820,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-02"
+    "endDate": "2028-08-03"
   },
   "puzzles": [
     {
@@ -24601,6 +24601,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter H."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-03",
+      "answerSchoolId": "thomas-jefferson-classical-academy",
+      "clues": [
+        {
+          "text": "The school's overview says it follows the classical education model through the three natural stages of human development: grammar, logic, and rhetoric.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school builds on the Core Knowledge Sequence and educates students through the trivium of grammar, logic, and rhetoric.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school has served as a college preparatory option for its community for over twenty years.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages quote Thomas Jefferson: a society that wishes to be both ignorant and free wants what never was and never will be.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school explicitly identifies itself as a Challenge Foundation Academy.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
