@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04",
+  "generatedAt": "2026-08-05",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24605,6 +24605,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-04",
+      "answerSchoolId": "stars-charter",
+      "clues": [
+        {
+          "text": "Its official site highlights both its campus program and STARS Virtual Academy as pathways for personalized learning.",
+          "difficulty": 9
+        },
+        {
+          "text": "Its official team page lists Dr. Wesley Graner as Executive Director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its official site says the school was founded to offer a tuition-free, high-quality alternative to traditional public schools in Moore County.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public materials say it blends strong academics with the performing arts.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public materials say the school quickly gained attention for combining strong academics with the performing arts.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
