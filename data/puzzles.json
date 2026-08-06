@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05",
+  "generatedAt": "2026-08-06",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24635,6 +24635,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-05",
+      "answerSchoolId": "paul-r-brown-leadership-academy",
+      "clues": [
+        {
+          "text": "Its mission promises an academically rich program built around reading, communication, critical thinking, problem solving, work ethic, integrity, physical wellness, and leadership.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its students are consistently referred to as cadets in public-facing school materials.",
+          "difficulty": 7
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain paulrbrownleadership.com.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
