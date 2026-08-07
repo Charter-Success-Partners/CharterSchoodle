@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06",
+  "generatedAt": "2026-08-07",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 822,
+    "puzzleCount": 823,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-05"
+    "endDate": "2028-08-06"
   },
   "puzzles": [
     {
@@ -24691,6 +24691,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-06",
+      "answerSchoolId": "rise-southeast-raleigh-charter-school",
+      "clues": [
+        {
+          "text": "Its public history includes a rename from PAVE Southeast Raleigh Charter School to its current identity.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its public milestone timeline notes a five-year charter renewal from the State Board of Education.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its model is built to offer a strong school option for the Southeast Raleigh community.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its official website uses the domain risese.org.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
