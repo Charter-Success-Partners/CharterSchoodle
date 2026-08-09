@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08",
+  "generatedAt": "2026-08-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24725,6 +24725,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-08",
+      "answerSchoolId": "southern-wake-academy",
+      "clues": [
+        {
+          "text": "Its mission highlights academic excellence through dynamic curriculum, nurturing relationships, and community involvement.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its public materials describe an independent-learning approach built around customization and accountability.",
+          "difficulty": 6
+        },
+        {
+          "text": "One distinctive word in its official name is \"Southern\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain swake.org.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Wake\".",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
