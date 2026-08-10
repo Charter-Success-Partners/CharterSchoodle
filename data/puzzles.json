@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09",
+  "generatedAt": "2026-08-10",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24755,6 +24755,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-09",
+      "answerSchoolId": "franklin-academy",
+      "clues": [
+        {
+          "text": "The school says exceptional instruction by highly skilled, qualified, and devoted teachers should produce the highest possible student outcomes.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission emphasizes academic achievement, creativity, technological sophistication, a love of learning, accountability, self-esteem, and the development of good citizens.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its website describes the school as providing a civil environment for academic excellence.",
+          "difficulty": 5
+        },
+        {
+          "text": "The board page says the school is not affiliated with any other charter school or management organization.",
+          "difficulty": 7
+        },
+        {
+          "text": "Robert L. Luddy is listed as chairman of the board.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter F."
         }
       ]
     }
