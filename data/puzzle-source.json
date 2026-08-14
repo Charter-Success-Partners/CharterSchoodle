@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13",
+  "generatedAt": "2026-08-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 829,
+    "puzzleCount": 830,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-12"
+    "endDate": "2028-08-13"
   },
   "puzzles": [
     {
@@ -24901,6 +24901,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-13",
+      "answerSchoolId": "nc-leadership-charter-academy",
+      "clues": [
+        {
+          "text": "Its tagline says it is 'Developing Tomorrow's Leaders, Today.'",
+          "difficulty": 7
+        },
+        {
+          "text": "Leadership development is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mascot identity is built around Falcons.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain thencla.org.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its recent public updates highlight repeated AP School Honor Roll recognition.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter N."
         }
       ]
     }
