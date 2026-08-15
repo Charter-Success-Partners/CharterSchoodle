@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14",
+  "generatedAt": "2026-08-15",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24905,6 +24905,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter N."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-14",
+      "answerSchoolId": "telra-institute",
+      "clues": [
+        {
+          "text": "Its educational model says each child follows their own trajectory.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its public-facing promise is 'a challenging and accelerated experience for advanced learners.'",
+          "difficulty": 8
+        },
+        {
+          "text": "It presents itself as an institute rather than a traditional academy or school.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain telra.org.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Telra\".",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
