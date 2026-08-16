@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15",
+  "generatedAt": "2026-08-16",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24935,6 +24935,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-15",
+      "answerSchoolId": "magellan-charter",
+      "clues": [
+        {
+          "text": "Its mission describes an academically focused opportunity for highly motivated students built around interactive and experiential learning.",
+          "difficulty": 7
+        },
+        {
+          "text": "A nautical theme has long been part of the school's identity, including in its facility design.",
+          "difficulty": 6
+        },
+        {
+          "text": "One distinctive word in its official name is \"Magellan\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name ends with the word \"Charter\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official website uses the domain magellancharterschool.org.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
