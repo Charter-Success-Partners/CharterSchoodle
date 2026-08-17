@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16",
+  "generatedAt": "2026-08-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -24965,6 +24965,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-16",
+      "answerSchoolId": "thomas-academy",
+      "clues": [
+        {
+          "text": "Its model is intentionally designed for students who have not performed well in larger, traditional school settings.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its school approach integrates behavioral and therapeutic care with goals of graduation, postsecondary readiness, and career readiness.",
+          "difficulty": 7
+        },
+        {
+          "text": "One distinctive word in its official name is \"Thomas\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name begins with the word \"Thomas\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official website uses the domain thomasacademync.org.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
