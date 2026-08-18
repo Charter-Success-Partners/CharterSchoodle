@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17",
+  "generatedAt": "2026-08-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 833,
+    "puzzleCount": 834,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-16"
+    "endDate": "2028-08-17"
   },
   "puzzles": [
     {
@@ -25021,6 +25021,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-17",
+      "answerSchoolId": "sugar-creek-charter",
+      "clues": [
+        {
+          "text": "Its mission explicitly names eradicating generational poverty as a core goal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its three pillars focus on academic preparation, postsecondary readiness, and life skills for success.",
+          "difficulty": 7
+        },
+        {
+          "text": "One distinctive word in its official name is \"Sugar\".",
+          "difficulty": 5
+        },
+        {
+          "text": "One distinctive word in its official name is \"Creek\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official website uses the domain thesugarcreek.org.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
