@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18",
+  "generatedAt": "2026-08-19",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25025,6 +25025,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-18",
+      "answerSchoolId": "community-school-of-digital-and-visual-art",
+      "clues": [
+        {
+          "text": "Visual art is named directly in its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Digital learning or media is named directly in its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Community is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain communitydva.org.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name includes an ampersand.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
