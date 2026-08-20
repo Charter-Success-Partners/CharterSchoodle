@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19",
+  "generatedAt": "2026-08-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 835,
+    "puzzleCount": 836,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-18"
+    "endDate": "2028-08-19"
   },
   "puzzles": [
     {
@@ -25081,6 +25081,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-19",
+      "answerSchoolId": "the-math-and-science-academy-of-apex",
+      "clues": [
+        {
+          "text": "Its official identity names both mathematics and science directly.",
+          "difficulty": 6
+        },
+        {
+          "text": "Science is named directly in its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "One distinctive word in its official name is \"Apex\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Mathematics is named directly in its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain tmsaapex.org.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
