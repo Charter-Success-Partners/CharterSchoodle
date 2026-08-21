@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 836,
+    "puzzleCount": 837,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-19"
+    "endDate": "2028-08-20"
   },
   "puzzles": [
     {
@@ -25111,6 +25111,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-20",
+      "answerSchoolId": "wilmington-school-of-the-arts",
+      "clues": [
+        {
+          "text": "Official board pages include Kevin Lee-y Green as member at large and identify him as founder of Techmoja Dance and Theater Company.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials list Mel Rausch as board treasurer.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official board materials show the school uses the acronym WSA.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say Dustin Richardson serves as board chair.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials list Sarah Dawson as board secretary.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
