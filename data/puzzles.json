@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24",
+  "generatedAt": "2026-08-25",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25201,6 +25201,36 @@
         {
           "text": "One distinctive word in its official name is \"Leaders\".",
           "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-24",
+      "answerSchoolId": "the-experiential-school-of-greensboro",
+      "clues": [
+        {
+          "text": "Experiential learning is built directly into its official identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "One distinctive word in its official name is \"Experiential\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name uses the phrase 'School of.'",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official website uses the domain theexperientialschoolgso.wordpress.com.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4
         },
         {
           "difficulty": 1,
