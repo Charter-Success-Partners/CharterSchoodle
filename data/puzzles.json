@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28",
+  "generatedAt": "2026-08-29",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25325,6 +25325,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter N."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-28",
+      "answerSchoolId": "phoenix-academy-primary-elem-upper",
+      "clues": [
+        {
+          "text": "One distinctive word in its official name is \"Phoenix\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name begins with the word \"Phoenix\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name includes a hyphen.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name is longer than many charter school names.",
+          "difficulty": 4
+        },
+        {
+          "text": "One distinctive word in its official name is \"Elem\".",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
