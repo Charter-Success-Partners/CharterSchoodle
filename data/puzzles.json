@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29",
+  "generatedAt": "2026-08-30",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25355,6 +25355,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-29",
+      "answerSchoolId": "sledge-institute",
+      "clues": [
+        {
+          "text": "It presents itself as an institute rather than a traditional academy or school.",
+          "difficulty": 5
+        },
+        {
+          "text": "One distinctive word in its official name is \"Sledge\".",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official name begins with the word \"Sledge\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name ends with the word \"Institute\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name is unusually short compared with many charter school names.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
