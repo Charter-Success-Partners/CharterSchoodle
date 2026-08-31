@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30",
+  "generatedAt": "2026-08-31",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 846,
+    "puzzleCount": 847,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-29"
+    "endDate": "2028-08-30"
   },
   "puzzles": [
     {
@@ -25411,6 +25411,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-08-30",
+      "answerSchoolId": "cornerstone-charter-academy-cfa",
+      "clues": [
+        {
+          "text": "One distinctive word in its official name is \"Cornerstone\".",
+          "difficulty": 5
+        },
+        {
+          "text": "One distinctive word in its official name is \"CFA\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name begins with the word \"Cornerstone\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name ends with the word \"CFA\".",
+          "difficulty": 4
+        },
+        {
+          "text": "Its official name contains 4 words.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
