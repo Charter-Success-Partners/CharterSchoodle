@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01",
+  "generatedAt": "2026-09-02",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 848,
+    "puzzleCount": 849,
     "startDate": "2026-05-07",
-    "endDate": "2028-08-31"
+    "endDate": "2028-09-01"
   },
   "puzzles": [
     {
@@ -25471,6 +25471,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-01",
+      "answerSchoolId": "voyager-academy",
+      "clues": [
+        {
+          "text": "Peter Meath is listed as chair of this school's board of directors.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its arts accomplishments include NCASA state show choir titles for \"Bull City Lights and Sound.\"",
+          "difficulty": 7
+        },
+        {
+          "text": "This charter was established in 2007, and its first graduating class was in 2014.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its vision statement highlights project-based learning in a safe, inclusive, and supportive environment.",
+          "difficulty": 4
+        },
+        {
+          "text": "This school's vision says, \"Inspire every Viking to learn, innovate, and thrive.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter V."
         }
       ]
     }
