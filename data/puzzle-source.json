@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02",
+  "generatedAt": "2026-09-03",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 849,
+    "puzzleCount": 850,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-01"
+    "endDate": "2028-09-02"
   },
   "puzzles": [
     {
@@ -25501,6 +25501,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter V."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-02",
+      "answerSchoolId": "francine-delany-new-school-for-children",
+      "clues": [
+        {
+          "text": "The school was named after a local educator and principal who had worked with many of its founders.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its academic materials emphasize experientially rich, hands-on learning and critical thinking.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its homepage describes the school as a diverse community committed to social justice and the inherent worth of every person.",
+          "difficulty": 3
+        },
+        {
+          "text": "This school describes itself as Asheville's first charter school.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its history page says the school was started by seven teachers and three families.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter F."
         }
       ]
     }
