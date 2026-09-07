@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06",
+  "generatedAt": "2026-09-07",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 853,
+    "puzzleCount": 854,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-05"
+    "endDate": "2028-09-06"
   },
   "puzzles": [
     {
@@ -25621,6 +25621,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter Y."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-06",
+      "answerSchoolId": "commonwealth-high",
+      "clues": [
+        {
+          "text": "The school says students begin by creating an Individualized Success Plan, or ISP.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages list Tamara Wynn as principal and Dr. Jonathan Kay as regional director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say the school is built around accelerated credit earning with a non-traditional approach.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official schedule pages show three separate 4-hour sessions each day.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its homepage tagline is \"Finish School. Accelerate Your Future.\"",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
