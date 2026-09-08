@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07",
+  "generatedAt": "2026-09-08",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25625,6 +25625,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-07",
+      "answerSchoolId": "metrolina-reg-scholars-academy",
+      "clues": [
+        {
+          "text": "Official materials list Jessica Cuneo as interim executive director and Enrique Alvarez as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says its guiding principle is supporting the distinctive intellectual, social, and emotional needs of gifted children in a noncompetitive environment.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school provides a differentiated, challenging, and equitable learning environment for highly gifted children from diverse backgrounds.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school was established in 2000.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the community values diversity, collaboration, and vibrancy alongside respect, appreciation, trust, innovation, altruism, and creativity.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
