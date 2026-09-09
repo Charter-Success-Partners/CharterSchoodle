@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08",
+  "generatedAt": "2026-09-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25655,6 +25655,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-08",
+      "answerSchoolId": "pioneer-springs-community-school",
+      "clues": [
+        {
+          "text": "The school says it follows the Basic School model inspired by Ernest L. Boyer.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school provides a hands-on learning experience guided by a cohesive curriculum integrating nature and supported by an active community of parents and teachers.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school began as a grassroots initiative in 2012 and became a public charter school in fall 2014.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages describe the school as the only nature-based, holistic, tuition-free public charter school in the Charlotte region.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official staff pages list Dr. Rebecca Friend as executive director.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
