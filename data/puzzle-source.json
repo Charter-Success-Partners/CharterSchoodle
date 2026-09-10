@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09",
+  "generatedAt": "2026-09-10",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 856,
+    "puzzleCount": 857,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-08"
+    "endDate": "2028-09-09"
   },
   "puzzles": [
     {
@@ -25711,6 +25711,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-09",
+      "answerSchoolId": "american-leadership-academy-coastal",
+      "clues": [
+        {
+          "text": "Amanda Ahlert is listed as Director 7-12 and the website says she has been part of the team since its opening in 2017.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its website says Charter One supports the school by handling administrative and business duties.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission begins with the phrase, \"In support of the family...\"",
+          "difficulty": 4
+        },
+        {
+          "text": "The school says authentic learning experiences and character development sit at the center of its model.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its culture is organized around the R.A.I.S.E. values: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
