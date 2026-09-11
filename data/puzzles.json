@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10",
+  "generatedAt": "2026-09-11",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25715,6 +25715,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-10",
+      "answerSchoolId": "classical-charter-schools-of-whiteville",
+      "clues": [
+        {
+          "text": "Campus pages list Kimberly Patrick as headmaster.",
+          "difficulty": 8
+        },
+        {
+          "text": "Admissions pages call it the school with the highest academic growth in Columbus County.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school says its community works as a team to provide a safe, clean, spirited, and morally strong environment.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school has focused on quality education since 2007.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
