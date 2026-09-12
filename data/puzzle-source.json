@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11",
+  "generatedAt": "2026-09-12",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 858,
+    "puzzleCount": 859,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-10"
+    "endDate": "2028-09-11"
   },
   "puzzles": [
     {
@@ -25771,6 +25771,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-11",
+      "answerSchoolId": "washington-montessori",
+      "clues": [
+        {
+          "text": "Official materials say visitors will not see rows of desks or teachers lecturing in front of the class, but children working at tables, on mats, and in small groups.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its mission says the school inspires academic excellence while nurturing curiosity, creativity, and imagination in an environment rich with warmth, kindness, and respect.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the program rests on four pillars, including passion for excellence, universal values, a global perspective, and service to others.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school publishes three basic tenets: respect all living things, respect all non-living things, and use grace and courtesy.",
+          "difficulty": 6
+        },
+        {
+          "text": "Campus materials describe over 36 acres of trails, woods, bridges, fields, and outdoor classroom spaces.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
