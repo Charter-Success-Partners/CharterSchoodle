@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12",
+  "generatedAt": "2026-09-13",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25775,6 +25775,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-12",
+      "answerSchoolId": "tiller-school",
+      "clues": [
+        {
+          "text": "Its origin story says the school was established by a group of parents and teachers in 1993 and later received charter status in 1998.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says its social curriculum emphasizes the Responsive Classroom C.A.R.E.S. values: Cooperation, Assertion, Responsibility, Empathy, and Self-control.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school fosters creativity, confidence, and enthusiasm for learning through arts integration, family engagement, and a responsive academic and social curriculum.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its vision statement is \"Creating Navigators for Life.\"",
+          "difficulty": 2
+        },
+        {
+          "text": "DeAnne Rosen is listed as Executive Director and Jonathan Bullock as board president.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
