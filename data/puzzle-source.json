@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13",
+  "generatedAt": "2026-09-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 860,
+    "puzzleCount": 861,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-12"
+    "endDate": "2028-09-13"
   },
   "puzzles": [
     {
@@ -25831,6 +25831,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-13",
+      "answerSchoolId": "gray-stone-day",
+      "clues": [
+        {
+          "text": "Official news says the school invested from its founding in a full-time college counselor in addition to a traditional school counselor.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official news says the school earned College Board AP School Honor Roll recognition with Platinum Distinction for the 2024-25 school year.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it added another division in 2017 to help students prepare for the demands of its college preparatory program.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say integrity, responsibility, and service to others are hallmarks of its graduates.",
+          "difficulty": 3
+        },
+        {
+          "text": "A 2025 school news story says a senior launched the campus's first-ever National Beta Club chapter.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter G."
         }
       ]
     }
