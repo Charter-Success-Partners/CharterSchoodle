@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14",
+  "generatedAt": "2026-09-15",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25835,6 +25835,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter G."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-14",
+      "answerSchoolId": "central-wake-high-school",
+      "clues": [
+        {
+          "text": "The school says every student starts with an Individualized Success Plan and a personalized Success Dashboard.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school is built around three pillars: Flexible, Personalized, and Supportive.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school serves students who have dropped out or are likely to drop out by providing a non-traditional learning environment leading to a diploma and postsecondary success.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the program includes career coaches, wraparound services, and multilingual course translation support.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official pages identify Tom Hanley as executive principal.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
