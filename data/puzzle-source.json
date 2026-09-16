@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15",
+  "generatedAt": "2026-09-16",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 862,
+    "puzzleCount": 863,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-14"
+    "endDate": "2028-09-15"
   },
   "puzzles": [
     {
@@ -25891,6 +25891,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-15",
+      "answerSchoolId": "eno-river-academy",
+      "clues": [
+        {
+          "text": "Official pages identify Lindsey Sealy as executive director.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says its full academy program is powered by STREAM: Science, Technology, Research, Engineering, Arts, and Math.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school fosters academic and artistic excellence while enriching cultural literacy.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school has roots in the state's original wave of charter schools and traces its tradition of excellence back to 1997.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public-facing tagline is \"Inspiring excellence. Nurturing innovation.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
