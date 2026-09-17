@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16",
+  "generatedAt": "2026-09-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25895,6 +25895,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-16",
+      "answerSchoolId": "charlotte-lab-school",
+      "clues": [
+        {
+          "text": "A national Canopy project selected the school for 2024-25 to showcase student-centered learning and innovation.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says challenge-based courses called Quests help students collaborate on age-appropriate real-world problems.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school uses the community as a classroom to provide personalized, engaging, and authentic learning experiences.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in 2015.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official announcements say the school combined three campuses into one permanent facility on Suttle Avenue for the 2023-24 year.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
