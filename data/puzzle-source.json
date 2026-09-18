@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17",
+  "generatedAt": "2026-09-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 864,
+    "puzzleCount": 865,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-16"
+    "endDate": "2028-09-17"
   },
   "puzzles": [
     {
@@ -25951,6 +25951,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-17",
+      "answerSchoolId": "mallard-creek-stem-academy",
+      "clues": [
+        {
+          "text": "Official materials refer to students as Titans.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say students can choose from the Leadership Academy, Innovation Academy, and Business Academy.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school uses an immersive and interdisciplinary STEM approach.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school promotes high academic achievement by increasing student engagement through a workshop model that encourages students to take ownership of their learning.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school highlights partnerships with Discovery Place Education Studio and Teachers College of Columbia's Reading and Writing Project.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
