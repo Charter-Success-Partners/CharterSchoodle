@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19",
+  "generatedAt": "2026-09-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -25985,6 +25985,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-19",
+      "answerSchoolId": "willow-oak-montessori",
+      "clues": [
+        {
+          "text": "The school says students learn in mixed-age classrooms and have individualized work plans that allow choice in pace and order of work.",
+          "difficulty": 6
+        },
+        {
+          "text": "Susan Johnstone is listed as Head of School, and her bio says she was both a founding board member and a founding teacher in 2013.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its mission says the school fosters curiosity and independence to develop learners into compassionate, responsible global citizens.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its values include Inclusivity, Individual Growth, Interdependence, Peaceful Cooperation, and Respectful Care.",
+          "difficulty": 5
+        },
+        {
+          "text": "The board page says the Charter School Board typically meets monthly at 7 p.m. on the second Thursday.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
