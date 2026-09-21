@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20",
+  "generatedAt": "2026-09-21",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26015,6 +26015,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-20",
+      "answerSchoolId": "the-capitol-encore-academy",
+      "clues": [
+        {
+          "text": "Its vision is organized around four action words: Inquire, Imagine, Innovate, and Inspire.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its teaching philosophy combines artful thinking, learning by doing, and excellence in teaching.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school develops artists who inspire others through the integration of academic excellence, virtuous character, and disciplined artistry.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials identify Hayes the Chameleon as the school mascot.",
+          "difficulty": 5
+        },
+        {
+          "text": "Administrative pages list Gerard Falls as superintendent.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
