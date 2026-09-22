@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21",
+  "generatedAt": "2026-09-22",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 868,
+    "puzzleCount": 869,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-20"
+    "endDate": "2028-09-21"
   },
   "puzzles": [
     {
@@ -26067,6 +26067,36 @@
         {
           "text": "Administrative pages list Gerard Falls as superintendent.",
           "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-21",
+      "answerSchoolId": "two-rivers-community-school",
+      "clues": [
+        {
+          "text": "The curriculum page says every 8th grader completes a Passage Portfolio capstone with a public presentation.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official history says the school began serving families in the 2005-2006 school year and later earned NC Green School of Quality recognition.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its homepage says the school is founded on the Experiential Learning framework and uses the community as a vital resource.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school supports each student's continuing discovery and development of self and community through a learning environment that is relevant, active, and project oriented.",
+          "difficulty": 3
+        },
+        {
+          "text": "The school's published core principles include Inquisitiveness, Environmental Responsibility, Active Learning, Empathy, Mindfulness, Innovation, Resilience, and Connection to Community.",
+          "difficulty": 6
         },
         {
           "difficulty": 1,
