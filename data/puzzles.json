@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22",
+  "generatedAt": "2026-09-23",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26075,6 +26075,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-22",
+      "answerSchoolId": "wake-preparatory-academy",
+      "clues": [
+        {
+          "text": "Official materials say the founder is Hilda Alston Parler, who previously served as the first board president.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says parent involvement is the heartbeat of its campus culture.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school provides a challenging, individualized education program with a moral focus.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school organizes its core values under the acronym R.A.I.S.E.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages list Krista Wyman as director of 7-12.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
