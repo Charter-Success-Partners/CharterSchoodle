@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23",
+  "generatedAt": "2026-09-24",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26105,6 +26105,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-23",
+      "answerSchoolId": "the-arts-based-school",
+      "clues": [
+        {
+          "text": "Its goal statement says the school is concerned with the total development of each student, including cognitive, social, emotional, and physical growth.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its strong core curriculum is realized through individualized, intimate, integrated, interdisciplinary, arts-based instruction.",
+          "difficulty": 5
+        },
+        {
+          "text": "The homepage says academics are integrated deeply with music, dance, visual art, and theater.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission highlights active and creative scholarly exploration that engages students, families, community, and school personnel in the learning experience.",
+          "difficulty": 3
+        },
+        {
+          "text": "Robin Hollis is listed as Charter Director, and her profile says she has led the school since its first year of operation.",
+          "difficulty": 8
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
