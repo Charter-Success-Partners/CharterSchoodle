@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24",
+  "generatedAt": "2026-09-25",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26135,6 +26135,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-24",
+      "answerSchoolId": "pinnacle-classical-academy",
+      "clues": [
+        {
+          "text": "Official materials say one of its signature programs is the Classical Foundations Program, which brings academic and business leaders to speak with students.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school provides a premier college preparatory education built on Core Knowledge, STEM emphases, citizenship, values, and classical education.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school says honesty is the bedrock value in its core values framework.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its branding includes the school pledge line, \"I Dare to Soar.\"",
+          "difficulty": 6
+        },
+        {
+          "text": "Official administration pages say Dr. Shelly L. Shope serves as CEO and Angela Brooks serves as headmaster.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
