@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25",
+  "generatedAt": "2026-09-26",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26165,6 +26165,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-25",
+      "answerSchoolId": "charlotte-secondary",
+      "clues": [
+        {
+          "text": "Official pages list JoHannah Miller as head of school and Monique Stubbs as interim chair of the board.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it offers no school on Fridays as part of its model.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says students should think with discernment and ingenuity, communicate with empathy and tolerance, and act with integrity and purpose.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school has been serving students and families for 18 years.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official school pages describe it as primarily a college and career preparatory school that helps students discover their own particular genius.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
