@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26",
+  "generatedAt": "2026-09-27",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 873,
+    "puzzleCount": 874,
     "startDate": "2026-05-07",
-    "endDate": "2028-09-25"
+    "endDate": "2028-09-26"
   },
   "puzzles": [
     {
@@ -26221,6 +26221,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-26",
+      "answerSchoolId": "roxboro-community-school",
+      "clues": [
+        {
+          "text": "Official staff pages list Darkarai Bryant as Managing Executive Director alongside division leaders Jamel Jones and Jeremy Martin.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school has an RCS Sports Hall of Fame and publicizes induction ceremonies for former student athletes.",
+          "difficulty": 7
+        },
+        {
+          "text": "A charter renewal announcement says the school opened in 2006.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official news says the school received a 10-year charter renewal in 2026, the longest term available for charter schools.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its public-facing tagline is \"We Place Children First.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
