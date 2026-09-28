@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27",
+  "generatedAt": "2026-09-28",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26225,6 +26225,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-27",
+      "answerSchoolId": "millennium-charter-academy",
+      "clues": [
+        {
+          "text": "The school says good citizenship includes logical argument, respect for the rule of law, and appreciation of American constitutional democracy.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision emphasizes an honest search for universal truth, goodness, and beauty.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says classical education is meant to form intelligent, virtuous citizens.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials identify Scholarship, Character, and Community as the school's three pillars.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its homepage uses the phrase Learning for Liberty.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
