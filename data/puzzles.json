@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-09-29",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26255,6 +26255,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-28",
+      "answerSchoolId": "the-academy-of-moore-county",
+      "clues": [
+        {
+          "text": "The school's overview says it creates value in the community by producing children who are independent thinkers and effective communicators.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official pages identify Dr. Dale Buie as Director of Education.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials describe the school as a public school of choice with high expectations for all.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public-facing slogan is Developing tomorrow's leaders today.",
+          "difficulty": 4
+        },
+        {
+          "text": "Safety materials mention a dedicated TAMC Safety/Security Committee working with sheriff, police, and fire partners.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
