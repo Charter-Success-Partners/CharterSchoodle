@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-09-30",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26285,6 +26285,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-29",
+      "answerSchoolId": "artspace-charter-school",
+      "clues": [
+        {
+          "text": "Sarena Fuller is listed as Executive Director, and the school notes she was the 2024 Wells Fargo Charter School Principal of the Year.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say the school is part of the A+ Schools Program at the state arts council.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it uses a family-centered, cooperative approach that encourages parental involvement and community service to nurture responsible citizenship.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school offers a complete education through an integrated curriculum centered around visual and performing arts, using an experiential approach.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its Four Pillars are Effort, Respect, Leadership, and Service.",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
