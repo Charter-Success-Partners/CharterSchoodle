@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30",
+  "generatedAt": "2026-10-01",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26315,6 +26315,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-09-30",
+      "answerSchoolId": "kipp-pride-college-preparatory",
+      "clues": [
+        {
+          "text": "Official school pages list Shawna Mayo and Natassha Jenkins as the campus principals.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say the school believes in bravery, urgency, self-awareness, and passion as part of its culture.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says the strength of the individual and the strength of the community are tied together in what Dr. Martin Luther King Jr. called \"the fabric of inescapable mutuality.\"",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials trace the school's roots to 2001, when the original KIPP Gaston College Prep opened as one of the earliest KIPP schools in the country.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its upper-school page says students are prepared to use their knowledge, skills, and character to strengthen their communities and fight against injustices.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter K."
         }
       ]
     }
