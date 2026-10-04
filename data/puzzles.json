@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03",
+  "generatedAt": "2026-10-04",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26405,6 +26405,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter Q."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-03",
+      "answerSchoolId": "classical-charter-schools-of-leland",
+      "clues": [
+        {
+          "text": "Campus pages list Laurie Benton as headmaster.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4
+        },
+        {
+          "text": "Admissions materials say the school was named in the national top twenty schools in the Classic Learning Test's 2022-2023 CLT8 rankings.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school has focused on quality education since 1999.",
+          "difficulty": 3
+        },
+        {
+          "text": "Achievements pages say the school has won multiple state archery championships and national cheerleading titles.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
