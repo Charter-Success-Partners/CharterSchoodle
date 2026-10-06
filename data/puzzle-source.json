@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05",
+  "generatedAt": "2026-10-06",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 882,
+    "puzzleCount": 883,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-04"
+    "endDate": "2028-10-05"
   },
   "puzzles": [
     {
@@ -26491,6 +26491,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-05",
+      "answerSchoolId": "fernleaf",
+      "clues": [
+        {
+          "text": "Its fundamentals page says every student participates in at least eight fieldwork experiences each year, with overnight experiences built into the program.",
+          "difficulty": 6
+        },
+        {
+          "text": "The executive director wrote that he is the founder of the school.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say students learn by doing through meaningful projects, hands-on experiences, and strong academic instruction.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school fosters a rich learning environment that embodies the essence of community, understanding, and the human spirit.",
+          "difficulty": 3
+        },
+        {
+          "text": "The school organizes its approach around four \"FernLeaf Fundamentals\": Rich Learning Environments, Community and Culture, Social and Emotional Growth and Development, and High Quality Academic Instruction.",
+          "difficulty": 5
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter F."
         }
       ]
     }
