@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06",
+  "generatedAt": "2026-10-07",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26495,6 +26495,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter F."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-06",
+      "answerSchoolId": "moore-montessori-community-school",
+      "clues": [
+        {
+          "text": "The school emphasizes hands-on learning, collaborative work, and self-directed activity as core Montessori features.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school provides a quality education rooted in the Montessori method.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school is a vibrant learning community where diverse students build strong academic foundations, executive function skills, and trust in their abilities for lives of joy and purpose.",
+          "difficulty": 4
+        },
+        {
+          "text": "A campus story says the school first welcomed students in the fall of 2018.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official team pages list Katherine Rucker as founder and head of school.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
