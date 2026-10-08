@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-08",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26525,6 +26525,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-07",
+      "answerSchoolId": "carolina-charter-academy",
+      "clues": [
+        {
+          "text": "Official materials highlight an engaging STEM program and a growing athletic program.",
+          "difficulty": 7
+        },
+        {
+          "text": "A January 2026 announcement says the school was awarded a 10-year charter renewal by the state charter review board.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it teaches values of honesty, consideration, and responsibility while cultivating informed and engaged citizens.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school prepares students for a lifetime of learning by developing their natural passion for discovery and problem-solving.",
+          "difficulty": 3
+        },
+        {
+          "text": "Official materials say the school opened in fall 2019.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
