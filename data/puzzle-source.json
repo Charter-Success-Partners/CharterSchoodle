@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08",
+  "generatedAt": "2026-10-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 885,
+    "puzzleCount": 886,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-07"
+    "endDate": "2028-10-08"
   },
   "puzzles": [
     {
@@ -26581,6 +26581,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-08",
+      "answerSchoolId": "haliwa-saponi-tribal-school",
+      "clues": [
+        {
+          "text": "The school highlights programs such as Indian Education and Mighty Bucks Academy.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school wants students to become positive, productive citizens in an ever-changing global society.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school provides high-quality education through academics, technology, and community involvement, with the integration of American Indian culture.",
+          "difficulty": 4
+        },
+        {
+          "text": "A principal's message says students are encouraged to share the strength of their history to inspire others.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official homepage materials identify Melissa Richardson as principal and head administrator.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter H."
         }
       ]
     }
