@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10",
+  "generatedAt": "2026-10-11",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 887,
+    "puzzleCount": 888,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-09"
+    "endDate": "2028-10-10"
   },
   "puzzles": [
     {
@@ -26641,6 +26641,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-10",
+      "answerSchoolId": "cape-fear-center-for-inquiry",
+      "clues": [
+        {
+          "text": "Its campus street address is Wonder Way.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official beliefs state that the whole child is more important than any single factor.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school defines inquiry as a rigorous discovery process driven by curriculum and curiosity that requires exploration, analysis, and problem-solving.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school promotes students' abilities to think and create in personally meaningful ways through an inquiry-based, integrated curriculum in a nurturing and empowering environment.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its about page describes the school as cultivating curiosity since 2000.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
