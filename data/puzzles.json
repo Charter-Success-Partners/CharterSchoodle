@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11",
+  "generatedAt": "2026-10-12",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26645,6 +26645,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-11",
+      "answerSchoolId": "jackson-day-school",
+      "clues": [
+        {
+          "text": "Its mission says students should strive not just for strong marks, but to become better people and make their world a better place.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official college-readiness materials note a partnership with Belmont Abbey through something called The Voyager Program.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says character education is integrated throughout the curriculum, extracurricular activities, and daily social interactions.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official history says the school was formerly known as M.I. Day.",
+          "difficulty": 4
+        },
+        {
+          "text": "Current school profile materials list Kristen Lanier as both Principal of Upper School and Principal of Lower School.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter J."
         }
       ]
     }
