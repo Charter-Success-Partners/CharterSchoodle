@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12",
+  "generatedAt": "2026-10-13",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 889,
+    "puzzleCount": 890,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-11"
+    "endDate": "2028-10-12"
   },
   "puzzles": [
     {
@@ -26701,6 +26701,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter J."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-12",
+      "answerSchoolId": "excelsior-classical-academy",
+      "clues": [
+        {
+          "text": "Official staff pages list Dr. Dana Coyle as executive director and grammar school dean.",
+          "difficulty": 8
+        },
+        {
+          "text": "School profile pages say the school earned Cognia accreditation in the summer of 2024.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school develops in every student a foundation of knowledge, a practice of reason, a quality of eloquence, and a habit of virtue.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school started in the 2015-2016 school year and its first graduating class was the class of 2024.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages say the school is known as the home of the Flying Lions.",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter E."
         }
       ]
     }
