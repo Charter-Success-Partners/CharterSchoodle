@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13",
+  "generatedAt": "2026-10-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26705,6 +26705,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter E."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-13",
+      "answerSchoolId": "kipp-charlotte",
+      "clues": [
+        {
+          "text": "Official school pages list Dr. Stacy Shepard as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it is committed to developing the whole child through culturally responsive teaching that cultivates confidence and positive self-identity.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its vision says students will identify a need and actively take part in their democracy to meet that need.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school was founded in 2007.",
+          "difficulty": 3
+        },
+        {
+          "text": "KIPP's statewide network says its mission is to create joyful, academically excellent schools that prepare students with the skills and confidence to pursue the paths they choose.",
+          "difficulty": 6
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter K."
         }
       ]
     }
