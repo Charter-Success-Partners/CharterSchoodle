@@ -46,6 +46,21 @@ const elements = {
   statusMessage: document.getElementById("status-message"),
   clueProgress: document.getElementById("clue-progress"),
   boardPanel: document.getElementById("board-panel"),
+  activeClue: document.getElementById("active-clue"),
+  activeClueTitle: document.getElementById("active-clue-title"),
+  activeClueText: document.getElementById("active-clue-text"),
+  attemptProgress: document.getElementById("attempt-progress"),
+  guessHistory: document.getElementById("guess-history"),
+  guessSummary: document.getElementById("guess-summary"),
+  gameStatus: document.getElementById("game-status"),
+  personalScoreContext: document.getElementById("personal-score-context"),
+  mapSearch: document.getElementById("map-search"),
+  mapResults: document.getElementById("map-results"),
+  mapResultStatus: document.getElementById("map-result-status"),
+  mapMore: document.getElementById("map-more"),
+  mapSelection: document.getElementById("map-selection"),
+  mapSelectionTitle: document.getElementById("map-selection-title"),
+  mapSelectionFacts: document.getElementById("map-selection-facts"),
   boardRounds: document.getElementById("board-rounds"),
   mapPanel: document.getElementById("map-panel"),
   mapSummary: document.getElementById("map-summary"),
@@ -117,6 +132,7 @@ const state = {
   },
   map: {
     selectedSchoolId: null,
+    resultLimit: 5,
     zoom: 1,
     panX: 0,
     panY: 0,
@@ -135,7 +151,14 @@ const NC_MAP_BOUNDS = {
   minLng: -84.319594,
   maxLng: -75.715321,
 };
-const NC_MAP_PADDING = { x: 2.5, y: 5 };
+// Equirectangular projection at NC's middle latitude. The canvas and SVG use
+// the same physical aspect ratio; pins and outline share the normalized projection.
+const NC_MAP_RATIO = ((NC_MAP_BOUNDS.maxLng - NC_MAP_BOUNDS.minLng) *
+  Math.cos(((NC_MAP_BOUNDS.minLat + NC_MAP_BOUNDS.maxLat) / 2) * Math.PI / 180)) /
+  (NC_MAP_BOUNDS.maxLat - NC_MAP_BOUNDS.minLat);
+const NC_MAP_WIDTH = 1000;
+const NC_MAP_HEIGHT = NC_MAP_WIDTH / NC_MAP_RATIO;
+const NC_MAP_PADDING = { x: 4, y: 4 };
 const NC_MAP_OUTLINE = [
   { lat: 36.562108, lng: -80.978661 },
   { lat: 36.545677, lng: -80.294043 },
@@ -296,6 +319,11 @@ function showUnavailable(title, message, retry = true) {
   state.filteredSuggestions = [];
   state.selectedSuggestionIndex = -1;
   elements.boardRounds.innerHTML = "";
+  elements.attemptProgress.replaceChildren();
+  elements.activeClue.hidden = true;
+  elements.guessHistory.hidden = true;
+  elements.guessSummary.hidden = false;
+  elements.gameStatus.hidden = false;
   elements.guessInput.value = "";
   elements.guessCounter.textContent = "0 / 6";
   elements.clueProgress.textContent = "No clues available";
@@ -320,6 +348,7 @@ function setMode(mode) {
   state.mode = mode;
   elements.modeButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.mode === mode);
+    button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
   });
 
   elements.archiveControls.classList.toggle("is-hidden", mode !== "archive");
@@ -436,70 +465,63 @@ function render() {
 }
 
 function renderHeader() {
+  const playing = ["daily", "archive"].includes(state.mode);
+  elements.guessSummary.hidden = !playing;
   if (state.mode === "leaderboard") {
-    const summary = buildScoreSummary();
-    elements.puzzleLabel.textContent = "Company score";
-    elements.puzzleHeading.textContent = "Leaderboard";
-    elements.guessCounter.textContent = `${summary.points} pts`;
-    elements.clueProgress.textContent = `${summary.winStreak} win · ${summary.attemptStreak} attempt`;
+    elements.puzzleHeading.textContent = "Community rankings";
+    elements.puzzleLabel.textContent = "Daily play, shared with the NC charter-school community.";
     return;
   }
-
   if (state.mode === "map") {
-    const schoolCount = getMappableSchools().length;
-    elements.puzzleLabel.textContent = "Reference map";
-    elements.puzzleHeading.textContent = "NC Charter Schools";
-    elements.guessCounter.textContent = `${schoolCount} pins`;
-    elements.clueProgress.textContent = `${schoolCount} mapped schools`;
+    elements.puzzleHeading.textContent = "NC charter schools";
+    elements.puzzleLabel.textContent = "Explore the map or find a school below.";
     return;
   }
-
   const headingDate = new Date(`${state.activePuzzleDate}T12:00:00`);
-  const dateLabel = headingDate.toLocaleDateString(undefined, {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
+  elements.puzzleHeading.textContent = headingDate.toLocaleDateString(undefined, {
+    month: "long", day: "numeric", year: "numeric",
   });
-
-  elements.puzzleLabel.textContent = state.mode === "daily" ? "Daily puzzle" : "Archive puzzle";
-  elements.puzzleHeading.textContent = dateLabel;
+  elements.puzzleLabel.textContent = state.mode === "daily" ? "Today's puzzle · Six clues. One school." : "Past puzzle · Practice without changing daily scores.";
   elements.guessCounter.textContent = `${state.progress.guesses.length} / ${GAME_CONFIG.maxGuesses}`;
   elements.clueProgress.textContent = `${state.progress.revealedClues} clue${state.progress.revealedClues === 1 ? "" : "s"} visible`;
 }
 
 function renderBoard() {
-  const rows = [];
   const answerSchool = state.schoolMap.get(state.activePuzzle.answerSchoolId);
-
-  for (let index = 0; index < GAME_CONFIG.maxGuesses; index += 1) {
-    const clue = state.activePuzzle.clues[index];
-    const guessRecord = state.progress.guesses[index];
-    const guessedSchool = guessRecord ? state.schoolMap.get(guessRecord.schoolId) : null;
-    const feedback =
-      guessRecord && guessedSchool && answerSchool
-        ? buildFeedback(guessedSchool, answerSchool, guessRecord.correct)
-        : guessRecord?.feedback;
-    const clueVisible = index < state.progress.revealedClues;
-
-    rows.push(`
-      <li class="board-round ${guessRecord ? "board-row--played" : ""}">
-        <h4 class="board-round__heading">Round ${index + 1}</h4>
-        <div class="board-clue">${clueVisible ? escapeHtml(clue.text) : "Clue locked until the next round."}</div>
-        <div class="board-guess"><span class="round-label">Guess</span> ${guessedSchool ? escapeHtml(guessedSchool.officialName) : "Not played yet"}</div>
-        <div class="round-feedback" role="group" aria-label="Round ${index + 1} feedback">
-          <div><span class="round-label">Result</span>${guessRecord ? renderResultIcon(guessRecord.correct) : renderEmptyIcon()}</div>
-          <div><span class="round-label">Size</span>${feedback ? renderFeedbackIcon("enrollment", feedback.enrollment) : renderEmptyIcon()}</div>
-          <div><span class="round-label">Grades</span>${feedback ? renderFeedbackIcon("gradeBand", feedback.gradeBand) : renderEmptyIcon()}</div>
-          <div><span class="round-label">Direction</span>${feedback ? renderFeedbackIcon("direction", feedback.direction) : renderEmptyIcon()}</div>
-        </div>
-      </li>
-    `);
+  const finished = state.progress.solved || state.progress.lost;
+  const count = state.progress.guesses.length;
+  elements.activeClue.hidden = finished;
+  if (!finished) {
+    elements.activeClueTitle.textContent = `Clue ${count + 1}`;
+    elements.activeClueText.textContent = state.activePuzzle.clues[count].text;
   }
-
-  elements.boardRounds.innerHTML = rows.join("");
+  elements.attemptProgress.innerHTML = Array.from({ length: GAME_CONFIG.maxGuesses }, (_, index) => {
+    const guess = state.progress.guesses[index];
+    const current = !finished && index === count;
+    const label = guess ? (guess.correct ? "correct" : "used") : current ? "current" : "remaining";
+    return `<li class="${guess ? (guess.correct ? "is-correct" : "is-played") : current ? "is-current" : ""}" ${current ? 'aria-current="step"' : ""}><span aria-hidden="true">${index + 1}</span><span class="sr-only">Guess ${index + 1}: ${label}</span></li>`;
+  }).join("");
+  elements.guessHistory.hidden = count === 0;
+  elements.boardRounds.innerHTML = state.progress.guesses.map((guessRecord, index) => {
+    const guessedSchool = state.schoolMap.get(guessRecord.schoolId);
+    const feedback = guessedSchool && answerSchool
+      ? buildFeedback(guessedSchool, answerSchool, guessRecord.correct) : guessRecord.feedback;
+    return `<li class="board-round board-row--played">
+      <h4 class="board-round__heading">Guess ${index + 1}</h4>
+      <p class="board-guess">${escapeHtml(guessedSchool?.officialName || "School unavailable")}</p>
+      <p class="board-clue"><span class="round-label">Clue ${index + 1}</span> ${escapeHtml(state.activePuzzle.clues[index].text)}</p>
+      <div class="round-feedback" role="group" aria-label="Round ${index + 1} feedback">
+        <div><span class="round-label">Result</span>${renderResultIcon(guessRecord.correct)}</div>
+        <div><span class="round-label">Size</span>${feedback ? renderFeedbackIcon("enrollment", feedback.enrollment) : renderEmptyIcon()}</div>
+        <div><span class="round-label">Grades</span>${feedback ? renderFeedbackIcon("gradeBand", feedback.gradeBand) : renderEmptyIcon()}</div>
+        <div><span class="round-label">Direction</span>${feedback ? renderFeedbackIcon("direction", feedback.direction) : renderEmptyIcon()}</div>
+      </div>
+    </li>`;
+  }).join("");
 }
 
 function renderStatus() {
+  elements.gameStatus.hidden = state.progress.guesses.length === 0;
   if (state.progress.solved) {
     const answer = state.schoolMap.get(state.activePuzzle.answerSchoolId);
     elements.statusTitle.textContent = "Solved";
@@ -617,9 +639,9 @@ function launchConfetti() {
 
 function shakePanel() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  elements.primaryPanel.classList.remove("is-shaking");
-  void elements.primaryPanel.offsetWidth;
-  elements.primaryPanel.classList.add("is-shaking");
+  elements.activeClue.classList.remove("clue-updated");
+  void elements.activeClue.offsetWidth;
+  elements.activeClue.classList.add("clue-updated");
 }
 
 function syncInputLock() {
@@ -652,12 +674,14 @@ function handleGuessSubmission(event) {
   const value = elements.guessInput.value.trim();
   const school = state.schools.find((candidate) => candidate.officialName === value);
   if (!school) {
+    elements.gameStatus.hidden = false;
     elements.statusTitle.textContent = "Pick an official school";
     elements.statusMessage.textContent = "Choose one of the autocomplete options before submitting.";
     return;
   }
 
   if (hasAlreadyGuessedSchool(school.id)) {
+    elements.gameStatus.hidden = false;
     elements.statusTitle.textContent = "Already guessed";
     elements.statusMessage.textContent = "That school is already on the board. Pick another remaining school.";
     state.filteredSuggestions = [];
@@ -731,6 +755,8 @@ function renderScoreSummary() {
 }
 
 function renderMapView() {
+  elements.guessHistory.hidden = true;
+  elements.gameStatus.hidden = true;
   elements.retryButton.classList.add("is-hidden");
   elements.boardPanel.classList.add("is-hidden");
   elements.guessForm.classList.add("is-hidden");
@@ -742,6 +768,8 @@ function renderMapView() {
   renderHeader();
   renderScoreSummary();
   renderSchoolMap();
+  renderMapResults();
+  syncSelectedMapPin();
 }
 
 function getMappableSchools() {
@@ -769,9 +797,9 @@ function renderSchoolMap() {
       <button class="map-zoom-button" type="button" data-map-zoom="in" aria-label="Zoom in" title="Zoom in">+</button>
       <button class="map-zoom-button" type="button" data-map-zoom="reset" aria-label="Reset map view" title="Reset map view">↺</button>
     </div>
-    <div class="nc-map-frame" aria-label="North Carolina charter school locations">
+    <div class="nc-map-frame" style="aspect-ratio: ${NC_MAP_RATIO}" aria-label="North Carolina charter school locations">
       <div class="nc-map-canvas">
-        <svg class="nc-map-outline" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <svg class="nc-map-outline" viewBox="0 0 ${NC_MAP_WIDTH} ${NC_MAP_HEIGHT}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
           <polygon class="nc-map-outline__state" points="${renderNorthCarolinaOutlinePoints()}" />
         </svg>
         <div class="nc-map-pins">
@@ -794,7 +822,7 @@ function renderSchoolMap() {
 function renderNorthCarolinaOutlinePoints() {
   return NC_MAP_OUTLINE.map((point) => {
     const projected = projectCoordinateToMap(point);
-    return `${projected.x.toFixed(2)},${projected.y.toFixed(2)}`;
+    return `${(projected.x * NC_MAP_WIDTH / 100).toFixed(2)},${(projected.y * NC_MAP_HEIGHT / 100).toFixed(2)}`;
   }).join(" ");
 }
 
@@ -812,6 +840,7 @@ function renderMapPin(school) {
       type="button"
       style="left: ${position.x.toFixed(3)}%; top: ${position.y.toFixed(3)}%;"
       data-map-school-id="${escapeHtml(school.id)}"
+      tabindex="-1"
       aria-label="${escapeHtml(school.officialName)}"
       aria-pressed="${isSelected ? "true" : "false"}"
     >
@@ -1070,11 +1099,39 @@ function syncSelectedMapPin() {
   elements.mapContainer.querySelectorAll("[data-map-school-id]").forEach((pin) => {
     const isSelected = pin.dataset.mapSchoolId === state.map.selectedSchoolId;
     pin.classList.toggle("is-selected", isSelected);
-    pin.setAttribute("aria-pressed", isSelected ? "true" : "false");
+    pin.setAttribute("aria-pressed", String(isSelected));
   });
+  elements.mapResults.querySelectorAll("[data-map-result-id]").forEach(button => {
+    button.setAttribute("aria-pressed", String(button.dataset.mapResultId === state.map.selectedSchoolId));
+  });
+  const school = state.schoolMap.get(state.map.selectedSchoolId);
+  elements.mapSelection.hidden = !school;
+  elements.mapSelectionTitle.textContent = school?.officialName || "";
+  if (!school) { elements.mapSelectionFacts.replaceChildren(); return; }
+  const facts = [
+    ["Location", [school.city, school.county ? `${school.county} County` : ""].filter(Boolean).join(" · ")],
+    ["Address", [school.address, school.city, school.zip].filter(Boolean).join(", ")],
+    ["Grades", school.gradeBand],
+    ["Enrollment (2024)", school.adm2024],
+  ].filter(([, value]) => value);
+  elements.mapSelectionFacts.innerHTML = facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
+}
+
+function renderMapResults() {
+  const query = elements.mapSearch.value.trim().toLocaleLowerCase();
+  const matches = getMappableSchools().filter(school => [school.officialName, school.city, school.county]
+    .some(value => value?.toLocaleLowerCase().includes(query)));
+  const visible = matches.slice(0, state.map.resultLimit);
+  elements.mapResultStatus.textContent = matches.length
+    ? `${matches.length} ${matches.length === 1 ? "school" : "schools"} found${matches.length > visible.length ? ` · Showing ${visible.length}` : ""}. Select a school to see its location and details.`
+    : "No schools match. Try another name, city, or county.";
+  elements.mapResults.innerHTML = visible.map(school => `<li><button type="button" data-map-result-id="${escapeHtml(school.id)}" aria-pressed="${school.id === state.map.selectedSchoolId}"><strong>${escapeHtml(school.officialName)}</strong><span>${escapeHtml([school.city, school.county ? `${school.county} County` : ""].filter(Boolean).join(" · "))}</span></button></li>`).join("");
+  elements.mapMore.hidden = visible.length === matches.length;
 }
 
 function renderLeaderboardView() {
+  elements.guessHistory.hidden = true;
+  elements.gameStatus.hidden = true;
   const summary = buildScoreSummary();
   elements.boardPanel.classList.add("is-hidden");
   elements.guessForm.classList.add("is-hidden");
@@ -1088,7 +1145,12 @@ function renderLeaderboardView() {
   elements.scoreWinStreak.textContent = String(summary.winStreak);
   elements.scoreAttemptStreak.textContent = String(summary.attemptStreak);
   elements.scoreAverage.textContent = summary.average === null ? "—" : summary.average.toFixed(1);
-  elements.leaderboardSummary.textContent = "Your daily puzzle scores";
+  elements.leaderboardSummary.textContent = "Ranked by daily results. Choose a statistic to compare.";
+  elements.personalScoreContext.textContent = state.subject === "guest"
+    ? "Guest stats stay in this browser. Join to save daily scores and appear in the community rankings."
+    : accountProfile?.listed ? (summary.played ? "Your profile is public. Rankings show saved daily results." : "Your profile is public. Play today's puzzle to post your first score; only saved daily attempts appear in the rankings.")
+    : accountProfile ? "Your saved daily stats are private. You can choose to appear publicly in Edit profile."
+    : "Join the leaderboard to save daily scores and choose your public name.";
   const board = state.leaderboard;
   const available = Boolean(auth?.getClient() || publicClient);
   elements.leaderboardSortButtons.forEach((button) => {
@@ -1103,9 +1165,29 @@ function renderLeaderboardView() {
   elements.leaderboardPageStatus.textContent = `Page ${board.page} of ${pages}`;
   elements.leaderboardSyncStatus.textContent = board.message || "The public leaderboard is unavailable. Guest play remains available.";
   elements.leaderboardRetry.classList.toggle("is-hidden", board.status !== "error" || !available);
+  const metricLabel = { points: "Points", winStreak: "Win streak", attemptStreak: "Attempt streak" }[board.sort];
+  elements.leaderboardRounds.setAttribute("aria-busy", String(board.status === "loading"));
   elements.leaderboardRounds.innerHTML = board.status === "ready" && board.records.length
-    ? board.records.map(row => `<tr><td>${escapeHtml(row.rank)}</td><td>${escapeHtml(row.displayName)}</td><td>${escapeHtml(row.school || "—")}</td><td>${escapeHtml(row.points)}</td><td>${escapeHtml(row.solved)} / ${escapeHtml(row.played)}</td><td>${escapeHtml(row.winStreak)}</td><td>${escapeHtml(row.attemptStreak)}</td><td>${typeof row.average === "number" ? row.average.toFixed(1) : "—"}</td></tr>`).join("")
-    : `<tr><td class="leaderboard-empty" colspan="8">${board.status === "loading" ? "Loading public rankings…" : board.status === "ready" ? "No public scores yet. Play a daily puzzle and choose to show your profile to join." : "Public rankings are unavailable. You can keep playing."}</td></tr>`;
+    ? board.records.map(row => {
+      const own = accountProfile?.listed && row.publicId === accountProfile.publicId;
+      return `<li class="leaderboard-entry ${own ? "leaderboard-row--you" : ""}" value="${Number(row.rank)}">
+        <div class="ranking-row">
+          <span class="ranking-rank"><span class="sr-only">Rank </span>${escapeHtml(row.rank)}</span>
+          <div class="ranking-identity"><strong>${escapeHtml(row.displayName)}${own ? ' <span class="you-label">You</span>' : ""}</strong>${row.school ? `<p>${escapeHtml(row.school)}</p>` : ""}</div>
+          <div class="ranking-metric"><strong>${escapeHtml(row[board.sort])}</strong><span>${metricLabel}</span></div>
+        </div>
+        <details class="ranking-details"><summary>Score details<span class="sr-only"> for ${escapeHtml(row.displayName)}</span></summary>
+          <dl class="ranking-stats">
+            <div><dt>Points</dt><dd>${escapeHtml(row.points)}</dd></div>
+            <div><dt>Solved / played</dt><dd>${escapeHtml(row.solved)} / ${escapeHtml(row.played)}</dd></div>
+            <div><dt>Win streak</dt><dd>${escapeHtml(row.winStreak)}</dd></div>
+            <div><dt>Attempt streak</dt><dd>${escapeHtml(row.attemptStreak)}</dd></div>
+            <div><dt>Average guesses</dt><dd>${typeof row.average === "number" ? row.average.toFixed(1) : "—"}</dd></div>
+          </dl>
+        </details>
+      </li>`;
+    }).join("")
+    : `<li class="leaderboard-empty">${board.status === "loading" ? "Loading public rankings…" : board.status === "ready" ? "No public scores yet. Join the leaderboard and play today's puzzle to post your first score." : "Public rankings are unavailable. You can keep playing."}</li>`;
   renderHeader();
   renderScoreSummary();
 }
@@ -1455,6 +1537,7 @@ function renderEmail() {
   const joining = joinMode === "join";
   const pending = onboarding?.pending;
   const seconds = Math.max(0, Math.ceil((current.resendAt - Date.now()) / 1000));
+  elements.emailDialog.dataset.state = accountProblem ? "error" : accountBusy ? "saving" : sent ? "sent" : current.phase;
   elements.emailTitle.textContent = sent ? "Check your email" : joining ? "Join the leaderboard" : "Sign in";
   elements.emailIntro.textContent = sent ? "Open the confirmation link in this browser to continue." : joining ? "Choose your public name, then confirm your email to finish joining." : "Restore your saved profile, privacy choices, and daily scores.";
   if (active && joining) elements.emailIntro.textContent = "Your email is confirmed. Choose your public name to finish joining.";
@@ -1483,7 +1566,8 @@ function renderAccount() {
   elements.signOut.classList.toggle("is-hidden", !current.userId);
   elements.accountRetry.classList.toggle("is-hidden", !current.userId || !accountProblem);
   renderEmail();
-  elements.accountStatus.textContent = joinFeedback || (accountBusy ? "Finishing account setup…" : "") || current.message || (current.userId ? (accountProfile?.listed ? "Your profile is public." : accountProfile ? "Your scores are private." : "Choose a public name to join the leaderboard.") : "Play as a guest, or join to save daily scores across devices.");
+  elements.accountStatus.dataset.state = accountProblem ? "error" : accountBusy ? "saving" : current.userId ? "ready" : current.phase;
+  elements.accountStatus.textContent = joinFeedback || (accountBusy ? "Finishing account setup…" : "") || current.message || (current.userId ? (accountProfile?.listed ? "Your profile is public." : accountProfile ? "Your scores are private." : "Choose a public name to join the leaderboard.") : "Playing as a guest. Join to save daily scores.");
 }
 
 function showJoin(mode = "join") {
@@ -1512,6 +1596,9 @@ async function finishJoin(revision) {
     joinFeedback = result.status === "joined"
       ? (result.profile.listed ? "You’re joined and ready. Your daily scores are saved; your profile is public." : "You’re joined and ready. Your daily scores are saved; your profile stays private.")
       : "You’re ready. Your existing profile and privacy choices are preserved; today’s eligible game is saved.";
+    if (result.profile.listed && !state.store.readResults().length) {
+      joinFeedback += " Play today's puzzle to post your first score in the rankings.";
+    }
     closeDialog(elements.emailDialog);
     return result;
   } catch (error) {
@@ -1780,6 +1867,25 @@ function initializeAccounts() {
 }
 
 async function init() {
+  elements.mapSearch.addEventListener("input", () => {
+    state.map.resultLimit = 5;
+    renderMapResults();
+  });
+  elements.mapMore.addEventListener("click", () => {
+    const previousCount = elements.mapResults.children.length;
+    state.map.resultLimit += 5;
+    renderMapResults();
+    elements.mapResults.children[previousCount]?.querySelector("button").focus();
+  });
+  elements.mapResults.addEventListener("click", event => {
+    const button = getClosestEventTarget(event, "[data-map-result-id]");
+    if (!button) return;
+    state.map.selectedSchoolId = button.dataset.mapResultId;
+    resetMapView();
+    syncSelectedMapPin();
+  });
+  elements.mapPanel.addEventListener("keydown", handleMapKeydown);
+
 
   elements.modeButtons.forEach((button) => {
     button.addEventListener("click", () => setMode(button.dataset.mode));

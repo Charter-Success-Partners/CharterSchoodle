@@ -6,7 +6,7 @@ test('second_device_restores_unlisted_lifetime_history_and_daily_game',async({pa
  await game.open(); await expect(page.locator('#status-title')).toHaveText('Solved');
  await page.getByRole('button',{name:'Leaderboard',exact:true}).click();
  await expect(page.locator('#score-total')).toHaveText('12');
- await expect(page.locator('#leaderboard-body tr')).toHaveCount(5);
+ await expect(page.locator('#leaderboard-body > .leaderboard-entry')).toHaveCount(5);
  await page.getByRole('button',{name:'Next',exact:true}).click();
  await expect(page.locator('#leaderboard-body')).toContainText('Player 6');
  fixture.assertSafe();
@@ -117,7 +117,7 @@ test('public_rankings_remain_available_after_signout',async({page,game})=>{
  await page.getByRole('button',{name:'Sign out',exact:true}).click();
  await expect(page.getByRole('button',{name:'Join leaderboard',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Leaderboard',exact:true}).click();
- await expect(page.locator('#leaderboard-body tr')).toHaveCount(5);
+ await expect(page.locator('#leaderboard-body > .leaderboard-entry')).toHaveCount(5);
  await page.getByRole('button',{name:'Next',exact:true}).click();
  await expect(page.locator('#leaderboard-body')).toContainText('Player 6'); fixture.assertSafe();
 });
