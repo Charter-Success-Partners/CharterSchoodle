@@ -102,15 +102,44 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
   function acceptSession(current, session, signedOut = false) {
     if (!current.active) return;
     if (!storage.persistent) { update({ phase: 'guest', userId: null, message: STORAGE_MESSAGE }); return; }
-    const id = session?.user?.id;
-    const userId = typeof id === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id) ? id : null;
-    // A delayed initial guest notification must not erase request feedback.
-    if (!userId && !state.userId && !signedOut && ['sending', 'sent', 'error'].includes(state.phase)) return;
-    update({ phase: userId ? 'signed-in' : 'guest', userId, message: '' });
+    const token = typeof session?.access_token === 'string' ? session.access_token : null;
+    if (!token || signedOut) {
+      // Initial guest snapshots can arrive after a newer live session event.
+      if (!signedOut && current.verificationToken) return current.verification;
+      if (!state.userId && !signedOut && ['sending', 'sent', 'error'].includes(state.phase)) return;
+      current.sessionRevision++;
+      current.verificationToken = null;
+      current.verification = Promise.resolve();
+      update({ phase: 'guest', userId: null, message: '' });
+      return current.verification;
+    }
+    if (current.verificationToken === token) return current.verification;
+    const revision = ++current.sessionRevision;
+    current.verificationToken = token;
+    update({ phase: 'guest', userId: null, message: 'Verifying sign-in…' });
+    current.verification = (async () => {
+      try {
+        // Explicit JWT verification bypasses SDK session locks. The auth event
+        // callback never returns this promise or waits for an SDK operation.
+        const { data, error } = await current.client.auth.getUser(token);
+        if (!current.active || revision !== current.sessionRevision) return;
+        const userId = data?.user?.id;
+        if (error || typeof userId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(userId)) throw new Error('Unverified identity');
+        if (!storage.persistent) throw new Error('Unavailable storage');
+        update({ phase: 'signed-in', userId, message: '' });
+      } catch {
+        if (!current.active || revision !== current.sessionRevision) return;
+        deactivate(current);
+        clearStorage();
+        update({ phase: 'guest', userId: null, message: 'Sign-in could not be verified. You can keep playing as a guest.' });
+        await dispose(current);
+      }
+    })();
+    return current.verification;
   }
   async function initialize() {
     if (!enabled || life?.client) return;
-    const current = { active: true, client: null, subscription: null, requests: new Set(), retryAt: null, signoutStorage: null };
+    const current = { active: true, client: null, subscription: null, requests: new Set(), retryAt: null, signoutStorage: null, sessionRevision: 0, verificationToken: null, verification: null };
     life = current;
     const callback = callbackUrl();
     const hash = new URLSearchParams(callback?.hash.slice(1));
@@ -171,13 +200,25 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
         auth: { flowType: 'pkce', detectSessionInUrl: true, persistSession: true, autoRefreshToken: true, storageKey: STORAGE_KEY, storage: scopedStorage },
         global: { fetch: timedFetch },
       });
-      const { data } = current.client.auth.onAuthStateChange((event, session) => acceptSession(current, session, event === 'SIGNED_OUT'));
+      const { data } = current.client.auth.onAuthStateChange((event, session) => {
+        void acceptSession(current, session, event === 'SIGNED_OUT');
+      });
       current.subscription = data.subscription;
       const initialized = await current.client.auth.initialize();
       if (initialized.error) throw initialized.error;
+      const revision = current.sessionRevision;
       const result = await current.client.auth.getSession();
-      if (result.error) throw result.error;
-      acceptSession(current, result.data.session);
+      if (revision === current.sessionRevision) {
+        if (result.error) throw result.error;
+        await acceptSession(current, result.data.session);
+      }
+      // ready includes verification of the latest event, even if another event
+      // replaced the initial storage snapshot while its request was pending.
+      while (current.active) {
+        const pending = current.verification;
+        await pending;
+        if (pending === current.verification) break;
+      }
     } catch {
       if (current.active) {
         deactivate(current);
@@ -209,18 +250,20 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
       update({ phase: 'sending', message: 'Requesting a sign-in link…' });
       await ensureClient();
       const current = life;
-      if (requestEpoch !== epoch || !current?.active || !current.client) return;
+      if (requestEpoch !== epoch || !current?.active || !current.client || state.userId) return;
+      const sessionRevision = current.sessionRevision;
+      const canShowFeedback = () => current.active && sessionRevision === current.sessionRevision && !state.userId;
       current.retryAt = null;
       try {
         const { error } = await current.client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: publicUrl } });
-        if (!current.active) return;
+        if (!canShowFeedback()) return;
         const suppliedSeconds = Number(error?.retryAfter ?? error?.retry_after);
         const resendAt = current.retryAt ?? now() + (Number.isFinite(suppliedSeconds) && suppliedSeconds > 0 ? suppliedSeconds * 1000 : 60000);
         if (error || !storage.persistent) {
           update({ phase: 'error', userId: null, resendAt, message: storage.persistent ? 'Unable to request a sign-in link. Please try again later.' : STORAGE_MESSAGE });
         } else update({ phase: 'sent', userId: null, resendAt, message: 'Sign-in link requested. Check your email and open the link in this browser.' });
       } catch {
-        if (current.active) update({ phase: 'error', userId: null, resendAt: current.retryAt ?? now() + 60000, message: storage.persistent ? 'Unable to request a sign-in link. Please try again later.' : STORAGE_MESSAGE });
+        if (canShowFeedback()) update({ phase: 'error', userId: null, resendAt: current.retryAt ?? now() + 60000, message: storage.persistent ? 'Unable to request a sign-in link. Please try again later.' : STORAGE_MESSAGE });
       }
     },
     async signOut() {

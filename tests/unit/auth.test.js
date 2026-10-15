@@ -12,13 +12,14 @@ function storage() {
   const backing = { getItem: (k) => values.get(k) ?? null, setItem: (k, v) => values.set(k, v), removeItem: (k) => values.delete(k) };
   return { backing, kv: createSafeStorage(() => backing) };
 }
-function fixture({ initializeError = null, initialSession = null, sendError = null, signoutError = null } = {}) {
+function fixture({ initializeError = null, initialSession = null, sendError = null, signoutError = null, getUser = async () => ({ data: { user: session.user }, error: null }) } = {}) {
   const { kv, backing } = storage();
   const calls = { loads: 0, sends: [], disposed: 0, unsubscribed: 0, stopped: 0, options: null };
   let callback;
   const client = { auth: {
     initialize: async () => ({ error: initializeError }),
     getSession: async () => ({ data: { session: initialSession }, error: null }),
+    getUser,
     onAuthStateChange(fn) { callback = fn; return { data: { subscription: { unsubscribe() { calls.unsubscribed++; } } } }; },
     signInWithOtp: async (value) => { calls.sends.push(value); return { data: { user: null, session: null }, error: sendError }; },
     signOut: async () => ({ error: signoutError }),
@@ -275,6 +276,7 @@ test('signout_attempts_remote_revocation_with_the_old_session_only', async () =>
   globalThis.fetch = async (input) => {
     const url = new URL(input);
     requests.push(`${url.pathname}${url.search}`);
+    if (url.pathname === '/auth/v1/user') return new Response(JSON.stringify({ ...session.user, aud: 'authenticated', role: 'authenticated' }), { status: 200 });
     return new Response(JSON.stringify({ message: 'fixture outage' }), { status: 403 });
   };
   try {
@@ -282,9 +284,115 @@ test('signout_attempts_remote_revocation_with_the_old_session_only', async () =>
     await auth.ready;
     assert.equal(auth.state.userId, session.user.id);
     await auth.signOut();
-    assert.deepEqual(requests, ['/auth/v1/logout?scope=local']);
+    assert.deepEqual(requests, ['/auth/v1/user', '/auth/v1/logout?scope=local']);
     assert.equal(kv.getItem(key), null);
     assert.equal(auth.state.userId, null);
     assert.equal(auth.getClient(), null);
   } finally { globalThis.fetch = oldFetch; }
+});
+
+
+// Review regressions: cached identity is untrusted, async verification belongs to
+// its client/session event, and an OTP response cannot erase a newer sign-in.
+const settle = () => new Promise((resolve) => setImmediate(resolve));
+function deferred() {
+  let resolve, reject;
+  const promise = new Promise((yes, no) => { resolve = yes; reject = no; });
+  return { promise, resolve, reject };
+}
+test('fabricated_cached_session_never_becomes_identity_without_server_verification', async () => {
+  const { kv } = storage();
+  const expires = Math.floor(Date.now() / 1000) + 3600;
+  const jwt = `e30.${Buffer.from(JSON.stringify({ sub: session.user.id, exp: expires, role: 'authenticated' })).toString('base64url')}.fabricated`;
+  kv.setItem(key, JSON.stringify({ ...session, access_token: jwt, expires_at: expires, expires_in: 3600, token_type: 'bearer' }));
+  const oldFetch = globalThis.fetch;
+  const requests = [];
+  const seen = [];
+  globalThis.fetch = async (input) => {
+    requests.push(new URL(input).pathname);
+    return new Response(JSON.stringify({ message: 'Invalid fixture JWT', code: 'bad_jwt' }), { status: 401 });
+  };
+  const auth = createAuthController({ config, storage: kv, loadClient: async () => createClient });
+  auth.subscribe((state) => seen.push(state));
+  try {
+    await auth.ready;
+    assert.equal(auth.state.userId, null);
+    assert.equal(auth.state.phase, 'guest');
+    assert.deepEqual(requests, ['/auth/v1/user']);
+    assert.equal(seen.some((state) => state.phase === 'signed-in'), false);
+  } finally { await auth.signOut(); globalThis.fetch = oldFetch; }
+});
+test('server_verified_identity_overrides_cached_user_data', async () => {
+  const verifiedId = '00000000-0000-0000-0000-000000000002';
+  const f = fixture({ initialSession: session, getUser: async (token) => {
+    assert.equal(token, 'private-access');
+    return { data: { user: { id: verifiedId } }, error: null };
+  } });
+  await f.auth.ready;
+  assert.equal(f.auth.state.userId, verifiedId);
+  assert.equal(f.auth.state.phase, 'signed-in');
+});
+test('identity_verification_failures_retain_guest_mode', async () => {
+  for (const getUser of [
+    async () => ({ data: { user: null }, error: new Error('invalid session') }),
+    async () => { throw new Error('network unavailable'); },
+    async () => ({ data: { user: { id: 'invalid' } }, error: null }),
+  ]) {
+    const f = fixture({ initialSession: session, getUser });
+    await f.auth.ready;
+    assert.equal(f.auth.state.userId, null);
+    assert.equal(f.auth.state.phase, 'guest');
+    assert.match(f.auth.state.message, /guest/i);
+  }
+});
+test('verification_completion_cannot_authenticate_after_signout_or_client_replacement', async () => {
+  const pending = deferred();
+  const f = fixture({ getUser: () => pending.promise });
+  await f.auth.ready;
+  f.emit('SIGNED_IN', session);
+  assert.equal(f.auth.state.userId, null);
+  await f.auth.signOut();
+  await f.auth.sendLink('person@example.com');
+  assert.equal(f.auth.state.phase, 'sent');
+  pending.resolve({ data: { user: session.user }, error: null });
+  await settle();
+  assert.equal(f.auth.state.userId, null);
+  assert.equal(f.auth.state.phase, 'sent');
+});
+test('newer_session_event_wins_over_late_verification_success_or_failure', async () => {
+  for (const oldResult of [{ data: { user: session.user }, error: null }, { data: { user: null }, error: new Error('old failure') }]) {
+    const first = deferred(), second = deferred();
+    const other = { ...session, user: { id: '00000000-0000-0000-0000-000000000002' }, access_token: 'other-access' };
+    const f = fixture({ getUser: (token) => token === 'private-access' ? first.promise : second.promise });
+    await f.auth.ready;
+    f.emit('SIGNED_IN', session);
+    assert.equal(f.auth.state.userId, null);
+    f.emit('SIGNED_IN', other);
+    second.resolve({ data: { user: other.user }, error: null });
+    await settle();
+    assert.equal(f.auth.state.userId, other.user.id);
+    first.resolve(oldResult);
+    await settle();
+    assert.equal(f.auth.state.userId, other.user.id);
+    assert.equal(f.auth.state.phase, 'signed-in');
+  }
+});
+test('email_success_error_and_throw_cannot_erase_a_newly_verified_identity', async () => {
+  for (const result of ['success', 'error', 'throw']) {
+    const pending = deferred();
+    const f = fixture();
+    await f.auth.ready;
+    f.auth.getClient().auth.signInWithOtp = () => pending.promise;
+    const sent = f.auth.sendLink('person@example.com');
+    await settle();
+    f.emit('SIGNED_IN', session);
+    await settle();
+    assert.equal(f.auth.state.userId, session.user.id);
+    assert.equal(f.auth.state.phase, 'signed-in');
+    if (result === 'throw') pending.reject(new Error('late request failure'));
+    else pending.resolve({ data: { user: null, session: null }, error: result === 'error' ? new Error('late rejection') : null });
+    await sent;
+    assert.equal(f.auth.state.userId, session.user.id);
+    assert.equal(f.auth.state.phase, 'signed-in');
+  }
 });
