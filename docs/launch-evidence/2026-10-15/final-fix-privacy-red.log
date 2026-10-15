@@ -1,0 +1,67 @@
+
+> charterschoodle@1.0.0 test:browser
+> playwright test tests/browser/accounts.spec.js --grep latest_hide_submission
+
+
+Running 1 test using 1 worker
+
+  ✘  1 tests/browser/accounts.spec.js:189:1 › latest_hide_submission_wins_over_pending_public_consent_after_reopening (6.0s)
+
+
+  1) tests/browser/accounts.spec.js:189:1 › latest_hide_submission_wins_over_pending_public_consent_after_reopening
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#account-status')
+    Expected substring: "privately"
+    Received string:    "Daily scores saved. Your profile is public."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "soft toContainText" locator('#account-status') with timeout 5000ms
+      - waiting for locator('#account-status')
+        14 × locator resolved to <p role="status" aria-live="polite" id="account-status">Daily scores saved. Your profile is public.</p>
+           - unexpected value "Daily scores saved. Your profile is public."
+
+
+      210 |   await expect.poll(() => fixture.state.sent.filter(x => x.path.endsWith('profiles_v2') && x.method === 'POST').length).toBe(2);
+      211 |   await expect(page.locator('#profile-dialog')).toBeHidden();
+    > 212 |   await expect.soft(page.locator('#account-status')).toContainText('privately');
+          |                                                      ^
+      213 |   expect.soft(fixture.state.profiles[0].listed).toBe(false);
+      214 |   expect(postsBeforeRelease).toBe(1);
+      215 |   await edit.click(); await expect(listed).not.toBeChecked();
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/accounts.spec.js:212:54
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      211 |   await expect(page.locator('#profile-dialog')).toBeHidden();
+      212 |   await expect.soft(page.locator('#account-status')).toContainText('privately');
+    > 213 |   expect.soft(fixture.state.profiles[0].listed).toBe(false);
+          |                                                 ^
+      214 |   expect(postsBeforeRelease).toBe(1);
+      215 |   await edit.click(); await expect(listed).not.toBeChecked();
+      216 |   fixture.assertSafe();
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/accounts.spec.js:213:49
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      212 |   await expect.soft(page.locator('#account-status')).toContainText('privately');
+      213 |   expect.soft(fixture.state.profiles[0].listed).toBe(false);
+    > 214 |   expect(postsBeforeRelease).toBe(1);
+          |                              ^
+      215 |   await edit.click(); await expect(listed).not.toBeChecked();
+      216 |   fixture.assertSafe();
+      217 | });
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/accounts.spec.js:214:30
+
+    Error Context: test-results/accounts-latest-hide-submi-28773-lic-consent-after-reopening/error-context.md
+
+  1 failed
+    tests/browser/accounts.spec.js:189:1 › latest_hide_submission_wins_over_pending_public_consent_after_reopening

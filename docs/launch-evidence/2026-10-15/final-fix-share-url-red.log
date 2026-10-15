@@ -1,0 +1,121 @@
+TAP version 13
+# Subtest: NC daily date changes at local midnight rather than UTC midnight
+ok 1 - NC daily date changes at local midnight rather than UTC midnight
+  ---
+  duration_ms: 2.94919
+  type: 'test'
+  ...
+# Subtest: NC dates survive both DST transitions and shifted midnight offsets
+ok 2 - NC dates survive both DST transitions and shifted midnight offsets
+  ---
+  duration_ms: 0.498192
+  type: 'test'
+  ...
+# Subtest: archive contains sorted distinct real ISO dates strictly before today
+ok 3 - archive contains sorted distinct real ISO dates strictly before today
+  ---
+  duration_ms: 2.137805
+  type: 'test'
+  ...
+# Subtest: progress rejects malformed, unknown, duplicate, seventh, and post-answer guesses
+ok 4 - progress rejects malformed, unknown, duplicate, seventh, and post-answer guesses
+  ---
+  duration_ms: 0.411732
+  type: 'test'
+  ...
+# Subtest: progress derives correctness and completion from school IDs instead of stored flags
+ok 5 - progress derives correctness and completion from school IDs instead of stored flags
+  ---
+  duration_ms: 0.715006
+  type: 'test'
+  ...
+# Subtest: progress normalizes revealed clues while preserving a valid saved reveal
+ok 6 - progress normalizes revealed clues while preserving a valid saved reveal
+  ---
+  duration_ms: 0.260131
+  type: 'test'
+  ...
+# Subtest: summary recomputes six-to-one solved points and the solved-only average
+ok 7 - summary recomputes six-to-one solved points and the solved-only average
+  ---
+  duration_ms: 1.796996
+  type: 'test'
+  ...
+# Subtest: summary has no average or division by zero without solved games
+ok 8 - summary has no average or division by zero without solved games
+  ---
+  duration_ms: 0.249163
+  type: 'test'
+  ...
+# Subtest: stale and missed calendar dates break current streaks while retaining best runs
+ok 9 - stale and missed calendar dates break current streaks while retaining best runs
+  ---
+  duration_ms: 0.558981
+  type: 'test'
+  ...
+# Subtest: unfinished current day preserves yesterday wins while unfinished prior day breaks them
+ok 10 - unfinished current day preserves yesterday wins while unfinished prior day breaks them
+  ---
+  duration_ms: 0.577511
+  type: 'test'
+  ...
+# Subtest: streaks cross DST, month, year, and leap-day boundaries as calendar days
+ok 11 - streaks cross DST, month, year, and leap-day boundaries as calendar days
+  ---
+  duration_ms: 0.367035
+  type: 'test'
+  ...
+# Subtest: summary keeps the latest duplicate record and excludes impossible or future dates
+ok 12 - summary keeps the latest duplicate record and excludes impossible or future dates
+  ---
+  duration_ms: 0.209221
+  type: 'test'
+  ...
+# Subtest: daily share has six spoiler-free cells and removes URL authentication parameters
+ok 13 - daily share has six spoiler-free cells and removes URL authentication parameters
+  ---
+  duration_ms: 0.396278
+  type: 'test'
+  ...
+# Subtest: archive loss share uses Archive and X/6 with six wrong cells
+ok 14 - archive loss share uses Archive and X/6 with six wrong cells
+  ---
+  duration_ms: 0.261345
+  type: 'test'
+  ...
+# Subtest: share URL excludes embedded account credentials as well as callback data
+ok 15 - share URL excludes embedded account credentials as well as callback data
+  ---
+  duration_ms: 0.226013
+  type: 'test'
+  ...
+# Subtest: sharing_uses_canonical_fallback_for_missing_or_invalid_configuration
+not ok 16 - sharing_uses_canonical_fallback_for_missing_or_invalid_configuration
+  ---
+  duration_ms: 1.629365
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/game.test.js:148:1'
+  failureType: 'testCodeFailure'
+  error: 'Invalid URL'
+  code: 'ERR_INVALID_URL'
+  name: 'TypeError'
+  stack: |-
+    new URL (node:internal/url:818:25)
+    formatShareResult (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/src/game.js:111:15)
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/game.test.js:150:18)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 15
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 140.616455

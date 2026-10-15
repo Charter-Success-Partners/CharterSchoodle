@@ -8,15 +8,31 @@
       name="description"
       content="A daily North Carolina charter-school guessing game."
     />
+    <link rel="canonical" href="https://charterschoodle.chartersuccesspartners.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CharterSchoodle" />
+    <meta property="og:title" content="CharterSchoodle" />
+    <meta property="og:description" content="Six clues. Six guesses. One North Carolina charter school." />
+    <meta property="og:url" content="https://charterschoodle.chartersuccesspartners.com/" />
+    <meta property="og:image" content="https://charterschoodle.chartersuccesspartners.com/assets/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CharterSchoodle by Charter Success Partners. Six clues. Six guesses. One North Carolina charter school." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CharterSchoodle" />
+    <meta name="twitter:description" content="Six clues. Six guesses. One North Carolina charter school." />
+    <meta name="twitter:image" content="https://charterschoodle.chartersuccesspartners.com/assets/social-card.png" />
+    <meta name="twitter:image:alt" content="CharterSchoodle by Charter Success Partners. Six clues. Six guesses. One North Carolina charter school." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=20260612-map-zoom-favicon" />
-    <link rel="apple-touch-icon" href="./favicon.png?v=20260612-map-zoom-favicon" />
-    <link rel="stylesheet" href="./style.css?v=20260612-map-zoom-favicon" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=20261015-public-launch" />
+    <link rel="apple-touch-icon" href="./favicon.png?v=20261015-public-launch" />
+    <link rel="stylesheet" href="./style.css?v=20261015-public-launch" />
   </head>
   <body>
     <div class="app-shell">
@@ -24,7 +40,7 @@
         <div class="hero__brand">
           <img
             class="hero__logo"
-            src="https://static.wixstatic.com/media/dca5c6_6f4bdcc4fe50471f97394f67d340aa4e~mv2.png/v1/crop/x_0,y_0,w_434,h_243/fill/w_214,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dca5c6_6f4bdcc4fe50471f97394f67d340aa4e~mv2.png"
+            src="./assets/csp-logo-2026.png"
             alt="Charter Success Partners logo"
           />
           <div>
@@ -54,15 +70,18 @@
               class="help-button"
               type="button"
               aria-label="How to play"
-              aria-describedby="how-to-play"
+              aria-controls="how-to-play"
+              aria-haspopup="dialog"
             >
               ?
             </button>
-            <div id="how-to-play" class="help-popover__panel" role="tooltip">
+            <dialog id="how-to-play" class="help-dialog" aria-labelledby="help-title">
+              <h2 id="help-title">How to play</h2>
+              <button id="help-close-button" class="secondary-button" type="button" autofocus>Close help</button>
               <div class="help-section-title">How it works</div>
               <ul class="rules-list">
                 <li>Each puzzle has one NC charter school answer.</li>
-                <li>Each row shows that round's clue and guess.</li>
+                <li>Each round shows its clue, guess, and labeled feedback.</li>
                 <li>Already-guessed schools are removed from the list.</li>
                 <li>Icons compare size, grades, and direction.</li>
               </ul>
@@ -93,11 +112,17 @@
                   <div class="key-row"><span class="board-icon board-icon--neutral">◎</span><span>Same location</span></div>
                 </div>
               </div>
-            </div>
+            </dialog>
           </div>
         </div>
       </header>
 
+      <div class="account-controls" aria-label="Leaderboard account">
+        <button id="account-button" class="secondary-button" type="button" aria-haspopup="dialog">Join leaderboard</button>
+        <button id="sign-out" class="secondary-button is-hidden" type="button">Sign out</button>
+        <button id="account-retry" class="secondary-button is-hidden" type="button">Retry account sync</button>
+        <p id="account-status" role="status" aria-live="polite"></p>
+      </div>
       <main class="layout">
         <section class="panel panel--primary">
           <div class="panel__header">
@@ -110,13 +135,6 @@
                 <h3>Your Score</h3>
                 <p id="score-status">Daily results only</p>
               </div>
-              <form id="player-form" class="player-form player-form--compact">
-                <label for="player-name">Name</label>
-                <input id="player-name" type="text" maxlength="60" autocomplete="name" required />
-                <label for="player-school">School</label>
-                <input id="player-school" type="text" maxlength="80" autocomplete="organization" required />
-                <button class="secondary-button" type="submit">Save</button>
-              </form>
               <div class="guess-counter">
                 <span id="guess-counter">0 / 6</span>
               </div>
@@ -128,7 +146,12 @@
             <input id="archive-date" type="date" />
           </div>
 
-          <div class="status-banner">
+          <div id="new-daily-notice" class="status-banner is-hidden" role="status">
+            <p>A new daily puzzle is available. Your current puzzle stays open until you switch.</p>
+            <button id="new-daily-button" class="secondary-button" type="button">Play today’s puzzle</button>
+          </div>
+
+          <div class="status-banner" role="status">
             <div>
               <strong id="status-title">Welcome</strong>
               <p id="status-message">
@@ -136,6 +159,10 @@
               </p>
             </div>
           </div>
+
+          <button id="result-button" class="secondary-button is-hidden" type="button" aria-haspopup="dialog">View result</button>
+
+          <button id="retry-data" class="secondary-button is-hidden" type="button">Retry</button>
 
           <section id="leaderboard-panel" class="leaderboard-panel is-hidden">
             <div class="section-heading">
@@ -197,7 +224,8 @@
                 Next
               </button>
             </div>
-            <p id="leaderboard-sync-status" class="leaderboard-sync-status"></p>
+            <p id="leaderboard-sync-status" class="leaderboard-sync-status" role="status" aria-live="polite"></p>
+            <button id="leaderboard-retry" class="secondary-button is-hidden" type="button">Retry rankings</button>
           </section>
 
           <section id="map-panel" class="map-panel is-hidden">
@@ -213,22 +241,7 @@
               <h3>Board</h3>
               <p id="clue-progress">1 clue visible</p>
             </div>
-            <div class="board-wrap">
-              <table class="game-board">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Clue</th>
-                    <th>Guess</th>
-                    <th title="Correct">✓</th>
-                    <th title="Enrollment">Size</th>
-                    <th title="Grades">Grd</th>
-                    <th title="Direction">Dir</th>
-                  </tr>
-                </thead>
-                <tbody id="board-body"></tbody>
-              </table>
-            </div>
+            <ol id="board-rounds" class="board-rounds" aria-label="Puzzle rounds"></ol>
           </section>
 
           <form id="guess-form" class="guess-form">
@@ -238,50 +251,80 @@
                 id="school-guess"
                 name="school-guess"
                 type="text"
+                disabled
                 autocomplete="off"
                 placeholder="Start typing an official school name"
                 aria-describedby="guess-help"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-controls="autocomplete-list"
+                aria-expanded="false"
               />
-              <button class="primary-button" type="submit">Submit</button>
+              <button class="primary-button" type="submit" disabled>Submit</button>
             </div>
             <p id="guess-help" class="field-help">
               Guesses must be selected from the remaining official school list.
             </p>
-            <ul id="autocomplete-list" class="autocomplete-list"></ul>
+            <ul id="autocomplete-list" class="autocomplete-list is-hidden" role="listbox" aria-label="Matching schools"></ul>
+            <p id="suggestion-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
           </form>
         </section>
       </main>
     </div>
 
-    <div id="profile-overlay" class="profile-overlay is-hidden" aria-hidden="true">
-      <div class="profile-overlay__backdrop"></div>
-      <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-title">
-        <p class="eyebrow">Leaderboard Profile</p>
-        <h2 id="profile-title">Your Score</h2>
-        <form id="profile-modal-form" class="player-form">
-          <label for="profile-name">Name</label>
-          <input id="profile-name" type="text" maxlength="60" autocomplete="name" required />
-          <label for="profile-school">School</label>
-          <input id="profile-school" type="text" maxlength="80" autocomplete="organization" required />
-          <p id="profile-modal-status" class="profile-modal__status"></p>
-          <button class="primary-button" type="submit">Save</button>
-        </form>
-      </div>
-    </div>
+    <dialog id="email-dialog" class="account-dialog" aria-labelledby="email-title">
+      <h2 id="email-title">Join the leaderboard</h2>
+      <p>Sign in by email to keep your daily scores across devices. You choose whether your profile is public.</p>
+      <form id="email-form" class="account-form">
+        <label for="account-email">Email address</label>
+        <input id="account-email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-help" autofocus />
+        <p id="email-help" class="field-help">Open the sign-in link in this browser. Your email is never shown on the leaderboard.</p>
+        <button id="email-submit" class="primary-button" type="submit">Send sign-in link</button>
+      </form>
+      <p id="email-status" role="status" aria-live="polite"></p>
+      <button id="email-close" class="secondary-button" type="button">Close sign-in</button>
+    </dialog>
 
-    <div id="win-overlay" class="win-overlay is-hidden" aria-hidden="true">
-      <div class="win-overlay__backdrop"></div>
-      <div class="win-modal" role="dialog" aria-modal="true" aria-labelledby="win-title">
-        <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
-        <p class="eyebrow">Puzzle Complete</p>
-        <h2 id="win-title">Congrats!</h2>
-        <p id="win-answer" class="win-answer"></p>
-        <p id="win-summary" class="win-summary"></p>
-        <button id="win-close-button" class="primary-button" type="button">Keep Browsing</button>
+    <dialog id="profile-dialog" class="account-dialog" aria-labelledby="profile-title">
+      <h2 id="profile-title">Your leaderboard profile</h2>
+      <form id="profile-form" class="account-form">
+        <label for="profile-name">Display name</label>
+        <input id="profile-name" type="text" required maxlength="60" autocomplete="nickname" aria-describedby="profile-name-help" autofocus />
+        <p id="profile-name-help" class="field-help">Use 1–60 characters. Other players can use the same name.</p>
+        <label for="profile-school">School or organization (optional)</label>
+        <input id="profile-school" type="text" maxlength="80" autocomplete="organization" />
+        <label class="account-choice"><input id="profile-listed" type="checkbox" /> <span>Show my profile and daily scores on the public leaderboard</span></label>
+        <p class="field-help">Leave unchecked to save scores privately. Uncheck later to hide your entry. Your email and guesses stay private.</p>
+        <label class="account-choice"><input id="profile-include-today" type="checkbox" /> <span>Include today’s guest result from this browser</span></label>
+        <p class="field-help">Older guest results stay in this browser. An existing account result for today takes priority.</p>
+        <button id="profile-submit" class="primary-button" type="submit">Save profile</button>
+      </form>
+      <p id="profile-status" role="status" aria-live="polite"></p>
+      <button id="profile-close" class="secondary-button" type="button">Close profile</button>
+    </dialog>
+
+    <dialog id="win-overlay" class="win-modal" aria-labelledby="win-title">
+      <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+      <h2 id="win-title">Congrats!</h2>
+      <p id="win-answer" class="win-answer"></p>
+      <p id="win-summary" class="win-summary"></p>
+      <p class="result-share-help">Share your score without revealing the answer.</p>
+      <div class="result-actions">
+        <button id="share-result" class="primary-button" type="button">Share result</button>
+        <button id="copy-result" class="secondary-button" type="button">Copy result</button>
       </div>
-    </div>
+      <p id="share-status" class="share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="share-fallback" class="share-fallback is-hidden">
+        <label for="share-text">Result text</label>
+        <textarea id="share-text" rows="6" readonly spellcheck="false"></textarea>
+      </div>
+      <div class="result-actions">
+        <button id="result-archive" class="secondary-button" type="button">Past Puzzles</button>
+        <button id="win-close-button" class="primary-button" type="button" autofocus>Keep Browsing</button>
+      </div>
+    </dialog>
 
     <script src="./src/supabase-config.js"></script>
-    <script type="module" src="./src/app.js?v=20260612-map-zoom-favicon"></script>
+    <script type="module" src="./src/app.js?v=20261015-public-launch"></script>
   </body>
 </html>

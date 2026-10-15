@@ -1,0 +1,197 @@
+{
+  "observed_at": "2026-10-15T17:38:44.734737+00:00",
+  "status": "passed",
+  "sessions": "Two unique operator-created synthetic test accounts; password login plus verified getUser; no email sent",
+  "records": "Test profiles/results retained unlisted; public leaderboard empty",
+  "scope": "Real Auth and REST API ownership/consent smoke; browser queue switching and SMTP completion remain deployed checks",
+  "checks": [
+    {
+      "check": "A verified normal Auth session",
+      "passed": true
+    },
+    {
+      "check": "B verified normal Auth session",
+      "passed": true
+    },
+    {
+      "check": "A own private profile insert",
+      "passed": true
+    },
+    {
+      "check": "A profile reads restricted to owner",
+      "passed": true
+    },
+    {
+      "check": "B own private profile insert",
+      "passed": true
+    },
+    {
+      "check": "B profile reads restricted to owner",
+      "passed": true
+    },
+    {
+      "check": "A cannot read other profile",
+      "passed": true
+    },
+    {
+      "check": "A cannot update other profile",
+      "passed": true
+    },
+    {
+      "check": "A cannot insert as other owner",
+      "passed": true
+    },
+    {
+      "check": "B cannot read other profile",
+      "passed": true
+    },
+    {
+      "check": "B cannot update other profile",
+      "passed": true
+    },
+    {
+      "check": "B cannot insert as other owner",
+      "passed": true
+    },
+    {
+      "check": "A own unfinished result insert",
+      "passed": true
+    },
+    {
+      "check": "unfinished guess prefix is immutable",
+      "passed": true
+    },
+    {
+      "check": "A can finish own result with server-derived score",
+      "passed": true
+    },
+    {
+      "check": "terminal retry preserves result and timestamps",
+      "passed": true
+    },
+    {
+      "check": "terminal result cannot be rewritten",
+      "passed": true
+    },
+    {
+      "check": "result user_id is immutable",
+      "passed": true
+    },
+    {
+      "check": "result puzzle_date is immutable",
+      "passed": true
+    },
+    {
+      "check": "result answer_school_id is immutable",
+      "passed": true
+    },
+    {
+      "check": "profile public identity is immutable",
+      "passed": true
+    },
+    {
+      "check": "B cannot read A result",
+      "passed": true
+    },
+    {
+      "check": "B cannot update A result",
+      "passed": true
+    },
+    {
+      "check": "B cannot insert result as A",
+      "passed": true
+    },
+    {
+      "check": "A result unchanged by forbidden writes",
+      "passed": true
+    },
+    {
+      "check": "B can save own loss",
+      "passed": true
+    },
+    {
+      "check": "A cannot read B history",
+      "passed": true
+    },
+    {
+      "check": "Anonymous legacy insert denied",
+      "passed": true
+    },
+    {
+      "check": "Anonymous legacy update denied",
+      "passed": true
+    },
+    {
+      "check": "A legacy insert denied",
+      "passed": true
+    },
+    {
+      "check": "A legacy update denied",
+      "passed": true
+    },
+    {
+      "check": "B legacy insert denied",
+      "passed": true
+    },
+    {
+      "check": "B legacy update denied",
+      "passed": true
+    },
+    {
+      "check": "Anonymous raw insert denied: charterschoodle_profiles_v2",
+      "passed": true
+    },
+    {
+      "check": "Anonymous raw insert denied: charterschoodle_results_v2",
+      "passed": true
+    },
+    {
+      "check": "unlisted records excluded from public ranking",
+      "passed": true
+    },
+    {
+      "check": "explicit public opt-in succeeds",
+      "passed": true
+    },
+    {
+      "check": "points public aggregate exposes only approved fields",
+      "passed": true
+    },
+    {
+      "check": "winStreak public aggregate exposes only approved fields",
+      "passed": true
+    },
+    {
+      "check": "attemptStreak public aggregate exposes only approved fields",
+      "passed": true
+    },
+    {
+      "check": "public second page is bounded",
+      "passed": true
+    },
+    {
+      "check": "hide removes public entry",
+      "passed": true
+    },
+    {
+      "check": "hide preserves private history",
+      "passed": true
+    },
+    {
+      "check": "A sign-out succeeds",
+      "passed": true
+    },
+    {
+      "check": "B sign-out succeeds",
+      "passed": true
+    },
+    {
+      "check": "Anonymous raw update denied: charterschoodle_profiles_v2",
+      "passed": true
+    },
+    {
+      "check": "Anonymous raw update denied: charterschoodle_results_v2",
+      "passed": true
+    }
+  ]
+}

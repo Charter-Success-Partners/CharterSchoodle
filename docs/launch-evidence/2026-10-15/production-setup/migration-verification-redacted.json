@@ -1,0 +1,106 @@
+{
+  "rls": {
+    "charterschoodle_results": true,
+    "charterschoodle_results_v2": true,
+    "charterschoodle_profiles_v2": true,
+    "charterschoodle_settings_v2": true
+  },
+  "policies": [
+    {
+      "name": "owner_select",
+      "check": null,
+      "roles": [
+        "authenticated"
+      ],
+      "table": "charterschoodle_profiles_v2",
+      "using": "(auth.uid() = user_id)",
+      "command": "SELECT"
+    },
+    {
+      "name": "owner_insert",
+      "check": "(auth.uid() = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "table": "charterschoodle_profiles_v2",
+      "using": null,
+      "command": "INSERT"
+    },
+    {
+      "name": "owner_update",
+      "check": "(auth.uid() = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "table": "charterschoodle_profiles_v2",
+      "using": "(auth.uid() = user_id)",
+      "command": "UPDATE"
+    },
+    {
+      "name": "owner_select",
+      "check": null,
+      "roles": [
+        "authenticated"
+      ],
+      "table": "charterschoodle_results_v2",
+      "using": "(auth.uid() = user_id)",
+      "command": "SELECT"
+    },
+    {
+      "name": "owner_insert",
+      "check": "(auth.uid() = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "table": "charterschoodle_results_v2",
+      "using": null,
+      "command": "INSERT"
+    },
+    {
+      "name": "owner_update",
+      "check": "(auth.uid() = user_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "table": "charterschoodle_results_v2",
+      "using": "(auth.uid() = user_id)",
+      "command": "UPDATE"
+    }
+  ],
+  "cutover_date": "2026-10-15",
+  "legacy_count": 67,
+  "result_count": 0,
+  "legacy_access": [
+    {
+      "role": "authenticated",
+      "insert": false,
+      "select": false,
+      "update": false,
+      "column_insert": false,
+      "column_select": false,
+      "column_update": false
+    },
+    {
+      "role": "anon",
+      "insert": false,
+      "select": false,
+      "update": false,
+      "column_insert": false,
+      "column_select": false,
+      "column_update": false
+    }
+  ],
+  "profile_count": 0,
+  "public_aggregate": {
+    "config": [
+      "search_path=\"\""
+    ],
+    "anon_execute": true,
+    "security_definer": true,
+    "authenticated_execute": true
+  },
+  "project_ref": "psashnygmlwkuvblbpzk",
+  "observed_at": "2026-10-15T17:28:46.721794+00:00",
+  "migration_sha256": "d11986d6975e6157c654e60463bd8197bfe96c50fe9e38f3305779c8a60f6ecb",
+  "status": "passed"
+}

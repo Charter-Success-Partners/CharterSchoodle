@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-15T17:27:49.738Z",
+  "restoration": "passed",
+  "restored_rows": 67,
+  "row_contents": "exact match",
+  "restored_policies": 3,
+  "reviewed_migration_on_restored_schema": "passed",
+  "new_table_counts": {
+    "profiles": 0,
+    "results": 0
+  },
+  "legacy_rows_after_migration": "exact match",
+  "legacy_anonymous_access_after_migration": "denied",
+  "migration_sha256": "d11986d6975e6157c654e60463bd8197bfe96c50fe9e38f3305779c8a60f6ecb"
+}

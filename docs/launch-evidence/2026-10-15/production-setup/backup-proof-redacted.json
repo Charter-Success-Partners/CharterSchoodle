@@ -1,0 +1,11 @@
+{
+  "project_ref": "psashnygmlwkuvblbpzk",
+  "observed_at": "2026-10-15T17:27:37.305846+00:00",
+  "legacy_row_count": 67,
+  "v2_tables_preexisting": false,
+  "scope": "legacy application table only; Auth is not changed by the migration",
+  "sha256": {
+    "before-database-snapshot.json": "c62925449f2b92fd27c18478142c43e58a6a7a46d2c9568c32bbd63c96603668",
+    "before-legacy-restore.sql": "ce2c33356070b4d35121414fa9d0de55326c693a8d117f1ca6451ec5453eaf60"
+  }
+}

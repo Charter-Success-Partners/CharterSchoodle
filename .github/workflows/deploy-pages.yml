@@ -2,36 +2,47 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Exact revision to validate and deploy
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Only the reusable pipeline takes this lock; its caller must not take it too.
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout requested revision
         uses: actions/checkout@v4
-
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Validate and stage public assets
+        run: |
+          npm ci
+          npm run vendor:check
+          npm test
+          npm run stage
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Stage static site
-        run: |
-          mkdir -p _site/src _site/data
-          cp index.html style.css favicon.png .nojekyll _site/
-          cp -R src/. _site/src/
-          cp -R data/. _site/data/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

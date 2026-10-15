@@ -1,0 +1,226 @@
+TAP version 13
+# Subtest: NC daily date changes at local midnight rather than UTC midnight
+ok 1 - NC daily date changes at local midnight rather than UTC midnight
+  ---
+  duration_ms: 3.674703
+  type: 'test'
+  ...
+# Subtest: NC dates survive both DST transitions and shifted midnight offsets
+ok 2 - NC dates survive both DST transitions and shifted midnight offsets
+  ---
+  duration_ms: 0.468214
+  type: 'test'
+  ...
+# Subtest: archive contains sorted distinct real ISO dates strictly before today
+ok 3 - archive contains sorted distinct real ISO dates strictly before today
+  ---
+  duration_ms: 1.565408
+  type: 'test'
+  ...
+# Subtest: progress rejects malformed, unknown, duplicate, seventh, and post-answer guesses
+ok 4 - progress rejects malformed, unknown, duplicate, seventh, and post-answer guesses
+  ---
+  duration_ms: 0.372416
+  type: 'test'
+  ...
+# Subtest: progress derives correctness and completion from school IDs instead of stored flags
+ok 5 - progress derives correctness and completion from school IDs instead of stored flags
+  ---
+  duration_ms: 0.457266
+  type: 'test'
+  ...
+# Subtest: progress normalizes revealed clues while preserving a valid saved reveal
+ok 6 - progress normalizes revealed clues while preserving a valid saved reveal
+  ---
+  duration_ms: 0.294307
+  type: 'test'
+  ...
+# Subtest: summary recomputes six-to-one solved points and the solved-only average
+ok 7 - summary recomputes six-to-one solved points and the solved-only average
+  ---
+  duration_ms: 1.752548
+  type: 'test'
+  ...
+# Subtest: summary has no average or division by zero without solved games
+ok 8 - summary has no average or division by zero without solved games
+  ---
+  duration_ms: 0.34451
+  type: 'test'
+  ...
+# Subtest: stale and missed calendar dates break current streaks while retaining best runs
+ok 9 - stale and missed calendar dates break current streaks while retaining best runs
+  ---
+  duration_ms: 0.525374
+  type: 'test'
+  ...
+# Subtest: unfinished current day preserves yesterday wins while unfinished prior day breaks them
+ok 10 - unfinished current day preserves yesterday wins while unfinished prior day breaks them
+  ---
+  duration_ms: 0.548916
+  type: 'test'
+  ...
+# Subtest: streaks cross DST, month, year, and leap-day boundaries as calendar days
+ok 11 - streaks cross DST, month, year, and leap-day boundaries as calendar days
+  ---
+  duration_ms: 0.354286
+  type: 'test'
+  ...
+# Subtest: summary keeps the latest duplicate record and excludes impossible or future dates
+ok 12 - summary keeps the latest duplicate record and excludes impossible or future dates
+  ---
+  duration_ms: 0.250802
+  type: 'test'
+  ...
+# Subtest: daily share has six spoiler-free cells and removes URL authentication parameters
+ok 13 - daily share has six spoiler-free cells and removes URL authentication parameters
+  ---
+  duration_ms: 0.354738
+  type: 'test'
+  ...
+# Subtest: archive loss share uses Archive and X/6 with six wrong cells
+ok 14 - archive loss share uses Archive and X/6 with six wrong cells
+  ---
+  duration_ms: 0.1783
+  type: 'test'
+  ...
+# Subtest: share URL excludes embedded account credentials as well as callback data
+ok 15 - share URL excludes embedded account credentials as well as callback data
+  ---
+  duration_ms: 0.17794
+  type: 'test'
+  ...
+# Subtest: sharing_uses_canonical_fallback_for_missing_or_invalid_configuration
+ok 16 - sharing_uses_canonical_fallback_for_missing_or_invalid_configuration
+  ---
+  duration_ms: 1.771761
+  type: 'test'
+  ...
+# Subtest: guest_cannot_queue_remote_results
+ok 17 - guest_cannot_queue_remote_results
+  ---
+  duration_ms: 2.461387
+  type: 'test'
+  ...
+# Subtest: archive_never_queues
+ok 18 - archive_never_queues
+  ---
+  duration_ms: 1.495984
+  type: 'test'
+  ...
+# Subtest: joining_does_not_import_old_guest_history
+ok 19 - joining_does_not_import_old_guest_history
+  ---
+  duration_ms: 1.578868
+  type: 'test'
+  ...
+# Subtest: matching_public_name_never_claims_history
+ok 20 - matching_public_name_never_claims_history
+  ---
+  duration_ms: 1.049738
+  type: 'test'
+  ...
+# Subtest: guest_import_requires_confirmation
+ok 21 - guest_import_requires_confirmation
+  ---
+  duration_ms: 2.019909
+  type: 'test'
+  ...
+# Subtest: same_date_import_has_one_receipt_per_account
+ok 22 - same_date_import_has_one_receipt_per_account
+  ---
+  duration_ms: 2.824181
+  type: 'test'
+  ...
+# Subtest: numeric_legacy_and_existing_remote_block_import
+ok 23 - numeric_legacy_and_existing_remote_block_import
+  ---
+  duration_ms: 0.642985
+  type: 'test'
+  ...
+# Subtest: account_switch_drops_stale_responses
+ok 24 - account_switch_drops_stale_responses
+  ---
+  duration_ms: 0.873805
+  type: 'test'
+  ...
+# Subtest: pending_a_never_dispatches_as_b
+ok 25 - pending_a_never_dispatches_as_b
+  ---
+  duration_ms: 1.303947
+  type: 'test'
+  ...
+# Subtest: conflicting_terminal_result_restores_remote
+ok 26 - conflicting_terminal_result_restores_remote
+  ---
+  duration_ms: 1.238967
+  type: 'test'
+  ...
+# Subtest: bad_remote_progress_cannot_crash
+ok 27 - bad_remote_progress_cannot_crash
+  ---
+  duration_ms: 0.641905
+  type: 'test'
+  ...
+# Subtest: outage_retains_pending_results
+ok 28 - outage_retains_pending_results
+  ---
+  duration_ms: 0.435781
+  type: 'test'
+  ...
+# Subtest: unlisted_profile_stays_private
+ok 29 - unlisted_profile_stays_private
+  ---
+  duration_ms: 0.806253
+  type: 'test'
+  ...
+# Subtest: personal_history_reads_all_server_pages
+ok 30 - personal_history_reads_all_server_pages
+  ---
+  duration_ms: 1.494903
+  type: 'test'
+  ...
+# Subtest: sort_race_cannot_overwrite_latest_page
+ok 31 - sort_race_cannot_overwrite_latest_page
+  ---
+  duration_ms: 0.417589
+  type: 'test'
+  ...
+# Subtest: remote_prefix_cannot_erase_more_advanced_pending
+ok 32 - remote_prefix_cannot_erase_more_advanced_pending
+  ---
+  duration_ms: 0.508952
+  type: 'test'
+  ...
+# Subtest: successful_old_write_cannot_acknowledge_newer_guess
+ok 33 - successful_old_write_cannot_acknowledge_newer_guess
+  ---
+  duration_ms: 0.772986
+  type: 'test'
+  ...
+# Subtest: profile_saves_commit_in_submission_order_even_when_first_is_delayed
+ok 34 - profile_saves_commit_in_submission_order_even_when_first_is_delayed
+  ---
+  duration_ms: 15.296366
+  type: 'test'
+  ...
+# Subtest: failed_profile_save_does_not_block_the_next_privacy_choice
+ok 35 - failed_profile_save_does_not_block_the_next_privacy_choice
+  ---
+  duration_ms: 0.891843
+  type: 'test'
+  ...
+# Subtest: queued_profile_save_cannot_dispatch_after_account_changes
+ok 36 - queued_profile_save_cannot_dispatch_after_account_changes
+  ---
+  duration_ms: 1.095161
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 143.001659

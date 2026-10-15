@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: local_passes_do_not_imply_public_readiness
+ok 1 - local_passes_do_not_imply_public_readiness
+  ---
+  duration_ms: 5.004499
+  type: 'test'
+  ...
+# Subtest: missing_production_evidence_stays_blocked
+ok 2 - missing_production_evidence_stays_blocked
+  ---
+  duration_ms: 0.548955
+  type: 'test'
+  ...
+# Subtest: disabled_leaderboard_cannot_be_public_ready
+ok 3 - disabled_leaderboard_cannot_be_public_ready
+  ---
+  duration_ms: 0.389806
+  type: 'test'
+  ...
+# Subtest: passed_without_evidence_is_rejected
+ok 4 - passed_without_evidence_is_rejected
+  ---
+  duration_ms: 0.392743
+  type: 'test'
+  ...
+# Subtest: complete_observed_report_can_be_ready
+ok 5 - complete_observed_report_can_be_ready
+  ---
+  duration_ms: 0.276454
+  type: 'test'
+  ...
+# Subtest: failed_local_check_blocks_both_modes
+ok 6 - failed_local_check_blocks_both_modes
+  ---
+  duration_ms: 0.34787
+  type: 'test'
+  ...
+# Subtest: malformed_reports_and_options_are_rejected
+ok 7 - malformed_reports_and_options_are_rejected
+  ---
+  duration_ms: 0.838048
+  type: 'test'
+  ...
+# Subtest: cli_defaults_public_reads_actual_flag_and_rejects_invalid_inputs
+ok 8 - cli_defaults_public_reads_actual_flag_and_rejects_invalid_inputs
+  ---
+  duration_ms: 594.072349
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 746.496424

@@ -1,6 +1,8 @@
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { ncToday } from "../src/game.js";
+import { selectClues, mergePublishedCalendar } from "./clue-selection.mjs";
 
 const rootDir = path.resolve(new URL("..", import.meta.url).pathname);
 const clueBankPath = path.join(rootDir, "data", "clue-bank-statewide.json");
@@ -67,7 +69,11 @@ function isoDate(date) {
 }
 
 function parseIsoDate(value) {
-  return new Date(`${value}T12:00:00.000Z`);
+  const date = new Date(`${value}T12:00:00.000Z`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || !Number.isFinite(date.getTime()) || isoDate(date) !== value) {
+    throw new Error("Invalid CHARTERSCHOODLE_TODAY: expected a real YYYY-MM-DD date.");
+  }
+  return date;
 }
 
 function addDays(date, days) {
@@ -132,90 +138,8 @@ function getStrongClues(school) {
   );
 }
 
-function clueCategoryWeight(category) {
-  return CLUE_CATEGORY_WEIGHTS[category] || 4;
-}
-
-function clueSlotScore(entry, targetDifficulty, chosenCategories) {
-  const difficulty = Number(entry.clue.difficulty || 0);
-  const categoryRepeatPenalty = (chosenCategories.get(entry.clue.category) || 0) * 1.4;
-  const difficultyGapPenalty = Math.abs(difficulty - targetDifficulty) * 2.6;
-  return (
-    clueCategoryWeight(entry.clue.category) * 3 +
-    difficulty * 2.2 -
-    difficultyGapPenalty -
-    categoryRepeatPenalty +
-    entry.randomness
-  );
-}
-
-function selectCuratedClues(school, date) {
-  const strong = getStrongClues(school);
-  const usable = getUsableClues(school);
-  const pool = strong.length >= CONFIG.requiredCuratedClues ? strong : usable;
-
-  if (pool.length < CONFIG.requiredCuratedClues) {
-    return [];
-  }
-
-  const decorated = pool.map((clue) => {
-    const randomness = stableFraction(
-      `${CONFIG.seed}:${school.schoolId}:${date}:${clue.category}:${clue.text}`,
-    );
-    return {
-      clue,
-      randomness,
-      baseScore:
-        clueCategoryWeight(clue.category) * 100 + (Number(clue.difficulty || 0) * 10) + randomness,
-    };
-  });
-
-  const chosen = [];
-  const chosenCategories = new Map();
-  const remaining = [...decorated];
-  const targetSlots = CONFIG.targetClueDifficulties.slice(0, CONFIG.requiredCuratedClues);
-
-  for (const targetDifficulty of targetSlots) {
-    if (remaining.length === 0) {
-      break;
-    }
-
-    remaining.sort((left, right) => {
-      const leftScore = clueSlotScore(left, targetDifficulty, chosenCategories);
-      const rightScore = clueSlotScore(right, targetDifficulty, chosenCategories);
-      return (
-        rightScore - leftScore ||
-        right.baseScore - left.baseScore ||
-        right.randomness - left.randomness ||
-        left.clue.text.localeCompare(right.clue.text)
-      );
-    });
-
-    const next = remaining.shift();
-    chosen.push(next.clue);
-    chosenCategories.set(next.clue.category, (chosenCategories.get(next.clue.category) || 0) + 1);
-  }
-
-  if (chosen.length < CONFIG.requiredCuratedClues) {
-    return [];
-  }
-
-  return chosen.map((clue) => ({
-      text: clue.text,
-      difficulty: clue.difficulty,
-    }));
-}
-
 function countStrongClues(school) {
   return getStrongClues(school).length;
-}
-
-function buildLetterClue(officialName) {
-  const initial = officialName.trim().charAt(0).toUpperCase();
-  return {
-    difficulty: 1,
-    text: `The answer begins with the letter ${initial}.`,
-  };
 }
 
 function normalizedName(name) {
@@ -438,13 +362,17 @@ function buildScheduledOrder(playable) {
 }
 
 async function main() {
-  const [schoolsRaw, clueBankRaw] = await Promise.all([
+  const todayString = process.env.CHARTERSCHOODLE_TODAY ?? ncToday();
+  const today = parseIsoDate(todayString);
+  const [schoolsRaw, clueBankRaw, existingRaw] = await Promise.all([
     fs.readFile(schoolsPath, "utf8"),
     fs.readFile(clueBankPath, "utf8"),
+    fs.readFile(outputPath, "utf8"),
   ]);
 
   const schools = JSON.parse(schoolsRaw);
   const clueBank = JSON.parse(clueBankRaw);
+  const existing = JSON.parse(existingRaw).puzzles;
   const schoolIds = new Set(schools.map((school) => school.id));
 
   const playable = clueBank.schools
@@ -468,10 +396,9 @@ async function main() {
   const scheduledProfiles = buildScheduledOrder(playable);
 
   const launchDate = parseIsoDate(CONFIG.launchDate);
-  const today = parseIsoDate(process.env.CHARTERSCHOODLE_TODAY || isoDate(new Date()));
   const endDate = addDays(today, CONFIG.futureHorizonDays);
 
-  const puzzles = [];
+  const generated = [];
   let cursor = new Date(launchDate);
   let offset = 0;
 
@@ -479,21 +406,31 @@ async function main() {
     const date = isoDate(cursor);
     const school = scheduledProfiles[offset % scheduledProfiles.length];
     const schoolId = school.schoolId;
-    const curatedClues = selectCuratedClues(school, date);
+    const strong = getStrongClues(school);
+    const usablePool = strong.length >= CONFIG.requiredCuratedClues ? strong : getUsableClues(school);
+    const { clues, diagnostics } = selectClues({
+      schoolId, officialName: school.officialName, usablePool, date,
+      config: CONFIG, categoryWeights: CLUE_CATEGORY_WEIGHTS,
+    });
+    if (date > todayString) {
+      for (const diagnostic of diagnostics) console.warn(JSON.stringify(diagnostic));
+    }
 
-    if (curatedClues.length < CONFIG.requiredCuratedClues) {
+    if (clues.length !== CONFIG.requiredCuratedClues + 1) {
       throw new Error(`School ${school.officialName} does not have enough usable clues.`);
     }
 
-    puzzles.push({
+    generated.push({
       date,
       answerSchoolId: schoolId,
-      clues: [...curatedClues, buildLetterClue(school.officialName)],
+      clues,
     });
 
     cursor = addDays(cursor, 1);
     offset += 1;
   }
+
+  const puzzles = mergePublishedCalendar(existing, generated, todayString);
 
   const notes = [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
