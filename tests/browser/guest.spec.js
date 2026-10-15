@@ -63,7 +63,7 @@ test('six_wrong_guesses_persist', async ({ page, game }) => {
   for (const school of schools.slice(1, 7)) await game.guess(school);
   await page.reload();
   await expect(page.locator('#status-title')).toHaveText('Out of guesses');
-  await expect(page.locator('#board-body .board-row--played')).toHaveCount(6);
+  await expect(page.locator('#board-rounds .board-row--played')).toHaveCount(6);
   await expect(page.getByLabel('Guess the school')).toBeDisabled();
 });
 

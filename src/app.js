@@ -1,5 +1,6 @@
 import { ncToday, archiveDates, scoreSummary } from "./game.js";
 import { createSafeStorage, createGameStore } from "./storage.js";
+import { openDialog, closeDialog } from "./dialog.js";
 
 const GAME_CONFIG = {
   maxGuesses: 6,
@@ -16,13 +17,13 @@ const elements = {
   statusMessage: document.getElementById("status-message"),
   clueProgress: document.getElementById("clue-progress"),
   boardPanel: document.getElementById("board-panel"),
-  boardBody: document.getElementById("board-body"),
+  boardRounds: document.getElementById("board-rounds"),
   mapPanel: document.getElementById("map-panel"),
   mapSummary: document.getElementById("map-summary"),
   mapContainer: document.getElementById("school-map"),
   leaderboardPanel: document.getElementById("leaderboard-panel"),
   leaderboardSummary: document.getElementById("leaderboard-summary"),
-  leaderboardBody: document.getElementById("leaderboard-body"),
+  leaderboardRounds: document.getElementById("leaderboard-body"),
   leaderboardPagination: document.getElementById("leaderboard-pagination"),
   leaderboardPrev: document.getElementById("leaderboard-prev"),
   leaderboardNext: document.getElementById("leaderboard-next"),
@@ -38,6 +39,10 @@ const elements = {
   guessForm: document.getElementById("guess-form"),
   primaryPanel: document.querySelector(".panel--primary"),
   guessInput: document.getElementById("school-guess"),
+  helpDialog: document.getElementById("how-to-play"),
+  helpButton: document.querySelector(".help-button"),
+  helpCloseButton: document.getElementById("help-close-button"),
+  suggestionStatus: document.getElementById("suggestion-status"),
   autocompleteList: document.getElementById("autocomplete-list"),
   retryButton: document.getElementById("retry-data"),
   newDailyNotice: document.getElementById("new-daily-notice"),
@@ -237,7 +242,7 @@ function showUnavailable(title, message, retry = true) {
   state.progress = null;
   state.filteredSuggestions = [];
   state.selectedSuggestionIndex = -1;
-  elements.boardBody.innerHTML = "";
+  elements.boardRounds.innerHTML = "";
   elements.guessInput.value = "";
   elements.guessCounter.textContent = "0 / 6";
   elements.clueProgress.textContent = "No clues available";
@@ -250,8 +255,7 @@ function showUnavailable(title, message, retry = true) {
   elements.guessForm.classList.remove("is-hidden");
   elements.leaderboardPanel.classList.add("is-hidden");
   elements.mapPanel.classList.add("is-hidden");
-  elements.winOverlay.classList.add("is-hidden");
-  elements.winOverlay.setAttribute("aria-hidden", "true");
+  closeDialog(elements.winOverlay);
   renderSuggestionList();
   syncInputLock();
   renderScoreSummary();
@@ -421,25 +425,21 @@ function renderBoard() {
     const clueVisible = index < state.progress.revealedClues;
 
     rows.push(`
-      <tr class="${guessRecord ? "board-row--played" : ""}">
-        <td class="board-round">${index + 1}</td>
-        <td class="board-clue">
-          ${
-            clueVisible
-              ? `<div class="board-clue__text">${clue.text}</div>`
-              : `<span class="board-icon board-icon--muted">•</span>`
-          }
-        </td>
-        <td class="board-guess">${guessedSchool ? guessedSchool.officialName : "—"}</td>
-        <td>${guessRecord ? renderResultIcon(guessRecord.correct) : renderEmptyIcon()}</td>
-        <td>${feedback ? renderFeedbackIcon("enrollment", feedback.enrollment) : renderEmptyIcon()}</td>
-        <td>${feedback ? renderFeedbackIcon("gradeBand", feedback.gradeBand) : renderEmptyIcon()}</td>
-        <td>${feedback ? renderFeedbackIcon("direction", feedback.direction) : renderEmptyIcon()}</td>
-      </tr>
+      <li class="board-round ${guessRecord ? "board-row--played" : ""}">
+        <h4 class="board-round__heading">Round ${index + 1}</h4>
+        <div class="board-clue">${clueVisible ? escapeHtml(clue.text) : "Clue locked until the next round."}</div>
+        <div class="board-guess"><span class="round-label">Guess</span> ${guessedSchool ? escapeHtml(guessedSchool.officialName) : "Not played yet"}</div>
+        <div class="round-feedback" role="group" aria-label="Round ${index + 1} feedback">
+          <div><span class="round-label">Result</span>${guessRecord ? renderResultIcon(guessRecord.correct) : renderEmptyIcon()}</div>
+          <div><span class="round-label">Size</span>${feedback ? renderFeedbackIcon("enrollment", feedback.enrollment) : renderEmptyIcon()}</div>
+          <div><span class="round-label">Grades</span>${feedback ? renderFeedbackIcon("gradeBand", feedback.gradeBand) : renderEmptyIcon()}</div>
+          <div><span class="round-label">Direction</span>${feedback ? renderFeedbackIcon("direction", feedback.direction) : renderEmptyIcon()}</div>
+        </div>
+      </li>
     `);
   }
 
-  elements.boardBody.innerHTML = rows.join("");
+  elements.boardRounds.innerHTML = rows.join("");
 }
 
 function renderStatus() {
@@ -458,27 +458,32 @@ function renderStatus() {
   }
 
   elements.statusTitle.textContent = "Puzzle in progress";
-  elements.statusMessage.textContent = "Use the latest clue and the feedback from prior guesses to narrow it down.";
+  const lastGuess = state.progress.guesses.at(-1);
+  const lastSchool = lastGuess ? state.schoolMap.get(lastGuess.schoolId) : null;
+  elements.statusMessage.textContent = lastSchool
+    ? `${lastSchool.officialName} is not the answer. Clue ${state.progress.revealedClues} is now visible. Compare the size, grades, and direction feedback.`
+    : "Use the latest clue and the feedback from prior guesses to narrow it down.";
 }
 
 function renderWinOverlay() {
   if (!state.progress.solved || state.winOverlaySeen) {
-    elements.winOverlay.classList.add("is-hidden");
-    elements.winOverlay.setAttribute("aria-hidden", "true");
+    closeDialog(elements.winOverlay);
     return;
   }
 
   const answer = state.schoolMap.get(state.activePuzzle.answerSchoolId);
   elements.winAnswer.textContent = answer.officialName;
   elements.winSummary.textContent = `You solved the ${state.activePuzzleDate} puzzle in ${state.progress.guesses.length} guesses.`;
-  elements.winOverlay.classList.remove("is-hidden");
-  elements.winOverlay.setAttribute("aria-hidden", "false");
-  launchConfetti();
+  if (!elements.winOverlay.open) {
+    openDialog(elements.winOverlay, elements.modeButtons.find((button) => button.dataset.mode === state.mode));
+    launchConfetti();
+  }
 }
 
 function launchConfetti() {
   const colors = ["#8fd169", "#708f96", "#e8e6a6", "#ffffff", "#b5b1a9"];
-  elements.confettiLayer.innerHTML = "";
+  elements.confettiLayer.replaceChildren();
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   for (let index = 0; index < 28; index += 1) {
     const piece = document.createElement("span");
@@ -492,6 +497,7 @@ function launchConfetti() {
 }
 
 function shakePanel() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   elements.primaryPanel.classList.remove("is-shaking");
   void elements.primaryPanel.offsetWidth;
   elements.primaryPanel.classList.add("is-shaking");
@@ -575,6 +581,7 @@ function handleGuessSubmission(event) {
   recordDailyAttempt();
   saveProgress();
   render();
+  if (!elements.guessInput.disabled) elements.guessInput.focus();
 }
 
 function recordDailyAttempt() {
@@ -608,8 +615,7 @@ function renderMapView() {
   elements.guessForm.classList.add("is-hidden");
   elements.leaderboardPanel.classList.add("is-hidden");
   elements.mapPanel.classList.remove("is-hidden");
-  elements.winOverlay.classList.add("is-hidden");
-  elements.winOverlay.setAttribute("aria-hidden", "true");
+  closeDialog(elements.winOverlay);
   elements.statusTitle.textContent = "School map";
   elements.statusMessage.textContent = "Use the North Carolina pin map with the direction feedback to narrow down the answer.";
   renderHeader();
@@ -954,8 +960,7 @@ function renderLeaderboardView() {
   elements.leaderboardPanel.classList.remove("is-hidden");
   elements.mapPanel.classList.add("is-hidden");
   elements.retryButton.classList.add("is-hidden");
-  elements.winOverlay.classList.add("is-hidden");
-  elements.winOverlay.setAttribute("aria-hidden", "true");
+  closeDialog(elements.winOverlay);
   elements.statusTitle.textContent = "Leaderboard unavailable";
   elements.statusMessage.textContent = "You can keep playing as a guest. Public leaderboard participation is optional.";
   elements.scoreTotal.textContent = String(summary.points);
@@ -966,7 +971,7 @@ function renderLeaderboardView() {
   elements.leaderboardPagination.classList.add("is-hidden");
   elements.leaderboardSortButtons.forEach((button) => { button.disabled = true; });
   elements.leaderboardSyncStatus.textContent = "The public leaderboard is unavailable. Guest play remains available.";
-  elements.leaderboardBody.innerHTML = '<tr><td class="leaderboard-empty" colspan="8">Public rankings are unavailable.</td></tr>';
+  elements.leaderboardRounds.innerHTML = '<tr><td class="leaderboard-empty" colspan="8">Public rankings are unavailable.</td></tr>';
   renderHeader();
   renderScoreSummary();
 }
@@ -1169,52 +1174,56 @@ function compassDirection(fromCoordinates, toCoordinates) {
   return directions[Math.round(bearing / 45) % directions.length];
 }
 
+function feedbackIcon(symbol, variant, label) {
+  return `<span class="board-icon board-icon--${variant}" aria-hidden="true">${escapeHtml(symbol)}</span><span>${escapeHtml(label)}</span>`;
+}
+
 function renderResultIcon(correct) {
   return correct
-    ? '<span class="board-icon board-icon--good" title="Correct">✓</span>'
-    : '<span class="board-icon board-icon--bad" title="Wrong">✕</span>';
+    ? feedbackIcon("✓", "good", "Correct school")
+    : feedbackIcon("✕", "bad", "Wrong school");
 }
 
 function renderFeedbackIcon(type, feedback) {
   if (type === "enrollment") {
     if (feedback.status === "match") {
-      return '<span class="board-icon board-icon--neutral" title="Enrollment match">＝</span>';
+      return feedbackIcon("＝", "neutral", "Enrollment match");
     }
     if (feedback.status === "unknown") {
-      return '<span class="board-icon board-icon--muted" title="Enrollment unavailable">?</span>';
+      return feedbackIcon("?", "muted", "Enrollment unavailable");
     }
 
     return feedback.status === "too-small"
-      ? '<span class="board-icon board-icon--warn" title="Answer is larger">↑</span>'
-      : '<span class="board-icon board-icon--warn" title="Answer is smaller">↓</span>';
+      ? feedbackIcon("↑", "warn", "Answer is larger")
+      : feedbackIcon("↓", "warn", "Answer is smaller");
   }
 
   if (type === "gradeBand") {
     if (feedback.status === "match") {
-      return '<span class="board-icon board-icon--neutral" title="Grade span match">＝</span>';
+      return feedbackIcon("＝", "neutral", "Grade span match");
     }
     if (feedback.status === "unknown") {
-      return '<span class="board-icon board-icon--muted" title="Grade span unavailable">?</span>';
+      return feedbackIcon("?", "muted", "Grade span unavailable");
     }
     if (feedback.status === "wider") {
-      return '<span class="board-icon board-icon--warn" title="Answer spans younger and older grades">↔</span>';
+      return feedbackIcon("↔", "warn", "Answer spans younger and older grades");
     }
     if (feedback.status === "narrower") {
-      return '<span class="board-icon board-icon--warn" title="Answer has a narrower grade span">↔</span>';
+      return feedbackIcon("↔", "warn", "Answer has a narrower grade span");
     }
 
     return feedback.status === "older"
-      ? '<span class="board-icon board-icon--warn" title="Answer serves older grades">→</span>'
-      : '<span class="board-icon board-icon--warn" title="Answer serves younger grades">←</span>';
+      ? feedbackIcon("→", "warn", "Answer serves older grades")
+      : feedbackIcon("←", "warn", "Answer serves younger grades");
   }
 
   const distance =
     typeof feedback.distanceMiles === "number" ? `, ${Math.round(feedback.distanceMiles)} mi away` : "";
-  return `<span class="board-icon board-icon--neutral" title="${feedback.label}${distance}">${feedback.arrow}</span>`;
+  return feedbackIcon(feedback.arrow, "neutral", `${feedback.label}${distance}`);
 }
 
 function renderEmptyIcon() {
-  return '<span class="board-icon board-icon--muted" title="Not played">•</span>';
+  return feedbackIcon("•", "muted", "Not played");
 }
 
 function updateSuggestions() {
@@ -1236,28 +1245,32 @@ function updateSuggestions() {
     .slice(0, 10);
   state.selectedSuggestionIndex = state.filteredSuggestions.length ? 0 : -1;
   renderSuggestionList();
+  if (!state.filteredSuggestions.length) elements.suggestionStatus.textContent = "No matching schools. Try another school name.";
 }
 
 function renderSuggestionList() {
-  if (!state.filteredSuggestions.length) {
-    elements.autocompleteList.classList.add("is-hidden");
-    elements.autocompleteList.innerHTML = "";
-    return;
-  }
-
-  elements.autocompleteList.classList.remove("is-hidden");
-  elements.autocompleteList.innerHTML = state.filteredSuggestions
-    .map(
-      (school, index) => `
-        <li
-          class="autocomplete-item ${index === state.selectedSuggestionIndex ? "is-active" : ""}"
-          data-school-id="${school.id}"
-        >
-          ${escapeHtml(school.officialName)}
-        </li>
-      `,
-    )
-    .join("");
+  const expanded = state.filteredSuggestions.length > 0;
+  elements.guessInput.setAttribute("aria-expanded", String(expanded));
+  elements.guessInput.removeAttribute("aria-activedescendant");
+  elements.autocompleteList.classList.toggle("is-hidden", !expanded);
+  elements.autocompleteList.replaceChildren();
+  state.filteredSuggestions.forEach((school, index) => {
+    const item = document.createElement("li");
+    item.id = `school-option-${index}`;
+    item.className = `autocomplete-item ${index === state.selectedSuggestionIndex ? "is-active" : ""}`;
+    item.dataset.schoolId = school.id;
+    item.setAttribute("role", "option");
+    item.setAttribute("aria-selected", String(index === state.selectedSuggestionIndex));
+    item.textContent = school.officialName;
+    elements.autocompleteList.appendChild(item);
+    if (index === state.selectedSuggestionIndex) {
+      elements.guessInput.setAttribute("aria-activedescendant", item.id);
+      item.scrollIntoView({ block: "nearest" });
+    }
+  });
+  elements.suggestionStatus.textContent = expanded
+    ? `${state.filteredSuggestions.length} matching schools. Use the arrow keys to choose, then Enter to select.`
+    : "";
 }
 
 function handleSuggestionSelection(schoolId) {
@@ -1270,6 +1283,8 @@ function handleSuggestionSelection(schoolId) {
   state.filteredSuggestions = [];
   state.selectedSuggestionIndex = -1;
   renderSuggestionList();
+  elements.suggestionStatus.textContent = `${school.officialName} selected. Submit your guess.`;
+  elements.guessInput.focus();
 }
 
 function handleGuessInputKeydown(event) {
@@ -1334,12 +1349,18 @@ async function init() {
   elements.guessForm.addEventListener("submit", handleGuessSubmission);
   elements.guessInput.addEventListener("input", updateSuggestions);
   elements.guessInput.addEventListener("keydown", handleGuessInputKeydown);
-  elements.autocompleteList.addEventListener("mousedown", (event) => {
+  elements.autocompleteList.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse") event.preventDefault();
+  });
+  elements.autocompleteList.addEventListener("click", (event) => {
     const item = event.target.closest("[data-school-id]");
     if (item) {
       handleSuggestionSelection(item.dataset.schoolId);
     }
   });
+  elements.helpButton.addEventListener("click", () => openDialog(elements.helpDialog));
+  elements.helpCloseButton.addEventListener("click", () => closeDialog(elements.helpDialog));
+  elements.winOverlay.addEventListener("close", () => { state.winOverlaySeen = true; });
   elements.winCloseButton.addEventListener("click", () => {
     state.winOverlaySeen = true;
     renderWinOverlay();
