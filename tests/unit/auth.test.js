@@ -414,7 +414,7 @@ test('join_request_identity_requires_the_matching_pkce_callback_and_verified_ema
   const id = 'cccccccc-cccc-4ccc-cccc-cccccccccccc';
   const instant = Date.parse('2026-10-15T16:00:00Z');
   try {
-    for (const scenario of ['matching', 'clock-skew', 'verifier-replaced', 'expired', 'email-mismatch', 'cached-session']) {
+    for (const scenario of ['matching', 'clock-skew', 'verifier-replaced', 'expired', 'email-mismatch', 'cached-session', 'callback-without-exchange']) {
       const { kv } = storage();
       let clock = instant, email = 'person@example.test';
       globalThis.fetch = async input => {
@@ -432,7 +432,7 @@ test('join_request_identity_requires_the_matching_pkce_callback_and_verified_ema
       if (scenario === 'clock-skew') clock -= 30000;
       if (scenario === 'expired') clock += 25 * 60 * 60 * 1000;
       if (scenario === 'email-mismatch') email = 'another@example.test';
-      if (scenario === 'cached-session') kv.setItem(key, JSON.stringify({ ...session, expires_at: Math.floor(Date.now() / 1000) + 3600 }));
+      if (['cached-session','callback-without-exchange'].includes(scenario)) kv.setItem(key, JSON.stringify({ ...session, expires_at: Math.floor(Date.now() / 1000) + 3600 }));
       const b = browser(scenario === 'cached-session' ? 'https://game.example/' : 'https://game.example/?code=fixture-code');
       // Node has no browser URL detector; drive the same SDK PKCE exchange
       // explicitly while keeping token handling, storage, events, and HTTP real.
@@ -441,7 +441,7 @@ test('join_request_identity_requires_the_matching_pkce_callback_and_verified_ema
         const initialize = client.auth.initialize.bind(client.auth);
         client.auth.initialize = async () => {
           const result = await initialize();
-          return scenario === 'cached-session' ? result : client.auth.exchangeCodeForSession('fixture-code');
+          return ['cached-session','callback-without-exchange'].includes(scenario) ? result : client.auth.exchangeCodeForSession('fixture-code');
         };
         return client;
       }, now: () => clock });
@@ -458,4 +458,22 @@ test('join_request_identity_requires_the_matching_pkce_callback_and_verified_ema
       }
     }
   } finally { globalThis.fetch = oldFetch; }
+});
+
+// Break: requesting a link grants PKCE authority to an unrelated raw cached session.
+test('requesting_controller_cached_session_recovery_cannot_claim_pending_join', async () => {
+ const {kv}=storage(); const oldFetch=globalThis.fetch; const paths=[];
+ const user={id:session.user.id,email:'person@example.test'};
+ globalThis.fetch=async input=>{ const path=new URL(input).pathname; paths.push(path); return new Response(JSON.stringify(path.endsWith('/user')?user:{}),{status:200}); };
+ const auth=createAuthController({config,storage:kv,loadClient:async()=>createClient});
+ try {
+  await auth.ready; await auth.sendLink(user.email,{requestId:'cccccccc-cccc-4ccc-cccc-cccccccccccc'});
+  const expires=Math.floor(Date.now()/1000)+3600;
+  const access_token=[Buffer.from('{"alg":"HS256"}').toString('base64url'),Buffer.from(JSON.stringify({sub:user.id,exp:expires})).toString('base64url'),Buffer.from('fixture-signature').toString('base64url')].join('.');
+  kv.setItem(key,JSON.stringify({access_token,refresh_token:'cached-refresh',expires_at:expires,user}));
+  await auth.getClient().auth._recoverAndRefresh(); await settle();
+  assert.deepEqual(paths,['/auth/v1/otp','/auth/v1/user']);
+  assert.equal(auth.state.userId,user.id); assert.equal(auth.getVerifiedIdentity().email,user.email);
+  assert.equal(auth.getVerifiedIdentity().requestId,null);
+ } finally {await auth.signOut(); globalThis.fetch=oldFetch;}
 });

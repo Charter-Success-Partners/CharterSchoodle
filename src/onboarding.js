@@ -1,8 +1,9 @@
-import { JOIN_LIFETIME_MS, JOIN_CLOCK_SKEW_MS } from './auth.js?v=20261015-join';
+import { JOIN_LIFETIME_MS, JOIN_CLOCK_SKEW_MS } from './auth.js?v=20261015-join-r2';
 import { ncToday } from './game.js';
 
 const localLocks = new WeakMap();
-const KEY = 'charterschoodle-join:v1';
+export const JOIN_INTENT_KEY = 'charterschoodle-join:v1';
+const KEY = JOIN_INTENT_KEY;
 const LIFETIME = JOIN_LIFETIME_MS;
 const uuid = value => typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value);
 const emailFrom = value => typeof value === 'string' && value.trim().length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) ? value.trim().toLowerCase() : null;
@@ -72,22 +73,18 @@ export function createOnboardingController({ storage, auth, leaderboard, guestSt
     write(draft); // Claim only after both verified email and request identity match.
     let profile = await leaderboard.readProfile();
     check(draft, owner);
-    if (profile && !draft.profileSaved) {
-      discard(draft.id);
-      return { status: 'existing', profile };
-    }
+    let existing = Boolean(profile && !draft.profileSaved);
     if (!profile) {
       const result = await leaderboard.createProfile(draft);
       check(draft, owner);
       profile = result.profile;
-      if (!result.created) {
-        if (!profile) throw new Error('Could not restore the existing profile. Try account sync again.');
-        discard(draft.id);
-        return { status: 'existing', profile };
-      }
-      draft = { ...draft, profileSaved: true };
-      write(draft);
+      existing = !result.created;
+      if (!profile) throw new Error('Could not restore the existing profile. Try account sync again.');
     }
+    // Profile preservation and today's explicit carryover consent are separate.
+    // A lost insert response or concurrent profile never discards that consent.
+    draft = { ...draft, profileSaved: true };
+    write(draft);
     // Keep already-owned daily progress ahead of any guest import. Archives have
     // separate storage and cannot become queue sources here.
     const owned = ownerStore();
@@ -96,12 +93,12 @@ export function createOnboardingController({ storage, auth, leaderboard, guestSt
       if (entry?.guessedSchoolIds?.length) leaderboard.queueDailyResult({ date: entry.date, progress: { guesses: entry.guessedSchoolIds.map(schoolId => ({ schoolId })) }, answerSchoolId: entry.answerSchoolId, mode: 'daily' });
     }
     // A draft from yesterday must never import a different day's guest game.
-    await leaderboard.adoptTodayGuest({ confirmed: draft.date === today(), guestStore, date: draft.date });
+    await leaderboard.adoptTodayGuest({ confirmed: draft.date === today(), guestStore, date: draft.date, assertCurrent: () => check(draft, owner) });
     check(draft, owner);
     await leaderboard.flush();
     check(draft, owner);
     discard(draft.id);
-    return { status: 'joined', profile };
+    return { status: existing ? 'existing' : 'joined', profile };
   }
   return {
     get pending() { return read(); },

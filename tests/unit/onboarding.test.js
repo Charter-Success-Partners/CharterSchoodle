@@ -22,13 +22,13 @@ async function setup() {
     const q = { select() { return q; }, eq(k,v) { filters[k]=v; return q; }, single() { single=true; return q; }, maybeSingle() { single=true; return q; }, insert(v) { payload=v; insert=true; return q; }, upsert(v) { payload=v; return q; },
       then(resolve,reject) { return (async () => {
         const rows = table.includes('profiles') ? db.profiles : db.results;
-        if (!payload) { const result=rows.filter(x=>Object.entries(filters).every(([k,v])=>x[k]===v)); return {data: single ? result[0] || null : result,error:null}; }
+        if (!payload) { if (db.readHold && table.includes('results')) { db.readStarted?.(); await db.readHold.promise; } const result=rows.filter(x=>Object.entries(filters).every(([k,v])=>x[k]===v)); return {data: single ? result[0] || null : result,error:null}; }
         db.writes.push({table,payload}); if(db.hold) await db.hold.promise;
         if(db.fail && table.includes(db.fail)) return {error:{message:'outage'},status:503};
         const index=rows.findIndex(x=>x.user_id===payload.user_id && (table.includes('profiles') || x.puzzle_date===payload.puzzle_date));
         if(insert && index>=0) return {error:{code:'23505',message:'existing'},status:409};
         const row=table.includes('profiles')?{public_id:'public-player',...payload}:payload;
-        if(index>=0)rows[index]=row;else rows.push(row); return {data:single?row:[row],error:null};
+        if(index>=0)rows[index]=row;else rows.push(row); if (db.loseProfileResponse && table.includes('profiles')) throw new Error('response lost after commit'); return {data:single?row:[row],error:null};
       })().then(resolve,reject); }
     }; return q;
   } };
@@ -58,10 +58,13 @@ test('join_requires_matching_verified_email_request_and_bound_owner', async () =
  const s=await setup(); await s.onboarding.request(fields); s.verify(); s.db.fail='profiles'; await assert.rejects(s.onboarding.finish());
  s.verify(B); s.db.fail=''; assert.equal((await s.onboarding.finish()).status,'none'); assert.deepEqual(s.db.profiles,[]);
 });
-// Break: a returning hidden player is republished or receives unrelated guest progress.
-test('existing_profile_wins_over_prepared_join_and_never_imports', async () => {
- const s=await setup(); await s.onboarding.request(fields); s.verify(); s.db.profiles.push({user_id:A,public_id:'old',display_name:'Existing',school:'Old School',listed:false});
- const result=await s.onboarding.finish(); assert.equal(result.status,'existing'); assert.equal(result.profile.listed,false); assert.deepEqual(s.db.writes,[]); assert.equal(s.onboarding.pending,null);
+// Break: preserving an existing hidden profile drops separately consented guest carryover.
+test('explicit_join_preserves_existing_fields_and_privacy_and_imports_today', async () => {
+ const s=await setup(); s.storeFor('guest').writeResult({date,answerSchoolId:'a',guessedSchoolIds:['a'],status:'solved'});
+ await s.onboarding.request(fields); s.verify(); s.db.profiles.push({user_id:A,public_id:'old',display_name:'Existing',school:'Old School',listed:false});
+ const result=await s.onboarding.finish(); assert.equal(result.profile.displayName,'Existing'); assert.equal(result.profile.school,'Old School'); assert.equal(result.profile.listed,false);
+ assert.deepEqual(s.db.results.map(x=>[x.user_id,x.puzzle_date,x.guessed_school_ids]),[[A,date,['a']]]);
+ assert.equal(s.db.writes.filter(x=>x.table.includes('profiles')).length,0); assert.equal(s.onboarding.pending,null);
 });
 // Break: failures lose fields, duplicate profile creation, or report completion before result persistence.
 test('profile_and_result_failures_retry_without_another_link_or_retyping', async () => {
@@ -122,12 +125,13 @@ test('retained_join_finishes_hours_later_without_importing_a_new_days_guest_game
 
 // Break: a concurrent existing profile is overwritten, republished, or receives guest progress.
 test('profile_created_elsewhere_during_join_keeps_its_fields_and_privacy', async () => {
- const s=await setup(); await s.onboarding.request(fields); s.verify(); s.db.hold=deferred();
+ const s=await setup(); s.storeFor('guest').writeResult({date,answerSchoolId:'a',guessedSchoolIds:['a'],status:'solved'});
+ await s.onboarding.request(fields); s.verify(); s.db.hold=deferred();
  const joining=s.onboarding.finish(); while(!s.db.writes.length) await new Promise(r=>setImmediate(r));
  s.db.profiles.push({user_id:A,public_id:'existing',display_name:'Existing Owner',school:'Original',listed:false});
  s.db.hold.resolve(); const outcome=await joining;
  assert.equal(outcome.status,'existing'); assert.equal(outcome.profile.displayName,'Existing Owner'); assert.equal(outcome.profile.listed,false);
- assert.equal(s.db.results.length,0); assert.equal(s.onboarding.pending,null);
+ assert.deepEqual(s.db.results.map(x=>x.guessed_school_ids),[['a']]); assert.equal(s.onboarding.pending,null);
 });
 
 // Break: an old save completion erases newer prepared fields or imports after cancellation.
@@ -144,4 +148,35 @@ test('replacing_a_pending_join_invalidates_old_async_completion', async () => {
 test('small_clock_correction_keeps_a_prepared_join_usable', async () => {
  const s=await setup(); await s.onboarding.request(fields); s.advance(-30000); s.verify();
  assert.equal((await s.onboarding.finish()).status,'joined'); assert.equal(s.db.profiles[0].display_name,'Player');
+});
+
+// Break: a committed profile whose response is lost causes retry to discard carryover.
+test('committed_profile_with_lost_response_retries_consented_game_after_reload', async () => {
+ const s=await setup(); s.storeFor('guest').writeResult({date,answerSchoolId:'a',guessedSchoolIds:['a'],status:'solved'});
+ await s.onboarding.request(fields); s.verify(); s.db.loseProfileResponse=true;
+ await assert.rejects(s.onboarding.finish(),/response lost/); assert.equal(s.db.profiles.length,1); assert.equal(s.onboarding.pending.displayName,'Player');
+ s.db.loseProfileResponse=false; s.reload(); s.verify(A,'person@example.test',null);
+ await s.onboarding.finish(); assert.equal(s.db.profiles.length,1);
+ assert.deepEqual(s.db.results.map(x=>[x.user_id,x.guessed_school_ids]),[[A,['a']]]); assert.equal(s.onboarding.pending,null);
+});
+
+// Break: explicit carryover replaces the owner's already-saved game.
+test('explicit_join_with_existing_profile_keeps_existing_owner_result', async () => {
+ const s=await setup(); s.storeFor('guest').writeResult({date,answerSchoolId:'a',guessedSchoolIds:['a'],status:'solved'});
+ s.db.profiles.push({user_id:A,public_id:'old',display_name:'Private Owner',school:'Original',listed:false});
+ s.db.results.push({user_id:A,puzzle_date:date,answer_school_id:'a',guessed_school_ids:['b'],status:'attempted'});
+ await s.onboarding.request(fields); s.verify(); await s.onboarding.finish();
+ assert.deepEqual(s.db.results.map(x=>x.guessed_school_ids),[['b']]); assert.equal(s.db.writes.length,0); assert.equal(s.db.profiles[0].listed,false);
+});
+
+// Break: stale consent still queues, receipts, or restores a guest game after an async read.
+for (const change of ['cancel','replace']) test(`${change}_during_adoption_read_prevents_all_import_mutations`, async () => {
+ const s=await setup(); s.storeFor('guest').writeResult({date,answerSchoolId:'a',guessedSchoolIds:['a'],status:'solved'});
+ await s.onboarding.request(fields); s.verify(); const started=deferred(); s.db.readHold=deferred(); s.db.readStarted=started.resolve;
+ const work=s.onboarding.finish(); await started.promise;
+ if(change==='cancel') s.onboarding.cancel(); else s.onboarding.prepare({displayName:'Replacement',school:''},{active:true});
+ s.db.readHold.resolve(); await assert.rejects(work,{name:'AbortError'});
+ assert.deepEqual(s.storeFor(A).readPending(),[]); assert.equal(s.storeFor(A).hasGuestImport(date),false);
+ assert.deepEqual(s.storeFor(A).readResults(),[]); assert.equal(s.storeFor(A).readProgress(date),null); assert.deepEqual(s.db.results,[]);
+ assert.equal(s.onboarding.pending?.displayName ?? null,change==='cancel'?null:'Replacement');
 });

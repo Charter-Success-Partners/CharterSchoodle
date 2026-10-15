@@ -1,9 +1,9 @@
 import { ncToday, archiveDates, scoreSummary, formatShareResult, validateProgress } from "./game.js";
 import { createSafeStorage, createGameStore, loadLegacyProfile } from "./storage.js";
 import { openDialog, closeDialog } from "./dialog.js";
-import { createAuthController, loadLocalAuthClient } from "./auth.js?v=20261015-join";
-import { createOnboardingController } from "./onboarding.js?v=20261015-join";
-import { createLeaderboardController } from "./leaderboard.js?v=20261015-join";
+import { createAuthController, loadLocalAuthClient } from "./auth.js?v=20261015-join-r2";
+import { createOnboardingController, JOIN_INTENT_KEY } from "./onboarding.js?v=20261015-join-r2";
+import { createLeaderboardController } from "./leaderboard.js?v=20261015-join-r2";
 
 const GAME_CONFIG = {
   maxGuesses: 6,
@@ -1509,7 +1509,9 @@ async function finishJoin(revision) {
     if (result.status === "none") return null;
     accountProfile = result.profile;
     accountProblem = false;
-    joinFeedback = result.status === "joined" ? "You’re joined and ready. Your daily scores are saved; your profile is public." : "Welcome back. Your existing profile and privacy choices are restored.";
+    joinFeedback = result.status === "joined"
+      ? (result.profile.listed ? "You’re joined and ready. Your daily scores are saved; your profile is public." : "You’re joined and ready. Your daily scores are saved; your profile stays private.")
+      : "You’re ready. Your existing profile and privacy choices are preserved; today’s eligible game is saved.";
     closeDialog(elements.emailDialog);
     return result;
   } catch (error) {
@@ -1658,6 +1660,16 @@ function initializeAccounts() {
   });
   onboarding = createOnboardingController({ storage: safeStorage, auth, leaderboard, guestStore: storeFor("guest"), ownerStore: () => state.store });
   auth.subscribe(current => { void selectAccount(current); });
+  window.addEventListener("storage", event => {
+    if (event.key !== JOIN_INTENT_KEY || !auth.state.userId || accountBusy) return;
+    let before, after;
+    try { before = JSON.parse(event.oldValue); after = JSON.parse(event.newValue); } catch { return; }
+    // The requesting tab has no PKCE authority. Once the real callback binds or
+    // completes this owner's intent, it can safely resume/restore the account.
+    const bound = after?.owner === auth.state.userId && before?.owner !== after.owner;
+    const completed = !after && before?.owner === auth.state.userId;
+    if (bound || completed) void selectAccount(auth.state, true);
+  });
   void auth.ready.then(() => {
     // Auth validates configuration before loading the factory. This separate
     // client survives sign-out and never carries a session or owner operation.

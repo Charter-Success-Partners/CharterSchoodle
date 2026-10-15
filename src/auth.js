@@ -141,7 +141,7 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
         if (error || typeof userId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(userId)) throw new Error('Unverified identity');
         if (!storage.persistent) throw new Error('Unavailable storage');
         const email = normalizeEmail(data.user.email);
-        const request = current.joinRequest;
+        const request = current.confirmedJoin?.token === token ? current.confirmedJoin.request : null;
         identity = Object.freeze({ userId, email, requestId: validRequest(request) && request.email === email ? request.id : null });
         update({ phase: 'signed-in', userId, message: '' });
       } catch {
@@ -179,8 +179,14 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
       if (code) {
         let request;
         try { request = JSON.parse(storage.getItem(REQUEST_KEY)); } catch { /* Invalid metadata is not authority. */ }
-        const hash = await verifierHash(storage.getItem(`${STORAGE_KEY}-code-verifier`));
-        if (validRequest(request) && hash && request.verifierHash === hash) current.joinRequest = request;
+        const storedVerifier = storage.getItem(`${STORAGE_KEY}-code-verifier`);
+        const hash = await verifierHash(storedVerifier);
+        if (validRequest(request) && hash && request.verifierHash === hash) {
+          current.callbackRequest = request;
+          let verifier;
+          try { verifier = JSON.parse(storedVerifier); } catch { verifier = storedVerifier; }
+          current.callbackVerifier = typeof verifier === 'string' ? verifier.split('/')[0] : null;
+        }
       }
       const createClient = await loadClient();
       if (!current.active) return;
@@ -193,7 +199,8 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
       };
       const fetch = globalThis.fetch.bind(globalThis);
       async function timedFetch(input, options = {}) {
-        const pathname = new URL(typeof input === 'string' || input instanceof URL ? input : input.url).pathname;
+        const requestUrl = new URL(typeof input === 'string' || input instanceof URL ? input : input.url);
+        const pathname = requestUrl.pathname;
         const logout = pathname.endsWith('/logout');
         if (!current.active && !logout) throw new Error('Authentication client is closed');
         // signInWithOtp writes its PKCE verifier BEFORE dispatching fetch.
@@ -207,10 +214,11 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
             const bound = { ...request, verifierHash: hash };
             storage.setItem(REQUEST_KEY, JSON.stringify(bound));
             if (!storage.persistent) throw new Error(STORAGE_MESSAGE);
-            current.joinRequest = bound;
+            // Request metadata is not evidence that confirmation occurred.
+            current.confirmedJoin = null;
           } else {
             storage.removeItem(REQUEST_KEY);
-            current.joinRequest = null;
+            current.confirmedJoin = null;
           }
         }
         const controller = new AbortController();
@@ -222,6 +230,19 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
         const timer = setTimeout(() => controller.abort(new DOMException('Authentication request timed out', 'TimeoutError')), 10000);
         try {
           const response = await fetch(input, { ...options, signal: controller.signal });
+          // Grant an unbound draft's request identity only to the exact token
+          // returned by this callback's successful matching PKCE exchange.
+          // A cached-session recovery (including in the requesting tab) cannot
+          // acquire this authority merely because getUser verifies its email.
+          const candidate = current.callbackRequest;
+          if (response.ok && candidate && pathname.endsWith('/token') && requestUrl.searchParams.get('grant_type') === 'pkce') {
+            let exchange;
+            try { exchange = JSON.parse(options.body); } catch { /* Not a matching exchange. */ }
+            if (exchange?.auth_code === code && current.callbackVerifier && exchange?.code_verifier === current.callbackVerifier) {
+              const payload = await response.clone().json();
+              if (current.active && typeof payload.access_token === 'string') current.confirmedJoin = { request: candidate, token: payload.access_token };
+            }
+          }
           const retry = response.headers.get('Retry-After');
           if (retry !== null) {
             const seconds = Number(retry);
@@ -282,7 +303,10 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
       let request;
       try { request = JSON.parse(storage.getItem(REQUEST_KEY)); } catch { /* Invalid metadata can be cleared. */ }
       if (!id || request?.id === id) storage.removeItem(REQUEST_KEY);
-      if (!id || life?.joinRequest?.id === id) { if (life) life.joinRequest = null; }
+      if (life) {
+        if (!id || life.callbackRequest?.id === id) { life.callbackRequest = null; life.callbackVerifier = null; }
+        if (!id || life.confirmedJoin?.request.id === id) life.confirmedJoin = null;
+      }
     },
     async sendLink(email, { requestId = null } = {}) {
       await ready;

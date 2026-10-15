@@ -83,6 +83,7 @@ export async function accountFixture(page, game, { user = userA, listed = false,
       const index=values.findIndex(x=>x.user_id===value.user_id&&(profiles||x.puzzle_date===value.puzzle_date));
       if(profiles && index>=0 && !url.searchParams.has('on_conflict')) return reply({code:'23505',message:'Profile already exists'},409);
       if(index<0) values.push(value); else values[index]=value;
+      if(profiles && state.loseProfileResponse) { state.loseProfileResponse=false; return route.abort('failed'); }
       return reply(request.headers().accept?.includes('object')?value:[value]);
     }
     const owner=url.searchParams.get('user_id')?.replace('eq.','');

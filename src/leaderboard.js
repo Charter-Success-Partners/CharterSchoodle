@@ -182,14 +182,18 @@ export function createLeaderboardController({ getClient, storeFor, getPuzzle, sc
       flushes.set(ctx.subject, work);
       try { await work; } finally { if (flushes.get(ctx.subject) === work) flushes.delete(ctx.subject); }
     },
-    async adoptTodayGuest({ confirmed, guestStore, date }) {
+    async adoptTodayGuest({ confirmed, guestStore, date, assertCurrent = () => {} }) {
       if (!confirmed || subject === 'guest' || !profiles.get(subject) || date !== ncToday(now()) || guestStore.subject !== 'guest') return false;
       const ctx = context();
       if (ctx.store.hasGuestImport(date)) return false;
       const entry = guestStore.readResults().find(x => x.date === date);
       if (!entry?.guessedSchoolIds?.length) return false;
       // Any existing raw owner row blocks import, including malformed data.
-      if (await ownerRow(ctx, date)) return false;
+      const existing = await ownerRow(ctx, date);
+      // An intent can be cancelled/replaced while the owner read is pending.
+      // Recheck consent immediately before the first local import mutation.
+      assertCurrent();
+      if (existing || date !== ncToday(now())) return false;
       if (ctx.store.hasGuestImport(date) || ctx.store.readPending().some(x => x.date === date)) return false;
       ctx.store.queueResult(entry);
       if (!ctx.store.readPending().some(x => x.date === date)) return false;

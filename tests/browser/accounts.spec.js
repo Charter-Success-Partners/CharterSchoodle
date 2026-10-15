@@ -279,13 +279,14 @@ test('prepared_join_cannot_publish_for_a_different_verified_email',async({page,g
  expect(fixture.state.profiles).toEqual([]); expect(fixture.state.history).toEqual([]); fixture.assertSafe();
 });
 
-test('prepared_join_keeps_an_existing_hidden_profile_and_does_not_import',async({page,game})=>{
+test('explicit_join_keeps_existing_hidden_profile_and_imports_consented_game',async({page,game})=>{
  const fixture=await accountFixture(page,game,{user:null,existing:false}); await requestGuestJoin(page,game,fixture);
  fixture.state.profiles.push({user_id:userA,public_id:'existing-public-id',display_name:'Existing Player',school:'Original School',listed:false});
  await page.goto('./?code=fixture-confirmation');
  await expect(page.locator('#account-status')).toContainText(/private|privacy/i);
  expect(fixture.state.profiles[0]).toMatchObject({display_name:'Existing Player',school:'Original School',listed:false});
- expect(fixture.state.history).toEqual([]);
+ await expect.poll(()=>fixture.state.history.length).toBe(1);
+ expect(fixture.state.history[0]).toMatchObject({user_id:userA,guessed_school_ids:[schools[1].id]});
  expect(fixture.state.sent.filter(x=>x.method==='POST'&&x.path.endsWith('profiles_v2'))).toEqual([]); fixture.assertSafe();
 });
 
@@ -342,4 +343,19 @@ test('check_email_countdown_allows_address_and_details_correction_before_resend'
  await expect(page.locator('#account-status')).toContainText(/joined|ready/i);
  expect(fixture.state.profiles).toMatchObject([{display_name:'Corrected Player',listed:true}]);
  expect(fixture.state.sent.filter(x=>x.path.endsWith('/otp')).map(x=>x.data.email)).toEqual(['first@example.test','corrected@example.test']); fixture.assertSafe();
+});
+
+
+// The insert commits at the intercepted database boundary, but fetch loses its response.
+test('committed_profile_response_loss_keeps_consented_carryover_on_callback_reload',async({page,game})=>{
+ const fixture=await accountFixture(page,game,{user:null,existing:false}); await requestGuestJoin(page,game,fixture);
+ fixture.state.loseProfileResponse=true; await page.goto('./?code=fixture-confirmation');
+ await expect(page.locator('#account-status')).toContainText(/could not finish/i);
+ expect(fixture.state.profiles).toMatchObject([{user_id:userA,display_name:'Retained Player',listed:true}]);
+ expect(fixture.state.history).toEqual([]);
+ await page.reload(); await expect(page.locator('#account-status')).toContainText(/joined|ready/i);
+ await expect.poll(()=>fixture.state.history.length).toBe(1);
+ expect(fixture.state.history[0]).toMatchObject({user_id:userA,puzzle_date:today,guessed_school_ids:[schools[1].id]});
+ expect(fixture.state.sent.filter(x=>x.method==='POST'&&x.path.endsWith('profiles_v2'))).toHaveLength(1);
+ expect(fixture.state.sent.filter(x=>x.path.endsWith('/otp'))).toHaveLength(1); fixture.assertSafe();
 });
