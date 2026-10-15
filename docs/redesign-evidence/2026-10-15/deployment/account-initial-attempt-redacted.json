@@ -1,0 +1,139 @@
+{
+  "startedAt": "2026-10-15T21:59:15.212Z",
+  "canonical": "https://charterschoodle.chartersuccesspartners.com/",
+  "deployedCommit": "e343ac808ab2168480755f7b5c87f12cf2db85a8",
+  "runtimeSourceCommit": "2557b3116e5cca6decc51cbf95a3459c3fd0d1ff",
+  "scope": "Production canonical assets and real owner JWT/backend; only OTP request and PKCE token response SIMULATED. No email delivery or true PKCE exchange asserted.",
+  "checks": [
+    {
+      "name": "One confirmed synthetic operator signs in through real password Auth",
+      "passed": true
+    },
+    {
+      "name": "Real deployed guest puzzle accepts one wrong guess",
+      "passed": true
+    },
+    {
+      "name": "Single Join form retains SDK verifier; OTP delivery boundary SIMULATED",
+      "passed": true
+    },
+    {
+      "name": "SIMULATED PKCE callback automatically creates real public profile without second form",
+      "passed": true
+    },
+    {
+      "name": "Real backend imports exactly today one-guess game",
+      "passed": true
+    },
+    {
+      "name": "Callback URL cleaned and server identity verified",
+      "passed": true
+    }
+  ],
+  "network": [
+    {
+      "method": "POST",
+      "path": "/auth/v1/otp",
+      "status": 200,
+      "source": "SIMULATED no-delivery OTP boundary"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/v1/token",
+      "status": 200,
+      "source": "SIMULATED PKCE exchange response using real password-auth session"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 201,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 201,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    }
+  ],
+  "blocked": [],
+  "errors": [],
+  "finalLogoutStatus": 204,
+  "completedAt": "2026-10-15T21:59:25.123Z",
+  "status": "failed",
+  "failure": {
+    "stage": "reload-no-duplicate",
+    "kind": "AssertionError",
+    "messageHash": "d0a74a42ff15b710dd00ae904bd01d3e2433af5d96d647d4d84be63f4e68f30b"
+  },
+  "cleanupFixtureUnlisted": true,
+  "simulatedBoundaryCounts": {
+    "otp": 1,
+    "pkce": 1
+  },
+  "actualBrowserWrites": {
+    "profiles": 1,
+    "results": 2
+  },
+  "fixtureRetention": "Single synthetic operator retained unlisted; identifying metadata only in protected private directory"
+}

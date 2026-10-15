@@ -1,6 +1,6 @@
 # UI/UX redesign verification — October 15, 2026
 
-The approved redesign is implemented and verified locally at runtime source `2557b3116e5cca6decc51cbf95a3459c3fd0d1ff`. Later commits add documentation/evidence only. **This redesigned UI is not yet the public deployment.** The existing site remains revision `bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa`; publishing the candidate and checking its deployed assets/account flow remain the next owner-approved action.
+The owner approved publication and PR #3 is merged. **The redesign is live** at revision `e343ac808ab2168480755f7b5c87f12cf2db85a8`, deployed by [Pages run 38813004723](https://github.com/Charter-Success-Partners/CharterSchoodle/actions/runs/38813004723). Its tree matches the reviewed candidate; runtime source is `2557b3116e5cca6decc51cbf95a3459c3fd0d1ff`. All 19 served files match that build. See [current deployed evidence and limits](deployment/README.md).
 
 ## Delivered behavior
 
@@ -10,7 +10,7 @@ Joining collects display name, optional affiliation and email in one form, with 
 
 ## Final automated evidence
 
-All final commands exited 0 on the corrected runtime source, except the intentionally pending public gate described below. Node 22.23.3; Playwright 1.64.1/Chromium 1228. Browser tests use exact synthetic Auth/REST interception and block production Supabase. No real email, production account/score write, backend/provider change, merge or deployment occurred in this redesign.
+All final local commands exited 0 on the corrected runtime source, except the prepublication public gate recorded below. Node 22.23.3; Playwright 1.64.1/Chromium 1228. These local browser tests use exact synthetic Auth/REST interception and block production Supabase. Production publication and scoped operator smoke checks happened afterward and are recorded separately in [deployment evidence](deployment/README.md); no backend schema or provider configuration changed.
 
 | Check | Final evidence |
 | --- | --- |
@@ -56,6 +56,6 @@ The [capture harness](visual-capture.mjs) runs manually from the repository root
 
 The [signup implementation](signup-implementation.md), [initial review](signup-review.md), and [scoped re-review](signup-rereview.md) show all three Important recovery/authority/cancellation findings resolved before visual work. [Signup test logs](signup-tests.log), [account tests](signup-accounts.log), [recovery probes](signup-recovery-probes.log), and [cached-session authority probe](signup-auth-probe.log) document those boundaries. Pre-final-fix implementation logs are historical, not substitutes for the final checks above.
 
-The [current readiness record](../../release-readiness.json) keeps existing production backend/email observations and marks this candidate's deployed smoke **pending**. The observed [code gate](release-code.log) exits 0 (**READY**); the [public gate](release-public.log) exits 2 (**BLOCKED only by pending deployed smoke**) until the separately approved publication and deployed candidate verification in the [runbook](../../public-launch-runbook.md). No migration, score reset, or SMTP change is needed for this frontend release.
+The [current readiness record](../../release-readiness.json) retains the original backend/email observations and records publication of this redesign. The prepublication [code gate](release-code.log) and [blocked public gate](release-public.log) are historical. Current observations and gate output are in [deployment evidence](deployment/README.md). The final public gate remains pending a fresh mailbox-to-PKCE completion through the redesigned join flow. No migration, score reset, or SMTP change was needed for this frontend release.
 
 The completed [design system](../../../DESIGN.md) and [v2 sidecar](../../../.impeccable/design.json) were source-extracted by a separate documenter; [documentation report](design-documentation.md) and [independent local contract checks](design-validation.json) record 22 colors, 8 typography roles, 17 component token groups, and 10 previews. These files do not ship in the static bundle.

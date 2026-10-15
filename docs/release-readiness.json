@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "observedAt": "2026-10-15",
-  "scope": "Approved UI/UX redesign candidate verified locally at runtime source 2557b3116e5cca6decc51cbf95a3459c3fd0d1ff. Existing production backend, SMTP, callback and original deployment observations are retained. The redesigned UI awaits publication approval and deployed-candidate smoke; it is not yet the public site.",
+  "scope": "Owner-approved redesign merged in PR #3 and deployed at e343ac808ab2168480755f7b5c87f12cf2db85a8; all 19 served files match reviewed runtime source 2557b3116e5cca6decc51cbf95a3459c3fd0d1ff. Original backend, SMTP and email observations retained. Deployed guest checks have a documented targeted retry. Fresh actual mailbox-to-PKCE completion through the redesigned join path remains pending.",
   "checks": {
     "unit": {
       "status": "passed",
@@ -37,7 +37,7 @@
     },
     "domainTls": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/domain-observation.log — 2026-10-15 16:04 UTC: curl HTTPS HEAD with certificate verification enabled exited 0, HTTP/2 200 from GitHub at canonical hostname; existing site only, not candidate deployment"
+      "evidence": "docs/redesign-evidence/2026-10-15/deployment/assets-redacted.json — 2026-10-15 21:53 UTC: all 19 canonical HTTPS asset responses returned 200 and exact reviewed hashes with default certificate verification enabled; docs/launch-evidence/2026-10-15/domain-observation.log retains original hostname observation."
     },
     "allowedCallback": {
       "status": "passed",
@@ -49,8 +49,8 @@
     },
     "deployedSmoke": {
       "status": "pending",
-      "evidence": "The prior bfdc42d deployment is verified in docs/launch-evidence/2026-10-15/release-activation/. It does not prove this redesigned runtime candidate. Local candidate evidence is in docs/redesign-evidence/2026-10-15/.",
-      "reason": "Awaiting owner approval to publish the redesigned UI, then exact deployed asset and guest/account/callback checks."
+      "evidence": "docs/redesign-evidence/2026-10-15/deployment/README.md, pages-run-redacted.json, assets-redacted.json, guest-redacted.json, guest-targeted-redacted.json — exact merged release deployed; 19/19 live hashes match; all 27 guest functional checks passed. Full run 36/37 due to one unclassified external GET blocked by the harness; unchanged-guard targeted retry 12/12. Original delivery/sign-in proof is retained separately. account-redacted.json, account-initial-attempt-redacted.json and account.log record 12 combined checks across initial real-backend setup and same-actor continuation, with OTP/PKCE responses explicitly simulated; one synthetic operator confirmed unlisted. Reload retained one row despite idempotent upserts. Actual /user, profile/result operations, rankings, second-context restoration and sign-out passed; no uncaught account browser errors or unapproved requests.",
+      "reason": "Awaiting fresh actual email-link completion in the requesting browser through the redesigned one-form join path. Simulated OTP/PKCE boundaries cannot prove this step."
     }
   }
 }
