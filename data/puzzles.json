@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14",
+  "generatedAt": "2026-10-15",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26735,6 +26735,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter K."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-14",
+      "answerSchoolId": "rocky-mount-preparatory",
+      "clues": [
+        {
+          "text": "Official materials highlight a whole-child model with supports such as food security, health and wellness, wrap-around services, and daily SEL.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school will educate, equip, and empower each scholar to excel academically by providing equitable learning opportunities and collaborating with families and communities.",
+          "difficulty": 4
+        },
+        {
+          "text": "The school uses the four-part framing, \"Educate. Equip. Empower. Excel.\"",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school was founded in 1997 by local business leaders.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official staff pages list Dr. Heather Collins as head of school and director of operations.",
+          "difficulty": 7
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
