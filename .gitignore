@@ -7,3 +7,9 @@ appendix_b_names.json
 nc_charter_map.kml
 nc_charters_page.html
 nc_dpi_charters.html
+
+node_modules/
+playwright-report/
+test-results/
+coverage/
+_site/

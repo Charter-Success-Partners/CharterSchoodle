@@ -1,0 +1,20 @@
+{
+  "name": "charterschoodle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test:unit": "node --test tests/unit/*.test.js",
+    "test": "npm run test:unit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@electric-sql/pglite": "0.5.10"
+  }
+}
