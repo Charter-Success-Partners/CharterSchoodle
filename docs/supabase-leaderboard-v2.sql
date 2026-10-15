@@ -172,4 +172,90 @@ begin
 end;
 $$;
 
+-- Public pages expose explicit aggregate fields only; raw tables retain owner-only RLS.
+create or replace function public.charterschoodle_leaderboard_page_v2(
+  p_sort text default 'points', p_page integer default 1, p_page_size integer default 5
+) returns jsonb language plpgsql stable security definer set search_path = '' as $$
+declare
+  nc_today date := (current_timestamp at time zone 'America/New_York')::date;
+  page_size integer;
+  response jsonb;
+begin
+  if p_sort is null or p_sort not in ('points', 'winStreak', 'attemptStreak')
+    or p_page is null or p_page < 1 or p_page_size is null or p_page_size < 1 then
+    raise exception 'Invalid leaderboard page parameters' using errcode = '22023';
+  end if;
+  page_size := least(p_page_size, 50);
+
+  with eligible as (
+    select r.user_id, r.puzzle_date, r.status, r.guesses, r.points,
+      p.public_id, p.display_name, p.school
+    from public.charterschoodle_results_v2 as r
+    join public.charterschoodle_profiles_v2 as p on p.user_id = r.user_id and p.listed
+    cross join public.charterschoodle_settings_v2 as settings
+    where settings.singleton and r.puzzle_date between settings.cutover_date and nc_today
+  ), totals as (
+    select e.user_id, e.public_id, e.display_name, e.school,
+      pg_catalog.sum(e.points) as points, pg_catalog.count(*) as played,
+      pg_catalog.count(*) filter (where e.status = 'solved') as solved,
+      pg_catalog.avg(e.guesses) filter (where e.status = 'solved') as average
+    from eligible as e
+    group by e.user_id, e.public_id, e.display_name, e.school
+  ), attempts_ordered as (
+    select e.user_id, e.puzzle_date,
+      pg_catalog.max(e.puzzle_date) over (partition by e.user_id) as latest_date,
+      pg_catalog.row_number() over (partition by e.user_id order by e.puzzle_date desc) as position
+    from eligible as e
+  ), attempt_runs as (
+    -- Once a date is missing, descending positions can never match dates again.
+    select a.user_id, pg_catalog.count(*) filter (
+      where a.latest_date >= nc_today - 1 and a.latest_date - a.puzzle_date = a.position - 1
+    ) as attempt_streak
+    from attempts_ordered as a group by a.user_id
+  ), wins_ordered as (
+    select e.user_id, e.puzzle_date, e.status,
+      pg_catalog.max(e.puzzle_date) over (partition by e.user_id) as latest_date,
+      pg_catalog.row_number() over (partition by e.user_id order by e.puzzle_date desc) as position,
+      pg_catalog.count(*) filter (where e.status <> 'solved') over (
+        partition by e.user_id order by e.puzzle_date desc rows between unbounded preceding and current row
+      ) as breaks
+    from eligible as e
+    -- Today's unfinished attempt is neutral; all earlier attempts break wins.
+    where not (e.puzzle_date = nc_today and e.status = 'attempted')
+  ), win_runs as (
+    select w.user_id, pg_catalog.count(*) filter (
+      where w.latest_date >= nc_today - 1 and w.latest_date - w.puzzle_date = w.position - 1
+        and w.status = 'solved' and w.breaks = 0
+    ) as win_streak
+    from wins_ordered as w group by w.user_id
+  ), summaries as (
+    select t.*, coalesce(w.win_streak, 0) as win_streak, a.attempt_streak
+    from totals as t join attempt_runs as a on a.user_id = t.user_id
+    left join win_runs as w on w.user_id = t.user_id
+  ), ranked as (
+    select s.*, pg_catalog.row_number() over (order by
+      case p_sort when 'points' then s.points when 'winStreak' then s.win_streak
+        when 'attemptStreak' then s.attempt_streak end desc,
+      s.points desc, s.solved desc, s.average asc nulls last,
+      s.display_name asc, s.public_id asc
+    ) as rank
+    from summaries as s
+  ), page_rows as (
+    select r.* from ranked as r order by r.rank
+    limit page_size offset (p_page::bigint - 1) * page_size
+  )
+  select pg_catalog.jsonb_build_object(
+    'rows', coalesce((select pg_catalog.jsonb_agg(pg_catalog.jsonb_build_object(
+      'publicId', r.public_id, 'displayName', r.display_name, 'school', r.school,
+      'rank', r.rank, 'points', r.points, 'played', r.played, 'solved', r.solved,
+      'winStreak', r.win_streak, 'attemptStreak', r.attempt_streak, 'average', r.average
+    ) order by r.rank) from page_rows as r), '[]'::jsonb),
+    'total', (select pg_catalog.count(*) from summaries), 'page', p_page, 'pageSize', page_size
+  ) into response;
+  return response;
+end;
+$$;
+revoke all on function public.charterschoodle_leaderboard_page_v2(text,integer,integer) from public;
+grant execute on function public.charterschoodle_leaderboard_page_v2(text,integer,integer) to anon,authenticated;
+
 commit;
