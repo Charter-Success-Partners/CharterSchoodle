@@ -1,6 +1,6 @@
 # CharterSchoodle public-release design
 
-Date: October 15, 2026. Status: written for owner review; implementation has not started.
+Date: October 15, 2026. Status: approved by the owner in conversation; implementation has not started.
 
 ## Approved brief
 
