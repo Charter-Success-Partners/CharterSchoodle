@@ -65,7 +65,7 @@ Also verify A cannot read B's private history and sign-out/account switching can
 
 In the correct Supabase project, inspect Auth URL configuration and existing SMTP settings. Reuse the configured provider or the owner's selected provider; configure verified sender/domain credentials there, never in frontend files. Record the provider and redacted delivery diagnostics. Set the site URL and explicitly allowed production redirect to `https://charterschoodle.chartersuccesspartners.com/`. Avoid wildcard callbacks. Only add a project-path callback if that mount is intentionally supported for real sign-in and approved by the owner. The `/CharterSchoodle/` local fixture test does not establish a production allowlist.
 
-Confirm the app's `publicUrl`, page canonical/Open Graph/Twitter URLs, and intended allowed callback agree. Record the actual allowed settings as `allowedCallback` evidence. With the owner's designated external recipient, request exactly the agreed sign-in link using the tested PKCE flow. Verify inbox delivery, sender, requesting-browser completion, cleaned URL, verified account, sign-out, resend cooldown, and expired/invalid-link recovery to guest play. Do not record link queries, codes or tokens. Delivery to an external recipient plus successful completion is required for `externalRecipientEmail`; a mocked OTP response is insufficient. If the new callback page is not yet deployed, record delivery as partial and finish completion immediately after step 6; keep the public gate blocked until then.
+Confirm the app's configured `publicUrl`, canonical fallback in `src/game.js`, page canonical/Open Graph/Twitter URLs, and intended allowed callback agree. Guest result sharing uses the canonical fallback when backend configuration is missing or the URL is invalid; it never takes a URL from the current callback-bearing location. Record the actual allowed settings as `allowedCallback` evidence. With the owner's designated external recipient, request exactly the agreed sign-in link using the tested PKCE flow. Verify inbox delivery, sender, requesting-browser completion, cleaned URL, verified account, sign-out, resend cooldown, and expired/invalid-link recovery to guest play. Do not record link queries, codes or tokens. Delivery to an external recipient plus successful completion is required for `externalRecipientEmail`; a mocked OTP response is insufficient. If the new callback page is not yet deployed, record delivery as partial and finish completion immediately after step 6; keep the public gate blocked until then.
 
 ## 5. Verify canonical domain, TLS and Pages settings
 
@@ -82,9 +82,9 @@ npm ci
 npm test
 npm run vendor:check
 npm run stage
-npm run test:browser
-CHARTERSCHOODLE_TEST_ROOT=_site npm run test:browser
-CHARTERSCHOODLE_TEST_ROOT=_site CHARTERSCHOODLE_TEST_PREFIX=/CharterSchoodle/ npm run test:browser
+env -u NO_COLOR npm run test:browser
+env -u NO_COLOR CHARTERSCHOODLE_TEST_ROOT=_site npm run test:browser
+env -u NO_COLOR CHARTERSCHOODLE_TEST_ROOT=_site CHARTERSCHOODLE_TEST_PREFIX=/CharterSchoodle/ npm run test:browser
 npm run check:release -- --code
 ```
 
@@ -92,7 +92,7 @@ Review the exact staged manifest (18 assets, plus CNAME only if approved) and ac
 
 ## 7. Smoke-test the deployed revision and record public readiness
 
-Confirm fetched config/style/app bytes match the approved artifact, metadata uses the canonical URL and social PNG loads. In a fresh browser verify guest startup, one guess, reload persistence, six-guess loss and win on approved test puzzles, archive bounds, map, help, narrow-screen controls and share links. With the designated accounts verify link completion, profile consent, today's optional guest import, daily score synchronization, second-device restore, five-row ranking pages, hide-profile, sign-out and account switching. Confirm guest play survives storage/Auth/leaderboard unavailability. Avoid arbitrary score writes or unrelated recipients.
+Confirm fetched config/style/app bytes match the approved artifact, metadata uses the canonical URL and social PNG loads. In a fresh browser verify guest startup, one guess, reload persistence, six-guess loss and win on approved test puzzles, archive bounds, map, help, narrow-screen controls and share links. With the designated accounts verify link completion, profile consent, today's optional guest import, daily score synchronization, second-device restore, five-row ranking pages, hide-profile, sign-out and account switching. Confirm guest play survives storage/Auth/leaderboard unavailability, including win/loss completion, reopening results and sharing when optional backend configuration cannot load. Confirm daily awards appear while archive results remain unscored. Hold a public-profile save, reopen the profile dialog and submit a hide choice: the requests must finish in submission order and the final profile must remain private. Close and reopen a result during pending share/copy, then verify the old completion cannot change the new dialog or move its focus. Avoid arbitrary score writes or unrelated recipients.
 
 Finish email callback checks deferred from step 4. Record timestamp, exact deployed SHA, operator, browser, results and restricted/redacted evidence locations. Set each observation to `passed` only with nonempty evidence; retain `blocked`/`failed` and reason otherwise. Then `npm run check:release` must exit 0 with the actual checked-in flag true. This command validates the report; it cannot authenticate the truth or freshness of human evidence. A claim of public readiness requires both the recorded live observations and this successful gate. Store the completed signed-off report without triggering a redundant deployment solely to publish documentation.
 

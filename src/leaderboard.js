@@ -31,7 +31,7 @@ const profileFrom = row => row ? { publicId: row.public_id, displayName: row.dis
  */
 export function createLeaderboardController({ getClient, storeFor, getPuzzle, schoolIds, now = () => new Date() }) {
   let subject = 'guest', epoch = 0, pageEpoch = 0;
-  const profiles = new Map(), flushes = new Map(), conflicts = new Set();
+  const profiles = new Map(), profileSaves = new Map(), flushes = new Map(), conflicts = new Set();
   function context() {
     if (subject === 'guest') throw new Error('Sign in to save your scores.');
     const client = getClient();
@@ -94,10 +94,19 @@ export function createLeaderboardController({ getClient, storeFor, getPuzzle, sc
       displayName = typeof displayName === 'string' ? displayName.trim() : '';
       school = typeof school === 'string' ? school.trim() : '';
       if (!displayName || [...displayName].length > 60 || [...school].length > 80 || typeof listed !== 'boolean') throw new Error('Use a display name of 1–60 characters and a school of up to 80 characters.');
-      const response = await ctx.client.from(PROFILES).upsert({ user_id: ctx.subject, display_name: displayName, school, listed }, { onConflict: 'user_id' }).select('*').single();
-      check(ctx);
-      const profile = profileFrom(unwrap(response)); profiles.set(ctx.subject, profile);
-      return profile;
+      // Preserve submission order at the server, including across dialog reopen.
+      // A failed save releases the queue; an account change cancels unsent work.
+      const previous = profileSaves.get(ctx.subject) || Promise.resolve();
+      const work = previous.catch(() => {}).then(async () => {
+        check(ctx);
+        const response = await ctx.client.from(PROFILES).upsert({ user_id: ctx.subject, display_name: displayName, school, listed }, { onConflict: 'user_id' }).select('*').single();
+        check(ctx);
+        const profile = profileFrom(unwrap(response)); profiles.set(ctx.subject, profile);
+        return profile;
+      });
+      profileSaves.set(ctx.subject, work);
+      try { return await work; }
+      finally { if (profileSaves.get(ctx.subject) === work) profileSaves.delete(ctx.subject); }
     },
     async readOwnerResults() {
       if (subject === 'guest') return [];

@@ -62,3 +62,52 @@ test('personal_history_reads_all_server_pages', async () => {const s=setup(); aw
 test('sort_race_cannot_overwrite_latest_page', async () => {const s=setup(); const wait=deferred(); s.state.rpc=p=>p.p_sort==='points'?wait.promise:{data:{rows:[{publicId:'latest-player'}],total:1,page:1,pageSize:5},error:null}; const old=s.controller.refresh({sort:'points',page:1}); const latest=await s.controller.refresh({sort:'winStreak',page:1}); wait.resolve({data:{rows:[{publicId:'old-player'}],total:1,page:1,pageSize:5},error:null}); await assert.rejects(old,{name:'AbortError'}); assert.equal(latest.rows[0].publicId,'latest-player');});
 test('remote_prefix_cannot_erase_more_advanced_pending', async()=>{const s=setup(); await s.join(); s.queue(['b','c']); s.storeFor(A).writeProgress(date,progress('b','c')); s.state.rows=[raw(A,date,['b'])]; assert.equal((await s.controller.loadOwnerProgress(date)).guesses.length,2);});
 test('successful_old_write_cannot_acknowledge_newer_guess',async()=>{const s=setup(); await s.join(); s.queue(['b']); const wait=deferred(), dispatched=deferred(); s.state.write=()=>{dispatched.resolve();return wait.promise;}; const flushing=s.controller.flush(); await dispatched.promise; s.queue(['b','a']); wait.resolve({data:null,error:null}); await flushing; assert.deepEqual(s.storeFor(A).readPending()[0].guessedSchoolIds,['b','a']);});
+
+
+test('profile_saves_commit_in_submission_order_even_when_first_is_delayed', async () => {
+  const s = setup(); await s.join();
+  const held = deferred(), started = deferred();
+  let writes = 0;
+  s.state.write = async q => {
+    if (++writes === 1) { started.resolve(); await held.promise; }
+    const row = { ...profile(q.payload.user_id), ...q.payload };
+    s.state.profiles = [row];
+    return { data: row, error: null };
+  };
+  const older = s.controller.saveProfile({ displayName: 'Public', listed: true });
+  await started.promise;
+  const newer = s.controller.saveProfile({ displayName: 'Private', listed: false });
+  // Let all runnable dispatch work finish while the first server write is held.
+  await new Promise(resolve => setImmediate(resolve));
+  const dispatchedBeforeRelease = writes;
+  held.resolve();
+  await Promise.all([older, newer]);
+  assert.equal(s.state.profiles[0].listed, false, 'latest privacy choice must persist on the server');
+  assert.equal(dispatchedBeforeRelease, 1, 'same-owner writes cannot overlap');
+});
+
+test('failed_profile_save_does_not_block_the_next_privacy_choice', async () => {
+  const s = setup(); await s.join();
+  const held = deferred(), started = deferred(); let writes = 0;
+  s.state.write = async q => {
+    if (++writes === 1) { started.resolve(); await held.promise; return { error: { message: 'offline' } }; }
+    return { data: { ...profile(A), ...q.payload }, error: null };
+  };
+  const older = assert.rejects(s.controller.saveProfile({ displayName: 'Public', listed: true }), /offline/);
+  await started.promise;
+  const newer = s.controller.saveProfile({ displayName: 'Private', listed: false });
+  held.resolve(); await older;
+  assert.equal((await newer).listed, false);
+});
+
+test('queued_profile_save_cannot_dispatch_after_account_changes', async () => {
+  const s = setup(); await s.join();
+  const held = deferred(), started = deferred();
+  s.state.write = async q => { started.resolve(); await held.promise; return { data: { ...profile(A), ...q.payload }, error: null }; };
+  const older = assert.rejects(s.controller.saveProfile({ displayName: 'Public', listed: true }), { name: 'AbortError' });
+  await started.promise;
+  const queued = assert.rejects(s.controller.saveProfile({ displayName: 'Private', listed: false }), { name: 'AbortError' });
+  s.controller.setSubject(B);
+  held.resolve(); await Promise.all([older, queued]);
+  assert.equal(s.calls.filter(q => q.payload).length, 1, 'only the already dispatched owner write can reach the server');
+});

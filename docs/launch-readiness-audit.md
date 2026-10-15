@@ -153,9 +153,9 @@ lockdown, local official SDK assets, future-only clue refinement, and one explic
 The complete [dated evidence record](launch-evidence/2026-10-15/README.md) includes fresh automated
 logs, the final visual batch/confirmation, measurements, detector dispositions and screenshots.
 
-Fresh verification: 111 unit tests and 25 database tests passed; vendor bytes matched the official
+Fresh verification after final review fixes: 115 unit tests and 25 database tests passed; vendor bytes matched the official
 pin; staging produced the independently byte-verified 18-file allowlist. Full browser suites exercise
-development root, packaged root and `/CharterSchoodle/`; see their final logs in the evidence record.
+development root, packaged root and `/CharterSchoodle/` (74/74 each); see the `final-fix-*` logs in the evidence record. The final fixes serialize same-account privacy saves, keep guest completion/sharing available without backend configuration, and show daily awards. Deferred share/clipboard completion tests protect a reopened dialog. Earlier automated evidence predates these regressions.
 The final visual inspection covers 320/390/768/1440px, desktop 200% equivalent reflow, reduced motion,
 guest/guessed/win/loss/help/account/ranking/map states and the actual social PNG. Two undersized font
 rules were raised to 12px in one fix batch, followed by one confirmation. Primary targets meet 44px,

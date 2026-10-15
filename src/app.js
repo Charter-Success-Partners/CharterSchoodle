@@ -524,11 +524,12 @@ function showResult(opener = elements.modeButtons.find((button) => button.datase
   elements.winSummary.textContent = state.progress.solved
     ? `You solved the ${state.activePuzzleDate} puzzle in ${count} ${count === 1 ? "guess" : "guesses"}.`
     : `You used all six guesses for the ${state.activePuzzleDate} puzzle. Try another past puzzle.`;
+  if (state.mode === "daily") elements.winSummary.textContent += ` Daily points: ${state.progress.solved ? 7 - count : 0}.`;
   activeResult = { text: formatShareResult({
     date: state.activePuzzleDate,
     mode: state.mode,
     progress: state.progress,
-    publicUrl: window.CHARTERSCHOOLDLE_SUPABASE.publicUrl,
+    publicUrl: window.CHARTERSCHOOLDLE_SUPABASE?.publicUrl,
   }) };
   elements.shareText.value = activeResult.text;
   elements.shareFallback.classList.add("is-hidden");

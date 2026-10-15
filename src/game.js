@@ -108,7 +108,16 @@ function streaks(entries, qualifies, today) {
  * @returns {string}
  */
 export function formatShareResult({ date, mode, progress, publicUrl }) {
-  const url = new URL(publicUrl);
+  // Sharing remains available when optional backend configuration is absent or
+  // malformed. Never derive this fallback from a callback-bearing location.
+  const canonicalUrl = 'https://charterschoodle.chartersuccesspartners.com/';
+  let url;
+  try {
+    url = new URL(publicUrl);
+    if (!['https:', 'http:'].includes(url.protocol)) throw new TypeError('Invalid public URL protocol');
+  } catch {
+    url = new URL(canonicalUrl);
+  }
   url.username = '';
   url.password = '';
   url.search = '';

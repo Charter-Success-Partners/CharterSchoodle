@@ -136,3 +136,81 @@ test('unavailable_native_share_offers_explicit_copy', async ({ page, game }) => 
   await copyButton(page).click();
   expect(await page.evaluate(() => window.copiedResults)).toEqual([winText]);
 });
+
+
+for (const config of ['missing', 'invalid', 'unsafe']) {
+  for (const outcome of ['win', 'loss']) {
+    test(`guest_result_survives_${config}_configuration_${outcome}`, async ({ page, game }) => {
+      await boundaries(page);
+      await page.route('**/src/supabase-config.js', route => config === 'missing' ? route.abort() : route.fulfill({
+        contentType: 'text/javascript',
+        body: `window.CHARTERSCHOOLDLE_SUPABASE={leaderboardEnabled:false,publicUrl:${JSON.stringify(config === 'invalid' ? 'invalid url' : 'javascript:secret-token')}};`,
+      }));
+      await game.open();
+      await page.evaluate(() => history.replaceState({}, '', '?code=private-code#access_token=private-token'));
+      await complete(game, outcome);
+      await expect(result(page)).toBeVisible();
+      await shareButton(page).click();
+      const text = outcome === 'win' ? winText : `CharterSchoodle Daily 2026-10-15\n🟥🟥🟥🟥🟥🟥 X/6\n${publicUrl}`;
+      expect(await page.evaluate(() => window.sharedResults)).toEqual([{ text }]);
+      await page.keyboard.press('Escape');
+      await page.getByRole('button', { name: 'View result', exact: true }).click();
+      await copyButton(page).click();
+      expect(await page.evaluate(() => window.copiedResults)).toEqual([text]);
+    });
+  }
+}
+
+for (const outcome of ['win', 'loss']) {
+  test(`daily_award_is_shown_for_${outcome}`, async ({ page, game }) => {
+    await game.open();
+    await complete(game, outcome);
+    await expect(page.locator('#win-summary')).toContainText(outcome === 'win' ? 'Daily points: 6.' : 'Daily points: 0.');
+    await page.keyboard.press('Escape');
+    await page.getByRole('button', { name: 'View result', exact: true }).click();
+    await expect(page.locator('#win-summary')).toContainText(outcome === 'win' ? 'Daily points: 6.' : 'Daily points: 0.');
+  });
+}
+
+test('archive_result_remains_unscored', async ({ page, game }) => {
+  await game.open();
+  await page.getByRole('button', { name: 'Past Puzzles', exact: true }).click();
+  await complete(game);
+  await expect(page.locator('#win-summary')).not.toContainText(/points/i);
+});
+
+for (const method of ['share', 'clipboard']) {
+  for (const outcome of ['success', 'rejection']) {
+    test(`old_${method}_${outcome}_cannot_change_reopened_result`, async ({ page, game }) => {
+      await page.addInitScript(() => {
+        window.pendingResultActions = [];
+        const defer = () => new Promise((resolve, reject) => window.pendingResultActions.push({ resolve, reject }));
+        Object.defineProperty(navigator, 'share', { configurable: true, value: defer });
+        Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: defer } });
+      });
+      await game.open(); await complete(game);
+      const action = method === 'share' ? shareButton(page) : copyButton(page);
+      await action.click();
+      await expect(shareButton(page)).toBeDisabled();
+      await page.keyboard.press('Escape');
+      await page.getByRole('button', { name: 'View result', exact: true }).click();
+      await expect(shareButton(page)).toBeEnabled();
+      await action.click();
+      const close = result(page).getByRole('button', { name: 'Keep Browsing', exact: true });
+      await close.focus();
+      await page.evaluate(outcome => {
+        const old = window.pendingResultActions[0];
+        if (outcome === 'success') old.resolve(); else old.reject(new DOMException('Denied', 'NotAllowedError'));
+      }, outcome);
+      await expect(result(page).getByRole('status')).toBeEmpty();
+      await expect(shareButton(page)).toBeDisabled();
+      await expect(copyButton(page)).toBeDisabled();
+      await expect(page.getByLabel('Result text')).toBeHidden();
+      await expect(close).toBeFocused();
+      await page.evaluate(() => window.pendingResultActions[1].resolve());
+      await expect(result(page).getByRole('status')).toContainText(method === 'share' ? 'shared' : 'copied');
+      await expect(action).toBeEnabled();
+      await expect(action).toBeFocused();
+    });
+  }
+}

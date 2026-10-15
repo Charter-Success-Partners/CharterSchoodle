@@ -184,3 +184,34 @@ test('pending_profile_save_preserves_captured_consent_and_reopened_form', async 
   await expect(page.getByRole('button', { name: 'Save profile', exact: true })).toBeEnabled();
   fixture.assertSafe();
 });
+
+
+test('latest_hide_submission_wins_over_pending_public_consent_after_reopening', async ({ page, game }) => {
+  const fixture = await accountFixture(page, game, { listed: false });
+  let release, started;
+  const held = new Promise(resolve => release = resolve);
+  const dispatched = new Promise(resolve => started = resolve);
+  let posts = 0;
+  await page.route('**/rest/v1/charterschoodle_profiles_v2*', async route => {
+    if (route.request().method() === 'POST' && ++posts === 1) { started(); await held; }
+    await route.fallback();
+  });
+  await game.open();
+  const edit = page.getByRole('button', { name: 'Edit profile', exact: true });
+  const listed = page.getByLabel('Show my profile and daily scores on the public leaderboard', { exact: true });
+  const save = page.getByRole('button', { name: 'Save profile', exact: true });
+  await edit.click(); await listed.check(); await save.click(); await dispatched;
+  await page.getByRole('button', { name: 'Close profile', exact: true }).click();
+  await edit.click(); await listed.uncheck(); await save.click();
+  // A bounded dispatch window exposes overlapping requests while the old POST is held.
+  await new Promise(resolve => setTimeout(resolve, 100));
+  const postsBeforeRelease = posts;
+  release();
+  await expect.poll(() => fixture.state.sent.filter(x => x.path.endsWith('profiles_v2') && x.method === 'POST').length).toBe(2);
+  await expect(page.locator('#profile-dialog')).toBeHidden();
+  await expect.soft(page.locator('#account-status')).toContainText('privately');
+  expect.soft(fixture.state.profiles[0].listed).toBe(false);
+  expect(postsBeforeRelease).toBe(1);
+  await edit.click(); await expect(listed).not.toBeChecked();
+  fixture.assertSafe();
+});

@@ -144,3 +144,10 @@ test('share URL excludes embedded account credentials as well as callback data',
     publicUrl:'https://person%40example.com:private-password@example.com/game?code=secret#token=secret'});
   assert.equal(text,'CharterSchoodle Daily 2026-10-15\n🟩⬜⬜⬜⬜⬜ 1/6\nhttps://example.com/game');
 });
+
+test('sharing_uses_canonical_fallback_for_missing_or_invalid_configuration', () => {
+  for (const publicUrl of [undefined, null, '', 'invalid url', '/?code=secret', 'javascript:secret-token', 'data:text/plain,secret']) {
+    const text = formatShareResult({ date: '2026-10-15', mode: 'daily', progress: { guesses: [guess('a')], solved: true }, publicUrl });
+    assert.equal(text, 'CharterSchoodle Daily 2026-10-15\n🟩⬜⬜⬜⬜⬜ 1/6\nhttps://charterschoodle.chartersuccesspartners.com/');
+  }
+});

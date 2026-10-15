@@ -2,7 +2,31 @@
 
 This directory is durable evidence outside the static deployment allowlist. The readiness record is [../../release-readiness.json](../../release-readiness.json); the owner procedure is [../../public-launch-runbook.md](../../public-launch-runbook.md). Local fixture success does not establish live authorization or email delivery. No production writes, user creation, email, push or deployment occurred.
 
-## Automated evidence
+## Final review corrections and current automated evidence
+
+The `final-fix-*` logs are the fresh evidence for the amended candidate based on `719b8e0`. Earlier passing logs below are historical and do not prove the newly added regressions. This wave fixes both Important findings and resolves both Minor items: profile mutations now reach the server in submission order, optional backend configuration cannot break guest completion/sharing, daily awards appear in result text (archives remain unscored), and deferred native-share/clipboard success and rejection cannot change a reopened result dialog or steal focus.
+
+All final commands use Node 22.23.3. Browser commands export `CHARTERSCHOODLE_CHROMIUM_PATH=/home/space/.cache/ms-playwright/chromium-1228/chrome-linux64/chrome` and use `env -u NO_COLOR`; all external endpoints are blocked or exactly intercepted. No new screenshots, detector run, CSS changes, production observation, writes, email, push or deployment. The earlier bounded visual batch remains the visual evidence; it predates the minimal daily-award copy, which is covered by DOM tests.
+
+| Evidence | Actual command / result |
+| --- | --- |
+| [final-fix-unit-red.log](final-fix-unit-red.log) | `node --test tests/unit/leaderboard.test.js`: expected 18 pass / 2 fail before fixes; old delayed public save leaves server listed=true, and unsent work dispatches after an account change. |
+| [final-fix-share-url-red.log](final-fix-share-url-red.log) | `node --test tests/unit/game.test.js`: expected 15 pass / 1 fail, `Invalid URL` for missing configuration. |
+| [final-fix-browser-red.log](final-fix-browser-red.log) | Focused new browser cases: 9 expected failures / 5 pass before fixes. Missing/invalid config breaks result presentation, unsafe protocol leaks into sharing, daily award text absent, and a second profile save incorrectly completes while the first is pending. Four deferred platform-boundary cases and archive exclusion already pass. |
+| [final-fix-privacy-red.log](final-fix-privacy-red.log) | Strengthened privacy test replayed against the original `719b8e0` controller, then automatically restored: final UI says public, server listed=true, and 2 overlapping POSTs instead of 1. |
+| [final-fix-unit-green.log](final-fix-unit-green.log) | `node --test tests/unit/game.test.js tests/unit/leaderboard.test.js`: 36/36 pass. |
+| [final-fix-browser-green.log](final-fix-browser-green.log) | `env -u NO_COLOR npm run test:browser -- tests/browser/sharing.spec.js tests/browser/accounts.spec.js`: 40/40 pass. Final full runs below also include the strengthened final-state privacy assertion. |
+| [final-fix-tests.log](final-fix-tests.log) | `npm test`: 115/115 unit + 25/25 database pass, no failures/skips. |
+| [final-fix-vendor.log](final-fix-vendor.log) | `npm run vendor:check`: official SDK bundle/license/provenance byte-identical. |
+| [final-fix-staging.log](final-fix-staging.log), [final-fix-manifest-proof.log](final-fix-manifest-proof.log) | `npm run stage` after all runtime changes; independent enumeration and SHA-256/source comparison confirms exactly 18 allowlisted files. |
+| [final-fix-browser-root.log](final-fix-browser-root.log) | `env -u NO_COLOR npm run test:browser`: 74/74 pass. |
+| [final-fix-browser-staged.log](final-fix-browser-staged.log) | `env -u NO_COLOR CHARTERSCHOODLE_TEST_ROOT=_site npm run test:browser`: 74/74 pass. |
+| [final-fix-browser-prefix.log](final-fix-browser-prefix.log) | `env -u NO_COLOR CHARTERSCHOODLE_TEST_ROOT=_site CHARTERSCHOODLE_TEST_PREFIX=/CharterSchoodle/ npm run test:browser`: 74/74 pass. |
+| [final-fix-release-code.log](final-fix-release-code.log), [final-fix-release-public.log](final-fix-release-public.log) | `npm run check:release -- --code`: exit 0; `npm run check:release`: expected exit 2, unchanged real blockers and activation false. |
+
+The current automated evidence includes the existing submitted guest-import consent and reopened-profile presentation test, account isolation, archive exclusion and spoiler-free format checks. The privacy queue is per controller/account; it does not claim distributed ordering across independently open browsers. The public release gate remains blocked by the existing backup/migration, live ownership, callback settings, recipient delivery and deployed-candidate checks. Existing domain/TLS evidence was not refreshed.
+
+## Historical automated evidence before final review fixes
 
 Node 22.23.3; Playwright 1.64.1 using `/home/space/.cache/ms-playwright/chromium-1228/chrome-linux64/chrome`. Commands ran with `PATH=/tmp/node-v22.23.3-linux-x64/bin:$PATH` exported as a shell assignment. Browser commands used `env -u NO_COLOR` to remove the inherited NO_COLOR/FORCE_COLOR conflict. Saved logs normalize CRLF/trailing whitespace only; results are unchanged. Tests block production Supabase requests; account endpoints are intercepted exact fixtures.
 
