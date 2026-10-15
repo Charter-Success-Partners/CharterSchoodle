@@ -32,7 +32,7 @@
     />
     <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=20261015-public-launch" />
     <link rel="apple-touch-icon" href="./favicon.png?v=20261015-public-launch" />
-    <link rel="stylesheet" href="./style.css?v=20261015-ui-r1" />
+    <link rel="stylesheet" href="./style.css?v=20261015-ui-r2" />
   </head>
   <body>
     <div class="app-shell">
@@ -44,7 +44,7 @@
             alt="Charter Success Partners logo"
           />
           <div>
-            <h1>CharterSchoodle</h1>
+            <h1>Charter<wbr>Schoodle</h1>
             <p class="hero__lede">A daily NC charter-school game</p>
           </div>
         </div>
@@ -70,7 +70,7 @@
               aria-controls="how-to-play"
               aria-haspopup="dialog"
             >
-              ?
+              <span data-ui-icon="help" aria-hidden="true"></span>
             </button>
             <dialog id="how-to-play" class="help-dialog" aria-labelledby="help-title">
               <h2 id="help-title">How to play</h2>
@@ -86,27 +86,27 @@
               <div class="icon-key">
                 <div class="key-group">
                   <div class="key-group__title">Result</div>
-                  <div class="key-row"><span class="board-icon board-icon--good">✓</span><span>Correct school</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--bad">✕</span><span>Wrong school</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--muted">•</span><span>Round not played yet</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--good" data-ui-icon="check" aria-hidden="true"></span><span>Correct school</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--bad" data-ui-icon="cross" aria-hidden="true"></span><span>Wrong school</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--muted" data-ui-icon="dot" aria-hidden="true"></span><span>Round not played yet</span></div>
                 </div>
                 <div class="key-group">
                   <div class="key-group__title">Size</div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same band</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">↑</span><span>Answer is larger</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">↓</span><span>Answer is smaller</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="equal" aria-hidden="true"></span><span>Same band</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="north" aria-hidden="true"></span><span>Answer is larger</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="south" aria-hidden="true"></span><span>Answer is smaller</span></div>
                 </div>
                 <div class="key-group">
                   <div class="key-group__title">Grades</div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same span</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">→</span><span>Answer serves older grades</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">←</span><span>Answer serves younger grades</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">↔</span><span>Answer has a different span</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="equal" aria-hidden="true"></span><span>Same span</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="east" aria-hidden="true"></span><span>Answer serves older grades</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="west" aria-hidden="true"></span><span>Answer serves younger grades</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="span" aria-hidden="true"></span><span>Answer has a different span</span></div>
                 </div>
                 <div class="key-group">
                   <div class="key-group__title">Direction</div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">↗</span><span>Travel that direction</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">◎</span><span>Same location</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="northeast" aria-hidden="true"></span><span>Travel that direction</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="location" aria-hidden="true"></span><span>Same location</span></div>
                 </div>
               </div>
             </dialog>
@@ -303,6 +303,6 @@
     </dialog>
 
     <script src="./src/supabase-config.js"></script>
-    <script type="module" src="./src/app.js?v=20261015-ui-r1"></script>
+    <script type="module" src="./src/app.js?v=20261015-ui-r2"></script>
   </body>
 </html>

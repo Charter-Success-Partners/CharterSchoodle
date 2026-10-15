@@ -792,10 +792,10 @@ function renderSchoolMap() {
 
   elements.mapContainer.innerHTML = `
     <div class="map-zoom-controls" aria-label="Map zoom controls">
-      <button class="map-zoom-button" type="button" data-map-zoom="out" aria-label="Zoom out" title="Zoom out">−</button>
+      <button class="map-zoom-button" type="button" data-map-zoom="out" aria-label="Zoom out" title="Zoom out">${iconMarkup("minus")}</button>
       <span class="map-zoom-status" data-map-zoom-status>${Math.round(state.map.zoom * 100)}%</span>
-      <button class="map-zoom-button" type="button" data-map-zoom="in" aria-label="Zoom in" title="Zoom in">+</button>
-      <button class="map-zoom-button" type="button" data-map-zoom="reset" aria-label="Reset map view" title="Reset map view">↺</button>
+      <button class="map-zoom-button" type="button" data-map-zoom="in" aria-label="Zoom in" title="Zoom in">${iconMarkup("plus")}</button>
+      <button class="map-zoom-button" type="button" data-map-zoom="reset" aria-label="Reset map view" title="Reset map view">${iconMarkup("reset")}</button>
     </div>
     <div class="nc-map-frame" style="aspect-ratio: ${NC_MAP_RATIO}" aria-label="North Carolina charter school locations">
       <div class="nc-map-canvas">
@@ -1167,6 +1167,10 @@ function renderLeaderboardView() {
   elements.leaderboardRetry.classList.toggle("is-hidden", board.status !== "error" || !available);
   const metricLabel = { points: "Points", winStreak: "Win streak", attemptStreak: "Attempt streak" }[board.sort];
   elements.leaderboardRounds.setAttribute("aria-busy", String(board.status === "loading"));
+  const emptyGuidance = accountProfile?.listed
+    ? "Play today's puzzle to post your first score."
+    : accountProfile ? "Your profile is private. To appear in public rankings, choose Edit profile and enable public visibility."
+    : "Join the leaderboard and play today's puzzle to post your first score.";
   elements.leaderboardRounds.innerHTML = board.status === "ready" && board.records.length
     ? board.records.map(row => {
       const own = accountProfile?.listed && row.publicId === accountProfile.publicId;
@@ -1187,7 +1191,7 @@ function renderLeaderboardView() {
         </details>
       </li>`;
     }).join("")
-    : `<li class="leaderboard-empty">${board.status === "loading" ? "Loading public rankings…" : board.status === "ready" ? "No public scores yet. Join the leaderboard and play today's puzzle to post your first score." : "Public rankings are unavailable. You can keep playing."}</li>`;
+    : `<li class="leaderboard-empty">${board.status === "loading" ? "Loading public rankings…" : board.status === "ready" ? `No public scores yet. ${emptyGuidance}` : "Public rankings are unavailable. You can keep playing."}</li>`;
   renderHeader();
   renderScoreSummary();
 }
@@ -1390,8 +1394,31 @@ function compassDirection(fromCoordinates, toCoordinates) {
   return directions[Math.round(bearing / 45) % directions.length];
 }
 
+// Authored geometry shared by feedback, the explanatory key, and map controls.
+// Labels stay in adjacent text or the native button's accessible name.
+function iconMarkup(name) {
+  const arrowAngles = { north: 0, northeast: 45, east: 90, southeast: 135, south: 180, southwest: 225, west: 270, northwest: 315 };
+  const shapes = {
+    check: '<path d="m5 12 4 4 10-10"/>',
+    cross: '<path d="m6 6 12 12M18 6 6 18"/>',
+    dot: '<circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>',
+    equal: '<path d="M5 9h14M5 15h14"/>',
+    span: '<path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/>',
+    location: '<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/>',
+    help: '<path d="M8.5 8a3.5 3.5 0 0 1 7 0c0 2.5-3.5 2.5-3.5 5"/><circle cx="12" cy="17.5" r="1" fill="currentColor" stroke="none"/>',
+    minus: '<path d="M5 12h14"/>',
+    plus: '<path d="M5 12h14M12 5v14"/>',
+    reset: '<path d="M5 10a7 7 0 1 1 1 7M5 4v6h6"/>',
+  };
+  const geometry = Object.hasOwn(arrowAngles, name)
+    ? `<g transform="rotate(${arrowAngles[name]} 12 12)"><path d="M12 20V4m-6 6 6-6 6 6"/></g>`
+    : shapes[name] || shapes.help;
+  return `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${geometry}</svg>`;
+}
+
 function feedbackIcon(symbol, variant, label) {
-  return `<span class="board-icon board-icon--${variant}" aria-hidden="true">${escapeHtml(symbol)}</span><span>${escapeHtml(label)}</span>`;
+  const names = { "✓": "check", "✕": "cross", "•": "dot", "＝": "equal", "?": "help", "↔": "span", "◎": "location", "↑": "north", "↗": "northeast", "→": "east", "↘": "southeast", "↓": "south", "↙": "southwest", "←": "west", "↖": "northwest" };
+  return `<span class="board-icon board-icon--${variant}" aria-hidden="true">${iconMarkup(names[symbol])}</span><span>${escapeHtml(label)}</span>`;
 }
 
 function renderResultIcon(correct) {
@@ -1798,8 +1825,11 @@ function initializeAccounts() {
     try {
       if (auth.state.userId) {
         if (onboarding.pending?.owner !== auth.state.userId || onboarding.pending?.displayName !== elements.joinName.value.trim() || onboarding.pending?.school !== elements.joinSchool.value.trim()) onboarding.prepare({ displayName: elements.joinName.value, school: elements.joinSchool.value }, { active: true });
-        await finishJoin(accountRevision);
+        const revision = accountRevision;
+        const joined = await finishJoin(revision);
+        if (revision !== accountRevision) return;
         refreshOwnerSessions();
+        if (joined && state.mode === "leaderboard") void refreshRankings();
       } else if (joinMode === "join") {
         // Resends keep the same consent and request identity; edits replace them.
         if (auth.state.phase === "sent" && !emailEditing && onboarding.pending) {
@@ -1867,6 +1897,9 @@ function initializeAccounts() {
 }
 
 async function init() {
+  document.querySelectorAll("[data-ui-icon]").forEach(element => {
+    element.innerHTML = iconMarkup(element.dataset.uiIcon);
+  });
   elements.mapSearch.addEventListener("input", () => {
     state.map.resultLimit = 5;
     renderMapResults();
