@@ -14,7 +14,9 @@ for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await game.open();
     await noOverflow(page);
-    await expect(page.locator('#board-rounds > li')).toHaveCount(6);
+    await expect(page.locator('#attempt-progress > li')).toHaveCount(6);
+    await expect(page.locator('#board-rounds > li')).toHaveCount(0);
+    await expect(page.locator('#active-clue')).toBeVisible();
     await touchSize(page.getByRole('button', { name: 'Submit', exact: true }));
     await touchSize(page.getByRole('button', { name: 'How to play', exact: true }));
     expect(await page.getByLabel('Guess the school').evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(16);

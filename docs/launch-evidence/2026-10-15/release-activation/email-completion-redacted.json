@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-10-15T19:15:59.540527+00:00",
+  "status": "passed",
+  "owner_confirmed_email_delivery": true,
+  "owner_confirmed_successful_sign_in": true,
+  "owner_confirmation": "okay i have signed in",
+  "confirmation_source": "Owner response to the requesting-browser sign-in check in this session",
+  "browser_completion_observer": "Owner",
+  "backend_observation": {
+    "synthetic_operator_accounts_excluded": 3,
+    "verified_non_operator_signins_since_request": 1,
+    "latest_email_confirmed_at": "2026-10-15 19:06:00.314447+00",
+    "latest_sign_in_at": "2026-10-15 19:06:02.865514+00",
+    "all_differ_from_original_test_address": true
+  },
+  "original_test_address_observation": {
+    "observed_at": "2026-10-15T19:14:54.109748+00:00",
+    "email_confirmed": false,
+    "signed_in_since_test_request": false
+  },
+  "interpretation": "The owner confirmed receipt and successful browser sign-in. Production Auth independently records one verified non-operator sign-in after the initial request. That account uses a different email from the original delivery-test address; the original address remains unconfirmed. The browser completion is owner-confirmed, not directly observed by the operator.",
+  "related_evidence": [
+    "email-request-redacted.json",
+    "email-delivery-redacted.json",
+    "deployed-callback-recovery-redacted.json",
+    "deployed-accounts-redacted.json"
+  ],
+  "follow_up_actions": "Read-only Auth verification and documentation updates; no additional email sent or account records modified.",
+  "privacy": "No email address, Auth ID, email body, callback URL, code, token, or credential is included."
+}

@@ -32,7 +32,7 @@
     />
     <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=20261015-public-launch" />
     <link rel="apple-touch-icon" href="./favicon.png?v=20261015-public-launch" />
-    <link rel="stylesheet" href="./style.css?v=20261015-public-launch" />
+    <link rel="stylesheet" href="./style.css?v=20261015-ui-r2" />
   </head>
   <body>
     <div class="app-shell">
@@ -44,25 +44,22 @@
             alt="Charter Success Partners logo"
           />
           <div>
-            <p class="eyebrow">Charter Success Partners Presents</p>
-            <h1>CharterSchoodle</h1>
-            <p class="hero__lede">
-              Six clues. Six guesses. One North Carolina charter school.
-            </p>
+            <h1>Charter<wbr>Schoodle</h1>
+            <p class="hero__lede">A daily NC charter-school game</p>
           </div>
         </div>
 
-        <div class="hero__meta">
-          <button class="mode-button is-active" data-mode="daily" type="button">
+        <nav class="hero__meta" aria-label="Choose a view">
+          <button class="mode-button is-active" data-mode="daily" aria-pressed="true" type="button">
             Daily Puzzle
           </button>
-          <button class="mode-button" data-mode="archive" type="button">
+          <button class="mode-button" data-mode="archive" aria-pressed="false" type="button">
             Past Puzzles
           </button>
-          <button class="mode-button" data-mode="leaderboard" type="button">
+          <button class="mode-button" data-mode="leaderboard" aria-pressed="false" type="button">
             Leaderboard
           </button>
-          <button class="mode-button" data-mode="map" type="button">
+          <button class="mode-button" data-mode="map" aria-pressed="false" type="button">
             Map
           </button>
           <div class="help-popover">
@@ -73,7 +70,7 @@
               aria-controls="how-to-play"
               aria-haspopup="dialog"
             >
-              ?
+              <span data-ui-icon="help" aria-hidden="true"></span>
             </button>
             <dialog id="how-to-play" class="help-dialog" aria-labelledby="help-title">
               <h2 id="help-title">How to play</h2>
@@ -89,32 +86,32 @@
               <div class="icon-key">
                 <div class="key-group">
                   <div class="key-group__title">Result</div>
-                  <div class="key-row"><span class="board-icon board-icon--good">✓</span><span>Correct school</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--bad">✕</span><span>Wrong school</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--muted">•</span><span>Round not played yet</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--good" data-ui-icon="check" aria-hidden="true"></span><span>Correct school</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--bad" data-ui-icon="cross" aria-hidden="true"></span><span>Wrong school</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--muted" data-ui-icon="dot" aria-hidden="true"></span><span>Round not played yet</span></div>
                 </div>
                 <div class="key-group">
                   <div class="key-group__title">Size</div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same band</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">↑</span><span>Answer is larger</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">↓</span><span>Answer is smaller</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="equal" aria-hidden="true"></span><span>Same band</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="north" aria-hidden="true"></span><span>Answer is larger</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="south" aria-hidden="true"></span><span>Answer is smaller</span></div>
                 </div>
                 <div class="key-group">
                   <div class="key-group__title">Grades</div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">＝</span><span>Same span</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">→</span><span>Answer serves older grades</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">←</span><span>Answer serves younger grades</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--warn">↔</span><span>Answer has a different span</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="equal" aria-hidden="true"></span><span>Same span</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="east" aria-hidden="true"></span><span>Answer serves older grades</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="west" aria-hidden="true"></span><span>Answer serves younger grades</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--warn" data-ui-icon="span" aria-hidden="true"></span><span>Answer has a different span</span></div>
                 </div>
                 <div class="key-group">
                   <div class="key-group__title">Direction</div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">↗</span><span>Travel that direction</span></div>
-                  <div class="key-row"><span class="board-icon board-icon--neutral">◎</span><span>Same location</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="northeast" aria-hidden="true"></span><span>Travel that direction</span></div>
+                  <div class="key-row"><span class="board-icon board-icon--neutral" data-ui-icon="location" aria-hidden="true"></span><span>Same location</span></div>
                 </div>
               </div>
             </dialog>
           </div>
-        </div>
+        </nav>
       </header>
 
       <div class="account-controls" aria-label="Leaderboard account">
@@ -127,18 +124,10 @@
         <section class="panel panel--primary">
           <div class="panel__header">
             <div class="puzzle-title">
-              <p class="panel__eyebrow" id="puzzle-label">Daily puzzle</p>
               <h2 id="puzzle-date-heading">Loading...</h2>
+              <p id="puzzle-label">Daily puzzle</p>
             </div>
-            <div class="header-score">
-              <div class="header-score__summary">
-                <h3>Your Score</h3>
-                <p id="score-status">Daily results only</p>
-              </div>
-              <div class="guess-counter">
-                <span id="guess-counter">0 / 6</span>
-              </div>
-            </div>
+            <p id="guess-summary" class="guess-counter"><span id="guess-counter">0 / 6</span><span>Guesses used</span></p>
           </div>
 
           <div id="archive-controls" class="archive-controls is-hidden">
@@ -151,7 +140,7 @@
             <button id="new-daily-button" class="secondary-button" type="button">Play today’s puzzle</button>
           </div>
 
-          <div class="status-banner" role="status">
+          <div id="game-status" class="status-banner" role="status" aria-live="polite">
             <div>
               <strong id="status-title">Welcome</strong>
               <p id="status-message">
@@ -164,84 +153,57 @@
 
           <button id="retry-data" class="secondary-button is-hidden" type="button">Retry</button>
 
-          <section id="leaderboard-panel" class="leaderboard-panel is-hidden">
-            <div class="section-heading">
-              <h3>Leaderboard</h3>
-              <p id="leaderboard-summary">Daily puzzle scoring</p>
-            </div>
-            <div class="score-grid">
-              <div class="score-metric">
-                <span class="score-metric__label">Points</span>
-                <strong id="score-total">0</strong>
-              </div>
-              <div class="score-metric">
-                <span class="score-metric__label">Win Streak</span>
-                <strong id="score-win-streak">0</strong>
-              </div>
-              <div class="score-metric">
-                <span class="score-metric__label">Attempt Streak</span>
-                <strong id="score-attempt-streak">0</strong>
-              </div>
-              <div class="score-metric">
-                <span class="score-metric__label">Avg Guess</span>
-                <strong id="score-average">—</strong>
-              </div>
-            </div>
+          <section id="leaderboard-panel" class="leaderboard-panel is-hidden" aria-label="Community rankings">
+            <p id="leaderboard-summary">Public daily puzzle scores</p>
             <div class="leaderboard-controls" aria-label="Leaderboard sort">
-              <button class="leaderboard-sort is-active" data-leaderboard-sort="points" type="button">
-                Points
-              </button>
-              <button class="leaderboard-sort" data-leaderboard-sort="winStreak" type="button">
-                Win Streak
-              </button>
-              <button class="leaderboard-sort" data-leaderboard-sort="attemptStreak" type="button">
-                Attempt Streak
-              </button>
+              <button class="leaderboard-sort is-active" data-leaderboard-sort="points" type="button" aria-pressed="true">Points</button>
+              <button class="leaderboard-sort" data-leaderboard-sort="winStreak" type="button" aria-pressed="false">Win Streak</button>
+              <button class="leaderboard-sort" data-leaderboard-sort="attemptStreak" type="button" aria-pressed="false">Attempt Streak</button>
             </div>
-            <div class="leaderboard-wrap">
-              <table class="leaderboard-table">
-                <thead>
-                  <tr>
-                    <th>Rank</th>
-                    <th>Player</th>
-                    <th>School</th>
-                    <th>Pts</th>
-                    <th>Solved</th>
-                    <th>Win</th>
-                    <th>Attempt</th>
-                    <th>Avg</th>
-                  </tr>
-                </thead>
-                <tbody id="leaderboard-body"></tbody>
-              </table>
-            </div>
+            <ol id="leaderboard-body" class="leaderboard-list" aria-label="Public rankings"></ol>
             <div id="leaderboard-pagination" class="leaderboard-pagination is-hidden">
-              <button id="leaderboard-prev" class="leaderboard-page-button" type="button">
-                Previous
-              </button>
+              <button id="leaderboard-prev" class="leaderboard-page-button" type="button">Previous</button>
               <span id="leaderboard-page-status" class="leaderboard-page-status">Page 1 of 1</span>
-              <button id="leaderboard-next" class="leaderboard-page-button" type="button">
-                Next
-              </button>
+              <button id="leaderboard-next" class="leaderboard-page-button" type="button">Next</button>
             </div>
-            <p id="leaderboard-sync-status" class="leaderboard-sync-status" role="status" aria-live="polite"></p>
+            <p id="leaderboard-sync-status" class="field-help" role="status" aria-live="polite"></p>
             <button id="leaderboard-retry" class="secondary-button is-hidden" type="button">Retry rankings</button>
+            <details id="personal-scores" class="personal-scores">
+              <summary>Your daily stats</summary>
+              <p id="personal-score-context" class="field-help"></p>
+              <div class="score-grid">
+                <div><span>Points</span><strong id="score-total">0</strong></div>
+                <div><span>Win streak</span><strong id="score-win-streak">0</strong></div>
+                <div><span>Attempt streak</span><strong id="score-attempt-streak">0</strong></div>
+                <div><span>Average guesses</span><strong id="score-average">—</strong></div>
+              </div>
+              <p id="score-status" class="field-help">Daily results only</p>
+            </details>
           </section>
 
-          <section id="map-panel" class="map-panel is-hidden">
-            <div class="section-heading">
-              <h3>School Map</h3>
-              <p id="map-summary">All mapped NC charter schools</p>
-            </div>
+          <section id="map-panel" class="map-panel is-hidden" aria-label="School map and finder">
+            <p id="map-summary" class="field-help">All mapped NC charter schools</p>
             <div id="school-map" class="school-map" aria-label="North Carolina charter school map"></div>
+            <div class="map-finder">
+              <label for="map-search">Find a school</label>
+              <input id="map-search" type="search" autocomplete="off" placeholder="School, city, or county" aria-describedby="map-result-status" />
+              <p id="map-result-status" class="field-help" role="status" aria-live="polite"></p>
+              <ul id="map-results" class="map-results" aria-label="Matching schools on the map"></ul>
+              <button id="map-more" class="secondary-button" type="button">Show more schools</button>
+            </div>
+            <section id="map-selection" class="map-selection" aria-labelledby="map-selection-title" aria-live="polite" hidden>
+              <h3 id="map-selection-title"></h3>
+              <dl id="map-selection-facts"></dl>
+            </section>
           </section>
 
-          <section id="board-panel" class="board-panel">
-            <div class="section-heading">
-              <h3>Board</h3>
-              <p id="clue-progress">1 clue visible</p>
-            </div>
-            <ol id="board-rounds" class="board-rounds" aria-label="Puzzle rounds"></ol>
+          <section id="board-panel" class="board-panel" aria-label="Current clue">
+            <ol id="attempt-progress" class="attempt-progress" aria-label="Six guesses"></ol>
+            <section id="active-clue" class="active-clue" aria-labelledby="active-clue-title">
+              <h3 id="active-clue-title">Clue 1</h3>
+              <p id="active-clue-text">Loading the first clue…</p>
+            </section>
+            <p id="clue-progress" class="sr-only">1 clue visible</p>
           </section>
 
           <form id="guess-form" class="guess-form">
@@ -253,7 +215,7 @@
                 type="text"
                 disabled
                 autocomplete="off"
-                placeholder="Start typing an official school name"
+                placeholder="Start typing a school name"
                 aria-describedby="guess-help"
                 role="combobox"
                 aria-autocomplete="list"
@@ -263,25 +225,41 @@
               <button class="primary-button" type="submit" disabled>Submit</button>
             </div>
             <p id="guess-help" class="field-help">
-              Guesses must be selected from the remaining official school list.
+              Choose a school from the suggestions, then submit.
             </p>
             <ul id="autocomplete-list" class="autocomplete-list is-hidden" role="listbox" aria-label="Matching schools"></ul>
             <p id="suggestion-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
           </form>
+          <section id="guess-history" class="guess-history" aria-labelledby="history-title" hidden>
+            <h3 id="history-title">Your guesses</h3>
+            <ol id="board-rounds" class="board-rounds" aria-label="Completed guesses"></ol>
+          </section>
         </section>
       </main>
     </div>
 
     <dialog id="email-dialog" class="account-dialog" aria-labelledby="email-title">
       <h2 id="email-title">Join the leaderboard</h2>
-      <p>Sign in by email to keep your daily scores across devices. You choose whether your profile is public.</p>
+      <p id="email-intro">Choose your public name, then confirm your email to finish joining.</p>
       <form id="email-form" class="account-form">
-        <label for="account-email">Email address</label>
-        <input id="account-email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-help" autofocus />
-        <p id="email-help" class="field-help">Open the sign-in link in this browser. Your email is never shown on the leaderboard.</p>
-        <button id="email-submit" class="primary-button" type="submit">Send sign-in link</button>
+        <div id="join-fields">
+          <label for="join-name">Your display name</label>
+          <input id="join-name" type="text" required autocomplete="nickname" aria-describedby="join-name-help" autofocus />
+          <p id="join-name-help" class="field-help">Use 1–60 characters. Other players can use the same name.</p>
+          <label for="join-school">Your school or organization (optional)</label>
+          <input id="join-school" type="text" autocomplete="organization" />
+          <p id="join-notice" class="field-help">Joining makes your display name, optional affiliation, and daily aggregate stats public. Your email and individual guesses stay private. Joining includes today’s guest game from this browser; older guest and archive games stay here. An existing account game takes priority. You can hide your entry later in Edit profile.</p>
+        </div>
+        <div id="email-fields">
+          <label for="account-email">Email address</label>
+          <input id="account-email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-help" />
+          <p id="email-help" class="field-help">Open the confirmation link in this browser. Your details are retained here for 24 hours.</p>
+        </div>
+        <button id="email-submit" class="primary-button" type="submit">Join leaderboard</button>
       </form>
       <p id="email-status" role="status" aria-live="polite"></p>
+      <button id="email-edit" class="secondary-button" type="button" hidden>Edit details or email</button>
+      <button id="email-mode" class="secondary-button" type="button">Already joined? Sign in</button>
       <button id="email-close" class="secondary-button" type="button">Close sign-in</button>
     </dialog>
 
@@ -320,11 +298,11 @@
       </div>
       <div class="result-actions">
         <button id="result-archive" class="secondary-button" type="button">Past Puzzles</button>
-        <button id="win-close-button" class="primary-button" type="button" autofocus>Keep Browsing</button>
+        <button id="win-close-button" class="secondary-button" type="button" autofocus>Keep Browsing</button>
       </div>
     </dialog>
 
     <script src="./src/supabase-config.js"></script>
-    <script type="module" src="./src/app.js?v=20261015-public-launch"></script>
+    <script type="module" src="./src/app.js?v=20261015-ui-r2"></script>
   </body>
 </html>

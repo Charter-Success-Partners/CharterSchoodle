@@ -1,0 +1,21 @@
+# Approved direction — CharterSchoodle UI/UX
+
+Owner approved on October 15: full redesign, retain CSP branding; active clue and school picker together; readable mobile rankings; one join-details form -> confirm email -> automatic ready account. Include today's guest game with clear initial notice. Owner chose this over signup-only work. PRODUCT.md is confirmed product authority. The saved full critique is .impeccable/critique/2026-10-15T19-32-03Z__index-html.md.
+
+Mode: Operate. This is an existing daily game and established CSP world; no brand replacement, fabricated claims, marketing hero, image concept tournament, or new creative raster assets are needed. The specifically approved composition is the authority. Rebuild the layout within the established identity rather than retaining the placeholder-heavy board composition.
+
+First viewport: compact CSP/CharterSchoodle header and direct navigation; today's date and clearly labeled guesses used; the active real clue; the school picker and submit action adjacent to it. The first phone view must demonstrate the game and permit a guess. No full unplayed round blocks before the input. Use a compact six-attempt progress treatment and completed-guess history below the active task. Preserve all real clues/feedback and the six-guess rules.
+
+Visual system: cream/white ground; CSP deep green for the one primary task; sage for secondary/navigation; stone text. Open Sans consistently across platforms. Intentional size/weight hierarchy, comfortable body text and support text, restrained 12–16px rounding. No eyebrow/kicker clutter, repeated card shells, decorative gradients, heavy pill styling for entire navigation, repeated score banners, or fake icons. Brand is color, type and the supplied logo, not a large marketing block. Keep visible selection/caret/scrollbar/focus treatments. Table numerals tabular. Use authored SVG geometry if icons are needed; no emoji icon costume.
+
+Signature interaction: submitting an incorrect guess advances the active clue while the completed guess and labeled comparison feedback join a compact history; keyboard focus and live status keep the next action clear. One subtle clue/state transition if appropriate, with a meaningful static reduced-motion version; content visible by default.
+
+Leaderboard: community people first. Separate optional personal summary from community ranking. Intact display names and affiliations on phones; rank plus selected metric immediately readable; other allowed aggregate stats available through a clear detail mechanism. Keep three supported sorts and five public entries per page. No horizontal-scroll puzzle, no eight compressed columns, no Company score. Guest/unlisted/empty/loading/error/own-public-entry states must make sense.
+
+Joining: task 1 supplies verified, owner-bound automatic setup and today's-guest carryover. Treat the one join form, check-email, resend/edit/retry, automatic saving, ready, returning sign-in and profile settings as coherent states. The Join action makes the stated public fields public only after verification. Existing profiles and privacy never get reset by sign-in. A user should not see Create profile after completing the new join flow.
+
+Map: preserve geographic proportions and pin alignment on mobile. Dense 18px pins cannot be the only practical way to find/select a school; add a clear accessible search/list alternative with usable target sizes. Keep existing school facts and map zoom/pan functionality. Avoid an enormous school list consuming the whole view; progressive disclosure/search is appropriate.
+
+Results/archive/help: preserve spoiler-free sharing, actual daily point text, archive non-scoring, native dialogs and keyboard behavior. One primary result action; remove redundant/competing status and content. Keep help findable.
+
+Verification: behavioral regressions first; complete implementation before screenshots. Then one batched visual inspection across desktop/mobile 320/390/768/1440 and necessary states, one grouped fix pass, at most one confirmation. Exactly one changed-UI detector after code is complete. Existing review screenshots are incumbent evidence, not the new implementation pass. No fake pass claims, no production writes/emails, no deployment without later approval.

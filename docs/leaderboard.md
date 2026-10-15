@@ -4,11 +4,15 @@ Guest play needs no profile or email. Guest progress stays in the browser; if br
 
 ## Optional accounts
 
-Choose **Join leaderboard** to request an email sign-in link. Open the link in the requesting browser. The local, pinned Supabase SDK handles PKCE, session refresh, and bearer tokens. Account identity is accepted only after Auth verifies the user; display names never establish ownership.
+Choose **Join leaderboard** and enter a display name of 1–60 characters, an optional school or organization of up to 80 characters, and an email address in one form. The notice explains that joining makes the name, optional affiliation, and daily aggregate scores public; email and individual guesses stay private. Joining includes today's eligible guest game from that browser. An existing account game takes priority; older guest games, numeric-only legacy scores, and archives are not imported.
 
-After signing in, create a profile with a display name of 1–60 characters and an optional school or organization of up to 80 characters. Public participation is unchecked by default. Saving an unlisted profile keeps daily scores private. **Edit profile** can change the name or school and hide the public entry without changing the account identity. Escape or the close button returns focus to the game’s account control.
+Open the confirmation link in the requesting browser. Your form details are retained for 24 hours. The pinned Supabase SDK completes PKCE and verifies the recipient; the prepared profile and eligible game are saved automatically. No second profile form is required. A signed-in player whose email is already verified can join directly. Interrupted setup retains the details for **Retry account sync** without another email; check-email controls allow resending or correcting details. Modern Chromium verifies cross-tab completion with Web Locks; cross-tab behavior in the non-Web-Locks fallback remains unverified.
 
-**Include today’s guest result from this browser** is optional and unchecked. Only a current North Carolina day result with actual ordered guesses can be imported, once per account/date. An existing remote result takes priority. Older guest history and numeric-only legacy scores are never imported. Signing in by itself imports nothing. Two players can safely use the same display name.
+Returning players choose **Already joined? Sign in** and enter only their email. Sign-in preserves existing profile fields and privacy and does not import a guest game. Display names never establish ownership, and two players can use the same name.
+
+**Edit profile** changes the public name or affiliation and can hide the entry while retaining private scores and account identity. Its separate **Include today's guest result from this browser** checkbox is optional and unchecked for later imports; the same existing-game and date protections apply. Escape or the close button returns focus to the account control.
+
+A new public profile appears in rankings after its first daily attempt, rather than as a zero-game row. Rankings show five entries per page with the selected metric; native Score details disclosures expose the remaining allowed statistics. Personal totals are in Your daily stats.
 
 ## Scores and synchronization
 
@@ -22,7 +26,7 @@ The public leaderboard reads only `charterschoodle_leaderboard_page_v2`, five pl
 
 ## Configuration and release
 
-`src/supabase-config.js` keeps `leaderboardEnabled: false` until the reviewed rollout. The publishable key is intentionally public; never commit service-role keys or management tokens. Disabled or incomplete configuration cannot fall back to legacy writes.
+`src/supabase-config.js` currently has `leaderboardEnabled: true` after the approved original rollout. The UI redesign uses that existing protected backend and awaits separate publication approval. The publishable key is intentionally public; never commit service-role keys or management tokens. Disabled or incomplete configuration cannot fall back to legacy writes.
 
 `docs/supabase-leaderboard-v2.sql` defines the v2 profiles/results, owner RLS (`auth.uid() = user_id`), immutable public identity, result constraints, public aggregate RPC, and legacy write lockdown. The old `docs/supabase-leaderboard.sql` is historical; do not use it to activate v2. Existing legacy data remains recoverable and no names are claimed or migrated automatically.
 
@@ -33,8 +37,7 @@ Local checks: `npm test`, `npm run test:browser`, and `npm run vendor:check`. Br
 Use the [public launch runbook](public-launch-runbook.md) for the exact backup/migration,
 real A/B ownership checks, SMTP/canonical callback setup, designated-recipient email test,
 single deployment and deployed smoke sequence. The [readiness report](release-readiness.json)
-records each observation; [dated evidence](launch-evidence/2026-10-15/README.md) separates local fixtures
-from live checks. `npm run check:release -- --code` checks local completion; the default
+records each observation; [original launch evidence](launch-evidence/2026-10-15/README.md) and [redesign evidence](redesign-evidence/2026-10-15/README.md) separate live checks from the new local candidate. `npm run check:release -- --code` checks local completion; the default
 `npm run check:release` remains blocked until all production observations pass and the actual
 frontend flag is true. The checker reads the public config without executing it or printing keys.
 

@@ -55,9 +55,9 @@ export { expect };
 
 export const userA = 'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa';
 export const userB = 'bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb';
-export async function accountFixture(page, game, { user = userA, listed = false, history = [], existing = true } = {}) {
+export async function accountFixture(page, game, { user = userA, listed = false, history = [], existing = true, sharedState = null } = {}) {
   const origin = 'https://psashnygmlwkuvblbpzk.supabase.co';
-  const state = { user, profiles: existing ? [{ user_id: user, public_id: `public-${user}`, display_name: 'Same Name', school: '', listed }] : [], history, sent: [], fail: '', pageCalls: [] };
+  const state = sharedState || { user, profiles: existing ? [{ user_id: user, public_id: `public-${user}`, display_name: 'Same Name', school: '', listed }] : [], history, sent: [], fail: '', pageCalls: [] };
   const unexpected = [];
   await page.route('**/src/supabase-config.js', route => route.fulfill({ contentType: 'text/javascript', body: `window.CHARTERSCHOOLDLE_SUPABASE={url:${JSON.stringify(origin)},anonKey:'sb_publishable_fixture',leaderboardEnabled:true,publicUrl:${JSON.stringify(test.info().project.use.baseURL)}};` }));
   if (user) await page.addInitScript(user => {
@@ -66,12 +66,13 @@ export async function accountFixture(page, game, { user = userA, listed = false,
   await page.route(`${origin}/**`, async route => {
     const request = route.request(), url = new URL(request.url()), path = url.pathname;
     const reply = (json, status = 200) => route.fulfill({ status, json, headers: { 'access-control-allow-origin': '*' } });
-    const known = ['/auth/v1/user','/auth/v1/otp','/auth/v1/logout','/rest/v1/charterschoodle_profiles_v2','/rest/v1/charterschoodle_results_v2','/rest/v1/rpc/charterschoodle_leaderboard_page_v2'];
+    const known = ['/auth/v1/user','/auth/v1/token','/auth/v1/otp','/auth/v1/logout','/rest/v1/charterschoodle_profiles_v2','/rest/v1/charterschoodle_results_v2','/rest/v1/rpc/charterschoodle_leaderboard_page_v2'];
     if (!known.includes(path)) { unexpected.push(`${request.method()} ${url.href}`); return route.abort(); }
     if (request.method() === 'OPTIONS') return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'GET,POST,PATCH,OPTIONS' } });
     state.sent.push({ path, method: request.method(), data: request.postDataJSON() });
-    if (state.fail && path.includes(state.fail)) return reply({ message: 'Fixture unavailable' }, 503);
-    if (path === '/auth/v1/user') return reply({ id: state.user, email: 'fixture@example.test' });
+    if (state.fail && path.includes(state.fail) && (!state.failMethod || request.method() === state.failMethod)) return reply({ message: 'Fixture unavailable' }, 503);
+    if (path === '/auth/v1/token') return reply({ access_token: 'fixture-token', refresh_token: 'fixture-refresh', expires_in: 3600, token_type: 'bearer', user: { id: state.user, email: state.email || 'fixture@example.test' } });
+    if (path === '/auth/v1/user') return reply({ id: state.user, email: state.email || 'fixture@example.test' });
     if (path === '/auth/v1/otp' || path === '/auth/v1/logout') return reply({});
     if (path.endsWith('/charterschoodle_leaderboard_page_v2')) { const params=request.postDataJSON(); state.pageCalls.push(params); return reply({ rows: Array.from({length: params.p_page === 1 ? 5 : 1}, (_,i)=>({publicId:`public-${i}`,displayName:`Player ${i+1+(params.p_page-1)*5}`,school:'',rank:i+1+(params.p_page-1)*5,points:6,played:1,solved:1,winStreak:1,attemptStreak:1,average:1})), total:6,page:params.p_page,pageSize:5 }); }
     const profiles = path.endsWith('profiles_v2');
@@ -80,7 +81,9 @@ export async function accountFixture(page, game, { user = userA, listed = false,
       const data=request.postDataJSON();
       const value=profiles?{public_id:`public-${data.user_id}`,...values.find(x=>x.user_id===data.user_id),...data}:data;
       const index=values.findIndex(x=>x.user_id===value.user_id&&(profiles||x.puzzle_date===value.puzzle_date));
+      if(profiles && index>=0 && !url.searchParams.has('on_conflict')) return reply({code:'23505',message:'Profile already exists'},409);
       if(index<0) values.push(value); else values[index]=value;
+      if(profiles && state.loseProfileResponse) { state.loseProfileResponse=false; return route.abort('failed'); }
       return reply(request.headers().accept?.includes('object')?value:[value]);
     }
     const owner=url.searchParams.get('user_id')?.replace('eq.','');

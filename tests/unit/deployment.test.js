@@ -7,7 +7,7 @@ import { parse } from 'yaml';
 import { stageSite } from '../../scripts/stage-site.mjs';
 
 const required = ['.nojekyll', 'index.html', 'style.css', 'favicon.png',
-  'src/app.js', 'src/game.js', 'src/storage.js', 'src/dialog.js', 'src/auth.js', 'src/leaderboard.js', 'src/supabase-config.js',
+  'src/app.js', 'src/game.js', 'src/storage.js', 'src/dialog.js', 'src/auth.js', 'src/onboarding.js', 'src/leaderboard.js', 'src/supabase-config.js',
   'src/vendor/supabase.js', 'src/vendor/LICENSE.supabase', 'src/vendor/supabase-manifest.json',
   'assets/csp-logo-2026.png', 'assets/social-card.png', 'data/schools.json', 'data/puzzles.json'].sort();
 async function fixture(t) {

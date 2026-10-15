@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T21:30:01.742938Z",
+  "title": "Design System: CharterSchoodle",
+  "extensions": {
+    "colorMeta": {
+      "csp-green": {
+        "role": "primary",
+        "displayName": "CSP Green",
+        "canonical": "#8fd169",
+        "tonalRamp": [
+          "oklch(15% 0.15238 135.22)",
+          "oklch(26.43% 0.15238 135.22)",
+          "oklch(37.86% 0.15238 135.22)",
+          "oklch(49.29% 0.15238 135.22)",
+          "oklch(60.71% 0.15238 135.22)",
+          "oklch(72.14% 0.15238 135.22)",
+          "oklch(83.57% 0.15238 135.22)",
+          "oklch(95% 0.15238 135.22)"
+        ]
+      },
+      "csp-green-deep": {
+        "role": "primary",
+        "displayName": "CSP Green Deep",
+        "canonical": "#2e7c01",
+        "tonalRamp": [
+          "oklch(15% 0.16075 138.45)",
+          "oklch(26.43% 0.16075 138.45)",
+          "oklch(37.86% 0.16075 138.45)",
+          "oklch(49.29% 0.16075 138.45)",
+          "oklch(60.71% 0.16075 138.45)",
+          "oklch(72.14% 0.16075 138.45)",
+          "oklch(83.57% 0.16075 138.45)",
+          "oklch(95% 0.16075 138.45)"
+        ]
+      },
+      "csp-sage": {
+        "role": "secondary",
+        "displayName": "CSP Sage",
+        "canonical": "#4c6970",
+        "tonalRamp": [
+          "oklch(15% 0.03562 214.26)",
+          "oklch(26.43% 0.03562 214.26)",
+          "oklch(37.86% 0.03562 214.26)",
+          "oklch(49.29% 0.03562 214.26)",
+          "oklch(60.71% 0.03562 214.26)",
+          "oklch(72.14% 0.03562 214.26)",
+          "oklch(83.57% 0.03562 214.26)",
+          "oklch(95% 0.03562 214.26)"
+        ]
+      },
+      "csp-slate": {
+        "role": "secondary",
+        "displayName": "CSP Slate",
+        "canonical": "#365b5e",
+        "tonalRamp": [
+          "oklch(15% 0.04261 202.34)",
+          "oklch(26.43% 0.04261 202.34)",
+          "oklch(37.86% 0.04261 202.34)",
+          "oklch(49.29% 0.04261 202.34)",
+          "oklch(60.71% 0.04261 202.34)",
+          "oklch(72.14% 0.04261 202.34)",
+          "oklch(83.57% 0.04261 202.34)",
+          "oklch(95% 0.04261 202.34)"
+        ]
+      },
+      "csp-stone": {
+        "role": "neutral",
+        "displayName": "CSP Stone",
+        "canonical": "#585551",
+        "tonalRamp": [
+          "oklch(15% 0.00752 75.34)",
+          "oklch(26.43% 0.00752 75.34)",
+          "oklch(37.86% 0.00752 75.34)",
+          "oklch(49.29% 0.00752 75.34)",
+          "oklch(60.71% 0.00752 75.34)",
+          "oklch(72.14% 0.00752 75.34)",
+          "oklch(83.57% 0.00752 75.34)",
+          "oklch(95% 0.00752 75.34)"
+        ]
+      },
+      "csp-stone-soft": {
+        "role": "neutral",
+        "displayName": "CSP Stone Soft",
+        "canonical": "#b5b1a9",
+        "tonalRamp": [
+          "oklch(15% 0.01213 84.58)",
+          "oklch(26.43% 0.01213 84.58)",
+          "oklch(37.86% 0.01213 84.58)",
+          "oklch(49.29% 0.01213 84.58)",
+          "oklch(60.71% 0.01213 84.58)",
+          "oklch(72.14% 0.01213 84.58)",
+          "oklch(83.57% 0.01213 84.58)",
+          "oklch(95% 0.01213 84.58)"
+        ]
+      },
+      "csp-cream": {
+        "role": "neutral",
+        "displayName": "CSP Cream",
+        "canonical": "#f7f8f4",
+        "tonalRamp": [
+          "oklch(15% 0.00538 117.92)",
+          "oklch(26.43% 0.00538 117.92)",
+          "oklch(37.86% 0.00538 117.92)",
+          "oklch(49.29% 0.00538 117.92)",
+          "oklch(60.71% 0.00538 117.92)",
+          "oklch(72.14% 0.00538 117.92)",
+          "oklch(83.57% 0.00538 117.92)",
+          "oklch(95% 0.00538 117.92)"
+        ]
+      },
+      "csp-white": {
+        "role": "neutral",
+        "displayName": "CSP White",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      },
+      "csp-sun": {
+        "role": "tertiary",
+        "displayName": "CSP Sun",
+        "canonical": "#e8e6a6",
+        "tonalRamp": [
+          "oklch(15% 0.08230 106.42)",
+          "oklch(26.43% 0.08230 106.42)",
+          "oklch(37.86% 0.08230 106.42)",
+          "oklch(49.29% 0.08230 106.42)",
+          "oklch(60.71% 0.08230 106.42)",
+          "oklch(72.14% 0.08230 106.42)",
+          "oklch(83.57% 0.08230 106.42)",
+          "oklch(95% 0.08230 106.42)"
+        ]
+      },
+      "surface-secondary": {
+        "role": "neutral",
+        "displayName": "Surface Secondary",
+        "canonical": "#eef2ed",
+        "tonalRamp": [
+          "oklch(15% 0.00786 139.44)",
+          "oklch(26.43% 0.00786 139.44)",
+          "oklch(37.86% 0.00786 139.44)",
+          "oklch(49.29% 0.00786 139.44)",
+          "oklch(60.71% 0.00786 139.44)",
+          "oklch(72.14% 0.00786 139.44)",
+          "oklch(83.57% 0.00786 139.44)",
+          "oklch(95% 0.00786 139.44)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#dce2d8",
+        "tonalRamp": [
+          "oklch(15% 0.01488 132.48)",
+          "oklch(26.43% 0.01488 132.48)",
+          "oklch(37.86% 0.01488 132.48)",
+          "oklch(49.29% 0.01488 132.48)",
+          "oklch(60.71% 0.01488 132.48)",
+          "oklch(72.14% 0.01488 132.48)",
+          "oklch(83.57% 0.01488 132.48)",
+          "oklch(95% 0.01488 132.48)"
+        ]
+      },
+      "text-strong": {
+        "role": "neutral",
+        "displayName": "Text Strong",
+        "canonical": "#303e35",
+        "tonalRamp": [
+          "oklch(15% 0.02406 156.73)",
+          "oklch(26.43% 0.02406 156.73)",
+          "oklch(37.86% 0.02406 156.73)",
+          "oklch(49.29% 0.02406 156.73)",
+          "oklch(60.71% 0.02406 156.73)",
+          "oklch(72.14% 0.02406 156.73)",
+          "oklch(83.57% 0.02406 156.73)",
+          "oklch(95% 0.02406 156.73)"
+        ]
+      },
+      "error": {
+        "role": "tertiary",
+        "displayName": "Error",
+        "canonical": "#903b2b",
+        "tonalRamp": [
+          "oklch(15% 0.11904 32.50)",
+          "oklch(26.43% 0.11904 32.50)",
+          "oklch(37.86% 0.11904 32.50)",
+          "oklch(49.29% 0.11904 32.50)",
+          "oklch(60.71% 0.11904 32.50)",
+          "oklch(72.14% 0.11904 32.50)",
+          "oklch(83.57% 0.11904 32.50)",
+          "oklch(95% 0.11904 32.50)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Primary Hover",
+        "canonical": "#245f05",
+        "tonalRamp": [
+          "oklch(15% 0.12995 138.26)",
+          "oklch(26.43% 0.12995 138.26)",
+          "oklch(37.86% 0.12995 138.26)",
+          "oklch(49.29% 0.12995 138.26)",
+          "oklch(60.71% 0.12995 138.26)",
+          "oklch(72.14% 0.12995 138.26)",
+          "oklch(83.57% 0.12995 138.26)",
+          "oklch(95% 0.12995 138.26)"
+        ]
+      },
+      "primary-active": {
+        "role": "primary",
+        "displayName": "Primary Active",
+        "canonical": "#1c4a03",
+        "tonalRamp": [
+          "oklch(15% 0.10867 137.78)",
+          "oklch(26.43% 0.10867 137.78)",
+          "oklch(37.86% 0.10867 137.78)",
+          "oklch(49.29% 0.10867 137.78)",
+          "oklch(60.71% 0.10867 137.78)",
+          "oklch(72.14% 0.10867 137.78)",
+          "oklch(83.57% 0.10867 137.78)",
+          "oklch(95% 0.10867 137.78)"
+        ]
+      },
+      "navigation-active": {
+        "role": "neutral",
+        "displayName": "Navigation Active",
+        "canonical": "#e6ece8",
+        "tonalRamp": [
+          "oklch(15% 0.00832 157.08)",
+          "oklch(26.43% 0.00832 157.08)",
+          "oklch(37.86% 0.00832 157.08)",
+          "oklch(49.29% 0.00832 157.08)",
+          "oklch(60.71% 0.00832 157.08)",
+          "oklch(72.14% 0.00832 157.08)",
+          "oklch(83.57% 0.00832 157.08)",
+          "oklch(95% 0.00832 157.08)"
+        ]
+      },
+      "feedback-good": {
+        "role": "tertiary",
+        "displayName": "Feedback Good",
+        "canonical": "#e3f1db",
+        "tonalRamp": [
+          "oklch(15% 0.03273 133.93)",
+          "oklch(26.43% 0.03273 133.93)",
+          "oklch(37.86% 0.03273 133.93)",
+          "oklch(49.29% 0.03273 133.93)",
+          "oklch(60.71% 0.03273 133.93)",
+          "oklch(72.14% 0.03273 133.93)",
+          "oklch(83.57% 0.03273 133.93)",
+          "oklch(95% 0.03273 133.93)"
+        ]
+      },
+      "feedback-bad": {
+        "role": "tertiary",
+        "displayName": "Feedback Bad",
+        "canonical": "#f8e9e4",
+        "tonalRamp": [
+          "oklch(15% 0.01773 39.40)",
+          "oklch(26.43% 0.01773 39.40)",
+          "oklch(37.86% 0.01773 39.40)",
+          "oklch(49.29% 0.01773 39.40)",
+          "oklch(60.71% 0.01773 39.40)",
+          "oklch(72.14% 0.01773 39.40)",
+          "oklch(83.57% 0.01773 39.40)",
+          "oklch(95% 0.01773 39.40)"
+        ]
+      },
+      "feedback-warn": {
+        "role": "tertiary",
+        "displayName": "Feedback Warn",
+        "canonical": "#f4efdb",
+        "tonalRamp": [
+          "oklch(15% 0.02693 95.35)",
+          "oklch(26.43% 0.02693 95.35)",
+          "oklch(37.86% 0.02693 95.35)",
+          "oklch(49.29% 0.02693 95.35)",
+          "oklch(60.71% 0.02693 95.35)",
+          "oklch(72.14% 0.02693 95.35)",
+          "oklch(83.57% 0.02693 95.35)",
+          "oklch(95% 0.02693 95.35)"
+        ]
+      },
+      "feedback-warn-ink": {
+        "role": "tertiary",
+        "displayName": "Feedback Warn Ink",
+        "canonical": "#716018",
+        "tonalRamp": [
+          "oklch(15% 0.09054 95.20)",
+          "oklch(26.43% 0.09054 95.20)",
+          "oklch(37.86% 0.09054 95.20)",
+          "oklch(49.29% 0.09054 95.20)",
+          "oklch(60.71% 0.09054 95.20)",
+          "oklch(72.14% 0.09054 95.20)",
+          "oklch(83.57% 0.09054 95.20)",
+          "oklch(95% 0.09054 95.20)"
+        ]
+      },
+      "selection-ink": {
+        "role": "neutral",
+        "displayName": "Selection Ink",
+        "canonical": "#234d18",
+        "tonalRamp": [
+          "oklch(15% 0.09448 139.65)",
+          "oklch(26.43% 0.09448 139.65)",
+          "oklch(37.86% 0.09448 139.65)",
+          "oklch(49.29% 0.09448 139.65)",
+          "oklch(60.71% 0.09448 139.65)",
+          "oklch(72.14% 0.09448 139.65)",
+          "oklch(83.57% 0.09448 139.65)",
+          "oklch(95% 0.09448 139.65)"
+        ]
+      },
+      "selection-ground": {
+        "role": "neutral",
+        "displayName": "Selection Ground",
+        "canonical": "#caeab7",
+        "tonalRamp": [
+          "oklch(15% 0.07585 133.97)",
+          "oklch(26.43% 0.07585 133.97)",
+          "oklch(37.86% 0.07585 133.97)",
+          "oklch(49.29% 0.07585 133.97)",
+          "oklch(60.71% 0.07585 133.97)",
+          "oklch(72.14% 0.07585 133.97)",
+          "oklch(83.57% 0.07585 133.97)",
+          "oklch(95% 0.07585 133.97)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Application name."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Panel and dialog headings."
+      },
+      "headline-mobile": {
+        "displayName": "Headline Mobile",
+        "purpose": "Panel and dialog headings at 600px and below."
+      },
+      "clue": {
+        "displayName": "Clue",
+        "purpose": "The real active clue; body size on mobile."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default page text and fields."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Compact controls."
+      },
+      "support": {
+        "displayName": "Support",
+        "purpose": "Explanations, affiliations, and status text."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Clue and section headings."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog-ambient",
+        "value": "0 24px 60px rgba(25,45,30,.24)",
+        "purpose": "Native dialog depth above a dimmed page."
+      },
+      {
+        "name": "sort-hover-outline",
+        "value": "inset 0 0 0 1px var(--csp-sage)",
+        "purpose": "Sort hover boundary, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-color",
+        "value": "background-color 160ms ease-out, color 160ms ease-out",
+        "purpose": "Shared action color transitions."
+      },
+      {
+        "name": "clue-update",
+        "value": "220ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Fade clue background from #edf5e7 to transparent."
+      },
+      {
+        "name": "confetti-fall",
+        "value": "1800ms linear forwards",
+        "purpose": "Authored base; runtime supplies 1400–2600ms durations and up to 240ms delay."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto !important",
+        "purpose": "Preference removes motion and hides the decorative confetti layer."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "header-wrap",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The next primary task, such as submitting a guess.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Submit</button>",
+      "css": ".ds-primary{font-family:\"Open Sans\",Arial,sans-serif;font-size:1rem;line-height:1.4;font-weight:600;min-height:44px;min-width:44px;border:1px solid transparent;border-radius:8px;padding:10px 14px;cursor:pointer;transition:background-color 160ms ease-out,color 160ms ease-out;background:var(--csp-green-deep,#2e7c01);color:var(--csp-white,#fff)}.ds-primary:hover:not(:disabled){background:#245f05}.ds-primary:active:not(:disabled){background:#1c4a03}.ds-primary:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}.ds-primary:disabled{opacity:.58;cursor:default}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Account, pagination, and supporting actions.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Join leaderboard</button>",
+      "css": ".ds-secondary{font-family:\"Open Sans\",Arial,sans-serif;font-size:1rem;line-height:1.4;font-weight:600;min-height:44px;min-width:44px;border:1px solid transparent;border-radius:8px;padding:10px 14px;cursor:pointer;transition:background-color 160ms ease-out,color 160ms ease-out;background:var(--csp-white,#fff);color:var(--csp-slate,#365b5e);border-color:var(--line,#dce2d8)}.ds-secondary:hover:not(:disabled){background:var(--surface-secondary,#eef2ed);border-color:var(--csp-sage,#4c6970)}.ds-secondary:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}.ds-secondary:disabled{opacity:.58;cursor:default}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A visible label, readable value, and persistent helper.",
+      "html": "<label class=\"ds-label\" for=\"ds-school\">Guess the school</label><input class=\"ds-input\" id=\"ds-school\" type=\"text\" placeholder=\"Start typing a school name\" aria-describedby=\"ds-help\"><p class=\"ds-help\" id=\"ds-help\">Choose a school from the suggestions, then submit.</p>",
+      "css": ".ds-label{display:block;font:600 1rem/1.5 \"Open Sans\",Arial,sans-serif;color:var(--csp-stone,#585551);margin-bottom:8px}.ds-input{font:400 1rem/1.5 \"Open Sans\",Arial,sans-serif;min-height:44px;min-width:0;max-width:100%;padding:10px 12px;background:var(--csp-white,#fff);color:var(--text-strong,#303e35);border:1px solid var(--csp-stone-soft,#b5b1a9);border-radius:8px;caret-color:var(--csp-green-deep,#2e7c01)}.ds-input::placeholder{color:var(--csp-stone,#585551);opacity:1}.ds-input:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}.ds-help{font:400 .875rem/1.5 \"Open Sans\",Arial,sans-serif;color:var(--csp-stone,#585551);margin:8px 0 0}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "View Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Direct views with a pale selected state.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Choose a view\"><button class=\"ds-mode ds-active\" aria-pressed=\"true\" type=\"button\">Daily Puzzle</button><button class=\"ds-mode\" aria-pressed=\"false\" type=\"button\">Past Puzzles</button><button class=\"ds-mode\" aria-pressed=\"false\" type=\"button\">Map</button></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:4px}.ds-mode{font-family:\"Open Sans\",Arial,sans-serif;font-size:1rem;line-height:1.4;font-weight:600;min-height:44px;min-width:44px;border:1px solid transparent;border-radius:8px;padding:10px 14px;cursor:pointer;transition:background-color 160ms ease-out,color 160ms ease-out;font-size:.875rem;border-radius:6px;background:transparent;color:var(--csp-sage,#4c6970);white-space:normal}.ds-mode.ds-active{background:#e6ece8;color:var(--csp-slate,#365b5e);border-bottom-color:var(--csp-sage,#4c6970)}.ds-mode:hover,.ds-mode:active{background:#e6ece8}.ds-mode:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}@media(max-width:600px){.ds-mode{flex:1 1 8em;padding:8px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Sort Chip",
+      "kind": "chip",
+      "refersTo": "sort-chip",
+      "description": "The selected public ranking metric.",
+      "html": "<div class=\"ds-sorts\" aria-label=\"Leaderboard sort\"><button class=\"ds-sort ds-sort-active\" aria-pressed=\"true\" type=\"button\">Points</button><button class=\"ds-sort\" aria-pressed=\"false\" type=\"button\">Win Streak</button></div>",
+      "css": ".ds-sorts{display:flex;flex-wrap:wrap;gap:6px}.ds-sort{font-family:\"Open Sans\",Arial,sans-serif;font-size:1rem;line-height:1.4;font-weight:600;min-height:44px;min-width:44px;border:1px solid transparent;border-radius:8px;padding:10px 14px;cursor:pointer;transition:background-color 160ms ease-out,color 160ms ease-out;padding:10px 12px;font-size:.875rem;background:var(--surface-secondary,#eef2ed);color:var(--csp-slate,#365b5e)}.ds-sort-active{background:var(--csp-sage,#4c6970);color:var(--csp-white,#fff)}.ds-sort:hover:not(:disabled){box-shadow:inset 0 0 0 1px var(--csp-sage,#4c6970)}.ds-sort:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}@media(max-width:600px){.ds-sort{padding:10px 8px;font-size:.8125rem}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Main Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "A single flat surface for the current view.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-panel-title\">Community rankings</h2><p class=\"ds-panel-copy\">Ranked by daily results. Choose a statistic to compare.</p></section>",
+      "css": ".ds-panel{padding:28px;background:var(--csp-white,#fff);border:1px solid var(--line,#dce2d8);border-radius:16px;color:var(--csp-stone,#585551);font:400 1rem/1.5 \"Open Sans\",Arial,sans-serif}.ds-panel-title{margin:0 0 20px;font-size:1.375rem;line-height:1.3;color:var(--text-strong,#303e35)}.ds-panel-copy{margin:0}@media(max-width:600px){.ds-panel{padding:16px}.ds-panel-title{font-size:1.125rem}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Labeled Feedback",
+      "kind": "custom",
+      "refersTo": "feedback-good",
+      "description": "Authored geometry remains decorative beside its meaning.",
+      "html": "<div class=\"ds-feedback\"><span class=\"ds-feedback-label\">Result</span><span class=\"ds-feedback-icon\" aria-hidden=\"true\"><svg class=\"ds-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"m5 12 4 4 10-10\"/></svg></span><span>Correct school</span></div>",
+      "css": ".ds-feedback{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font:400 .875rem/1.5 \"Open Sans\",Arial,sans-serif;color:var(--csp-stone,#585551)}.ds-feedback-label{flex-basis:100%;font-weight:600;color:var(--text-strong,#303e35)}.ds-feedback-icon{display:inline-grid;place-items:center;width:1.5em;min-width:22px;height:1.5em;flex:0 0 1.5em;border-radius:4px;background:#e3f1db;color:#245f05}.ds-svg{width:85%;height:85%}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Status Surface",
+      "kind": "card",
+      "refersTo": "status",
+      "description": "A quiet place for state and recovery information.",
+      "html": "<div class=\"ds-status\" role=\"status\"><strong>Puzzle in progress</strong><p>Compare the size, grades, and direction feedback.</p></div>",
+      "css": ".ds-status{padding:14px 16px;border-radius:12px;background:var(--surface-secondary,#eef2ed);color:var(--csp-stone,#585551);font:400 1rem/1.5 \"Open Sans\",Arial,sans-serif}.ds-status p{margin:4px 0 0;font-size:.875rem}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Ranking Entry",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "A readable identity and metric with native aggregate details.",
+      "html": "<ol class=\"ds-rank-list\"><li class=\"ds-rank-entry\"><div class=\"ds-rank-row\"><span class=\"ds-rank\">1</span><div class=\"ds-identity\"><strong>Community player</strong><p>School or organization</p></div><div class=\"ds-metric\"><strong>6</strong><span>Points</span></div></div><details class=\"ds-details\"><summary>Score details</summary><dl class=\"ds-stats\"><div><dt>Points</dt><dd>6</dd></div><div><dt>Solved / played</dt><dd>1 / 1</dd></div></dl></details></li></ol>",
+      "css": ".ds-rank-list{list-style:none;margin:0;padding:0;font:400 1rem/1.5 \"Open Sans\",Arial,sans-serif;color:var(--csp-stone,#585551)}.ds-rank-entry{padding:20px 0 10px;border-bottom:1px solid var(--line,#dce2d8)}.ds-rank-row{display:grid;grid-template-columns:28px minmax(0,1fr) 90px;gap:12px;align-items:start}.ds-rank{color:var(--csp-sage,#4c6970);font-variant-numeric:tabular-nums;padding-top:2px}.ds-identity{min-width:0;overflow-wrap:break-word}.ds-identity strong,.ds-metric strong{color:var(--text-strong,#303e35);font-weight:700}.ds-identity p{margin:4px 0 0;font-size:.875rem}.ds-metric{display:flex;flex-direction:column;text-align:right;font-variant-numeric:tabular-nums}.ds-metric strong{font-size:1.25rem}.ds-metric span{font-size:.875rem}.ds-details{margin:4px 0 0 40px}.ds-details summary{cursor:pointer;min-height:44px;padding:11px 0;color:var(--csp-slate,#365b5e);font-size:.875rem;font-weight:600}.ds-details summary::marker{color:var(--csp-sage,#4c6970)}.ds-details summary:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}.ds-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:4px 0 12px;font-size:.875rem}.ds-stats dt{font-weight:400}.ds-stats dd{margin:3px 0 0;font-weight:600;color:var(--text-strong,#303e35);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}@media(max-width:600px){.ds-rank-row{grid-template-columns:20px minmax(0,1fr) 64px;gap:8px}.ds-details{margin-left:28px}.ds-metric strong{font-size:1.125rem}.ds-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Account Dialog",
+      "kind": "custom",
+      "refersTo": "dialog",
+      "description": "Native bounded dialog with a retained-details state.",
+      "html": "<dialog class=\"ds-dialog\" open aria-labelledby=\"ds-dialog-title\"><h2 id=\"ds-dialog-title\">Check your email</h2><p>Open the confirmation link in this browser to continue.</p><p class=\"ds-sent\" role=\"status\">Your profile details are retained. Confirmation finishes joining automatically.</p><button class=\"ds-close\" type=\"button\">Close sign-in</button></dialog>",
+      "css": ".ds-dialog{width:min(540px,calc(100% - 24px));max-height:calc(100dvh - 24px);margin:auto;padding:28px;border:0;border-radius:16px;color:var(--csp-stone,#585551);background:var(--csp-white,#fff);box-shadow:0 24px 60px rgba(25,45,30,.24);overflow:auto;overflow-wrap:anywhere;font:400 1rem/1.5 \"Open Sans\",Arial,sans-serif}.ds-dialog::backdrop{background:rgba(30,44,36,.58)}.ds-dialog h2{margin:0 0 12px;color:var(--text-strong,#303e35);font-size:1.375rem;line-height:1.3}.ds-dialog p{margin:0}.ds-dialog .ds-sent{margin:16px 0;background:var(--surface-secondary,#eef2ed);padding:16px;border-radius:12px}.ds-close{font-family:\"Open Sans\",Arial,sans-serif;font-size:1rem;line-height:1.4;font-weight:600;min-height:44px;min-width:44px;border:1px solid transparent;border-radius:8px;padding:10px 14px;cursor:pointer;transition:background-color 160ms ease-out,color 160ms ease-out;background:var(--csp-white,#fff);color:var(--csp-slate,#365b5e);border-color:var(--line,#dce2d8)}.ds-close:hover{background:var(--surface-secondary,#eef2ed);border-color:var(--csp-sage,#4c6970)}.ds-close:focus-visible{outline:3px solid var(--csp-slate,#365b5e);outline-offset:3px}@media(max-width:600px){.ds-dialog{padding:22px 18px}.ds-dialog h2{font-size:1.125rem}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The CSP Daily Game",
+    "overview": "The CSP Daily Game carries the supplied Charter Success Partners logo, Open Sans, and the established green, sage, stone, cream, and white palette into a compact, practical interface. Quiet surfaces and a clear size-and-weight hierarchy give real school content and the next action priority.\n\nThe system is flat at rest: one main white panel, tonal state surfaces, and thin dividers organize the work. Small authored SVGs explain controls and feedback alongside readable labels. The brand comes from its existing identity assets, color, and type; it does not require a new illustrative world.",
+    "keyCharacteristics": [
+      "Compact task-first composition with readable supporting text.",
+      "Deep green primary actions; sage secondary actions and navigation.",
+      "Restrained curved corners, tonal feedback, and divider-led lists.",
+      "Native controls, visible focus, and deliberate mobile reflow."
+    ],
+    "rules": [
+      {
+        "name": "The Task Green Rule",
+        "body": "Use deep CSP green for the primary action and current or successful game state; keep secondary actions in sage or slate.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Use Open Sans throughout the interface; establish hierarchy with size, weight, and spacing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Keep page panels and list rows flat; reserve the ambient shadow for dialogs.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the supplied CSP logo and Open Sans with the established palette.",
+      "Do pair feedback icons with visible text and keep state changes available to live announcements.",
+      "Do let names, affiliations, clues, and field text wrap; preserve the selected ranking metric beside identity.",
+      "Do retain keyboard focus, the school finder alternative, and reduced-motion behavior.",
+      "Do expose public-listing and today-only guest carryover information before joining."
+    ],
+    "donts": [
+      "Don't replace native controls or labeled SVGs with emoji or font-glyph icons.",
+      "Don't add decorative gradients, repeated nested card shells, or pill navigation to this retained CSP system.",
+      "Don't use color alone to explain result, comparison, or selection states.",
+      "Don't compress rankings into a horizontally scrolling table or clip community names.",
+      "Don't make account or ranking failures block guest play."
+    ]
+  }
+}
