@@ -121,3 +121,66 @@ test('public_rankings_remain_available_after_signout',async({page,game})=>{
  await page.getByRole('button',{name:'Next',exact:true}).click();
  await expect(page.locator('#leaderboard-body')).toContainText('Player 6'); fixture.assertSafe();
 });
+
+for (const mode of ['daily', 'archive']) test(`first_profile_queues_only_owned_daily_progress_${mode}`, async ({ page, game }) => {
+  const fixture = await accountFixture(page, game, { existing: false });
+  await game.open();
+  await expect(page.getByRole('button', { name: 'Create profile', exact: true })).toBeVisible();
+  if (mode === 'archive') await page.getByRole('button', { name: 'Past Puzzles', exact: true }).click();
+  await game.guess(schools[0]);
+  await page.getByRole('button', { name: 'Keep Browsing', exact: true }).click();
+  expect(fixture.state.history).toEqual([]);
+  // Joining from another view must use daily score provenance, not the active board.
+  await page.getByRole('button', { name: 'Map', exact: true }).click();
+  await page.getByRole('button', { name: 'Create profile', exact: true }).click();
+  await page.getByLabel('Display name', { exact: true }).fill('First Profile');
+  await page.getByRole('button', { name: 'Save profile', exact: true }).click();
+  await expect(page.getByRole('dialog')).toBeHidden();
+  await expect(page.locator('#account-status')).toContainText(/saved privately/i);
+  if (mode === 'daily') {
+    await expect.poll(() => fixture.state.history.length).toBe(1);
+    expect(fixture.state.history[0]).toMatchObject(result());
+    await page.evaluate(user => {
+      for (const key of Object.keys(localStorage)) if (key.startsWith(`charterschoodle:v2:${user}:`)) localStorage.removeItem(key);
+    }, userA);
+    await page.reload();
+    await expect(page.locator('#status-title')).toHaveText('Solved');
+  } else {
+    expect(fixture.state.history).toEqual([]);
+  }
+  fixture.assertSafe();
+});
+
+test('pending_profile_save_preserves_captured_consent_and_reopened_form', async ({ page, game }) => {
+  const fixture = await accountFixture(page, game, { existing: false });
+  await page.addInitScript(({ date, id }) => localStorage.setItem('charterschoodle:v2:guest:results', JSON.stringify([
+    { date, answerSchoolId: id, guessedSchoolIds: [id], status: 'solved' },
+  ])), { date: today, id: schools[0].id });
+  let release, dispatched;
+  const held = new Promise(resolve => { release = resolve; });
+  const started = new Promise(resolve => { dispatched = resolve; });
+  await page.route('**/rest/v1/charterschoodle_profiles_v2*', async route => {
+    if (route.request().method() === 'POST') { dispatched(); await held; }
+    await route.fallback();
+  });
+  await game.open();
+  await page.getByRole('button', { name: 'Create profile', exact: true }).click();
+  await page.getByLabel('Display name', { exact: true }).fill('Submitted Profile');
+  await page.getByLabel('Include today’s guest result from this browser', { exact: true }).check();
+  await page.getByRole('button', { name: 'Save profile', exact: true }).click();
+  await started;
+  await page.getByRole('button', { name: 'Close profile', exact: true }).click();
+  await page.getByRole('button', { name: 'Create profile', exact: true }).click();
+  await page.getByLabel('Display name', { exact: true }).fill('Reopened Draft');
+  await page.getByLabel('School or organization (optional)', { exact: true }).fill('Draft School');
+  release();
+  await expect(page.locator('#account-status')).toContainText(/saved privately/i);
+  await expect.soft(page.getByRole('dialog', { name: 'Your leaderboard profile' })).toBeVisible();
+  await expect.soft(page.getByLabel('Display name', { exact: true })).toHaveValue('Reopened Draft');
+  await expect.soft(page.getByLabel('School or organization (optional)', { exact: true })).toBeFocused();
+  await expect.poll(() => fixture.state.history.length).toBe(1);
+  expect(fixture.state.profiles[0].display_name).toBe('Submitted Profile');
+  expect(await page.evaluate(user => JSON.parse(localStorage.getItem(`charterschoodle:v2:${user}:guest-imports`)), userA)).toMatchObject({ subject: userA, values: [today] });
+  await expect(page.getByRole('button', { name: 'Save profile', exact: true })).toBeEnabled();
+  fixture.assertSafe();
+});

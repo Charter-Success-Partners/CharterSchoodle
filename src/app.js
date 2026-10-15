@@ -200,6 +200,7 @@ let publicClient = null;
 let leaderboard = null;
 let accountProfile = null;
 let accountRevision = 0;
+let profilePresentation = 0;
 let syncing = false;
 let syncAgain = false;
 
@@ -1535,6 +1536,8 @@ async function refreshRankings() {
 }
 
 function showProfile() {
+  profilePresentation++;
+  elements.profileSubmit.disabled = false;
   const prefill = accountProfile || loadLegacyProfile(safeStorage);
   elements.profileName.value = prefill.displayName || "";
   elements.profileSchool.value = prefill.school || "";
@@ -1588,25 +1591,45 @@ function initializeAccounts() {
   elements.profileForm.addEventListener("submit", async event => {
     event.preventDefault();
     const revision = accountRevision;
+    const presentation = profilePresentation;
+    const ownsDialog = () => revision === accountRevision && presentation === profilePresentation && elements.profileDialog.open;
+    // The submitted choice remains authorized even if this dialog is dismissed.
+    // A reopened presentation owns its own fields, status, controls, and focus.
+    const submission = {
+      profile: { displayName: elements.profileName.value, school: elements.profileSchool.value, listed: elements.profileListed.checked },
+      include: elements.profileIncludeToday.checked,
+      date: ncToday(),
+      joining: !accountProfile,
+    };
     elements.profileSubmit.disabled = true;
     elements.profileStatus.textContent = "Saving profile…";
     try {
-      const profile = await leaderboard.saveProfile({ displayName: elements.profileName.value, school: elements.profileSchool.value, listed: elements.profileListed.checked });
+      const profile = await leaderboard.saveProfile(submission.profile);
       if (revision !== accountRevision) return;
       accountProfile = profile;
-      const include = elements.profileIncludeToday.checked;
-      const imported = await leaderboard.adoptTodayGuest({ confirmed: include, guestStore: storeFor("guest"), date: ncToday() });
+      if (submission.joining) {
+        // Account score entries are daily-only; archive progress and guest
+        // scorebooks are separate and never become implicit import sources.
+        for (const entry of state.store.readResults()) {
+          if (!entry.guessedSchoolIds) continue;
+          const progress = validateProgress({ guesses: entry.guessedSchoolIds.map(schoolId => ({ schoolId })) }, { schoolIds: new Set(state.schoolMap.keys()), answerId: entry.answerSchoolId });
+          if (progress) leaderboard.queueDailyResult({ date: entry.date, progress, answerSchoolId: entry.answerSchoolId, mode: "daily" });
+        }
+      }
+      const imported = await leaderboard.adoptTodayGuest({ confirmed: submission.include, guestStore: storeFor("guest"), date: submission.date });
       if (revision !== accountRevision) return;
       refreshOwnerSessions();
       renderAccount();
-      closeDialog(elements.profileDialog);
+      if (ownsDialog()) closeDialog(elements.profileDialog);
       await syncScores();
       if (revision !== accountRevision) return;
-      if (include && !imported) elements.accountStatus.textContent = "Profile saved. Today’s guest result was not added: it is empty, already imported, or your account already has a result.";
+      if (submission.include && !imported) elements.accountStatus.textContent = "Profile saved. Today’s guest result was not added: it is empty, already imported, or your account already has a result.";
       if (state.mode === "leaderboard") refreshRankings();
     } catch (error) {
-      if (revision === accountRevision && error.name !== "AbortError") elements.profileStatus.textContent = "Could not save the profile or add the guest result. Your entries are still here; try Save profile again.";
-    } finally { elements.profileSubmit.disabled = false; }
+      if (ownsDialog() && error.name !== "AbortError") elements.profileStatus.textContent = "Could not save the profile or add the guest result. Your entries are still here; try Save profile again.";
+    } finally {
+      if (revision === accountRevision && presentation === profilePresentation) elements.profileSubmit.disabled = false;
+    }
   });
   elements.leaderboardRetry.addEventListener("click", refreshRankings);
   window.addEventListener("online", () => { void syncScores(); });
