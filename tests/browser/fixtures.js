@@ -23,6 +23,12 @@ export const test = base.extend({
       }
       await route.continue();
     });
+    // Guest scenarios use an unavailable backend regardless of the release flag.
+    // Account scenarios install their explicit enabled configuration afterward.
+    await page.route('**/src/supabase-config.js', async route => {
+      const response = await route.fetch();
+      await route.fulfill({ response, body: `${await response.text()}\nwindow.CHARTERSCHOOLDLE_SUPABASE.leaderboardEnabled = false;` });
+    });
     await page.clock.install({ time: new Date('2026-10-15T16:00:00Z') });
     let calendar = puzzles;
     let fail = false;

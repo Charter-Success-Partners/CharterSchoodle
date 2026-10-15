@@ -1,6 +1,6 @@
 # Public launch runbook
 
-Updated October 15, 2026 after production backend setup. **Code readiness and public readiness are separate gates.** The reviewed migration, Auth configuration, and 47 live API ownership checks are complete; see the [production setup evidence](launch-evidence/2026-10-15/production-setup/README.md). PR #1 is open, `leaderboardEnabled` remains `false`, and the candidate has not been deployed or sent a sign-in email. The [readiness report](release-readiness.json) records the remaining email-completion and deployed-browser gates.
+Updated October 15, 2026 after production backend setup. **Code readiness and public readiness are separate gates.** The reviewed migration, Auth configuration, and 47 live API ownership checks are complete; see the [production setup evidence](launch-evidence/2026-10-15/production-setup/README.md). The owner has approved enabling the leaderboard, merging PR #1, and deploying. The candidate flag is now `true`; deployment and the first sign-in email are pending. The [readiness report](release-readiness.json) records the remaining email-completion and deployed-browser gates.
 
 ## Release owner and stop conditions
 

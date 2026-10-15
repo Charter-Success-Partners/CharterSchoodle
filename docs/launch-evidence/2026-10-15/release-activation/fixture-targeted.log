@@ -1,0 +1,12 @@
+
+> charterschoodle@1.0.0 test:browser
+> playwright test --grep packaged_metadata_uses_configured_public_url_and_real_social_image|correct_guess_persists|archive_play_never_records_daily_result --output=/tmp/charterschoodle-activation-results-targeted
+
+
+Running 3 tests using 2 workers
+
+  ✓  1 tests/browser/deployment.spec.js:3:1 › packaged_metadata_uses_configured_public_url_and_real_social_image (727ms)
+  ✓  2 tests/browser/guest.spec.js:70:1 › correct_guess_persists (1.2s)
+  ✓  3 tests/browser/guest.spec.js:108:1 › archive_play_never_records_daily_result (958ms)
+
+  3 passed (3.3s)
