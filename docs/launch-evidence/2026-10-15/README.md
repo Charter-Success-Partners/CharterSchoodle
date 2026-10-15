@@ -1,5 +1,7 @@
 # Launch verification evidence — October 15, 2026
 
+Production follow-up: the existing Supabase backend is now configured and 47 real API ownership checks passed. See the [production setup observations](production-setup/README.md) and the current [readiness record](../../release-readiness.json). Email callback completion and deployed-browser checks remain pending.
+
 This directory is durable evidence outside the static deployment allowlist. The readiness record is [../../release-readiness.json](../../release-readiness.json); the owner procedure is [../../public-launch-runbook.md](../../public-launch-runbook.md). Local fixture success does not establish live authorization or email delivery. No production writes, user creation, email, push or deployment occurred.
 
 ## Final review corrections and current automated evidence

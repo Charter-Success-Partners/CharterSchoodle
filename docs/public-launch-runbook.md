@@ -1,12 +1,18 @@
 # Public launch runbook
 
-Prepared October 15, 2026 for owner review. **Code readiness and public readiness are separate gates.** The implementation has not changed production, sent email, created users, pushed, or deployed. `leaderboardEnabled` remains `false`. The dated [readiness report](release-readiness.json) and [evidence](launch-evidence/2026-10-15/README.md) describe observations, not permission to launch.
+Updated October 15, 2026 after production backend setup. **Code readiness and public readiness are separate gates.** The reviewed migration, Auth configuration, and 47 live API ownership checks are complete; see the [production setup evidence](launch-evidence/2026-10-15/production-setup/README.md). PR #1 is open, `leaderboardEnabled` remains `false`, and the candidate has not been deployed or sent a sign-in email. The [readiness report](release-readiness.json) records the remaining email-completion and deployed-browser gates.
 
 ## Release owner and stop conditions
 
-Before execution, record the approving owner, operator, reviewed commit SHA, maintenance window, Supabase project identity, GitHub repository/Pages environment, backup location, and two consenting account holders A/B. The owner must explicitly designate the external email recipient and select/confirm the SMTP provider. No recipient, credentials, or administrator access was available during implementation. Keep credentials, mailbox addresses, Auth UUIDs, backups, and raw session responses in restricted owner storage; commit only redacted observations and evidence references.
+Before execution, record the approving owner, operator, reviewed commit SHA, maintenance window, Supabase project identity, GitHub repository/Pages environment, backup location, and two consenting account holders A/B. The owner must explicitly designate the external email recipient and select/confirm the SMTP provider. For this release, the owner has designated the recipient and explicitly approved the existing Resend SMTP configuration; access and configuration were verified in the dated production setup evidence. Keep credentials, mailbox addresses, Auth UUIDs, backups, and raw session responses in restricted owner storage; commit only redacted observations and evidence references.
 
 Keep the flag false until steps 1–5 pass. Stop on a missing backup, unexpected live schema/policy, mismatched legacy count, cross-owner access, email failure, or a callback/domain mismatch. Local PGlite and intercepted browser fixtures do not satisfy live checks. Do not run the historical `docs/supabase-leaderboard.sql`.
+
+## First-installation scope recorded October 15
+
+The owner selected fresh rankings with no historical-score transfer. Before installing v2, the operator inspected the live schema and verified that no v2 tables existed. A scoped backup captured the one affected legacy table, all 67 rows, and its schema/access policies; an isolated PGlite restore reproduced its rows and policies exactly. The reviewed migration also passed against that restored schema before live execution. This scoped backup satisfied the first-installation gate for changes limited to new v2 objects and the legacy table's access controls; it is not a full Supabase/Auth backup. Restricted backup storage and hashes are recorded in the production setup evidence. New rankings start from authenticated v2 results; the unused legacy table remains locked down.
+
+Two synthetic operator-owned accounts were subsequently created without sending mail and signed in through normal Auth to run the live API checks. They remain unlisted. Real-player email delivery and browser account switching still require the deployed checks below. The full-database backup procedure below remains the procedure for future migrations that change existing v2 or Auth records.
 
 ## 1. Inspect and back up the actual database
 
