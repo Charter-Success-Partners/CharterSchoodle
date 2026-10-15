@@ -1,0 +1,8 @@
+{
+  "stage": "email-requested",
+  "requested_at_unix": 1792088657,
+  "otp_status": 200,
+  "pkce_verifier_present": true,
+  "resend_cooldown": true,
+  "completion": "Awaiting owner confirmation from the owner requesting browser; connected mailbox search did not locate the designated message."
+}

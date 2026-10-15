@@ -1,0 +1,14 @@
+{
+  "legacy_rows": 67,
+  "cutover_date": "2026-10-15",
+  "operator_results": 3,
+  "operator_profiles": 3,
+  "designated_recipient": {
+    "exists": true,
+    "email_confirmed": false,
+    "last_sign_in_at": null,
+    "signed_in_since_request": false
+  },
+  "operator_listed_profiles": 0,
+  "observed_at": "2026-10-15T18:28:42.430050+00:00"
+}

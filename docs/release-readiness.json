@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "observedAt": "2026-10-15",
-  "scope": "Owner approved activation, PR merge and deployment. Candidate activation flag is true; real inbox callback completion and deployed browser smoke remain pending.",
+  "scope": "Activated, merged, and deployed revision bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa verified over HTTPS. Live guest/account/callback recovery checks passed. Owner confirmed email delivery and successful browser sign-in, corroborated by verified non-operator production Auth metadata.",
   "checks": {
     "unit": {
       "status": "passed",
@@ -44,14 +44,12 @@
       "evidence": "docs/launch-evidence/2026-10-15/production-setup/auth-config-after-redacted.json \u2014 production site URL and exact redirect allowlist verified through authenticated Management API after saving."
     },
     "externalRecipientEmail": {
-      "status": "blocked",
-      "evidence": "docs/launch-evidence/2026-10-15/production-setup/README.md, auth-config-after-redacted.json \u2014 existing Resend SMTP configured and authentication verified; owner designated recipient.",
-      "reason": "Candidate callback UI is not deployed. Request the agreed sign-in email from that deployed app, then confirm inbox delivery and requesting-browser PKCE completion."
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-completion-redacted.json, email-request-redacted.json, email-delivery-redacted.json \u2014 owner confirmed delivery and successful browser sign-in; read-only production Auth verifies one confirmed non-operator account signed in at 19:06 UTC, excluding all three synthetic operator accounts. The signed-in account differs from the original delivery-test address, which remains unconfirmed; completion is owner-observed."
     },
     "deployedSmoke": {
-      "status": "blocked",
-      "evidence": "docs/launch-evidence/2026-10-15/production-setup/README.md \u2014 Pages Actions, canonical domain, HTTPS enforcement and main deployment policy verified.",
-      "reason": "Owner approved deployment; candidate activation flag is true, but the release workflow and production browser checks have not completed."
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/release-activation/pages-run-redacted.json, deployed-assets-redacted.json, deployed-guest-smoke-redacted.json, deployed-accounts-redacted.json, deployed-callback-recovery-redacted.json \u2014 Pages run 38784885858 succeeded at bfdc42d; all 18 public assets match tested hashes; 34 guest checks/10 scenarios, 13 account checks and two callback-recovery checks passed; private test records remain unlisted."
     }
   }
 }
