@@ -1,0 +1,994 @@
+
+> charterschoodle@1.0.0 test
+> npm run test:unit && npm run test:db
+
+
+> charterschoodle@1.0.0 test:unit
+> node --test tests/unit/*.test.js
+
+TAP version 13
+# Subtest: disabled_auth_performs_no_network_request
+ok 1 - disabled_auth_performs_no_network_request
+  ---
+  duration_ms: 4.792879
+  type: 'test'
+  ...
+# Subtest: email_submission_is_explicit
+ok 2 - email_submission_is_explicit
+  ---
+  duration_ms: 3.490931
+  type: 'test'
+  ...
+# Subtest: unavailable_storage_does_not_send_link
+ok 3 - unavailable_storage_does_not_send_link
+  ---
+  duration_ms: 1.490306
+  type: 'test'
+  ...
+# Subtest: pkce_quota_failure_blocks_email_at_fetch_boundary
+ok 4 - pkce_quota_failure_blocks_email_at_fetch_boundary
+  ---
+  duration_ms: 76.161074
+  type: 'test'
+  ...
+# Subtest: link_request_has_resend_cooldown
+ok 5 - link_request_has_resend_cooldown
+  ---
+  duration_ms: 0.985033
+  type: 'test'
+  ...
+# Subtest: server_retry_after_controls_cooldown_without_promising_delivery
+ok 6 - server_retry_after_controls_cooldown_without_promising_delivery
+  ---
+  duration_ms: 16.979202
+  type: 'test'
+  ...
+# Subtest: expired_or_reused_callback_can_retry
+ok 7 - expired_or_reused_callback_can_retry
+  ---
+  duration_ms: 2.276106
+  type: 'test'
+  ...
+# Subtest: missing_pkce_verifier_returns_to_guest
+ok 8 - missing_pkce_verifier_returns_to_guest
+  ---
+  duration_ms: 1.651169
+  type: 'test'
+  ...
+# Subtest: callback_params_are_removed_on_success_and_failure
+ok 9 - callback_params_are_removed_on_success_and_failure
+  ---
+  duration_ms: 7.38594
+  type: 'test'
+  ...
+# Subtest: sdk_load_failure_keeps_guest
+ok 10 - sdk_load_failure_keeps_guest
+  ---
+  duration_ms: 1.749412
+  type: 'test'
+  ...
+# Subtest: failed_signout_clears_local_identity_and_blocks_old_callbacks_and_writes
+ok 11 - failed_signout_clears_local_identity_and_blocks_old_callbacks_and_writes
+  ---
+  duration_ms: 1.575579
+  type: 'test'
+  ...
+# Subtest: local_loader_uses_only_the_local_official_bundle_and_reports_failure
+ok 12 - local_loader_uses_only_the_local_official_bundle_and_reports_failure
+  ---
+  duration_ms: 2.103765
+  type: 'test'
+  ...
+# Subtest: network_timeout_aborts_at_ten_seconds
+ok 13 - network_timeout_aborts_at_ten_seconds
+  ---
+  duration_ms: 3.208364
+  type: 'test'
+  ...
+# Subtest: signout_during_email_request_cannot_restore_sent_state
+ok 14 - signout_during_email_request_cannot_restore_sent_state
+  ---
+  duration_ms: 1.616639
+  type: 'test'
+  ...
+# Subtest: old_signout_completion_preserves_a_new_links_verifier
+ok 15 - old_signout_completion_preserves_a_new_links_verifier
+  ---
+  duration_ms: 1.579129
+  type: 'test'
+  ...
+# Subtest: late_initial_guest_event_preserves_email_request_feedback
+ok 16 - late_initial_guest_event_preserves_email_request_feedback
+  ---
+  duration_ms: 1.00074
+  type: 'test'
+  ...
+# Subtest: signout_attempts_remote_revocation_with_the_old_session_only
+ok 17 - signout_attempts_remote_revocation_with_the_old_session_only
+  ---
+  duration_ms: 6.913183
+  type: 'test'
+  ...
+# Subtest: fabricated_cached_session_never_becomes_identity_without_server_verification
+ok 18 - fabricated_cached_session_never_becomes_identity_without_server_verification
+  ---
+  duration_ms: 4.100542
+  type: 'test'
+  ...
+# Subtest: server_verified_identity_overrides_cached_user_data
+ok 19 - server_verified_identity_overrides_cached_user_data
+  ---
+  duration_ms: 0.857741
+  type: 'test'
+  ...
+# Subtest: identity_verification_failures_retain_guest_mode
+ok 20 - identity_verification_failures_retain_guest_mode
+  ---
+  duration_ms: 2.564326
+  type: 'test'
+  ...
+# Subtest: verification_completion_cannot_authenticate_after_signout_or_client_replacement
+ok 21 - verification_completion_cannot_authenticate_after_signout_or_client_replacement
+  ---
+  duration_ms: 26.2054
+  type: 'test'
+  ...
+# Subtest: newer_session_event_wins_over_late_verification_success_or_failure
+ok 22 - newer_session_event_wins_over_late_verification_success_or_failure
+  ---
+  duration_ms: 2.185396
+  type: 'test'
+  ...
+# Subtest: email_success_error_and_throw_cannot_erase_a_newly_verified_identity
+ok 23 - email_success_error_and_throw_cannot_erase_a_newly_verified_identity
+  ---
+  duration_ms: 2.30999
+  type: 'test'
+  ...
+# Subtest: onboarding_identity_uses_only_server_verified_email_and_clears_on_signout
+ok 24 - onboarding_identity_uses_only_server_verified_email_and_clears_on_signout
+  ---
+  duration_ms: 0.697194
+  type: 'test'
+  ...
+# Subtest: join_request_identity_requires_the_matching_pkce_callback_and_verified_email
+ok 25 - join_request_identity_requires_the_matching_pkce_callback_and_verified_email
+  ---
+  duration_ms: 53.357594
+  type: 'test'
+  ...
+# Subtest: requesting_controller_cached_session_recovery_cannot_claim_pending_join
+ok 26 - requesting_controller_cached_session_recovery_cannot_claim_pending_join
+  ---
+  duration_ms: 11.362067
+  type: 'test'
+  ...
+# Subtest: stage_contains_required_public_files
+ok 27 - stage_contains_required_public_files
+  ---
+  duration_ms: 91.400432
+  type: 'test'
+  ...
+# Subtest: stage_excludes_private_and_research_artifacts
+ok 28 - stage_excludes_private_and_research_artifacts
+  ---
+  duration_ms: 91.886082
+  type: 'test'
+  ...
+# Subtest: stage_fails_for_missing_required_asset
+ok 29 - stage_fails_for_missing_required_asset
+  ---
+  duration_ms: 49.564421
+  type: 'test'
+  ...
+# Subtest: stage_accepts_only_cname_matching_configured_domain
+ok 30 - stage_accepts_only_cname_matching_configured_domain
+  ---
+  duration_ms: 74.49297
+  type: 'test'
+  ...
+# Subtest: stage_rejects_unsafe_output_without_deleting_sources
+ok 31 - stage_rejects_unsafe_output_without_deleting_sources
+  ---
+  duration_ms: 29.00165
+  type: 'test'
+  ...
+# Subtest: stage_rejects_protected_and_unapproved_output_directories_without_removing_contents
+    # Subtest: .git
+    ok 1 - .git
+      ---
+      duration_ms: 29.693276
+      type: 'test'
+      ...
+    # Subtest: docs
+    ok 2 - docs
+      ---
+      duration_ms: 28.589619
+      type: 'test'
+      ...
+    # Subtest: src
+    ok 3 - src
+      ---
+      duration_ms: 32.405836
+      type: 'test'
+      ...
+    # Subtest: data
+    ok 4 - data
+      ---
+      duration_ms: 41.292572
+      type: 'test'
+      ...
+    # Subtest: assets
+    ok 5 - assets
+      ---
+      duration_ms: 29.076197
+      type: 'test'
+      ...
+    # Subtest: build
+    ok 6 - build
+      ---
+      duration_ms: 28.865996
+      type: 'test'
+      ...
+    1..6
+ok 32 - stage_rejects_protected_and_unapproved_output_directories_without_removing_contents
+  ---
+  duration_ms: 193.111547
+  type: 'test'
+  ...
+# Subtest: stage_rejects_intermediate_symlink_output_without_removing_target_contents
+ok 33 - stage_rejects_intermediate_symlink_output_without_removing_target_contents
+  ---
+  duration_ms: 49.323637
+  type: 'test'
+  ...
+# Subtest: stage_rejects_symlink_at_designated_output_without_removing_link_or_target
+ok 34 - stage_rejects_symlink_at_designated_output_without_removing_link_or_target
+  ---
+  duration_ms: 41.42651
+  type: 'test'
+  ...
+# Subtest: only_one_pages_workflow_exists
+ok 35 - only_one_pages_workflow_exists
+  ---
+  duration_ms: 36.658648
+  type: 'test'
+  ...
+# Subtest: refresh_calls_reusable_deploy_with_commit_sha
+ok 36 - refresh_calls_reusable_deploy_with_commit_sha
+  ---
+  duration_ms: 5.48489
+  type: 'test'
+  ...
+# Subtest: social_card_rejects_callback_or_credential_urls_before_rendering
+ok 37 - social_card_rejects_callback_or_credential_urls_before_rendering
+  ---
+  duration_ms: 660.635868
+  type: 'test'
+  ...
+# Subtest: NC daily date changes at local midnight rather than UTC midnight
+ok 38 - NC daily date changes at local midnight rather than UTC midnight
+  ---
+  duration_ms: 4.418558
+  type: 'test'
+  ...
+# Subtest: NC dates survive both DST transitions and shifted midnight offsets
+ok 39 - NC dates survive both DST transitions and shifted midnight offsets
+  ---
+  duration_ms: 0.765408
+  type: 'test'
+  ...
+# Subtest: archive contains sorted distinct real ISO dates strictly before today
+ok 40 - archive contains sorted distinct real ISO dates strictly before today
+  ---
+  duration_ms: 2.68333
+  type: 'test'
+  ...
+# Subtest: progress rejects malformed, unknown, duplicate, seventh, and post-answer guesses
+ok 41 - progress rejects malformed, unknown, duplicate, seventh, and post-answer guesses
+  ---
+  duration_ms: 0.714281
+  type: 'test'
+  ...
+# Subtest: progress derives correctness and completion from school IDs instead of stored flags
+ok 42 - progress derives correctness and completion from school IDs instead of stored flags
+  ---
+  duration_ms: 0.756567
+  type: 'test'
+  ...
+# Subtest: progress normalizes revealed clues while preserving a valid saved reveal
+ok 43 - progress normalizes revealed clues while preserving a valid saved reveal
+  ---
+  duration_ms: 0.500072
+  type: 'test'
+  ...
+# Subtest: summary recomputes six-to-one solved points and the solved-only average
+ok 44 - summary recomputes six-to-one solved points and the solved-only average
+  ---
+  duration_ms: 2.911323
+  type: 'test'
+  ...
+# Subtest: summary has no average or division by zero without solved games
+ok 45 - summary has no average or division by zero without solved games
+  ---
+  duration_ms: 0.505971
+  type: 'test'
+  ...
+# Subtest: stale and missed calendar dates break current streaks while retaining best runs
+ok 46 - stale and missed calendar dates break current streaks while retaining best runs
+  ---
+  duration_ms: 1.097535
+  type: 'test'
+  ...
+# Subtest: unfinished current day preserves yesterday wins while unfinished prior day breaks them
+ok 47 - unfinished current day preserves yesterday wins while unfinished prior day breaks them
+  ---
+  duration_ms: 1.330728
+  type: 'test'
+  ...
+# Subtest: streaks cross DST, month, year, and leap-day boundaries as calendar days
+ok 48 - streaks cross DST, month, year, and leap-day boundaries as calendar days
+  ---
+  duration_ms: 0.912969
+  type: 'test'
+  ...
+# Subtest: summary keeps the latest duplicate record and excludes impossible or future dates
+ok 49 - summary keeps the latest duplicate record and excludes impossible or future dates
+  ---
+  duration_ms: 0.568394
+  type: 'test'
+  ...
+# Subtest: daily share has six spoiler-free cells and removes URL authentication parameters
+ok 50 - daily share has six spoiler-free cells and removes URL authentication parameters
+  ---
+  duration_ms: 0.596106
+  type: 'test'
+  ...
+# Subtest: archive loss share uses Archive and X/6 with six wrong cells
+ok 51 - archive loss share uses Archive and X/6 with six wrong cells
+  ---
+  duration_ms: 0.532851
+  type: 'test'
+  ...
+# Subtest: share URL excludes embedded account credentials as well as callback data
+ok 52 - share URL excludes embedded account credentials as well as callback data
+  ---
+  duration_ms: 0.322588
+  type: 'test'
+  ...
+# Subtest: sharing_uses_canonical_fallback_for_missing_or_invalid_configuration
+ok 53 - sharing_uses_canonical_fallback_for_missing_or_invalid_configuration
+  ---
+  duration_ms: 3.207628
+  type: 'test'
+  ...
+# Subtest: guest_cannot_queue_remote_results
+ok 54 - guest_cannot_queue_remote_results
+  ---
+  duration_ms: 4.706701
+  type: 'test'
+  ...
+# Subtest: archive_never_queues
+ok 55 - archive_never_queues
+  ---
+  duration_ms: 3.034912
+  type: 'test'
+  ...
+# Subtest: joining_does_not_import_old_guest_history
+ok 56 - joining_does_not_import_old_guest_history
+  ---
+  duration_ms: 1.605058
+  type: 'test'
+  ...
+# Subtest: matching_public_name_never_claims_history
+ok 57 - matching_public_name_never_claims_history
+  ---
+  duration_ms: 1.080842
+  type: 'test'
+  ...
+# Subtest: guest_import_requires_confirmation
+ok 58 - guest_import_requires_confirmation
+  ---
+  duration_ms: 2.886787
+  type: 'test'
+  ...
+# Subtest: same_date_import_has_one_receipt_per_account
+ok 59 - same_date_import_has_one_receipt_per_account
+  ---
+  duration_ms: 3.932537
+  type: 'test'
+  ...
+# Subtest: numeric_legacy_and_existing_remote_block_import
+ok 60 - numeric_legacy_and_existing_remote_block_import
+  ---
+  duration_ms: 1.388063
+  type: 'test'
+  ...
+# Subtest: account_switch_drops_stale_responses
+ok 61 - account_switch_drops_stale_responses
+  ---
+  duration_ms: 2.047887
+  type: 'test'
+  ...
+# Subtest: pending_a_never_dispatches_as_b
+ok 62 - pending_a_never_dispatches_as_b
+  ---
+  duration_ms: 2.105376
+  type: 'test'
+  ...
+# Subtest: conflicting_terminal_result_restores_remote
+ok 63 - conflicting_terminal_result_restores_remote
+  ---
+  duration_ms: 2.567817
+  type: 'test'
+  ...
+# Subtest: bad_remote_progress_cannot_crash
+ok 64 - bad_remote_progress_cannot_crash
+  ---
+  duration_ms: 1.072207
+  type: 'test'
+  ...
+# Subtest: outage_retains_pending_results
+ok 65 - outage_retains_pending_results
+  ---
+  duration_ms: 0.841275
+  type: 'test'
+  ...
+# Subtest: unlisted_profile_stays_private
+ok 66 - unlisted_profile_stays_private
+  ---
+  duration_ms: 1.330378
+  type: 'test'
+  ...
+# Subtest: personal_history_reads_all_server_pages
+ok 67 - personal_history_reads_all_server_pages
+  ---
+  duration_ms: 2.740151
+  type: 'test'
+  ...
+# Subtest: sort_race_cannot_overwrite_latest_page
+ok 68 - sort_race_cannot_overwrite_latest_page
+  ---
+  duration_ms: 0.803675
+  type: 'test'
+  ...
+# Subtest: remote_prefix_cannot_erase_more_advanced_pending
+ok 69 - remote_prefix_cannot_erase_more_advanced_pending
+  ---
+  duration_ms: 1.076031
+  type: 'test'
+  ...
+# Subtest: successful_old_write_cannot_acknowledge_newer_guess
+ok 70 - successful_old_write_cannot_acknowledge_newer_guess
+  ---
+  duration_ms: 1.703224
+  type: 'test'
+  ...
+# Subtest: profile_saves_commit_in_submission_order_even_when_first_is_delayed
+ok 71 - profile_saves_commit_in_submission_order_even_when_first_is_delayed
+  ---
+  duration_ms: 26.392174
+  type: 'test'
+  ...
+# Subtest: failed_profile_save_does_not_block_the_next_privacy_choice
+ok 72 - failed_profile_save_does_not_block_the_next_privacy_choice
+  ---
+  duration_ms: 1.525172
+  type: 'test'
+  ...
+# Subtest: queued_profile_save_cannot_dispatch_after_account_changes
+ok 73 - queued_profile_save_cannot_dispatch_after_account_changes
+  ---
+  duration_ms: 1.034361
+  type: 'test'
+  ...
+# Subtest: prepared_join_survives_callback_reload_and_imports_only_today_once
+ok 74 - prepared_join_survives_callback_reload_and_imports_only_today_once
+  ---
+  duration_ms: 25.324931
+  type: 'test'
+  ...
+# Subtest: join_requires_matching_verified_email_request_and_bound_owner
+ok 75 - join_requires_matching_verified_email_request_and_bound_owner
+  ---
+  duration_ms: 2.536292
+  type: 'test'
+  ...
+# Subtest: explicit_join_preserves_existing_fields_and_privacy_and_imports_today
+ok 76 - explicit_join_preserves_existing_fields_and_privacy_and_imports_today
+  ---
+  duration_ms: 2.301515
+  type: 'test'
+  ...
+# Subtest: profile_and_result_failures_retry_without_another_link_or_retyping
+ok 77 - profile_and_result_failures_retry_without_another_link_or_retyping
+  ---
+  duration_ms: 5.291399
+  type: 'test'
+  ...
+# Subtest: concurrent_completion_and_account_switch_never_cross_owners
+ok 78 - concurrent_completion_and_account_switch_never_cross_owners
+  ---
+  duration_ms: 18.913169
+  type: 'test'
+  ...
+# Subtest: invalid_expired_and_unpersistable_intents_do_not_join
+ok 79 - invalid_expired_and_unpersistable_intents_do_not_join
+  ---
+  duration_ms: 1.652166
+  type: 'test'
+  ...
+# Subtest: verified_profileless_account_can_join_directly_with_explicit_consent
+ok 80 - verified_profileless_account_can_join_directly_with_explicit_consent
+  ---
+  duration_ms: 1.537465
+  type: 'test'
+  ...
+# Subtest: joining_preserves_owned_daily_progress_ahead_of_guest_import
+ok 81 - joining_preserves_owned_daily_progress_ahead_of_guest_import
+  ---
+  duration_ms: 1.636798
+  type: 'test'
+  ...
+# Subtest: two_controllers_sharing_a_join_finish_profile_and_import_once
+ok 82 - two_controllers_sharing_a_join_finish_profile_and_import_once
+  ---
+  duration_ms: 3.24459
+  type: 'test'
+  ...
+# Subtest: retained_join_finishes_hours_later_without_importing_a_new_days_guest_game
+ok 83 - retained_join_finishes_hours_later_without_importing_a_new_days_guest_game
+  ---
+  duration_ms: 1.485351
+  type: 'test'
+  ...
+# Subtest: profile_created_elsewhere_during_join_keeps_its_fields_and_privacy
+ok 84 - profile_created_elsewhere_during_join_keeps_its_fields_and_privacy
+  ---
+  duration_ms: 8.802671
+  type: 'test'
+  ...
+# Subtest: replacing_a_pending_join_invalidates_old_async_completion
+ok 85 - replacing_a_pending_join_invalidates_old_async_completion
+  ---
+  duration_ms: 3.239626
+  type: 'test'
+  ...
+# Subtest: small_clock_correction_keeps_a_prepared_join_usable
+ok 86 - small_clock_correction_keeps_a_prepared_join_usable
+  ---
+  duration_ms: 1.203281
+  type: 'test'
+  ...
+# Subtest: committed_profile_with_lost_response_retries_consented_game_after_reload
+ok 87 - committed_profile_with_lost_response_retries_consented_game_after_reload
+  ---
+  duration_ms: 1.845467
+  type: 'test'
+  ...
+# Subtest: explicit_join_with_existing_profile_keeps_existing_owner_result
+ok 88 - explicit_join_with_existing_profile_keeps_existing_owner_result
+  ---
+  duration_ms: 1.230695
+  type: 'test'
+  ...
+# Subtest: cancel_during_adoption_read_prevents_all_import_mutations
+ok 89 - cancel_during_adoption_read_prevents_all_import_mutations
+  ---
+  duration_ms: 1.748976
+  type: 'test'
+  ...
+# Subtest: replace_during_adoption_read_prevents_all_import_mutations
+ok 90 - replace_during_adoption_read_prevents_all_import_mutations
+  ---
+  duration_ms: 1.393121
+  type: 'test'
+  ...
+# Subtest: same_name_token_prefers_alternative_sourced_clue
+ok 91 - same_name_token_prefers_alternative_sourced_clue
+  ---
+  duration_ms: 6.975818
+  type: 'test'
+  ...
+# Subtest: curated_difficulties_do_not_increase
+ok 92 - curated_difficulties_do_not_increase
+  ---
+  duration_ms: 1.054353
+  type: 'test'
+  ...
+# Subtest: sparse_pool_keeps_six_clues_and_reports_redundancy
+ok 93 - sparse_pool_keeps_six_clues_and_reports_redundancy
+  ---
+  duration_ms: 0.575713
+  type: 'test'
+  ...
+# Subtest: published_objects_remain_identical
+ok 94 - published_objects_remain_identical
+  ---
+  duration_ms: 15.965316
+  type: 'test'
+  ...
+# Subtest: published_dates_missing_from_draft_are_kept
+ok 95 - published_dates_missing_from_draft_are_kept
+  ---
+  duration_ms: 0.702995
+  type: 'test'
+  ...
+# Subtest: same_inputs_have_identical_puzzles
+ok 96 - same_inputs_have_identical_puzzles
+  ---
+  duration_ms: 3.796652
+  type: 'test'
+  ...
+# Subtest: generator_preserves_published_and_is_deterministic_with_validated_override
+ok 97 - generator_preserves_published_and_is_deterministic_with_validated_override
+  ---
+  duration_ms: 991.018718
+  type: 'test'
+  ...
+# Subtest: generator_default_uses_NC_date_before_UTC_midnight
+ok 98 - generator_default_uses_NC_date_before_UTC_midnight
+  ---
+  duration_ms: 240.764067
+  type: 'test'
+  ...
+# Subtest: local_passes_do_not_imply_public_readiness
+ok 99 - local_passes_do_not_imply_public_readiness
+  ---
+  duration_ms: 5.574916
+  type: 'test'
+  ...
+# Subtest: missing_production_evidence_stays_blocked
+ok 100 - missing_production_evidence_stays_blocked
+  ---
+  duration_ms: 0.566575
+  type: 'test'
+  ...
+# Subtest: disabled_leaderboard_cannot_be_public_ready
+ok 101 - disabled_leaderboard_cannot_be_public_ready
+  ---
+  duration_ms: 0.418376
+  type: 'test'
+  ...
+# Subtest: passed_without_evidence_is_rejected
+ok 102 - passed_without_evidence_is_rejected
+  ---
+  duration_ms: 0.500873
+  type: 'test'
+  ...
+# Subtest: complete_observed_report_can_be_ready
+ok 103 - complete_observed_report_can_be_ready
+  ---
+  duration_ms: 0.3717
+  type: 'test'
+  ...
+# Subtest: failed_local_check_blocks_both_modes
+ok 104 - failed_local_check_blocks_both_modes
+  ---
+  duration_ms: 0.380447
+  type: 'test'
+  ...
+# Subtest: malformed_reports_and_options_are_rejected
+ok 105 - malformed_reports_and_options_are_rejected
+  ---
+  duration_ms: 1.118955
+  type: 'test'
+  ...
+# Subtest: cli_defaults_public_reads_actual_flag_and_rejects_invalid_inputs
+ok 106 - cli_defaults_public_reads_actual_flag_and_rejects_invalid_inputs
+  ---
+  duration_ms: 511.16696
+  type: 'test'
+  ...
+# Subtest: falls_back_when_storage_getter_throws
+ok 107 - falls_back_when_storage_getter_throws
+  ---
+  duration_ms: 2.166802
+  type: 'test'
+  ...
+# Subtest: keeps_latest_write_after_quota_failure
+ok 108 - keeps_latest_write_after_quota_failure
+  ---
+  duration_ms: 0.625894
+  type: 'test'
+  ...
+# Subtest: retains_memory_deletions
+ok 109 - retains_memory_deletions
+  ---
+  duration_ms: 0.543119
+  type: 'test'
+  ...
+# Subtest: handles_read_failures_and_unavailable_storage
+ok 110 - handles_read_failures_and_unavailable_storage
+  ---
+  duration_ms: 0.347411
+  type: 'test'
+  ...
+# Subtest: persists_healthy_writes_and_deletions_across_adapters
+ok 111 - persists_healthy_writes_and_deletions_across_adapters
+  ---
+  duration_ms: 0.979729
+  type: 'test'
+  ...
+# Subtest: keeps_v1_keys
+ok 112 - keeps_v1_keys
+  ---
+  duration_ms: 2.914889
+  type: 'test'
+  ...
+# Subtest: migrates_legacy_only_to_guest
+ok 113 - migrates_legacy_only_to_guest
+  ---
+  duration_ms: 1.156781
+  type: 'test'
+  ...
+# Subtest: prefers_existing_v2_data_over_legacy
+ok 114 - prefers_existing_v2_data_over_legacy
+  ---
+  duration_ms: 0.57083
+  type: 'test'
+  ...
+# Subtest: rejects_corrupt_progress
+ok 115 - rejects_corrupt_progress
+  ---
+  duration_ms: 1.128957
+  type: 'test'
+  ...
+# Subtest: ignores_unknown_school_ids
+ok 116 - ignores_unknown_school_ids
+  ---
+  duration_ms: 1.469892
+  type: 'test'
+  ...
+# Subtest: normalizes_progress_on_write_and_partitions_progress
+ok 117 - normalizes_progress_on_write_and_partitions_progress
+  ---
+  duration_ms: 0.611185
+  type: 'test'
+  ...
+# Subtest: validates_numeric_guest_scores_without_fabricating_guesses
+ok 118 - validates_numeric_guest_scores_without_fabricating_guesses
+  ---
+  duration_ms: 2.741107
+  type: 'test'
+  ...
+# Subtest: stores_validated_results_and_replaces_the_same_date
+ok 119 - stores_validated_results_and_replaces_the_same_date
+  ---
+  duration_ms: 3.108839
+  type: 'test'
+  ...
+# Subtest: separates_account_queues
+ok 120 - separates_account_queues
+  ---
+  duration_ms: 1.717733
+  type: 'test'
+  ...
+# Subtest: binds_import_receipts_to_subject
+ok 121 - binds_import_receipts_to_subject
+  ---
+  duration_ms: 0.406134
+  type: 'test'
+  ...
+# Subtest: rejects_guest_and_invalid_pending_results
+ok 122 - rejects_guest_and_invalid_pending_results
+  ---
+  duration_ms: 0.463593
+  type: 'test'
+  ...
+# Subtest: does_not_accept_pending_payloads_copied_from_another_subject
+ok 123 - does_not_accept_pending_payloads_copied_from_another_subject
+  ---
+  duration_ms: 0.587677
+  type: 'test'
+  ...
+# Subtest: does_not_accept_import_receipts_copied_from_another_subject
+ok 124 - does_not_accept_import_receipts_copied_from_another_subject
+  ---
+  duration_ms: 0.295586
+  type: 'test'
+  ...
+# Subtest: ignores_corrupt_v2_data_and_does_not_replace_it_with_legacy
+ok 125 - ignores_corrupt_v2_data_and_does_not_replace_it_with_legacy
+  ---
+  duration_ms: 0.424852
+  type: 'test'
+  ...
+# Subtest: returns_detached_data_so_mutation_cannot_change_saved_state
+ok 126 - returns_detached_data_so_mutation_cannot_change_saved_state
+  ---
+  duration_ms: 0.373109
+  type: 'test'
+  ...
+# Subtest: legacy_profile_is_only_bounded_display_prefill
+ok 127 - legacy_profile_is_only_bounded_display_prefill
+  ---
+  duration_ms: 0.572506
+  type: 'test'
+  ...
+# Subtest: account_result_cache_requires_and_retains_ordered_guesses
+ok 128 - account_result_cache_requires_and_retains_ordered_guesses
+  ---
+  duration_ms: 0.471116
+  type: 'test'
+  ...
+# Subtest: queues_in_progress_and_six_guess_lost_results
+ok 129 - queues_in_progress_and_six_guess_lost_results
+  ---
+  duration_ms: 0.441338
+  type: 'test'
+  ...
+1..129
+# tests 135
+# suites 0
+# pass 135
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10505.228682
+
+> charterschoodle@1.0.0 test:db
+> node --test tests/database/*.test.js
+
+TAP version 13
+# Subtest: private aggregate leaderboard
+    # Subtest: rpc_is_callable_with_default_arguments
+    ok 1 - rpc_is_callable_with_default_arguments
+      ---
+      duration_ms: 33.678916
+      type: 'test'
+      ...
+    # Subtest: aggregates_more_than_5000_results
+    ok 2 - aggregates_more_than_5000_results
+      ---
+      duration_ms: 1119.730325
+      type: 'test'
+      ...
+    # Subtest: all_sort_modes_have_stable_ties
+    ok 3 - all_sort_modes_have_stable_ties
+      ---
+      duration_ms: 378.827065
+      type: 'test'
+      ...
+    # Subtest: current_streaks_stop_after_missed_days
+    ok 4 - current_streaks_stop_after_missed_days
+      ---
+      duration_ms: 41.791087
+      type: 'test'
+      ...
+    # Subtest: today_attempt_is_neutral_for_win_streak
+    ok 5 - today_attempt_is_neutral_for_win_streak
+      ---
+      duration_ms: 57.950699
+      type: 'test'
+      ...
+    # Subtest: past_attempt_breaks_win_streak
+    ok 6 - past_attempt_breaks_win_streak
+      ---
+      duration_ms: 63.012153
+      type: 'test'
+      ...
+    # Subtest: past_attempt_without_today_breaks_win_streak
+    ok 7 - past_attempt_without_today_breaks_win_streak
+      ---
+      duration_ms: 21.789227
+      type: 'test'
+      ...
+    # Subtest: lost_today_breaks_win_streak
+    ok 8 - lost_today_breaks_win_streak
+      ---
+      duration_ms: 34.884527
+      type: 'test'
+      ...
+    # Subtest: only_today_attempt_has_null_average
+    ok 9 - only_today_attempt_has_null_average
+      ---
+      duration_ms: 44.650832
+      type: 'test'
+      ...
+    # Subtest: hidden_profiles_are_absent
+    ok 10 - hidden_profiles_are_absent
+      ---
+      duration_ms: 52.728902
+      type: 'test'
+      ...
+    # Subtest: empty_and_out_of_range_pages_are_valid
+    ok 11 - empty_and_out_of_range_pages_are_valid
+      ---
+      duration_ms: 116.195365
+      type: 'test'
+      ...
+    # Subtest: rpc_contains_only_public_fields
+    ok 12 - rpc_contains_only_public_fields
+      ---
+      duration_ms: 156.448004
+      type: 'test'
+      ...
+    1..12
+ok 1 - private aggregate leaderboard
+  ---
+  duration_ms: 7838.540585
+  type: 'test'
+  ...
+# Subtest: harness_enforces_non_superuser_roles
+ok 2 - harness_enforces_non_superuser_roles
+  ---
+  duration_ms: 5790.119321
+  type: 'test'
+  ...
+# Subtest: anonymous_cannot_read_or_write_raw_tables
+ok 3 - anonymous_cannot_read_or_write_raw_tables
+  ---
+  duration_ms: 4496.509898
+  type: 'test'
+  ...
+# Subtest: owner_cannot_read_or_mutate_other_owner
+ok 4 - owner_cannot_read_or_mutate_other_owner
+  ---
+  duration_ms: 3149.833044
+  type: 'test'
+  ...
+# Subtest: cannot_transfer_ownership
+ok 5 - cannot_transfer_ownership
+  ---
+  duration_ms: 3283.854613
+  type: 'test'
+  ...
+# Subtest: public_name_match_does_not_merge_accounts
+ok 6 - public_name_match_does_not_merge_accounts
+  ---
+  duration_ms: 3497.630781
+  type: 'test'
+  ...
+# Subtest: legacy_rows_survive_and_become_private
+ok 7 - legacy_rows_survive_and_become_private
+  ---
+  duration_ms: 3593.470939
+  type: 'test'
+  ...
+# Subtest: migration_rerun_keeps_cutover_and_rows
+ok 8 - migration_rerun_keeps_cutover_and_rows
+  ---
+  duration_ms: 2935.357581
+  type: 'test'
+  ...
+# Subtest: terminal_results_are_immutable
+ok 9 - terminal_results_are_immutable
+  ---
+  duration_ms: 2617.074959
+  type: 'test'
+  ...
+# Subtest: attempts_must_extend_the_existing_prefix
+ok 10 - attempts_must_extend_the_existing_prefix
+  ---
+  duration_ms: 2694.312121
+  type: 'test'
+  ...
+# Subtest: profile_validation_and_server_owned_identity_and_timestamps
+ok 11 - profile_validation_and_server_owned_identity_and_timestamps
+  ---
+  duration_ms: 2656.854832
+  type: 'test'
+  ...
+# Subtest: invalid_guesses_statuses_and_generated_points_are_rejected
+ok 12 - invalid_guesses_statuses_and_generated_points_are_rejected
+  ---
+  duration_ms: 2689.357649
+  type: 'test'
+  ...
+# Subtest: dates_cutover_settings_and_required_profile_are_enforced
+ok 13 - dates_cutover_settings_and_required_profile_are_enforced
+  ---
+  duration_ms: 2852.629608
+  type: 'test'
+  ...
+1..13
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 40637.265626

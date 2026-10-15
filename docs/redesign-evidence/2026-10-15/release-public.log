@@ -1,0 +1,6 @@
+
+> charterschoodle@1.0.0 check:release
+> node scripts/check-release.mjs
+
+public readiness: BLOCKED
+- deployedSmoke: pending — Awaiting owner approval to publish the redesigned UI, then exact deployed asset and guest/account/callback checks.

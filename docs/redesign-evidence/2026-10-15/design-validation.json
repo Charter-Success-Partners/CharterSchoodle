@@ -1,0 +1,15 @@
+{
+  "runtimeSourceCommit": "2557b3116e5cca6decc51cbf95a3459c3fd0d1ff",
+  "status": "passed",
+  "method": "Parent independently parsed YAML/JSON, checked allowed groups/component properties and token references, canonical section order, v2 sidecar shape/preview references, and actual CSS color values. This is a local contract check, not an external Stitch validator.",
+  "tokens": {
+    "colors": 22,
+    "typography": 8,
+    "rounded": 5,
+    "spacing": 13,
+    "components": 17
+  },
+  "sidecarVersion": 2,
+  "componentPreviews": 10,
+  "recordedColorsPresentInSource": true
+}

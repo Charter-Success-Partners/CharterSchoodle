@@ -10,25 +10,27 @@ This repo currently includes:
 - Local puzzle progress persistence in `localStorage`
 - Daily mode plus archive mode
 - Official-name autocomplete
-- Clue accumulation across six guesses
+- An active clue and school picker together, six compact attempts, and completed-guess history
 - Guess feedback for enrollment band, grade-band direction, and map direction
-- Local scoring plus a Supabase-backed company leaderboard for points, win streaks, and attempt streaks
-- Optional verified email accounts with private scores and explicit public leaderboard consent
+- Local scoring plus readable community rankings for points, win streaks, and attempt streaks
+- One-form leaderboard joining, email confirmation, and automatic profile setup with clear public consent
+- A proportionate NC map with a searchable, keyboard-accessible school list
 - A statewide current-school master list built from official NC sources
 - A statewide baseline clue bank generated from official NC sources
 - Hand-authored validated clue batches for selected schools
 
 ## Leaderboard
 
-The protected v2 leaderboard is prepared with activation disabled in `src/supabase-config.js`. See [leaderboard documentation](docs/leaderboard.md).
+The protected v2 leaderboard is enabled on the existing public site. This branch contains the locally verified UI redesign awaiting publication. See [leaderboard documentation](docs/leaderboard.md).
 
 - Guest play works immediately; profiles and email sign-in are optional.
 - Verified accounts keep daily scores across devices, including private personal totals.
 - Display names do not establish identity. Players explicitly choose whether to appear publicly.
-- Only today’s guest result can be imported, with confirmation; older guest history stays local.
+- Joining includes today’s eligible guest game after email confirmation, as explained on the form. Existing account games take priority; older guest and archive history stays local.
+- Returning Sign in restores the existing profile and privacy choices without importing a guest game.
 - Daily results are queued per account; archive play never changes rankings.
 - Public rankings use an aggregate RPC with five players per page. Raw account data remains owner-only.
-- The publishable Supabase key is public by design. Activation follows the reviewed rollout.
+- The publishable Supabase key is public by design. Owner-only raw data remains protected by the existing v2 policies.
 
 ## Release readiness
 
@@ -38,10 +40,11 @@ for public readiness; it also requires observed production evidence and the actu
 Exit 0 means the requested report gate passes; exit 2 names blockers or malformed inputs.
 The checker validates recorded evidence, not the live services themselves.
 
-See the [dated readiness record](docs/release-readiness.json), [verification evidence](docs/launch-evidence/2026-10-15/README.md),
-and [owner rollout/rollback runbook](docs/public-launch-runbook.md). The candidate remains guest-only
-until the owner completes live backup/migration, ownership, callback/email and deployed smoke checks.
-Canonical HTTPS reachability was observed; deployment of this revision was not performed.
+See the [dated readiness record](docs/release-readiness.json), [redesign verification and screenshots](docs/redesign-evidence/2026-10-15/README.md),
+[original production activation evidence](docs/launch-evidence/2026-10-15/README.md), and [owner rollout/rollback runbook](docs/public-launch-runbook.md).
+The existing backend, SMTP, callback URL, and public site were activated and verified. The redesigned candidate passes local checks;
+its public gate remains pending until the owner approves publication and the deployed candidate is checked.
+Product and visual rules are recorded in [PRODUCT.md](PRODUCT.md) and [DESIGN.md](DESIGN.md).
 
 ## Data Model
 
@@ -288,7 +291,7 @@ Canonical HTTPS reachability was observed; deployment of this revision was not p
 Use Node 22 or newer and `npm ci`. Run `npm test`, `npm run vendor:check`, and
 `npm run stage` before a release. Staging recreates `_site` and prints its exact
 manifest. Only the explicit runtime allowlist ships: the HTML/CSS/favicon,
-`.nojekyll`, seven application/config modules, three official vendor artifacts,
+`.nojekyll`, eight application/config modules, three official vendor artifacts,
 the local 2026 logo and social preview, and `schools.json`/`puzzles.json`.
 Documentation, research, tests, dependencies, originals, and captures stay out.
 A missing required asset fails staging before previous output is removed.
@@ -383,4 +386,4 @@ python3 scripts/merge_clue_banks.py
 
 ## Research Workflow
 
-The statewide clue corpus is now complete. See [docs/research-plan.md](/home/caleb/projects/charterschooldle/docs/research-plan.md) for the research rules and batch structure used to build it.
+The statewide clue corpus is now complete. See [docs/research-plan.md](docs/research-plan.md) for the research rules and batch structure used to build it.

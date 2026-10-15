@@ -1,0 +1,436 @@
+TAP version 13
+# Subtest: disabled_auth_performs_no_network_request
+ok 1 - disabled_auth_performs_no_network_request
+  ---
+  duration_ms: 5.0237
+  type: 'test'
+  ...
+# Subtest: email_submission_is_explicit
+ok 2 - email_submission_is_explicit
+  ---
+  duration_ms: 4.005936
+  type: 'test'
+  ...
+# Subtest: unavailable_storage_does_not_send_link
+ok 3 - unavailable_storage_does_not_send_link
+  ---
+  duration_ms: 1.010241
+  type: 'test'
+  ...
+# Subtest: pkce_quota_failure_blocks_email_at_fetch_boundary
+ok 4 - pkce_quota_failure_blocks_email_at_fetch_boundary
+  ---
+  duration_ms: 75.483236
+  type: 'test'
+  ...
+# Subtest: link_request_has_resend_cooldown
+ok 5 - link_request_has_resend_cooldown
+  ---
+  duration_ms: 1.117931
+  type: 'test'
+  ...
+# Subtest: server_retry_after_controls_cooldown_without_promising_delivery
+ok 6 - server_retry_after_controls_cooldown_without_promising_delivery
+  ---
+  duration_ms: 11.05048
+  type: 'test'
+  ...
+# Subtest: expired_or_reused_callback_can_retry
+ok 7 - expired_or_reused_callback_can_retry
+  ---
+  duration_ms: 1.660691
+  type: 'test'
+  ...
+# Subtest: missing_pkce_verifier_returns_to_guest
+ok 8 - missing_pkce_verifier_returns_to_guest
+  ---
+  duration_ms: 1.025256
+  type: 'test'
+  ...
+# Subtest: callback_params_are_removed_on_success_and_failure
+ok 9 - callback_params_are_removed_on_success_and_failure
+  ---
+  duration_ms: 8.764132
+  type: 'test'
+  ...
+# Subtest: sdk_load_failure_keeps_guest
+ok 10 - sdk_load_failure_keeps_guest
+  ---
+  duration_ms: 1.1626
+  type: 'test'
+  ...
+# Subtest: failed_signout_clears_local_identity_and_blocks_old_callbacks_and_writes
+ok 11 - failed_signout_clears_local_identity_and_blocks_old_callbacks_and_writes
+  ---
+  duration_ms: 0.937495
+  type: 'test'
+  ...
+# Subtest: local_loader_uses_only_the_local_official_bundle_and_reports_failure
+ok 12 - local_loader_uses_only_the_local_official_bundle_and_reports_failure
+  ---
+  duration_ms: 1.592455
+  type: 'test'
+  ...
+# Subtest: network_timeout_aborts_at_ten_seconds
+ok 13 - network_timeout_aborts_at_ten_seconds
+  ---
+  duration_ms: 1.236063
+  type: 'test'
+  ...
+# Subtest: signout_during_email_request_cannot_restore_sent_state
+ok 14 - signout_during_email_request_cannot_restore_sent_state
+  ---
+  duration_ms: 1.027812
+  type: 'test'
+  ...
+# Subtest: old_signout_completion_preserves_a_new_links_verifier
+ok 15 - old_signout_completion_preserves_a_new_links_verifier
+  ---
+  duration_ms: 0.965488
+  type: 'test'
+  ...
+# Subtest: late_initial_guest_event_preserves_email_request_feedback
+ok 16 - late_initial_guest_event_preserves_email_request_feedback
+  ---
+  duration_ms: 0.330291
+  type: 'test'
+  ...
+# Subtest: signout_attempts_remote_revocation_with_the_old_session_only
+ok 17 - signout_attempts_remote_revocation_with_the_old_session_only
+  ---
+  duration_ms: 4.409191
+  type: 'test'
+  ...
+# Subtest: fabricated_cached_session_never_becomes_identity_without_server_verification
+ok 18 - fabricated_cached_session_never_becomes_identity_without_server_verification
+  ---
+  duration_ms: 3.218609
+  type: 'test'
+  ...
+# Subtest: server_verified_identity_overrides_cached_user_data
+ok 19 - server_verified_identity_overrides_cached_user_data
+  ---
+  duration_ms: 0.456715
+  type: 'test'
+  ...
+# Subtest: identity_verification_failures_retain_guest_mode
+ok 20 - identity_verification_failures_retain_guest_mode
+  ---
+  duration_ms: 1.07644
+  type: 'test'
+  ...
+# Subtest: verification_completion_cannot_authenticate_after_signout_or_client_replacement
+ok 21 - verification_completion_cannot_authenticate_after_signout_or_client_replacement
+  ---
+  duration_ms: 8.628409
+  type: 'test'
+  ...
+# Subtest: newer_session_event_wins_over_late_verification_success_or_failure
+ok 22 - newer_session_event_wins_over_late_verification_success_or_failure
+  ---
+  duration_ms: 3.961475
+  type: 'test'
+  ...
+# Subtest: email_success_error_and_throw_cannot_erase_a_newly_verified_identity
+ok 23 - email_success_error_and_throw_cannot_erase_a_newly_verified_identity
+  ---
+  duration_ms: 3.154331
+  type: 'test'
+  ...
+# Subtest: onboarding_identity_uses_only_server_verified_email_and_clears_on_signout
+ok 24 - onboarding_identity_uses_only_server_verified_email_and_clears_on_signout
+  ---
+  duration_ms: 0.924081
+  type: 'test'
+  ...
+# Subtest: join_request_identity_requires_the_matching_pkce_callback_and_verified_email
+ok 25 - join_request_identity_requires_the_matching_pkce_callback_and_verified_email
+  ---
+  duration_ms: 46.580212
+  type: 'test'
+  ...
+# Subtest: requesting_controller_cached_session_recovery_cannot_claim_pending_join
+not ok 26 - requesting_controller_cached_session_recovery_cannot_claim_pending_join
+  ---
+  duration_ms: 5.605031
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/auth.test.js:464:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'cccccccc-cccc-4ccc-cccc-cccccccccccc'
+    - null
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: ~
+  actual: 'cccccccc-cccc-4ccc-cccc-cccccccccccc'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/auth.test.js:477:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: prepared_join_survives_callback_reload_and_imports_only_today_once
+ok 27 - prepared_join_survives_callback_reload_and_imports_only_today_once
+  ---
+  duration_ms: 19.472974
+  type: 'test'
+  ...
+# Subtest: join_requires_matching_verified_email_request_and_bound_owner
+ok 28 - join_requires_matching_verified_email_request_and_bound_owner
+  ---
+  duration_ms: 1.905685
+  type: 'test'
+  ...
+# Subtest: explicit_join_preserves_existing_fields_and_privacy_and_imports_today
+not ok 29 - explicit_join_preserves_existing_fields_and_privacy_and_imports_today
+  ---
+  duration_ms: 2.66767
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:62:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + []
+    - [
+    -   [
+    -     'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa',
+    -     '2026-10-15',
+    -     [
+    -       'a'
+    -     ]
+    -   ]
+    - ]
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      0: 'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa'
+      1: '2026-10-15'
+      2:
+        0: 'a'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:66:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: profile_and_result_failures_retry_without_another_link_or_retyping
+ok 30 - profile_and_result_failures_retry_without_another_link_or_retyping
+  ---
+  duration_ms: 3.424324
+  type: 'test'
+  ...
+# Subtest: concurrent_completion_and_account_switch_never_cross_owners
+ok 31 - concurrent_completion_and_account_switch_never_cross_owners
+  ---
+  duration_ms: 16.699331
+  type: 'test'
+  ...
+# Subtest: invalid_expired_and_unpersistable_intents_do_not_join
+ok 32 - invalid_expired_and_unpersistable_intents_do_not_join
+  ---
+  duration_ms: 1.053061
+  type: 'test'
+  ...
+# Subtest: verified_profileless_account_can_join_directly_with_explicit_consent
+ok 33 - verified_profileless_account_can_join_directly_with_explicit_consent
+  ---
+  duration_ms: 1.16206
+  type: 'test'
+  ...
+# Subtest: joining_preserves_owned_daily_progress_ahead_of_guest_import
+ok 34 - joining_preserves_owned_daily_progress_ahead_of_guest_import
+  ---
+  duration_ms: 1.32214
+  type: 'test'
+  ...
+# Subtest: two_controllers_sharing_a_join_finish_profile_and_import_once
+ok 35 - two_controllers_sharing_a_join_finish_profile_and_import_once
+  ---
+  duration_ms: 1.665117
+  type: 'test'
+  ...
+# Subtest: retained_join_finishes_hours_later_without_importing_a_new_days_guest_game
+ok 36 - retained_join_finishes_hours_later_without_importing_a_new_days_guest_game
+  ---
+  duration_ms: 1.079786
+  type: 'test'
+  ...
+# Subtest: profile_created_elsewhere_during_join_keeps_its_fields_and_privacy
+not ok 37 - profile_created_elsewhere_during_join_keeps_its_fields_and_privacy
+  ---
+  duration_ms: 6.946572
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:127:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + []
+    - [
+    -   [
+    -     'a'
+    -   ]
+    - ]
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      0: 'a'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:134:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: replacing_a_pending_join_invalidates_old_async_completion
+ok 38 - replacing_a_pending_join_invalidates_old_async_completion
+  ---
+  duration_ms: 3.773205
+  type: 'test'
+  ...
+# Subtest: small_clock_correction_keeps_a_prepared_join_usable
+ok 39 - small_clock_correction_keeps_a_prepared_join_usable
+  ---
+  duration_ms: 2.124618
+  type: 'test'
+  ...
+# Subtest: committed_profile_with_lost_response_retries_consented_game_after_reload
+not ok 40 - committed_profile_with_lost_response_retries_consented_game_after_reload
+  ---
+  duration_ms: 3.70806
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:154:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + []
+    - [
+    -   [
+    -     'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa',
+    -     [
+    -       'a'
+    -     ]
+    -   ]
+    - ]
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      0: 'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa'
+      1:
+        0: 'a'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:160:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: explicit_join_with_existing_profile_keeps_existing_owner_result
+ok 41 - explicit_join_with_existing_profile_keeps_existing_owner_result
+  ---
+  duration_ms: 1.071141
+  type: 'test'
+  ...
+# Subtest: cancel_during_adoption_read_prevents_all_import_mutations
+not ok 42 - cancel_during_adoption_read_prevents_all_import_mutations
+  ---
+  duration_ms: 1.87896
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:173:44'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + [
+    +   {
+    +     answerSchoolId: 'a',
+    +     date: '2026-10-15',
+    +     guessedSchoolIds: [
+    +       'a'
+    +     ],
+    +     status: 'solved'
+    +   }
+    + ]
+    - []
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      date: '2026-10-15'
+      answerSchoolId: 'a'
+      guessedSchoolIds:
+        0: 'a'
+      status: 'solved'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:179:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: replace_during_adoption_read_prevents_all_import_mutations
+not ok 43 - replace_during_adoption_read_prevents_all_import_mutations
+  ---
+  duration_ms: 3.095551
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:173:44'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + [
+    +   {
+    +     answerSchoolId: 'a',
+    +     date: '2026-10-15',
+    +     guessedSchoolIds: [
+    +       'a'
+    +     ],
+    +     status: 'solved'
+    +   }
+    + ]
+    - []
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      date: '2026-10-15'
+      answerSchoolId: 'a'
+      guessedSchoolIds:
+        0: 'a'
+      status: 'solved'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/onboarding.test.js:179:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 37
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10421.722644

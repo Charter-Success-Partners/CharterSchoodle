@@ -1,55 +1,56 @@
 {
   "schemaVersion": 1,
   "observedAt": "2026-10-15",
-  "scope": "Activated, merged, and deployed revision bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa verified over HTTPS. Live guest/account/callback recovery checks passed. Owner confirmed email delivery and successful browser sign-in, corroborated by verified non-operator production Auth metadata.",
+  "scope": "Approved UI/UX redesign candidate verified locally at runtime source 2557b3116e5cca6decc51cbf95a3459c3fd0d1ff. Existing production backend, SMTP, callback and original deployment observations are retained. The redesigned UI awaits publication approval and deployed-candidate smoke; it is not yet the public site.",
   "checks": {
     "unit": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/tests.log \u2014 115/115 after activation; Node 22.23.3"
+      "evidence": "docs/redesign-evidence/2026-10-15/final-tests.log — 135/135 unit tests passed on corrected runtime source; Node 22.23.3"
     },
     "database": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/tests.log \u2014 25/25 migration and RLS tests; production API smoke recorded separately"
+      "evidence": "docs/redesign-evidence/2026-10-15/final-tests.log — 25/25 local database/migration/RLS tests passed; production schema unchanged"
     },
     "browser": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/browser-root.log, browser-staged.log, browser-prefix.log \u2014 74/74 each with explicit isolated guest/account fixtures; production Supabase blocked/intercepted"
+      "evidence": "docs/redesign-evidence/2026-10-15/final-browser-root.log, final-browser-staged.log, final-browser-prefix.log — 96/96 each; exact synthetic Auth/REST interception, no production requests"
     },
     "vendor": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/final-fix-vendor.log \u2014 official 2.118.0 bundle/license/provenance byte-identical"
+      "evidence": "docs/redesign-evidence/2026-10-15/vendor.log — official Supabase 2.118.0 bundle, license and provenance byte-identical"
     },
     "staging": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/staged-manifest.json \u2014 exact 18-file bundle; all staged bytes match source; activation flag true"
+      "evidence": "docs/redesign-evidence/2026-10-15/staged-manifest.json — exact 19-file allowlist, all staged bytes match corrected source; evidence and design documentation excluded"
     },
     "visual": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/README.md, visual-confirmation.log, confirmation/*.png and *.json \u2014 one inspection, one typography fix batch, one confirmation; 6/6 scenarios, all required widths/states/social image; bounded visual batch retained, no new capture or polish; final daily award text verified by DOM tests in final-fix-browser-root.log"
+      "evidence": "docs/redesign-evidence/2026-10-15/README.md, design-review.md, design-verdict.md and .impeccable/review/*.png — 26 required states across 320/390/768/1440, actual Open Sans, 200% text; one grouped fix and confirmation; reviewer scored all three material fixes resolved"
     },
     "backupMigration": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/production-setup/README.md, backup-proof-redacted.json, restore-verification-redacted.json, migration-verification-redacted.json \u2014 owner elected fresh rankings; scoped affected-table backup restored exactly (67 rows); reviewed migration installed live; v2 tables initially empty; legacy access revoked. Full Supabase/Auth dump not performed."
+      "evidence": "docs/launch-evidence/2026-10-15/production-setup/README.md, backup-proof-redacted.json, restore-verification-redacted.json, migration-verification-redacted.json — owner elected fresh rankings; scoped affected-table backup restored exactly (67 rows); reviewed migration installed live; v2 tables initially empty; legacy access revoked. Full Supabase/Auth dump not performed."
     },
     "liveOwnershipSmoke": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/production-setup/live-ownership-redacted.json, anonymous-api-redacted.json, final-production-state-redacted.json \u2014 47 real Auth/REST checks with two synthetic operator accounts; cross-owner operations denied, consent/hide verified; final public ranking empty. Browser queue switching remains deployed smoke."
+      "evidence": "docs/launch-evidence/2026-10-15/production-setup/live-ownership-redacted.json, anonymous-api-redacted.json, final-production-state-redacted.json — 47 real Auth/REST checks with two synthetic operator accounts; cross-owner operations denied, consent/hide verified; final public ranking empty. Browser queue switching remains deployed smoke."
     },
     "domainTls": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/domain-observation.log \u2014 2026-10-15 16:04 UTC: curl HTTPS HEAD with certificate verification enabled exited 0, HTTP/2 200 from GitHub at canonical hostname; existing site only, not candidate deployment"
+      "evidence": "docs/launch-evidence/2026-10-15/domain-observation.log — 2026-10-15 16:04 UTC: curl HTTPS HEAD with certificate verification enabled exited 0, HTTP/2 200 from GitHub at canonical hostname; existing site only, not candidate deployment"
     },
     "allowedCallback": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/production-setup/auth-config-after-redacted.json \u2014 production site URL and exact redirect allowlist verified through authenticated Management API after saving."
+      "evidence": "docs/launch-evidence/2026-10-15/production-setup/auth-config-after-redacted.json — production site URL and exact redirect allowlist verified through authenticated Management API after saving."
     },
     "externalRecipientEmail": {
       "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-completion-redacted.json, email-request-redacted.json, email-delivery-redacted.json \u2014 owner confirmed delivery and successful browser sign-in; read-only production Auth verifies one confirmed non-operator account signed in at 19:06 UTC, excluding all three synthetic operator accounts. The signed-in account differs from the original delivery-test address, which remains unconfirmed; completion is owner-observed."
+      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-completion-redacted.json, email-request-redacted.json, email-delivery-redacted.json — owner confirmed delivery and successful browser sign-in; read-only production Auth verifies one confirmed non-operator account signed in at 19:06 UTC, excluding all three synthetic operator accounts. The signed-in account differs from the original delivery-test address, which remains unconfirmed; completion is owner-observed."
     },
     "deployedSmoke": {
-      "status": "passed",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/pages-run-redacted.json, deployed-assets-redacted.json, deployed-guest-smoke-redacted.json, deployed-accounts-redacted.json, deployed-callback-recovery-redacted.json \u2014 Pages run 38784885858 succeeded at bfdc42d; all 18 public assets match tested hashes; 34 guest checks/10 scenarios, 13 account checks and two callback-recovery checks passed; private test records remain unlisted."
+      "status": "pending",
+      "evidence": "The prior bfdc42d deployment is verified in docs/launch-evidence/2026-10-15/release-activation/. It does not prove this redesigned runtime candidate. Local candidate evidence is in docs/redesign-evidence/2026-10-15/.",
+      "reason": "Awaiting owner approval to publish the redesigned UI, then exact deployed asset and guest/account/callback checks."
     }
   }
 }

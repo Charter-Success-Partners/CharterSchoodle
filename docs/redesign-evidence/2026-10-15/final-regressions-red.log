@@ -1,0 +1,141 @@
+
+Running 7 tests using 2 workers
+
+  ✘  2 tests/browser/final-review.spec.js:3:1 › enlarged_text_reflows_brand_navigation_header_and_feedback_at_320 (999ms)
+  ✘  1 tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_public_account (5.9s)
+  ✓  4 tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_guest_account (613ms)
+  ✘  3 tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_private_account (5.7s)
+  ✓  5 tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_profileless_account (588ms)
+  ✘  6 tests/browser/final-review.spec.js:64:1 › feedback_help_and_map_use_drawn_decorative_icons_with_text_labels (5.7s)
+  ✘  7 tests/browser/final-review.spec.js:42:1 › direct_verified_join_refreshes_the_open_rankings_after_guest_import (5.9s)
+
+
+  1) tests/browser/final-review.spec.js:3:1 › enlarged_text_reflows_brand_navigation_header_and_feedback_at_320
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 320
+    Received:    459
+
+       5 |   await game.open(); await page.evaluate(()=>document.documentElement.style.fontSize='200%');
+       6 |   await game.guess(schools[1]);
+    >  7 |   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+         |                                                                         ^
+       8 |   const labels=page.locator('h1, .mode-button, .puzzle-title, #guess-summary, #attempt-progress li, .round-feedback > div');
+       9 |   for (const el of await labels.all()) {
+      10 |     const geometry=await el.evaluate(node=>{
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/final-review.spec.js:7:73
+
+    Error Context: test-results/final-review-enlarged-text-916a5--header-and-feedback-at-320/error-context.md
+
+  2) tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_public_account ──────
+
+    Error: expect(locator).not.toContainText(expected) failed
+
+    Locator: locator('.leaderboard-empty')
+    Expected pattern: not /join the leaderboard/i
+    Received string: "No public scores yet. Join the leaderboard and play today's puzzle to post your first score."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toContainText" locator('.leaderboard-empty') with timeout 5000ms
+      - waiting for locator('.leaderboard-empty')
+        14 × locator resolved to <li class="leaderboard-empty">No public scores yet. Join the leaderboard and pl…</li>
+           - unexpected value "No public scores yet. Join the leaderboard and play today's puzzle to post your first score."
+
+
+      36 |   await page.getByRole('button',{name:'Leaderboard',exact:true}).click();
+      37 |   await expect(page.locator('.leaderboard-empty')).toContainText(scenario.expected);
+    > 38 |   if(scenario.forbidden)await expect(page.locator('.leaderboard-empty')).not.toContainText(scenario.forbidden);
+         |                                                                              ^
+      39 |   fixture.assertSafe();
+      40 | });
+      41 |
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/final-review.spec.js:38:78
+
+    Error Context: test-results/final-review-empty-rankings-guidance-matches-public-account/error-context.md
+
+  3) tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_private_account ─────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.leaderboard-empty')
+    Expected pattern: /edit profile.*public|public.*edit profile/i
+    Received string:  "No public scores yet. Join the leaderboard and play today's puzzle to post your first score."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" locator('.leaderboard-empty') with timeout 5000ms
+      - waiting for locator('.leaderboard-empty')
+        14 × locator resolved to <li class="leaderboard-empty">No public scores yet. Join the leaderboard and pl…</li>
+           - unexpected value "No public scores yet. Join the leaderboard and play today's puzzle to post your first score."
+
+
+      35 |   if(scenario.name==='public'||scenario.name==='private')await expect(page.locator('#account-button')).toHaveText('Edit profile');
+      36 |   await page.getByRole('button',{name:'Leaderboard',exact:true}).click();
+    > 37 |   await expect(page.locator('.leaderboard-empty')).toContainText(scenario.expected);
+         |                                                    ^
+      38 |   if(scenario.forbidden)await expect(page.locator('.leaderboard-empty')).not.toContainText(scenario.forbidden);
+      39 |   fixture.assertSafe();
+      40 | });
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/final-review.spec.js:37:52
+
+    Error Context: test-results/final-review-empty-rankings-guidance-matches-private-account/error-context.md
+
+  4) tests/browser/final-review.spec.js:42:1 › direct_verified_join_refreshes_the_open_rankings_after_guest_import
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.leaderboard-entry')
+    Expected substring: "New Community Player"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" locator('.leaderboard-entry') with timeout 5000ms
+      - waiting for locator('.leaderboard-entry')
+
+
+      57 |   await expect(page.locator('#account-button')).toHaveText('Edit profile');
+      58 |   await expect.poll(()=>fixture.state.history.length).toBe(1);
+    > 59 |   await expect(page.locator('.leaderboard-entry')).toContainText('New Community Player');
+         |                                                    ^
+      60 |   await expect(page.locator('.ranking-metric')).toContainText('6');
+      61 |   expect(fixture.state.sent.filter(x=>x.path.endsWith('/otp'))).toEqual([]);fixture.assertSafe();
+      62 | });
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/final-review.spec.js:59:52
+
+    Error Context: test-results/final-review-direct-verifi-4afe1-rankings-after-guest-import/error-context.md
+
+  5) tests/browser/final-review.spec.js:64:1 › feedback_help_and_map_use_drawn_decorative_icons_with_text_labels
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('.round-feedback .board-icon').first().locator('svg')
+    Expected: "true"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.round-feedback .board-icon').first().locator('svg') with timeout 5000ms
+      - waiting for locator('.round-feedback .board-icon').first().locator('svg')
+
+
+      65 |   await game.open(); await game.guess(schools[1]);
+      66 |   for(const icon of await page.locator('.round-feedback .board-icon').all()) {
+    > 67 |     await expect(icon.locator('svg')).toHaveAttribute('aria-hidden','true');
+         |                                       ^
+      68 |     await expect(icon.locator('svg path, svg circle, svg line, svg g')).not.toHaveCount(0);
+      69 |     expect(await icon.textContent()).toBe('');
+      70 |   }
+        at /home/space/.codex/worktrees/0b66/CharterSchoodle/tests/browser/final-review.spec.js:67:39
+
+    Error Context: test-results/final-review-feedback-help-8d264-tive-icons-with-text-labels/error-context.md
+
+  5 failed
+    tests/browser/final-review.spec.js:3:1 › enlarged_text_reflows_brand_navigation_header_and_feedback_at_320
+    tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_public_account ───────
+    tests/browser/final-review.spec.js:30:4 › empty_rankings_guidance_matches_private_account ──────
+    tests/browser/final-review.spec.js:42:1 › direct_verified_join_refreshes_the_open_rankings_after_guest_import
+    tests/browser/final-review.spec.js:64:1 › feedback_help_and_map_use_drawn_decorative_icons_with_text_labels
+  2 passed (17.4s)
