@@ -1,6 +1,6 @@
 # Public launch runbook
 
-Updated October 15, 2026 after production backend setup. **Code readiness and public readiness are separate gates.** The reviewed migration, Auth configuration, and 47 live API ownership checks are complete; see the [production setup evidence](launch-evidence/2026-10-15/production-setup/README.md). The owner has approved enabling the leaderboard, merging PR #1, and deploying. The candidate flag is now `true`; deployment and the first sign-in email are pending. The [readiness report](release-readiness.json) records the remaining email-completion and deployed-browser gates.
+Updated October 15, 2026 after production backend setup. **Code readiness and public readiness are separate gates.** The reviewed migration, Auth configuration, and 47 live API ownership checks are complete; see the [production setup evidence](launch-evidence/2026-10-15/production-setup/README.md). The owner approved activation, merge, and deployment. PR #1 is merged, `leaderboardEnabled` is `true`, and Pages deployed revision `bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa` successfully. All 18 live asset hashes and live guest/account checks passed. The first sign-in request was accepted; inbox delivery and owner requesting-browser completion remain pending. See the [release observations](launch-evidence/2026-10-15/release-activation/README.md). The [readiness report](release-readiness.json) records the remaining email-completion and deployed-browser gates.
 
 ## Release owner and stop conditions
 

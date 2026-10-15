@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-10-15T18:24:15.001Z",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "A restores own solved daily history on deployed app",
+      "passed": true
+    },
+    {
+      "check": "deployed ranking and private lifetime summary load",
+      "passed": true
+    },
+    {
+      "check": "B restores its distinct loss without A history",
+      "passed": true
+    },
+    {
+      "check": "reopened hide submission waits behind earlier profile request",
+      "passed": true
+    },
+    {
+      "check": "latest hide choice remains private on real backend",
+      "passed": true
+    },
+    {
+      "check": "pending import remains owned by original account",
+      "passed": true
+    },
+    {
+      "check": "account switching never dispatches old owner results as B",
+      "passed": true
+    },
+    {
+      "check": "B remote loss unchanged by switched pending import",
+      "passed": true
+    },
+    {
+      "check": "explicit guest import synchronizes once as its own daily result",
+      "passed": true
+    },
+    {
+      "check": "imported account result restores on a second device",
+      "passed": true
+    },
+    {
+      "check": "test profiles remain unlisted",
+      "passed": true
+    },
+    {
+      "check": "deployed sign-out returns to guest",
+      "passed": true
+    },
+    {
+      "check": "account browser flows have no uncaught exceptions",
+      "passed": true
+    }
+  ],
+  "test_records": "Synthetic operator profiles/results retained unlisted; no real-player profile created"
+}
