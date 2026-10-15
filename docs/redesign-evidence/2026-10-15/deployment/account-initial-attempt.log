@@ -1,0 +1,9 @@
+PASS: One confirmed synthetic operator signs in through real password Auth
+PASS: Real deployed guest puzzle accepts one wrong guess
+PASS: Single Join form retains SDK verifier; OTP delivery boundary SIMULATED
+PASS: SIMULATED PKCE callback automatically creates real public profile without second form
+PASS: Real backend imports exactly today one-guess game
+PASS: Callback URL cleaned and server identity verified
+FAIL_STAGE: reload-no-duplicate
+CLEANUP: synthetic fixture confirmed unlisted
+RESULT: failed checks: 6 fixture_unlisted: true

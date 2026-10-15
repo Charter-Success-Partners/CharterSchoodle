@@ -21,7 +21,7 @@ This repo currently includes:
 
 ## Leaderboard
 
-The protected v2 leaderboard is enabled on the existing public site. This branch contains the locally verified UI redesign awaiting publication. See [leaderboard documentation](docs/leaderboard.md).
+The protected v2 leaderboard and approved UI redesign are live. Joining collects your details once, then finishes setup after email confirmation. See [leaderboard documentation](docs/leaderboard.md).
 
 - Guest play works immediately; profiles and email sign-in are optional.
 - Verified accounts keep daily scores across devices, including private personal totals.
@@ -42,8 +42,8 @@ The checker validates recorded evidence, not the live services themselves.
 
 See the [dated readiness record](docs/release-readiness.json), [redesign verification and screenshots](docs/redesign-evidence/2026-10-15/README.md),
 [original production activation evidence](docs/launch-evidence/2026-10-15/README.md), and [owner rollout/rollback runbook](docs/public-launch-runbook.md).
-The existing backend, SMTP, callback URL, and public site were activated and verified. The redesigned candidate passes local checks;
-its public gate remains pending until the owner approves publication and the deployed candidate is checked.
+PR #3 deployed the redesign at revision `e343ac808ab2168480755f7b5c87f12cf2db85a8`. All 19 served files match the reviewed build, and live guest checks passed with a documented targeted retry.
+The final public gate remains pending a fresh confirmation-email completion through the redesigned join flow; the earlier email-delivery/sign-in observation remains valid for the unchanged provider configuration.
 Product and visual rules are recorded in [PRODUCT.md](PRODUCT.md) and [DESIGN.md](DESIGN.md).
 
 ## Data Model
