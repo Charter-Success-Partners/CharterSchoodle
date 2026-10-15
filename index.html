@@ -110,13 +110,6 @@
                 <h3>Your Score</h3>
                 <p id="score-status">Daily results only</p>
               </div>
-              <form id="player-form" class="player-form player-form--compact">
-                <label for="player-name">Name</label>
-                <input id="player-name" type="text" maxlength="60" autocomplete="name" required />
-                <label for="player-school">School</label>
-                <input id="player-school" type="text" maxlength="80" autocomplete="organization" required />
-                <button class="secondary-button" type="submit">Save</button>
-              </form>
               <div class="guess-counter">
                 <span id="guess-counter">0 / 6</span>
               </div>
@@ -128,7 +121,12 @@
             <input id="archive-date" type="date" />
           </div>
 
-          <div class="status-banner">
+          <div id="new-daily-notice" class="status-banner is-hidden" role="status">
+            <p>A new daily puzzle is available. Your current puzzle stays open until you switch.</p>
+            <button id="new-daily-button" class="secondary-button" type="button">Play today’s puzzle</button>
+          </div>
+
+          <div class="status-banner" role="status">
             <div>
               <strong id="status-title">Welcome</strong>
               <p id="status-message">
@@ -136,6 +134,8 @@
               </p>
             </div>
           </div>
+
+          <button id="retry-data" class="secondary-button is-hidden" type="button">Retry</button>
 
           <section id="leaderboard-panel" class="leaderboard-panel is-hidden">
             <div class="section-heading">
@@ -238,11 +238,12 @@
                 id="school-guess"
                 name="school-guess"
                 type="text"
+                disabled
                 autocomplete="off"
                 placeholder="Start typing an official school name"
                 aria-describedby="guess-help"
               />
-              <button class="primary-button" type="submit">Submit</button>
+              <button class="primary-button" type="submit" disabled>Submit</button>
             </div>
             <p id="guess-help" class="field-help">
               Guesses must be selected from the remaining official school list.
@@ -251,22 +252,6 @@
           </form>
         </section>
       </main>
-    </div>
-
-    <div id="profile-overlay" class="profile-overlay is-hidden" aria-hidden="true">
-      <div class="profile-overlay__backdrop"></div>
-      <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-title">
-        <p class="eyebrow">Leaderboard Profile</p>
-        <h2 id="profile-title">Your Score</h2>
-        <form id="profile-modal-form" class="player-form">
-          <label for="profile-name">Name</label>
-          <input id="profile-name" type="text" maxlength="60" autocomplete="name" required />
-          <label for="profile-school">School</label>
-          <input id="profile-school" type="text" maxlength="80" autocomplete="organization" required />
-          <p id="profile-modal-status" class="profile-modal__status"></p>
-          <button class="primary-button" type="submit">Save</button>
-        </form>
-      </div>
     </div>
 
     <div id="win-overlay" class="win-overlay is-hidden" aria-hidden="true">

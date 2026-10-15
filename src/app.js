@@ -1,10 +1,8 @@
+import { ncToday, archiveDates, scoreSummary } from "./game.js";
+import { createSafeStorage, createGameStore } from "./storage.js";
+
 const GAME_CONFIG = {
   maxGuesses: 6,
-  storageKeyPrefix: "charterschoodle-progress",
-  scoreStorageKey: "charterschoodle-scorebook:v1",
-  playerStorageKey: "charterschoodle-player:v1",
-  defaultSupabaseTable: "charterschoodle_results",
-  leaderboardFetchLimit: 5000,
   leaderboardPageSize: 5,
 };
 
@@ -41,14 +39,9 @@ const elements = {
   primaryPanel: document.querySelector(".panel--primary"),
   guessInput: document.getElementById("school-guess"),
   autocompleteList: document.getElementById("autocomplete-list"),
-  playerForm: document.getElementById("player-form"),
-  playerName: document.getElementById("player-name"),
-  playerSchool: document.getElementById("player-school"),
-  profileOverlay: document.getElementById("profile-overlay"),
-  profileModalForm: document.getElementById("profile-modal-form"),
-  profileName: document.getElementById("profile-name"),
-  profileSchool: document.getElementById("profile-school"),
-  profileModalStatus: document.getElementById("profile-modal-status"),
+  retryButton: document.getElementById("retry-data"),
+  newDailyNotice: document.getElementById("new-daily-notice"),
+  newDailyButton: document.getElementById("new-daily-button"),
   winOverlay: document.getElementById("win-overlay"),
   winAnswer: document.getElementById("win-answer"),
   winSummary: document.getElementById("win-summary"),
@@ -68,9 +61,10 @@ const state = {
   selectedSuggestionIndex: -1,
   lastRoundOutcome: null,
   winOverlaySeen: false,
-  player: null,
-  scorebook: null,
-  supabase: null,
+  subject: "guest",
+  store: null,
+  dailyDate: ncToday(),
+  loading: false,
   leaderboard: {
     sort: "points",
     records: [],
@@ -164,37 +158,106 @@ const NC_MAP_OUTLINE = [
   { lat: 36.562108, lng: -80.978661 },
 ];
 
-async function loadData() {
-  const [metadataResponse, schoolsResponse] = await Promise.all([
-    fetch("./data/puzzles.json"),
-    fetch("./data/schools.json"),
-  ]);
+const safeStorage = createSafeStorage(() => window.localStorage);
+const stores = new Map();
 
-  state.metadata = await metadataResponse.json();
-  state.schools = await schoolsResponse.json();
-  state.schoolMap = new Map(state.schools.map((school) => [school.id, school]));
-  state.player = loadPlayerProfile();
-  state.scorebook = loadScorebook();
-  state.supabase = loadSupabaseConfig();
-  savePlayerProfile();
+function storeFor(subject) {
+  if (!stores.has(subject)) {
+    stores.set(subject, createGameStore({ kv: safeStorage, subject, schools: state.schools, puzzles: state.metadata.puzzles }));
+  }
+  return stores.get(subject);
 }
 
-function getTodayIso() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+async function loadData() {
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 10_000);
+  try {
+    const [metadata, schools] = await Promise.all(["puzzles", "schools"].map(async (name) => {
+      const response = await fetch(`./data/${name}.json`, { signal: controller.signal });
+      if (!response.ok) throw new Error(`Could not load ${name}`);
+      return response.json();
+    }));
+    if (!Array.isArray(schools) || !schools.length || schools.some((school) => !school?.id || !school.officialName)) {
+      throw new Error("Invalid school data");
+    }
+    const schoolIds = new Set(schools.map((school) => school.id));
+    if (schoolIds.size !== schools.length || !Array.isArray(metadata?.puzzles) || metadata.puzzles.some((puzzle) =>
+      !/^\d{4}-\d{2}-\d{2}$/.test(puzzle?.date) || !schoolIds.has(puzzle.answerSchoolId) ||
+      !Array.isArray(puzzle.clues) || puzzle.clues.length !== 6 || puzzle.clues.some((clue) => typeof clue?.text !== "string"))) {
+      throw new Error("Invalid puzzle data");
+    }
+    state.metadata = metadata;
+    state.schools = schools;
+    state.schoolMap = new Map(schools.map((school) => [school.id, school]));
+    stores.clear();
+    state.store = storeFor(state.subject);
+  } finally {
+    window.clearTimeout(timeout);
+    controller.abort();
+  }
 }
 
 function initializeArchiveBounds() {
-  const dates = state.metadata.puzzles.map((puzzle) => puzzle.date).sort();
-  elements.archiveDate.min = dates[0];
-  elements.archiveDate.max = dates[dates.length - 1];
-  elements.archiveDate.value = dates[dates.length - 1];
+  const dates = archiveDates(state.metadata.puzzles, ncToday());
+  elements.archiveDate.disabled = dates.length === 0;
+  elements.archiveDate.min = dates[0] || "";
+  elements.archiveDate.max = dates.at(-1) || "";
+  if (!dates.includes(elements.archiveDate.value)) elements.archiveDate.value = dates.at(-1) || "";
+}
+
+function checkForNewDaily() {
+  if (!state.metadata) return;
+  initializeArchiveBounds();
+  elements.newDailyNotice.classList.toggle("is-hidden", state.dailyDate === ncToday());
+}
+
+async function retryData() {
+  if (state.loading) return;
+  state.loading = true;
+  elements.retryButton.disabled = true;
+  showUnavailable("Loading puzzles", "Loading school and puzzle data. Past Puzzles and the map will be available when loading finishes.");
+  elements.retryButton.classList.add("is-hidden");
+  try {
+    await loadData();
+    initializeArchiveBounds();
+    setMode(state.mode);
+    checkForNewDaily();
+  } catch {
+    showUnavailable("Could not load puzzles", "Check your connection and choose Retry to load the game.");
+  } finally {
+    state.loading = false;
+    elements.retryButton.disabled = false;
+  }
+}
+
+function showUnavailable(title, message, retry = true) {
+  state.activePuzzle = null;
+  state.activePuzzleDate = null;
+  state.progress = null;
+  state.filteredSuggestions = [];
+  state.selectedSuggestionIndex = -1;
+  elements.boardBody.innerHTML = "";
+  elements.guessInput.value = "";
+  elements.guessCounter.textContent = "0 / 6";
+  elements.clueProgress.textContent = "No clues available";
+  elements.puzzleHeading.textContent = state.mode === "archive" ? "Past Puzzles" : "Daily Puzzle";
+  elements.puzzleLabel.textContent = state.mode === "archive" ? "Archive puzzle" : "Daily puzzle";
+  elements.statusTitle.textContent = title;
+  elements.statusMessage.textContent = message;
+  elements.retryButton.classList.toggle("is-hidden", !retry);
+  elements.boardPanel.classList.remove("is-hidden");
+  elements.guessForm.classList.remove("is-hidden");
+  elements.leaderboardPanel.classList.add("is-hidden");
+  elements.mapPanel.classList.add("is-hidden");
+  elements.winOverlay.classList.add("is-hidden");
+  elements.winOverlay.setAttribute("aria-hidden", "true");
+  renderSuggestionList();
+  syncInputLock();
+  renderScoreSummary();
 }
 
 function setMode(mode) {
+  if (!state.metadata) return;
   state.mode = mode;
   elements.modeButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.mode === mode);
@@ -206,7 +269,6 @@ function setMode(mode) {
     state.filteredSuggestions = [];
     state.selectedSuggestionIndex = -1;
     render();
-    refreshLeaderboard({ silent: true });
     return;
   }
 
@@ -217,16 +279,13 @@ function setMode(mode) {
     return;
   }
 
-  const date = mode === "daily" ? getTodayIso() : elements.archiveDate.value;
+  initializeArchiveBounds();
+  const date = mode === "daily" ? state.dailyDate : elements.archiveDate.value;
   loadPuzzleForDate(date);
 }
 
 function getPuzzleByDate(date) {
   return state.metadata.puzzles.find((candidate) => candidate.date === date) || null;
-}
-
-function getProgressKey(date) {
-  return `${GAME_CONFIG.storageKeyPrefix}:${date}`;
 }
 
 function createFreshProgress() {
@@ -239,168 +298,28 @@ function createFreshProgress() {
 }
 
 function loadSavedProgress(date) {
-  const raw = localStorage.getItem(getProgressKey(date));
-  if (!raw) {
-    return createFreshProgress();
-  }
-
-  try {
-    return { ...createFreshProgress(), ...JSON.parse(raw) };
-  } catch {
-    return createFreshProgress();
-  }
+  return state.store.readProgress(date) || createFreshProgress();
 }
 
 function saveProgress() {
-  if (!state.activePuzzleDate || !state.progress) {
-    return;
-  }
-
-  localStorage.setItem(getProgressKey(state.activePuzzleDate), JSON.stringify(state.progress));
-}
-
-function loadPlayerProfile() {
-  const fallback = { id: createPlayerId(), name: "", school: "" };
-  const raw = localStorage.getItem(GAME_CONFIG.playerStorageKey);
-  if (!raw) {
-    return fallback;
-  }
-
-  try {
-    const parsed = JSON.parse(raw);
-    return buildPlayerProfile(parsed.name || "", parsed.school || parsed.team || "", parsed.id || fallback.id);
-  } catch {
-    return fallback;
-  }
-}
-
-function savePlayerProfile() {
-  state.player = buildPlayerProfile(state.player?.name || "", state.player?.school || "", state.player?.id);
-  localStorage.setItem(GAME_CONFIG.playerStorageKey, JSON.stringify(state.player));
-}
-
-function createPlayerId() {
-  if (window.crypto?.randomUUID) {
-    return window.crypto.randomUUID();
-  }
-
-  return `player-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
-}
-
-function normalizeProfileValue(value) {
-  return String(value).trim().replace(/\s+/g, " ").slice(0, 80);
-}
-
-function normalizeIdentityValue(value) {
-  return normalizeProfileValue(value)
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-}
-
-function buildPlayerProfile(name, school, fallbackId = createPlayerId()) {
-  const profile = {
-    id: fallbackId,
-    name: normalizeProfileValue(name),
-    school: normalizeProfileValue(school),
-  };
-
-  if (profile.name && profile.school) {
-    profile.id = profileIdForNameSchool(profile.name, profile.school);
-  }
-
-  return profile;
-}
-
-function profileKeyForNameSchool(name, school) {
-  const normalizedName = normalizeIdentityValue(name);
-  const normalizedSchool = normalizeIdentityValue(school);
-  return normalizedName && normalizedSchool ? `${normalizedName}|${normalizedSchool}` : "";
-}
-
-function profileKeyForRecord(record) {
-  return profileKeyForNameSchool(record.playerName, record.schoolName);
-}
-
-function currentProfileKey() {
-  return profileKeyForNameSchool(state.player?.name, state.player?.school);
-}
-
-function profileIdForNameSchool(name, school) {
-  return `profile-${hashProfileKey(profileKeyForNameSchool(name, school))}`;
-}
-
-function hashProfileKey(value) {
-  let first = 0xdeadbeef;
-  let second = 0x41c6ce57;
-
-  for (let index = 0; index < value.length; index += 1) {
-    const code = value.charCodeAt(index);
-    first = Math.imul(first ^ code, 2654435761);
-    second = Math.imul(second ^ code, 1597334677);
-  }
-
-  first = Math.imul(first ^ (first >>> 16), 2246822507) ^ Math.imul(second ^ (second >>> 13), 3266489909);
-  second = Math.imul(second ^ (second >>> 16), 2246822507) ^ Math.imul(first ^ (first >>> 13), 3266489909);
-  return `${(second >>> 0).toString(36)}${(first >>> 0).toString(36)}`;
-}
-
-function hasCompletePlayerProfile() {
-  return Boolean(state.player?.name?.trim() && state.player?.school?.trim());
-}
-
-function loadSupabaseConfig() {
-  const config = window.CHARTERSCHOOLDLE_SUPABASE || {};
-  const rawUrl = typeof config.url === "string" ? config.url.trim() : "";
-  const rawAnonKey = typeof config.anonKey === "string" ? config.anonKey.trim() : "";
-  const table =
-    typeof config.table === "string" && /^[A-Za-z0-9_]+$/.test(config.table)
-      ? config.table
-      : GAME_CONFIG.defaultSupabaseTable;
-
-  if (
-    !rawUrl ||
-    !rawAnonKey ||
-    rawUrl.includes("YOUR_") ||
-    rawAnonKey.includes("YOUR_")
-  ) {
-    return null;
-  }
-
-  return {
-    url: rawUrl.replace(/\/+$/, ""),
-    anonKey: rawAnonKey,
-    table,
-  };
-}
-
-function loadScorebook() {
-  const raw = localStorage.getItem(GAME_CONFIG.scoreStorageKey);
-  if (!raw) {
-    return { results: {} };
-  }
-
-  try {
-    return { results: {}, ...JSON.parse(raw) };
-  } catch {
-    return { results: {} };
-  }
-}
-
-function saveScorebook() {
-  localStorage.setItem(GAME_CONFIG.scoreStorageKey, JSON.stringify(state.scorebook));
+  if (state.activePuzzleDate && state.progress) state.store.writeProgress(state.activePuzzleDate, state.progress);
 }
 
 function loadPuzzleForDate(date) {
+  if (state.mode === "archive" && !archiveDates(state.metadata.puzzles, ncToday()).includes(date)) {
+    const hasPast = archiveDates(state.metadata.puzzles, ncToday()).length > 0;
+    showUnavailable(hasPast ? "Choose a past puzzle" : "No past puzzles yet", hasPast
+      ? "Choose an available date before today to play a past puzzle."
+      : "Past puzzles will appear here after the first daily puzzle. Choose Daily Puzzle to play.", false);
+    return;
+  }
   const puzzle = getPuzzleByDate(date);
   if (!puzzle) {
-    elements.statusTitle.textContent = "Puzzle not found";
-    elements.statusMessage.textContent = "That date does not have a puzzle yet.";
+    showUnavailable("Daily puzzle unavailable", "Today’s puzzle is not available yet. Choose Retry or play Past Puzzles.");
     return;
   }
 
+  elements.retryButton.classList.add("is-hidden");
   state.activePuzzle = puzzle;
   state.activePuzzleDate = date;
   state.progress = loadSavedProgress(date);
@@ -576,7 +495,7 @@ function syncInputLock() {
     return;
   }
 
-  const gameOver = state.progress.solved || state.progress.lost;
+  const gameOver = !state.progress || state.progress.solved || state.progress.lost;
   elements.guessInput.disabled = gameOver;
   elements.guessForm.querySelector("button[type='submit']").disabled = gameOver;
 }
@@ -592,7 +511,7 @@ function hasAlreadyGuessedSchool(schoolId) {
 function handleGuessSubmission(event) {
   event.preventDefault();
 
-  if (state.progress.solved || state.progress.lost) {
+  if (!state.progress || state.progress.solved || state.progress.lost) {
     return;
   }
 
@@ -650,172 +569,32 @@ function handleGuessSubmission(event) {
 }
 
 function recordDailyAttempt() {
-  if (state.mode !== "daily" || state.progress.guesses.length === 0) {
-    return;
-  }
-
+  if (state.mode !== "daily" || !state.progress?.guesses.length) return;
   const status = state.progress.solved ? "solved" : state.progress.lost ? "lost" : "attempted";
-  const guessCount = state.progress.guesses.length;
-  const existing = state.scorebook.results[state.activePuzzleDate];
-  const hasSameResult = existing?.status === status && existing?.guesses === guessCount;
-
-  state.scorebook.results[state.activePuzzleDate] = {
+  const existing = state.store.readResults().find((entry) => entry.date === state.activePuzzleDate);
+  state.store.writeResult({
     date: state.activePuzzleDate,
     answerSchoolId: state.activePuzzle.answerSchoolId,
     status,
-    guesses: guessCount,
-    points: status === "solved" ? GAME_CONFIG.maxGuesses + 1 - guessCount : 0,
-    completedAt: hasSameResult && existing?.completedAt ? existing.completedAt : new Date().toISOString(),
-  };
-  saveScorebook();
-  syncLocalScoresToRemote();
-}
-
-function buildScoreSummary(records = getCurrentPlayerRecords()) {
-  const results = dedupeResultsByDate(records).sort((left, right) => left.date.localeCompare(right.date));
-  const solved = results.filter((result) => result.status === "solved");
-  const points = results.reduce((sum, result) => sum + Number(result.points || 0), 0);
-  const average =
-    solved.length > 0
-      ? solved.reduce((sum, result) => sum + result.guesses, 0) / solved.length
-      : null;
-  const attemptStreaks = calculateStreaks(results, () => true);
-  const winStreaks = calculateStreaks(dropTrailingAttemptedResults(results), (result) => result.status === "solved");
-
-  return {
-    points,
-    played: results.length,
-    solved: solved.length,
-    attemptStreak: attemptStreaks.current,
-    winStreak: winStreaks.current,
-    bestAttemptStreak: attemptStreaks.best,
-    bestWinStreak: winStreaks.best,
-    average,
-  };
-}
-
-function getCurrentPlayerRecords() {
-  const localRecords = buildLocalLeaderboardRecords();
-  const profileKey = currentProfileKey();
-
-  if (!profileKey || !state.leaderboard.records.length) {
-    return localRecords;
-  }
-
-  const remoteProfileRecords = state.leaderboard.records.filter(
-    (record) => profileKeyForRecord(record) === profileKey,
-  );
-  return [...remoteProfileRecords, ...localRecords];
-}
-
-function dropTrailingAttemptedResults(results) {
-  const trimmed = [...results];
-  while (trimmed[trimmed.length - 1]?.status === "attempted") {
-    trimmed.pop();
-  }
-  return trimmed;
-}
-
-function dedupeResultsByDate(records) {
-  const byDate = new Map();
-  records.forEach((record) => {
-    if (!record?.date) {
-      return;
-    }
-
-    const existing = byDate.get(record.date);
-    if (!existing || String(record.completedAt || "").localeCompare(String(existing.completedAt || "")) >= 0) {
-      byDate.set(record.date, record);
-    }
+    guesses: state.progress.guesses.length,
+    guessedSchoolIds: state.progress.guesses.map((guess) => guess.schoolId),
+    completedAt: existing?.status === status && existing?.guesses === state.progress.guesses.length
+      ? existing.completedAt : new Date().toISOString(),
   });
-  return [...byDate.values()];
 }
 
-function calculateStreaks(results, qualifies) {
-  let best = 0;
-  let currentRun = 0;
-  let previousDate = null;
-
-  results.forEach((result) => {
-    if (!qualifies(result)) {
-      currentRun = 0;
-      previousDate = result.date;
-      return;
-    }
-
-    currentRun = previousDate && areConsecutivePuzzleDates(previousDate, result.date) ? currentRun + 1 : 1;
-    best = Math.max(best, currentRun);
-    previousDate = result.date;
-  });
-
-  return { current: currentRun, best };
-}
-
-function areConsecutivePuzzleDates(previousDate, currentDate) {
-  const puzzleDates = state.metadata?.puzzles?.map((puzzle) => puzzle.date).sort() || [];
-  const previousIndex = puzzleDates.indexOf(previousDate);
-  const currentIndex = puzzleDates.indexOf(currentDate);
-
-  if (previousIndex !== -1 && currentIndex !== -1) {
-    return currentIndex === previousIndex + 1;
-  }
-
-  return dayNumber(currentDate) - dayNumber(previousDate) === 1;
-}
-
-function dayNumber(date) {
-  return Math.floor(new Date(`${date}T00:00:00Z`).getTime() / 86400000);
+function buildScoreSummary() {
+  return scoreSummary(state.store?.readResults() || [], ncToday());
 }
 
 function renderScoreSummary() {
   const summary = buildScoreSummary();
-  const profilePrompt = hasCompletePlayerProfile() ? "" : " · add name and school";
-  elements.scoreStatus.textContent =
-    summary.played === 0
-      ? `Daily results only${profilePrompt}`
-      : `${summary.points} pts · ${summary.solved}/${summary.played} solved${profilePrompt}`;
-  elements.playerName.value = state.player.name;
-  elements.playerSchool.value = state.player.school;
-}
-
-function openProfilePrompt() {
-  elements.profileName.value = state.player.name;
-  elements.profileSchool.value = state.player.school;
-  elements.profileModalStatus.textContent = "";
-  elements.profileOverlay.classList.remove("is-hidden");
-  elements.profileOverlay.setAttribute("aria-hidden", "false");
-  window.setTimeout(() => elements.profileName.focus(), 0);
-}
-
-function closeProfilePrompt() {
-  elements.profileOverlay.classList.add("is-hidden");
-  elements.profileOverlay.setAttribute("aria-hidden", "true");
-}
-
-function showProfilePromptIfNeeded() {
-  if (!hasCompletePlayerProfile()) {
-    openProfilePrompt();
-  }
-}
-
-function savePlayerFromFields(name, school) {
-  const nextProfile = buildPlayerProfile(name, school, state.player?.id);
-
-  if (!nextProfile.name || !nextProfile.school) {
-    return false;
-  }
-
-  state.player = nextProfile;
-  savePlayerProfile();
-  renderScoreSummary();
-  if (state.mode === "leaderboard") {
-    renderLeaderboardView();
-  }
-  syncLocalScoresToRemote();
-  return true;
+  const persistence = safeStorage.persistent ? "Guest progress stays in this browser" : "Progress lasts for this session only";
+  elements.scoreStatus.textContent = `${summary.played === 0 ? "Daily results only" : `${summary.points} pts · ${summary.solved}/${summary.played} solved`} · ${persistence}`;
 }
 
 function renderMapView() {
+  elements.retryButton.classList.add("is-hidden");
   elements.boardPanel.classList.add("is-hidden");
   elements.guessForm.classList.add("is-hidden");
   elements.leaderboardPanel.classList.add("is-hidden");
@@ -1161,320 +940,26 @@ function syncSelectedMapPin() {
 
 function renderLeaderboardView() {
   const summary = buildScoreSummary();
-  const rows = buildLeaderboardRows();
-  const pageSize = GAME_CONFIG.leaderboardPageSize;
-  const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
-  state.leaderboard.page = Math.min(Math.max(1, state.leaderboard.page), totalPages);
-  const pageStart = (state.leaderboard.page - 1) * pageSize;
-  const pageEnd = pageStart + pageSize;
-  const visibleRows = rows.slice(pageStart, pageEnd);
-  const playerName = state.player.name.trim() || "You";
-  const averageLabel = summary.average === null ? "—" : summary.average.toFixed(1);
-  const scoreVerb = playerName === "You" ? "have" : "has";
-  const profileKey = currentProfileKey();
-
   elements.boardPanel.classList.add("is-hidden");
   elements.guessForm.classList.add("is-hidden");
   elements.leaderboardPanel.classList.remove("is-hidden");
   elements.mapPanel.classList.add("is-hidden");
+  elements.retryButton.classList.add("is-hidden");
   elements.winOverlay.classList.add("is-hidden");
   elements.winOverlay.setAttribute("aria-hidden", "true");
-  elements.statusTitle.textContent = "Leaderboard";
-  elements.statusMessage.textContent = `${playerName} ${scoreVerb} ${summary.points} points across ${summary.played} daily puzzle${summary.played === 1 ? "" : "s"}.`;
+  elements.statusTitle.textContent = "Leaderboard unavailable";
+  elements.statusMessage.textContent = "You can keep playing as a guest. Public leaderboard participation is optional.";
   elements.scoreTotal.textContent = String(summary.points);
   elements.scoreWinStreak.textContent = String(summary.winStreak);
   elements.scoreAttemptStreak.textContent = String(summary.attemptStreak);
-  elements.scoreAverage.textContent = averageLabel;
-  elements.leaderboardSortButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.leaderboardSort === state.leaderboard.sort);
-  });
-  elements.leaderboardSummary.textContent =
-    rows.length === 0
-      ? "No scored daily puzzles yet"
-      : `Showing ${pageStart + 1}-${Math.min(pageEnd, rows.length)} of ${rows.length} player${rows.length === 1 ? "" : "s"}`;
-  elements.leaderboardPagination.classList.toggle("is-hidden", rows.length <= pageSize);
-  elements.leaderboardPrev.disabled = state.leaderboard.page <= 1;
-  elements.leaderboardNext.disabled = state.leaderboard.page >= totalPages;
-  elements.leaderboardPageStatus.textContent = `Page ${state.leaderboard.page} of ${totalPages}`;
-  elements.leaderboardSyncStatus.textContent = getLeaderboardStatusMessage();
-  elements.leaderboardBody.innerHTML = visibleRows.length
-    ? visibleRows
-        .map(
-          (row, index) => `
-            <tr class="${profileKey && row.profileKey === profileKey ? "leaderboard-row--you" : ""}">
-              <td>${pageStart + index + 1}</td>
-              <td>${escapeHtml(row.playerName)}</td>
-              <td>${escapeHtml(row.schoolName)}</td>
-              <td>${row.points}</td>
-              <td>${row.solved}/${row.played}</td>
-              <td>${row.winStreak}</td>
-              <td>${row.attemptStreak}</td>
-              <td>${row.average === null ? "—" : row.average.toFixed(1)}</td>
-            </tr>
-          `,
-        )
-        .join("")
-    : '<tr><td class="leaderboard-empty" colspan="8">No daily scores recorded yet.</td></tr>';
+  elements.scoreAverage.textContent = summary.average === null ? "—" : summary.average.toFixed(1);
+  elements.leaderboardSummary.textContent = "Your daily puzzle scores";
+  elements.leaderboardPagination.classList.add("is-hidden");
+  elements.leaderboardSortButtons.forEach((button) => { button.disabled = true; });
+  elements.leaderboardSyncStatus.textContent = "The public leaderboard is unavailable. Guest play remains available.";
+  elements.leaderboardBody.innerHTML = '<tr><td class="leaderboard-empty" colspan="8">Public rankings are unavailable.</td></tr>';
   renderHeader();
   renderScoreSummary();
-}
-
-function buildLeaderboardRows() {
-  const records = getLeaderboardRecords();
-  const players = new Map();
-
-  records.forEach((record) => {
-    const recordProfileKey = profileKeyForRecord(record);
-    const key = recordProfileKey || record.clientPlayerId || `${record.playerName}:${record.schoolName}`;
-    if (!players.has(key)) {
-      players.set(key, {
-        profileKey: recordProfileKey,
-        clientPlayerId: record.clientPlayerId,
-        playerName: record.playerName || "Unknown Player",
-        schoolName: record.schoolName || "School not set",
-        records: [],
-        latestRecord: null,
-      });
-    }
-
-    const player = players.get(key);
-    player.records.push(record);
-    if (
-      !player.latestRecord ||
-      String(record.completedAt || record.date).localeCompare(
-        String(player.latestRecord.completedAt || player.latestRecord.date),
-      ) >= 0
-    ) {
-      player.latestRecord = record;
-      player.playerName = record.playerName || player.playerName;
-      player.schoolName = record.schoolName || player.schoolName;
-    }
-  });
-
-  const rows = [...players.values()].map((player) => ({
-    profileKey: player.profileKey,
-    clientPlayerId: player.clientPlayerId,
-    playerName: player.playerName,
-    schoolName: player.schoolName,
-    ...buildScoreSummary(player.records),
-  }));
-  const sortGetters = {
-    points: (row) => row.points,
-    winStreak: (row) => row.winStreak,
-    attemptStreak: (row) => row.attemptStreak,
-    bestWinStreak: (row) => row.bestWinStreak,
-  };
-  const primaryGetter = sortGetters[state.leaderboard.sort] || sortGetters.points;
-
-  return rows.sort((left, right) => {
-    const primary = primaryGetter(right) - primaryGetter(left);
-    if (primary) {
-      return primary;
-    }
-
-    return (
-      right.points - left.points ||
-      right.solved - left.solved ||
-      averageSortValue(left.average) - averageSortValue(right.average) ||
-      left.playerName.localeCompare(right.playerName)
-    );
-  });
-}
-
-function averageSortValue(value) {
-  return value === null ? Number.POSITIVE_INFINITY : value;
-}
-
-function getLeaderboardRecords() {
-  const localRecords = buildLocalLeaderboardRecords();
-
-  if (!state.supabase || state.leaderboard.status === "error" || !state.leaderboard.records.length) {
-    return localRecords;
-  }
-
-  return [...state.leaderboard.records, ...localRecords];
-}
-
-function buildLocalLeaderboardRecords() {
-  const playerName = state.player.name.trim() || "You";
-  const schoolName = state.player.school.trim() || "School not set";
-
-  return Object.values(state.scorebook?.results || {}).map((result) => ({
-    clientPlayerId: state.player.id,
-    playerName,
-    schoolName,
-    date: result.date,
-    answerSchoolId: result.answerSchoolId,
-    status: result.status || "attempted",
-    guesses: Number(result.guesses),
-    points: Number(result.points || 0),
-    completedAt: result.completedAt,
-  }));
-}
-
-function getLeaderboardStatusMessage() {
-  if (!state.supabase) {
-    return "Company leaderboard is not connected yet. Scores are saved on this device.";
-  }
-
-  if (!hasCompletePlayerProfile()) {
-    return "Add your name and school to publish your daily scores.";
-  }
-
-  if (state.leaderboard.status === "syncing") {
-    return "Syncing your daily scores...";
-  }
-
-  if (state.leaderboard.status === "loading") {
-    return "Loading company leaderboard...";
-  }
-
-  if (state.leaderboard.status === "error") {
-    return state.leaderboard.message || "Could not load the company leaderboard. Showing saved scores.";
-  }
-
-  return "Company leaderboard is connected.";
-}
-
-async function refreshLeaderboard({ silent = false } = {}) {
-  if (!state.supabase) {
-    state.leaderboard.status = "local";
-    state.leaderboard.records = [];
-    return;
-  }
-
-  state.leaderboard.status = silent ? state.leaderboard.status : "loading";
-  if (state.mode === "leaderboard") {
-    renderLeaderboardView();
-  }
-
-  try {
-    state.leaderboard.records = await fetchRemoteLeaderboardRecords();
-    state.leaderboard.status = "ready";
-    state.leaderboard.message = "";
-  } catch (error) {
-    state.leaderboard.status = "error";
-    state.leaderboard.message = "Could not load the company leaderboard. Showing saved scores.";
-    console.warn(error);
-  }
-
-  if (state.mode === "leaderboard") {
-    renderLeaderboardView();
-  } else {
-    renderScoreSummary();
-  }
-}
-
-async function syncLocalScoresToRemote() {
-  if (!state.supabase || state.leaderboard.syncInFlight || !hasCompletePlayerProfile()) {
-    return;
-  }
-
-  const records = buildLocalLeaderboardRecords();
-  if (!records.length) {
-    await refreshLeaderboard({ silent: true });
-    return;
-  }
-
-  state.leaderboard.syncInFlight = true;
-  state.leaderboard.status = "syncing";
-  if (state.mode === "leaderboard") {
-    renderLeaderboardView();
-  }
-
-  try {
-    await upsertRemoteLeaderboardRecords(records);
-    await refreshLeaderboard({ silent: true });
-  } catch (error) {
-    state.leaderboard.status = "error";
-    state.leaderboard.message = "Could not sync your daily scores. They are still saved on this device.";
-    console.warn(error);
-    if (state.mode === "leaderboard") {
-      renderLeaderboardView();
-    }
-  } finally {
-    state.leaderboard.syncInFlight = false;
-  }
-}
-
-async function fetchRemoteLeaderboardRecords() {
-  const params = new URLSearchParams({
-    select:
-      "client_player_id,player_name,school_name,puzzle_date,answer_school_id,status,guesses,points,completed_at",
-    order: "puzzle_date.asc",
-    limit: String(GAME_CONFIG.leaderboardFetchLimit),
-  });
-  const rows = await supabaseRequest(`${state.supabase.table}?${params.toString()}`);
-  return Array.isArray(rows) ? rows.map(normalizeRemoteRecord).filter(Boolean) : [];
-}
-
-async function upsertRemoteLeaderboardRecords(records) {
-  const payload = records.map((record) => ({
-    client_player_id: record.clientPlayerId,
-    player_name: record.playerName,
-    school_name: record.schoolName,
-    puzzle_date: record.date,
-    answer_school_id: record.answerSchoolId,
-    status: record.status,
-    guesses: record.guesses,
-    points: record.points,
-    completed_at: record.completedAt,
-  }));
-
-  await supabaseRequest(`${state.supabase.table}?on_conflict=client_player_id,puzzle_date`, {
-    method: "POST",
-    headers: {
-      Prefer: "resolution=merge-duplicates,return=minimal",
-    },
-    body: JSON.stringify(payload),
-  });
-}
-
-async function supabaseRequest(path, options = {}) {
-  const headers = {
-    apikey: state.supabase.anonKey,
-    "Content-Type": "application/json",
-    ...(options.headers || {}),
-  };
-
-  if (state.supabase.anonKey.startsWith("ey")) {
-    headers.Authorization = `Bearer ${state.supabase.anonKey}`;
-  }
-
-  const response = await fetch(`${state.supabase.url}/rest/v1/${path}`, {
-    ...options,
-    headers,
-  });
-
-  if (!response.ok) {
-    const message = await response.text();
-    throw new Error(`Supabase request failed (${response.status}): ${message}`);
-  }
-
-  if (response.status === 204) {
-    return null;
-  }
-
-  const text = await response.text();
-  return text ? JSON.parse(text) : null;
-}
-
-function normalizeRemoteRecord(row) {
-  if (!row?.client_player_id || !row?.puzzle_date) {
-    return null;
-  }
-
-  return {
-    clientPlayerId: row.client_player_id,
-    playerName: normalizeProfileValue(row.player_name || "Unknown Player"),
-    schoolName: normalizeProfileValue(row.school_name || "School not set"),
-    date: row.puzzle_date,
-    answerSchoolId: row.answer_school_id,
-    status: ["attempted", "solved", "lost"].includes(row.status) ? row.status : "attempted",
-    guesses: Number(row.guesses || 0),
-    points: Number(row.points || 0),
-    completedAt: row.completed_at || row.puzzle_date,
-  };
 }
 
 function escapeHtml(value) {
@@ -1805,11 +1290,6 @@ function handleGuessInputKeydown(event) {
 }
 
 async function init() {
-  await loadData();
-  initializeArchiveBounds();
-  setMode("daily");
-  refreshLeaderboard({ silent: true });
-  syncLocalScoresToRemote();
 
   elements.modeButtons.forEach((button) => {
     button.addEventListener("click", () => setMode(button.dataset.mode));
@@ -1843,19 +1323,6 @@ async function init() {
   });
 
   elements.guessForm.addEventListener("submit", handleGuessSubmission);
-  elements.playerForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    savePlayerFromFields(elements.playerName.value, elements.playerSchool.value);
-  });
-  elements.profileModalForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (savePlayerFromFields(elements.profileName.value, elements.profileSchool.value)) {
-      closeProfilePrompt();
-      return;
-    }
-
-    elements.profileModalStatus.textContent = "Name and school are required.";
-  });
   elements.guessInput.addEventListener("input", updateSuggestions);
   elements.guessInput.addEventListener("keydown", handleGuessInputKeydown);
   elements.autocompleteList.addEventListener("mousedown", (event) => {
@@ -1868,7 +1335,15 @@ async function init() {
     state.winOverlaySeen = true;
     renderWinOverlay();
   });
-  showProfilePromptIfNeeded();
+  elements.retryButton.addEventListener("click", retryData);
+  elements.newDailyButton.addEventListener("click", () => {
+    state.dailyDate = ncToday();
+    setMode("daily");
+    checkForNewDaily();
+  });
+  document.addEventListener("visibilitychange", checkForNewDaily);
+  window.setInterval(checkForNewDaily, 30_000);
+  await retryData();
 }
 
 init().catch((error) => {
