@@ -183,3 +183,34 @@ test('test_server_serves_real_assets_under_a_project_prefix', async ({ page, gam
     server.kill();
   }
 });
+
+for (const scenario of [
+  { name: 'unplayed', initialSchool: null, counter: '0 / 6', nextGuesses: [schools[2].id] },
+  { name: 'attempted', initialSchool: schools[1], counter: '1 / 6', nextGuesses: [schools[1].id, schools[2].id] },
+]) {
+  test(`midnight_archive_completion_preserves_${scenario.name}_daily_game`, async ({ page, game }) => {
+    await page.clock.setFixedTime(new Date('2026-10-16T03:59:55Z'));
+    await game.open();
+    if (scenario.initialSchool) await game.guess(scenario.initialSchool);
+    const originalResults = await page.evaluate(() => localStorage.getItem('charterschoodle:v2:guest:results'));
+
+    await page.clock.setFixedTime(new Date('2026-10-16T04:00:05Z'));
+    await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+    await page.getByRole('button', { name: 'Past Puzzles', exact: true }).click();
+    await page.locator('#archive-date').fill('2026-10-15');
+    await expect(page.locator('#puzzle-date-heading')).toContainText('October 15, 2026');
+    await game.guess(schools[0]);
+    await page.getByRole('button', { name: 'Keep Browsing', exact: true }).click();
+    await page.getByRole('button', { name: 'Daily Puzzle', exact: true }).click();
+
+    // Returning to the retained daily game cannot import archive guesses or scores.
+    expect(await page.evaluate(() => localStorage.getItem('charterschoodle:v2:guest:results'))).toBe(originalResults);
+    await expect(page.locator('#guess-counter')).toHaveText(scenario.counter);
+    await expect(page.getByLabel('Guess the school')).toBeEnabled();
+    await game.guess(schools[2]);
+    const results = await page.evaluate(() => JSON.parse(localStorage.getItem('charterschoodle:v2:guest:results')));
+    expect(results).toMatchObject([{
+      date: '2026-10-15', status: 'attempted', points: 0, guessedSchoolIds: scenario.nextGuesses,
+    }]);
+  });
+}

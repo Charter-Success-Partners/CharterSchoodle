@@ -160,6 +160,7 @@ const NC_MAP_OUTLINE = [
 
 const safeStorage = createSafeStorage(() => window.localStorage);
 const stores = new Map();
+const dailySessions = new Map();
 
 function storeFor(subject) {
   if (!stores.has(subject)) {
@@ -298,7 +299,15 @@ function createFreshProgress() {
 }
 
 function loadSavedProgress(date) {
-  return state.store.readProgress(date) || createFreshProgress();
+  if (state.mode !== "daily") return state.store.readProgress(date) || createFreshProgress();
+
+  // An open daily game must retain its own guesses when midnight also makes
+  // this date playable in the archive. Archive reads return separate objects.
+  const key = `${state.subject}:${date}`;
+  if (!dailySessions.has(key)) {
+    dailySessions.set(key, state.store.readProgress(date) || createFreshProgress());
+  }
+  return dailySessions.get(key);
 }
 
 function saveProgress() {
