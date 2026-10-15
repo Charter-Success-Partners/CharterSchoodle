@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "observedAt": "2026-10-15",
-  "scope": "Activated, merged, and deployed revision bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa verified over HTTPS. Live guest/account/callback recovery checks passed. Inbox delivery and designated-recipient requesting-browser sign-in confirmation remain pending.",
+  "scope": "Activated, merged, and deployed revision bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa verified over HTTPS. Live guest/account/callback recovery checks passed. Owner confirmed email delivery; designated-recipient requesting-browser sign-in completion remains pending.",
   "checks": {
     "unit": {
       "status": "passed",
@@ -45,8 +45,8 @@
     },
     "externalRecipientEmail": {
       "status": "blocked",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-request-redacted.json, post-deployment-state-redacted.json \u2014 SMTP accepted the designated sign-in request with HTTP 200; PKCE verifier/cooldown observed; recipient not yet confirmed or signed in at last observation.",
-      "reason": "Awaiting owner confirmation of inbox delivery and successful sign-in from the owner requesting browser. Connected mailbox search did not find the designated test message."
+      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-request-redacted.json, email-delivery-redacted.json \u2014 SMTP accepted the designated request; PKCE verifier/cooldown observed; owner confirmed receipt. Read-only Auth metadata at 19:11 UTC still showed no confirmed email or completed sign-in for the designated recipient.",
+      "reason": "Email delivery is confirmed. Awaiting successful sign-in completion in the owner requesting browser."
     },
     "deployedSmoke": {
       "status": "passed",

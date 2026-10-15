@@ -1,8 +1,8 @@
 # Launch verification evidence — October 15, 2026
 
-Production follow-up: the release is live at the canonical domain with the leaderboard enabled. All 18 deployed asset hashes, 47 API ownership checks, 34 live guest checks, 13 live account checks, and two callback-recovery checks passed. See the [release observations](release-activation/README.md), [backend setup](production-setup/README.md), and current [readiness record](../../release-readiness.json). Owner email sign-in confirmation remains pending.
+Production follow-up: the release is live at the canonical domain with the leaderboard enabled. All 18 deployed asset hashes, 47 API ownership checks, 34 live guest checks, 13 live account checks, and two callback-recovery checks passed. See the [release observations](release-activation/README.md), [backend setup](production-setup/README.md), and current [readiness record](../../release-readiness.json). The owner confirmed [email delivery](release-activation/email-delivery-redacted.json); successful sign-in completion remains pending.
 
-This directory is durable evidence outside the static deployment allowlist. The readiness record is [../../release-readiness.json](../../release-readiness.json); the owner procedure is [../../public-launch-runbook.md](../../public-launch-runbook.md). Local fixture success does not establish live authorization or email delivery. No production writes, user creation, email, push or deployment occurred.
+This directory is durable evidence outside the static deployment allowlist. The readiness record is [../../release-readiness.json](../../release-readiness.json); the owner procedure is [../../public-launch-runbook.md](../../public-launch-runbook.md). Local fixture success does not establish live authorization or email delivery. The original local-verification phase below involved no production writes, user creation, email, push or deployment; the subsequent production setup and release observations are recorded separately above.
 
 ## Final review corrections and current automated evidence
 
