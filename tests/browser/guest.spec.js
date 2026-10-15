@@ -192,6 +192,8 @@ for (const scenario of [
     await page.clock.setFixedTime(new Date('2026-10-16T03:59:55Z'));
     await game.open();
     if (scenario.initialSchool) await game.guess(scenario.initialSchool);
+    // Navigation load does not await the module's asynchronous data initialization.
+    await expect(page.getByLabel('Guess the school')).toBeEnabled();
     const originalResults = await page.evaluate(() => localStorage.getItem('charterschoodle:v2:guest:results'));
 
     await page.clock.setFixedTime(new Date('2026-10-16T04:00:05Z'));

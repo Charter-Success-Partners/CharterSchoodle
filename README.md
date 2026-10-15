@@ -13,20 +13,22 @@ This repo currently includes:
 - Clue accumulation across six guesses
 - Guess feedback for enrollment band, grade-band direction, and map direction
 - Local scoring plus a Supabase-backed company leaderboard for points, win streaks, and attempt streaks
-- Profile-based leaderboard identity from player name and school, so scores can follow a person across devices
+- Optional verified email accounts with private scores and explicit public leaderboard consent
 - A statewide current-school master list built from official NC sources
 - A statewide baseline clue bank generated from official NC sources
 - Hand-authored validated clue batches for selected schools
 
 ## Leaderboard
 
-The leaderboard is live through Supabase and is documented in `docs/leaderboard.md`.
+The protected v2 leaderboard is prepared with activation disabled in `src/supabase-config.js`. See [leaderboard documentation](docs/leaderboard.md).
 
-- Players are prompted for name and school if no profile is saved locally.
-- The browser remembers the profile in `localStorage`.
-- Re-entering the same normalized name and school on a new device maps to the same leaderboard identity.
-- Daily attempts, solved/lost status, guesses, points, win streaks, and attempt streaks are synced to Supabase.
-- The publishable Supabase key in `src/supabase-config.js` is public by design for this static app.
+- Guest play works immediately; profiles and email sign-in are optional.
+- Verified accounts keep daily scores across devices, including private personal totals.
+- Display names do not establish identity. Players explicitly choose whether to appear publicly.
+- Only today’s guest result can be imported, with confirmation; older guest history stays local.
+- Daily results are queued per account; archive play never changes rankings.
+- Public rankings use an aggregate RPC with five players per page. Raw account data remains owner-only.
+- The publishable Supabase key is public by design. Activation follows the reviewed rollout.
 
 ## Data Model
 

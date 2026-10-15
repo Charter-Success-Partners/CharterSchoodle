@@ -101,6 +101,12 @@
         </div>
       </header>
 
+      <div class="account-controls" aria-label="Leaderboard account">
+        <button id="account-button" class="secondary-button" type="button" aria-haspopup="dialog">Join leaderboard</button>
+        <button id="sign-out" class="secondary-button is-hidden" type="button">Sign out</button>
+        <button id="account-retry" class="secondary-button is-hidden" type="button">Retry account sync</button>
+        <p id="account-status" role="status" aria-live="polite"></p>
+      </div>
       <main class="layout">
         <section class="panel panel--primary">
           <div class="panel__header">
@@ -202,7 +208,8 @@
                 Next
               </button>
             </div>
-            <p id="leaderboard-sync-status" class="leaderboard-sync-status"></p>
+            <p id="leaderboard-sync-status" class="leaderboard-sync-status" role="status" aria-live="polite"></p>
+            <button id="leaderboard-retry" class="secondary-button is-hidden" type="button">Retry rankings</button>
           </section>
 
           <section id="map-panel" class="map-panel is-hidden">
@@ -248,6 +255,37 @@
         </section>
       </main>
     </div>
+
+    <dialog id="email-dialog" class="account-dialog" aria-labelledby="email-title">
+      <h2 id="email-title">Join the leaderboard</h2>
+      <p>Sign in by email to keep your daily scores across devices. You choose whether your profile is public.</p>
+      <form id="email-form" class="account-form">
+        <label for="account-email">Email address</label>
+        <input id="account-email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-help" autofocus />
+        <p id="email-help" class="field-help">Open the sign-in link in this browser. Your email is never shown on the leaderboard.</p>
+        <button id="email-submit" class="primary-button" type="submit">Send sign-in link</button>
+      </form>
+      <p id="email-status" role="status" aria-live="polite"></p>
+      <button id="email-close" class="secondary-button" type="button">Close sign-in</button>
+    </dialog>
+
+    <dialog id="profile-dialog" class="account-dialog" aria-labelledby="profile-title">
+      <h2 id="profile-title">Your leaderboard profile</h2>
+      <form id="profile-form" class="account-form">
+        <label for="profile-name">Display name</label>
+        <input id="profile-name" type="text" required maxlength="60" autocomplete="nickname" aria-describedby="profile-name-help" autofocus />
+        <p id="profile-name-help" class="field-help">Use 1–60 characters. Other players can use the same name.</p>
+        <label for="profile-school">School or organization (optional)</label>
+        <input id="profile-school" type="text" maxlength="80" autocomplete="organization" />
+        <label class="account-choice"><input id="profile-listed" type="checkbox" /> <span>Show my profile and daily scores on the public leaderboard</span></label>
+        <p class="field-help">Leave unchecked to save scores privately. Uncheck later to hide your entry. Your email and guesses stay private.</p>
+        <label class="account-choice"><input id="profile-include-today" type="checkbox" /> <span>Include today’s guest result from this browser</span></label>
+        <p class="field-help">Older guest results stay in this browser. An existing account result for today takes priority.</p>
+        <button id="profile-submit" class="primary-button" type="submit">Save profile</button>
+      </form>
+      <p id="profile-status" role="status" aria-live="polite"></p>
+      <button id="profile-close" class="secondary-button" type="button">Close profile</button>
+    </dialog>
 
     <dialog id="win-overlay" class="win-modal" aria-labelledby="win-title">
       <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
