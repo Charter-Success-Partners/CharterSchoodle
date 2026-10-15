@@ -274,14 +274,26 @@
 
     <dialog id="email-dialog" class="account-dialog" aria-labelledby="email-title">
       <h2 id="email-title">Join the leaderboard</h2>
-      <p>Sign in by email to keep your daily scores across devices. You choose whether your profile is public.</p>
+      <p id="email-intro">Choose your public name, then confirm your email to finish joining.</p>
       <form id="email-form" class="account-form">
-        <label for="account-email">Email address</label>
-        <input id="account-email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-help" autofocus />
-        <p id="email-help" class="field-help">Open the sign-in link in this browser. Your email is never shown on the leaderboard.</p>
-        <button id="email-submit" class="primary-button" type="submit">Send sign-in link</button>
+        <div id="join-fields">
+          <label for="join-name">Your display name</label>
+          <input id="join-name" type="text" required autocomplete="nickname" aria-describedby="join-name-help" autofocus />
+          <p id="join-name-help" class="field-help">Use 1–60 characters. Other players can use the same name.</p>
+          <label for="join-school">Your school or organization (optional)</label>
+          <input id="join-school" type="text" autocomplete="organization" />
+          <p id="join-notice" class="field-help">Joining makes your display name, optional affiliation, and daily aggregate stats public. Your email and individual guesses stay private. Joining includes today’s guest game from this browser; older guest and archive games stay here. An existing account game takes priority. You can hide your entry later in Edit profile.</p>
+        </div>
+        <div id="email-fields">
+          <label for="account-email">Email address</label>
+          <input id="account-email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-help" />
+          <p id="email-help" class="field-help">Open the confirmation link in this browser. Your details are retained here for 24 hours.</p>
+        </div>
+        <button id="email-submit" class="primary-button" type="submit">Join leaderboard</button>
       </form>
       <p id="email-status" role="status" aria-live="polite"></p>
+      <button id="email-edit" class="secondary-button" type="button" hidden>Edit details or email</button>
+      <button id="email-mode" class="secondary-button" type="button">Already joined? Sign in</button>
       <button id="email-close" class="secondary-button" type="button">Close sign-in</button>
     </dialog>
 

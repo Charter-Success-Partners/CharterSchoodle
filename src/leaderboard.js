@@ -108,6 +108,21 @@ export function createLeaderboardController({ getClient, storeFor, getPuzzle, sc
       try { return await work; }
       finally { if (profileSaves.get(ctx.subject) === work) profileSaves.delete(ctx.subject); }
     },
+    // Joining never upserts a stale guest draft over an existing owner profile.
+    async createProfile({ displayName, school = '' }) {
+      const ctx = context();
+      displayName = typeof displayName === 'string' ? displayName.trim() : '';
+      school = typeof school === 'string' ? school.trim() : '';
+      if (!displayName || [...displayName].length > 60 || [...school].length > 80) throw new Error('Use a display name of 1–60 characters and a school of up to 80 characters.');
+      const response = await ctx.client.from(PROFILES).insert({ user_id: ctx.subject, display_name: displayName, school, listed: true }).select('*').single();
+      check(ctx);
+      if (response.error && (response.status === 409 || response.error.code === '23505')) {
+        return { profile: await controller.readProfile(), created: false };
+      }
+      const profile = profileFrom(unwrap(response));
+      profiles.set(ctx.subject, profile);
+      return { profile, created: true };
+    },
     async readOwnerResults() {
       if (subject === 'guest') return [];
       const ctx = context(), entries = [];

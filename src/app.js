@@ -1,8 +1,9 @@
 import { ncToday, archiveDates, scoreSummary, formatShareResult, validateProgress } from "./game.js";
 import { createSafeStorage, createGameStore, loadLegacyProfile } from "./storage.js";
 import { openDialog, closeDialog } from "./dialog.js";
-import { createAuthController, loadLocalAuthClient } from "./auth.js";
-import { createLeaderboardController } from "./leaderboard.js";
+import { createAuthController, loadLocalAuthClient } from "./auth.js?v=20261015-join";
+import { createOnboardingController } from "./onboarding.js?v=20261015-join";
+import { createLeaderboardController } from "./leaderboard.js?v=20261015-join";
 
 const GAME_CONFIG = {
   maxGuesses: 6,
@@ -15,6 +16,14 @@ const elements = {
   signOut: document.getElementById("sign-out"),
   accountStatus: document.getElementById("account-status"),
   emailDialog: document.getElementById("email-dialog"),
+  joinFields: document.getElementById("join-fields"),
+  joinName: document.getElementById("join-name"),
+  joinSchool: document.getElementById("join-school"),
+  emailFields: document.getElementById("email-fields"),
+  emailEdit: document.getElementById("email-edit"),
+  emailMode: document.getElementById("email-mode"),
+  emailTitle: document.getElementById("email-title"),
+  emailIntro: document.getElementById("email-intro"),
   emailForm: document.getElementById("email-form"),
   emailInput: document.getElementById("account-email"),
   emailSubmit: document.getElementById("email-submit"),
@@ -199,6 +208,12 @@ let auth = null;
 let publicClient = null;
 let leaderboard = null;
 let accountProfile = null;
+let onboarding = null;
+let accountProblem = false;
+let accountBusy = false;
+let joinMode = "join";
+let emailEditing = false;
+let joinFeedback = "";
 let accountRevision = 0;
 let profilePresentation = 0;
 let syncing = false;
@@ -1432,16 +1447,80 @@ function handleGuessInputKeydown(event) {
   }
 }
 
+function renderEmail() {
+  if (!auth) return;
+  const current = auth.state;
+  const active = Boolean(current.userId);
+  const sent = !active && current.phase === "sent" && !emailEditing;
+  const joining = joinMode === "join";
+  const pending = onboarding?.pending;
+  const seconds = Math.max(0, Math.ceil((current.resendAt - Date.now()) / 1000));
+  elements.emailTitle.textContent = sent ? "Check your email" : joining ? "Join the leaderboard" : "Sign in";
+  elements.emailIntro.textContent = sent ? "Open the confirmation link in this browser to continue." : joining ? "Choose your public name, then confirm your email to finish joining." : "Restore your saved profile, privacy choices, and daily scores.";
+  if (active && joining) elements.emailIntro.textContent = "Your email is confirmed. Choose your public name to finish joining.";
+  elements.joinFields.hidden = !joining || sent;
+  elements.joinName.disabled = !joining || sent;
+  elements.joinSchool.disabled = !joining || sent;
+  elements.emailFields.hidden = active || sent;
+  elements.emailInput.disabled = active || sent;
+  elements.emailEdit.hidden = !sent;
+  elements.emailMode.hidden = active || sent;
+  elements.emailMode.textContent = joining ? "Already joined? Sign in" : "New here? Join leaderboard";
+  elements.emailSubmit.disabled = accountBusy || current.phase === "sending" || (!active && seconds > 0);
+  elements.emailSubmit.textContent = accountBusy ? "Finishing setup…" : current.phase === "sending" ? "Requesting link…" : sent ? (seconds ? `Resend link in ${seconds}s` : "Resend confirmation link") : joining ? "Join leaderboard" : "Send sign-in link";
+  if (sent) {
+    const address = joining ? pending?.email || elements.emailInput.value.trim() : elements.emailInput.value.trim();
+    elements.emailStatus.textContent = `Check your email at ${address}. ${joining ? "Your profile details are retained. Confirmation finishes joining automatically." : "Confirmation restores your account."} Open the link in this browser. ${seconds ? `You can request another link in ${seconds} seconds.` : "You can request another link now."}`;
+  } else if (joinFeedback) elements.emailStatus.textContent = joinFeedback;
+  else elements.emailStatus.textContent = current.message;
+}
+
 function renderAccount() {
   if (!auth) return;
   const current = auth.state;
-  elements.accountButton.textContent = current.userId ? (accountProfile ? "Edit profile" : "Create profile") : "Join leaderboard";
-  elements.accountButton.disabled = current.phase === "unavailable";
+  elements.accountButton.textContent = current.userId && accountProfile ? "Edit profile" : "Join leaderboard";
+  elements.accountButton.disabled = current.phase === "unavailable" || accountBusy;
   elements.signOut.classList.toggle("is-hidden", !current.userId);
-  elements.accountRetry.classList.toggle("is-hidden", !current.userId);
-  elements.emailStatus.textContent = current.message;
-  elements.emailSubmit.disabled = current.phase === "sending" || Date.now() < current.resendAt;
-  elements.accountStatus.textContent = current.message || (current.userId ? (accountProfile?.listed ? "Your profile is public." : accountProfile ? "Your scores are private." : "Create a profile to save your daily scores.") : "Play as a guest, or join to save daily scores across devices.");
+  elements.accountRetry.classList.toggle("is-hidden", !current.userId || !accountProblem);
+  renderEmail();
+  elements.accountStatus.textContent = joinFeedback || (accountBusy ? "Finishing account setup…" : "") || current.message || (current.userId ? (accountProfile?.listed ? "Your profile is public." : accountProfile ? "Your scores are private." : "Choose a public name to join the leaderboard.") : "Play as a guest, or join to save daily scores across devices.");
+}
+
+function showJoin(mode = "join") {
+  joinMode = mode;
+  emailEditing = false;
+  joinFeedback = "";
+  const pending = onboarding.pending;
+  const prefill = pending || loadLegacyProfile(safeStorage);
+  elements.joinName.value = prefill.displayName || "";
+  elements.joinSchool.value = prefill.school || "";
+  if (pending) elements.emailInput.value = pending.email;
+  renderEmail();
+  openDialog(elements.emailDialog, elements.accountButton);
+}
+
+async function finishJoin(revision) {
+  if (!onboarding.pending) return null;
+  accountBusy = true;
+  renderAccount();
+  try {
+    const result = await onboarding.finish();
+    if (revision !== accountRevision) return null;
+    if (result.status === "none") return null;
+    accountProfile = result.profile;
+    accountProblem = false;
+    joinFeedback = result.status === "joined" ? "You’re joined and ready. Your daily scores are saved; your profile is public." : "Welcome back. Your existing profile and privacy choices are restored.";
+    closeDialog(elements.emailDialog);
+    return result;
+  } catch (error) {
+    if (revision === accountRevision && error.name !== "AbortError") {
+      accountProblem = true;
+      joinFeedback = "Could not finish account setup. Your details are retained. Use Retry account sync to finish without another email link.";
+    }
+    throw error;
+  } finally {
+    if (revision === accountRevision) { accountBusy = false; renderAccount(); }
+  }
 }
 
 // Rebuild only authoritative daily entries, never archive progress sharing a date.
@@ -1471,6 +1550,9 @@ async function selectAccount(current, retry = false) {
   state.subject = next;
   state.store = storeFor(next);
   accountProfile = null;
+  accountProblem = false;
+  accountBusy = false;
+  joinFeedback = "";
   leaderboard.setSubject(next);
   closeDialog(elements.profileDialog);
   closeDialog(elements.winOverlay);
@@ -1483,21 +1565,30 @@ async function selectAccount(current, retry = false) {
   if (state.mode === "leaderboard") refreshRankings();
   if (next === "guest") return;
   try {
-    const profile = await leaderboard.readProfile();
+    // Bind a verified intent before any owner read can fail. The join lock also
+    // lets another confirmation tab finish before this tab restores its profile.
+    const joined = await finishJoin(revision);
+    if (revision !== accountRevision) return;
+    const profile = joined?.profile || await leaderboard.readProfile();
     if (revision !== accountRevision) return;
     accountProfile = profile;
-    if (profile && state.mode === "daily") recordDailyAttempt();
+    if (profile && !joined && state.mode === "daily") recordDailyAttempt();
     await leaderboard.readOwnerResults();
     if (revision !== accountRevision) return;
     refreshOwnerSessions();
     renderAccount();
     if (elements.emailDialog.open) {
       closeDialog(elements.emailDialog);
-      if (!profile) showProfile();
+      if (!accountProfile) showJoin();
     }
     await syncScores();
+    if (joined && revision === accountRevision) renderAccount();
   } catch (error) {
-    if (revision === accountRevision && error.name !== "AbortError") elements.accountStatus.textContent = "Could not load account scores. Your progress stays on this device. Use Retry account sync to try again.";
+    if (revision === accountRevision && error.name !== "AbortError") {
+      accountProblem = true;
+      joinFeedback = joinFeedback || "Could not load account scores. Your progress stays on this device. Use Retry account sync to try again.";
+      renderAccount();
+    }
   }
 }
 
@@ -1510,11 +1601,17 @@ async function syncScores() {
     await leaderboard.flush();
     if (revision !== accountRevision) return;
     refreshOwnerSessions();
+    accountProblem = false;
+    elements.accountRetry.classList.add("is-hidden");
     elements.accountStatus.textContent = state.store.readPending().length
       ? "A saved result differs from this device. Showing the saved game; this device’s pending guesses are retained."
       : accountProfile.listed ? "Daily scores saved. Your profile is public." : "Daily scores saved privately.";
   } catch (error) {
-    if (revision === accountRevision && error.name !== "AbortError") elements.accountStatus.textContent = "Scores could not sync. Pending scores stay on this device. Use Retry account sync to try again.";
+    if (revision === accountRevision && error.name !== "AbortError") {
+      accountProblem = true;
+      elements.accountRetry.classList.remove("is-hidden");
+      elements.accountStatus.textContent = "Scores could not sync. Pending scores stay on this device. Use Retry account sync to try again.";
+    }
   } finally {
     syncing = false;
     if (syncAgain) { syncAgain = false; void syncScores(); }
@@ -1559,6 +1656,7 @@ function initializeAccounts() {
     getClient: () => auth.getClient() || (state.subject === "guest" ? publicClient : null),
     storeFor, getPuzzle: getPuzzleByDate, schoolIds: new Set(state.schoolMap.keys()),
   });
+  onboarding = createOnboardingController({ storage: safeStorage, auth, leaderboard, guestStore: storeFor("guest"), ownerStore: () => state.store });
   auth.subscribe(current => { void selectAccount(current); });
   void auth.ready.then(() => {
     // Auth validates configuration before loading the factory. This separate
@@ -1579,14 +1677,45 @@ function initializeAccounts() {
     renderAccount();
     if (state.mode === "leaderboard") refreshRankings();
   });
-  elements.accountButton.addEventListener("click", () => auth.state.userId ? showProfile() : openDialog(elements.emailDialog, elements.accountButton));
+  elements.accountButton.addEventListener("click", () => accountProfile ? showProfile() : showJoin());
   elements.accountRetry.addEventListener("click", () => { void selectAccount(auth.state, true); });
-  elements.signOut.addEventListener("click", async () => { try { await auth.signOut(); } catch { renderAccount(); } });
+  elements.signOut.addEventListener("click", async () => { onboarding.cancel(); try { await auth.signOut(); } catch { renderAccount(); } });
   document.getElementById("email-close").addEventListener("click", () => closeDialog(elements.emailDialog));
   document.getElementById("profile-close").addEventListener("click", () => closeDialog(elements.profileDialog));
+  elements.emailMode.addEventListener("click", () => {
+    onboarding.cancel();
+    showJoin(joinMode === "join" ? "signin" : "join");
+  });
+  elements.emailEdit.addEventListener("click", () => {
+    onboarding.cancel();
+    emailEditing = true;
+    joinFeedback = "Update your details, then request a new link when the countdown ends.";
+    renderEmail();
+    elements.emailInput.focus();
+  });
   elements.emailForm.addEventListener("submit", async event => {
     event.preventDefault();
-    try { await auth.sendLink(elements.emailInput.value); } catch { /* Auth owns the actionable status. */ }
+    joinFeedback = "";
+    try {
+      if (auth.state.userId) {
+        if (onboarding.pending?.owner !== auth.state.userId || onboarding.pending?.displayName !== elements.joinName.value.trim() || onboarding.pending?.school !== elements.joinSchool.value.trim()) onboarding.prepare({ displayName: elements.joinName.value, school: elements.joinSchool.value }, { active: true });
+        await finishJoin(accountRevision);
+        refreshOwnerSessions();
+      } else if (joinMode === "join") {
+        // Resends keep the same consent and request identity; edits replace them.
+        if (auth.state.phase === "sent" && !emailEditing && onboarding.pending) {
+          const pending = onboarding.pending;
+          await auth.sendLink(pending.email, { requestId: pending.id });
+        } else await onboarding.request({ email: elements.emailInput.value, displayName: elements.joinName.value, school: elements.joinSchool.value });
+        emailEditing = false;
+      } else {
+        onboarding.cancel();
+        await auth.sendLink(elements.emailInput.value);
+        emailEditing = false;
+      }
+    } catch (error) {
+      if (error.name !== "AbortError") joinFeedback = joinFeedback || error.message;
+    }
     renderAccount();
   });
   elements.profileForm.addEventListener("submit", async event => {
@@ -1634,7 +1763,7 @@ function initializeAccounts() {
   });
   elements.leaderboardRetry.addEventListener("click", refreshRankings);
   window.addEventListener("online", () => { void syncScores(); });
-  window.setInterval(() => { elements.emailSubmit.disabled = auth.state.phase === "sending" || Date.now() < auth.state.resendAt; }, 1000);
+  window.setInterval(renderEmail, 1000);
   renderAccount();
 }
 

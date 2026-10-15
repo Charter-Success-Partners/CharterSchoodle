@@ -1,5 +1,8 @@
+export const JOIN_CLOCK_SKEW_MS = 60 * 1000;
+export const JOIN_LIFETIME_MS = 24 * 60 * 60 * 1000;
 const STORAGE_KEY = 'charterschoodle-auth:v2';
-const STORAGE_KEYS = [STORAGE_KEY, `${STORAGE_KEY}-code-verifier`, `${STORAGE_KEY}-user`];
+const REQUEST_KEY = `${STORAGE_KEY}-join-request`;
+const STORAGE_KEYS = [REQUEST_KEY, STORAGE_KEY, `${STORAGE_KEY}-code-verifier`, `${STORAGE_KEY}-user`];
 const AUTH_PARAMS = ['code', 'error', 'error_code', 'error_description', 'access_token', 'refresh_token', 'expires_in', 'expires_at', 'token_type', 'type', 'provider_token', 'provider_refresh_token', 'token_hash'];
 const STORAGE_MESSAGE = 'Email sign-in needs available browser storage. You can keep playing as a guest.';
 const RETRY_MESSAGE = 'This sign-in link could not be used. Request a new link and open it in this browser. You can keep playing as a guest.';
@@ -78,7 +81,18 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
   let life = null;
   let loading = null;
   let epoch = 0;
+  let identity = null;
+  const normalizeEmail = value => typeof value === 'string' && value.trim().length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) ? value.trim().toLowerCase() : null;
+  async function verifierHash(value) {
+    if (!value) return null;
+    const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+    return Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
+  }
+  function validRequest(value) {
+    return value && typeof value.id === 'string' && normalizeEmail(value.email) === value.email && Number.isFinite(value.at) && value.at <= now() + JOIN_CLOCK_SKEW_MS && now() - value.at <= JOIN_LIFETIME_MS;
+  }
   function update(patch) {
+    if (patch.userId === null) identity = null;
     state = Object.freeze({ ...state, ...patch });
     for (const listener of listeners) { try { listener(state); } catch { /* A view cannot interrupt auth cleanup. */ } }
   }
@@ -126,6 +140,9 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
         const userId = data?.user?.id;
         if (error || typeof userId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(userId)) throw new Error('Unverified identity');
         if (!storage.persistent) throw new Error('Unavailable storage');
+        const email = normalizeEmail(data.user.email);
+        const request = current.joinRequest;
+        identity = Object.freeze({ userId, email, requestId: validRequest(request) && request.email === email ? request.id : null });
         update({ phase: 'signed-in', userId, message: '' });
       } catch {
         if (!current.active || revision !== current.sessionRevision) return;
@@ -157,6 +174,14 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
         update({ phase: 'guest', userId: null, message: STORAGE_MESSAGE });
         return;
       }
+      // Only a callback with this request's PKCE verifier can claim its join.
+      // A cached session alone cannot attach an unauthenticated profile draft.
+      if (code) {
+        let request;
+        try { request = JSON.parse(storage.getItem(REQUEST_KEY)); } catch { /* Invalid metadata is not authority. */ }
+        const hash = await verifierHash(storage.getItem(`${STORAGE_KEY}-code-verifier`));
+        if (validRequest(request) && hash && request.verifierHash === hash) current.joinRequest = request;
+      }
       const createClient = await loadClient();
       if (!current.active) return;
       // Revocable storage prevents a disposed SDK's in-flight refresh from
@@ -173,7 +198,21 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
         if (!current.active && !logout) throw new Error('Authentication client is closed');
         // signInWithOtp writes its PKCE verifier BEFORE dispatching fetch.
         // SafeStorage can fall back to memory at that exact write.
-        if (pathname.endsWith('/otp') && !storage.persistent) throw new Error(STORAGE_MESSAGE);
+        if (pathname.endsWith('/otp')) {
+          if (!storage.persistent) throw new Error(STORAGE_MESSAGE);
+          const request = current.requestingJoin;
+          if (request) {
+            const hash = await verifierHash(storage.getItem(`${STORAGE_KEY}-code-verifier`));
+            if (!hash || !current.active) throw new Error(STORAGE_MESSAGE);
+            const bound = { ...request, verifierHash: hash };
+            storage.setItem(REQUEST_KEY, JSON.stringify(bound));
+            if (!storage.persistent) throw new Error(STORAGE_MESSAGE);
+            current.joinRequest = bound;
+          } else {
+            storage.removeItem(REQUEST_KEY);
+            current.joinRequest = null;
+          }
+        }
         const controller = new AbortController();
         current.requests.add(controller);
         const signal = options.signal || (typeof input === 'object' ? input.signal : undefined);
@@ -238,7 +277,14 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
     get state() { return state; },
     subscribe(listener) { listeners.add(listener); listener(state); return () => listeners.delete(listener); },
     getClient() { return life?.active ? life.client : null; },
-    async sendLink(email) {
+    getVerifiedIdentity() { return identity; },
+    clearJoinRequest(id) {
+      let request;
+      try { request = JSON.parse(storage.getItem(REQUEST_KEY)); } catch { /* Invalid metadata can be cleared. */ }
+      if (!id || request?.id === id) storage.removeItem(REQUEST_KEY);
+      if (!id || life?.joinRequest?.id === id) { if (life) life.joinRequest = null; }
+    },
+    async sendLink(email, { requestId = null } = {}) {
       await ready;
       if (!enabled || state.userId || state.phase === 'sending' || now() < state.resendAt) return;
       if (typeof email !== 'string' || email.trim().length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
@@ -254,6 +300,7 @@ export function createAuthController({ config, storage, loadClient = loadLocalAu
       const sessionRevision = current.sessionRevision;
       const canShowFeedback = () => current.active && sessionRevision === current.sessionRevision && !state.userId;
       current.retryAt = null;
+      current.requestingJoin = requestId ? { id: requestId, email: normalizeEmail(email), at: now() } : null;
       try {
         const { error } = await current.client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: publicUrl } });
         if (!canShowFeedback()) return;

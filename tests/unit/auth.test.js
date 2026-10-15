@@ -396,3 +396,66 @@ test('email_success_error_and_throw_cannot_erase_a_newly_verified_identity', asy
     assert.equal(f.auth.state.phase, 'signed-in');
   }
 });
+
+// Break caught: exposing the cached/session email instead of getUser's verified email.
+test('onboarding_identity_uses_only_server_verified_email_and_clears_on_signout', async () => {
+  const f = fixture({ initialSession: { ...session, user: { ...session.user, email: 'cached@example.test' } },
+    getUser: async () => ({ data: { user: { ...session.user, email: ' Verified@Example.test ' } }, error: null }) });
+  await f.auth.ready;
+  assert.equal(typeof f.auth.getVerifiedIdentity, 'function');
+  assert.deepEqual(f.auth.getVerifiedIdentity(), { userId: session.user.id, email: 'verified@example.test', requestId: null });
+  await f.auth.signOut();
+  assert.equal(f.auth.getVerifiedIdentity(), null);
+});
+
+// Break: a cached session or a different/expired PKCE request consumes another draft.
+test('join_request_identity_requires_the_matching_pkce_callback_and_verified_email', async () => {
+  const oldFetch = globalThis.fetch;
+  const id = 'cccccccc-cccc-4ccc-cccc-cccccccccccc';
+  const instant = Date.parse('2026-10-15T16:00:00Z');
+  try {
+    for (const scenario of ['matching', 'clock-skew', 'verifier-replaced', 'expired', 'email-mismatch', 'cached-session']) {
+      const { kv } = storage();
+      let clock = instant, email = 'person@example.test';
+      globalThis.fetch = async input => {
+        const path = new URL(input).pathname;
+        if (path.endsWith('/otp')) return new Response('{}', { status: 200 });
+        if (path.endsWith('/token')) return new Response(JSON.stringify({ ...session, expires_in: 3600, token_type: 'bearer', user: { ...session.user, email: 'cached-untrusted@example.test' } }), { status: 200 });
+        if (path.endsWith('/user')) return new Response(JSON.stringify({ ...session.user, email }), { status: 200 });
+        return new Response('{}', { status: 200 });
+      };
+      const first = createAuthController({ config, storage: kv, loadClient: async () => createClient, now: () => clock });
+      await first.ready;
+      await first.sendLink('PERSON@example.test', { requestId: id });
+      assert.equal(first.state.phase, 'sent');
+      if (scenario === 'verifier-replaced') { const request = JSON.parse(kv.getItem(`${key}-join-request`)); kv.setItem(`${key}-join-request`, JSON.stringify({ ...request, verifierHash: '0'.repeat(64) })); }
+      if (scenario === 'clock-skew') clock -= 30000;
+      if (scenario === 'expired') clock += 25 * 60 * 60 * 1000;
+      if (scenario === 'email-mismatch') email = 'another@example.test';
+      if (scenario === 'cached-session') kv.setItem(key, JSON.stringify({ ...session, expires_at: Math.floor(Date.now() / 1000) + 3600 }));
+      const b = browser(scenario === 'cached-session' ? 'https://game.example/' : 'https://game.example/?code=fixture-code');
+      // Node has no browser URL detector; drive the same SDK PKCE exchange
+      // explicitly while keeping token handling, storage, events, and HTTP real.
+      const callback = createAuthController({ config, storage: kv, loadClient: async () => (url, key, options) => {
+        const client = createClient(url, key, options);
+        const initialize = client.auth.initialize.bind(client.auth);
+        client.auth.initialize = async () => {
+          const result = await initialize();
+          return scenario === 'cached-session' ? result : client.auth.exchangeCodeForSession('fixture-code');
+        };
+        return client;
+      }, now: () => clock });
+      try {
+        await callback.ready;
+        assert.equal(callback.state.userId, session.user.id, scenario);
+        assert.equal(callback.getVerifiedIdentity().email, email);
+        assert.equal(callback.getVerifiedIdentity().requestId, ['matching','clock-skew'].includes(scenario) ? id : null);
+        assert.doesNotMatch(JSON.stringify(callback.state), /private-access|private-refresh|person@example/);
+      } finally {
+        await callback.signOut();
+        await first.signOut();
+        b.restore();
+      }
+    }
+  } finally { globalThis.fetch = oldFetch; }
+});
