@@ -1,5 +1,5 @@
-import { copyFile, lstat, mkdir, readFile, rm } from 'node:fs/promises';
-import { dirname, relative, resolve, sep } from 'node:path';
+import { copyFile, lstat, mkdir, readFile, realpath, rm } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { runInNewContext } from 'node:vm';
 
@@ -14,11 +14,14 @@ const publicFiles = [
 export async function stageSite({ root = '.', outputDir = '_site' } = {}) {
   root = resolve(root);
   outputDir = resolve(outputDir);
-  const outputRelative = relative(root, outputDir);
-  if (!outputRelative || outputRelative.startsWith(`..${sep}`) || outputRelative === '..'
-      || publicFiles.some(file => file === outputRelative || file.startsWith(`${outputRelative}${sep}`))) {
-    throw new Error('Site output directory must be a separate directory inside the project root');
+  // Only this designated build directory is disposable; never accept arbitrary
+  // repository directories, even when they do not contain a runtime asset.
+  if (outputDir !== resolve(root, '_site')) {
+    throw new Error('Site output directory must be the designated <root>/_site directory');
   }
+  // Work from the physical root, so ancestor symlinks cannot redirect cleanup.
+  root = await realpath(root);
+  outputDir = resolve(root, '_site');
   const files = [...publicFiles];
   for (const file of files) {
     const info = await lstat(resolve(root, file)).catch(error => {
@@ -40,6 +43,18 @@ export async function stageSite({ root = '.', outputDir = '_site' } = {}) {
     }
     // This checks intended-domain configuration only. Live DNS is a rollout check.
     files.push('CNAME');
+  }
+  const outputInfo = await lstat(outputDir).catch(error => {
+    if (error.code === 'ENOENT') return null;
+    throw error;
+  });
+  if (outputInfo && (!outputInfo.isDirectory() || outputInfo.isSymbolicLink())) {
+    throw new Error('Site output directory must be a real directory, not a symlink or file');
+  }
+  const physicalParent = await realpath(dirname(outputDir));
+  const physicalOutput = outputInfo ? await realpath(outputDir) : resolve(physicalParent, '_site');
+  if (physicalParent !== root || physicalOutput !== outputDir) {
+    throw new Error('Site output directory must remain inside the resolved project root');
   }
   await rm(outputDir, { recursive: true, force: true });
   for (const file of files) {

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, readdir, rm, symlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { parse } from 'yaml';
@@ -59,6 +59,42 @@ test('stage_rejects_unsafe_output_without_deleting_sources', async t => {
   const options = await fixture(t);
   await assert.rejects(stageSite({ ...options, outputDir: options.root }), /output directory/);
   assert.equal(await readFile(join(options.root, 'index.html'), 'utf8'), 'fixture:index.html');
+});
+test('stage_rejects_protected_and_unapproved_output_directories_without_removing_contents', async t => {
+  for (const directory of ['.git', 'docs', 'src', 'data', 'assets', 'build']) {
+    await t.test(directory, async t => {
+      const options = await fixture(t);
+      const outputDir = join(options.root, directory);
+      await mkdir(outputDir, { recursive: true });
+      const protectedFile = join(outputDir, 'keep.txt');
+      await writeFile(protectedFile, 'protected content');
+      await assert.rejects(stageSite({ ...options, outputDir }), /output directory/);
+      assert.equal(await readFile(protectedFile, 'utf8'), 'protected content');
+      assert.equal(await readFile(join(options.root, 'index.html'), 'utf8'), 'fixture:index.html');
+    });
+  }
+});
+test('stage_rejects_intermediate_symlink_output_without_removing_target_contents', async t => {
+  const options = await fixture(t);
+  const protectedRoot = await mkdtemp(join(tmpdir(), 'charterschoodle-protected-'));
+  t.after(() => rm(protectedRoot, { recursive: true, force: true }));
+  await mkdir(join(protectedRoot, '_site'));
+  const protectedFile = join(protectedRoot, '_site', 'keep.txt');
+  await writeFile(protectedFile, 'protected content');
+  await symlink(protectedRoot, join(options.root, 'linked'), 'dir');
+  await assert.rejects(stageSite({ ...options, outputDir: join(options.root, 'linked', '_site') }), /output directory/);
+  assert.equal(await readFile(protectedFile, 'utf8'), 'protected content');
+});
+test('stage_rejects_symlink_at_designated_output_without_removing_link_or_target', async t => {
+  const options = await fixture(t);
+  const protectedDir = join(options.root, 'docs');
+  await mkdir(protectedDir);
+  const protectedFile = join(protectedDir, 'keep.txt');
+  await writeFile(protectedFile, 'protected content');
+  await symlink(protectedDir, options.outputDir, 'dir');
+  await assert.rejects(stageSite(options), /output directory/);
+  assert.equal(await readFile(protectedFile, 'utf8'), 'protected content');
+  assert.equal(await readFile(join(options.outputDir, 'keep.txt'), 'utf8'), 'protected content');
 });
 const workflow = async file => parse(await readFile(new URL(`../../.github/workflows/${file}`, import.meta.url), 'utf8'));
 test('only_one_pages_workflow_exists', async () => {
