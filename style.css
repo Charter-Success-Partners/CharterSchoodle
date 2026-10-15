@@ -936,6 +936,49 @@ dialog::backdrop {
   margin: 0 0 18px;
 }
 
+.result-share-help {
+  margin: 0 0 12px;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.result-actions > button {
+  flex: 1 1 160px;
+}
+
+.share-status {
+  margin: 12px 0;
+}
+
+.share-fallback {
+  margin-bottom: 18px;
+  text-align: start;
+}
+
+.share-fallback label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.share-fallback textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid var(--csp-stone);
+  border-radius: var(--radius-md);
+  font: 1rem/1.5 var(--font-body);
+  color: var(--csp-stone);
+  background: var(--csp-white);
+  overflow-wrap: anywhere;
+  resize: vertical;
+}
+
 .confetti-layer {
   position: absolute;
   inset: 0;

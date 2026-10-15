@@ -1,4 +1,4 @@
-import { ncToday, archiveDates, scoreSummary } from "./game.js";
+import { ncToday, archiveDates, scoreSummary, formatShareResult } from "./game.js";
 import { createSafeStorage, createGameStore } from "./storage.js";
 import { openDialog, closeDialog } from "./dialog.js";
 
@@ -48,6 +48,14 @@ const elements = {
   newDailyNotice: document.getElementById("new-daily-notice"),
   newDailyButton: document.getElementById("new-daily-button"),
   winOverlay: document.getElementById("win-overlay"),
+  resultButton: document.getElementById("result-button"),
+  resultTitle: document.getElementById("win-title"),
+  shareButton: document.getElementById("share-result"),
+  copyButton: document.getElementById("copy-result"),
+  resultArchiveButton: document.getElementById("result-archive"),
+  shareStatus: document.getElementById("share-status"),
+  shareFallback: document.getElementById("share-fallback"),
+  shareText: document.getElementById("share-text"),
   winAnswer: document.getElementById("win-answer"),
   winSummary: document.getElementById("win-summary"),
   winCloseButton: document.getElementById("win-close-button"),
@@ -166,6 +174,7 @@ const NC_MAP_OUTLINE = [
 const safeStorage = createSafeStorage(() => window.localStorage);
 const stores = new Map();
 const dailySessions = new Map();
+let activeResult = null;
 
 function storeFor(subject) {
   if (!stores.has(subject)) {
@@ -255,6 +264,7 @@ function showUnavailable(title, message, retry = true) {
   elements.guessForm.classList.remove("is-hidden");
   elements.leaderboardPanel.classList.add("is-hidden");
   elements.mapPanel.classList.add("is-hidden");
+  elements.resultButton.classList.add("is-hidden");
   closeDialog(elements.winOverlay);
   renderSuggestionList();
   syncInputLock();
@@ -339,7 +349,7 @@ function loadPuzzleForDate(date) {
   state.filteredSuggestions = [];
   state.selectedSuggestionIndex = -1;
   state.lastRoundOutcome = null;
-  state.winOverlaySeen = !!state.progress.solved;
+  state.winOverlaySeen = state.progress.solved || state.progress.lost;
   recordDailyAttempt();
   render();
 }
@@ -350,6 +360,8 @@ function revealNextClueIfNeeded() {
 }
 
 function render() {
+  elements.resultButton.classList.toggle("is-hidden", !["daily", "archive"].includes(state.mode) ||
+    !(state.progress?.solved || state.progress?.lost));
   if (state.mode === "leaderboard") {
     renderLeaderboardView();
     renderSuggestionList();
@@ -466,17 +478,78 @@ function renderStatus() {
 }
 
 function renderWinOverlay() {
-  if (!state.progress.solved || state.winOverlaySeen) {
+  if (!(state.progress.solved || state.progress.lost) || state.winOverlaySeen) {
     closeDialog(elements.winOverlay);
     return;
   }
+  if (!elements.winOverlay.open) showResult(undefined, state.progress.solved);
+}
 
+function showResult(opener = elements.modeButtons.find((button) => button.dataset.mode === state.mode), celebrate = false) {
+  if (!state.progress || !(state.progress.solved || state.progress.lost)) return;
   const answer = state.schoolMap.get(state.activePuzzle.answerSchoolId);
+  elements.resultTitle.textContent = state.progress.solved ? "Congrats!" : "Out of guesses";
   elements.winAnswer.textContent = answer.officialName;
-  elements.winSummary.textContent = `You solved the ${state.activePuzzleDate} puzzle in ${state.progress.guesses.length} guesses.`;
-  if (!elements.winOverlay.open) {
-    openDialog(elements.winOverlay, elements.modeButtons.find((button) => button.dataset.mode === state.mode));
-    launchConfetti();
+  const count = state.progress.guesses.length;
+  elements.winSummary.textContent = state.progress.solved
+    ? `You solved the ${state.activePuzzleDate} puzzle in ${count} ${count === 1 ? "guess" : "guesses"}.`
+    : `You used all six guesses for the ${state.activePuzzleDate} puzzle. Try another past puzzle.`;
+  activeResult = { text: formatShareResult({
+    date: state.activePuzzleDate,
+    mode: state.mode,
+    progress: state.progress,
+    publicUrl: window.CHARTERSCHOOLDLE_SUPABASE.publicUrl,
+  }) };
+  elements.shareText.value = activeResult.text;
+  elements.shareFallback.classList.add("is-hidden");
+  elements.shareStatus.textContent = "";
+  elements.shareButton.disabled = false;
+  elements.copyButton.disabled = false;
+  openDialog(elements.winOverlay, opener);
+  if (celebrate) launchConfetti();
+}
+
+async function shareResult(copy = false) {
+  const presentation = activeResult;
+  if (!presentation || !elements.winOverlay.open) return;
+  const current = () => activeResult === presentation && elements.winOverlay.open;
+  const button = copy ? elements.copyButton : elements.shareButton;
+  elements.shareButton.disabled = true;
+  elements.copyButton.disabled = true;
+  elements.shareStatus.textContent = "";
+  let selectText = false;
+  try {
+    if (copy) {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(presentation.text);
+      if (current()) elements.shareStatus.textContent = "Result copied.";
+    } else if (typeof navigator.share === "function") {
+      await navigator.share({ text: presentation.text });
+      if (current()) elements.shareStatus.textContent = "Result shared.";
+    } else {
+      elements.shareStatus.textContent = "Sharing is unavailable in this browser. Choose Copy result.";
+    }
+  } catch (error) {
+    if (!current()) return;
+    if (!copy && error.name === "AbortError") return;
+    if (copy) {
+      elements.shareStatus.textContent = "Could not copy the result. Select the text below and copy it yourself.";
+      elements.shareFallback.classList.remove("is-hidden");
+      selectText = true;
+    } else {
+      elements.shareStatus.textContent = "Could not share the result. Choose Copy result to copy it yourself.";
+    }
+  } finally {
+    if (current()) {
+      elements.shareButton.disabled = false;
+      elements.copyButton.disabled = false;
+      if (selectText) {
+        elements.shareText.focus();
+        elements.shareText.select();
+      } else {
+        button.focus();
+      }
+    }
   }
 }
 
@@ -1360,7 +1433,17 @@ async function init() {
   });
   elements.helpButton.addEventListener("click", () => openDialog(elements.helpDialog));
   elements.helpCloseButton.addEventListener("click", () => closeDialog(elements.helpDialog));
-  elements.winOverlay.addEventListener("close", () => { state.winOverlaySeen = true; });
+  elements.winOverlay.addEventListener("close", () => {
+    state.winOverlaySeen = true;
+    activeResult = null;
+  });
+  elements.resultButton.addEventListener("click", () => showResult(elements.resultButton));
+  elements.shareButton.addEventListener("click", () => shareResult());
+  elements.copyButton.addEventListener("click", () => shareResult(true));
+  elements.resultArchiveButton.addEventListener("click", () => {
+    closeDialog(elements.winOverlay);
+    setMode("archive");
+  });
   elements.winCloseButton.addEventListener("click", () => {
     state.winOverlaySeen = true;
     renderWinOverlay();

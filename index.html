@@ -138,6 +138,8 @@
             </div>
           </div>
 
+          <button id="result-button" class="secondary-button is-hidden" type="button" aria-haspopup="dialog">View result</button>
+
           <button id="retry-data" class="secondary-button is-hidden" type="button">Retry</button>
 
           <section id="leaderboard-panel" class="leaderboard-panel is-hidden">
@@ -249,11 +251,23 @@
 
     <dialog id="win-overlay" class="win-modal" aria-labelledby="win-title">
       <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
-      <p class="eyebrow">Puzzle Complete</p>
       <h2 id="win-title">Congrats!</h2>
       <p id="win-answer" class="win-answer"></p>
       <p id="win-summary" class="win-summary"></p>
-      <button id="win-close-button" class="primary-button" type="button" autofocus>Keep Browsing</button>
+      <p class="result-share-help">Share your score without revealing the answer.</p>
+      <div class="result-actions">
+        <button id="share-result" class="primary-button" type="button">Share result</button>
+        <button id="copy-result" class="secondary-button" type="button">Copy result</button>
+      </div>
+      <p id="share-status" class="share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="share-fallback" class="share-fallback is-hidden">
+        <label for="share-text">Result text</label>
+        <textarea id="share-text" rows="6" readonly spellcheck="false"></textarea>
+      </div>
+      <div class="result-actions">
+        <button id="result-archive" class="secondary-button" type="button">Past Puzzles</button>
+        <button id="win-close-button" class="primary-button" type="button" autofocus>Keep Browsing</button>
+      </div>
     </dialog>
 
     <script src="./src/supabase-config.js"></script>
