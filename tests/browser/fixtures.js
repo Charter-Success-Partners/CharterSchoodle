@@ -33,7 +33,7 @@ export const test = base.extend({
     await use({
       setPuzzles(value) { calendar = value; },
       failFetch(value) { fail = value; },
-      async open() { await page.goto('/'); },
+      async open() { await page.goto('./'); },
       async guess(school) {
         await page.getByLabel('Guess the school').fill(school.officialName);
         await page.locator('#autocomplete-list [data-school-id]').first().click();
@@ -53,7 +53,7 @@ export async function accountFixture(page, game, { user = userA, listed = false,
   const origin = 'https://psashnygmlwkuvblbpzk.supabase.co';
   const state = { user, profiles: existing ? [{ user_id: user, public_id: `public-${user}`, display_name: 'Same Name', school: '', listed }] : [], history, sent: [], fail: '', pageCalls: [] };
   const unexpected = [];
-  await page.route('**/src/supabase-config.js', route => route.fulfill({ contentType: 'text/javascript', body: `window.CHARTERSCHOOLDLE_SUPABASE={url:${JSON.stringify(origin)},anonKey:'sb_publishable_fixture',leaderboardEnabled:true,publicUrl:'http://127.0.0.1:4173/'};` }));
+  await page.route('**/src/supabase-config.js', route => route.fulfill({ contentType: 'text/javascript', body: `window.CHARTERSCHOOLDLE_SUPABASE={url:${JSON.stringify(origin)},anonKey:'sb_publishable_fixture',leaderboardEnabled:true,publicUrl:${JSON.stringify(test.info().project.use.baseURL)}};` }));
   if (user) await page.addInitScript(user => {
     localStorage.setItem('charterschoodle-auth:v2', JSON.stringify({ access_token: 'fixture-token', refresh_token: 'fixture-refresh', expires_at: 1999999999, token_type: 'bearer', user: { id: user, email: 'fixture@example.test' } }));
   }, user);

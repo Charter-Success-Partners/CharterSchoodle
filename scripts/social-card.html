@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>CharterSchoodle social preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; width: 1200px; height: 630px; background: #f8f8f8; color: #585551; font-family: "Open Sans", sans-serif; }
+  main { height: 100%; padding: 52px 68px; border-bottom: 18px solid #8fd169; display: flex; flex-direction: column; align-items: flex-start; }
+  img { width: 252px; height: 105px; object-fit: contain; object-position: left center; margin-bottom: 36px; }
+  h1 { margin: 0 0 18px; color: #2e7c01; font-family: "Century Gothic", "Apple Gothic", "Avant Garde", "Open Sans", sans-serif; font-size: 76px; font-weight: 700; letter-spacing: -0.035em; }
+  p { margin: 0; font-size: 29px; line-height: 1.55; max-width: 940px; }
+  .guesses { display: flex; gap: 12px; margin-top: 27px; }
+  .guesses span { width: 38px; height: 38px; border: 2px solid #4c6970; border-radius: 6px; }
+  .guesses span:first-child { background: #8fd169; border-color: #2e7c01; }
+  .address { margin-top: auto; color: #365b5e; font-size: 22px; font-weight: 600; }
+</style>
+<main>
+  <img id="logo" alt="Charter Success Partners">
+  <h1>CharterSchoodle</h1>
+  <p>Six clues. Six guesses.<br>One North Carolina charter school.</p>
+  <div class="guesses" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <p class="address" id="address"></p>
+</main>
+</html>

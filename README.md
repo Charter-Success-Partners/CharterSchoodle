@@ -272,30 +272,58 @@ The protected v2 leaderboard is prepared with activation disabled in `src/supaba
 
 ## Build Notes
 
-GitHub Pages can serve this repo directly without a build tool.
+Use Node 22 or newer and `npm ci`. Run `npm test`, `npm run vendor:check`, and
+`npm run stage` before a release. Staging recreates `_site` and prints its exact
+manifest. Only the explicit runtime allowlist ships: the HTML/CSS/favicon,
+`.nojekyll`, seven application/config modules, three official vendor artifacts,
+the local 2026 logo and social preview, and `schools.json`/`puzzles.json`.
+Documentation, research, tests, dependencies, originals, and captures stay out.
+A missing required asset fails staging before previous output is removed.
+
+`npm run social:render` regenerates the committed 1200×630 preview using
+`scripts/social-card.html`, the existing local logo, Open Sans from Google Fonts,
+and `publicUrl` in `src/supabase-config.js`. It needs Playwright Chromium (or
+`CHARTERSCHOODLE_CHROMIUM_PATH`) and font network access. The deployed site only
+needs the committed PNG. Keep canonical, Open Graph, and Twitter metadata in
+`index.html` aligned with that configured clean public URL; never copy callback
+queries or tokens into metadata or result links.
 
 ## GitHub Pages Deployment
 
-This project is set up to deploy as a public static site through GitHub Pages.
+`.github/workflows/deploy-pages.yml` is the single Pages pipeline for pushes to
+`main`, manual runs, and reusable `workflow_call` runs. It checks out
+`inputs.ref || github.sha`, installs the exact lockfile with Node 22, validates
+the vendor bundle, runs unit/database tests, and stages the allowlisted site
+before uploading `_site`. All deployment runs use the `github-pages` concurrency
+group without cancelling an active deployment. Configure GitHub Settings → Pages
+→ Source to use GitHub Actions when the release is approved.
 
-Files added for deployment:
+The intended canonical address is
+`https://charterschoodle.chartersuccesspartners.com/`. No `CNAME` is currently
+committed. If supplied, staging accepts it only when it exactly matches the host
+in configured `publicUrl` (with a root URL path). That check establishes intended
+configuration; DNS, Pages custom-domain/TLS configuration, and Supabase callback
+allowlisting still require live verification during approved rollout.
 
-- `.github/workflows/deploy-pages.yml`
-- `.nojekyll`
+Puzzle refresh checks out current `main` and has only `contents: write`. After a
+successful push it emits the actual new commit SHA. Only changed files trigger
+the reusable deployment job, which explicitly grants `contents: read`,
+`pages: write`, and `id-token: write` and passes that SHA. This does not depend on
+a bot push triggering another workflow. The caller does not acquire the Pages
+concurrency lock, avoiding self-cancellation or a nested lock wait. See
+[GitHub's reusable-workflow permission and concurrency reference](https://docs.github.com/en/actions/reference/workflows-and-actions/reusing-workflow-configurations).
 
-To publish it:
+Run the full browser suite against all supported mounts after staging:
 
-1. Create a new public GitHub repository.
-2. Push this project to the repository on the `main` branch.
-3. In GitHub, open `Settings` -> `Pages`.
-4. Under `Build and deployment`, set `Source` to `GitHub Actions`.
-5. Pushes to `main` will deploy the site automatically.
+```bash
+npm run test:browser
+CHARTERSCHOODLE_TEST_ROOT=_site npm run test:browser
+CHARTERSCHOODLE_TEST_ROOT=_site CHARTERSCHOODLE_TEST_PREFIX=/CharterSchoodle/ npm run test:browser
+```
 
-The site URL will be:
-
-- `https://<your-github-username>.github.io/<repo-name>/`
-
-If you later want a custom domain, add a `CNAME` file at the repo root and configure the DNS in GitHub Pages settings.
+The harness starts a fresh local server for each run; `CHARTERSCHOODLE_TEST_PORT`
+can override 4173. Account fixtures use the selected local base URL and intercept
+only known Auth/v2 endpoints. Production Supabase traffic stays blocked.
 
 ## Daily Puzzle Automation
 

@@ -166,7 +166,7 @@ test('test_server_serves_real_assets_under_a_project_prefix', async ({ page, gam
   void game;
   await page.unroute('**/data/puzzles.json');
   await page.unroute('**/data/schools.json');
-  const server = spawn(process.execPath, ['scripts/serve-test-site.mjs', '--root', '.', '--prefix', '/charterschoodle', '--port', '0']);
+  const server = spawn(process.execPath, ['scripts/serve-test-site.mjs', '--root', process.env.CHARTERSCHOODLE_TEST_ROOT || '.', '--prefix', '/CharterSchoodle', '--port', '0']);
   try {
     const address = await new Promise((resolve, reject) => {
       server.once('error', reject);
