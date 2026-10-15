@@ -1,0 +1,5 @@
+
+> charterschoodle@1.0.0 vendor:check
+> node scripts/vendor-supabase.mjs --check
+
+Verified official @supabase/supabase-js@2.118.0: bundle, license, and SHA-256 provenance are byte-identical.

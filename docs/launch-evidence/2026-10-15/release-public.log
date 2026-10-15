@@ -1,0 +1,11 @@
+
+> charterschoodle@1.0.0 check:release
+> node scripts/check-release.mjs
+
+public readiness: BLOCKED
+- backupMigration: blocked — No production administrator connection or backup access supplied; live schema inspection, restore verification and migration were not performed.
+- liveOwnershipSmoke: blocked — No owner-designated authenticated A/B sessions supplied; production test-user creation and mutations were not authorized. Local RLS fixtures are not live evidence.
+- allowedCallback: blocked — No authenticated Supabase settings access supplied; actual canonical redirect allowlist was not inspected.
+- externalRecipientEmail: blocked — No external recipient designated or SMTP administration access supplied; sending real email was outside implementation authorization.
+- deployedSmoke: blocked — Push and deployment were prohibited during implementation; candidate revision was not deployed or smoke-tested against production.
+- leaderboardEnabled: actual frontend activation flag is false

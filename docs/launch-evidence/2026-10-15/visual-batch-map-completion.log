@@ -1,0 +1,10 @@
+
+> charterschoodle@1.0.0 test:browser
+> playwright test tests/browser/task12-visual.spec.js --workers=1 --grep loss and map
+
+
+Running 1 test using 1 worker
+
+  ✓  1 tests/browser/task12-visual.spec.js:27:1 › visual batch loss and map at 768 (5.0s)
+
+  1 passed (8.0s)

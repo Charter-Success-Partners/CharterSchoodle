@@ -30,6 +30,19 @@ The protected v2 leaderboard is prepared with activation disabled in `src/supaba
 - Public rankings use an aggregate RPC with five players per page. Raw account data remains owner-only.
 - The publishable Supabase key is public by design. Activation follows the reviewed rollout.
 
+## Release readiness
+
+Local verification and production activation are separate. Run `npm run check:release -- --code`
+for recorded unit/database/browser/vendor/staging/visual completion. Run `npm run check:release`
+for public readiness; it also requires observed production evidence and the actual enabled frontend flag.
+Exit 0 means the requested report gate passes; exit 2 names blockers or malformed inputs.
+The checker validates recorded evidence, not the live services themselves.
+
+See the [dated readiness record](docs/release-readiness.json), [verification evidence](docs/launch-evidence/2026-10-15/README.md),
+and [owner rollout/rollback runbook](docs/public-launch-runbook.md). The candidate remains guest-only
+until the owner completes live backup/migration, ownership, callback/email and deployed smoke checks.
+Canonical HTTPS reachability was observed; deployment of this revision was not performed.
+
 ## Data Model
 
 `data/schools.json`

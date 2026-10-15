@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-15",
+  "scope": "Candidate code verified locally; public activation unperformed. See docs/public-launch-runbook.md.",
+  "checks": {
+    "unit": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/tests.log \u2014 111/111 unit tests; Node 22.23.3"
+    },
+    "database": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/tests.log \u2014 25/25 migration and RLS tests using non-superuser PGlite fixture roles; not live authorization proof"
+    },
+    "browser": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/browser-root-final.log, browser-staged.log, browser-prefix.log \u2014 60/60 each; production Supabase blocked/intercepted"
+    },
+    "vendor": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/vendor.log \u2014 official 2.118.0 bundle/license/provenance byte-identical"
+    },
+    "staging": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/staging-final.log and manifest-proof.log \u2014 18 allowlisted files, all bytes match source"
+    },
+    "visual": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/README.md, visual-confirmation.log, confirmation/*.png and *.json \u2014 one inspection, one typography fix batch, one confirmation; 6/6 scenarios, all required widths/states/social image"
+    },
+    "backupMigration": {
+      "status": "blocked",
+      "evidence": "",
+      "reason": "No production administrator connection or backup access supplied; live schema inspection, restore verification and migration were not performed."
+    },
+    "liveOwnershipSmoke": {
+      "status": "blocked",
+      "evidence": "",
+      "reason": "No owner-designated authenticated A/B sessions supplied; production test-user creation and mutations were not authorized. Local RLS fixtures are not live evidence."
+    },
+    "domainTls": {
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/domain-observation.log \u2014 2026-10-15 16:04 UTC: curl HTTPS HEAD with certificate verification enabled exited 0, HTTP/2 200 from GitHub at canonical hostname; existing site only, not candidate deployment"
+    },
+    "allowedCallback": {
+      "status": "blocked",
+      "evidence": "",
+      "reason": "No authenticated Supabase settings access supplied; actual canonical redirect allowlist was not inspected."
+    },
+    "externalRecipientEmail": {
+      "status": "blocked",
+      "evidence": "",
+      "reason": "No external recipient designated or SMTP administration access supplied; sending real email was outside implementation authorization."
+    },
+    "deployedSmoke": {
+      "status": "blocked",
+      "evidence": "",
+      "reason": "Push and deployment were prohibited during implementation; candidate revision was not deployed or smoke-tested against production."
+    }
+  }
+}

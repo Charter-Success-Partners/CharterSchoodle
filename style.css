@@ -72,7 +72,7 @@ input {
 .eyebrow,
 .panel__eyebrow {
   margin: 0 0 4px;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -749,7 +749,7 @@ h3 {
 }
 
 .leaderboard-table th {
-  font-size: 0.66rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;

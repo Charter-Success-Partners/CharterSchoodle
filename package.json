@@ -14,7 +14,8 @@
     "vendor:sync": "node scripts/vendor-supabase.mjs --sync",
     "vendor:check": "node scripts/vendor-supabase.mjs --check",
     "stage": "node scripts/stage-site.mjs",
-    "social:render": "node scripts/render-social-card.mjs"
+    "social:render": "node scripts/render-social-card.mjs",
+    "check:release": "node scripts/check-release.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.118.0"

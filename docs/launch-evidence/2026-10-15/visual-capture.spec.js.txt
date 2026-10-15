@@ -1,0 +1,30 @@
+import { test, expect, accountFixture } from './fixtures.js';
+import { readFile, writeFile } from 'node:fs/promises';
+const output = 'docs/launch-evidence/2026-10-15/confirmation';
+const allSchools=JSON.parse(await readFile('data/schools.json','utf8'));
+const calendar=JSON.parse(await readFile('data/puzzles.json','utf8')).puzzles;
+const answer=allSchools.find(s=>s.id===calendar.find(p=>p.date==='2026-10-15').answerSchoolId);
+const wrong=allSchools.filter(s=>s.id!==answer.id).slice(0,6);
+test.use({ignoreHTTPSErrors:true});
+async function setup(page) {
+  await page.unroute('**/data/puzzles.json'); await page.unroute('**/data/schools.json');
+  await page.route(/^https:\/\/fonts\.(googleapis|gstatic)\.com\//,route=>route.continue());
+}
+async function capture(page,name){
+  await page.evaluate(()=>document.fonts.ready);
+  await page.screenshot({path:`${output}/${name}.png`,fullPage:true});
+  const metrics=await page.evaluate(()=>{
+    const visible=el=>el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden';
+    const controls=[...document.querySelectorAll('button,input')].filter(visible).map(el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return {name:el.getAttribute('aria-label')||el.textContent.trim()||el.id,width:r.width,height:r.height,font:s.fontSize,outline:s.outline};});
+    const samples=[...document.querySelectorAll('.eyebrow,.panel__eyebrow,.board-clue,.feedback-chip,.primary-button,.mode-button,.leaderboard-table th,.leaderboard-table td,.field-help,.account-dialog label,.status-banner p')].filter(visible).map(el=>{const s=getComputedStyle(el);const chain=[];for(let p=el;p;p=p.parentElement){const c=getComputedStyle(p);chain.push({background:c.backgroundColor,image:c.backgroundImage});}return {text:el.textContent.trim().slice(0,80),color:s.color,font:s.fontSize,chain};});
+    return {viewport:{width:innerWidth,height:innerHeight},scrollWidth:document.documentElement.scrollWidth,fontLoaded:document.fonts.check('16px "Open Sans"'),reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,controls,samples};
+  });
+  await writeFile(`${output}/${name}.json`,JSON.stringify(metrics,null,2)+'\n');
+  expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.viewport.width);
+}
+test('visual batch guest and guessed round at 320',async({page,game})=>{await setup(page);await page.setViewportSize({width:320,height:900});await game.open();await capture(page,'guest-320');await game.guess(wrong[0]);await capture(page,'guessed-320');});
+test('visual batch help and win at 390 with reduced motion',async({page,game})=>{await setup(page);await page.setViewportSize({width:390,height:900});await page.emulateMedia({reducedMotion:'reduce'});await game.open();await page.getByRole('button',{name:'How to play',exact:true}).click();await page.keyboard.press('Tab');expect(await page.getByRole('dialog').evaluate(el=>el.contains(document.activeElement))).toBe(true);await capture(page,'help-390');await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'How to play',exact:true})).toBeFocused();await game.guess(answer);await capture(page,'win-390-reduced');await expect(page.locator('.confetti-piece')).toHaveCount(0);});
+test('visual batch loss and map at 768',async({page,game})=>{await setup(page);await page.setViewportSize({width:768,height:1000});await game.open();for(const school of wrong)await game.guess(school);await capture(page,'loss-768');await page.keyboard.press('Escape');await page.getByRole('button',{name:'Map',exact:true}).click();const pin=page.locator('[data-map-school-id]').first();await pin.focus();await page.keyboard.press('Enter');await capture(page,'map-768');});
+test('visual batch desktop 1440 and equivalent desktop 200 percent reflow',async({page,game})=>{await setup(page);await page.setViewportSize({width:1440,height:1000});await game.open();await capture(page,'guest-1440');await page.setViewportSize({width:720,height:500});await game.guess(wrong[0]);await capture(page,'reflow-200-percent');});
+test('visual batch account profile and leaderboard with intercepted fixture',async({page,game})=>{await setup(page);await page.setViewportSize({width:390,height:900});const fixture=await accountFixture(page,game);await game.open();await page.getByRole('button',{name:'Edit profile',exact:true}).click();await capture(page,'profile-390');await page.keyboard.press('Escape');await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'Leaderboard',exact:true}).click();await expect(page.locator('#leaderboard-body tr')).toHaveCount(5);await capture(page,'leaderboard-1440');fixture.assertSafe();});
+test('visual batch email dialog with intercepted fixture',async({page,game})=>{await setup(page);await page.setViewportSize({width:320,height:900});const fixture=await accountFixture(page,game,{user:null});await game.open();await page.getByRole('button',{name:'Join leaderboard',exact:true}).click();await capture(page,'email-320');fixture.assertSafe();});

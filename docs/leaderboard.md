@@ -27,3 +27,16 @@ The public leaderboard reads only `charterschoodle_leaderboard_page_v2`, five pl
 `docs/supabase-leaderboard-v2.sql` defines the v2 profiles/results, owner RLS (`auth.uid() = user_id`), immutable public identity, result constraints, public aggregate RPC, and legacy write lockdown. The old `docs/supabase-leaderboard.sql` is historical; do not use it to activate v2. Existing legacy data remains recoverable and no names are claimed or migrated automatically.
 
 Local checks: `npm test`, `npm run test:browser`, and `npm run vendor:check`. Browser fixtures intercept exact Auth/v2/RPC endpoints and reject unexpected production requests; tests never send real email or change production data. Production backup, migration, Auth redirect configuration, and staging smoke checks belong to the reviewed release process, not these local tests.
+
+## Activation evidence
+
+Use the [public launch runbook](public-launch-runbook.md) for the exact backup/migration,
+real A/B ownership checks, SMTP/canonical callback setup, designated-recipient email test,
+single deployment and deployed smoke sequence. The [readiness report](release-readiness.json)
+records each observation; [dated evidence](launch-evidence/2026-10-15/README.md) separates local fixtures
+from live checks. `npm run check:release -- --code` checks local completion; the default
+`npm run check:release` remains blocked until all production observations pass and the actual
+frontend flag is true. The checker reads the public config without executing it or printing keys.
+
+Rollback means deploying this protected frontend with the flag false, preserving both v2 and
+legacy data and legacy write restrictions. Never restore anonymous legacy writes to recover accounts.

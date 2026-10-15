@@ -1,0 +1,22 @@
+
+> charterschoodle@1.0.0 stage
+> node scripts/stage-site.mjs
+
+.nojekyll
+assets/csp-logo-2026.png
+assets/social-card.png
+data/puzzles.json
+data/schools.json
+favicon.png
+index.html
+src/app.js
+src/auth.js
+src/dialog.js
+src/game.js
+src/leaderboard.js
+src/storage.js
+src/supabase-config.js
+src/vendor/LICENSE.supabase
+src/vendor/supabase-manifest.json
+src/vendor/supabase.js
+style.css

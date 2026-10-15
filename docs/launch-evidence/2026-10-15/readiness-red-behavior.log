@@ -1,0 +1,205 @@
+TAP version 13
+# Subtest: local_passes_do_not_imply_public_readiness
+not ok 1 - local_passes_do_not_imply_public_readiness
+  ---
+  duration_ms: 7.239686
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:13:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+      {
+        blockers: [],
+    +   ready: false
+    -   ready: true
+      }
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    ready: true
+    blockers:
+  actual:
+    ready: false
+    blockers:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:14:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: missing_production_evidence_stays_blocked
+not ok 2 - missing_production_evidence_stays_blocked
+  ---
+  duration_ms: 1.053188
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:19:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 3
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 3
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:24:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: disabled_leaderboard_cannot_be_public_ready
+not ok 3 - disabled_leaderboard_cannot_be_public_ready
+  ---
+  duration_ms: 0.594588
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:27:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /leaderboardEnabled/. Input:
+
+    ''
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: ''
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:30:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: passed_without_evidence_is_rejected
+not ok 4 - passed_without_evidence_is_rejected
+  ---
+  duration_ms: 0.487507
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:32:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /visual.*evidence/. Input:
+
+    ''
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: ''
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:37:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: complete_observed_report_can_be_ready
+not ok 5 - complete_observed_report_can_be_ready
+  ---
+  duration_ms: 1.004276
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:40:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+      {
+        blockers: [],
+    +   ready: false
+    -   ready: true
+      }
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    ready: true
+    blockers:
+  actual:
+    ready: false
+    blockers:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:41:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: failed_local_check_blocks_both_modes
+ok 6 - failed_local_check_blocks_both_modes
+  ---
+  duration_ms: 0.396861
+  type: 'test'
+  ...
+# Subtest: malformed_reports_and_options_are_rejected
+not ok 7 - malformed_reports_and_options_are_rejected
+  ---
+  duration_ms: 0.59696
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:47:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:49:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: cli_defaults_public_reads_actual_flag_and_rejects_invalid_inputs
+not ok 8 - cli_defaults_public_reads_actual_flag_and_rejects_invalid_inputs
+  ---
+  duration_ms: 171.311693
+  type: 'test'
+  location: '/home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:54:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 2
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/space/.codex/worktrees/0b66/CharterSchoodle/tests/unit/release-readiness.test.js:64:35)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 1
+# fail 7
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 352.484708

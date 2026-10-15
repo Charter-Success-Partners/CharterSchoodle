@@ -144,3 +144,29 @@ These are leads, not 31 confirmed release blockers. Open Sans is part of the inc
 Email-based sign-in additionally requires working production email delivery and approved redirect URLs. Supabase's built-in email service is not intended for public production use; inspect the current project configuration before selecting or changing a provider. See [passwordless authentication](https://supabase.com/docs/guides/auth/auth-email-passwordless) and [custom SMTP](https://supabase.com/docs/guides/auth/auth-smtp).
 
 The next design checkpoint should distinguish player ownership from anti-cheat guarantees. The current static application publishes its answer calendar and calculates scores in the browser. Protecting other players' entries does not, by itself, prove that a player's own submitted score is honest.
+
+## Final implementation verification — October 15, 2026
+
+The findings above describe the original baseline. The candidate release now has optional account
+entry, safe guest persistence, NC-day archive bounds, protected account ownership with legacy
+lockdown, local official SDK assets, future-only clue refinement, and one explicit Pages artifact path.
+The complete [dated evidence record](launch-evidence/2026-10-15/README.md) includes fresh automated
+logs, the final visual batch/confirmation, measurements, detector dispositions and screenshots.
+
+Fresh verification: 111 unit tests and 25 database tests passed; vendor bytes matched the official
+pin; staging produced the independently byte-verified 18-file allowlist. Full browser suites exercise
+development root, packaged root and `/CharterSchoodle/`; see their final logs in the evidence record.
+The final visual inspection covers 320/390/768/1440px, desktop 200% equivalent reflow, reduced motion,
+guest/guessed/win/loss/help/account/ranking/map states and the actual social PNG. Two undersized font
+rules were raised to 12px in one fix batch, followed by one confirmation. Primary targets meet 44px,
+text inputs 16px, measured settled text pairs 5.25:1 or higher, and all captures avoid page overflow.
+Dense map pins remain 18px secondary spatial targets with keyboard/zoom support; this is a documented
+limitation, not an all-target accessibility certification. Brand typography and brief contextual
+uppercase labels remain deliberate exceptions. No additional polishing loop occurred.
+
+Public activation is **not complete**. A verified HTTPS HEAD returned HTTP 200 at the canonical
+domain; this observes the existing GitHub-hosted site only. No production backup/migration, live
+A/B ownership test, Auth callback/SMTP settings inspection, designated-recipient delivery, or deployed
+smoke of this revision was performed. The actual activation flag remains false. See the machine-readable
+[readiness record](release-readiness.json) and concrete [owner runbook](public-launch-runbook.md) for
+remaining gates and data-preserving rollback. Local checks do not claim live authorization or delivery.

@@ -1,0 +1,15 @@
+
+> charterschoodle@1.0.0 test:browser
+> playwright test tests/browser/task12-visual.spec.js --workers=1
+
+
+Running 6 tests using 1 worker
+
+  ✓  1 tests/browser/task12-visual.spec.js:25:1 › visual batch guest and guessed round at 320 (1.4s)
+  ✓  2 tests/browser/task12-visual.spec.js:26:1 › visual batch help and win at 390 with reduced motion (1.4s)
+  ✓  3 tests/browser/task12-visual.spec.js:27:1 › visual batch loss and map at 768 (4.1s)
+  ✓  4 tests/browser/task12-visual.spec.js:28:1 › visual batch desktop 1440 and equivalent desktop 200 percent reflow (2.0s)
+  ✓  5 tests/browser/task12-visual.spec.js:29:1 › visual batch account profile and leaderboard with intercepted fixture (1.5s)
+  ✓  6 tests/browser/task12-visual.spec.js:30:1 › visual batch email dialog with intercepted fixture (820ms)
+
+  6 passed (13.9s)
