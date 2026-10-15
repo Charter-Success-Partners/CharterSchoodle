@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "observedAt": "2026-10-15",
-  "scope": "Activated, merged, and deployed revision bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa verified over HTTPS. Live guest/account/callback recovery checks passed. Owner confirmed email delivery; designated-recipient requesting-browser sign-in completion remains pending.",
+  "scope": "Activated, merged, and deployed revision bfdc42d6d94bdb3d2e5b9f6b1ce47860ae6438fa verified over HTTPS. Live guest/account/callback recovery checks passed. Owner confirmed email delivery and successful browser sign-in, corroborated by verified non-operator production Auth metadata.",
   "checks": {
     "unit": {
       "status": "passed",
@@ -44,9 +44,8 @@
       "evidence": "docs/launch-evidence/2026-10-15/production-setup/auth-config-after-redacted.json \u2014 production site URL and exact redirect allowlist verified through authenticated Management API after saving."
     },
     "externalRecipientEmail": {
-      "status": "blocked",
-      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-request-redacted.json, email-delivery-redacted.json \u2014 SMTP accepted the designated request; PKCE verifier/cooldown observed; owner confirmed receipt. Read-only Auth metadata at 19:11 UTC still showed no confirmed email or completed sign-in for the designated recipient.",
-      "reason": "Email delivery is confirmed. Awaiting successful sign-in completion in the owner requesting browser."
+      "status": "passed",
+      "evidence": "docs/launch-evidence/2026-10-15/release-activation/email-completion-redacted.json, email-request-redacted.json, email-delivery-redacted.json \u2014 owner confirmed delivery and successful browser sign-in; read-only production Auth verifies one confirmed non-operator account signed in at 19:06 UTC, excluding all three synthetic operator accounts. The signed-in account differs from the original delivery-test address, which remains unconfirmed; completion is owner-observed."
     },
     "deployedSmoke": {
       "status": "passed",
