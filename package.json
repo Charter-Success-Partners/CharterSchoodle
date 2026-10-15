@@ -10,7 +10,9 @@
     "test:unit": "node --test tests/unit/*.test.js",
     "test": "npm run test:unit && npm run test:db",
     "test:browser": "playwright test",
-    "test:db": "node --test tests/database/*.test.js"
+    "test:db": "node --test tests/database/*.test.js",
+    "vendor:sync": "node scripts/vendor-supabase.mjs --sync",
+    "vendor:check": "node scripts/vendor-supabase.mjs --check"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.118.0"
