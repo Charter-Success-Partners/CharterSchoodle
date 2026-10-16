@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15",
+  "generatedAt": "2026-10-16",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 892,
+    "puzzleCount": 893,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-14"
+    "endDate": "2028-10-15"
   },
   "puzzles": [
     {
@@ -26791,6 +26791,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-15",
+      "answerSchoolId": "cardinal-charter-acad-at-wendell-falls",
+      "clues": [
+        {
+          "text": "Official news on the homepage says Barry White Jr. was selected as principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials highlight an integrated character education program and personalized learning plans.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its model is built on collaboration, differentiation, and Future Ready skills.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school is part of the Charter Schools USA family.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school builds a student-centered, data-driven learning environment where students develop critical thinking skills and reach their academic potential.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
