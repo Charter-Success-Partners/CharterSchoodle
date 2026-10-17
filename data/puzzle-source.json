@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16",
+  "generatedAt": "2026-10-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 893,
+    "puzzleCount": 894,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-15"
+    "endDate": "2028-10-16"
   },
   "puzzles": [
     {
@@ -26821,6 +26821,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-16",
+      "answerSchoolId": "anderson-creek-academy",
+      "clues": [
+        {
+          "text": "Administrative pages list Olivia Lyon as Head of School.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision says every child is a genius in at least one domain of intelligence.",
+          "difficulty": 6
+        },
+        {
+          "text": "Recent school news highlights a third-place finish in the Lee County Science Olympiad.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school uses a culturally responsive curriculum with diverse instructional strategies and enriching content.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school aims to create a 21st Century learning environment that recognizes multiple intelligences and diverse learning styles.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
