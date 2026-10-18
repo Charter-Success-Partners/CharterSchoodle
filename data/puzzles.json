@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17",
+  "generatedAt": "2026-10-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26825,6 +26825,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-17",
+      "answerSchoolId": "sallie-b-howard-school",
+      "clues": [
+        {
+          "text": "Its PRIDE Power character program teaches perseverance, respect, integrity, discipline, and excellence.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say the school earned a 2021 National Blue Ribbon School Award.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school highlights a performing arts-based curriculum and a study abroad program that has taken students to nearly all seven continents.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school cultivates high student achievement in academics, character, and the arts.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school was founded in 1997 in Wilson.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
