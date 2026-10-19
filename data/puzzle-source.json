@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18",
+  "generatedAt": "2026-10-19",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 895,
+    "puzzleCount": 896,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-17"
+    "endDate": "2028-10-18"
   },
   "puzzles": [
     {
@@ -26881,6 +26881,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-18",
+      "answerSchoolId": "monroe-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages list Dr. Camela Ford as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its principal page features the quote, \"If you're too busy to help others to succeed, then you are too busy to succeed yourself.\"",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials describe the school as offering a classical style of education with a focus on citizenship development.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public materials say the school opened in August 2019.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school develops each child into an academically thriving citizen through partnership with parents and the community.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
