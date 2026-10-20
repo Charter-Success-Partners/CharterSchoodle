@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19",
+  "generatedAt": "2026-10-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26885,6 +26885,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-19",
+      "answerSchoolId": "carolina-achieve",
+      "clues": [
+        {
+          "text": "The school says charter schools are public schools of choice that are tuition-free, independently run, and funded primarily by state and local tax dollars.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision highlights a rigorous academic foundation, an integrated curriculum focused on real challenges, and a commitment to underserved students.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school brands its model around entrepreneurial learning and the Habits of Success.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school opened in the 2025-26 school year.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school prepares students to achieve scholastic, personal, and professional goals through a learner-centered educational program.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
