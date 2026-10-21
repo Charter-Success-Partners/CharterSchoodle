@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20",
+  "generatedAt": "2026-10-21",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 897,
+    "puzzleCount": 898,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-19"
+    "endDate": "2028-10-20"
   },
   "puzzles": [
     {
@@ -26941,6 +26941,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-20",
+      "answerSchoolId": "discovery-charter",
+      "clues": [
+        {
+          "text": "The newer board page lists Lisa Gonzalez as board president.",
+          "difficulty": 8
+        },
+        {
+          "text": "A board page says the founder and managing director is Toni Shellady.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say students learn through an integrated, place-based curriculum and become stewards of their environment and community.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its published vision says the school nurtures how to think, not what to think, one child at a time.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school prepares students to be self-motivated, lifelong, independent, and collaborative learners through a challenging STEAM-focused curriculum in an innovative and supportive environment.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter D."
         }
       ]
     }
