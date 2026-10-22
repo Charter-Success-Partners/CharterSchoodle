@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21",
+  "generatedAt": "2026-10-22",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26945,6 +26945,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter D."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-21",
+      "answerSchoolId": "guilford-preparatory-academy",
+      "clues": [
+        {
+          "text": "Leadership pages list Dr. Cassie Price as chief administrator.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision says all scholars will learn at high levels and use their education to become lifelong learners and positive global contributors.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school is guided by the four Cs: communication, collaboration, critical thinking, and creativity.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school's mission says it prepares learners for successful, meaningful lives as culturally aware and civically engaged adults.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public branding centers on the phrase Learning, Leading, Living.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter G."
         }
       ]
     }
