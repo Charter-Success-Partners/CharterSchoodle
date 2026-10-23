@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22",
+  "generatedAt": "2026-10-23",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -26975,6 +26975,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter G."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-22",
+      "answerSchoolId": "island-montessori-charter-school",
+      "clues": [
+        {
+          "text": "Official materials repeatedly describe the school as a peaceful community of lifelong learners.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its strategic plan says graduates should become confident, kind, and responsible citizens of the world.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school highlights a Building Hope IMPACT Award for Community Engagement.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official history says the private preschool opened in 2012 and the public charter school followed in 2013.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school helps children of diverse backgrounds learn and grow at their own pace in a Montessori environment that models grace and courtesy.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter I."
         }
       ]
     }
