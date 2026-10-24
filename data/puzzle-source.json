@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23",
+  "generatedAt": "2026-10-24",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 900,
+    "puzzleCount": 901,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-22"
+    "endDate": "2028-10-23"
   },
   "puzzles": [
     {
@@ -27031,6 +27031,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter I."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-23",
+      "answerSchoolId": "bonnie-cone-classical-academy",
+      "clues": [
+        {
+          "text": "Official pages list Pamela Franklin as Director and Rev. Martin McCarthy as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its curriculum highlights Latin instruction alongside core subjects to deepen language structure and vocabulary.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials explain its classical education philosophy through the three stages of learning: grammar, logic, and rhetoric.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its distinct virtues are captured in the acronym R.A.I.S.E.: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school equips students with the tools of learning to think critically, reason effectively, and communicate persuasively through the rigors of a classical education.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter B."
         }
       ]
     }
