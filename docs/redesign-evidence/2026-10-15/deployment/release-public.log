@@ -1,0 +1,6 @@
+
+> charterschoodle@1.0.0 check:release
+> node scripts/check-release.mjs
+
+public readiness: BLOCKED
+- deployedSmoke: pending — Awaiting fresh actual email-link completion in the requesting browser through the redesigned one-form join path. Simulated OTP/PKCE boundaries cannot prove this step.

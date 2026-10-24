@@ -1,0 +1,13 @@
+PASS: startup: real production assets and public daily data load
+PASS: startup: guest sees six progress markers, a current clue, and no completed guesses or dialog
+PASS: guest: a real wrong guess reveals feedback and persists after reload
+PASS: navigation: map zoom, help, and daily return preserve progress
+PASS: map finder: actual public school search selects geography and details by keyboard
+PASS: rankings: actual public read renders ranked entries or guest empty guidance
+PASS: join inspection: one form exposes public name, optional affiliation, email, and privacy notice without submission
+PASS: responsive: daily, map, and help have no page overflow at narrow widths
+PASS: startup-navigation-persistence: no uncaught browser exceptions or unsafe guest mutations
+PASS: pending-clipboard-success: closing and reopening a result invalidates the earlier operation
+PASS: pending-clipboard-success: no uncaught browser exceptions or unsafe guest mutations
+PASS: global: production calendar date stayed stable during the smoke run
+PASS: redacted guest smoke proof written

@@ -1,0 +1,1406 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-15T21:55:11.462Z",
+  "targetOrigin": "https://charterschoodle.chartersuccesspartners.com",
+  "dailyDate": "2026-10-15",
+  "browser": "Chromium",
+  "scope": "Fresh isolated guest contexts; real production HTML, JavaScript, styles, and public JSON",
+  "safety": {
+    "authentication": "No accounts, sessions, emails, or authenticated operations",
+    "mutationGuard": "Only same-origin GET/HEAD application resources, the source-declared Google Open Sans font assets by GET, and the public leaderboard read RPC are allowed. Auth and other backend operations are blocked",
+    "redaction": "No URL query values, cookies, session values, raw guesses, answers, page text, screenshots, traces, or raw errors are retained",
+    "applicationResponsesMocked": false
+  },
+  "scenarios": [
+    {
+      "name": "startup-navigation-persistence",
+      "classification": "production-guest",
+      "boundaryOverrides": [],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "public-leaderboard-read",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 1,
+      "status": "pass",
+      "checkedViewportWidths": [
+        320,
+        375,
+        390,
+        768
+      ]
+    },
+    {
+      "name": "daily-win-share-fallback",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    },
+    {
+      "name": "daily-loss-share-copy",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    },
+    {
+      "name": "archive-bounds-non-scoring",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 1,
+      "status": "pass"
+    },
+    {
+      "name": "pending-share-success",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    },
+    {
+      "name": "pending-share-rejection",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    },
+    {
+      "name": "pending-clipboard-success",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [
+        "671347410306fc0394cb8f6827190ca57a4110d96970db247eed606fe9175c13"
+      ],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [
+        {
+          "resource": "other-resource",
+          "method": "GET"
+        }
+      ],
+      "blockedMutations": [],
+      "blockedRequests": [
+        {
+          "resource": "other-resource",
+          "method": "GET"
+        }
+      ],
+      "publicReadRequests": 0,
+      "status": "fail",
+      "failedPhase": "pending-clipboard-success: no uncaught browser exceptions or unsafe guest mutations",
+      "error": {
+        "kind": "CheckFailure",
+        "fingerprint": "6fafb01ab6fe289115443d235adebf348058d7f5d00aa6fa8e6d638971e83e9c"
+      }
+    },
+    {
+      "name": "pending-clipboard-rejection",
+      "classification": "production-guest",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": null,
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "local-vendor",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    },
+    {
+      "name": "fault-local-storage-blocked",
+      "classification": "fault-injection",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": "local-storage-blocked",
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "optional-backend-config",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [],
+      "expectedRequestFailures": [],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    },
+    {
+      "name": "fault-optional-backend-config-aborted",
+      "classification": "fault-injection",
+      "boundaryOverrides": [
+        "navigator.share",
+        "navigator.clipboard"
+      ],
+      "fault": "optional-backend-config-aborted",
+      "assets": [
+        {
+          "resource": "document",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-module",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-stylesheet",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "application-dependency",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "puzzles-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "schools-data",
+          "status": 200,
+          "source": "actual-network-response"
+        },
+        {
+          "resource": "declared-font-file",
+          "status": 200,
+          "source": "actual-network-response"
+        }
+      ],
+      "uncaughtErrors": [],
+      "consoleErrorFingerprints": [
+        "671347410306fc0394cb8f6827190ca57a4110d96970db247eed606fe9175c13"
+      ],
+      "expectedRequestFailures": [
+        {
+          "resource": "optional-backend-config",
+          "method": "GET"
+        }
+      ],
+      "unexpectedRequestFailures": [],
+      "blockedMutations": [],
+      "blockedRequests": [],
+      "publicReadRequests": 0,
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "startup: real production assets and public daily data load",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "startup: guest sees six progress markers, a current clue, and no completed guesses or dialog",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "guest: a real wrong guess reveals feedback and persists after reload",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "navigation: map zoom, help, and daily return preserve progress",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "map finder: actual public school search selects geography and details by keyboard",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "rankings: actual public read renders ranked entries or guest empty guidance",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "join inspection: one form exposes public name, optional affiliation, email, and privacy notice without submission",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "responsive: daily, map, and help have no page overflow at narrow widths",
+      "status": "pass"
+    },
+    {
+      "scenario": "startup-navigation-persistence",
+      "label": "startup-navigation-persistence: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-win-share-fallback",
+      "label": "daily win: real answer completes the puzzle and awards six local points",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-win-share-fallback",
+      "label": "daily win: native share payload is spoiler-free and uses the canonical clean URL",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-win-share-fallback",
+      "label": "clipboard denial: selectable spoiler-free result remains usable at 320 pixels",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-win-share-fallback",
+      "label": "daily win: reload preserves solved state and result can reopen",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-win-share-fallback",
+      "label": "daily-win-share-fallback: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-loss-share-copy",
+      "label": "daily loss: six distinct real wrong guesses exhaust all rounds",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-loss-share-copy",
+      "label": "daily loss: share and copy use the spoiler-free X-of-six result",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-loss-share-copy",
+      "label": "daily loss: reload preserves six played rounds and reopens the result",
+      "status": "pass"
+    },
+    {
+      "scenario": "daily-loss-share-copy",
+      "label": "daily-loss-share-copy: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "archive-bounds-non-scoring",
+      "label": "archive: picker excludes today and future dates using actual available bounds",
+      "status": "pass"
+    },
+    {
+      "scenario": "archive-bounds-non-scoring",
+      "label": "archive: actual puzzle completes without a daily award and share is labeled Archive",
+      "status": "pass"
+    },
+    {
+      "scenario": "archive-bounds-non-scoring",
+      "label": "archive: guest daily results and points remain unchanged after completion",
+      "status": "pass"
+    },
+    {
+      "scenario": "archive-bounds-non-scoring",
+      "label": "archive-bounds-non-scoring: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-share-success",
+      "label": "pending-share-success: closing and reopening a result invalidates the earlier operation",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-share-success",
+      "label": "pending-share-success: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-share-rejection",
+      "label": "pending-share-rejection: closing and reopening a result invalidates the earlier operation",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-share-rejection",
+      "label": "pending-share-rejection: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-clipboard-success",
+      "label": "pending-clipboard-success: closing and reopening a result invalidates the earlier operation",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-clipboard-success",
+      "label": "pending-clipboard-success: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "fail",
+      "error": {
+        "kind": "CheckFailure",
+        "fingerprint": "6fafb01ab6fe289115443d235adebf348058d7f5d00aa6fa8e6d638971e83e9c"
+      }
+    },
+    {
+      "scenario": "pending-clipboard-rejection",
+      "label": "pending-clipboard-rejection: closing and reopening a result invalidates the earlier operation",
+      "status": "pass"
+    },
+    {
+      "scenario": "pending-clipboard-rejection",
+      "label": "pending-clipboard-rejection: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "fault-local-storage-blocked",
+      "label": "fault-local-storage-blocked: real guest game survives the explicitly injected fault",
+      "status": "pass"
+    },
+    {
+      "scenario": "fault-local-storage-blocked",
+      "label": "fault-local-storage-blocked: clean spoiler-free share and manual copy fallback remain available",
+      "status": "pass"
+    },
+    {
+      "scenario": "fault-local-storage-blocked",
+      "label": "fault-local-storage-blocked: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "fault-optional-backend-config-aborted",
+      "label": "fault-optional-backend-config-aborted: real guest game survives the explicitly injected fault",
+      "status": "pass"
+    },
+    {
+      "scenario": "fault-optional-backend-config-aborted",
+      "label": "fault-optional-backend-config-aborted: clean spoiler-free share and manual copy fallback remain available",
+      "status": "pass"
+    },
+    {
+      "scenario": "fault-optional-backend-config-aborted",
+      "label": "fault-optional-backend-config-aborted: no uncaught browser exceptions or unsafe guest mutations",
+      "status": "pass"
+    },
+    {
+      "scenario": "global",
+      "label": "global: production calendar date stayed stable during the smoke run",
+      "status": "pass"
+    }
+  ],
+  "publicData": {
+    "schoolCount": 212,
+    "puzzleCount": 892,
+    "dailyPuzzleAvailable": true
+  },
+  "finishedAt": "2026-10-15T21:55:27.320Z",
+  "summary": {
+    "passedChecks": 36,
+    "failedChecks": 1,
+    "passedScenarios": 9,
+    "failedScenarios": 1,
+    "uncaughtBrowserErrors": 0,
+    "blockedUnsafeMutations": 0,
+    "blockedOutOfScopeRequests": 1,
+    "publicReadRequests": 2,
+    "status": "fail"
+  }
+}
