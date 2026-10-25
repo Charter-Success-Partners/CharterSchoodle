@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24",
+  "generatedAt": "2026-10-25",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27035,6 +27035,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-24",
+      "answerSchoolId": "community-school-of-davidson",
+      "clues": [
+        {
+          "text": "Official staff navigation includes a separate RIPPLE staff directory alongside lower and upper school directories.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its school community language emphasizes \"the life of the mind,\" \"the vitality of the arts,\" and \"the importance of community.\"",
+          "difficulty": 6
+        },
+        {
+          "text": "Official philosophy pages say students are motivated through hands-on teaching, integrated curriculum, and real-life learning with meaningful community connections.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school uses the principles of The Basic School to create an optimal environment for learning.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its homepage tagline quotes Dr. Ernest Boyer: \"To help each child build a life as if it were a work of art.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
