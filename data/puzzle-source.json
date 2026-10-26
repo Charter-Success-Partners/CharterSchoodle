@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25",
+  "generatedAt": "2026-10-26",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 902,
+    "puzzleCount": 903,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-24"
+    "endDate": "2028-10-25"
   },
   "puzzles": [
     {
@@ -27091,6 +27091,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-25",
+      "answerSchoolId": "southwest-charlotte-stem-academy",
+      "clues": [
+        {
+          "text": "Recent school announcements say it earned full accreditation with STEM Certification from Cognia.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school highlights project-based learning as one of its core selling points for families.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the curriculum is designed around hands-on STEM experiences that build critical thinking and problem-solving.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its mission says the school promotes high academic achievement by increasing student engagement through a workshop model.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school regularly refers to its students as Rockets.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
