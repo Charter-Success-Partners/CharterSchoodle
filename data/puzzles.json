@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27",
+  "generatedAt": "2026-10-28",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27125,6 +27125,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-27",
+      "answerSchoolId": "piedmont-community-charter-school",
+      "clues": [
+        {
+          "text": "The leaders page says Jennifer Killen serves as Head of School and describes her leadership style as servant leadership.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its portrait of a graduate says students are expected to be thoughtful communicators, intellectually curious, and exposed to the arts.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it provides a challenging college preparatory curriculum in an environment of high expectations complemented by artistic and extracurricular activities.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its core values are organized around three words: Academic, Character, and Community.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school offers a superior college preparatory educational option for the community and its families.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter P."
         }
       ]
     }
