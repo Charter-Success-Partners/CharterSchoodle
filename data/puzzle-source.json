@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28",
+  "generatedAt": "2026-10-29",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 905,
+    "puzzleCount": 906,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-27"
+    "endDate": "2028-10-28"
   },
   "puzzles": [
     {
@@ -27181,6 +27181,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter P."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-28",
+      "answerSchoolId": "dillard-academy",
+      "clues": [
+        {
+          "text": "Official leadership pages identify Danielle Hicks Baptiste as Executive Director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official history says founder Hilda Hicks opened the school in 1998 and led it for 28 years.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school publishes an axiom that students need great teachers and principals each year, with high expectations matched by rigorous academic instruction.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school's mission says it aims to positively provide a safe and quality education with high expectations so students can excel and grow.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public materials emphasize the phrase High Expectations in Academics, Behavior and Character.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter D."
         }
       ]
     }
