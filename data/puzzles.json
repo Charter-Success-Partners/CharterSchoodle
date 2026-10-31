@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30",
+  "generatedAt": "2026-10-31",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27215,6 +27215,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter N."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-30",
+      "answerSchoolId": "global-scholars-academy",
+      "clues": [
+        {
+          "text": "Official board pages describe Rev. Kenneth Hammond as a co-founder of the school.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its vision describes a dynamic 21st-century franchise model of public education that builds bridges to the economic mainstream for vulnerable scholars.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its curriculum fosters curiosity and a sense of personal, financial, and academic responsibility.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school was designed to connect at-risk Durham area youth to a wide array of intellectual and social capital resources, both high touch and virtual.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school aims to create a culturally responsive public education system that supports academic success and unlocks every child's unique gifts.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter G."
         }
       ]
     }
