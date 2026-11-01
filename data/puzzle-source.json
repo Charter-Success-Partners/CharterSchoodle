@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31",
+  "generatedAt": "2026-11-01",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 908,
+    "puzzleCount": 909,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-30"
+    "endDate": "2028-10-31"
   },
   "puzzles": [
     {
@@ -27271,6 +27271,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter G."
+        }
+      ]
+    },
+    {
+      "date": "2028-10-31",
+      "answerSchoolId": "classical-charter-schools-of-southport",
+      "clues": [
+        {
+          "text": "Campus pages list Amanda Sauls as headmaster.",
+          "difficulty": 8
+        },
+        {
+          "text": "Network overview pages say Classical Charter Schools of America features classical literature, chronological Western history, cursive handwriting, and Latin in its curriculum.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it is a premier performance-driven year-round school.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its overview says four defining elements are protected learning environments, direct instruction, highest quality teaching staff, and high expectations.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school was established in July 2014 as a replicate campus modeled on the Leland and Whiteville schools.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
