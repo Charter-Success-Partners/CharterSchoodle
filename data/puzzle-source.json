@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01",
+  "generatedAt": "2026-11-02",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 909,
+    "puzzleCount": 910,
     "startDate": "2026-05-07",
-    "endDate": "2028-10-31"
+    "endDate": "2028-11-01"
   },
   "puzzles": [
     {
@@ -27301,6 +27301,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-01",
+      "answerSchoolId": "socrates-academy",
+      "clues": [
+        {
+          "text": "The leadership page lists Stefanie Savage as Interim Head of School.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its published core values include Filotimo, Arete, Philoxenia, Ethos, and Personal Responsibility.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school says it applies the Socratic method to promote inquiry, logic, questioning, problem-solving, and team collaboration.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official school descriptions say advanced coursework in Greek language and cultural heritage forms the foundation of its intellectual and multicultural competencies.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school cultivates scholars for impactful global engagement, ethical citizenship, and lifelong learning.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
