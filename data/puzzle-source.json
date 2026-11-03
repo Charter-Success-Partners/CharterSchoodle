@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-03",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 910,
+    "puzzleCount": 911,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-01"
+    "endDate": "2028-11-02"
   },
   "puzzles": [
     {
@@ -27331,6 +27331,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-02",
+      "answerSchoolId": "movement-school-eastland",
+      "clues": [
+        {
+          "text": "Official leadership pages list Chelsea Hobbing as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official pages say the school emphasizes community circle and strong family partnerships.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its principal message says the school grows the whole scholar socially, emotionally, and academically.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school highlights three distinctives: small-school setting, lead with virtue, and school of the nations.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official pages say the campus is a community of the nations that celebrates the diversity of its surrounding community and the world.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
