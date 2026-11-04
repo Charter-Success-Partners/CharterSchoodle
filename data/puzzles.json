@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03",
+  "generatedAt": "2026-11-04",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27335,6 +27335,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-03",
+      "answerSchoolId": "gate-city-charter",
+      "clues": [
+        {
+          "text": "Official pages list Hilary Clancy as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it is among the top three schools in the area based on academic performance.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school opened in 2016.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says high standards and quality instruction support a learning environment where achievement thrives and students are instilled with academic excellence and personal responsibility.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its public-facing slogan is \"Elevating Education, Building Character.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter G."
         }
       ]
     }
