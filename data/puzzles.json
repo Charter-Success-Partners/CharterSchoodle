@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04",
+  "generatedAt": "2026-11-05",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27365,6 +27365,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter G."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-04",
+      "answerSchoolId": "sterling-montessori-academy",
+      "clues": [
+        {
+          "text": "Administration pages list Elizabeth Uzzell as Interim Executive Director.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say Montessori classrooms use three-year multi-age groupings to build communities where older children share knowledge with younger ones.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says students work in a prepared environment that promotes freedom within limits.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school is governed by the Laura Holland Uzzell Foundation, a nonprofit established in 1993.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school creates a diverse educational community grounded in Montessori philosophy that fosters curiosity, creativity, and critical thinking.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
