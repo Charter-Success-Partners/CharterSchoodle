@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05",
+  "generatedAt": "2026-11-06",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 913,
+    "puzzleCount": 914,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-04"
+    "endDate": "2028-11-05"
   },
   "puzzles": [
     {
@@ -27421,6 +27421,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-05",
+      "answerSchoolId": "bradford-preparatory-school",
+      "clues": [
+        {
+          "text": "The school says it applies brain-based research methods and hands-on learning in a brain-compatible environment.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say its ENRICH program includes topics like public speaking, emotional intelligence, personal finance, teamwork, leadership, and healthy living.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its vision says the school uses innovative methods to provide quality education in a smaller, more responsive learning environment.",
+          "difficulty": 5
+        },
+        {
+          "text": "The school's core values include academic excellence, relationships, focusing on the whole child, community service, accountability, and health and wellness.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school is committed to academic excellence, nurturing personal relationships, and inspiring a growing passion for creativity and learning.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter B."
         }
       ]
     }
