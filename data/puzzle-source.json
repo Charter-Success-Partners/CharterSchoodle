@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06",
+  "generatedAt": "2026-11-07",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 914,
+    "puzzleCount": 915,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-05"
+    "endDate": "2028-11-06"
   },
   "puzzles": [
     {
@@ -27451,6 +27451,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-06",
+      "answerSchoolId": "iredell-charter-academy-of-arts-and-science",
+      "clues": [
+        {
+          "text": "Official pages list Dr. Andrea L. Lopresti as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its principal's message says student and adult learning should be at the center of all decisions.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it offers an enriched curriculum in the arts and sciences with a warm, nurturing atmosphere.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says students are challenged to reach their academic potential and become self-motivated lifelong learners through personalized learning plans, community stewardship, and family collaboration.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials describe this school as an A+ School in the statewide network.",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter I."
         }
       ]
     }
