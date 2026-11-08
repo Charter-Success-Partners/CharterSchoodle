@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07",
+  "generatedAt": "2026-11-08",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 915,
+    "puzzleCount": 916,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-06"
+    "endDate": "2028-11-07"
   },
   "puzzles": [
     {
@@ -27481,6 +27481,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter I."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-07",
+      "answerSchoolId": "bonnie-cone-leadership-academy",
+      "clues": [
+        {
+          "text": "Official pages list Christy Williamsen and Ramon Richardson as school leaders, with Rev. Martin McCarthy serving as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it teaches through Core Knowledge, classical practices, and the R.A.I.S.E. virtues.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school extends a classical education model and emphasizes leadership development and real-world readiness.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school cultivates both intellectual and personal character, preparing students to excel in college and future careers while emerging as positive leaders in their communities.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public-facing identity calls the school the Home of the Eagles.",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter B."
         }
       ]
     }
