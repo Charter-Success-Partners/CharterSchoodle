@@ -1,0 +1,38 @@
+PASS: startup: real production assets and public daily data load
+PASS: startup: guest sees six progress markers, a current clue, and no completed guesses or dialog
+PASS: guest: a real wrong guess reveals feedback and persists after reload
+PASS: navigation: map zoom, help, and daily return preserve progress
+PASS: map finder: actual public school search selects geography and details by keyboard
+PASS: rankings: actual public read renders ranked entries or guest empty guidance
+PASS: join inspection: one form exposes public name, optional affiliation, email, and privacy notice without submission
+PASS: responsive: daily, map, and help have no page overflow at narrow widths
+PASS: startup-navigation-persistence: no uncaught browser exceptions or unsafe guest mutations
+PASS: daily win: real answer completes the puzzle and awards six local points
+PASS: daily win: native share payload is spoiler-free and uses the canonical clean URL
+PASS: clipboard denial: selectable spoiler-free result remains usable at 320 pixels
+PASS: daily win: reload preserves solved state and result can reopen
+PASS: daily-win-share-fallback: no uncaught browser exceptions or unsafe guest mutations
+PASS: daily loss: six distinct real wrong guesses exhaust all rounds
+PASS: daily loss: share and copy use the spoiler-free X-of-six result
+PASS: daily loss: reload preserves six played rounds and reopens the result
+PASS: daily-loss-share-copy: no uncaught browser exceptions or unsafe guest mutations
+PASS: archive: picker excludes today and future dates using actual available bounds
+PASS: archive: actual puzzle completes without a daily award and share is labeled Archive
+PASS: archive: guest daily results and points remain unchanged after completion
+PASS: archive-bounds-non-scoring: no uncaught browser exceptions or unsafe guest mutations
+PASS: pending-share-success: closing and reopening a result invalidates the earlier operation
+PASS: pending-share-success: no uncaught browser exceptions or unsafe guest mutations
+PASS: pending-share-rejection: closing and reopening a result invalidates the earlier operation
+PASS: pending-share-rejection: no uncaught browser exceptions or unsafe guest mutations
+PASS: pending-clipboard-success: closing and reopening a result invalidates the earlier operation
+FAIL: pending-clipboard-success: no uncaught browser exceptions or unsafe guest mutations
+PASS: pending-clipboard-rejection: closing and reopening a result invalidates the earlier operation
+PASS: pending-clipboard-rejection: no uncaught browser exceptions or unsafe guest mutations
+PASS: fault-local-storage-blocked: real guest game survives the explicitly injected fault
+PASS: fault-local-storage-blocked: clean spoiler-free share and manual copy fallback remain available
+PASS: fault-local-storage-blocked: no uncaught browser exceptions or unsafe guest mutations
+PASS: fault-optional-backend-config-aborted: real guest game survives the explicitly injected fault
+PASS: fault-optional-backend-config-aborted: clean spoiler-free share and manual copy fallback remain available
+PASS: fault-optional-backend-config-aborted: no uncaught browser exceptions or unsafe guest mutations
+PASS: global: production calendar date stayed stable during the smoke run
+FAIL: redacted guest smoke proof written
