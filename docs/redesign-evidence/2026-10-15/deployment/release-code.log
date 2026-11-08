@@ -1,0 +1,5 @@
+
+> charterschoodle@1.0.0 check:release
+> node scripts/check-release.mjs --code
+
+code readiness: READY

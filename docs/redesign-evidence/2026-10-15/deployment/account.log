@@ -1,0 +1,20 @@
+INITIAL ATTEMPT (exit 1: overly strict idempotent-upsert assertion)
+PASS: One confirmed synthetic operator signs in through real password Auth
+PASS: Real deployed guest puzzle accepts one wrong guess
+PASS: Single Join form retains SDK verifier; OTP delivery boundary SIMULATED
+PASS: SIMULATED PKCE callback automatically creates real public profile without second form
+PASS: Real backend imports exactly today one-guess game
+PASS: Callback URL cleaned and server identity verified
+FAIL_STAGE: reload-no-duplicate
+CLEANUP: synthetic fixture confirmed unlisted
+RESULT: failed checks: 6 fixture_unlisted: true
+
+SAME-ACTOR CONTINUATION (exit 0)
+PASS: Reload restores one guess with one unchanged profile and result row
+PASS: Production public leaderboard RPC responds successfully
+PASS: Real Edit profile saves hidden state and preserves public identity
+PASS: Second isolated context restores real one-guess account history
+PASS: Production sign-out returns original context to guest
+PASS: No unapproved requests or uncaught browser exceptions
+CLEANUP: synthetic fixture confirmed unlisted
+RESULT: passed checks: 12 fixture_unlisted: true

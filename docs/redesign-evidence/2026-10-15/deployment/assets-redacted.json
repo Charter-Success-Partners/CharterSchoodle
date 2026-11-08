@@ -1,0 +1,163 @@
+{
+  "observedAt": "2026-10-15T21:53:39.661Z",
+  "canonical": "https://charterschoodle.chartersuccesspartners.com/",
+  "deployedCommit": "e343ac808ab2168480755f7b5c87f12cf2db85a8",
+  "expectedRuntimeSourceCommit": "2557b3116e5cca6decc51cbf95a3459c3fd0d1ff",
+  "status": "passed",
+  "tls": "Default Node HTTPS certificate verification enabled; no insecure override",
+  "count": 19,
+  "files": [
+    {
+      "path": ".nojekyll",
+      "status": 200,
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "expectedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "match": true
+    },
+    {
+      "path": "assets/csp-logo-2026.png",
+      "status": 200,
+      "bytes": 605527,
+      "sha256": "6438601b73cee86641ed46f7774e1ede081f243c89d742f22fdaab26827f0c2d",
+      "expectedSha256": "6438601b73cee86641ed46f7774e1ede081f243c89d742f22fdaab26827f0c2d",
+      "match": true
+    },
+    {
+      "path": "assets/social-card.png",
+      "status": 200,
+      "bytes": 40378,
+      "sha256": "f708c04b38cd403b3e104e468274de0bf070e970efb9c420f86a40d4f4bf6bb6",
+      "expectedSha256": "f708c04b38cd403b3e104e468274de0bf070e970efb9c420f86a40d4f4bf6bb6",
+      "match": true
+    },
+    {
+      "path": "data/puzzles.json",
+      "status": 200,
+      "bytes": 955915,
+      "sha256": "d6759ebcc37140acf58c8646d46ff6f8e9e4e764d77e55037debb0793613c8e8",
+      "expectedSha256": "d6759ebcc37140acf58c8646d46ff6f8e9e4e764d77e55037debb0793613c8e8",
+      "match": true
+    },
+    {
+      "path": "data/schools.json",
+      "status": 200,
+      "bytes": 220658,
+      "sha256": "77ea2da5e2d62411a68cdbaec3824652862b43bdb109e70626f114ad6de46a1d",
+      "expectedSha256": "77ea2da5e2d62411a68cdbaec3824652862b43bdb109e70626f114ad6de46a1d",
+      "match": true
+    },
+    {
+      "path": "favicon.png",
+      "status": 200,
+      "bytes": 89459,
+      "sha256": "5799c6ea9e2bd8bf2b73413e8fdc7e83b71913b0acc85e31ffe610a11d1dcadc",
+      "expectedSha256": "5799c6ea9e2bd8bf2b73413e8fdc7e83b71913b0acc85e31ffe610a11d1dcadc",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 19116,
+      "sha256": "70c54e4364fd1281169db4aefa8b23517429dac0f7cbe9707e62d7954ea96b5e",
+      "expectedSha256": "70c54e4364fd1281169db4aefa8b23517429dac0f7cbe9707e62d7954ea96b5e",
+      "match": true
+    },
+    {
+      "path": "src/app.js",
+      "status": 200,
+      "bytes": 82591,
+      "sha256": "b9caf5fbc2571c42af3491007ea2b4f5ee452269732ea14b076b46a99018c064",
+      "expectedSha256": "b9caf5fbc2571c42af3491007ea2b4f5ee452269732ea14b076b46a99018c064",
+      "match": true
+    },
+    {
+      "path": "src/auth.js",
+      "status": 200,
+      "bytes": 19607,
+      "sha256": "fba5b65392afabb762948994bc4be2da179373b69619c52b203d7926cae1f733",
+      "expectedSha256": "fba5b65392afabb762948994bc4be2da179373b69619c52b203d7926cae1f733",
+      "match": true
+    },
+    {
+      "path": "src/dialog.js",
+      "status": 200,
+      "bytes": 1681,
+      "sha256": "43707f41aeadee93f21d94ab5ab1cf1c095fbec61722173b7f042af9d9f6afdf",
+      "expectedSha256": "43707f41aeadee93f21d94ab5ab1cf1c095fbec61722173b7f042af9d9f6afdf",
+      "match": true
+    },
+    {
+      "path": "src/game.js",
+      "status": 200,
+      "bytes": 5573,
+      "sha256": "37c981c338500f0614da19c19009f64b4fde6187c4ebd3b84af486b9d1c19355",
+      "expectedSha256": "37c981c338500f0614da19c19009f64b4fde6187c4ebd3b84af486b9d1c19355",
+      "match": true
+    },
+    {
+      "path": "src/leaderboard.js",
+      "status": 200,
+      "bytes": 12668,
+      "sha256": "cb6b329c49db4676e69986f2c342672abcf960272f6cc32b7d0c24d2b5b18eae",
+      "expectedSha256": "cb6b329c49db4676e69986f2c342672abcf960272f6cc32b7d0c24d2b5b18eae",
+      "match": true
+    },
+    {
+      "path": "src/onboarding.js",
+      "status": 200,
+      "bytes": 6787,
+      "sha256": "04b8798a5c82ca8f0b8e5ebbda2f4111a001e3a8482f6a389064db2a6e48799d",
+      "expectedSha256": "04b8798a5c82ca8f0b8e5ebbda2f4111a001e3a8482f6a389064db2a6e48799d",
+      "match": true
+    },
+    {
+      "path": "src/storage.js",
+      "status": 200,
+      "bytes": 9843,
+      "sha256": "481037778dd9c7c3afe2cd3f773a101e1e1a54c8942f67a4845343806bf0732e",
+      "expectedSha256": "481037778dd9c7c3afe2cd3f773a101e1e1a54c8942f67a4845343806bf0732e",
+      "match": true
+    },
+    {
+      "path": "src/supabase-config.js",
+      "status": 200,
+      "bytes": 248,
+      "sha256": "9453ecc7fbe68ed36f9692b72b0bb413739d733bdb46b0ff4d835b40e3c105f0",
+      "expectedSha256": "9453ecc7fbe68ed36f9692b72b0bb413739d733bdb46b0ff4d835b40e3c105f0",
+      "match": true
+    },
+    {
+      "path": "src/vendor/LICENSE.supabase",
+      "status": 200,
+      "bytes": 1065,
+      "sha256": "334dd6820e2eaeab2064e7c59001b810566728a28a41a7c1dbf69bbee17d0936",
+      "expectedSha256": "334dd6820e2eaeab2064e7c59001b810566728a28a41a7c1dbf69bbee17d0936",
+      "match": true
+    },
+    {
+      "path": "src/vendor/supabase-manifest.json",
+      "status": 200,
+      "bytes": 678,
+      "sha256": "5439e03c1129ae23c3753ad23a9313e3b3171122956f8d5b50e616d6cd15d0bd",
+      "expectedSha256": "5439e03c1129ae23c3753ad23a9313e3b3171122956f8d5b50e616d6cd15d0bd",
+      "match": true
+    },
+    {
+      "path": "src/vendor/supabase.js",
+      "status": 200,
+      "bytes": 218252,
+      "sha256": "ee3be8de192b97cb1d73d1e95d6b82bb1f6b658c0f97c4ef757fc331996ed3d3",
+      "expectedSha256": "ee3be8de192b97cb1d73d1e95d6b82bb1f6b658c0f97c4ef757fc331996ed3d3",
+      "match": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 19521,
+      "sha256": "507414611843fc14ef4400f889ad1ee95f13ac459704fb0c89e0c0e1c400cb2c",
+      "expectedSha256": "507414611843fc14ef4400f889ad1ee95f13ac459704fb0c89e0c0e1c400cb2c",
+      "match": true
+    }
+  ]
+}

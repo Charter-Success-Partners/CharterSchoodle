@@ -1,0 +1,284 @@
+{
+  "startedAt": "2026-10-15T22:00:42.390Z",
+  "canonical": "https://charterschoodle.chartersuccesspartners.com/",
+  "deployedCommit": "e343ac808ab2168480755f7b5c87f12cf2db85a8",
+  "runtimeSourceCommit": "2557b3116e5cca6decc51cbf95a3459c3fd0d1ff",
+  "scope": "Production canonical assets and real owner JWT/backend; only OTP request and PKCE token response SIMULATED. No email delivery or true PKCE exchange asserted.",
+  "checks": [
+    {
+      "name": "One confirmed synthetic operator signs in through real password Auth",
+      "passed": true
+    },
+    {
+      "name": "Real deployed guest puzzle accepts one wrong guess",
+      "passed": true
+    },
+    {
+      "name": "Single Join form retains SDK verifier; OTP delivery boundary SIMULATED",
+      "passed": true
+    },
+    {
+      "name": "SIMULATED PKCE callback automatically creates real public profile without second form",
+      "passed": true
+    },
+    {
+      "name": "Real backend imports exactly today one-guess game",
+      "passed": true
+    },
+    {
+      "name": "Callback URL cleaned and server identity verified",
+      "passed": true
+    },
+    {
+      "name": "Reload restores one guess with one unchanged profile and result row",
+      "passed": true
+    },
+    {
+      "name": "Production public leaderboard RPC responds successfully",
+      "passed": true
+    },
+    {
+      "name": "Real Edit profile saves hidden state and preserves public identity",
+      "passed": true
+    },
+    {
+      "name": "Second isolated context restores real one-guess account history",
+      "passed": true
+    },
+    {
+      "name": "Production sign-out returns original context to guest",
+      "passed": true
+    },
+    {
+      "name": "No unapproved requests or uncaught browser exceptions",
+      "passed": true
+    }
+  ],
+  "network": [
+    {
+      "method": "POST",
+      "path": "/auth/v1/otp",
+      "status": 200,
+      "source": "SIMULATED no-delivery OTP boundary"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/v1/token",
+      "status": 200,
+      "source": "SIMULATED PKCE exchange response using real password-auth session"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 201,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 201,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/rpc/charterschoodle_leaderboard_page_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/rpc/charterschoodle_leaderboard_page_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_profiles_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/charterschoodle_results_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/rest/v1/rpc/charterschoodle_leaderboard_page_v2",
+      "status": 200,
+      "source": "actual-production-response"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/v1/logout",
+      "status": 204,
+      "source": "actual-production-response"
+    }
+  ],
+  "blocked": [],
+  "errors": [],
+  "initialAttempt": {
+    "startedAt": "2026-10-15T21:59:15.212Z",
+    "completedAt": "2026-10-15T21:59:25.123Z",
+    "status": "failed",
+    "failure": {
+      "stage": "reload-no-duplicate",
+      "kind": "AssertionError",
+      "messageHash": "d0a74a42ff15b710dd00ae904bd01d3e2433af5d96d647d4d84be63f4e68f30b"
+    },
+    "explanation": "Initial six checks proved profileless one-form Join. A strict no-repeat-POST assertion rejected an idempotent reload upsert despite exactly one row. This continuation reauthenticates the same actor and checks row identity and contents.",
+    "cleanupFixtureUnlisted": true,
+    "finalLogoutStatus": 204,
+    "exitCode": 1
+  },
+  "continuation": "Same exact synthetic actor only; no new Join or profile creation replayed",
+  "finalLogoutStatus": 403,
+  "completedAt": "2026-10-15T22:00:53.853Z",
+  "status": "passed",
+  "failure": null,
+  "cleanupFixtureUnlisted": true,
+  "simulatedBoundaryCounts": {
+    "otp": 1,
+    "pkce": 1
+  },
+  "actualBrowserWrites": {
+    "profiles": 2,
+    "results": 3
+  },
+  "fixtureRetention": "Single synthetic operator retained unlisted; identifying metadata only in protected private directory",
+  "continuationExitCode": 0,
+  "editProfileObservation": "Initial callback created listed=true. Initial finally hid the actor. Continuation Edit profile saved listed=false and preserved public ID; it did not re-list or perform a true-to-false UI transition."
+}

@@ -1,0 +1,31 @@
+# Deployed redesign — October 15, 2026
+
+The owner approved merging and deploying [PR #3](https://github.com/Charter-Success-Partners/CharterSchoodle/pull/3). It merged at 21:50:04 UTC as `e343ac808ab2168480755f7b5c87f12cf2db85a8`. The merged tree matches the reviewed candidate `b4b9d6622350a53571f86db73e4578d1cb47cfff`; runtime source remains `2557b3116e5cca6decc51cbf95a3459c3fd0d1ff`.
+
+[Pages run 38813004723](https://github.com/Charter-Success-Partners/CharterSchoodle/actions/runs/38813004723) successfully validated and deployed that exact merged revision. The squash body inherited an old skip-CI directive and no automatic run started. After inspecting the cause and exact main revision, the operator dispatched the existing workflow once. No main-history rewrite, second deployment, backend migration, SMTP change or player reset occurred. The [run metadata](pages-run-redacted.json) includes successful build and deploy jobs.
+
+The [live HTTPS asset proof](assets-redacted.json) fetched all **19 allowlisted assets**, with default TLS certificate verification enabled. Every response was HTTP 200, with byte length and SHA-256 identical to the reviewed build. No documentation, tests, captures or credentials are part of this public artifact.
+
+## Real deployed guest checks
+
+Fresh Chromium contexts loaded the actual canonical HTML, JavaScript, styles, public school/puzzle data and read-only public ranking RPC. Browser-boundary overrides are named explicitly: native sharing/clipboard are controlled to exercise completion races and fallback behavior, and separate fault cases intentionally block local storage or the optional backend configuration. Those cases are fault injection, not observed production outages. Auth, email and backend writes were blocked throughout the guest checks.
+
+The [full report](guest-redacted.json) and [log](guest.log) record **36/37 checks, 9/10 scenarios**. All **27 functional checks** passed: guest startup, wrong guess and reload, six-guess loss, win, result reopening, clean spoiler-free sharing, archive exclusion, map navigation and keyboard school finder, rankings, help, narrow-screen overflow, the one-form join notice, and injected-fault recovery. No uncaught browser errors or unsafe backend mutations occurred.
+
+One safety summary failed because the harness blocked one unclassified external GET during the pending-clipboard-success scenario. Its origin was not retained and was not established; this is not attributed to a product defect or to a particular third party. The [targeted recheck](guest-targeted-redacted.json) and [log](guest-targeted.log), with the same guard, passed **12/12** across startup and the affected scenario. The request did not recur. All 37 distinct checks and all 10 scenarios passed across these observations; **no single complete run was entirely green**. Initial harness-only corrections addressed Chromium sandbox launch and allowing the existing declared Open Sans font assets. Product files were unchanged; there was no additional visual or detector pass.
+
+## Account setup scope
+
+Account verification uses one new synthetic operator and normal Auth credentials. All application identity verification, owner profile/result operations and public ranking reads use actual production responses under its real owner JWT. The no-delivery OTP response and PKCE token response are explicitly simulated browser boundaries. This proves deployed setup orchestration and real backend behavior; it does not prove a fresh delivered confirmation email or real PKCE challenge validation.
+
+The [account report](account-redacted.json) and [combined log](account.log) record **12 passing checks across the initial attempt and a same-actor continuation**. The initial attempt proved automatic profile creation, one-guess import, actual server identity verification and clean callback URL. It then exited 1 because the harness incorrectly rejected an idempotent reload upsert even though exactly one profile and one result row remained; the [initial report](account-initial-attempt-redacted.json) and [log](account-initial-attempt.log) are retained. The [continuation](account-continuation.log) exited 0 after checking unchanged row identity/contents, actual ranking RPC, profile editing, a second isolated context restoring one guess, and sign-out.
+
+Exactly one new synthetic operator was created. Initial cleanup hid its formerly public test profile; continuation profile editing saved that already hidden state and preserved its public ID. A public-to-hidden UI transition was not repeated. Both cleanup passes confirmed the fixture was unlisted using its own owner JWT. UI sign-out returned 204; a redundant final logout returned 403 after the session was revoked. No unapproved browser requests or uncaught exceptions occurred. The report combines the two observations explicitly; it does not claim a single uninterrupted successful run or no repeated idempotent write.
+
+No email was sent by the operator during this rollout. The prior owner-confirmed email delivery and sign-in evidence remains in [original release activation](../../../launch-evidence/2026-10-15/release-activation/README.md); provider and redirect configuration are unchanged. **A fresh actual email confirmation through the redesigned one-form join flow is still pending.** The owner was asked to use an unjoined email and open its confirmation link in the requesting browser. Do not mark that observation passed based on a simulated token response or an older sign-in. The public readiness gate stays pending until this check is observed.
+
+## Evidence handling
+
+Only redacted observations are committed here. No mailbox addresses, Auth UUIDs, callback codes, tokens, passwords, individual guesses, puzzle answers, screenshots or raw backend errors are retained in these reports. Synthetic fixture metadata remains in restricted operator storage outside the repository. Deployment evidence is committed separately from the runtime release to avoid a redundant production deployment solely for documentation.
+
+Current recorded gates: [code READY](release-code.log), exit 0; [public BLOCKED](release-public.log), exit 2 solely for the pending fresh email completion described above. The readiness checker validates this record, not the services themselves.
