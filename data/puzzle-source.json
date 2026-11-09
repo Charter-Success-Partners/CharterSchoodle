@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08",
+  "generatedAt": "2026-11-09",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 916,
+    "puzzleCount": 917,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-07"
+    "endDate": "2028-11-08"
   },
   "puzzles": [
     {
@@ -27511,6 +27511,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-08",
+      "answerSchoolId": "united-community-school",
+      "clues": [
+        {
+          "text": "The school brands itself around the HIVE.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school explains The Basic School philosophy through four principles known as the 4 C's.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say learning is promoted through field trips, the arts, community partnerships, and other engaging experiences.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school places a huge emphasis on hands-on learning, best instructional practices, and arts integration.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school fulfills the vision of The Basic School by Dr. Ernest L. Boyer.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter U."
         }
       ]
     }
