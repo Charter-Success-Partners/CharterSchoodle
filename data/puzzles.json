@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09",
+  "generatedAt": "2026-11-10",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27515,6 +27515,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter U."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-09",
+      "answerSchoolId": "davidson-charter-academy",
+      "clues": [
+        {
+          "text": "The staff directory lists Joseph Wood as C.E.O. and Dr. Tina Alexander as Principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official materials say the school continues to add programs and academic clubs that reflect the diversity of students' skills and interests.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its \"DCA Difference\" highlights community, excellence, achievement, empathy, independence, and communication.",
+          "difficulty": 5
+        },
+        {
+          "text": "The homepage says the school opened in 2017.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school, in partnership with parents and community members, fosters student learning and achievement and inspires students to become independent thinkers, effective communicators, and contributing citizens of a global society.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter D."
         }
       ]
     }
