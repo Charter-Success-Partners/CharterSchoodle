@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10",
+  "generatedAt": "2026-11-11",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27545,6 +27545,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter D."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-10",
+      "answerSchoolId": "ala-monroe",
+      "clues": [
+        {
+          "text": "Official pages list Dr. Bridget Jones as Director and Kyle Shrauger as Board Chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says leadership and character development are woven into daily life through leadership lessons, collaborative projects, and service opportunities.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school is guided by R.A.I.S.E. values: Respect, Accountability, Integrity, Service, and Excellence.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its mission says the school supports families by providing the best educational experience possible in a moral and wholesome environment.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its public-facing identity calls the school the Home of the Mavericks.",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
