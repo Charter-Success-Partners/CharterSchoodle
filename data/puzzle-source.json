@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11",
+  "generatedAt": "2026-11-12",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 919,
+    "puzzleCount": 920,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-10"
+    "endDate": "2028-11-11"
   },
   "puzzles": [
     {
@@ -27601,6 +27601,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-11",
+      "answerSchoolId": "central-carolina-academy",
+      "clues": [
+        {
+          "text": "Staff pages list Greg Batten as principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "Its mission says the school establishes and maintains a challenging learning environment that respects individual learners and prepares students to succeed in a globally competitive society.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it opened in the 2022-2023 school year in a renovated former Pantry and Circle K corporate facility.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the academic model culminates with students maximizing NC Career and College Promise through Central Carolina Community College.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its published slogan is Inspiring lifelong leaders.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
