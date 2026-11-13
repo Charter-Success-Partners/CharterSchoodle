@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12",
+  "generatedAt": "2026-11-13",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27605,6 +27605,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter C."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-12",
+      "answerSchoolId": "oak-hill-charter-school",
+      "clues": [
+        {
+          "text": "Official pages say the school was created to be a community staple and a meaningful educational choice for families in Caldwell County and surrounding areas.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school describes itself as a grassroots charter formed by concerned local community members.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its public-facing welcome message refers to the campus as The Hive.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the academic program uses Core Knowledge, Saxon Math, Shurley Grammar, and Core Essentials Character Education.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school provides a rigorous back-to-basics education with high personal expectations.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter O."
         }
       ]
     }
