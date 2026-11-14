@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13",
+  "generatedAt": "2026-11-14",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 921,
+    "puzzleCount": 922,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-12"
+    "endDate": "2028-11-13"
   },
   "puzzles": [
     {
@@ -27661,6 +27661,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter O."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-13",
+      "answerSchoolId": "wilson-preparatory-academy",
+      "clues": [
+        {
+          "text": "Official pages highlight AP Capstone as a signature academic offering.",
+          "difficulty": 7
+        },
+        {
+          "text": "Official materials say its vision is to graduate productive citizens ready for lifelong learning and careers in a global society.",
+          "difficulty": 6
+        },
+        {
+          "text": "The homepage says scholars are empowered to discover their passions, choose their path, and define their future.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school's mission says every student should receive a quality and relevant education tailored to background, learning style, and future pathway.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public-facing motto is the three-part line: Educate. Motivate. Graduate.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter W."
         }
       ]
     }
