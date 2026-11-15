@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14",
+  "generatedAt": "2026-11-15",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27665,6 +27665,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter W."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-14",
+      "answerSchoolId": "movement-school-northwest",
+      "clues": [
+        {
+          "text": "Official leadership pages list Kenneth Gorham as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Official pages say the principal's leadership has contributed to measurable academic growth, including two state academic growth awards.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school highlights small-school setting and leading with virtue as central distinctives.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its principal message says learning comes first, always.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school opened in August 2023.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter M."
         }
       ]
     }
