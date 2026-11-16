@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15",
+  "generatedAt": "2026-11-16",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 923,
+    "puzzleCount": 924,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-14"
+    "endDate": "2028-11-15"
   },
   "puzzles": [
     {
@@ -27721,6 +27721,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter M."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-15",
+      "answerSchoolId": "ascend-leadership-academy-lee-county",
+      "clues": [
+        {
+          "text": "Official pages identify Justin T. Smith as managing director.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says every student takes Digital Media courses involving graphic and game design, audio and video production, animation, and programming.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials describe a Project Based Leadership model unique to the school.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school develops successful student leaders by growing self-efficacy, intellectual understanding, and social competence.",
+          "difficulty": 3
+        },
+        {
+          "text": "Its public-facing tagline is \"Empowering Students for the 21st Century.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
