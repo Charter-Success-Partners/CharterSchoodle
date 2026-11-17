@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-17",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 924,
+    "puzzleCount": 925,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-15"
+    "endDate": "2028-11-16"
   },
   "puzzles": [
     {
@@ -27751,6 +27751,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-16",
+      "answerSchoolId": "success-institute-charter",
+      "clues": [
+        {
+          "text": "Staff pages identify Shadrach Martin as principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school highlights its MicroSociety Program as part of its whole-child approach.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official history says the school was founded in August 2000.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its stated goal is to develop independent thinkers and positive, productive citizens through character development and self-enhancement opportunities.",
+          "difficulty": 5
+        },
+        {
+          "text": "Official materials say the school creatively teaches Common Core curriculum, foundational business principles, and key elements of entrepreneurial success.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter S."
         }
       ]
     }
