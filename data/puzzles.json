@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17",
+  "generatedAt": "2026-11-18",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27755,6 +27755,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter S."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-17",
+      "answerSchoolId": "triad-math-and-science-academy",
+      "clues": [
+        {
+          "text": "Official principal pages list Fatih Kandil as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school says it focuses on STEAM and emphasizes a safe, nurturing, and culturally responsive learning environment.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school prepares students to become competent, responsible, and successful individuals in a globalized and technology-based society.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school was established in 2008 by public charter school advocates.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public-facing motto is \"Science, Wisdom, Peace.\"",
+          "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
         }
       ]
     }
