@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18",
+  "generatedAt": "2026-11-19",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -27785,6 +27785,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-18",
+      "answerSchoolId": "arapahoe-charter-school",
+      "clues": [
+        {
+          "text": "Board pages list Denise Delamar as board chair.",
+          "difficulty": 8
+        },
+        {
+          "text": "The school describes itself as teacher- and parent-directed and built around individualized needs.",
+          "difficulty": 6
+        },
+        {
+          "text": "Its educational philosophy says learning should be relevant and active so students become lifelong learners and responsible citizens.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials say the school has operated since 1997.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its published mission says students should be knowledgeable, self-sufficient, responsible, and productive members of society.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter A."
         }
       ]
     }
