@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19",
+  "generatedAt": "2026-11-20",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 927,
+    "puzzleCount": 928,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-18"
+    "endDate": "2028-11-19"
   },
   "puzzles": [
     {
@@ -27841,6 +27841,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter A."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-19",
+      "answerSchoolId": "revolution-academy",
+      "clues": [
+        {
+          "text": "Houston Core is listed as chairman on the board page.",
+          "difficulty": 8
+        },
+        {
+          "text": "That same technology page says cell phones are prohibited during the academic day.",
+          "difficulty": 7
+        },
+        {
+          "text": "The academic technology page says Google Classroom is the school's preferred learning management system.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its approach combines rigorous academics with timeless values, civic responsibility, and love of country.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official messaging says the school builds more than scholars and aims to shape citizens.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter R."
         }
       ]
     }
