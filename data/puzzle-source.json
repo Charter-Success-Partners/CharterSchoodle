@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20",
+  "generatedAt": "2026-11-21",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 928,
+    "puzzleCount": 929,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-19"
+    "endDate": "2028-11-20"
   },
   "puzzles": [
     {
@@ -27871,6 +27871,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter R."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-20",
+      "answerSchoolId": "cardinal-charter-academy",
+      "clues": [
+        {
+          "text": "Its homepage identifies John Wall, Jr. in the principal's message.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its homepage says the school is celebrating 10 years.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says it is relentlessly committed to student greatness in school and life and to building strong minds and good hearts.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school builds a student-centered learning environment that is project-based and technology-driven.",
+          "difficulty": 4
+        },
+        {
+          "text": "Official materials say the school is part of the Charter Schools USA family.",
+          "difficulty": 3
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
