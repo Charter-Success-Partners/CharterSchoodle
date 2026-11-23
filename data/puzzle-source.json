@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22",
+  "generatedAt": "2026-11-23",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 930,
+    "puzzleCount": 931,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-21"
+    "endDate": "2028-11-22"
   },
   "puzzles": [
     {
@@ -27927,6 +27927,36 @@
         {
           "text": "Its homepage uses the phrase \"Expedition to Excellence.\"",
           "difficulty": 2
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter T."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-22",
+      "answerSchoolId": "tillery-charter-academy",
+      "clues": [
+        {
+          "text": "Official pages list Dr. Amy B. Reynolds as principal.",
+          "difficulty": 8
+        },
+        {
+          "text": "Its principal page says the current principal officially began on March 2, 2026.",
+          "difficulty": 6
+        },
+        {
+          "text": "The school says its work is meant to inspire students to be productive and thoughtful citizens in their communities and beyond.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its mission says the school provides a rigorous classical education with high academic and personal expectations.",
+          "difficulty": 4
+        },
+        {
+          "text": "Its public materials say the school opened in August 2019.",
+          "difficulty": 3
         },
         {
           "difficulty": 1,
