@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25",
+  "generatedAt": "2026-11-26",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 933,
+    "puzzleCount": 934,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-24"
+    "endDate": "2028-11-25"
   },
   "puzzles": [
     {
@@ -28021,6 +28021,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter F."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-25",
+      "answerSchoolId": "bethel-hill-charter",
+      "clues": [
+        {
+          "text": "Recent school messaging refers to families and students as Wildcats on the prowl.",
+          "difficulty": 8
+        },
+        {
+          "text": "The staff directory lists Jessica Poole as principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school's wellness policy says every student receives at least thirty minutes of moderate to vigorous physical activity each day.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials show the school highlights character traits such as citizenship in community projects.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its public branding uses the line Home of the Wildcats.",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter B."
         }
       ]
     }
