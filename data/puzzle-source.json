@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26",
+  "generatedAt": "2026-11-27",
   "notes": [
     "Automatically generated CharterSchoodle daily puzzle calendar.",
     "Built from manually validated statewide clue-bank entries with a deterministic quality-weighted school rotation.",
@@ -29,9 +29,9 @@
   },
   "stats": {
     "playableSchools": 212,
-    "puzzleCount": 934,
+    "puzzleCount": 935,
     "startDate": "2026-05-07",
-    "endDate": "2028-11-25"
+    "endDate": "2028-11-26"
   },
   "puzzles": [
     {
@@ -28051,6 +28051,36 @@
         {
           "difficulty": 1,
           "text": "The answer begins with the letter B."
+        }
+      ]
+    },
+    {
+      "date": "2028-11-26",
+      "answerSchoolId": "cis-academy",
+      "clues": [
+        {
+          "text": "Official staff materials list Dr. Mazie Gibson as the school's counselor and student support specialist coordinator.",
+          "difficulty": 8
+        },
+        {
+          "text": "Staff pages identify Jonathan Blue as principal.",
+          "difficulty": 7
+        },
+        {
+          "text": "The school's public materials spotlight science-class activities like student volcano work.",
+          "difficulty": 6
+        },
+        {
+          "text": "Official materials prominently celebrate student success in the NC Unity Conference writing contest.",
+          "difficulty": 5
+        },
+        {
+          "text": "Its official parent organization uses the mission line, \"to surround students with a community of support, empowering them to stay in school.\"",
+          "difficulty": 4
+        },
+        {
+          "difficulty": 1,
+          "text": "The answer begins with the letter C."
         }
       ]
     }
